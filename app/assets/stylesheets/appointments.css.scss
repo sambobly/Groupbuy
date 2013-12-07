@@ -1,0 +1,19 @@
+// Place all the styles related to the Appointments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.options {
+	background-color: #EEEEEE;
+	padding: 1.5em;
+	border: 1px solid #BBBBBB;
+	
+	.title {
+		margin-left: -0.5em;
+		margin-top: -1.5em;
+	}
+}
+
+#calendar {
+	min-height: 400px;
+	margin-top: 4em;
+}

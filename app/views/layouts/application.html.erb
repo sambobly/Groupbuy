@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Optho app</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<noscript>
+			<%= stylesheet_link_tag    "application/layout/skel-noscript", media: "all" %>
+			<%= stylesheet_link_tag    "application/layout/style", media: "all" %>
+			<%= stylesheet_link_tag    "application/layout/style-desktop", media: "all" %>
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+<body class="no-sidebar" id="top">
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Optho App</a></h1>
+					</div>
+				<!-- /Logo -->
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Dashboard</a></li>
+							<li>
+								<span>Patients</span>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam dolore nisl</a></li>
+									<li>
+										<span>Phasellus consequat</span>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Phasellus consequat</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Veroeros feugiat</a></li>
+								</ul>
+							</li>
+							<li><a href="right-sidebar.html">Appointments</a></li>
+							<li><a href="left-sidebar.html">Settings</a></li>
+						</ul>
+					</nav>
+				<!-- /Nav -->
+
+			</div>
+		</div>
+	<!-- /Header -->
+
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+
+				<!-- Content -->
+					<div class="row">
+						<div id="content" class="12u">
+								<%= yield %>
+						</div>
+					</div>
+				<!-- /Content -->
+
+				
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+
+			<div class="container">
+				<div class="row">
+					<div class="6u">
+						<span>Copyright &copy; 2013 Sitename. All rights reserved.</span>
+					</div>
+					<div class="6u">
+						<ul class="social">
+							<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+							<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+							<li><a href="#" class="icon icon-envelope"><span>Google+</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<!-- /Copyright -->
+
+</body>
+</html>

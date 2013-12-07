@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Optho app</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+	  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<noscript>
+			<%= stylesheet_link_tag    "application/layout/skel-noscript", media: "all" %>
+			<%= stylesheet_link_tag    "application/layout/style", media: "all" %>
+			<%= stylesheet_link_tag    "application/layout/style-desktop", media: "all" %>
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="homepage" id="top">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+						
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Optho App</a></h1>
+						</div>
+					<!-- /Logo -->
+					
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="index.html">Home</a></li>
+								<li>
+									<span>Dropdown</span>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li>
+											<span>Phasellus consequat</span>
+											<ul>
+												<li><a href="#">Lorem ipsum dolor</a></li>
+												<li><a href="#">Phasellus consequat</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					<!-- /Nav -->
+
+					<!-- Banner -->
+						<div id="banner">
+
+
+							<header>
+								<%= yield %>
+							</header>
+						
+						</div>
+					<!-- /Banner -->
+
+				</div>
+			</div>
+		<!-- /Header -->
+			
+		<!-- Featured -->
+			<div id="featured">
+				<div class="container">
+					<div class="row double">
+						<section class="3u">
+							<span class="pennant icon icon-leaf"></span>
+							<h3>Nam Euismod</h3>
+							<p>Quisque ut ante mattis, dignissim libero et, porttitor risus ulla eros enim sodales</p>
+							<a href="#" class="icon icon-arrow-right button">More</a>
+						</section>
+						<section class="3u">
+							<span class="pennant icon icon-cloud"></span>
+							<h3>Calesu Dame</h3>
+							<p>Donec facilisis ullam coriov tellus quis dapibus misip initos imperdiet uncon</p>
+							<a href="#" class="icon icon-arrow-right button">More</a>
+						</section>
+						<section class="3u">
+							<span class="pennant icon icon-cog"></span>
+							<h3>Vestibul Imnon</h3>
+							<p> Ut cursus ante et gravida suscipit donec luctus odio euintis sollicitudin tempus</p>
+							<a href="#" class="icon icon-arrow-right button">More</a>
+						</section>
+						<section class="3u">
+							<span class="pennant icon icon-glass"></span>
+							<h3>Fusce Hend</h3>
+							<p>Maecenas vitae risus pellentesque orci vulputate aliquam Nulla ac tellus</p>
+							<a href="#" class="icon icon-arrow-right button">More</a>
+						</section>
+					</div>
+					
+				</div>
+			</div>
+		<!-- /Featured -->
+
+		<!-- Main -->
+			<div id="main">
+				<div class="container">
+
+					<!-- Device Image -->
+					
+							<div class="row">
+								<div class="12u">
+									<div id="box1">
+										<div id="box2">
+											<img src="assets/layout/pic05.jpg" alt="" class="image full">
+										</div>
+										<div id="box3">
+											<img src="assets/layout/pic06.jpg" alt="" class="image full">
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					<!-- /Device Image -->
+
+					<!-- Portfolio -->
+						<div class="row">
+						
+							<div class="6u">
+								<section>
+									<header>
+										<h2>Fusce tincidunt augue ligula quis</h2>
+									</header>
+									<p>Praesent porta accumsan orci, nec mollis sapien elementum nec. Praesent vitae lementum dui, eget rutrum lorem. Donec augue dui, iaculis vitae metus vel, adipiscing porta dolor. Fusce odio mauris, luctus in dignissim vitae metus</p>
+									<a href="#" class="icon icon-arrow-right button">More</a>
+								</section>
+							</div>
+							
+							<div class="6u">
+								<section>
+									<header>
+										<h2>Donec vulputate augue vel congue</h2>
+									</header>
+									<p>Quisque hendrerit nunc a est volutpat, vitae molestie lacus euismod. Nunc pharetra vulputate neque quis convallis. Fusce aliquam lacus at hendrerit molestie. Vivamus quis sem at urna iaculis cursus. Suspendisse cursus tempor viverra nteger</p>
+									<a href="#" class="icon icon-arrow-right button">More</a>
+								</section>
+							</div>
+
+						</div>
+					<!-- /Portfolio -->
+
+					<!-- Footer -->
+						<div id="footer">
+							<div class="row">
+							
+								<!-- Content -->
+								<div class="4u">
+									<section>
+										<header>
+											<h2>Praesent porta accums anorcinecm ollis sapien elem</h2>
+										</header>
+										<ul class="style1">
+											<li>
+												<p><a href="#">Praesent porta accums anorci necm ollis sapien elementum nec aesent vit ae elementum ntesque...</a></p>
+												<div class="meta">
+													<span class="icon icon-time date">8-21-2013</span>
+													<a href="#" class="more"><span>Read more</span></a>
+												</div>
+											</li>
+											<li>
+												<p><a href="#">Fusce tincidunt augue ligula, quis adipiscing orci cursus idulla mattis est vel nisi vulputate bibendum...</a></p>
+												<div class="meta">
+													<span class="icon icon-time date">8-18-2013</span>
+													<a href="#" class="more"><span>Read more</span></a>
+												</div>
+											</li>
+											<li>
+												<p><a href="#">Quisque hendrerit nunc a est volutpat, vitae molestie lacus euismod. Nunc pharetra vulputate...</a></p>
+												<div class="meta">
+													<span class="icon icon-time date">8-15-2013</span>
+													<a href="#" class="more"><span>Read more</span></a>
+												</div>
+											</li>
+										</ul>
+									</section>
+								</div>
+			
+								<div class="4u">
+									<section>
+										<header>
+											<h2>Sed scelerisque nibh eu magna tincidunt laoreet</h2>
+										</header>
+										<a href="#" class="image featured"><img src="assets/layout/pic04.jpg" alt=""></a>
+										<ul class="style2">
+											<li class="icon icon-circle-arrow-right"><a href="#">Lorem ipsum dolor amet, consectetur adipi</a></li>
+											<li class="icon icon-circle-arrow-right"><a href="#">Fusce pellentesque velit  ultrices place</a></li>
+											<li class="icon icon-circle-arrow-right"><a href="#">Maecenas condimentum enim tincidunt  acc</a></li>
+											<li class="icon icon-circle-arrow-right"><a href="#">Vestibulum non accumsan, ultrices ligula</a></li>
+										</ul>
+									</section>
+								</div>
+			
+								<div class="4u">
+									<section>
+										<header>
+											<h2>Sed scelerisque nibh eu magna tincidunt laoreet</h2>
+										</header>
+										<ul class="icons">
+											<li class="icon icon-wrench">
+												<h3>Vestibulum</h3>
+												<span>Lorem ipsum dolor sit amet, consectetur. Fusce pellentesque velit vestibulum</span>
+											</li>
+											<li class="icon icon-link">
+												<h3>Integer ultrices</h3>
+												<span>Phasellus consectetur justo quis turpis sodale sindsed hendrerit metus mollis</span>
+											</li>
+											<li class="icon icon-magic">
+												<h3>Aliquam luctus</h3>
+												<span>Maecenas condimentum enim tincidunt risus accumsan, pellentesque lobortis</span>
+											</li>
+										</ul>
+									</section>
+								</div>
+							
+							</div>					
+						</div>
+					<!-- /Footer -->
+					
+				</div>
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				<a href="#top" class="bubble-top">Top</a>
+
+				<div class="container">
+					<div class="row">
+						<div class="6u">
+							<span>Copyright &copy; 2013 Sitename. All rights reserved.</span>
+						</div>
+						<div class="6u">
+							<ul class="social">
+								<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+								<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+								<li><a href="#" class="icon icon-envelope"><span>Google+</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Copyright -->
+
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<%= form_for @appointment, url: {action: "create"} do |f| %>
+
+Appointment Name:
+	<%= f.text_field :name %>
+	Appointment Date:
+	<%= f.text_field :date %>
+	Patient name:
+	<%= f.text_field :patient_name %>
+	
+	<%= f.submit "Create Appointment" %>
+
+<% end %>
