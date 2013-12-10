@@ -13,5 +13,12 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new( params.require( :appointment ).permit( :name, :patient_name ) )
     @appointment.save
   end
-  
+
+  def find
+    @appointment = Appointment.all #find(:all)
+    respond_to do |format|
+      format.html { render "week.html.erb" }
+    end
+
+  end
 end

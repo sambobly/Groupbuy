@@ -4,9 +4,13 @@ Appointment Name:
 	<%= f.text_field :name %>
 	Appointment Date:
 	<%= f.text_field :date %>
+
 	Patient name:
 	<%= f.text_field :patient_name %>
-	
-	<%= f.submit "Create Appointment" %>
+    Doctor:
+
+    <%= f.text_field :doctor %>
+
+    <%= f.submit "Create Appointment" %>
 
 <% end %>

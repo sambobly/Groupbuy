@@ -2,6 +2,11 @@
 	<div class="title">Options</div>
 
 </div>
-
+<% form_tag appointments_path do %>
+    <p>
+      <%= text_field_tag :search %>
+      <%= submit_tag :search %>
+    </p>
+ <% end %>
 <div id="calendar" class="-1u 10u">
 </div>
