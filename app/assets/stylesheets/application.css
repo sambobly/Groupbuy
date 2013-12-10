@@ -11,4 +11,5 @@
  *= require_self
  *= require appointments
  *= require appointments/fullcalendar
-
+ *= require jquery-theme/jquery-ui-1.10.3.custom
+ */

@@ -14,10 +14,8 @@ $( document ).ready( function() {
       })
     }
 
-    $(document).ready(function() {
-        $(".datepicker").datepicker({
-            showOn: "button",
-            buttonImage: "images/calendar.gif",
-            buttonImageOnly: true})
-    });
+    if ( $ ('#appointment_date').length > 0) {
+        $( "#appointment_date").datepicker();
+    }
+
 });
