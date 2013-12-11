@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
   
   def index
     @latest_appointment = Appointment.last
+    @appointments = Appointment.search(params[:search])
   end
   
   # Creates a new appointment
@@ -14,11 +15,9 @@ class AppointmentsController < ApplicationController
     @appointment.save
   end
 
-  def find
-    @appointment = Appointment.all #find(:all)
-    respond_to do |format|
-      format.html { render "week.html.erb" }
-    end
+  #def find
+   # @appointments = Appointment.search(params[:search])
+   # end
 
-  end
+  #end
 end

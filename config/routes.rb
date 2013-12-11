@@ -18,6 +18,7 @@ Optho::Application.routes.draw do
   resources :appointments do
     collection do
       get 'find'
+      get 'index'
     end
   end
 
