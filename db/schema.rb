@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20131209072853) do
     t.string   "name"
     t.date     "date"
     t.string   "patient_name"
+    t.string   "doctor"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
-    t.string   "doctor"
   end
 
   create_table "doctorpatients", force: true do |t|
