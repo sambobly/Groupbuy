@@ -4,7 +4,11 @@ $( document ).ready( function() {
 		
 		$( '#calendar' ).fullCalendar({
 			editable: true,
-			defaultView: 'month'
+			defaultView: 'agendaWeek',
+			allDaySlot: false,
+			minTime: '7:30am',
+			maxTime: '6:00pm',
+			slotMinutes: 10
 		});
 		
 	}

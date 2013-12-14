@@ -21,5 +21,5 @@
 //= require layout/jquery.slidertron-1.3
 //= require layout/init
 
-//= require appointments/fullcalendar.min
+//= require appointments/fullcalendar
 //= require appointments/appointments
