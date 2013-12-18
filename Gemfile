@@ -40,6 +40,7 @@ group :development do
   gem 'rb-fsevent', require: false
 end
 
+gem 'appointments', "~> 1.3.3"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

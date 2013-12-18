@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209072853) do
+ActiveRecord::Schema.define(version: 20131218231537) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
     t.date     "date"
     t.string   "patient_name"
-    t.string   "doctor"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
+    t.string   "doctor"
   end
 
   create_table "doctorpatients", force: true do |t|
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(version: 20131209072853) do
   end
 
   create_table "doctors", force: true do |t|
-    t.string   "name"
+    t.string   "firstname"
     t.string   "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "lastname"
   end
 
   create_table "patients", force: true do |t|

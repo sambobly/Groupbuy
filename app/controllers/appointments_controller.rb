@@ -15,9 +15,8 @@ class AppointmentsController < ApplicationController
     @appointment.save
   end
 
-  #def find
-   # @appointments = Appointment.search(params[:search])
-   # end
+  def find
+    @appointments = Appointment.search(params[:search])
+    end
 
-  #end
-end
+  end
