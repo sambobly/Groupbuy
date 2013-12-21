@@ -16,7 +16,7 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-<body class="no-sidebar" id="top">
+<body class="no-sidebar <%= controller_name %> <%= action_name %>" id="top">
 <span style="text-align: right">
   <% form_tag "/appointments/find" do %>
     <%= text_field_tag :search_string %>

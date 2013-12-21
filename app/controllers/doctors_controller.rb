@@ -46,8 +46,15 @@ class DoctorsController < ApplicationController
     respond_to do |format|
       format.html { render "search.json.erb" }
     end
-
   end
+  
+  # GET /doctors/list.json
+  def list
+    @doctors = Doctor.order( :name )
+    
+    render json: @doctors
+  end
+  
   # PATCH/PUT /doctors/1
   # PATCH/PUT /doctors/1.json
   def update
@@ -82,4 +89,5 @@ class DoctorsController < ApplicationController
     def doctor_params
       params.require(:doctor).permit(:name, :position)
     end
+  
 end

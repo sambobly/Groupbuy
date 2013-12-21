@@ -1,0 +1,25 @@
+$( document ).ready( function() {
+	
+	// The following code is only called on the index page of the appointments controller
+	if( $( 'body.appointments').length && $( 'body.index' ).length ) {
+		$( '#calendar' ).fullCalendar({
+			editable: true,
+			defaultView: 'agendaWeek',
+			doctorsSource: '/doctors/list',
+			allDaySlot: false,
+			minTime: '7:30am',
+			maxTime: '6:00pm',
+			slotMinutes: 10
+		});	
+	}
+	
+	// New appointment page
+	if( $( 'body.appointments' ).length && $( 'body.new' ).length ) {
+        $("#appointment_doctor").autocomplete({
+            source: "/doctors/search"
+        })
+		
+        $( "#appointment_date").datepicker();
+	}
+	
+});

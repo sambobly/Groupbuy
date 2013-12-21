@@ -9,6 +9,13 @@
  * For event drag & drop, requires jQuery UI draggable.
  * For event resizing, requires jQuery UI resizable.
  */
+
+/*
+ * Modified by Theo to replace days in the Agenda Week view with doctors
+ * Modifications are likely to make other views unstable
+ * A separate doctorsSource paramter has been added to fetch a list of doctors from the database
+ * A doctorId paramter has been added to the Event object
+ */
  
 (function($, undefined) {
 
@@ -88,8 +95,10 @@ var defaults = {
 	
 	dropAccept: '*',
 	
-	handleWindowResize: true
+	handleWindowResize: true,
 	
+	// doctors
+	numberOfDoctorsToShow: 5
 };
 
 // right-to-left defaults
@@ -163,11 +172,23 @@ $.fn.fullCalendar = function(options) {
 	
 	
 	this.each(function(i, _element) {
-		var element = $(_element);
-		var calendar = new Calendar(element, options, eventSources);
-		element.data('fullCalendar', calendar); // TODO: look into memory leak implications
-		calendar.render();
+		if( !options.doctorsSource ) {
+			console.error( 'This version of the calendar requires a "doctorsSource" option' );
+			return;
+		}
+		
+		// Modify the calendar creation function to first fetch a list of doctors
+		$.getJSON( options.doctorsSource, function( doctors ) {
+			var element = $(_element);
+			var calendar = new Calendar(element, options, doctors, eventSources);
+			element.data('fullCalendar', calendar); // TODO: look into memory leak implications
+			calendar.render();
+		});
 	});
+	
+	function responseToDoctorsQuery() {
+		
+	}
 	
 	
 	return this;
@@ -185,11 +206,12 @@ function setDefaults(d) {
 ;;
 
  
-function Calendar(element, options, eventSources) {
+function Calendar(element, options, doctors, eventSources) {
 	var t = this;
 	
 	
 	// exports
+	t.doctors = doctors;
 	t.options = options;
 	t.render = render;
 	t.destroy = destroy;
@@ -2112,7 +2134,6 @@ setDefaults({
 function BasicView(element, calendar, viewName) {
 	var t = this;
 	
-	
 	// exports
 	t.renderBasic = renderBasic;
 	t.setHeight = setHeight;
@@ -2660,11 +2681,9 @@ fcViews.agendaWeek = AgendaWeekView;
 function AgendaWeekView(element, calendar) {
 	var t = this;
 	
-	
 	// exports
 	t.render = render;
-	
-	
+		
 	// imports
 	AgendaView.call(t, element, calendar, 'agendaWeek');
 	var opt = t.opt;
@@ -2680,29 +2699,13 @@ function AgendaWeekView(element, calendar) {
 			addDays(date, delta * 7);
 		}
 
-		var start = addDays(cloneDate(date), -((date.getDay() - opt('firstDay') + 7) % 7));
-		var end = addDays(cloneDate(start), 7);
+		t.title = "Appointments for " + formatDate( date, opt( 'titleFormat' ) );
+		t.start = date;
+		calendar.date= date;
+		t.visStart = 0;
+		t.visEnd = opt( 'numberOfDoctorsToShow' );
 
-		var visStart = cloneDate(start);
-		skipHiddenDays(visStart);
-
-		var visEnd = cloneDate(end);
-		skipHiddenDays(visEnd, -1, true);
-
-		var colCnt = getCellsPerWeek();
-
-		t.title = formatDates(
-			visStart,
-			addDays(cloneDate(visEnd), -1),
-			opt('titleFormat')
-		);
-
-		t.start = start;
-		t.end = end;
-		t.visStart = visStart;
-		t.visEnd = visEnd;
-
-		renderAgenda(colCnt);
+		renderAgenda( Math.min( opt( 'numberOfDoctorsToShow' ), calendar.doctors.length ) );
 	}
 
 }
@@ -3066,37 +3069,21 @@ function AgendaView(element, calendar, viewName) {
 		var html = '';
 		var weekText;
 		var col;
-
+		var doctors = calendar.doctors;
+		
 		html +=
 			"<thead>" +
 			"<tr>";
 
-		if (showWeekNumbers) {
-			date = cellToDate(0, 0);
-			weekText = formatDate(date, weekNumberFormat);
-			if (rtl) {
-				weekText += weekNumberTitle;
-			}
-			else {
-				weekText = weekNumberTitle + weekText;
-			}
+		html += "<th class='fc-agenda-axis " + headerClass + "'>&nbsp;</th>";
+		
+		for (col=t.visStart; col<colCnt && col < doctors.length; col++) {
 			html +=
-				"<th class='fc-agenda-axis fc-week-number " + headerClass + "'>" +
-				htmlEscape(weekText) +
+				"<th class='fc-" + doctors[ col ].id + " fc-col" + col + ' ' + headerClass + "'>" +
+				htmlEscape( doctors[ col ].name ) +
 				"</th>";
 		}
-		else {
-			html += "<th class='fc-agenda-axis " + headerClass + "'>&nbsp;</th>";
-		}
-
-		for (col=0; col<colCnt; col++) {
-			date = cellToDate(0, col);
-			html +=
-				"<th class='fc-" + dayIDs[date.getDay()] + " fc-col" + col + ' ' + headerClass + "'>" +
-				htmlEscape(formatDate(date, colFormat)) +
-				"</th>";
-		}
-
+		
 		html +=
 			"<th class='fc-agenda-gutter " + headerClass + "'>&nbsp;</th>" +
 			"</tr>" +
@@ -3113,6 +3100,7 @@ function AgendaView(element, calendar, viewName) {
 		var today = clearTime(new Date());
 		var col;
 		var cellsHTML;
+		var doctors = calendar.doctors;
 		var cellHTML;
 		var classNames;
 		var html = '';
@@ -3123,23 +3111,15 @@ function AgendaView(element, calendar, viewName) {
 			"<th class='fc-agenda-axis " + headerClass + "'>&nbsp;</th>";
 
 		cellsHTML = '';
-
-		for (col=0; col<colCnt; col++) {
-
-			date = cellToDate(0, col);
+		
+		for (col=t.visStart; col<colCnt && col < doctors.length; col++) {
 
 			classNames = [
 				'fc-col' + col,
-				'fc-' + dayIDs[date.getDay()],
+				'fc-' + doctors[ col ].id, // TODO: consider whether doctor ids should be part of a classname or whether it should be some other attribute (e.g. part-time worker, full time worker, etc)
 				contentClass
 			];
-			if (+date == +today) {
-				classNames.push(
-					tm + '-state-highlight',
-					'fc-today'
-				);
-			}
-			else if (date < today) {
+			if (date < today) {
 				classNames.push('fc-past');
 			}
 			else {
@@ -3740,17 +3720,17 @@ function AgendaEventRenderer() {
 			j, seg,
 			colSegs,
 			segs = [];
-
 		for (i=0; i<colCnt; i++) {
 
-			d = cellToDate(0, i);
+			d = calendar.date;
 			addMinutes(d, minMinute);
 
 			colSegs = sliceSegs(
 				events,
 				visEventEnds,
 				d,
-				addMinutes(cloneDate(d), maxMinute-minMinute)
+				addMinutes(cloneDate(d), maxMinute-minMinute),
+				calendar.doctors[ i ].id
 			);
 
 			colSegs = placeSlotSegs(colSegs); // returns a new order
@@ -3766,7 +3746,7 @@ function AgendaEventRenderer() {
 	}
 
 
-	function sliceSegs(events, visEventEnds, start, end) {
+	function sliceSegs(events, visEventEnds, start, end, doctorId) {
 		var segs = [],
 			i, len=events.length, event,
 			eventStart, eventEnd,
@@ -3776,7 +3756,7 @@ function AgendaEventRenderer() {
 			event = events[i];
 			eventStart = event.start;
 			eventEnd = visEventEnds[i];
-			if (eventEnd > start && eventStart < end) {
+			if (eventEnd > start && eventStart < end && event.doctorId == doctorId) {
 				if (eventStart < start) {
 					segStart = cloneDate(start);
 					isStart = false;

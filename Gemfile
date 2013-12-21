@@ -40,6 +40,10 @@ group :development do
   gem 'rb-fsevent', require: false
 end
 
+group :test do
+  gem 'debugger'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
