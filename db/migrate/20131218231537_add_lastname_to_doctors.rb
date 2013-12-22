@@ -1,5 +1,5 @@
 class AddLastnameToDoctors < ActiveRecord::Migration
   def change
-    add_column :doctors, :lastname, :string
+    add_column :doctors, :last_name, :string
   end
 end

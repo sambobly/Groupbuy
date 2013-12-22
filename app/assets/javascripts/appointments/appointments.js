@@ -22,5 +22,6 @@ $( document ).ready( function() {
         $( "#appointment_date").datepicker();
     }
 
-
-});
+    if ( $ ('#appointment_hour').length > 0) {
+        $( "#appointment_hour").timepicker();
+    }});

@@ -41,7 +41,7 @@ class DoctorsController < ApplicationController
   end
 
   def search
-    @doctors = Doctor.where("name like ?", "%#{params[:token]}%")
+    @doctors = Doctor.where("firstname like ? or lastname like ?", "%#{params[:token]}%", "%#{params[:token]}%")
 
     respond_to do |format|
       format.html { render "search.json.erb" }
@@ -80,6 +80,6 @@ class DoctorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_params
-      params.require(:doctor).permit(:name, :position)
+      params.require(:doctor).permit(:first_name, :position)
     end
 end

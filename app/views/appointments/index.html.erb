@@ -1,3 +1,4 @@
+
 <div class="-1u 10u options">
 	<div class="title">Options</div>
 
@@ -5,7 +6,7 @@
 <%= form_tag( url_for(controller: 'appointments', :action => 'find' ), :method => 'get' ) do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil  %>
+      <%= submit_tag "Search", :first_name => nil  %>
     </p>
  <% end %>
 <div id="calendar" class="-1u 10u">

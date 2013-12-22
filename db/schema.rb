@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219003121) do
+ActiveRecord::Schema.define(version: 20131219003841) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 20131219003121) do
     t.string   "dr_comment"
     t.text     "receptionist_comment"
     t.string   "doctor"
-    t.time     "appointment_time"
+    t.string   "appointment_time"
+    t.string   "hour"
   end
 
   create_table "doctorpatients", force: true do |t|
