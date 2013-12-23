@@ -6,6 +6,7 @@ $( document ).ready( function() {
 			editable: true,
 			defaultView: 'agendaWeek',
 			doctorsSource: '/doctors/list',
+			eventSources: ['/appointments/findByDate'],
 			allDaySlot: false,
 			minTime: '7:30am',
 			maxTime: '6:00pm',
@@ -20,6 +21,8 @@ $( document ).ready( function() {
         })
 		
         $( "#appointment_date").datepicker();
+
+        $( "#appointment_hour").timepicker();
 	}
 	
 });

@@ -44,6 +44,8 @@ group :test do
   gem 'debugger'
 end
 
+gem 'appointments', "~> 1.3.3" # THEO: Do we need this Gem?
+gem 'protected_attributes'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

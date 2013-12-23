@@ -20,6 +20,7 @@ Optho::Application.routes.draw do
     collection do
       get 'find'
       get 'index'
+      get 'findByDate'
     end
   end
 

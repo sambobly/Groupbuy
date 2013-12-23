@@ -30,7 +30,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'today prev,next'
+		right: 'more_doctors today prev,next'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -80,7 +80,8 @@ var defaults = {
 		today: 'today',
 		month: 'month',
 		week: 'week',
-		day: 'day'
+		day: 'day',
+		more_doctors: 'more doctors'
 	},
 	
 	// jquery-ui theming
@@ -235,13 +236,13 @@ function Calendar(element, options, doctors, eventSources) {
 	t.getView = getView;
 	t.option = option;
 	t.trigger = trigger;
+	t.more_doctors = more_doctors;
 	
 	
 	// imports
 	EventManager.call(t, options, eventSources);
 	var isFetchNeeded = t.isFetchNeeded;
 	var fetchEvents = t.fetchEvents;
-	
 	
 	// locals
 	var _element = element[0];
@@ -257,7 +258,6 @@ function Calendar(element, options, doctors, eventSources) {
 	var date = new Date();
 	var events = [];
 	var _dragElement;
-	
 	
 	
 	/* Main Rendering
@@ -541,7 +541,9 @@ function Calendar(element, options, doctors, eventSources) {
 
 
 	function fetchAndRenderEvents() {
-		fetchEvents(currentView.visStart, currentView.visEnd);
+		// Theo: Modified the fetch events call to use a single date as we've replaced visStart and visEnd
+		date = currentView.date;
+		fetchEvents(date, date);
 			// ... will call reportEvents
 			// ... which will call renderEvents
 	}
@@ -739,6 +741,13 @@ function Calendar(element, options, doctors, eventSources) {
 			});
 	}
 	
+	/* Doctors
+	------------------------------------------------------------------------*/
+	
+	// Shows more doctors in a dropdown list
+	function more_doctors() {
+		console.info( "to be implemented" );
+	}
 
 }
 
@@ -1060,12 +1069,13 @@ function EventManager(options, _sources) {
 				var startParam = firstDefined(source.startParam, options.startParam);
 				var endParam = firstDefined(source.endParam, options.endParam);
 				if (startParam) {
+					// Theo: modified to send proper date string to server rather than timestamp
 					data[startParam] = Math.round(+rangeStart / 1000);
 				}
 				if (endParam) {
 					data[endParam] = Math.round(+rangeEnd / 1000);
 				}
-
+				
 				pushLoading();
 				$.ajax($.extend({}, ajaxDefaults, source, {
 					data: data,
@@ -2700,7 +2710,7 @@ function AgendaWeekView(element, calendar) {
 		}
 
 		t.title = "Appointments for " + formatDate( date, opt( 'titleFormat' ) );
-		t.start = date;
+		t.date = date;
 		calendar.date= date;
 		t.visStart = 0;
 		t.visEnd = opt( 'numberOfDoctorsToShow' );
