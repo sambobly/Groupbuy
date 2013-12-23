@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 tom:
-  name: Tom Conrad
+  first_name: Tom
+  last_name: Conrad
   position: Doctor
 
 theo:
-  name: Theo Denovan
+  first_name: Theo
+  last_name: Denovan
   position: Lawyer
   
 tony:
-  name: Tony Senanayake
+  first_name: Tony
+  last_name: Senanayake
   position: lawyer

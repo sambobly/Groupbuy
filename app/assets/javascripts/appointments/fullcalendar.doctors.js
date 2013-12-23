@@ -3090,7 +3090,7 @@ function AgendaView(element, calendar, viewName) {
 		for (col=t.visStart; col<colCnt && col < doctors.length; col++) {
 			html +=
 				"<th class='fc-" + doctors[ col ].id + " fc-col" + col + ' ' + headerClass + "'>" +
-				htmlEscape( doctors[ col ].name ) +
+				htmlEscape( doctors[ col ].first_name + " " + doctors[ col ].last_name ) +
 				"</th>";
 		}
 		

@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 20131221045119) do
   end
 
   create_table "doctors", force: true do |t|
-    t.string   "firstname"
+    t.string   "first_name"
     t.string   "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "lastname"
+    t.string   "last_name"
   end
 
   create_table "patients", force: true do |t|

@@ -18,7 +18,7 @@ class DoctorsControllerTest < ActionController::TestCase
 
   test "should create doctor" do
     assert_difference('Doctor.count') do
-      post :create, doctor: { name: @doctor.name, position: @doctor.position }
+      post :create, doctor: { first_name: @doctor.first_name, last_name: @doctor.last_name, position: @doctor.position }
     end
 
     assert_redirected_to doctor_path(assigns(:doctor))
@@ -35,7 +35,7 @@ class DoctorsControllerTest < ActionController::TestCase
   end
 
   test "should update doctor" do
-    patch :update, id: @doctor, doctor: { name: @doctor.name, position: @doctor.position }
+    patch :update, id: @doctor, doctor: { first_name: @doctor.first_name, last_name: @doctor.last_name, position: @doctor.position }
     assert_redirected_to doctor_path(assigns(:doctor))
   end
 
@@ -52,8 +52,8 @@ class DoctorsControllerTest < ActionController::TestCase
     assert_response :success
     doctors = JSON.parse(@response.body)
     assert_equal doctors.count, 3
-    assert_equal doctors[ 0 ][ "name" ], "Theo Denovan"
-    assert_equal doctors[ 1 ][ "name" ], "Tom Conrad"
-    assert_equal doctors[ 2 ][ "name" ], "Tony Senanayake"
+    assert_equal doctors[ 0 ][ "first_name" ], "Theo"
+    assert_equal doctors[ 1 ][ "first_name" ], "Tom"
+    assert_equal doctors[ 2 ][ "first_name" ], "Tony"
   end  
 end

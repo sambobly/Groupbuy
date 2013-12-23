@@ -28,7 +28,6 @@ class DoctorsController < ApplicationController
   # POST /doctors.json
   def create
     @doctor = Doctor.new(doctor_params)
-
     respond_to do |format|
       if @doctor.save
         format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
@@ -50,7 +49,7 @@ class DoctorsController < ApplicationController
   
   # GET /doctors/list.json
   def list
-    @doctors = Doctor.order( :name )
+    @doctors = Doctor.order( :first_name )
     
     render json: @doctors
   end
@@ -87,7 +86,7 @@ class DoctorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_params
-      params.require(:doctor).permit(:first_name, :position)
+      params.require(:doctor).permit(:first_name, :last_name, :position)
     end
   
 end
