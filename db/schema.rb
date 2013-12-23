@@ -16,14 +16,15 @@ ActiveRecord::Schema.define(version: 20131221045119) do
   create_table "appointments", force: true do |t|
     t.string   "name"
     t.string   "patient_name"
-    t.string   "doctor"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.string   "doctor"
     t.string   "appointment_time"
+    t.string   "hour"
   end
 
   create_table "doctorpatients", force: true do |t|
@@ -34,11 +35,11 @@ ActiveRecord::Schema.define(version: 20131221045119) do
   end
 
   create_table "doctors", force: true do |t|
-    t.string   "first_name"
+    t.string   "firstname"
     t.string   "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "last_name"
+    t.string   "lastname"
   end
 
   create_table "patients", force: true do |t|
