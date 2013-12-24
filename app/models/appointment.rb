@@ -9,9 +9,7 @@ def self.search(search)
     find(:all)
   end
 end
-attr_accessible :date, :hour
+  attr_accessible :start_time, :end_time
 
-  validates :date, :presence => true
-  validates :hour, :presence => true,
-                   :uniqueness => {:scope => :date}
+  validates :start_time, :presence => true
 end

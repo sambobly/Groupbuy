@@ -22,4 +22,5 @@
 //= require layout/init
 
 //= require appointments/fullcalendar.doctors
+//= require appointments/jquery.timepicker.min
 //= require appointments/appointments
