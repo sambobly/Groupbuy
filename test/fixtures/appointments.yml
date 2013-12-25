@@ -5,9 +5,3 @@ one:
   start_time: 2007-11-30 10:30
   end_time: 2007-11-30 11:30
   patient_name: MyString
-
-two:
-  name: MyString
-  start_time: 2013-11-24 10:00
-  end_time: 2013-11-24 10:30
-  patient_name: MyString

@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  # gem 'sdoc', require: false
+  gem 'yard', require: false # Using Yard instead of sdoc
 end
 
 group :development do
@@ -38,6 +39,8 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'rb-fsevent', require: false
+  
+  gem 'ffaker' # Gem for generating fake data, see lib/tasks/populate
 end
 
 group :test do
@@ -46,6 +49,7 @@ end
 
 gem 'appointments', "~> 1.3.3" # THEO: Do we need this Gem?
 gem 'protected_attributes'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
