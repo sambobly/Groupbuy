@@ -9,7 +9,7 @@ def self.search(search)
     find(:all)
   end
 end
-  attr_accessible :start_time, :end_time
+  attr_accessible :start_time, :end_time, :patient_id
 
   validates :start_time, :presence => true
 end

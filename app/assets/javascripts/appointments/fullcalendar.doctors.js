@@ -541,9 +541,7 @@ function Calendar(element, options, doctors, eventSources) {
 
 
 	function fetchAndRenderEvents() {
-		// Theo: Modified the fetch events call to use a single date as we've replaced visStart and visEnd
-		date = currentView.date;
-		fetchEvents(date, date);
+		fetchEvents(currentView.visStart, currentView.visEnd);
 			// ... will call reportEvents
 			// ... which will call renderEvents
 	}
@@ -2709,11 +2707,17 @@ function AgendaWeekView(element, calendar) {
 			addDays(date, delta * 7);
 		}
 
+		var start = cloneDate(date, true);
+		var end = addDays(cloneDate(start), 1);
+        
 		t.title = "Appointments for " + formatDate( date, opt( 'titleFormat' ) );
 		t.date = date;
 		calendar.date= date;
-		t.visStart = 0;
-		t.visEnd = opt( 'numberOfDoctorsToShow' );
+
+        t.start = t.visStart = calendar.visStart = start;
+        t.end = t.visEnd = calendar.visEnd = end;
+        
+        t.doctorOffset = 0;
 
 		renderAgenda( Math.min( opt( 'numberOfDoctorsToShow' ), calendar.doctors.length ) );
 	}
@@ -3087,7 +3091,7 @@ function AgendaView(element, calendar, viewName) {
 
 		html += "<th class='fc-agenda-axis " + headerClass + "'>&nbsp;</th>";
 		
-		for (col=t.visStart; col<colCnt && col < doctors.length; col++) {
+		for (col=t.doctorOffset; col<colCnt && col < doctors.length; col++) {
 			html +=
 				"<th class='fc-" + doctors[ col ].id + " fc-col" + col + ' ' + headerClass + "'>" +
 				htmlEscape( doctors[ col ].first_name + " " + doctors[ col ].last_name ) +
@@ -3122,7 +3126,7 @@ function AgendaView(element, calendar, viewName) {
 
 		cellsHTML = '';
 		
-		for (col=t.visStart; col<colCnt && col < doctors.length; col++) {
+		for (col=t.doctorOffset; col<colCnt && col < doctors.length; col++) {
 
 			classNames = [
 				'fc-col' + col,
@@ -3709,7 +3713,6 @@ function AgendaEventRenderer() {
 			renderDayEvents(dayEvents, modifiedEventId);
 			setHeight(); // no params means set to viewHeight
 		}
-
 		renderSlotSegs(compileSlotSegs(slotEvents), modifiedEventId);
 	}
 	
@@ -3738,8 +3741,8 @@ function AgendaEventRenderer() {
 			colSegs = sliceSegs(
 				events,
 				visEventEnds,
-				d,
-				addMinutes(cloneDate(d), maxMinute-minMinute),
+				calendar.visStart,
+				calendar.visEnd,
 				calendar.doctors[ i ].id
 			);
 
@@ -3751,7 +3754,7 @@ function AgendaEventRenderer() {
 				segs.push(seg);
 			}
 		}
-
+        
 		return segs;
 	}
 
@@ -3766,7 +3769,7 @@ function AgendaEventRenderer() {
 			event = events[i];
 			eventStart = event.start;
 			eventEnd = visEventEnds[i];
-			if (eventEnd > start && eventStart < end && event.doctorId == doctorId) {
+			if (eventEnd > start && eventStart < end && event.doctor_id == doctorId) {
 				if (eventStart < start) {
 					segStart = cloneDate(start);
 					isStart = false;

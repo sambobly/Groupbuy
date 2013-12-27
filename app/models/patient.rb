@@ -1,7 +1,8 @@
 class Patient < ActiveRecord::Base
-  validates :name, presence: true
-  has_many :doctors
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  has_and_belongs_to_many :doctors
   has_many :appointments
-  attr_accessible :name, :UR_number
+  attr_accessible :first_name, :last_name, :UR_number
 
 end
