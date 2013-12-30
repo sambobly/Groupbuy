@@ -238,7 +238,6 @@ function Calendar(element, options, doctors, eventSources) {
 	t.trigger = trigger;
 	t.more_doctors = more_doctors;
 	
-	
 	// imports
 	EventManager.call(t, options, eventSources);
 	var isFetchNeeded = t.isFetchNeeded;
@@ -411,6 +410,7 @@ function Calendar(element, options, doctors, eventSources) {
 		}
 
 		freezeContentHeight();
+
 		currentView.render(date, inc || 0); // the view's render method ONLY renders the skeleton, nothing else
 		setSize();
 		unfreezeContentHeight();
@@ -2702,18 +2702,15 @@ function AgendaWeekView(element, calendar) {
 
 	
 	function render(date, delta) {
-
 		if (delta) {
-			addDays(date, delta * 7);
+			addDays(date, delta * 1); // THEO: Hacked to 1 (from 7) because AgendaView has been repurposed as the Doctor view
 		}
 
 		var start = cloneDate(date, true);
 		var end = addDays(cloneDate(start), 1);
         
 		t.title = "Appointments for " + formatDate( date, opt( 'titleFormat' ) );
-		t.date = date;
-		calendar.date= date;
-
+	
         t.start = t.visStart = calendar.visStart = start;
         t.end = t.visEnd = calendar.visEnd = end;
         
@@ -3734,10 +3731,7 @@ function AgendaEventRenderer() {
 			colSegs,
 			segs = [];
 		for (i=0; i<colCnt; i++) {
-
-			d = calendar.date;
-			addMinutes(d, minMinute);
-
+            
 			colSegs = sliceSegs(
 				events,
 				visEventEnds,
@@ -4682,6 +4676,7 @@ function View(element, calendar, viewName) {
 			.click(function(ev) {
 				if (!eventElement.hasClass('ui-draggable-dragging') &&
 					!eventElement.hasClass('ui-resizable-resizing')) {
+                        console.log( "hi", event );
 						return trigger('eventClick', this, event, ev);
 					}
 			})
@@ -4895,6 +4890,7 @@ function View(element, calendar, viewName) {
 	// `inc` defaults to `1` (increment one day forward each time)
 	function skipHiddenDays(date, inc, isExclusive) {
 		inc = inc || 1;
+        console.log( "hi" );
 		while (
 			isHiddenDayHash[ ( date.getDay() + (isExclusive ? inc : 0) + 7 ) % 7 ]
 		) {

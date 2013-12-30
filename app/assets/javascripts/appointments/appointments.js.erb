@@ -3,7 +3,6 @@ $( document ).ready( function() {
 	// The following code is only called on the index page of the appointments controller
 	if( $( 'body.appointments').length && $( 'body.index' ).length ) {
 		$( '#calendar' ).fullCalendar({
-			editable: true,
 			defaultView: 'agendaWeek',
 			doctorsSource: '/doctors/list',
 			eventSources: ['/appointments/findByDate'],
