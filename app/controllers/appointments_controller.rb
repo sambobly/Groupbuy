@@ -33,9 +33,10 @@ class AppointmentsController < ApplicationController
   end
   
   def findByDate
-    start_time = params.require( :start ) # paramter expected as unix time
+    start_time = params.require( :start ) # paramater expected as unix time
     end_time = params.require( :end ) # expected as unix time
-    # TODO: validate date paramter
+    # TODO: validate date paramater
+    #validates_uniqueness_of :appointment.start_time (note that start_time includes the date)
     @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
     render json: @appointments.collect {|appointment| {
       id: appointment.id,
