@@ -71,6 +71,15 @@
 			<div class="container">
 
 				<!-- Content -->
+                <% if !flash.nil? %>
+                <div class="flash">
+                    <% if flash[ :alert ] %>
+                    <div><%= flash[ :alert ] %></div>
+                    <% end %>
+                <div/>    
+                <% end %>
+                    
+                
 					<div class="row">
 						<div id="content" class="12u">
 								<%= yield %>
