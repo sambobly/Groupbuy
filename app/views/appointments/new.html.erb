@@ -1,5 +1,6 @@
 <%= form_for @appointment, url: {action: "create"} do |f| %>
 
+
 <div class="row">
 	<div class="2u label">Appointment Name</div>
 	<div class="4u"><%= f.text_field :name %></div>
@@ -7,7 +8,7 @@
 
 <div class="row">
 	<div class="2u label">Start Time</div>
-	<div class="2u"><%= f.text_field :start_time %></div>
+  <div class="2u"><%= f.text_field :start_time %></div>
 </div>
 
 
@@ -22,5 +23,15 @@
 </div>
 
     <%= f.submit "Create Appointment" %>
+<div class ="row">
+  <%= if @appointment.errors.any?
+         @appointment.errors.full_message.each do |message|%>
+      <% end %>
+      <h2>Errors</h2>
+      <ul>
+        <li> <%= message %> </li>
+      </ul>
+  <% end %>
+</div>
 
 <% end %>

@@ -36,7 +36,6 @@ class AppointmentsController < ApplicationController
     start_time = params.require( :start ) # paramater expected as unix time
     end_time = params.require( :end ) # expected as unix time
     # TODO: validate date paramater
-    #validates_uniqueness_of :appointment.start_time (note that start_time includes the date)
     @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
     render json: @appointments.collect {|appointment| {
       id: appointment.id,
@@ -46,5 +45,7 @@ class AppointmentsController < ApplicationController
       doctor_id: appointment.doctor_id,
       allDay: false
     }}
+
   end
+
 end

@@ -12,4 +12,6 @@ end
   attr_accessible :start_time, :end_time, :patient_id
 
   validates :start_time, :presence => true
+  validates :start_time, :uniqueness => true  #(note that start_time includes the date)
+    {message: "Appointment clash. Do you wish to continue?"}
 end
