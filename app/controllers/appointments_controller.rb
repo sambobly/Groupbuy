@@ -49,4 +49,10 @@ class AppointmentsController < ApplicationController
 
   end
 
+  def findNextAvailableSlot
+    doctor = params.require( :doctor )
+    start_time = params.require (:start)
+    @appointment = Appointment.find(params.require(:doctor).must_be_nil(:start_time))
+  end
+
 end

@@ -10,7 +10,10 @@ $( document ).ready( function() {
 			minTime: '7:30am',
 			maxTime: '6:00pm',
 			slotMinutes: 10
-		});	
+		});
+        $("#search").autocomplete({
+            source: "/doctors/search"
+        })
 	}
 	
 	// New appointment page
