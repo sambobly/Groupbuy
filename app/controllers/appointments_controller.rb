@@ -15,12 +15,9 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new( params.require( :appointment ).permit( :name, :patient_name, :start_time ) )
-    debugger
     if @appointment.save
-      debugger
       redirect_to new_appointment_path
     else
-      debugger
       err = ''
       @appointment.errors.full_messages.each do |m|
         err << m
@@ -52,7 +49,7 @@ class AppointmentsController < ApplicationController
   def findNextAvailableSlot
     doctor = params.require( :doctor )
     start_time = params.require (:start)
-    @appointment = Appointment.find(params.require(:doctor).must_be_nil(:start_time))
+    @appointment = Appointment.find(params.require(:doctor).must_be_nil(:start))
   end
 
 end
