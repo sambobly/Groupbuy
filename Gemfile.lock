@@ -32,6 +32,7 @@ GEM
     builder (3.1.4)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    client_side_validations (3.2.6)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -157,6 +158,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    win32console (1.3.2)
     win32console (1.3.2-x86-mingw32)
     yard (0.8.7.3)
 
@@ -166,6 +168,7 @@ PLATFORMS
 
 DEPENDENCIES
   appointments (~> 1.3.3)
+  client_side_validations
   coffee-rails (~> 4.0.0)
   debugger
   ffaker

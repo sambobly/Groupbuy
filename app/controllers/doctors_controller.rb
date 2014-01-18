@@ -40,7 +40,7 @@ class DoctorsController < ApplicationController
   end
 
   def search
-    @doctors = Doctor.where("first_name like ? or last_name like ?", "%#{params[:term]}%", "%#{params[:term]}%").order( :first_name )
+    @doctors = Doctor.where("first_name like ? or last_name like ?", "%#{params[:term]}%", "%#{params[:term]}%").order(:first_name)
 
     respond_to do |format|
       format.html { render "search.json.erb" }
