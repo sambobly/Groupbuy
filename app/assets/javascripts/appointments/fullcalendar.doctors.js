@@ -4676,7 +4676,6 @@ function View(element, calendar, viewName) {
 			.click(function(ev) {
 				if (!eventElement.hasClass('ui-draggable-dragging') &&
 					!eventElement.hasClass('ui-resizable-resizing')) {
-                        console.log( "hi", event );
 						return trigger('eventClick', this, event, ev);
 					}
 			})
