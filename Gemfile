@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'client_side_validations'
+gem 'client_side_validations', git: "https://github.com/amitree/client_side_validations.git", branch: "4-0-beta"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
