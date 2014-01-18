@@ -18,11 +18,7 @@ class AppointmentsController < ApplicationController
     if @appointment.save
       redirect_to new_appointment_path
     else
-      err = ''
-      @appointment.errors.full_messages.each do |m|
-        err << m
-      end
-      redirect_to new_appointment_path, :flash => { :alert => "#{err}, please try again" }
+      render 'new'
     end
   end
 
