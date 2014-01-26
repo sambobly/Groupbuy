@@ -584,6 +584,7 @@
           }
           element.before(inputErrorField);
           inputErrorField.find('span#input_tag').replaceWith(element);
+          $('<label class="message"/>').insertAfter(element);
           inputErrorField.find('label.message').attr('for', element.attr('id'));
           labelErrorField.find('label.message').attr('for', element.attr('id'));
           labelErrorField.insertAfter(label);
