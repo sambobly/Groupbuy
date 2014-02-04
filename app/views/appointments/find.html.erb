@@ -2,4 +2,8 @@
 <% form_tag "/appointments/find" do %>
     <%= text_field_tag params[:search_string] %>
     <%= submit_tag "find"%>
+
+    <% @appointments.each do |appointment| %>
+        <%= appointment.name %>
+    <% end %>
 <% end %>

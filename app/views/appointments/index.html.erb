@@ -9,5 +9,9 @@
       <%= submit_tag "Search", :first_name => nil  %>
     </p>
  <% end %>
+
+<% @appointments.each do |appointment| %>
+    <p><%= appointment.name %></p>
+    <% end %>
 <div id="calendar" class="-1u 10u">
 </div>
