@@ -3,7 +3,11 @@
     <%= text_field_tag params[:search_string] %>
     <%= submit_tag "find"%>
 
-    <% @appointments.each do |appointment| %>
-        <%= appointment.name %>
-    <% end %>
+
+<% end %>
+Results
+<% @appointments.limit(10).each do |appointment| %>
+    <%= (appointment.doctor.name)%>
+    <%= (appointment.patient.name)%>
+    <%=  appointment.start_time %><br/>
 <% end %>

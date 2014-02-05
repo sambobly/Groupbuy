@@ -24,7 +24,9 @@ class AppointmentsController < ApplicationController
   end
 
   def find
-    @appointments = Appointment.search(params[:search])
+    search = params[:search]
+    @appointments = Appointment.joins(:patient).joins(:doctor).where( "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE '%#{search}%' OR CONCAT(patients.first_name, ' ', patients.last_name) LIKE '%#{search}%'")
+
   end
   
   def findByDate

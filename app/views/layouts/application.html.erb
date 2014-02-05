@@ -22,12 +22,7 @@
     <%= text_field_tag :search_string %>
       <%= submit_tag "Search" %>
   <% end %>
-  <%= form_tag( url_for(controller: 'appointments', :action => 'find' ), :method => 'get' ) do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :first_name => nil  %>
-    </p>
- <% end %>
+
   <% @appointments.each do |appointment| %>
     <p><%= appointment.name %></p>
     <% end %>

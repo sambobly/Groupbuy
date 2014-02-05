@@ -5,4 +5,8 @@ class Patient < ActiveRecord::Base
   has_many :appointments
   attr_accessible :first_name, :last_name, :UR_number
 
+  def name
+    first_name + " " + last_name
+  end
+
 end
