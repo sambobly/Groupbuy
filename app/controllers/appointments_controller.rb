@@ -30,8 +30,8 @@ class AppointmentsController < ApplicationController
   end
   
   def findByDate
-    start_time = params.require( :start ) # paramater expected as unix time
-    end_time = params.require( :end ) # expected as unix time
+    #start_time = params.require( :start ) # paramater expected as unix time
+    #end_time = params.require( :end ) # expected as unix time
     # TODO: validate date paramater
     @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
     render json: @appointments.collect {|appointment| {
@@ -46,9 +46,9 @@ class AppointmentsController < ApplicationController
   end
 
   def findNextAvailableSlot
-    doctor = params.require( :doctor )
+    doctor = params.require(:doctor.name)
     start_time = params.require (:start)
-    @appointment = Appointment.find(params.require(:doctor).must_be_nil(:start))
+    @appointment = Appointment.search(params.require(:doctor.name))
   end
 
 end

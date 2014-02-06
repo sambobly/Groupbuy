@@ -14,4 +14,19 @@
     <p><%= appointment.name %></p>
     <% end %>
 <div id="calendar" class="-1u 10u">
+  <%= form_tag( url_for(controller: 'appointments', :action => 'findNextAvailableSlot' ), :method => 'get' ) do %>      <p>
+        <%= text_field_tag :find, params[:search] %>
+        <%= submit_tag "Find", :first_name => nil  %>
+      </p>
+  <% end %>
+  <% @appointments.each do |appointment| %>
+      <p><%= appointment.name %></p>
+  <% end %>
+  <%= form_tag( url_for(controller: 'appointments', :action => 'findByDate'), :method=>'get' ) do %>
+      <p>
+      <%= text_field_tag :ByDate, params[:search] %>
+      <%= submit_tag "ByDate"%>
+      </p>
+      <% end %>
+
 </div>
