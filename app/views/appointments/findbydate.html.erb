@@ -1,0 +1,14 @@
+
+<% form_tag "/appointments/findByDate" do %>
+    <%= text_field_tag params[:search_string\A] %>
+    <%= submit_tag "ByDate"%>
+    #(?<month>\d{1,2})\/(?<day>\d{1,2})\/(?<year>\d{4}) would this work as a search string?
+
+<% end %>
+Results
+<% @appointments.limit(10).each do |appointment| %>
+    <%= (appointment.doctor.name)%>
+    <%= (appointment.patient.name)%>
+    <%=  appointment.start_time %>
+    <%=  appointment.end_time %><br/>
+<% end %>
