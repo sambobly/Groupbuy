@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.autocomplete
 //= require jquery.ui.datepicker
+//= require jquery.ui.dialog
 //= require turbolinks
 //= require rails.validations.js
 //= require layout/jquery.dropotron
