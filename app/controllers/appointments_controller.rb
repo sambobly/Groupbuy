@@ -5,6 +5,7 @@ class AppointmentsController < ApplicationController
     @search=Appointment.search(params[:q])
   end
   def index
+    debugger
     @appointments = Appointment.all
   end
   
@@ -34,21 +35,18 @@ class AppointmentsController < ApplicationController
   end
   
   def findByDate
-    @q = Appointment.search(params[:q])
-    @appointments = @q.result #s1tart_time = params.require( :start ) # paramater expected as unix time
-    #end_time = params.require( :end ) # expected as unix time
+    start_time = params.require( :start ) # paramater expected as unix time
+    end_time = params.require( :end ) # expected as unix time
     # TODO: validate date paramater
-    #search = params[:search]
-    #@appointments = Appointment.where( "start_time LIKE '%#{search}%'")
-    #render json: @appointments.collect {|appointment| {
-      #id: appointment.id,
-      #start: appointment.start_time,
-      #end: appointment.end_time,
-      #title: appointment.patient.first_name + " " + appointment.patient.last_name,
-      #doctor_id: appointment.doctor_id,
-      #allDay: false
-
-
+    @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
+    render json: @appointments.collect {|appointment| {
+      id: appointment.id,
+      start: appointment.start_time,
+      end: appointment.end_time,
+      title: appointment.patient.first_name + " " + appointment.patient.last_name,
+      doctor_id: appointment.doctor_id,
+      allDay: false
+    }}
   end
 
   def findNextAvailableSlot
