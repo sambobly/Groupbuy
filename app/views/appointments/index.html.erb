@@ -22,11 +22,12 @@
   <% @appointments.each do |appointment| %>
       <p><%= appointment.name %></p>
   <% end %>
-  <%= form_tag( url_for(controller: 'appointments', :action => 'findByDate'), :method=>'get' ) do %>
-      <p>
-      <%= text_field_tag :ByDate, params[:search] %>
-      <%= submit_tag "ByDate"%>
-      </p>
-      <% end %>
+  <%= search_form_for @search do |f| %>
+      <div class="field">
+        <%= f.label :start_time_cont, "Date" %>
+        <%= f.text_field :start_time_cont %>
+      </div>
+      <div class="actions"><%= f.submit "Search" %></div>
 
-</div>
+  <% end %>
+
