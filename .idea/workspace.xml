@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/appointments/findByDate.html.erb" />
+      <change type="MOVED" beforePath="C:\Users\Tom\Dropbox\Theo and Tom Folder\optho\app\views\appointments\findbydate.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/findByDate.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appointments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/optho.iml" afterPath="$PROJECT_DIR$/.idea/optho.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391670224235" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392634201701" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386744728790" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389865932736" ignored="false" />
@@ -22,15 +28,15 @@
     <file path="/doctors_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389495428274" ignored="false" />
     <file path="/doctorpatient.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386574212695" ignored="false" />
     <file path="/application.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386585358807" ignored="false" />
-    <file path="/Gemfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389865361333" ignored="false" />
+    <file path="/Gemfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392185803350" ignored="false" />
     <file path="/appointments.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387703805147" ignored="false" />
-    <file path="/routes.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391580336454" ignored="false" />
+    <file path="/routes.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392187780824" ignored="false" />
     <file path="/search.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386587767504" ignored="false" />
     <file path="/search.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389147921800" ignored="false" />
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
-    <file path="/appointments_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391669711009" ignored="false" />
+    <file path="/appointments_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392360389555" ignored="false" />
     <file path="/week.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386669188074" ignored="false" />
-    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391669678571" ignored="false" />
+    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392361780011" ignored="false" />
     <file path="/application.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391580469396" ignored="false" />
     <file path="/application.css" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386674075841" ignored="false" />
     <file path="/find.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391576910506" ignored="false" />
@@ -41,11 +47,11 @@
     <file path="/20131219103756_add_hour_to_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387449573319" ignored="false" />
     <file path="/jquery.dropotron.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387704437206" ignored="false" />
     <file path="/20131230005719_add_start_and_end_time_to_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1388365064931" ignored="false" />
-    <file path="/appointments.js.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389147449206" ignored="false" />
+    <file path="/appointments.js.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392182202738" ignored="false" />
     <file path="/client_side_validations.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389866332171" ignored="false" />
     <file path="/findbydate.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391579848439" ignored="false" />
     <file path="/findNextAvailableSlot.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391582615606" ignored="false" />
-    <file path="/findByDate.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391670187907" ignored="false" />
+    <file path="/findByDate.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392361261835" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,38 +70,44 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7739583">
+    <splitter split-orientation="horizontal" split-proportion="0.7021531">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.7510094">
+        <splitter split-orientation="horizontal" split-proportion="0.5562181">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.4638219">
+            <splitter split-orientation="horizontal" split-proportion="0.55720824">
               <split-first>
                 <leaf>
                   <file leaf-file-name="appointments.js.erb" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="16" column="16" selection-start="526" selection-end="530" vertical-scroll-proportion="-10.461538">
-                          <folding>
-                            <marker date="1391669225028" expanded="true" signature="729:932" placeholder="{...}" />
-                            <marker date="1391669225028" expanded="true" signature="777:826" placeholder="{&quot;source&quot;: &quot;/doctors/search&quot;...}" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="31" column="6" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-19.192308">
+                        <state line="20" column="13" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="true">
+                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="30" column="6" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.6496815">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="find.html.erb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/views/appointments/find.html.erb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="3" column="24" selection-start="109" selection-end="113" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/config/routes.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="35" column="47" selection-start="867" selection-end="867" vertical-scroll-proportion="0.57092613">
+                        <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -104,7 +116,7 @@
                   <file leaf-file-name="findNextAvailableSlot.html.erb" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="3" column="24" selection-start="126" selection-end="130" vertical-scroll-proportion="-1.9615384">
+                        <state line="3" column="24" selection-start="126" selection-end="130" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -113,7 +125,7 @@
                   <file leaf-file-name="findByDate.html.erb" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/views/appointments/findByDate.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -122,7 +134,7 @@
                   <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="45" column="5" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0">
+                        <state line="2" column="55" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -132,10 +144,10 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+                  <file leaf-file-name="find.html.erb" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/app/views/appointments/find.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="45" column="45" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.8290503">
+                        <state line="14" column="30" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2659218">
                           <folding />
                         </state>
                       </provider>
@@ -147,10 +159,19 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+              <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="24" column="91" selection-start="870" selection-end="870" vertical-scroll-proportion="0.4695052">
+                    <state line="37" column="14" selection-start="957" selection-end="970" vertical-scroll-proportion="0.449162">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Gemfile">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="29" column="12" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -162,10 +183,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="findByDate.html.erb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="findByDate.html.erb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/appointments/findByDate.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="91" selection-start="218" selection-end="218" vertical-scroll-proportion="0.07825086">
+                <state line="4" column="40" selection-start="150" selection-end="150" vertical-scroll-proportion="0.07943925">
                   <folding />
                 </state>
               </provider>
@@ -192,7 +213,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/_form_error.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/client_side_validations.rb" />
         <option value="$PROJECT_DIR$/app/views/appointments/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/appointment.rb" />
@@ -200,13 +220,14 @@
         <option value="$PROJECT_DIR$/app/models/patient.rb" />
         <option value="$PROJECT_DIR$/app/views/appointments/find.html.erb" />
         <option value="$PROJECT_DIR$/app/views/appointments/findbydate.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" />
         <option value="$PROJECT_DIR$/app/views/appointments/findByDate.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
       </list>
     </option>
   </component>
@@ -558,14 +579,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -914,7 +935,11 @@
       <created>1391670227164</created>
       <updated>1391670227164</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="midway through findbydate">
+      <created>1391682458614</created>
+      <updated>1391682458614</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -941,21 +966,21 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12916666" sideWeight="0.6627409" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12916666" sideWeight="0.66488224" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3372591" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3358946" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3351178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1031,21 +1056,16 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/appointments_controller.rb</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/jquery-ui-rails-4.1.1/app/assets/stylesheets/jquery.ui.autocomplete.css.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/yard-0.8.7.3/lib/yard/server/templates/default/fulldoc/html/js/autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1053,101 +1073,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="262" selection-end="262" vertical-scroll-proportion="7.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/find.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="109" selection-end="113" vertical-scroll-proportion="0.08947369">
-          <folding />
-        </state>
+        <state line="13" column="22" selection-start="262" selection-end="262" vertical-scroll-proportion="7.48" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/doctors/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/doctors/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/doctors/search.json.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="70" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.79291046">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="526" selection-end="530" vertical-scroll-proportion="-10.461538">
-          <folding>
-            <marker date="1391669225028" expanded="true" signature="729:932" placeholder="{...}" />
-            <marker date="1391669225028" expanded="true" signature="777:826" placeholder="{&quot;source&quot;: &quot;/doctors/search&quot;...}" />
-          </folding>
-        </state>
+        <state line="25" column="70" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.79291046" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="126" selection-end="130" vertical-scroll-proportion="-1.9615384">
+        <state line="3" column="24" selection-start="126" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="12" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="47" selection-start="867" selection-end="867" vertical-scroll-proportion="0.57092613">
+        <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="6" selection-start="1009" selection-end="1009" vertical-scroll-proportion="-19.192308">
+        <state line="20" column="13" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="5" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0">
+        <state line="2" column="55" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/findByDate.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="91" selection-start="218" selection-end="218" vertical-scroll-proportion="0.07825086">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="6" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.6496815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/find.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="345" selection-end="345" vertical-scroll-proportion="0.2659218">
           <folding />
         </state>
       </provider>
