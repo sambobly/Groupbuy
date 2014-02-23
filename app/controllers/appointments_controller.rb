@@ -3,12 +3,13 @@ class AppointmentsController < ApplicationController
 
   def set_search
     @search=Appointment.search(params[:q])
-  end
+    end
+
   def index
-    debugger
     @appointments = Appointment.all
+    @q = Appointment.search(params[:q])
+    @appointments = @q.result(distinct: true)
   end
-  
   # Creates a new appointment
   def new
     @appointment = Appointment.new
@@ -31,13 +32,12 @@ class AppointmentsController < ApplicationController
   def find
     search = params[:search]
     @appointments = Appointment.joins(:patient).joins(:doctor).where( "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE '%#{search}%' OR CONCAT(patients.first_name, ' ', patients.last_name) LIKE '%#{search}%'")
-
   end
   
   def findByDate
     start_time = params.require( :start ) # paramater expected as unix time
     end_time = params.require( :end ) # expected as unix time
-    # TODO: validate date paramater
+     #TODO: validate date paramater
     @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
     render json: @appointments.collect {|appointment| {
       id: appointment.id,
