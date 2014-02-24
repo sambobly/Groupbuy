@@ -4,9 +4,9 @@ class AppointmentsController < ApplicationController
   def set_search
     @search=Appointment.search(params[:q])
   end
+  
   def index
-    debugger
-    @appointments = Appointment.all
+    @appointments = @search.result.limit(5)
   end
   
   # Creates a new appointment
@@ -31,7 +31,6 @@ class AppointmentsController < ApplicationController
   def find
     search = params[:search]
     @appointments = Appointment.joins(:patient).joins(:doctor).where( "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE '%#{search}%' OR CONCAT(patients.first_name, ' ', patients.last_name) LIKE '%#{search}%'")
-
   end
   
   def findByDate
@@ -52,6 +51,7 @@ class AppointmentsController < ApplicationController
   def findNextAvailableSlot
     doctor = params.require(:doctor.name)
     start_time = params.require (:start)
+    DateTime.date
     @appointment = Appointment.search(params.require(:doctor.name))
   end
 

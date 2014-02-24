@@ -10,7 +10,7 @@
 Results
 <% @appointments.limit(10).each do |appointment| %>
     <%= (appointment.doctor.name)%>
-   # <%= (appointment.patient.name)%>
-   # <%=  appointment.start_time %>
-   # <%=  appointment.end_time %><br/>
+   <%= (appointment.patient.name)%>
+   <%=  appointment.start_time %>
+   <%=  appointment.end_time %><br/>
 <% end %>
