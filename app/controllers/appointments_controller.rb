@@ -10,9 +10,8 @@ class AppointmentsController < ApplicationController
     end
 
   def index
-    @appointments = Appointment.all
     @q = Appointment.search(params[:q])
-    @appointments = @q.result(distinct: true)
+    @appointments = @q.result(distinct: true).limit(5)
   end
   # Creates a new appointment
   def new

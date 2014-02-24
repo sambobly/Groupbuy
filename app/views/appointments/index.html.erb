@@ -11,7 +11,7 @@
  <% end %>
 
 <% @appointments.each do |appointment| %>
-    <p><%= appointment.id %></p>
+    <p><%= appointment.id %> - <%= appointment.start_time %></p>
     <% end %>
 <div id="calendar" class="-1u 10u">  </div>
  <div id="myDialog"></div>
