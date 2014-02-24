@@ -9,19 +9,18 @@ $( document ).ready( function() {
 			allDaySlot: false,
 			minTime: '7:30am',
 			maxTime: '6:00pm',
-			slotMinutes: 10
-		},{
-            eventClick: function(calEvent, jsEvent, view) {
+			slotMinutes: 10,
+      eventClick: function(calEvent, jsEvent, view) {
 
-                alert('Event: ' + calEvent.title);
-                alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-                alert('View: ' + view.name);
+          alert('Event: ' + calEvent.title);
+          alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+          alert('View: ' + view.name);
 
-                // change the border color just for fun
-                $(this).css('border-color', 'red');
+          // change the border color just for fun
+          $(this).css('border-color', 'red');
 
-            }
-        });
+      }
+		});
 
         $("#search").autocomplete({
             source: "/doctors/search"
