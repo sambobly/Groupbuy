@@ -1,14 +1,13 @@
 
-<% form_tag "/appointments/findNextAvailableSlot" do %>
-    <%= text_field_tag params[:search_string] %>
-    <%= submit_tag "find"%>
-
-
+<%= search_form_for @q, html: {class: "pull-right form-search article_search"} do |f| %>
+    <%= f.text_field :start_time_date_equals, placeholder: "Date" %>
+    <%= f.submit "Search", class: "btn" %>
 <% end %>
+
 Results
-<% @appointments.limit(10).each do |appointment| %>
-    <%= (appointment.doctor.name)%>
-    <%= (appointment.patient.name)%>
-    <%=  appointment.start_time %>
-    <%=  appointment.end_time %><br/>
+<% @q.limit(10).each do |f| %>
+    <%= (f.doctor.name)%>
+    <%= (f.patient.name)%>
+    <%=  f.start_time %>
+    <%=  f.end_time %><br/>
 <% end %>

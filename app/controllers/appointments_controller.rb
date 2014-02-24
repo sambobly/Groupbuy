@@ -7,8 +7,13 @@ class AppointmentsController < ApplicationController
   
   def index
     @appointments = @search.result.limit(5)
+    end
+
+  def index
+    @appointments = Appointment.all
+    @q = Appointment.search(params[:q])
+    @appointments = @q.result(distinct: true)
   end
-  
   # Creates a new appointment
   def new
     @appointment = Appointment.new
@@ -36,7 +41,7 @@ class AppointmentsController < ApplicationController
   def findByDate
     start_time = params.require( :start ) # paramater expected as unix time
     end_time = params.require( :end ) # expected as unix time
-    # TODO: validate date paramater
+     #TODO: validate date paramater
     @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
     render json: @appointments.collect {|appointment| {
       id: appointment.id,

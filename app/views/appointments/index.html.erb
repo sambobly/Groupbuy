@@ -13,21 +13,11 @@
 <% @appointments.each do |appointment| %>
     <p><%= appointment.id %></p>
     <% end %>
-<div id="calendar" class="-1u 10u">
-  <%= form_tag( url_for(controller: 'appointments', :action => 'findNextAvailableSlot' ), :method => 'get' ) do %>      <p>
-        <%= text_field_tag :find, params[:search] %>
-        <%= submit_tag "Find", :first_name => nil  %>
-      </p>
+<div id="calendar" class="-1u 10u">  </div>
+ <div id="myDialog"></div>
+  <%= search_form_for @q, html: {class: "pull-right form-search appointment_search"} do |f| %>
+      <p><%= f.text_field :start_time_date_equals, placeholder: "Date" %>
+        <%= f.submit "Date", class: "btn" %></p>
   <% end %>
-  <% @appointments.each do |appointment| %>
-      <p><%= appointment.name %></p>
-  <% end %>
-  <%= search_form_for @search do |f| %>
-      <div class="field">
-        <%= f.label :start_time_cont, "Date" %>
-        <%= f.text_field :start_time_cont %>
-      </div>
-      <div class="actions"><%= f.submit "Search" %></div>
 
-  <% end %>
 
