@@ -4,10 +4,6 @@ class AppointmentsController < ApplicationController
   def set_search
     @search=Appointment.search(params[:q])
   end
-  
-  def index
-    @appointments = @search.result.limit(5)
-    end
 
   def index
     @q = Appointment.search(params[:q])
