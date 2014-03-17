@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/ransack.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/appointment.rb" afterPath="$PROJECT_DIR$/app/models/appointment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appointments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1393150841101" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1395052739024" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386744728790" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389865932736" ignored="false" />
@@ -46,7 +41,7 @@
     <file path="/20131219103756_add_hour_to_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387449573319" ignored="false" />
     <file path="/jquery.dropotron.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387704437206" ignored="false" />
     <file path="/20131230005719_add_start_and_end_time_to_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1388365064931" ignored="false" />
-    <file path="/appointments.js.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392877369191" ignored="false" />
+    <file path="/appointments.js.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1394780772836" ignored="false" />
     <file path="/client_side_validations.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389866332171" ignored="false" />
     <file path="/findbydate.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391579848439" ignored="false" />
     <file path="/findNextAvailableSlot.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1392791284782" ignored="false" />
@@ -59,7 +54,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Users\Tom\Dropbox\Theo and Tom Folder\optho" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -81,10 +76,37 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="appointment.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="62" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ransack.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/initializers/ransack.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="56" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/base.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="fullcalendar.min.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.min.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="4" column="145" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -94,6 +116,33 @@
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.doctors.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="923" column="75" selection-start="20321" selection-end="20321" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <marker date="1390020443104" expanded="false" signature="6510:6527" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="16819:16829" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="50395:50435" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="51541:51551" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="53680:53697" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65120:65165" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65301:65341" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65403:65413" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65617:65634" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66161:66223" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66296:66340" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66450:66490" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66577:66587" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="67080:67097" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="68246:68256" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="70120:70137" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="149594:149621" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="appointments.js.erb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="11" selection-start="963" selection-end="963" vertical-scroll-proportion="0.42648846">
                   <folding />
                 </state>
               </provider>
@@ -108,19 +157,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="appointments.js.erb" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="48" selection-start="537" selection-end="537" vertical-scroll-proportion="0.2677532">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="20" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+                <state line="14" column="12" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -130,19 +170,37 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="fullcalendar.doctors.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="fullcalendar.doctors.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.doctors.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="25" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="0.01983664">
+                  <folding>
+                    <marker date="1390020443104" expanded="false" signature="6510:6527" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="16819:16829" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="50395:50435" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="51541:51551" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="53680:53697" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65120:65165" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65301:65341" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65403:65413" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="65617:65634" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66161:66223" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66296:66340" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66450:66490" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="66577:66587" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="67080:67097" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="68246:68256" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="70120:70137" placeholder="..." />
+                    <marker date="1390020443104" expanded="false" signature="149594:149621" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/routes.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.019495413">
+                <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -188,10 +246,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="y" value="-6" />
+    <option name="x" value="888" />
     <option name="width" value="975" />
-    <option name="height" value="1064" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -219,6 +276,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,171 +306,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appointments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,8 +378,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -855,7 +748,11 @@
       <created>1392634261302</created>
       <updated>1392634261302</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Some of ransack done, minimal javascript">
+      <created>1393151029689</created>
+      <updated>1393151029689</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -879,14 +776,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="-6" width="975" height="1064" extended-state="0" />
-    <editor active="true" />
+    <frame x="888" y="0" width="975" height="1049" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27750248" sideWeight="0.6713062" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.057351407" sideWeight="0.66488224" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3372591" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -944,7 +841,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="midway through findbydate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some of ransack done, minimal javascript" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -968,6 +865,7 @@
     <MESSAGE value="Added to appointments_controller findnextavailabledate" />
     <MESSAGE value="Added search form for doctors appointments" />
     <MESSAGE value="midway through findbydate" />
+    <MESSAGE value="Some of ransack done, minimal javascript" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -978,21 +876,6 @@
     <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/ransack-1.1.0/lib/ransack.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="17" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/findByDate.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="43" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/ransack.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="330" selection-end="330" vertical-scroll-proportion="0.1329609" />
       </provider>
     </entry>
     <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/ransack-1.1.0/lib/ransack/ransacker.rb">
@@ -1020,13 +903,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/find.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="43" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
@@ -1036,35 +912,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.doctors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="537" selection-end="537" vertical-scroll-proportion="0.2677532">
+        <state line="4" column="145" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.019495413">
+        <state line="23" column="33" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/fullcalendar.doctors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="0.01983664">
+          <folding>
+            <marker date="1390020443104" expanded="false" signature="6510:6527" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="16819:16829" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="50395:50435" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="51541:51551" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="53680:53697" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="65120:65165" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="65301:65341" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="65403:65413" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="65617:65634" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="66161:66223" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="66296:66340" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="66450:66490" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="66577:66587" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="67080:67097" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="68246:68256" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="70120:70137" placeholder="..." />
+            <marker date="1390020443104" expanded="false" signature="149594:149621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/findNextAvailableSlot.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="62" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/ransack.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="56" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="11" selection-start="963" selection-end="963" vertical-scroll-proportion="0.42648846">
           <folding />
         </state>
       </provider>

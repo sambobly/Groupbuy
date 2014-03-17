@@ -10,17 +10,23 @@ $( document ).ready( function() {
 			minTime: '7:30am',
 			maxTime: '6:00pm',
 			slotMinutes: 10,
-      eventClick: function(calEvent, jsEvent, view) {
+            dayClick: function(date, allDay, jsEvent, view) {
 
-          alert('Event: ' + calEvent.title);
-          alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-          alert('View: ' + view.name);
+                if (allDay) {
+                    alert('Clicked on the entire day: ' + date);
+                }else{
+                    alert('Clicked on the slot: ' + date);
+                }
 
-          // change the border color just for fun
-          $(this).css('border-color', 'red');
+                alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
-      }
-		});
+                alert('Current view: ' + view.name);
+
+                // change the day's background color just for fun
+                $(this).css('background-color', 'red');
+
+            }
+        });
 
         $("#search").autocomplete({
             source: "/doctors/search"
