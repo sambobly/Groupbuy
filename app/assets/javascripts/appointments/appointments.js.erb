@@ -10,21 +10,35 @@ $( document ).ready( function() {
 			minTime: '7:30am',
 			maxTime: '6:00pm',
 			slotMinutes: 10,
-            dayClick: function(date, allDay, jsEvent, view) {
-
-                if (allDay) {
-                    alert('Clicked on the entire day: ' + date);
-                }else{
-                    alert('Clicked on the slot: ' + date);
+            selectable: true,
+            selectHelper: true,
+            dayClick: function(start, end, allDay) {
+                var title = prompt('Create appointment' + "appointments/new.html.erb");
+                var eventData;
+                if (title) {
+                    calendar.fullCalendar('renderEvent',
+                            {
+                                title: title,
+                                start: start,
+                                end: end,
+                                allDay: allDay
+                            },
+                            true // make the event "stick"
+                    );
+                    /**
+                     * ajax call to store event in DB
+                     */
+                    jQuery.post(
+                            "appointments/new.html.erb" // your url
+                            , { // re-use event's data
+                                title: title,
+                                start: start,
+                                end: end,
+                                allDay: allDay
+                            }
+                    );
                 }
-
-                alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-
-                alert('Current view: ' + view.name);
-
-                // change the day's background color just for fun
-                $(this).css('background-color', 'red');
-
+                calendar.fullCalendar('unselect');
             }
         });
 
