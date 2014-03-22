@@ -13,7 +13,8 @@ $( document ).ready( function() {
             selectable: true,
             selectHelper: true,
             dayClick: function(start, end, allDay) {
-                var title = prompt('Create appointment' + "appointments/new.html.erb");
+                // var title = prompt('Create appointment' + "appointments/new.html.erb");
+                $('#eventToAdd').dialog();
                 var eventData;
                 if (title) {
                     calendar.fullCalendar('renderEvent',
