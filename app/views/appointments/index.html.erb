@@ -20,15 +20,29 @@
         <%= f.submit "Date", class: "btn" %></p>
   <% end %>
 
-<div id="eventToAdd" style="display: none; font-size: 12px;">
-  Event name:
-  <input id="eventName" type="text" />
+<div id="add-event" style="display:none" title="Add New Event">
+  <form action="" id ="add-event-form" name="add-event-form">
+    <label for="title">Event Name</label>
+    <input type="text" name="title" id="title"/>
+    <p>
+      <label for="add-date">Date</label>
+      <input type="text" name="event-date" id="event-date" tabindex="-1" />
+    </p>
+    <p>
+      <label for="add-start-time">Start Time</label>
+      <input type="text" name="start-time" id="start-time" />
+    </p>
+    <p>
+      <label for="add-end-time">End Time</label>
+      <input type="text" name="end-time" id="end-time" />
+    </p>
+    <p>
+      <label for="confirm appointment?">confirm </label>
+      <input type="button" name="confirm" id="confirm" value="yes"/>
 
-  Event start date:
-  <input id="eventStartDate" type="text" />(MM-dd-yyyy)
-
-  Event end date:
-  <input id="eventEndDate" type="text" />(MM-dd-yyyy)
-
+    <div id="dialog-confirm" title="Confirm appointment?">
+      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Confirm</p>
+    </div>
+  </form>
 </div>
 

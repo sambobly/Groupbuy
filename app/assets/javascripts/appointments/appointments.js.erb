@@ -13,11 +13,11 @@ $( document ).ready( function() {
             selectable: true,
             selectHelper: true,
             dayClick: function(start, end, allDay) {
-                // var title = prompt('Create appointment' + "appointments/new.html.erb");
-                $('#eventToAdd').dialog();
+                var title = $( "#title").text();
+                $('#add-event').dialog();
                 var eventData;
                 if (title) {
-                    calendar.fullCalendar('renderEvent',
+                    $( "#calendar" ).fullCalendar('renderEvent',
                             {
                                 title: title,
                                 start: start,
@@ -26,9 +26,8 @@ $( document ).ready( function() {
                             },
                             true // make the event "stick"
                     );
-                    /**
-                     * ajax call to store event in DB
-                     */
+
+                    // confirm button must call this code
                     jQuery.post(
                             "appointments/new.html.erb" // your url
                             , { // re-use event's data
@@ -39,7 +38,7 @@ $( document ).ready( function() {
                             }
                     );
                 }
-                calendar.fullCalendar('unselect');
+                $( "#calendar" ).fullCalendar('unselect');
             }
         });
 
@@ -50,6 +49,9 @@ $( document ).ready( function() {
             source: "/doctors/search"
         });
         $( "#date").datepicker();
+
+        $( "#start-time").timepicker();
+        $( "#end-time").timepicker();
 	}
 	
 	// New appointment page
