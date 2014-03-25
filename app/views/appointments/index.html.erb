@@ -25,6 +25,10 @@
     <label for="title">Event Name</label>
     <input type="text" name="title" id="title"/>
     <p>
+      <label for="Doctor">Doctor</label>
+      <input type="text" name="Doctor" id="Doctor" tabindex="-1" />
+    </p>
+    <p>
       <label for="add-date">Date</label>
       <input type="text" name="event-date" id="event-date" tabindex="-1" />
     </p>
@@ -36,13 +40,12 @@
       <label for="add-end-time">End Time</label>
       <input type="text" name="end-time" id="end-time" />
     </p>
-    <p>
-      <label for="confirm appointment?">confirm </label>
-      <input type="button" name="confirm" id="confirm" value="yes"/>
 
-    <div id="dialog-confirm" title="Confirm appointment?">
-      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Confirm</p>
+
+    <div id="dialog-confirm" title="Confirm?">
+      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Confirm?</p>
     </div>
+    <p><input type="submit" value="Save" name="submit" id="submit"/></p>
   </form>
 </div>
 

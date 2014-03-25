@@ -26,8 +26,26 @@ $( document ).ready( function() {
                             },
                             true // make the event "stick"
                     );
+                    $( "#dialog-confirm" ).dialog({
+                        resizable: false,
+                        height:140,
+                        modal: true,
+                        buttons: {
+                            "Confirm": function() {
+                                $( this ).dialog( "submit" );
+                            }
+                        }
+                    });
+                    $.ajax({
+                        url: '/Calendar/EventsAJAX',
+                        title: title,
+                        start:start,
+                        end: end,
+                        allday: allday,
+                    }).done(function() {
+                                alert("done");
+                            });
 
-                    // confirm button must call this code
                     jQuery.post(
                             "appointments/new.html.erb" // your url
                             , { // re-use event's data
