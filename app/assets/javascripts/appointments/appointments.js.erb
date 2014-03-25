@@ -12,13 +12,19 @@ $( document ).ready( function() {
 			slotMinutes: 10,
             selectable: true,
             selectHelper: true,
-            dayClick: function(start, end, allDay) {
+            eventClick: function(calEvent, jsEvent, view, start, end) {
+                alert('Event: ' + calEvent.title + start + end);
+                // change the border color just for fun
+                $(this).css('border-color', 'red');
+            },
+            dayClick: function(date, start, end, allDay) {
                 var title = $( "#title").text();
                 $('#add-event').dialog();
                 var eventData;
                 if (title) {
                     $( "#calendar" ).fullCalendar('renderEvent',
                             {
+                                date: date,
                                 title: title,
                                 start: start,
                                 end: end,
@@ -38,6 +44,7 @@ $( document ).ready( function() {
                     });
                     $.ajax({
                         url: '/Calendar/EventsAJAX',
+                        date: date,
                         title: title,
                         start:start,
                         end: end,
@@ -49,6 +56,7 @@ $( document ).ready( function() {
                     jQuery.post(
                             "appointments/new.html.erb" // your url
                             , { // re-use event's data
+                                date: date,
                                 title: title,
                                 start: start,
                                 end: end,
