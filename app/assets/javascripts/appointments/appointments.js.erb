@@ -32,16 +32,7 @@ $( document ).ready( function() {
                             },
                             true // make the event "stick"
                     );
-                    $( "#dialog-confirm" ).dialog({
-                        resizable: false,
-                        height:140,
-                        modal: true,
-                        buttons: {
-                            "Confirm": function() {
-                                $( this ).dialog( "submit" );
-                            }
-                        }
-                    });
+
                     $.ajax({
                         url: '/Calendar/EventsAJAX',
                         date: date,
@@ -63,6 +54,16 @@ $( document ).ready( function() {
                                 allDay: allDay
                             }
                     );
+                    $( "#dialog-confirm" ).dialog({
+                        resizable: false,
+                        height:140,
+                        modal: true,
+                        buttons: {
+                            "Confirm": function() {
+                                $( this ).dialog( "submit" );
+                            }
+                        }
+                    });
                 }
                 $( "#calendar" ).fullCalendar('unselect');
             }
@@ -74,21 +75,32 @@ $( document ).ready( function() {
         $("#find ").autocomplete({
             source: "/doctors/search"
         });
-        $( "#date").datepicker();
-
+        $( "#start_time_date_equals").datepicker();
+        $( "#event-date").datepicker();
         $( "#start-time").timepicker();
         $( "#end-time").timepicker();
 	}
 	
 	// New appointment page
 	if( $( 'body.appointments' ).length && $( 'body.new' ).length ) {
-        $("#appointment_doctor").autocomplete({
+        $("#appointment_doctor_id").autocomplete({
             source: "/doctors/search"
         })
 		
         $( "#appointment_date").datepicker();
+        $( "#appointment_end_time").timepicker();
 
-        $( "#appointment_start_time").timepicker();
+        //$( "#appointment_start_time").timepicker();
+        $( '#appointment_start_time.time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+        $( '#appointment_start_time.date').datepicker({
+            'format': 'm/d/yyyy',
+            'autoclose': true
+        });
+        $('#appointment_start_time').datepair();
+
 	}
 	
 });
