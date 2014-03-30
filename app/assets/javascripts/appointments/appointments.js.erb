@@ -10,75 +10,59 @@ $( document ).ready( function() {
 			minTime: '7:30am',
 			maxTime: '6:00pm',
 			slotMinutes: 10,
-            selectable: true,
-            selectHelper: true,
-            eventClick: function(calEvent, jsEvent, view, start, end) {
-                alert('Event: ' + calEvent.title + start + end);
-                // change the border color just for fun
-                $(this).css('border-color', 'red');
-            },
-            dayClick: function(date, start, end, allDay) {
-                var title = $( "#title").text();
-                $('#add-event').dialog();
-                var eventData;
-                if (title) {
-                    $( "#calendar" ).fullCalendar('renderEvent',
-                            {
-                                date: date,
-                                title: title,
-                                start: start,
-                                end: end,
-                                allDay: allDay
-                            },
-                            true // make the event "stick"
-                    );
+      selectable: true,
+      selectHelper: true,
+      eventClick: function(calEvent, jsEvent, view, start, end) {
+          alert('Event: ' + calEvent.title + start + end);
+          // change the border color just for fun
+          $(this).css('border-color', 'red');
+      },
+      dayClick: function(date, start, end, allDay) {
+          var title = $( "#title").text();
+          $('#add-event').dialog({
+            resizable: false,
+            position: top,
+            modal: true,
+            buttons: {
+                "Confirm": function() {
+                  // Send the contents of the add event form to the create action on the appointments controller using an ajax call
+                  $.post(
+                    "/appointments/create",
+                    $('#add-event-form').serializeArray(),
+                    function( data ) {
+                      // TODO: check if the appointment was saved successfully. If not, display the error
+                      // If the appointment was created successfully then create the event on the calendar
+                      // TODO: check if the appointment was actually saved properly
+                      $( "#calendar" ).fullCalendar('renderEvent',
+                              {
+                                  date: date,
+                                  title: title,
+                                  start: start,
+                                  end: end,
+                                  allDay: allDay
+                              },
+                              true // make the event "stick"
+                      );
+                      $( this ).dialog( "close" );
+                      $( "#calendar" ).fullCalendar('unselect');
+                    } // end success handler  
+                  ); // end ajax post call
+                } // end confirm button handler
+            } // end buttons
+          }); // end dialog creation
+          } // end Dayclick function
+      }); // end fullCalendar creation
 
-                    $.ajax({
-                        url: '/Calendar/EventsAJAX',
-                        date: date,
-                        title: title,
-                        start:start,
-                        end: end,
-                        allday: allday,
-                    }).done(function() {
-                                alert("done");
-                            });
-
-                    jQuery.post(
-                            "appointments/new.html.erb" // your url
-                            , { // re-use event's data
-                                date: date,
-                                title: title,
-                                start: start,
-                                end: end,
-                                allDay: allDay
-                            }
-                    );
-                    $( "#dialog-confirm" ).dialog({
-                        resizable: false,
-                        height:140,
-                        modal: true,
-                        buttons: {
-                            "Confirm": function() {
-                                $( this ).dialog( "submit" );
-                            }
-                        }
-                    });
-                }
-                $( "#calendar" ).fullCalendar('unselect');
-            }
-        });
-
-        $("#search").autocomplete({
-            source: "/doctors/search"
-        });
-        $("#find ").autocomplete({
-            source: "/doctors/search"
-        });
-        $( "#start_time_date_equals").datepicker();
-        $( "#event-date").datepicker();
-        $( "#start-time").timepicker();
-        $( "#end-time").timepicker();
+      $("#search").autocomplete({
+          source: "/doctors/search"
+      });
+      $("#find ").autocomplete({
+          source: "/doctors/search"
+      });
+      $( "#start_time_date_equals").datepicker();
+      $( "#event-date").datepicker();
+      $( "#start-time").timepicker();
+      $( "#end-time").timepicker();
 	}
 	
 	// New appointment page
