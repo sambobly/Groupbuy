@@ -20,9 +20,9 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.create( params.require( :appointment ).permit( :name, :patient_name, :start_time ) )
+    @appointment = Appointment.create( params.require( :appointment ).permit( :name, :patient_name, :start_time, :end_time, :doctor_id ) )
     if @appointment.save
-      redirect_to new_appointment_path
+        redirect_to new_appointment_path
     else
       render 'new'
     end

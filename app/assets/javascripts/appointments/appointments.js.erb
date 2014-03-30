@@ -88,18 +88,19 @@ $( document ).ready( function() {
         })
 		
         $( "#appointment_date").datepicker();
+        $( "#appointment_start_time").timepicker();
         $( "#appointment_end_time").timepicker();
 
         //$( "#appointment_start_time").timepicker();
-        $( '#appointment_start_time.time').timepicker({
-            'showDuration': true,
-            'timeFormat': 'g:ia'
-        });
-        $( '#appointment_start_time.date').datepicker({
-            'format': 'm/d/yyyy',
-            'autoclose': true
-        });
-        $('#appointment_start_time').datepair();
+        //$( '#appointment_start_time.time').timepicker({
+       //     'showDuration': true,
+       //     'timeFormat': 'g:ia'
+        //});
+       // $( '#appointment_start_time.date').datepicker({
+        //    'format': 'm/d/yyyy',
+        //    'autoclose': true
+       // });
+       // $('#appointment_start_time').datepair();
 
 	}
 	
