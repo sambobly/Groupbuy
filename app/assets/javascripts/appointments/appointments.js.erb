@@ -17,9 +17,11 @@ $( document ).ready( function() {
           // change the border color just for fun
           $(this).css('border-color', 'red');
       },
-      dayClick: function(date, start, end, allDay) {
+      dayClick: function(date, start, end, allDay, title) {
           var title = $( "#title").text();
           $('#add-event').dialog({
+              url: $(this).parent("form").attr("action") + "?&authenticity_token=" ,
+              data:$(this).parent("form").serialize(),
             resizable: false,
             position: top,
             modal: true,
@@ -72,7 +74,7 @@ $( document ).ready( function() {
         })
 		
         $( "#appointment_date").datepicker();
-        $( "#appointment_start_time").timepicker();
+       // $( "#appointment_start_time").timepicker();
         $( "#appointment_end_time").timepicker();
 
         //$( "#appointment_start_time").timepicker();
@@ -85,6 +87,19 @@ $( document ).ready( function() {
         //    'autoclose': true
        // });
        // $('#appointment_start_time').datepair();
+        // initialize input widgets first
+        $('#appointment_start_time .time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+
+        $('#appointment_start_time .date').datepicker({
+            'format': 'm/d/yyyy',
+            'autoclose': true
+        });
+
+        // initialize datepair
+        $('#appointment_start_time').datepair();
 
 	}
 	
