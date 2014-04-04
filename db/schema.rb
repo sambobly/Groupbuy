@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230005719) do
+ActiveRecord::Schema.define(version: 20140404102649) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20131230005719) do
     t.datetime "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
+    t.date     "start_date"
+    t.date     "end_date"
   end
 
   create_table "doctors", force: true do |t|
