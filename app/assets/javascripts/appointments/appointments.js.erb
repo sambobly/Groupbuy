@@ -90,12 +90,12 @@ $( document ).ready( function() {
         // initialize input widgets first
 
         // initialize input widgets first
-        $('#start_time .time').timepicker({
+        $('input.time').timepicker({
             'showDuration': true,
             'timeFormat': 'g:ia'
         });
 
-        $('#start_time .date').datepicker({
+        $('input.date').datepicker({
             'format': 'm/d/yyyy',
             'autoclose': true
         });
