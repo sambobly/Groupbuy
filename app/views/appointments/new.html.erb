@@ -4,18 +4,31 @@
 	<div class="2u label">Appointment Name</div>
 	<div class="4u"><%= f.text_field :name %></div>
 </div>
+    <div class="2u label">Start</div>
+    <p id="start_time">
+      <input type="text" class="date start" />
+      <input type="text" class="time start" />
+    </p>
 
-    <div class="row">
-      <div class="2u label"><%= f.label :date %></div>
-      <div class="2u"><%= f.text_field :date %></div>
-    </div>
+    <script type="text/javascript" src="bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="jquery.timepicker.js"></script>
+    <script type="text/javascript" src="jquery.datepair.js"></script>
+    <script>
+        // initialize input widgets first
+        $('#start_time .time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
 
-<div class="row">
-	<div class="2u label"><%= f.label :start_time %></div>
-  <div class="2u"><%= f.text_field :start_time %></div>
-  <div class="2u"><%= f.text_field :start_time %></div>
+        $('#start_time .date').datepicker({
+            'format': 'm/d/yyyy',
+            'autoclose': true
+        });
 
-</div>
+        // initialize datepair
+        $('#start_time').datepair();
+    </script>
+
 
 <div class="row">
   <div class="2u label"><%= f.label :end_time %></div>
