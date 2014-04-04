@@ -4,16 +4,17 @@
 	<div class="2u label">Appointment Name</div>
 	<div class="4u"><%= f.text_field :name %></div>
 </div>
-    <div class="2u label">Start</div>
-    <p id="start_time">
-      <input type="text" class="date start" />
-      <input type="text" class="time start" />
-    </p>
-
 
 <div class="row">
-  <div class="2u label"><%= f.label :end_time %></div>
-  <div class="2u"><%= f.text_field :end_time %></div>
+  <div class="2u label">Start</div>
+  <div class="2u"><%= f.text_field :start_date, class: 'date start' %></div>
+  <div class="2u"><%= f.text_field :start_time, class: 'time start' %></div>
+</div>
+
+<div class="row">
+  <div class="2u label">End</div>
+  <div class="2u"><%= f.text_field :end_date, class: 'date end' %></div>
+  <div class="2u"><%= f.text_field :end_time, class: 'time end' %></div>
 </div>
 
 <div class="row">
