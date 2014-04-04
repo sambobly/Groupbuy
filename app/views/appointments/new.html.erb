@@ -10,25 +10,6 @@
       <input type="text" class="time start" />
     </p>
 
-    <script type="text/javascript" src="bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="jquery.timepicker.js"></script>
-    <script type="text/javascript" src="jquery.datepair.js"></script>
-    <script>
-        // initialize input widgets first
-        $('#start_time .time').timepicker({
-            'showDuration': true,
-            'timeFormat': 'g:ia'
-        });
-
-        $('#start_time .date').datepicker({
-            'format': 'm/d/yyyy',
-            'autoclose': true
-        });
-
-        // initialize datepair
-        $('#start_time').datepair();
-    </script>
-
 
 <div class="row">
   <div class="2u label"><%= f.label :end_time %></div>

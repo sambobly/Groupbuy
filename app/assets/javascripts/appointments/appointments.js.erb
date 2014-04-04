@@ -88,31 +88,21 @@ $( document ).ready( function() {
        // });
        // $('#appointment_start_time').datepair();
         // initialize input widgets first
-        $('#appointment_start_time .time').timepicker({
+
+        // initialize input widgets first
+        $('#start_time .time').timepicker({
             'showDuration': true,
             'timeFormat': 'g:ia'
         });
 
-        $('#appointment_start_time .date').datepicker({
+        $('#start_time .date').datepicker({
             'format': 'm/d/yyyy',
             'autoclose': true
         });
+        
+        console.log("hello");
 
-        // initialize datepair
-        $('#appointment_start_time').datepair();
-
-        $('#basicExample .time').timepicker({
-            'showDuration': true,
-            'timeFormat': 'g:ia'
-        });
-
-        $('#basicExample .date').datepicker({
-            'format': 'm/d/yyyy',
-            'autoclose': true
-        });
-
-        // initialize datepair
-        $('#basicExample').datepair();
+        $('#start_time').datepair();
 	}
 	
 });
