@@ -24,7 +24,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @checkin = current_checkin
+    @checkin =     current_checkin
     appointment = Appointment.find(params[:appointment_id])
     @line_item = @checkin.line_items.build(product: product)
 
