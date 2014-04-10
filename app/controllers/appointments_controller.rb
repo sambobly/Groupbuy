@@ -20,7 +20,7 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.create( params.require( :appointment ).permit( :name, :patient_name, :start_time, :end_time, :doctor_id, :end_date, :start_date ) )
+    @appointment = Appointment.create( params.require( :appointment ).permit( :name, :patient_name, :start_time, :end_time, :doctor_id, :end_date, :start_date, :doctor_name ) )
     if @appointment.save
         redirect_to new_appointment_path
     else
@@ -55,4 +55,8 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.search(params.require(:doctor.name))
   end
 
+  def createwidget
+    @content = render_to_string(:partial => 'widget/createwidget_widget')
+    render :layout => false
+  end
 end

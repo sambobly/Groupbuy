@@ -3,7 +3,7 @@ class Appointment < ActiveRecord::Base
   belongs_to    :doctor
   belongs_to    :patient
 
-  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name
+  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name
 
   ransacker :start_time do |parent|
     Arel::Nodes::SqlLiteral.new("date(appointments.start_time)")

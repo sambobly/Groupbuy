@@ -1,0 +1,12 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Check In!</h2>
+<ul>
+  <% @checkin.line_items.each do |item| %>
+  <li><%= item.appointment.id %></li>
+      <% end %>
+</ul>
+<%= link_to 'Edit', edit_checkin_path(@checkin) %> |
+<%= link_to 'Back', checkins_path %>

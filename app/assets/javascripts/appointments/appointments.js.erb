@@ -69,7 +69,7 @@ $( document ).ready( function() {
 	
 	// New appointment page
 	if( $( 'body.appointments' ).length && $( 'body.new' ).length ) {
-        $("#appointment_doctor_id").autocomplete({
+        $("#appointment_doctor_name").autocomplete({
             source: "/doctors/search"
         })
 		

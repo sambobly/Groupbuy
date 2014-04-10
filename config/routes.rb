@@ -1,4 +1,8 @@
 Optho::Application.routes.draw do
+  resources :line_items
+
+  resources :checkins
+
   resources :patients
 
   resources :doctors do
