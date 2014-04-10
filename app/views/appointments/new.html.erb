@@ -5,17 +5,23 @@
 	<div class="4u"><%= f.text_field :name %></div>
 </div>
 
-<div class="row">
-  <div class="2u label">Start</div>
-  <div class="2u"><%= f.text_field :start_date, class: 'date start' %></div>
-  <div class="2u"><%= f.text_field :start_time, class: 'time start' %></div>
-</div>
+<p id="test">
+  <%= f.text_field :start_date, class: 'date start' %>
+  <%= f.text_field :start_time, class: 'time start' %>
+  <%= f.text_field :end_date, class: 'date end' %>
+  <%= f.text_field :end_time, class: 'time end' %>
+</p>
+  <div class="row">
+    <div class="2u label">Start</div>
+    <div class="2u"></div>
+    <div class="2u"></div>
+  </div>
 
-<div class="row">
-  <div class="2u label">End</div>
-  <div class="2u"><%= f.text_field :end_date, class: 'date end' %></div>
-  <div class="2u"><%= f.text_field :end_time, class: 'time end' %></div>
-</div>
+  <div class="row">
+    <div class="2u label">End</div>
+    <div class="2u"></div>
+    <div class="2u"></div>
+  </div>
 
 <div class="row">
 	<div class="2u label">Patient</div>
