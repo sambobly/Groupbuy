@@ -1,6 +1,6 @@
 class LineItemsController < ApplicationController
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
-  #attempting to create checkin, much like a product cart
+
   # GET /line_items
   # GET /line_items.json
   def index
@@ -24,13 +24,13 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @checkin =     current_checkin
+    @checkin = current_checkin
     appointment = Appointment.find(params[:appointment_id])
-    @line_item = @checkin.line_items.build(product: product)
+    @line_item = @checkin.line_items.build(:appointment_id => appointment.id)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.checkin, notice: 'Patient checked in.' }
+        format.html { redirect_to @line_item.checkin, notice: 'Checked in!' }
         format.json { render action: 'show', status: :created, location: @line_item }
       else
         format.html { render action: 'new' }
@@ -71,6 +71,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:patient_id, :checkin_id)
+      params.require(:line_item).permit(:appointment_id, :checkin_id)
     end
 end

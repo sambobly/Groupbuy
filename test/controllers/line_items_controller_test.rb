@@ -18,10 +18,10 @@ class LineItemsControllerTest < ActionController::TestCase
 
   test "should create line_item" do
     assert_difference('LineItem.count') do
-      post :create, appointment_id: appointment(:ruby).id
+      post :create, line_item: { appointment_id: @line_item.appointment_id, checkin_id: @line_item.checkin_id }
     end
 
-    assert_redirected_to checkin_path(assigns(:line_item).checkin)
+    assert_redirected_to line_item_path(assigns(:line_item))
   end
 
   test "should show line_item" do
@@ -35,7 +35,7 @@ class LineItemsControllerTest < ActionController::TestCase
   end
 
   test "should update line_item" do
-    patch :update, id: @line_item, line_item: { checkin_id: @line_item.checkin_id, patient_id: @line_item.patient_id }
+    patch :update, id: @line_item, line_item: { appointment_id: @line_item.appointment_id, checkin_id: @line_item.checkin_id }
     assert_redirected_to line_item_path(assigns(:line_item))
   end
 

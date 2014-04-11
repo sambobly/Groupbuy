@@ -1,4 +1,7 @@
 class LineItem < ActiveRecord::Base
-  belongs_to :patient
+
+  attr_accessible :checkin_id, :appointment_id, :appointment
+  belongs_to :appointment
   belongs_to :checkin
+  validates :appointment_id, presence: true
 end

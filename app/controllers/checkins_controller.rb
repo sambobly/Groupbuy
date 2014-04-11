@@ -10,6 +10,17 @@ class CheckinsController < ApplicationController
   # GET /checkins/1
   # GET /checkins/1.json
   def show
+    begin
+      @checkin = Checkin.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attmpet to access invalid checkin #{params[:id]}"
+      redirect_to index_appointment_url, notice: 'Invalid Checkin'
+    else
+      respond_to do |format|
+        format.html #show.html.erb
+        format.json {render json: @checkin}
+      end
+    end
   end
 
   # GET /checkins/new
@@ -54,7 +65,9 @@ class CheckinsController < ApplicationController
   # DELETE /checkins/1
   # DELETE /checkins/1.json
   def destroy
+    @checkin = current_checkin
     @checkin.destroy
+    session[:checkin_id] = nil
     respond_to do |format|
       format.html { redirect_to checkins_url }
       format.json { head :no_content }
