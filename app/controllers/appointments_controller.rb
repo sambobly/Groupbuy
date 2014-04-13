@@ -8,6 +8,7 @@ class AppointmentsController < ApplicationController
   def index
     @q = Appointment.search(params[:q])
     @appointments = @q.result(distinct: true).limit(5)
+    @checkin = current_checkin
   end
   # Creates a new appointment
   def new

@@ -2,17 +2,8 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>Check In!</h2>
-<ul>
-  <% @checkin.line_items.each do |item| %>
-  <li><%= item.appointment%></li>
-      <%= button_to 'Remove patient', @line_item, method: :delete,
-                    confirm: 'are you sure?' %>
-      <% end %>
-</ul>
+<%= render @checkin %>
 
-<%= button_to 'Clear checkins', @checkin, method: :delete,
-              confirm: 'Are you sure?' %>
 
 <%= link_to 'Edit', edit_checkin_path(@checkin) %> |
 <%= link_to 'Back', checkins_path %>

@@ -30,7 +30,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.checkin, notice: 'Checked in!' }
+        format.html { redirect_to appointments_url}
         format.json { render action: 'show', status: :created, location: @line_item }
       else
         format.html { render action: 'new' }
