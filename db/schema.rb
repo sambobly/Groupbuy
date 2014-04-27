@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20140427012839) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
+    t.date     "date"
     t.string   "patient_name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,8 +25,16 @@ ActiveRecord::Schema.define(version: 20140427012839) do
     t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.date     "start_date"
     t.date     "end_date"
+    t.string   "doctor_name"
+  end
+
+  create_table "checkins", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "doctors", force: true do |t|
@@ -39,6 +48,13 @@ ActiveRecord::Schema.define(version: 20140427012839) do
   create_table "doctors_patients", force: true do |t|
     t.integer "doctor_id"
     t.integer "patient_id"
+  end
+
+  create_table "line_items", force: true do |t|
+    t.integer  "appointment_id"
+    t.integer  "checkin_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "patients", force: true do |t|

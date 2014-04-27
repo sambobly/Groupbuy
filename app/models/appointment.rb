@@ -3,8 +3,20 @@ class Appointment < ActiveRecord::Base
   belongs_to    :doctor
   belongs_to    :patient
 
-  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name
+  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name
 
+  has_many :line_items
+  before_destroy :ensure_not_referenced_by_any_line_item
+  private
+  def ensure_not_referenced_by_any_line_item
+    if line_items.empty?
+      return true
+    else
+      errors.add(:base, 'Line Items Present')
+      return false
+
+    end
+  end
   ransacker :start_time do |parent|
     Arel::Nodes::SqlLiteral.new("date(appointments.start_time)")
   end

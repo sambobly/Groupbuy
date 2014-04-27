@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
-
+  has_many :line_items #attempting to create checkin
   # GET /patients
   # GET /patients.json
   def index
@@ -70,5 +70,15 @@ class PatientsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
       params.require(:patient).permit(:name, :UR_number)
+    end
+
+    def ensure_not_referenced_by_any_line_item
+      if line_items.empty?
+        return true
+      else
+        errors.add(:base, 'Line Items Present')
+        return false
+
+      end
     end
 end

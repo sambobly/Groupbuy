@@ -1,0 +1,9 @@
+<div class="checkin_title">Current Patients</div>
+<table>
+
+  <%= render(checkin.line_items) %>
+
+</table>
+
+<%= button_to 'Remove patient', @line_item, method: :delete,
+              confirm: 'are you sure?' %>
