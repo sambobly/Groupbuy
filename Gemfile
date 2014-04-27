@@ -29,7 +29,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'ransack'
 gem 'dashing-rails'
-#gem 'puma'
+gem 'puma'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
