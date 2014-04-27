@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20140427012839) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
-    t.date     "date"
     t.string   "patient_name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -25,8 +24,6 @@ ActiveRecord::Schema.define(version: 20140427012839) do
     t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "doctor_name"
