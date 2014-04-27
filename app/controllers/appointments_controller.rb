@@ -34,14 +34,15 @@ class AppointmentsController < ApplicationController
   end
   
   def findByDate
-    start_time = params.require( :start ) # paramater expected as unix time
-    end_time = params.require( :end ) # expected as unix time
+    # TODO: handle invalid datetime parameters gracefully - currently expects unix time
+    start_datetime = DateTime.strptime( params.require( :start ), "%s" ) # paramater expected as unix time
+    end_datetime = DateTime.strptime( params.require( :end ), "%s" ) # expected as unix time
      #TODO: validate date paramater
-    @appointments = Appointment.where( 'start_time BETWEEN FROM_UNIXTIME( ? ) AND FROM_UNIXTIME( ? )', start_time, end_time )
+    @appointments = Appointment.where( 'TIMESTAMP(start_date, start_time) >= ? AND TIMESTAMP(end_date, end_time) <= ?', start_datetime, end_datetime )
     render json: @appointments.collect {|appointment| {
       id: appointment.id,
-      start: appointment.start_time,
-      end: appointment.end_time,
+      start: DateTime.new(appointment.start_date.year, appointment.start_date.month, appointment.start_date.day, appointment.start_time.hour, appointment.start_time.min),
+      end: DateTime.new(appointment.end_date.year, appointment.end_date.month, appointment.end_date.day, appointment.end_time.hour, appointment.end_time.min),
       title: appointment.patient.first_name + " " + appointment.patient.last_name,
       doctor_id: appointment.doctor_id,
       allDay: false

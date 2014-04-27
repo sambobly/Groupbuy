@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404102649) do
+ActiveRecord::Schema.define(version: 20140427012839) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20140404102649) do
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.time     "start_time"
+    t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
     t.date     "start_date"

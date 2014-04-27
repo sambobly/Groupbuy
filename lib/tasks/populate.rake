@@ -50,19 +50,21 @@ def createAppointments( numberOfDays, createForwards = true, maxAppointmentsPerD
   numberOfDays.times do |i|
     date = createForwards ? Date.today + i .days : Date.today - (i + 1).days # i starts at 0
     next if weekend.include? date.wday
-    
+
     Doctor.all.each do |doctor|
       next unless ['Partner', 'Employee' ].include?( doctor.position ) or rand(1..5) == 1
       maxAppointments = rand( 15..25 )
       startTime = DateTime.parse( "#{date.to_s} 08:00")
-      
+
       maxAppointments.times do |y|
         endTime = startTime + [ 10, 10, 10, 10, 10, 10, 20, 20, 30, 45 ].sample.minutes
         patient = Patient.offset(rand(Patient.count)).first
-      
+
         doctor.appointments.create!(
-          start_time: startTime,
-          end_time: endTime,
+          start_date: startTime.strftime("%Y-%m-%d"),
+          start_time: startTime.strftime("%H:%M"),
+          end_date: endTime.strftime("%Y-%m-%d"),
+          end_time: endTime.strftime("%H:%M"),
           patient_id: patient.id,
           doctor: patient.doctors.sample
         )
