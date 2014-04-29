@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  mount Dashing::Engine, at: Dashing.config.engine_path
   resources :line_items
 
   resources :checkins
@@ -29,6 +30,7 @@ Optho::Application.routes.draw do
       post 'create'
     end
   end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

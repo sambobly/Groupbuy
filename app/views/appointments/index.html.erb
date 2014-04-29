@@ -24,32 +24,44 @@
 <div id="add-event" style="display:none" title="Add New Event">
 
 
-  <form action="" id ="add-event-form" name="add-event-form">
-    <label for="title">Event Name</label>
-    <input type="text" name="title" id="title"/>
-    <p>
-      <label for="Doctor">Doctor</label>
-      <input type="text" name="Doctor" id="Doctor" tabindex="-1" />
-    </p>
-    <p>
-      <label for="add-event-date">Date</label>
-      <input type="text" name="event-date" id="event-date" tabindex="-1" />
-    </p>
-    <p>
-      <label for="add-start-time">Start Time</label>
-      <input type="text" name="start-time" id="start-time" />
-    </p>
-    <p>
-      <label for="add-end-time">End Time</label>
-      <input type="text" name="end-time" id="end-time" />
-    </p>
+  <%= form_for( @appointment, url: {action: "create"}, validate: true) do |f| %>
 
+      <div class="row">
+        <div class="2u label">Appointment Name</div>
+        <div class="4u"><%= f.text_field :name %></div>
+      </div>
 
+      <div id="appointment_time" class="row">
+        <div class="row">
+          <div class="2u label">Start</div>
+          <div class="2u"><%= f.text_field :start_date, class: 'date start' %></div>
+          <div class="2u"><%= f.text_field :start_time, class: 'time start' %></div>
+        </div>
+
+        <div class="row">
+          <div class="2u label">End</div>
+          <div class="2u"><%= f.text_field :end_date, class: 'date end' %></div>
+          <div class="2u"><%= f.text_field :end_time, class: 'time end' %></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="2u label">Patient</div>
+        <div class="4u"><%= f.text_field :patient_id %></div>
+      </div>
+
+      <div class="row">
+        <div class="2u label">Doctor</div>
+        <div class="4u"><%= f.text_field :doctor_id %></div>
+      </div>
+
+      <%= f.submit "Create Appointment" %>
     <div id="dialog-confirm" title="Confirm?">
       <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Confirm?</p>
     </div>
     <p><input type="submit" value="Save" name="submit" id="submit"/></p>
-  </form>
+
+  <% end %>
 </div>
 
 <div id="columns">

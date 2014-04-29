@@ -17,7 +17,7 @@ $( document ).ready( function() {
           // change the border color just for fun
           $(this).css('border-color', 'red');
       },
-      dayClick: function(date, start, end, allDay, title) {
+      dayClick: function(start_date, end_date, start_time, end_time, allDay, name) {
           var title = $( "#title").text();
           $('#add-event').dialog({
               url: $(this).parent("form").attr("action") + "?&authenticity_token=" ,
@@ -29,7 +29,7 @@ $( document ).ready( function() {
                 "Confirm": function() {
                   // Send the contents of the add event form to the create action on the appointments controller using an ajax call
                   $.post(
-                    "/appointments/create",
+                    "/appointments/new",
                     $('#add-event-form').serializeArray(),
                     function( data ) {
                       // TODO: check if the appointment was saved successfully. If not, display the error
@@ -37,17 +37,18 @@ $( document ).ready( function() {
                       // TODO: check if the appointment was actually saved properly
                       $( "#calendar" ).fullCalendar('renderEvent',
                               {
-                                  date: date,
-                                  title: title,
-                                  start: start,
-                                  end: end,
+                                  start_date: date,
+                                  end_date: date,
+                                  name: text,
+                                  start_time: start,
+                                  end_time: end,
                                   allDay: allDay
                               },
                               true // make the event "stick"
                       );
                       $( this ).dialog( "close" );
                       $( "#calendar" ).fullCalendar('unselect');
-                    } // end success handler  
+                    } // end success handler
                   ); // end ajax post call
                 } // end confirm button handler
             } // end buttons
@@ -63,8 +64,8 @@ $( document ).ready( function() {
       });
       $( "#start_time_date_equals").datepicker();
       $( "#event-date").datepicker();
-      $( "#start-time").timepicker();
-      $( "#end-time").timepicker();
+      $( "#start_time").timepicker();
+      $( "#end_time").timepicker();
 	}
 	
 	// New appointment page
