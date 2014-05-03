@@ -1,0 +1,34 @@
+<%= form_for( @appointment, url: {action: "edit"}, validate: true) do |f| %>
+
+    <div class="row">
+      <div class="2u label">Appointment Name</div>
+      <div class="4u"><%= f.text_field :name %></div>
+    </div>
+
+    <div id="appointment_time" class="row">
+      <div class="row">
+        <div class="2u label">Start</div>
+        <div class="2u"><%= f.text_field :start_date, class: 'date start' %></div>
+        <div class="2u"><%= f.text_field :start_time, class: 'time start' %></div>
+      </div>
+
+      <div class="row">
+        <div class="2u label">End</div>
+        <div class="2u"><%= f.text_field :end_date, class: 'date end' %></div>
+        <div class="2u"><%= f.text_field :end_time, class: 'time end' %></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="2u label">Patient</div>
+      <div class="4u"><%= f.text_field :patient_id %></div>
+    </div>
+
+    <div class="row">
+      <div class="2u label">Doctor</div>
+      <div class="4u"><%= f.text_field :doctor_id %></div>
+    </div>
+
+    <%= f.submit "Update Appointment" %>
+
+<%= f.submit "Update Appointment" %>

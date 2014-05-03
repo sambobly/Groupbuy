@@ -37,6 +37,7 @@ class AppointmentsController < ApplicationController
   end
   
   def findByDate
+    # TODO: FIx this since refactoring model to start_date and start_time from start_datetime
     # TODO: handle invalid datetime parameters gracefully - currently expects unix time
     start_datetime = DateTime.strptime( params.require( :start ), "%s" ) # paramater expected as unix time
     end_datetime = DateTime.strptime( params.require( :end ), "%s" ) # expected as unix time
@@ -62,5 +63,30 @@ class AppointmentsController < ApplicationController
   def createwidget
     @content = render_to_string(:partial => 'widget/createwidget_widget')
     render :layout => false
+  end
+
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
+    if @appointment.destroy
+      redirect_to new_appointment_path
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @appointment = Appointment.find(params[:id])
+    @appointment.edit
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+
+    if @appointment.update_attributes{params[:appointment]}
+      redirect_to index_appointment_path :notice => "Appointment updated"
+    else
+      render 'new'
+    end
   end
 end

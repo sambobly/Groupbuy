@@ -14,6 +14,29 @@ $( document ).ready( function() {
       selectHelper: true,
       eventClick: function(calEvent, jsEvent, view, start, end) {
           alert('Event: ' + calEvent.title + start + end);
+          id= calEvent.id;
+
+          $( "#dialog" ).dialog({
+              resizable: false,
+              height:100,
+              width:500,
+              modal: true,
+              title: 'Want you want to do?',
+              buttons: {
+                  CLOSE: function() {
+                      $("#dialog").dialog( "close" );
+                  },
+                  "DELETE": function() {
+                      $.post("/appointments/destroy", ("appointment_id"),
+                        function(data){
+                            $('#calendar').fullCalendar("removeEvents", (data));
+                            $('#calendar').fullCalendar("rerenderEvents");
+                        }
+                      //do the ajax request?
+                  }
+              }
+          });
+
           // change the border color just for fun
           $(this).css('border-color', 'red');
       },
