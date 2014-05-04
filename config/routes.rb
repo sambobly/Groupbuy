@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  mount Dashing::Engine, at: Dashing.config.engine_path
   resources :line_items
 
   resources :checkins
@@ -28,8 +29,11 @@ Optho::Application.routes.draw do
       get 'findByDate'
       get 'findNextAvailableSlot'
       post 'create'
+      get 'edit'
+      post 'update'
     end
   end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
