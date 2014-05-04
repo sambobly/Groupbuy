@@ -14,5 +14,5 @@ Results
     <%=  appointment.end_time %><br/>
     <%= button_to 'Check IN', line_items_path(appointment_id: appointment) %>
     <%= button_to "Delete", {:controller => :appointments, :action => 'destroy', :id => appointment.id }, :method => :delete %>
-    <%= button_to "Update", {:controller => :appointments, action: 'update', :id => appointment.id }, method: :get%>
+    <%= button_to "Update", {:controller => :appointments, action: 'edit', :id => appointment.id }, method: :get%>
 <% end %>

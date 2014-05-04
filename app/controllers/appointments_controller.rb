@@ -77,13 +77,12 @@ class AppointmentsController < ApplicationController
 
   def edit
     @appointment = Appointment.find(params[:id])
-    @appointment.edit
   end
 
   def update
     @appointment = Appointment.find(params[:id])
 
-    if @appointment.update_attributes{params[:appointment]}
+    if @appointment.update_attributes(params[:appointment])
       redirect_to index_appointment_path :notice => "Appointment updated"
     else
       render 'new'
