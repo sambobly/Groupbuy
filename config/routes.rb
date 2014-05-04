@@ -29,8 +29,12 @@ Optho::Application.routes.draw do
       get 'findByDate'
       get 'findNextAvailableSlot'
       post 'create'
+      post 'destroy'
       get 'edit'
-      post 'update'
+    end
+    member do
+      post 'destroy'
+      get 'update'
     end
   end
 
