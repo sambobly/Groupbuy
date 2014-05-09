@@ -81,9 +81,8 @@ class AppointmentsController < ApplicationController
 
   def update
     @appointment = Appointment.find(params[:id])
-
     if @appointment.update_attributes(params[:appointment])
-      redirect_to index_appointment_path :notice => "Appointment updated"
+      redirect_to new_appointment_path :notice => "Appointment updated"
     else
       render 'new'
     end

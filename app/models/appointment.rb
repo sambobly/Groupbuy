@@ -3,7 +3,7 @@ class Appointment < ActiveRecord::Base
   belongs_to    :doctor
   belongs_to    :patient
 
-  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name
+  attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name, :appointment_id
 
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item

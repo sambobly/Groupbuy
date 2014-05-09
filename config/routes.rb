@@ -36,6 +36,8 @@ Optho::Application.routes.draw do
       post 'destroy'
       post 'update'
       get 'edit'
+      patch 'edit'
+      patch 'update'
     end
   end
 
