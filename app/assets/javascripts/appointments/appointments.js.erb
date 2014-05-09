@@ -26,9 +26,9 @@ $( document ).ready( function() {
                   CLOSE: function() {
                       $("#dialog").dialog( "close" );
                   },
-                  DELETE: function() {
-                      $.post("/appointments/destroy",
-                             id, //need to add the id param here
+                  DELETE: function(data) {
+                      $.post('/appointments/destroy', {"appointment_id": id},
+                             $("#appointment_id"), //need to add the id param here
                         function(data){
                             $('#calendar').fullCalendar("removeEvents", (data));
                             $('#calendar').fullCalendar("rerenderEvents");
