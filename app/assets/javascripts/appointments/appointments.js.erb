@@ -12,8 +12,8 @@ $( document ).ready( function() {
 			slotMinutes: 10,
       selectable: true,
       selectHelper: true,
-      eventClick: function(calEvent, jsEvent, view, start, end) {
-          alert('Event: ' + calEvent.title + start + end);
+      eventClick: function(calEvent, jsEvent, view, start_time, end_time, start_date, end_date) {
+          alert('Event: ' + calEvent.title + start_time + end_time);
           id= calEvent.id;
 
           $( "#dialog" ).dialog({
@@ -27,8 +27,8 @@ $( document ).ready( function() {
                       $("#dialog").dialog( "close" );
                   },
                   DELETE: function(data) {
-                      $.post('/appointments/destroy', {"appointment_id": id},
-                             $("#appointment_id"), //need to add the id param here
+                      $.post('/appointments/destroy'+calEvent.id, {"appointment_id": calEvent.id},
+                             $("#appointment_id").id, //need to add the id param here see latest addition to bookmarks
                         function(data){
                             $('#calendar').fullCalendar("removeEvents", (data));
                             $('#calendar').fullCalendar("rerenderEvents");
