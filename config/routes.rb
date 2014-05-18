@@ -1,8 +1,42 @@
 Optho::Application.routes.draw do
   mount Dashing::Engine, at: Dashing.config.engine_path
-  resources :line_items
+  resources :line_items do
+  collection do
+    get 'find'
+    get 'index'
+    get 'findByDate'
+    get 'findNextAvailableSlot'
+    post 'create'
+    post 'destroy'
+    get 'edit'
+  end
+  member do
+    post 'destroy'
+    post 'update'
+    get 'edit'
+    patch 'edit'
+    patch 'update'
+  end
+end
 
-  resources :checkins
+  resources :checkins do
+    collection do
+      get 'find'
+      get 'index'
+      get 'findByDate'
+      get 'findNextAvailableSlot'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+    end
+  end
 
   resources :patients
 
@@ -30,7 +64,8 @@ Optho::Application.routes.draw do
       get 'findNextAvailableSlot'
       post 'create'
       post 'destroy'
-      get 'edit'
+      post 'edit'
+      get 'update'
     end
     member do
       post 'destroy'
@@ -38,6 +73,7 @@ Optho::Application.routes.draw do
       get 'edit'
       patch 'edit'
       patch 'update'
+      post 'edit'
     end
   end
 

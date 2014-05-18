@@ -28,11 +28,42 @@ $( document ).ready( function() {
                   },
                   DELETE: function(data) {
                       $.post('/appointments/'+calEvent.id+'/destroy', {"appointment_id": calEvent.id},
-                             $("#appointment_id").id, //need to add the id param here see latest addition to bookmarks
+                             $("#appointment_id").id,
                         function(data){
                             $('#calendar').fullCalendar("removeEvents", (data));
                             $('#calendar').fullCalendar("rerenderEvents");
                         });
+                  },
+                  CHECKIN: function(data) {
+                      $.post('/line_items/'+calEvent.id+'/update', {"appointment_id": calEvent.id},
+                              $("#appointment_id").id,
+                              function(data){
+                                  $('#calendar').fullCalendar("removeEvents", (data));
+                                  $('#calendar').fullCalendar("rerenderEvents");
+                              });
+                  },
+                  UPDATE: function(data) {
+                      // Send the contents of the add event form to the create action on the appointments controller using an ajax call
+                      $.post(
+                              '/appointments/'+calEvent.id+'/edit',{"appointment_id": calEvent.id},
+                              $("#appointment_id").id,
+                              $('#edit-event-form').serializeArray(),
+                              function( data ) {
+                                  $( "#calendar" ).fullCalendar('renderEvent',
+                                          {
+                                              start_date: date,
+                                              end_date: date,
+                                              name: text,
+                                              start_time: start,
+                                              end_time: end,
+                                              allDay: allDay
+                                          },
+                                          true // make the event "stick"
+                                  );
+                                  $( this ).dialog( "close" );
+                                  $( "#calendar" ).fullCalendar('unselect');
+                              } // end success handler
+                      ); // end ajax post call
                   }
               }
           });
