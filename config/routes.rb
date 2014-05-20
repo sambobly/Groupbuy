@@ -13,6 +13,7 @@ Optho::Application.routes.draw do
   member do
     post 'destroy'
     post 'update'
+    post 'create'
     get 'edit'
     patch 'edit'
     patch 'update'

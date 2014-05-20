@@ -35,8 +35,8 @@ $( document ).ready( function() {
                         });
                   },
                   CHECKIN: function(data) {
-                      $.post('/line_items/'+calEvent.id+'/update', {"appointment_id": calEvent.id},
-                              $("#appointment_id").id,
+                      $.post('/line_items/'+calEvent.id+'/create', {"appointment_id": calEvent.id},
+                              $("#line_item_id").id,
                               function(data){
                                   $('#calendar').fullCalendar("removeEvents", (data));
                                   $('#calendar').fullCalendar("rerenderEvents");
