@@ -20,10 +20,14 @@ class Appointment < ActiveRecord::Base
   ransacker :start_time do |parent|
     Arel::Nodes::SqlLiteral.new("date(appointments.start_time)")
   end
-end
+
   #todo fix validations
- #validates :start_time, :presence => true
+ validates :start_time, :presence => true
+ validates :start_date, :presence => true
+ validates :end_time, :presence => true
+ validates :end_date, :presence => true
  #validates :doctor_id, :presence => true
  #validates :patient_id, :presence => true
  #validates :start_time, :uniqueness => true  #(note that start_time includes the date)
  # {message: "Appointment clash. Do you wish to continue?"}
+end
