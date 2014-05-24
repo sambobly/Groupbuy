@@ -13,7 +13,6 @@ $( document ).ready( function() {
       selectable: true,
       selectHelper: true,
       eventClick: function(calEvent, jsEvent, view, start_time, end_time, start_date, end_date) {
-          alert('Event: ' + calEvent.title + start_time + end_time);
           id= calEvent.id;
 
           $( "#dialog" ).dialog({
@@ -43,7 +42,6 @@ $( document ).ready( function() {
                               });
                   },
                   UPDATE: function(data) {
-                      // Send the contents of the add event form to the create action on the appointments controller using an ajax call
                       $.post(
                               '/appointments/'+calEvent.id+'/edit',{"appointment_id": calEvent.id},
                               $("#appointment_id").id,
