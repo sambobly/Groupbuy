@@ -6,7 +6,7 @@ class Checkin < ActiveRecord::Base
     if current_item
       current_item.quantity+=1
     else
-      current_item = line_items.build(:product_id => product_id)
+      current_item = line_items.build(:appointment_id => appointment_id)
     end
     return current_item
   end

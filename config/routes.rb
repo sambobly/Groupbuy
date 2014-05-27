@@ -9,6 +9,7 @@ Optho::Application.routes.draw do
     post 'create'
     post 'destroy'
     get 'edit'
+    post 'index'
   end
   member do
     post 'destroy'
@@ -17,6 +18,7 @@ Optho::Application.routes.draw do
     get 'edit'
     patch 'edit'
     patch 'update'
+    post 'index'
   end
 end
 
@@ -29,6 +31,7 @@ end
       post 'create'
       post 'destroy'
       get 'edit'
+      post 'index'
     end
     member do
       post 'destroy'
@@ -36,6 +39,7 @@ end
       get 'edit'
       patch 'edit'
       patch 'update'
+      post 'index'
     end
   end
 
