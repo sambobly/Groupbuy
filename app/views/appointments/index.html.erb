@@ -27,41 +27,38 @@
 
 
   <%= form_for( @appointment, url: {action: "create"}, validate: true) do |f| %>
+      <h1>New Appointment
+      </h1>
+      <label>
+        <span>Appointment Name</span>
+        <%= f.text_field :name %>
+      </label>
 
-      <div class="row">
-        <div class="2u label">Appointment Name</div>
-        <div class="4u"><%= f.text_field :name %></div>
-      </div>
+      <span>Appointment Start</span>
 
-      <div id="appointment_time" class="row">
-        <div class="row">
-          <div class="2u label">Start</div>
-          <div class="2u"><%= f.text_field :start_date, class: 'date start' %></div>
-          <div class="2u"><%= f.text_field :start_time, class: 'time start' %></div>
-        </div>
+      <%= f.text_field :start_date, class: 'date start' %>
+      <%= f.text_field :start_time, class: 'time start' %>
+      </input>
 
-        <div class="row">
-          <div class="2u label">End</div>
-          <div class="2u"><%= f.text_field :end_date, class: 'date end' %></div>
-          <div class="2u"><%= f.text_field :end_time, class: 'time end' %></div>
-        </div>
-      </div>
+      <span>Appointment End</span>
+        <input>
+        <%= f.text_field :end_date, class: 'date end' %>
+        <%= f.text_field :end_time, class: 'time end' %>
+        </input>
 
-      <div class="row">
-        <div class="2u label">Patient</div>
-        <div class="4u"><%= f.text_field :patient_name %></div>
-      </div>
+      <label>
+        <span>Patient Name</span>
+        <%= f.text_field :patient_name %>
+      </label>
 
-      <div class="row">
-        <div class="2u label">Doctor</div>
-        <div class="4u"><%= f.text_field :doctor_name %></div>
-      </div>
+      <label>
+        <span>Doctor Name</span>
+        <%= f.text_field :doctor_name %>
+      </label>
+
 
       <%= f.submit "Create Appointment" %>
-    <div id="dialog-confirm" title="Confirm?">
-      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Confirm?</p>
-    </div>
-    <p><input type="submit" value="Save" name="submit" id="submit"/></p>
+
 
   <% end %>
 </div>

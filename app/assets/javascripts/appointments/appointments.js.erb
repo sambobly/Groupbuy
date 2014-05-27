@@ -114,29 +114,40 @@ $( document ).ready( function() {
       $("#find ").autocomplete({
           source: "/doctors/search"
       });
-      $( "#start_time_date_equals").datepicker();
-      $( "#event-date").datepicker();
-      $( "#start_time").timepicker();
-      $( "#end_time").timepicker();
-	}
-	
+        $('input.time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+        $('input.date').datepicker({
+            'dateFormat': 'dd/mm/yy',
+            'autoclose': true
+        });
+
+    }
+    $('input.time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'g:ia'
+    });
+
+    $('input.date').datepicker({
+        'dateFormat': 'dd/mm/yy',
+        'autoclose': true
+    });
+
+    $('#appointment_time').datepair({
+        updateDate: function($input, dateObj){
+            $input.datepicker('setDate', dateObj);
+        }
+    });
+        $("doctor_name").autocomplete({
+            source: "/doctors/search"
+        });
 	// New appointment page
 	if( $( 'body.appointments' ).length && $( 'body.new' ).length ) {
         $("#appointment_doctor_name").autocomplete({
             source: "/doctors/search"
         })
-		
 
-        //$( "#appointment_start_time").timepicker();
-        //$( '#appointment_start_time.time').timepicker({
-       //     'showDuration': true,
-       //     'timeFormat': 'g:ia'
-        //});
-       // $( '#appointment_start_time.date').datepicker({
-        //    'format': 'm/d/yyyy',
-        //    'autoclose': true
-       // });
-       // $('#appointment_start_time').datepair();
         // initialize input widgets first
 
         // initialize input widgets first
