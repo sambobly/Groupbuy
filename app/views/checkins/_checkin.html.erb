@@ -1,9 +1,14 @@
 <div class="checkin_title">Current Patients</div>
 <table>
 
-  <%= render(checkin.line_items) %>
-  <%= button_to 'Check Out', line_items_path(:appointment_id) %>
+  <% checkin.line_items.each do |checked_in_patient| %>
+  
+    <tr>
+      <td><%= checked_in_patient.appointment.patient.name %></td>
+      <td><%= button_to 'Check Out', line_items_path(:appointment_id) %></td>
+      <td><%= button_to 'Remove patient', @line_items, method: :destroy,
+              confirm: 'are you sure?' %></td>
+    </tr>
+  
+  <% end %>
 </table>
-
-<%= button_to 'Remove patient', @line_items, method: :destroy,
-              confirm: 'are you sure?' %>

@@ -9,7 +9,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @q = Appointment.search(params[:q])
     @appointments = @q.result(distinct: true).limit(5)
-    @checkin = current_checkin
+    @checkin = Checkin.order("created_at DESC").first
   end
   # Creates a new appointment
   def new

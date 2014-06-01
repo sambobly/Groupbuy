@@ -24,7 +24,9 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @checkin = current_checkin
+    # TODO We should check to see if we need to create a new checkin (e.g. if the date of the latest check in is earlier than today's date)
+    
+    @checkin = Checkin.order( "created_at DESC").first
     appointment = Appointment.find(params[:appointment_id])
     @line_item = @checkin.line_items.build(:appointment_id => appointment.id)
 
