@@ -1,8 +1,15 @@
 <head>
   <link rel="stylesheet" type="text/css" href="appointments.css.scss">
 </head>
-<%= form_for( @appointment, url: {action: "create"}, validate: true) do |f| %>
+<%= form_for( @appointment, url: {action: "create"}, html: {class: "basic-grey"}, validate: true) do |f| %>
 
+    <h1>New Appointment
+        <span>Please fill all the texts in the fields.</span>
+    </h1>
+    <label>
+      <span>Appointment Name</span>
+      <%= f.text_field :name %>
+    </label>
     <div class="row">
       <div class="2u label">Appointment Name</div>
       <div class="4u"><%= f.text_field :name %></div>

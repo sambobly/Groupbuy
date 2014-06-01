@@ -23,8 +23,33 @@
 //= require layout/jquery.slidertron-1.3
 //= require layout/init
 
+// ===========
+// = Packery =
+// ===========
+
+//= require get-style-property
+//= require get-size
+//= require matches-selector
+//= require eventEmitter
+//= require eventie
+//= require doc-ready
+//= require classie
+//= require jquery-bridget
+//= require matches-selector
+//= require outlayer/item
+//= require outlayer/outlayer
+//= require packery/js/rect
+//= require packery/js/packer
+//= require packery/js/item
+//= require packery/js/packery
+
+// ==================
+// = Application js =
+// ==================
+
 //= require appointments/fullcalendar.doctors
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
 
 //= require appointments/appointments
+//= require consultations

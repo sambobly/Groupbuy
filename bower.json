@@ -1,0 +1,26 @@
+{
+  "name": "optho",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tdenovan/optho",
+  "authors": [
+    "Theo Denovan <theo@t6d.com>",
+    "Tom Conrad <tom@t6d.com>"
+  ],
+  "description": "Optho app",
+  "keywords": [
+    "packery"
+  ],
+  "dependencies" : {
+    "packery": "~1.2.3"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ]
+}

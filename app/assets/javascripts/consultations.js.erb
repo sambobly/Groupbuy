@@ -1,0 +1,23 @@
+$( document ).ready( function() {
+	
+	// The following code is only called on the index page of the appointments controller
+	if( $( 'body.consultations').length && $( 'body.index' ).length ) {
+    
+    // Setup packery
+    var packery = $('#container').packery({
+      itemSelector: ".consult.item",
+      gutter: 10,
+      columnWidth: 200,
+      rowHeight: 80
+    });
+    
+
+    var $itemElems = $( $('#container').packery('getItemElements') );
+    // make item elements draggable
+    $itemElems.draggable();
+    // bind Draggable events to Packery
+    $('#container').packery( 'bindUIDraggableEvents', $itemElems );
+    
+  } // end consutlations page ready
+  
+}); // end document ready
