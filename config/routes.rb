@@ -13,6 +13,7 @@ Optho::Application.routes.draw do
   end
   member do
     post 'destroy'
+    get 'checkout'
     post 'update'
     post 'create'
     get 'edit'

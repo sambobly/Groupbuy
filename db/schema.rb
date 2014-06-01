@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524120222) do
+ActiveRecord::Schema.define(version: 20140601091641) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
@@ -62,6 +62,9 @@ ActiveRecord::Schema.define(version: 20140524120222) do
     t.integer  "checkin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "check_in_time",  default: '2014-06-01 09:17:59'
+    t.datetime "check_out_time"
+    t.boolean  "ckecked_in",     default: true
   end
 
   create_table "patients", force: true do |t|

@@ -54,6 +54,18 @@ class LineItemsController < ApplicationController
       end
     end
   end
+  
+  # Checks a patient out
+  def checkout
+    @line_item = LineItem.find(params[:id])
+    @line_item.checked_in = false
+    @line_item.check_out_time = Time.now
+    @line_item.save
+    
+    # Redirect back to where the request came from
+    # TODO update so this is called via ajax
+    redirect_to( request.referer )
+  end
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json

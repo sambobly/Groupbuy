@@ -1,11 +1,11 @@
 <div class="checkin_title">Current Patients</div>
 <table>
 
-  <% checkin.line_items.each do |checked_in_patient| %>
+  <% checked_in_patients.each do |checked_in_patient| %>
   
     <tr>
       <td><%= checked_in_patient.appointment.patient.name %></td>
-      <td><%= button_to 'Check Out', line_items_path(:appointment_id) %></td>
+      <td><%= button_to 'Check Out', url_for(controller: :line_items, action: :checkout, id: checked_in_patient.id), method: :get %></td>
       <td><%= button_to 'Remove patient', @line_items, method: :destroy,
               confirm: 'are you sure?' %></td>
     </tr>
