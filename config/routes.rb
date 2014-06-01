@@ -34,7 +34,7 @@ end
       post 'index'
     end
     member do
-      post 'destroy'
+      delete 'destroy'
       post 'update'
       get 'edit'
       patch 'edit'
