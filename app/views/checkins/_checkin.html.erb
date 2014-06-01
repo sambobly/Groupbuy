@@ -2,8 +2,8 @@
 <table>
 
   <%= render(checkin.line_items) %>
-
+  <%= button_to 'Check Out', line_items_path(:appointment_id) %>
 </table>
 
-<%= button_to 'Remove patient', @line_item, method: :delete,
+<%= button_to 'Remove patient', @line_items, method: :destroy,
               confirm: 'are you sure?' %>
