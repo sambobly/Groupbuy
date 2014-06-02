@@ -11,19 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601091641) do
+ActiveRecord::Schema.define(version: 20140602101330) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
+    t.date     "date"
     t.string   "patient_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
-    t.time     "start_time"
-    t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
+    t.time     "start_time"
+    t.time     "end_time"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "doctor_name"
@@ -62,9 +63,6 @@ ActiveRecord::Schema.define(version: 20140601091641) do
     t.integer  "checkin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "check_in_time",  default: '2014-06-01 09:17:59'
-    t.datetime "check_out_time"
-    t.boolean  "ckecked_in",     default: true
   end
 
   create_table "patients", force: true do |t|
@@ -73,6 +71,13 @@ ActiveRecord::Schema.define(version: 20140601091641) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :users
+
   mount Dashing::Engine, at: Dashing.config.engine_path
   resources :line_items do
   collection do
@@ -12,8 +14,7 @@ Optho::Application.routes.draw do
     post 'index'
   end
   member do
-    post 'destroy'
-    get 'checkout'
+    delete 'destroy'
     post 'update'
     post 'create'
     get 'edit'
