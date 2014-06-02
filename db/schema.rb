@@ -63,6 +63,9 @@ ActiveRecord::Schema.define(version: 20140602101330) do
     t.integer  "checkin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "check_in_time"
+    t.datetime "check_out_time"
+    t.boolean  "checked_in",     default: true
   end
 
   create_table "patients", force: true do |t|
