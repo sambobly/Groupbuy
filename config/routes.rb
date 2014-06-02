@@ -1,4 +1,14 @@
 Optho::Application.routes.draw do
+  get "admin/index"
+  controller :sessions do
+    get 'new'
+    get 'create'
+    get 'destroy'
+
+  end
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
   resources :users
 
   mount Dashing::Engine, at: Dashing.config.engine_path
