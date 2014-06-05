@@ -26,9 +26,9 @@ Dashing.configure do |config|
   #
   # You can change default views and assets paths with the following config:
   #
-  # config.widgets_views_path = 'app/views/dashing/widgets/'
-  # config.widgets_js_path    = 'app/assets/javascripts/dashing'
-  # config.widgets_css_path   = 'app/assets/stylesheets/dashing'
+  config.widgets_views_path = 'app/views/dashing/widgets/'
+  config.widgets_js_path    = 'app/assets/javascripts/dashing'
+  config.widgets_css_path   = 'app/assets/stylesheets/dashing'
 
   # rufus-scheduler worker path
   # config.jobs_path = 'app/jobs/'
