@@ -10,7 +10,7 @@
 		}, options);
 		return jQuery.dropotron(settings);
 	}
-
+  
 	jQuery.dropotron = function(options) {
 
 		// Settings
