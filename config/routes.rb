@@ -4,8 +4,10 @@ Optho::Application.routes.draw do
     get 'new'
     get 'create'
     get 'destroy'
+    post 'new'
 
   end
+  post "sessions/new"
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"

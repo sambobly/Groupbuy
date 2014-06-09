@@ -101,7 +101,16 @@
 </div>
 
 <div id="columns">
+  <div id = "side">
+    <% if session[:user_id] %>
+    <ul>
+      <%= "#{@user} logged in" %>   //fix this to display person logged in
+    </ul>
+    <%= button_to 'Logout', method: :delete %>    //todo fix this to use correct contoller
+       <% end %>
+  </div>
   <div id="checkin">
     <%= render "checkins/checkin", checked_in_patients: @checked_in_patients %>
   </div>
 </div>
+
