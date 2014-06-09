@@ -53,3 +53,15 @@
 
 //= require appointments/appointments
 //= require consultations
+
+// ============================
+// = Angular (application) js =
+// ============================
+
+// library
+//= require angular
+//= require angular-route
+
+// app implementation
+
+//= require_tree ./angular
