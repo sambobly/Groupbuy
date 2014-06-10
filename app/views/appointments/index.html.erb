@@ -17,8 +17,9 @@
 <div id="calendar" class="-1u 10u">  </div>
  <div id="myDialog"></div>
   <%= search_form_for @q, html: {class: "pull-right form-search appointment_search"} do |f| %>
-      <p><%= f.text_field :start_time_date_equals, placeholder: "Date" %>
+      <p><%= f.text_field :start_date_cont, placeholder: "Date" %>
         <%= f.submit "Date", class: "btn" %></p>
+
   <% end %>
 
 <div id="dialog" title="" style="display:none;">Are you sure want to delete it?</div>

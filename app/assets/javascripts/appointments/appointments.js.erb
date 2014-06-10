@@ -114,6 +114,10 @@ $( document ).ready( function() {
       $("#find ").autocomplete({
           source: "/doctors/search"
       });
+        $('#q_start_date_cont').datepicker({
+            'dateFormat': 'dd/mm/yy',
+            'autoclose': true
+        });
         $('input.time').timepicker({
             'showDuration': true,
             'timeFormat': 'g:ia'
