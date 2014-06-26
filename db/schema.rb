@@ -15,15 +15,16 @@ ActiveRecord::Schema.define(version: 20140602101330) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
+    t.date     "date"
     t.string   "patient_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
-    t.time     "start_time"
-    t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
+    t.time     "start_time"
+    t.time     "end_time"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "doctor_name"

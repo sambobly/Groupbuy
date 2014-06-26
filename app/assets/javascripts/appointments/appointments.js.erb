@@ -114,18 +114,11 @@ $( document ).ready( function() {
       $("#find ").autocomplete({
           source: "/doctors/search"
       });
-        $('#q_start_date_cont').datepicker({
-            'dateFormat': 'dd/mm/yy',
+        $('#q_start_date_eq ').datepicker({
+            'dateFormat': 'yyyy-mm-dd',
             'autoclose': true
         });
-        $('input.time').timepicker({
-            'showDuration': true,
-            'timeFormat': 'g:ia'
-        });
-        $('input.date').datepicker({
-            'dateFormat': 'dd/mm/yy',
-            'autoclose': true
-        });
+
 
     }
     $('input.time').timepicker({

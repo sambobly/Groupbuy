@@ -31,6 +31,7 @@ class AppointmentsController < ApplicationController
   end
 
   def find
+    # TODO: Fix this with ransack to use both name and date (after fixing findbydate)
     search = params[:search]
     @appointments = Appointment.joins(:patient).joins(:doctor).where( "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE '%#{search}%' OR CONCAT(patients.first_name, ' ', patients.last_name) LIKE '%#{search}%'")
   end

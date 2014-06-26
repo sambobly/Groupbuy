@@ -21,6 +21,9 @@ class Appointment < ActiveRecord::Base
     Arel::Nodes::SqlLiteral.new("date(appointments.start_time)")
   end
 
+  ransacker :start_date do |parent|
+    Arel::Nodes::SqlLiteral.new("date(appointments.start_date)")
+  end
   #todo fix validations
  validates :start_time, :presence => true
  validates :start_date, :presence => true

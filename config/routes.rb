@@ -86,6 +86,7 @@ end
       post 'destroy'
       post 'edit'
       get 'update'
+      get 'show'
     end
     member do
       post 'destroy'
@@ -94,6 +95,7 @@ end
       patch 'edit'
       patch 'update'
       post 'edit'
+      get 'show'
     end
   end
   
