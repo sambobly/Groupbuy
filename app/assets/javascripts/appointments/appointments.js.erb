@@ -17,10 +17,10 @@ $( document ).ready( function() {
 
           $( "#dialog" ).dialog({
               resizable: false,
-              height:100,
+              height:300,
               width:500,
               modal: true,
-              title: 'Want you want to do?',
+              title: 'Appointment',
               buttons: {
                   CLOSE: function() {
                       $("#dialog").dialog( "close" );
@@ -42,26 +42,7 @@ $( document ).ready( function() {
                               });
                   },
                   UPDATE: function(data) {
-                      $.post(
-                              '/appointments/'+calEvent.id+'/edit',{"appointment_id": calEvent.id},
-                              $("#appointment_id").id,
-                              $('#edit-event-form').serializeArray(),
-                              function( data ) {
-                                  $( "#calendar" ).fullCalendar('renderEvent',
-                                          {
-                                              start_date: date,
-                                              end_date: date,
-                                              name: text,
-                                              start_time: start,
-                                              end_time: end,
-                                              allDay: allDay
-                                          },
-                                          true // make the event "stick"
-                                  );
-                                  $( this ).dialog( "close" );
-                                  $( "#calendar" ).fullCalendar('unselect');
-                              } // end success handler
-                      ); // end ajax post call
+                    $(this).load('/appointments/'+calEvent.id+'/edit');
                   }
               }
           });
