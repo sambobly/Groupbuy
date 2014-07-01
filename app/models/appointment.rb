@@ -29,8 +29,6 @@ class Appointment < ActiveRecord::Base
  validates :start_date, :presence => true
  validates :end_time, :presence => true
  validates :end_date, :presence => true
- validates :doctor_name, :presence => true
- validates :patient_name, :presence => true
  validates_uniqueness_of :start_time, :scope => [:start_date, :doctor_name]#(note that start_time includes the date)
  # {message: "Appointment clash. Do you wish to continue?"}
 end
