@@ -28,7 +28,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'ransack'
-gem 'dashing-rails'
+gem 'dashing-rails', git: "https://github.com/tdenovan/dashing-rails.git"
 gem 'puma'
 
 group :doc do
