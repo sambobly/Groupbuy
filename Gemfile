@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -57,6 +57,8 @@ gem 'protected_attributes'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
+
+gem 'tzinfo-data'
 
 # Use unicorn as the app server
 # gem 'unicorn'

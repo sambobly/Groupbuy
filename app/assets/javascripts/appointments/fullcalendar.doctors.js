@@ -30,7 +30,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'more_doctors today prev,next'
+		right: 'choose_date more_doctors today prev,next'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -81,14 +81,15 @@ var defaults = {
 		month: 'month',
 		week: 'week',
 		day: 'day',
-		more_doctors: 'more doctors'
+		more_doctors: 'more doctors',
+        choose_date: 'choose date'
 	},
 	
 	// jquery-ui theming
 	theme: false,
 	buttonIcons: {
 		prev: 'circle-triangle-w',
-		next: 'circle-triangle-e'
+		next: 'circle-triangle-e',
 	},
 	
 	//selectable: false,
@@ -237,6 +238,7 @@ function Calendar(element, options, doctors, eventSources) {
 	t.option = option;
 	t.trigger = trigger;
 	t.more_doctors = more_doctors;
+    t.choose_date = choose_date;
 	
 	// imports
 	EventManager.call(t, options, eventSources);
@@ -750,7 +752,10 @@ function Calendar(element, options, doctors, eventSources) {
 }
 
 ;;
-
+    //Go to a specific date
+    function choose_date() {
+        console.info( "")
+    }
 function Header(calendar, options) {
 	var t = this;
 	
