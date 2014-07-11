@@ -259,7 +259,8 @@ function Calendar(element, options, doctors, eventSources) {
 	var date = new Date();
 	var events = [];
 	var _dragElement;
-	
+	var _dragElement;
+
 	
 	/* Main Rendering
 	-----------------------------------------------------------------------------*/
@@ -754,9 +755,17 @@ function Calendar(element, options, doctors, eventSources) {
 ;;
     //Go to a specific date
     function choose_date() {
-        console.info( "")
-    }
-function Header(calendar, options) {
+                $('choose_date').datepicker({
+            'dateFormat': 'dd/mm/yy',
+            'autoclose': true
+            });
+
+        $("#calendar .fc-button-today").each(function() {
+            $(this).click(function() {  //  On today button click, syncronize drop downs
+                $("#myhcalendar").datepicker("setDate", new Date());
+            }}}
+
+        function Header(calendar, options) {
 	var t = this;
 	
 	
