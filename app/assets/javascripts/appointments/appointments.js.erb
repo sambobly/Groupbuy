@@ -89,6 +89,24 @@ $( document ).ready( function() {
           }); // end dialog creation
           } // end Dayclick function
       }); // end fullCalendar creation
+  
+
+      $("#myhcalendar").datepicker({
+          dateFormat: 'dd/mm/yy',
+          changeDateOfMonth: true,
+          changeMonth: true,
+          changeYear: true,
+          showOn: 'both',
+          onChangeDateOfMonthMonthYear: function(year, month, dateofmonth) {
+              $('#calendar').fullCalendar('gotoDate', year, month, dateofmonth); //month from 1 - 12
+          }
+      });
+
+      $("#calendar .fc-button-today").each(function() {
+          $(this).click(function() {  //  On choose_date button click, syncronize drop downs
+              $("#myhcalendar").datepicker("setDate", new Date());
+          });
+      });
 
       $("#search").autocomplete({
           source: "/doctors/search"

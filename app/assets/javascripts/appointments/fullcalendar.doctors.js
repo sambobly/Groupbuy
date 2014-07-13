@@ -750,31 +750,14 @@ function Calendar(element, options, doctors, eventSources) {
 	function more_doctors() {
 		console.info( "to be implemented" );
 	}
+  
+  function choose_date() {
+    console.info( "to be implemented");
+  }
 
 }
 
 ;;
-    //Go to a specific date
-    function choose_date() {
-        $("#myhcalendar").datepicker({
-            dateFormat: 'dd/mm/yy',
-            changeDateOfMonth: true,
-            changeMonth: true,
-            changeYear: true,
-            showOn: 'both',
-            onChangeDateOfMonthMonthYear: function(year, month, dateofmonth) {
-                $('#calendar').fullCalendar('gotoDate', year, month, dateofmonth); //month from 1 - 12
-            }
-
-        });
-
-
-        $("#calendar .fc-button-today").each(function() {
-            $(this).click(function() {  //  On choose_date button click, syncronize drop downs
-                $("#myhcalendar").datepicker("setDate", new Date());
-            });
-        });
-    }
         function Header(calendar, options) {
 	var t = this;
 	
