@@ -755,16 +755,25 @@ function Calendar(element, options, doctors, eventSources) {
 ;;
     //Go to a specific date
     function choose_date() {
-                $('choose_date').datepicker({
-            'dateFormat': 'dd/mm/yy',
-            'autoclose': true
-            });
+        $("#myhcalendar").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeDateOfMonth: true,
+            changeMonth: true,
+            changeYear: true,
+            showOn: 'both',
+            onChangeDateOfMonthMonthYear: function(year, month, dateofmonth) {
+                $('#calendar').fullCalendar('gotoDate', year, month, dateofmonth); //month from 1 - 12
+            }
+
+        });
+
 
         $("#calendar .fc-button-today").each(function() {
-            $(this).click(function() {  //  On today button click, syncronize drop downs
+            $(this).click(function() {  //  On choose_date button click, syncronize drop downs
                 $("#myhcalendar").datepicker("setDate", new Date());
-            }}}
-
+            });
+        });
+    }
         function Header(calendar, options) {
 	var t = this;
 	
@@ -887,6 +896,7 @@ function Calendar(element, options, doctors, eventSources) {
 				}
 			});
 		}
+        e.append("<span class='fc-header-title'><div  id='myhcalendar' /><h2 style='display:none' id='fcheadertitle'>&nbsp;</h2></span>");
 		return e;
 	}
 	
