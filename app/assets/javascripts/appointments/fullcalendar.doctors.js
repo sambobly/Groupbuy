@@ -213,6 +213,7 @@ function Calendar(element, options, doctors, eventSources) {
 	
 	// exports
 	t.doctors = doctors;
+  t.visible_dcotors = doctors;
 	t.options = options;
 	t.render = render;
 	t.destroy = destroy;
