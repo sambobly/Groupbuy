@@ -767,6 +767,7 @@ function Calendar(element, options, doctors, eventSources) {
   
   function choose_date() {
     $('#myhcalendar').datepicker('show');
+    $('.ui-datepicker').css('z-index', 999999);
   }
 
 }
@@ -817,7 +818,7 @@ function Calendar(element, options, doctors, eventSources) {
 		var e = $("<td class='fc-header-" + position + "'/>");
 		var buttonStr = options.header[position];
     if (position == "right") {
-      e.append('<input id="myhcalendar" style="display: none; z-index: 10"/>');
+      e.append('<input id="myhcalendar" style="display: none;"/>');
     }
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {
