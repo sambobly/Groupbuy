@@ -314,6 +314,9 @@ function Calendar(element, options, doctors, eventSources) {
 		if (!bodyVisible()) {
 			lateRender();
 		}
+    
+    // Initialise date picker
+    $('span.fc-button-choose_date').datepicker();
 	}
 	
 	
@@ -802,6 +805,9 @@ function Calendar(element, options, doctors, eventSources) {
 	function renderSection(position) {
 		var e = $("<td class='fc-header-" + position + "'/>");
 		var buttonStr = options.header[position];
+    if (position == "right") {
+      e.append("<div  id='myhcalendar' />");
+    }
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {
 				if (i > 0) {
@@ -880,7 +886,6 @@ function Calendar(element, options, doctors, eventSources) {
 				}
 			});
 		}
-        e.append("<span class='fc-header-title'><div  id='myhcalendar' /><h2 style='display:none' id='fcheadertitle'>&nbsp;</h2></span>");
 		return e;
 	}
 	
