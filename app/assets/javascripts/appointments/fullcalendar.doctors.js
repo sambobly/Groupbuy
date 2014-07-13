@@ -30,7 +30,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'more_doctors today prev,next'
+		right: 'choose_date more_doctors today prev,next'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -81,14 +81,15 @@ var defaults = {
 		month: 'month',
 		week: 'week',
 		day: 'day',
-		more_doctors: 'more doctors'
+		more_doctors: 'more doctors',
+        choose_date: 'choose date'
 	},
 	
 	// jquery-ui theming
 	theme: false,
 	buttonIcons: {
 		prev: 'circle-triangle-w',
-		next: 'circle-triangle-e'
+		next: 'circle-triangle-e',
 	},
 	
 	//selectable: false,
@@ -238,6 +239,7 @@ function Calendar(element, options, doctors, eventSources) {
 	t.option = option;
 	t.trigger = trigger;
 	t.more_doctors = more_doctors;
+    t.choose_date = choose_date;
 	
 	// imports
 	EventManager.call(t, options, eventSources);
@@ -258,7 +260,8 @@ function Calendar(element, options, doctors, eventSources) {
 	var date = new Date();
 	var events = [];
 	var _dragElement;
-	
+	var _dragElement;
+
 	
 	/* Main Rendering
 	-----------------------------------------------------------------------------*/
@@ -751,8 +754,28 @@ function Calendar(element, options, doctors, eventSources) {
 }
 
 ;;
+    //Go to a specific date
+    function choose_date() {
+        $("#myhcalendar").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeDateOfMonth: true,
+            changeMonth: true,
+            changeYear: true,
+            showOn: 'both',
+            onChangeDateOfMonthMonthYear: function(year, month, dateofmonth) {
+                $('#calendar').fullCalendar('gotoDate', year, month, dateofmonth); //month from 1 - 12
+            }
 
-function Header(calendar, options) {
+        });
+
+
+        $("#calendar .fc-button-today").each(function() {
+            $(this).click(function() {  //  On choose_date button click, syncronize drop downs
+                $("#myhcalendar").datepicker("setDate", new Date());
+            });
+        });
+    }
+        function Header(calendar, options) {
 	var t = this;
 	
 	
@@ -874,6 +897,7 @@ function Header(calendar, options) {
 				}
 			});
 		}
+        e.append("<span class='fc-header-title'><div  id='myhcalendar' /><h2 style='display:none' id='fcheadertitle'>&nbsp;</h2></span>");
 		return e;
 	}
 	
