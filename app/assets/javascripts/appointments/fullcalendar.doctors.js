@@ -30,7 +30,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'choose_date more_doctors today prev,next'
+		right: 'more_doctors today prev,next choose_date'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -316,7 +316,19 @@ function Calendar(element, options, doctors, eventSources) {
 		}
     
     // Initialise date picker
-    $('span.fc-button-choose_date').datepicker();
+    $('#myhcalendar').datepicker({
+      dateFormat: 'dd/mm/yy',
+      changeDateOfMonth: true,
+      changeMonth: true,
+      changeYear: true,
+      showOn: 'button',
+      onSelect: function(date_text) {
+        date = $(this).datepicker('getDate');
+        $('#calendar').fullCalendar('gotoDate', date.getFullYear(), date.getMonth(), date.getDate());
+          // $('#calendar').fullCalendar('gotoDate', year, month, dateofmonth); //month from 1 - 12
+          $(this).datepicker('hide');
+      }
+    });
 	}
 	
 	
@@ -755,7 +767,7 @@ function Calendar(element, options, doctors, eventSources) {
 	}
   
   function choose_date() {
-    console.info( "to be implemented");
+    $('#myhcalendar').datepicker();
   }
 
 }
@@ -806,7 +818,7 @@ function Calendar(element, options, doctors, eventSources) {
 		var e = $("<td class='fc-header-" + position + "'/>");
 		var buttonStr = options.header[position];
     if (position == "right") {
-      e.append("<div  id='myhcalendar' />");
+      e.append('<div style="position: relative"><div  id="myhcalendar" style="position: absolute; right:0; top:0; z-index: 10" /></div>');
     }
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {
