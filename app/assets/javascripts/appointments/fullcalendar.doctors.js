@@ -30,7 +30,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'more_doctors today prev,next choose_date'
+		right: 'choose_date more_doctors today prev,next'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -321,7 +321,6 @@ function Calendar(element, options, doctors, eventSources) {
       changeDateOfMonth: true,
       changeMonth: true,
       changeYear: true,
-      showOn: 'button',
       onSelect: function(date_text) {
         date = $(this).datepicker('getDate');
         $('#calendar').fullCalendar('gotoDate', date.getFullYear(), date.getMonth(), date.getDate());
@@ -767,7 +766,7 @@ function Calendar(element, options, doctors, eventSources) {
 	}
   
   function choose_date() {
-    $('#myhcalendar').datepicker();
+    $('#myhcalendar').datepicker('show');
   }
 
 }
@@ -818,7 +817,7 @@ function Calendar(element, options, doctors, eventSources) {
 		var e = $("<td class='fc-header-" + position + "'/>");
 		var buttonStr = options.header[position];
     if (position == "right") {
-      e.append('<div style="position: relative"><div  id="myhcalendar" style="position: absolute; right:0; top:0; z-index: 10" /></div>');
+      e.append('<input id="myhcalendar" style="display: none; z-index: 10"/>');
     }
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {
