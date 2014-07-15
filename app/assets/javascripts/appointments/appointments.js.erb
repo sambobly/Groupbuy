@@ -107,7 +107,9 @@ $( document ).ready( function() {
               $("#myhcalendar").datepicker("setDate", new Date());
           });
       });
-
+        $(document).ready(function(){
+            $("#example").multiselect();
+        });
       $("#search").autocomplete({
           source: "/doctors/search"
       });
