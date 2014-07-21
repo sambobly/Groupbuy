@@ -30,4 +30,15 @@ Optho::Application.configure do
   
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.test_settings = {
+      address: "smtp.hotmail.com",
+      port: 587,
+      domain: "domain.of.sender.net",
+      authentication: "plain",
+      user_name: "dave",
+      password: "secret",
+      enable_starttls_auto: true
+  }
 end
