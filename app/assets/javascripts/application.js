@@ -50,6 +50,7 @@
 //= require appointments/fullcalendar.doctors
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
+//= require appointments/jquery.multiselect
 
 //= require appointments/appointments
 //= require consultations
