@@ -1,6 +1,7 @@
 current_valuation = 0
 
 Dashing.scheduler.every '2s' do
+  
   last_valuation = current_valuation
   current_valuation = rand(100)
 

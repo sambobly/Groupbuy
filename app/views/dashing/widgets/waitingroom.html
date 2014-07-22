@@ -1,6 +1,9 @@
 <h1 class="title" data-bind="title"></h1>
  
-<h2 class="value" data-bind="checkins | shortenedNumber | prepend prefix"></h2>
- 
 <p class="change-rate"> 
-  <i data-bind-class=S<p class="updated-at" data-bind="updatedAtMessage"></p>
+  
+  <table>
+    <tr data-foreach-checkin='checkins'>
+      <td data-bind='checkin.id'/>
+    </tr>
+  </table>
