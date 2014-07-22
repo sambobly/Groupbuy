@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class AppointmentTest < ActionMailer::TestCase
+class EventTest < ActionMailer::TestCase
   test "booked" do
-    mail = Appointment.booked
+    mail = Event.booked
     assert_equal "Booked", mail.subject
     assert_equal ["to@example.org"], mail.to
     assert_equal ["from@example.com"], mail.from
@@ -10,7 +10,7 @@ class AppointmentTest < ActionMailer::TestCase
   end
 
   test "missed" do
-    mail = Appointment.missed
+    mail = Event.missed
     assert_equal "Missed", mail.subject
     assert_equal ["to@example.org"], mail.to
     assert_equal ["from@example.com"], mail.from
