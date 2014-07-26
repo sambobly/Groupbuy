@@ -329,8 +329,7 @@ function Calendar(element, options, doctors, eventSources) {
       }
     });
 	}
-	
-	
+
 	// called when we know the calendar couldn't be rendered when it was initialized,
 	// but we think it's ready now
 	function lateRender() {
@@ -762,7 +761,7 @@ function Calendar(element, options, doctors, eventSources) {
 	
 	// Shows more doctors in a dropdown list
 	function more_doctors() {
-		console.info( "to be implemented" );
+        $('#mykcalendar').multiselect('show');
 	}
   
   function choose_date() {
@@ -819,6 +818,7 @@ function Calendar(element, options, doctors, eventSources) {
 		var buttonStr = options.header[position];
     if (position == "right") {
       e.append('<input id="myhcalendar" style="display: none;"/>');
+      e.append('<input id="mykcalendar" style="..."/>');
     }
 		if (buttonStr) {
 			$.each(buttonStr.split(' '), function(i) {

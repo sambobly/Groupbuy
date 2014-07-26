@@ -1,32 +1,47 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :set_doctor, only: [:show, :edit, :update, :destroy, :index, :new, :create, :all]
 
   # GET /doctors
   # GET /doctors.json
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.find(:all)
+
   end
 
+  def all
+    @doctors = Doctor.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @doctors}
+    end
+  end
   # GET /doctors/1
   # GET /doctors/1.json
   def show
+    @doctor = Doctor.find(params[:id])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @doctors}
+    end
   end
 
   # GET /doctors/new
   def new
     @doctor = Doctor.new
-
+    @doctors = Doctor.all.by_name
     @all_patients = Patient.all
 
   end
 
   # GET /doctors/1/edit
   def edit
+    @doctors = Doctor.all.by_name
   end
 
   # POST /doctors
   # POST /doctors.json
   def create
+    @doctors = Doctor.all.by_name
     @doctor = Doctor.new(doctor_params)
     respond_to do |format|
       if @doctor.save
@@ -49,9 +64,9 @@ class DoctorsController < ApplicationController
   
   # GET /doctors/list.json
   def list
-    @doctors = Doctor.order( :first_name )
-    
-    render json: @doctors
+      @doctors = Doctor.order( :first_name )
+
+      render json: @doctors
   end
   
   # PATCH/PUT /doctors/1

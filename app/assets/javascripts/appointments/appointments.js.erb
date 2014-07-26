@@ -107,9 +107,15 @@ $( document ).ready( function() {
               $("#myhcalendar").datepicker("setDate", new Date());
           });
       });
-        $(document).ready(function(){
-            $("#example").multiselect();
+
+
+        $('#post_doctor_id').multiselect(function (){
+            $("#calendar").fullCalendar("removeEvents", filter);
         });
+
+        function filter(event) {
+            return $("#filter > option:selected").attr("id") === event.id;
+        }
       $("#search").autocomplete({
           source: "/doctors/search"
       });
