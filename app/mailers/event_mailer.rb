@@ -6,9 +6,9 @@ class EventMailer < ActionMailer::Base
   #
   #   en.event.booked.subject
   #
-  def booked(patient)
-    @patient = patient
-    attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
+  def booked(appointment)
+    @patient = appointment.patient
+   # attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
     mail(:to => "#{patient.name} <#{patient.email}>", :subject => "Booked")
   end
 end
