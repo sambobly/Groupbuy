@@ -1,6 +1,6 @@
 {
   "name": "eventEmitter",
-  "description": "Event based JavaScript for the browser",
+  "description": "EventMailer based JavaScript for the browser",
   "version": "4.2.7",
   "main": [
     "./EventEmitter.js"

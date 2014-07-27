@@ -11,4 +11,13 @@ class ApplicationController < ActionController::Base
   #    redirect_to login_url, notice: "Please log in"
    # end
   #end
+
+  def home
+
+    if params [:doctor_id]
+      @appointments = Appointment.where(doctor_id: params[:doctor_id])
+    else
+      @appointments = Appointment.all
+    end
+  end
 end

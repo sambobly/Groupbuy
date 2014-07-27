@@ -87,7 +87,15 @@ $( document ).ready( function() {
                 } // end confirm button handler
             } // end buttons
           }); // end dialog creation
-          } // end Dayclick function
+          }, // end Dayclick function
+            eventRender: function(event, element) {
+                if (event.belongs_to !== $('#post_doctor_id').val()) {
+                    $(element).hide();
+                } else {
+                    // Not sure if you need this
+                    $(element).show();
+                }
+            },
       }); // end fullCalendar creation
   
 
@@ -114,7 +122,10 @@ $( document ).ready( function() {
         });
 
         function filter(event) {
-            return $("#filter > option:selected").attr("id") === event.id;
+            var allevents = new Array();
+            var filterevents = new Array();
+            allevents = getCalendarEvents(null);
+            return $("#filter > option:selected").attr(":doctor_id") === event.id;
         }
       $("#search").autocomplete({
           source: "/doctors/search"

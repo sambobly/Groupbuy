@@ -14,7 +14,7 @@
  * Modified by Theo to replace days in the Agenda Week view with doctors
  * Modifications are likely to make other views unstable
  * A separate doctorsSource paramter has been added to fetch a list of doctors from the database
- * A doctorId paramter has been added to the Event object
+ * A doctorId paramter has been added to the EventMailer object
  */
  
 (function($, undefined) {
@@ -328,6 +328,13 @@ function Calendar(element, options, doctors, eventSources) {
           $(this).datepicker('hide');
       }
     });
+        $('#mykcalendar').multiselect(function (){
+            $("#calendar").fullCalendar("removeEvents", filter);
+        });
+
+        function filter(event) {
+            return $("#filter > option:selected").attr("id") === event.id;
+        }
 	}
 
 	// called when we know the calendar couldn't be rendered when it was initialized,
@@ -514,7 +521,7 @@ function Calendar(element, options, doctors, eventSources) {
 	
 	
 	
-	/* Event Fetching/Rendering
+	/* EventMailer Fetching/Rendering
 	-----------------------------------------------------------------------------*/
 	// TODO: going forward, most of this stuff should be directly handled by the view
 
@@ -1284,7 +1291,7 @@ function EventManager(options, _sources) {
 	
 	
 	
-	/* Event Normalization
+	/* EventMailer Normalization
 	-----------------------------------------------------------------------------*/
 	
 	
@@ -1734,7 +1741,7 @@ function iso8601Week(date) {
 fc.applyAll = applyAll;
 
 
-/* Event Date Math
+/* EventMailer Date Math
 -----------------------------------------------------------------------------*/
 
 
@@ -1755,7 +1762,7 @@ function _exclEndDay(end, allDay) {
 
 
 
-/* Event Element Binding
+/* EventMailer Element Binding
 -----------------------------------------------------------------------------*/
 
 
@@ -4341,7 +4348,7 @@ function AgendaEventRenderer() {
 
 
 
-/* Agenda Event Segment Utilities
+/* Agenda EventMailer Segment Utilities
 -----------------------------------------------------------------------------*/
 
 
@@ -4608,7 +4615,7 @@ function View(element, calendar, viewName) {
 	
 
 
-	/* Event Editable Boolean Calculations
+	/* EventMailer Editable Boolean Calculations
 	------------------------------------------------------------------------------*/
 
 	
@@ -4641,7 +4648,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Data
+	/* EventMailer Data
 	------------------------------------------------------------------------------*/
 	
 	
@@ -4673,7 +4680,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Elements
+	/* EventMailer Elements
 	------------------------------------------------------------------------------*/
 	
 	
@@ -4741,7 +4748,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Modification Reporting
+	/* EventMailer Modification Reporting
 	---------------------------------------------------------------------------------*/
 	
 	
@@ -4790,7 +4797,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Modification Math
+	/* EventMailer Modification Math
 	---------------------------------------------------------------------------------*/
 	
 	

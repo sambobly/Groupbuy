@@ -3,12 +3,12 @@ class EventPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/event/booked
   def booked
-    Event.booked
+    EventMailer.booked
   end
 
   # Preview this email at http://localhost:3000/rails/mailers/event/missed
   def missed
-    Event.missed
+    EventMailer.missed
   end
 
 end
