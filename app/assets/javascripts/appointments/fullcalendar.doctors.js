@@ -777,8 +777,9 @@ function Calendar(element, options, doctors, eventSources) {
     $('.ui-datepicker').css('z-index', 999999);
   }
   
-  function show_more_doctors(val) {
+  function show_more_doctors(doctor_ids) {
     console.log("checked!!");
+    console.log(doctor_ids);
   }
 
 }
