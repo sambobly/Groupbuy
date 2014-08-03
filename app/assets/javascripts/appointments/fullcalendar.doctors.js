@@ -239,6 +239,7 @@ function Calendar(element, options, doctors, eventSources) {
 	t.option = option;
 	t.trigger = trigger;
 	t.more_doctors = more_doctors;
+  t.show_more_doctors = show_more_doctors
     t.choose_date = choose_date;
 	
 	// imports
@@ -776,7 +777,7 @@ function Calendar(element, options, doctors, eventSources) {
     $('.ui-datepicker').css('z-index', 999999);
   }
   
-  function show_more_doctor() {
+  function show_more_doctors(val) {
     console.log("checked!!");
   }
 
