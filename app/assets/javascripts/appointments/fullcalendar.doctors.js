@@ -778,15 +778,15 @@ function Calendar(element, options, doctors, eventSources) {
   }
   
   function show_more_doctors(doctor_ids) {
-		$.getJSON( options.doctorsSource, doctor_ids, function( new_doctors ) {
-      this.doctors = new_doctors;
+    calendar = this;
+		$.ajax({
+      url: options.doctorsSource,
+      type: "POST",
+      data: {doctor_ids: doctor_ids},
+    }).done(function( new_doctors ) {
+      calendar.doctors = new_doctors;
+      calendar.render();
 		});
-		clearEvents();
-		fetchAndRenderEvents();
-    render();
-    console.log(doctors);
-    console.log("checked!!");
-    console.log(doctor_ids);
   }
 
 }

@@ -64,7 +64,7 @@ class DoctorsController < ApplicationController
   
   # GET /doctors/list.json
   def list
-      @doctors = Doctor.order( :first_name )
+      @doctors = params["doctor_ids"].nil? ? Doctor.order( :first_name ) : Doctor.where(id: params["doctor_ids"]).order( :first_name )
 
       render json: @doctors
   end

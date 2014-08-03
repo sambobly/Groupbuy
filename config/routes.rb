@@ -65,6 +65,7 @@ end
     collection do
       get 'search'
       get 'list'
+      post 'list'
     end
   end
 
