@@ -1,5 +1,5 @@
 class EventMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "Sambobly1@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -7,9 +7,10 @@ class EventMailer < ActionMailer::Base
   #   en.event.booked.subject
   #
   def booked(appointment)
-    @patient = appointment.patient
+    @appointment = appointment
+    @patient = @appointment.patient
    # attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
-    mail(:to => "#{patient.name} <#{patient.email}>", :subject => "Booked")
+    mail(to: appointment.patient.email, subject: "Appointment Booked")
   end
 end
 
