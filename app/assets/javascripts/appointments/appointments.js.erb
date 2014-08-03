@@ -117,8 +117,10 @@ $( document ).ready( function() {
       });
 
 
-        $('#post_doctor_id').multiselect(function (){
-            $("#calendar").fullCalendar("removeEvents", filter);
+        $('#post_doctor_id').multiselect({
+          close: function(event, ui) {
+            console.log("js event!");
+          }
         });
 
         function filter(event) {

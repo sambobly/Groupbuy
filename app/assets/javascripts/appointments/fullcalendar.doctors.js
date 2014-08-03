@@ -775,6 +775,10 @@ function Calendar(element, options, doctors, eventSources) {
     $('#myhcalendar').datepicker('show');
     $('.ui-datepicker').css('z-index', 999999);
   }
+  
+  function show_more_doctor() {
+    console.log("checked!!");
+  }
 
 }
 
