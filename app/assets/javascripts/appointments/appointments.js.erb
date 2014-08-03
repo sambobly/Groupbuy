@@ -119,7 +119,10 @@ $( document ).ready( function() {
 
         $('#post_doctor_id').multiselect({
           close: function(event, ui) {
-            console.log("js event!");
+            console.log("hi!");
+            var values = $("#post_doctor_id").val();
+            console.log(values);
+            $("#calendar").fullCalendar("show_more_doctor", "");
           }
         });
 

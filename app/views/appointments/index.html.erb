@@ -111,4 +111,4 @@
        <% end %>
   </div>
 
- <%= collection_select(:post, :doctor_id, Doctor.all, :id, :name) %>
+ <%= collection_select(:post, :doctor_id, Doctor.all, :id, :name, {}, {multiple: true}) %>
