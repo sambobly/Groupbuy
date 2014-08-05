@@ -1,12 +1,8 @@
 class User < ActiveRecord::Base
-  attr_destroy :ensure_an_admin_remains
-  attr_accessible :name, :password, :password_confirmation
-  validates :name, presence: true, uniqueness: true
-  has_secure_password
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+
 end
 private
-def ensure_an_admin_remains
-  if User.count.zero?
-    raise "Can't Delete Last User"
-  end
-end

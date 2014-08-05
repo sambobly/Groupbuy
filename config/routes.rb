@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  devise_for :users
   get "admin/index"
   controller :sessions do
     get 'new'

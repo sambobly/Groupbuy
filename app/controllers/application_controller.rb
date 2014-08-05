@@ -20,4 +20,6 @@ class ApplicationController < ActionController::Base
       @appointments = Appointment.all
     end
   end
+
+
 end

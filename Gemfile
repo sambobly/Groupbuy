@@ -59,6 +59,7 @@ gem 'protected_attributes'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'tzinfo-data'
+gem 'devise'
 
 # Use unicorn as the app server
 # gem 'unicorn'
