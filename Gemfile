@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0'
 gem 'client_side_validations', git: "https://github.com/amitree/client_side_validations.git", branch: "4-0-beta"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -60,7 +60,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'tzinfo-data'
 gem 'devise'
-
+gem 'activeadmin', github: 'gregbell/active_admin'
 # Use unicorn as the app server
 # gem 'unicorn'
 
