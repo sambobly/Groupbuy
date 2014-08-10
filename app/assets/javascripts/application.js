@@ -12,10 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.autocomplete
-//= require jquery.ui.datepicker
+//= require jquery-ui/datepicker
 //= require appointments/jquery.multiselect
-//= require jquery.ui.dialog
+//= require jquery-ui/dialog
 //= require turbolinks
 //= require rails.validations.js
 //= require layout/jquery.dropotron
