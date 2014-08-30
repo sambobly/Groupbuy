@@ -61,6 +61,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'tzinfo-data'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'bootstrap-sass'
 # Use unicorn as the app server
 # gem 'unicorn'
 

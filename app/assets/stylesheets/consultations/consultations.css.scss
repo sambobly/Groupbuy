@@ -6,12 +6,15 @@
 /* = Packery styling = */
 /* =================== */
 
-.consult.item {
-  width: 25%;
-  background-color: #efefef;
-  padding: 0.6em;
+.consult.panel {
+  width: 30%;
+  min-height: 200px;
 }
 
-.consult.item.w2 {
-  width: 50%;
+#notes.consult.panel {
+  width: 60%;
+}
+
+body.consultations {
+  padding-top: 110px;
 }
