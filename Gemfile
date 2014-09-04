@@ -29,7 +29,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'ransack'
 gem 'dashing-rails', git: "https://github.com/tdenovan/dashing-rails.git"
-gem 'puma'
+gem 'puma', '= 2.8.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

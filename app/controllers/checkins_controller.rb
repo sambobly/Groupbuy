@@ -36,7 +36,7 @@ class CheckinsController < ApplicationController
   # POST /checkins.json
   def create
     @checkin = Checkin.new(checkin_params)
-
+    debugger
     respond_to do |format|
       if @checkin.save
         format.html { redirect_to @checkin, notice: 'Checkin was successfully created.' }
@@ -66,13 +66,16 @@ class CheckinsController < ApplicationController
   # DELETE /checkins/1.json
   def destroy
     @checkin = current_checkin
-    @checkin.destroy
+    @checkout = Checkout.new(checkout_params)
+    if @checkin.destroy
+      @checkout.save
     session[:checkin_id] = nil
     respond_to do |format|
       format.html { redirect_to checkins_url }
       format.json { head :no_content }
     end
-  end
+    end
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.

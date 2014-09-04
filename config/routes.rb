@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :checkouts
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users

@@ -25,9 +25,10 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.create( params.require( :appointment ).permit( :name, :patient_id, :start_time, :end_time, :doctor_id, :end_date, :start_date, :doctor_name ) )
     @patient = @appointment.patient
     if @appointment.save
-        EventMailer.booked(@patient).deliver #email sent for confirmation
-        redirect_to new_appointment_path
-    else
+       # EventMailer.booked(@patient).deliver #email sent for confirmation
+       # redirect_to new_appointment_path
+       # redirect_to new_appointment_path
+     else
       render 'new'
     end
   end
