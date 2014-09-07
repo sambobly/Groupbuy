@@ -2,7 +2,7 @@
 <html lang="en" ng-app="opthoApp">
 <head>
   <meta charset="utf-8">
-  <title>calendar widget</title>
+  <title>appointmentdisplay widget</title>
   <link rel="stylesheet" href="app/assets/stylesheets/consultations/consultations.css.scss">
   <script src="optho/vendor/assets/bower_components/angular/angular.js"></script>
 </head>
@@ -11,7 +11,7 @@
 <body ng-controller="CalendarListCtrl">
 <ul>
   <li ng-repeat="appointment in appointments">
-    {{appointment.name}}
+    {{appointment.id}}
     <p>still here bro</p>
   </li>
 </ul>

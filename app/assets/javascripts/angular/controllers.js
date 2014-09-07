@@ -1,7 +1,5 @@
 var opthoApp = angular.module('opthoApp', []);
 
-opthoApp.controller('CalendarListCtrl', function  ($scope) {
-    $scope.appointments = [
-        {'name': 'yoyoyo'}
-    ];
-});
+opthoApp.controller('CalendarListCtrl', ['$scope', 'Appointment', function($scope, Appointment) {
+    $scope.appointments = Appointment.query();
+}])
