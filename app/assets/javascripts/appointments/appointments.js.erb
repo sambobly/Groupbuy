@@ -1,5 +1,5 @@
 $( document ).ready( function() {
-	
+
 	// The following code is only called on the index page of the appointments controller
 	if( $( 'body.appointments').length && $( 'body.index' ).length ) {
 		$( '#calendar' ).fullCalendar({
@@ -95,9 +95,9 @@ $( document ).ready( function() {
                     // Not sure if you need this
                     $(element).show();
                 }
-            },
+            }
       }); // end fullCalendar creation
-  
+
 
       $("#myhcalendar").datepicker({
           dateFormat: 'dd/mm/yy',
@@ -185,7 +185,7 @@ $( document ).ready( function() {
       			$input.datepicker('setDate', dateObj);
       		}
         });
-        
+
 	}
-	
+
 });
