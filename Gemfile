@@ -39,9 +39,6 @@ end
 
 group :development do
   gem 'debugger'
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'rb-fsevent', require: false
   
   gem 'ffaker' # Gem for generating fake data, see lib/tasks/populate
 

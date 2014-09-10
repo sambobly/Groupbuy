@@ -51,6 +51,7 @@
 
 // library
 //= require angular
+//= require angular-resource
 //= require angular-route
 
 // app implementation
