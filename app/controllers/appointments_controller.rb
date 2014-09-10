@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  layout 'bootstrap'
   before_filter :set_search
 
   def set_search
