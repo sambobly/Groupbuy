@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410768039358" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410780293741" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -226,7 +225,7 @@
               <file leaf-file-name="bootstrap.html.erb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/layouts/bootstrap.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="21" column="45" selection-start="820" selection-end="820" vertical-scroll-proportion="-0.09117221">
+                    <state line="21" column="45" selection-start="820" selection-end="820" vertical-scroll-proportion="0.024602026">
                       <folding />
                     </state>
                   </provider>
@@ -276,10 +275,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="63" column="38" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.8812573">
+                    <state line="57" column="31" selection-start="1601" selection-end="1935" vertical-scroll-proportion="0.76251453">
                       <folding />
                     </state>
                   </provider>
@@ -334,10 +333,10 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="2" column="28" selection-start="116" selection-end="128" vertical-scroll-proportion="0.03807391">
+                    <state line="9" column="6" selection-start="315" selection-end="315" vertical-scroll-proportion="0.17133258">
                       <folding />
                     </state>
                   </provider>
@@ -546,14 +545,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -991,7 +990,11 @@
       <created>1410346068734</created>
       <updated>1410346068734</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added appointment page to consultations index">
+      <created>1410780273650</created>
+      <updated>1410780273650</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1080,7 +1083,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added appointment page to consultations index" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1114,6 +1117,7 @@
     <MESSAGE value="Devise functioning, active admin throwing sprockets error" />
     <MESSAGE value="On consultations/show have rudimentary widget for displaying next appointments" />
     <MESSAGE value="Second iteration" />
+    <MESSAGE value="Added appointment page to consultations index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,9 +1169,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application_bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
@@ -1186,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/bootstrap.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="820" selection-end="820" vertical-scroll-proportion="-0.09117221">
+        <state line="21" column="45" selection-start="820" selection-end="820" vertical-scroll-proportion="0.024602026">
           <folding />
         </state>
       </provider>
@@ -1219,16 +1221,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="116" selection-end="128" vertical-scroll-proportion="0.03807391">
+        <state line="57" column="31" selection-start="1601" selection-end="1935" vertical-scroll-proportion="0.76251453">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="38" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.8812573">
+        <state line="9" column="6" selection-start="315" selection-end="315" vertical-scroll-proportion="0.17133258">
           <folding />
         </state>
       </provider>
