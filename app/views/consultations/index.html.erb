@@ -50,5 +50,14 @@
       <span class="lead">These could be tabbable!</span>
     </div>
   </div>
-  
-</div>
+  <!-- test for next 3 appointments panel -->
+  <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
+    <div class="panel-heading">
+      <h3 class="panel-title">Appointments</h3>
+    </div>
+
+    <div ng-repeat="appointment in appointments">
+      {{appointment.id}}
+      Display appointment patient and time (next 3) here
+    </div>
+     </div>

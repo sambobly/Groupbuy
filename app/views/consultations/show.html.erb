@@ -1,11 +1,15 @@
-<div ng-controller="CalendarListCtrl">
-  <ul>
-    <li ng-repeat="appointment in appointments">
+<div class="panel panel-default consult" id="background">
+  <div class="panel-heading">
+    <h3 class="panel-title">Patient info</h3>
+  </div>
+  <div class="panel-body">
+  <div ng-controller="CalendarListCtrl">
+    <span class="lead" ng-repeat="appointment in appointments">
       {{appointment.id}}
-      <p>still here bro</p>
-    </li>
-  </ul>
+      Display appointment patient and time (next 3) here
+    </span>
 </div>
+    </div>
 
 <div class="row">
   <div class="3u">
