@@ -1,3 +1,4 @@
+<% if false %>
 <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
   <div class="panel-heading">
     <h3 class="panel-title">Appointments</h3>
@@ -8,6 +9,18 @@
     Display appointment patient and time (next 3) here
   </div>
 </div>
+<% end %>
+<body ng-controller="ImageCtrl">
+
+<ul>
+  <li ng-repeat="image in images">
+    {{image.name}}
+    <p>
+     {{image.snippet}}
+    </p>
+  </li>
+</ul>
+
 
 <div class="row">
   <div class="3u">
