@@ -1,16 +1,21 @@
-opthoApp.controller('CalendarListCtrl', ['$scope', '$resource', function($scope, $resource) {
+var opthoControllers = angular.module('opthoControllers', []);
+
+opthoControllers.controller('CalendarListCtrl', ['$scope', '$resource', function($scope, $resource) {
     var Appointments = $resource('/appointments/findByDate');
     today = new Date();
     yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1);
     $scope.appointments = Appointments.query({start: today.getTime(), end: yesterday.getTime()});
-}])
+}]);
 
-opthoApp.controller('ImageCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('app/sampleimages.json').success(function(data) {
-            $scope.images = data;
-        });
 
-        $scope.orderProp = 'age';
-    }]);
+opthoControllers.controller('ImageCtrl', ['$scope', '$routeparams', $http, function($scope, $routeparams, $http) {
+            $http.get('consultations/' + $routeParams.imageId + '.json').success(function(data) {
+                $scope.image = data;
+                $scope.mainImageUrl = data.images[0];
+            });
+    $scope.setImage = function(imageUrl) {
+        $scope.mainImageUrl = imageUrl;
+    }
+}]);
+
