@@ -9,7 +9,7 @@ opthoControllers.controller('CalendarListCtrl', ['$scope', '$resource', function
 }]);
 
 
-opthoControllers.controller('ImageCtrl', ['$scope', '$routeparams', $http, function($scope, $routeparams, $http) {
+opthoControllers.controller('ImageCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
             $http.get('consultations/' + $routeParams.imageId + '.json').success(function(data) {
                 $scope.image = data;
                 $scope.mainImageUrl = data.images[0];

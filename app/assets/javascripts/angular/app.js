@@ -1,15 +1,15 @@
 var opthoApp = angular.module('opthoApp', [
 'ngRoute',
-'ngResource'
+'ngResource',
+'opthoControllers'
 ]);
 
 opthoApp.config(['$routeProvider',
 function($routeProvider) {
-    when('/consultations/app/sampleimages.json', {
+    $routeProvider.when('/consultations/app/sampleimages.json', {
         templateUrl: 'consultations/show',
         controller: 'ImageCtrl'
-    }),
-        otherwise({
+    }).otherwise({
             redirectTo: '/images'
         });
 }])
