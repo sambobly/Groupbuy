@@ -42,7 +42,8 @@
     <div class="carousel-inner">
       <!-- Slide 1-->
       <div class="item active">
-        <img src="http://placehold.it/1200x480" alt="Slide 1" />
+        <slide ng-repeat="image in images" active="image.active">
+          <img ng-src="{{image}}">
         <div class="carousel-caption">
           <h1>Slide 1</h1>
           <p>Slide 1 Description</p>
@@ -51,19 +52,14 @@
 
       <!-- Slide 2-->
       <div class="item">
-        <img src="http://placehold.it/1200x480" alt="Slide 2" />
+        <slide ng-repeat="image in images" active="image.active">
+          <img ng-src="{{image}}">
         <div class="carousel-caption">
           <h1>Slide 2</h1>
           <p>Slide 2 Description</p>
         </div>
       </div>
-      <carousel interval="myInterval">
-        <slide ng-repeat="image in images" active="image.active">
-      <img ng-src="{{image}}">
-          <div class="carousel-caption">
-          </div>
-        </slide>
-      </carousel>
+
   <span class="left carousel-control" data-target="#Carousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
 </span>
