@@ -9,7 +9,7 @@
     Display appointment patient and time (next 3) here
   </div>
 </div>
-<% end %>
+
 <body ng-controller="ImageCtrl">
 
 <ul>
@@ -74,7 +74,16 @@
         </div>
       </div>
     </div>
+<% end %>
 
+<body ng-controller="PtntInfoCtrl">
+<div ng-repeat="patient in patients">
+  <p>
+    {{patient.name}}
+  </p>
+  </div>
+
+</body>
 <div class="row">
   <div class="3u">
     Side bar
