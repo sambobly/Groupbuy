@@ -1,6 +1,11 @@
 {"patients": [{
-    "name": "angular-seed"
-}
+    "name": "Robert Johnston",
+    "ur": "123456",
+    "DOB": "1/1/01",
+    "phonenumber": "1234566789"
+}, {"name": "Fred Flinstone",
+    "ur": "987654",
+    "DOB": "9/9/99"}
 ]
 }
 

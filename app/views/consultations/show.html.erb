@@ -76,11 +76,34 @@
     </div>
 <% end %>
 
+<div class="row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>UR</th>
+        <th>DOB</th>
+      </tr>
+      </thead>
+      <tbody ng-controller="PtntInfoCtrl">
+
+      <tr ng-repeat="patient in patients">
+        <td>{{patient.name}}</td>
+        <td>{{patient.ur}}</td>
+        <td>{{patient.DOB}}</td>
+      </tr>
+      </tbody>
+
+  </div>
+</div>
 <body ng-controller="PtntInfoCtrl">
 <div ng-repeat="patient in patients">
   <p>
     {{patient.name}}
+    {{patient.ur}}
   </p>
+  <p>{{patient.DOB}}</p>
   </div>
 
 </body>
@@ -95,3 +118,10 @@
     Right bar
   </div>
 </div>
+
+<form class="form-inline" role="form">
+  <div class="form-group">
+    <label></i> Patient</label>
+    <input type="text" class="form-control" ng-model="selectedPatient.name" ng-options="patient for patient in patients" placeholder="Patient" bs-typeahead>
+  </div>
+  </div>
