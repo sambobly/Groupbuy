@@ -9,19 +9,104 @@
     Display appointment patient and time (next 3) here
   </div>
 </div>
-<% end %>
+
 <body ng-controller="ImageCtrl">
 
 <ul>
   <li ng-repeat="image in images">
-    <a href="#/consultations/show/" class="thumb"><img ng-src="{{image}}"></a>
+  <a href="#/consultations/show/{{image.id}}" class="thumb"><img ng-src="{{image}}"></a>
     <p>
      {{image.snippet}}
     </p>
   </li>
 </ul>
 
+<div class="row">
+  <li ng-repeat="image in images">
+  <div class="col-xs-10">
+    <a href="#/consultations/show/{{image.id}}" class="thumb"><img ng-src="{{image}}"></a>
+    </li>
+  </div>
+<div class="page-header">
+  <h1>Carousel</h1>
+</div>
+<div ng-controller="ImageCtrl">
+<div id="carousel-images" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-images" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-images" data-slide-to="1"></li>
+    <li data-target="#carousel-images" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <!-- Slide 1-->
+    <div class="carousel-inner">
+      <!-- Slide 1-->
+      <div class="item active">
+        <slide ng-repeat="image in images" active="image.active">
+          <img ng-src="{{image}}">
+        <div class="carousel-caption">
+          <h1>Slide 1</h1>
+          <p>Slide 1 Description</p>
+        </div>
+      </div>
 
+      <!-- Slide 2-->
+      <div class="item">
+        <slide ng-repeat="image in images" active="image.active">
+          <img ng-src="{{image}}">
+        <div class="carousel-caption">
+          <h1>Slide 2</h1>
+          <p>Slide 2 Description</p>
+        </div>
+      </div>
+
+  <span class="left carousel-control" data-target="#Carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+</span>
+<span class="right carousel-control" data-target="#Carousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+</span>
+        <div class="span6">
+          Interval, in milliseconds:
+          <input type="number" data-ng-model="myInterval">
+          <br />
+          Enter a negative number to stop the interval.
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>UR</th>
+        <th>DOB</th>
+      </tr>
+      </thead>
+      <tbody ng-controller="PtntInfoCtrl">
+
+      <tr ng-repeat="patient in patients">
+        <td>{{patient.name}}</td>
+        <td>{{patient.ur}}</td>
+        <td>{{patient.DOB}}</td>
+      </tr>
+      </tbody>
+
+  </div>
+</div>
+<body ng-controller="PtntInfoCtrl">
+<div ng-repeat="patient in patients">
+  <p>
+    {{patient.name}}
+    {{patient.ur}}
+  </p>
+  <p>{{patient.DOB}}</p>
+  </div>
+
+</body>
 <div class="row">
   <div class="3u">
     Side bar
@@ -33,3 +118,10 @@
     Right bar
   </div>
 </div>
+
+<form class="form-inline" role="form">
+  <div class="form-group">
+    <label></i> Patient</label>
+    <input type="text" class="form-control" ng-model="selectedPatient.name" ng-options="patient for patient in patients" placeholder="Patient" bs-typeahead>
+  </div>
+  </div>
