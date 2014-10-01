@@ -1,3 +1,8 @@
 { 
-  "images": [ "/assets/layout/pic01.jpg" ]
+  "images": [ 
+    "/assets/layout/pic01.jpg",
+    "/assets/layout/pic02.jpg",
+    "/assets/layout/pic03.jpg",
+    "/assets/layout/pic04.jpg" 
+  ]
 }

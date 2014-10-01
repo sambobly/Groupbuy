@@ -12,10 +12,9 @@
 <% end %>
 <body ng-controller="ImageCtrl">
 
-<img ng-src="{{mainImageUrl}}">
 <ul>
   <li ng-repeat="image in images">
-  <a href="#/consultations/show/{{image.id}}" class="thumb"><img ng-src="{{image.imageUrl}}"></a>
+    <a href="#/consultations/show/" class="thumb"><img ng-src="{{image}}"></a>
     <p>
      {{image.snippet}}
     </p>
