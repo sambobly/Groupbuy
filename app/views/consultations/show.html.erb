@@ -37,28 +37,19 @@
   </ol>
   <div class="carousel-inner">
       <!-- Slide 1-->
-      <div class="item active">
-          <img ng-src="/assets/layout/pic01.jpg"/>
+      <div ng-repeat="image in images" ng-class="{active: $index == 0}" class="item">
+        <img ng-src="{{image}}"/>
         <div class="carousel-caption">
-          <h1>Slide 1</h1>
-          <p>Slide 1 Description</p>
+          <h1>Slide {{image}}</h1>
+          <p>Description goes here!!</p>
         </div>
       </div>
-
-      <!-- Slide 2-->
-      <div class="item">
-          <img ng-src="/assets/layout/pic02.jpg"/>
-        <div class="carousel-caption">
-          <h1>Slide 2</h1>
-          <p>Slide 2 Description</p>
-        </div>
-      </div>
-    </div>
+  </div>
 
   <a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
 </a>
-  <a class="left carousel-control" href="#carousel-images" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
    <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
 </div>
