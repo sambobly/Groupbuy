@@ -16,5 +16,6 @@
  *= require jquery-theme/jquery-ui-1.10.3.custom
  *= require forms
  *= require consultations/consultations
+ *= require consultations/drawing
  *= require jquery.multiselect
  */

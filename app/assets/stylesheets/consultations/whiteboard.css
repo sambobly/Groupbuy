@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 5px;
+}
+
+#container {
+    padding: 5px;
+    width: 514px;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: rgb(67,142,185);
+}
+
+#canvas {
+    border-radius: 5px;
+}
+
+#tools {
+    padding: 5px;
+    border-top: 1px solid white;
+}
+
+#tools span {
+    margin-right: 10px;
+}
+
+#tools div {
+    float: right;
+}
+
+#drawOptions {
+    overflow: auto;
+    padding: 5px;
+}
+
+#colors {
+    float: left;
+    overflow: auto;
+    width: auto;
+    padding: 5px;
+}
+
+#colors img {
+    border-radius: 3px;
+}
+
+#colors > img:hover {
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    transform:scale(1.5);
+}
+
+#lineWidth {
+    width: 15%;
+    float: right;
+    text-align: center;
+}
+
+#lineWidth input {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#colorTarget {
+    float: left;
+    padding: 5px;
+}
+
+#colorTarget div {
+    width: 40px;
+    height: 20px;
+    float: left;
+    border-radius: 3px;
+}
+#colorTarget div:first-child {
+    margin-right: 5px;
+}
+
+#colorTarget span {
+    margin-left: 8px;
+}
+
+#colorTarget span span {
+    margin-left: 15px;
+}
+
+#fillOptions {
+    clear: both;
+    float: left;
+}
+
+#imageOptions {
+    clear: both;
+    float: left;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.blue {
+    background-color: #0000ff;
+}
+
+.skyblue {
+    background-color: #00ffff;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.green {
+    background-color: #00ff00;
+}
+
+.yellow {
+    background-color: #ffff00;
+}
+
+.pink {
+    background-color: #ff00ff;
+}
+
+.gray {
+    background-color: #888888;
+}

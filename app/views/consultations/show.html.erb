@@ -1,3 +1,5 @@
+
+<<% if false %>
 <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
   <div class="panel-heading">
     <h3 class="panel-title">Appointments</h3>
@@ -52,7 +54,7 @@
    <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
 </div>
-
+</body>
 <div class="row">
   <div class="col-md-6">
     <table class="table">
@@ -84,21 +86,23 @@
   </div>
 
 </body>
-<div class="row">
-  <div class="3u">
-    Side bar
-  </div>
-  <div class="6u">
-    hello
-  </div>
-  <div class="3u">
-    Right bar
-  </div>
-</div>
+
 
 <form class="form-inline" role="form">
   <div class="form-group">
     <label></i> Patient</label>
     <input type="text" class="form-control" ng-model="selectedPatient.name" ng-options="patient for patient in patients" placeholder="Patient" bs-typeahead>
   </div>
-  </div>
+<%end%>
+
+
+
+
+<div id="d">
+  <h1>Simple Canvas Drawing Directive in AngularJS</h1>
+  <p>click and drag to draw!</p>
+  <canvas width="500" height="300" id="canvas" drawing></canvas>
+
+
+</div>
+
