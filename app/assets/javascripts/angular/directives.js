@@ -1,11 +1,6 @@
-var opthoApp = angular.module('opthoApp', [
-'ngRoute',
-'ngResource',
-'opthoControllers',
- 'opthoDirectives'
-]);
+var opthoDirectives = angular.module('opthoDirectives', [])
 
-opthoApp.directive("drawing", function(){
+opthoDirectives.directive("drawing", function(){
     return {
         restrict: "A",
         link: function(scope, element){
@@ -74,13 +69,3 @@ opthoApp.directive("drawing", function(){
         }
     };
 });
-
-opthoApp.config(['$routeProvider',
-function($routeProvider) {
-    $routeProvider.when('/consultations/app/sampleimages.json', {
-        templateUrl: 'consultations/show',
-        controller: 'ImageCtrl'
-    }).otherwise({
-            redirectTo: '/images'
-        });
-}])
