@@ -18,3 +18,16 @@ opthoControllers.controller('PtntInfoCtrl', ['$scope', '$routeParams', '$http', 
         $scope.patients = data.patients;
     });
 }]);
+opthoControllers.controller('ConsultController', ['$scope', function($scope) {
+    $scope.master = {};
+
+    $scope.update = function(consult) {
+        $scope.master = angular.copy(consult);
+    };
+
+    $scope.reset = function() {
+        $scope.consult = angular.copy($scope.master);
+    };
+
+    $scope.reset();
+}]);

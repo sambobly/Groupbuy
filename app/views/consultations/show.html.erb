@@ -103,11 +103,19 @@
     </div>
 </div>
 
-<div id="d">
+<div class="drawing">
   <h1>Simple Canvas Drawing Directive in AngularJS</h1>
   <p>click and drag to draw!</p>
   <canvas width="500" height="300" id="canvas" drawing></canvas>
 
-  <p style="color:#9ac">by <a href="http://justgoscha.github.io">justGoscha</a></p>
 
+</div>
+
+<div ng-controller="ConsultController">
+  <form novalidate class="simple-form">
+    Consult information: <input type="text" ng-model="consult.entry" /><br />
+
+    <button ng-click="reset()">RESET</button>
+    <button ng-click="save(user)">SAVE</button>
+  </form>
 </div>

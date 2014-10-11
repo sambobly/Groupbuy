@@ -1,6 +1,6 @@
-var opthoDirectives = angular.module('opthoDirectives', [])
+var opthoDirectives = angular.module('opthoDirectives', []) ;
 
-opthoDirectives.directive("drawing", function(){
+opthoDirectives.directive('drawing', function(){
     return {
         restrict: "A",
         link: function(scope, element){

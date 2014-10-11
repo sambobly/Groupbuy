@@ -2,7 +2,7 @@ var opthoApp = angular.module('opthoApp', [
 'ngRoute',
 'ngResource',
 'opthoControllers',
- 'opthoDirectives'
+'opthoDirectives'
 ]);
 
 opthoApp.directive("drawing", function(){

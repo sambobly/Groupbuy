@@ -5,6 +5,6 @@
 # ============================
 
 angular.module('opthoApp', [
-  'ngRoute'
+  'ngRoute',
   ]);
 
