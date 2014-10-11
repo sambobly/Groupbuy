@@ -6,11 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412991246726" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412991304178" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -19,7 +20,7 @@
     <file path="/20131124091518_create_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386553836164" ignored="false" />
     <file path="/20131209022344_create_patients.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386555905621" ignored="false" />
     <file path="/show.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387440437705" ignored="false" />
-    <file path="/show.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412991128168" ignored="false" />
+    <file path="/show.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413000496575" ignored="false" />
     <file path="/patient.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386574847432" ignored="false" />
     <file path="/appointment.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397001385228" ignored="false" />
     <file path="/doctors_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389495428274" ignored="false" />
@@ -272,7 +273,7 @@
               <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="115" column="67" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.8614668">
+                    <state line="121" column="6" selection-start="3245" selection-end="3245" vertical-scroll-proportion="0.9604191">
                       <folding />
                     </state>
                   </provider>
@@ -1144,7 +1145,11 @@
       <created>1412991250750</created>
       <updated>1412991250750</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added form for consultinfo, need to make bigger entry">
+      <created>1412991306102</created>
+      <updated>1412991306102</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1233,7 +1238,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added form for consultinfo, need to make bigger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added form for consultinfo, need to make bigger entry" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1247,7 +1252,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Fixed autocomplete on doctor in appointment/new" />
     <MESSAGE value="Added start_time uniqueness validation to appointment.rb and error form to appointments\new.html.erb. Is not currently functioning" />
     <MESSAGE value="Added to appointments_controller findnextavailabledate" />
     <MESSAGE value="Added search form for doctors appointments" />
@@ -1272,6 +1276,7 @@
     <MESSAGE value="Reset changes to fix error" />
     <MESSAGE value="Still unable to get canvas working, however other errors fixed" />
     <MESSAGE value="Added form for consultinfo, need to make bigger" />
+    <MESSAGE value="Added form for consultinfo, need to make bigger entry" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1380,7 +1385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="67" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.8614668">
+        <state line="121" column="6" selection-start="3245" selection-end="3245" vertical-scroll-proportion="0.9604191">
           <folding />
         </state>
       </provider>
