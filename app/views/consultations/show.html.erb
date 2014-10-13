@@ -95,7 +95,10 @@
       Right bar
     </div>
   </div>
-
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a data-target="#consulttext" role="tab" data-toggle="tab">Text</a></li>
+    <li><a data-target="#drawing" role="tab" data-toggle="tab">Drawing</a></li>
+  </ul>
   <form class="form-inline" role="form">
     <div class="form-group">
       <label></i> Patient</label>
@@ -114,7 +117,7 @@
 <div ng-controller="ConsultController">
   <h2>My Note</h2>
 
-  <p><textarea ng-model="message" cols="40" rows="10"></textarea></p>
+  <p><textarea ng-model="consulttext" cols="40" rows="10"></textarea></p>
 
   <p>
     <button ng_click="save()">Save</button>

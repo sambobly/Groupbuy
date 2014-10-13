@@ -83,4 +83,5 @@ function($routeProvider) {
     }).otherwise({
             redirectTo: '/images'
         });
-}])
+}]);
+
