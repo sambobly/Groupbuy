@@ -6,15 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/samplepathology.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413428900256" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413430231877" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -286,7 +283,7 @@
               <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="55" column="0" selection-start="1737" selection-end="2319" vertical-scroll-proportion="-3.9230769">
+                    <state line="53" column="14" selection-start="727" selection-end="1735" vertical-scroll-proportion="-29.423077">
                       <folding />
                     </state>
                   </provider>
@@ -295,7 +292,7 @@
               <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="71" column="5" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.7511468">
+                    <state line="81" column="12" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.27706635">
                       <folding />
                     </state>
                   </provider>
@@ -1100,7 +1097,11 @@
       <created>1413428902462</created>
       <updated>1413428902462</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Added pathology bit, kind of working (css broken)">
+      <created>1413430234244</created>
+      <updated>1413430234244</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1189,7 +1190,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packery working!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pathology bit, kind of working (css broken)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1203,7 +1204,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Some of ransack done, minimal javascript" />
     <MESSAGE value="dayclick implementation beginning" />
     <MESSAGE value="Midway through dayclick" />
     <MESSAGE value="Dayclick save implemented. Where is it saving to?" />
@@ -1228,6 +1228,7 @@
     <MESSAGE value="Tabs in place, yet to function appropriately" />
     <MESSAGE value="Tabs functioning, trying to get into packery" />
     <MESSAGE value="Packery working!" />
+    <MESSAGE value="Added pathology bit, kind of working (css broken)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1335,14 +1336,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1737" selection-end="2319" vertical-scroll-proportion="-3.9230769">
+        <state line="53" column="14" selection-start="727" selection-end="1735" vertical-scroll-proportion="-29.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="5" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.7511468">
+        <state line="81" column="12" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.27706635">
           <folding />
         </state>
       </provider>

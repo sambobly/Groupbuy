@@ -32,7 +32,10 @@
         <div class="tab-pane fade" id="consultDrawing">
           <canvas width="500" height="300" id="canvas" drawing></canvas>
         </div>
-
+        <p>
+          <button ng_click="save()">Save</button>
+          <button ng-click="clear()">Clear</button>
+        </p>
       </div>
   </div>
   
@@ -74,7 +77,32 @@
       <h3 class="panel-title">Other stuff</h3>
     </div>
     <div class="panel-body">
-      <span class="lead">These could be tabbable!</span>
+      <div class="page-header">
+        <h1>Carousel</h1>
+      </div>
+      <div ng-controller="ImageCtrl">
+        <div id="carousel-images" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-images" ng-repeat="image in images" data-slide-to="{{$index}}" ng-class="{active: $index == 0}"></li>
+          </ol>
+          <div class="carousel-inner">
+            <!-- Slide 1-->
+            <div ng-repeat="image in images" ng-class="{active: $index == 0}" class="item">
+              <img ng-src="{{image}}"/>
+              <div class="carousel-caption">
+                <h1>Slide {{image}}</h1>
+                <p>Description goes here!!</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#carousel-images" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-images" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
     </div>
   </div>
   
