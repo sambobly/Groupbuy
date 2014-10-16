@@ -17,8 +17,23 @@
       <h3 class="panel-title">Consultation notes</h3>
     </div>
     <div class="panel-body">
-      <span class="lead">Big area for consult notes. I think this screen should scroll horizontally instead of vertically. Need to hook up angular too</span>
-    </div>
+      <ul id="consultTab" class="nav nav-tabs">
+        <li class="active">
+          <a href="#home" data-toggle="tab">
+            Consult Text
+          </a>
+        </li>
+        <li><a href="#consultDrawing" data-toggle="tab">iOS</a></li>
+      </ul>
+      <div id="consultTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+          <p> <textarea ng-model="consulttext" cols="40" rows="10"></textarea></p>
+        </div>
+        <div class="tab-pane fade" id="consultDrawing">
+          <canvas width="500" height="300" id="canvas" drawing></canvas>
+        </div>
+
+      </div>
   </div>
   
   <!-- appointments panel -->

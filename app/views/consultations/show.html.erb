@@ -105,7 +105,7 @@
       <input type="text" class="form-control" ng-model="selectedPatient.name" ng-options="patient for patient in patients" placeholder="Patient" bs-typeahead>
     </div>
 </div>
-
+<% if false %>
 <div class="drawing">
   <h1>Simple Canvas Drawing Directive in AngularJS</h1>
   <p>click and drag to draw!</p>
@@ -118,7 +118,7 @@
   <h2>My Note</h2>
 
   <p><textarea ng-model="consulttext" cols="40" rows="10"></textarea></p>
-
+<% end %>
   <p>
     <button ng_click="save()">Save</button>
     <button ng-click="clear()">Clear</button>
