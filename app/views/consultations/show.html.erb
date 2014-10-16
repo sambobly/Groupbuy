@@ -59,6 +59,32 @@
         <thead>
         <tr>
           <th>Name</th>
+          <th>Hb</th>
+          <th>K+</th>
+          <th>Na+</th>
+          <th>Cl-</th>
+        </tr>
+        </thead>
+        <tbody ng-controller="PathologyController">
+
+        <tr ng-repeat="pathology in pathology">
+          <td>{{pathology.name}}</td>
+          <td>{{pathology.Hb}}</td>
+          <td>{{pathology.K}}</td>
+          <td>{{pathology.Na}}</td>
+          <td>{{pathology.Cl}}</td>
+        </tr>
+        </tbody>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
           <th>UR</th>
           <th>DOB</th>
         </tr>

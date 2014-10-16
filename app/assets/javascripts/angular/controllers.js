@@ -18,6 +18,11 @@ opthoControllers.controller('PtntInfoCtrl', ['$scope', '$routeParams', '$http', 
         $scope.patients = data.patients;
     });
 }]);
+opthoControllers.controller('PathologyController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $http.get('/assets/samplepathology.json').success(function(data) {
+        $scope.pathology = data.pathology;
+    });
+}]);
 opthoControllers.controller('ConsultController', ['$scope', function($scope) {
     $scope.master = {};
 
