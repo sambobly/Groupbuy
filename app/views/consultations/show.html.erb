@@ -1,3 +1,34 @@
+<body ng-controller="PtntInfoCtrl">
+<table>
+  <tr>
+    <td align="right">Search :</td>
+    <td><input ng-model="query[queryBy]" /></td>
+  </tr>
+  <tr>
+    <td align="right">Search By :</td>
+    <td>
+      <select ng-model="queryBy">
+        <option value="$"></option>
+        <option value="name">NAME</option>
+        <option value="UR">UR</option>
+      </select>
+    </td>
+  </tr>
+</table>
+<hr>
+<div>
+  <table>
+    <tr>
+      <th>Patient Name</th>
+      <th>UR Number</th>
+    </tr>
+    <tr ng-repeat="patient in patients | filter:query">
+      <td>{{patient.name}}</td>
+      <td>{{patient.ur}}</td>
+    </tr>
+  </table>
+</div>
+</body>
 <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
   <div class="panel-heading">
     <h3 class="panel-title">Appointments</h3>
@@ -100,6 +131,7 @@
 
     </div>
   </div>
+
   <body ng-controller="PtntInfoCtrl">
   <div ng-repeat="patient in patients">
     <p>

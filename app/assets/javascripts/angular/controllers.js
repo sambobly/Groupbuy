@@ -14,6 +14,8 @@ opthoControllers.controller('ImageCtrl', ['$scope', '$routeParams', '$http', fun
     });
 }]);
 opthoControllers.controller('PtntInfoCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $scope.query = {}
+    $scope.queryBy = '$'
     $http.get('/assets/samplepatients.json').success(function(data) {
         $scope.patients = data.patients;
     });

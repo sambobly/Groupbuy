@@ -6,7 +6,37 @@
       <h3 class="panel-title">Patient info</h3>
     </div>
     <div class="panel-body">
-      <span class="lead">Key patient info goes here in one sentence</span>
+      <body ng-controller="PtntInfoCtrl">
+      <table>
+        <tr>
+          <td align="right">Search :</td>
+          <td><input ng-model="query[queryBy]" /></td>
+        </tr>
+        <tr>
+          <td align="right">Search By :</td>
+          <td>
+            <select ng-model="queryBy">
+              <option value="$"></option>
+              <option value="name">NAME</option>
+              <option value="UR">UR</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <div>
+        <table>
+          <tr>
+            <th>Patient Name</th>
+            <th>UR Number</th>
+          </tr>
+          <tr ng-repeat="patient in patients | filter:query">
+            <td>{{patient.name}}</td>
+            <td>{{patient.ur}}</td>
+          </tr>
+        </table>
+      </div>
+      </body>
     </div>
   </div>
   
@@ -23,7 +53,7 @@
             Consult Text
           </a>
         </li>
-        <li><a href="#consultDrawing" data-toggle="tab">iOS</a></li>
+        <li><a href="#consultDrawing" data-toggle="tab">drawing</a></li>
       </ul>
       <div id="consultTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="home">
@@ -72,11 +102,10 @@
   </div>
   
   <!-- other stuff panel -->
-  <div class="panel panel-success consult">
+  <div class="panel panel-image consult">
     <div class="panel-heading">
       <h3 class="panel-title">Other stuff</h3>
     </div>
-    <div class="panel-body">
       <div class="page-header">
         <h1>Carousel</h1>
       </div>
@@ -103,13 +132,12 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
-    </div>
   </div>
   
   <!-- important stuff panel -->
   <div class="panel panel-danger consult">
     <div class="panel-heading">
-      <h3 class="panel-title">Important stuff</h3>
+      <h3 class="panel-title">Search patient</h3>
     </div>
     <div class="panel-body">
       <span class="lead">These could be tabbable!</span>
