@@ -199,3 +199,29 @@
   </div>
 
 </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>lastscript</th>
+        <th>nextscript</th>
+        <th>tablets</th>
+        <th>dose</th>
+      </tr>
+      </thead>
+      <tbody ng-controller="MedicationController">
+
+      <tr ng-repeat="medication in medications">
+        <td>{{medication.name}}</td>
+        <td>{{medication.lastscript}}</td>
+        <td>{{medication.nextscript}}</td>
+        <td>{{medication.tablets}}</td>
+        <td>{{medication.dose}}</td>
+      </tr>
+      </tbody>
+
+  </div>
+</div>

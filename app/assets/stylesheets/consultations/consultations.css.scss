@@ -7,12 +7,14 @@
 /* =================== */
 
 .consult.panel {
-  width: 30%;
+  width: 100%;
   min-height: 200px;
+
 }
 
-#notes.consult.panel {
+#notes {
   width: 60%;
+  opacity: 0.9;
 }
 
 body.consultations {
@@ -20,6 +22,14 @@ body.consultations {
   opacity: 0.9
 }
 
-#image.consult.panel {
+#images {
 
+}
+
+#testresults {
+ width: 50%;
+}
+
+#patientinfo {
+  width: 60%
 }

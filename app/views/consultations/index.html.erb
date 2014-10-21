@@ -1,7 +1,7 @@
 <div id="container">
   
   <!-- appointments panel -->
-  <div class="panel panel-default consult" id="background">
+  <div class="panel panel-default consult" id="patientinfo">
     <div class="panel-heading">
       <h3 class="panel-title">Patient info</h3>
     </div>
@@ -70,12 +70,11 @@
   </div>
   
   <!-- appointments panel -->
-  <div class="panel panel-info consult">
+  <div class="panel panel-info consult" id = "testresults">
     <div class="panel-heading">
       <h3 class="panel-title">Recent test results</h3>
     </div>
-    <div class="row">
-      <div class="col-md-6">
+
         <table class="table">
           <thead>
           <tr>
@@ -97,17 +96,16 @@
           </tr>
           </tbody>
 
-      </div>
-    </div>
+
   </div>
   
   <!-- other stuff panel -->
-  <div class="panel panel-image consult">
-    <div class="panel-heading">
+  <div class="panel panel-image consult" id="images">
+    <div class="panel-heading" >
       <h3 class="panel-title">Other stuff</h3>
     </div>
       <div class="page-header">
-        <h1>Carousel</h1>
+        <h1>Images</h1>
       </div>
       <div ng-controller="ImageCtrl">
         <div id="carousel-images" class="carousel slide" data-ride="carousel">
@@ -155,4 +153,30 @@
     </div>
      </div>
 
-1
+    <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
+      <div class="panel-heading">
+        <h3 class="panel-title">Medications</h3>
+      </div>
+
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>lastscript</th>
+              <th>nextscript</th>
+              <th>tablets</th>
+              <th>dose</th>
+            </tr>
+            </thead>
+            <tbody ng-controller="MedicationController">
+
+            <tr ng-repeat="medication in medications">
+              <td>{{medication.name}}</td>
+              <td>{{medication.lastscript}}</td>
+              <td>{{medication.nextscript}}</td>
+              <td>{{medication.tablets}}</td>
+              <td>{{medication.dose}}</td>
+            </tr>
+            </tbody>
+    </div>
