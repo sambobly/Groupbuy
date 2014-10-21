@@ -6,16 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/samplemedications.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413900306745" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413903224433" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -24,7 +21,7 @@
     <file path="/20131124091518_create_appointments.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386553836164" ignored="false" />
     <file path="/20131209022344_create_patients.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386555905621" ignored="false" />
     <file path="/show.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387440437705" ignored="false" />
-    <file path="/show.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902164426" ignored="false" />
+    <file path="/show.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413903743661" ignored="false" />
     <file path="/patient.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386574847432" ignored="false" />
     <file path="/appointment.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397001385228" ignored="false" />
     <file path="/doctors_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389495428274" ignored="false" />
@@ -38,7 +35,7 @@
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
     <file path="/appointments_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410167014358" ignored="false" />
     <file path="/week.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386669188074" ignored="false" />
-    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413901482161" ignored="false" />
+    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413904173133" ignored="false" />
     <file path="/application.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391580469396" ignored="false" />
     <file path="/application.css" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412570333957" ignored="false" />
     <file path="/find.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408849516224" ignored="false" />
@@ -82,7 +79,7 @@
     <file path="/drawing.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412685034237" ignored="false" />
     <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412989815652" ignored="false" />
     <file path="/samplepathology.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413429284085" ignored="false" />
-    <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413900675217" ignored="false" />
+    <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413904823435" ignored="false" />
     <file path="/samplemedications.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902604632" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,19 +198,19 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="44" column="4" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.8873072">
+                    <state line="44" column="4" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="consultations.css.scss" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="consultations.css.scss" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="33" column="12" selection-start="496" selection-end="496" vertical-scroll-proportion="-22.44">
+                    <state line="26" column="17" selection-start="527" selection-end="527" vertical-scroll-proportion="0.5403423">
                       <folding />
                     </state>
                   </provider>
@@ -267,115 +264,98 @@
             </leaf>
           </split-first>
           <split-second>
-            <splitter split-orientation="horizontal" split-proportion="0.5">
-              <split-first>
-                <leaf>
-                  <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="202" column="0" selection-start="5274" selection-end="5864" vertical-scroll-proportion="-5.117647">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="samplemedications.json" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="6" column="3" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.9230769">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="samplepatients.json" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="180" column="20" selection-start="5656" selection-end="5656" vertical-scroll-proportion="0.9118028">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="sampleimages.json" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/assets/images/sampleimages.json">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="49" column="4" selection-start="1967" selection-end="2517" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="appointment.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="16" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-first>
-              <split-second>
-                <leaf>
-                  <file leaf-file-name="samplemedications.json" pinned="false" current="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="9" column="2" selection-start="206" selection-end="206" vertical-scroll-proportion="0.17133258">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-second>
-            </splitter>
+            <leaf>
+              <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="211" column="16" selection-start="5487" selection-end="5487" vertical-scroll-proportion="-9.3529415">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="samplemedications.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="6" column="3" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.9230769">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="72" column="59" selection-start="2153" selection-end="2153" vertical-scroll-proportion="0.9592326">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="sampleimages.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/images/sampleimages.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="-1.3076923">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="49" column="4" selection-start="1967" selection-end="2517" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="appointment.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="16" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="samplepatients.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
           </split-second>
         </splitter>
       </split-second>
@@ -408,11 +388,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
         <option value="$PROJECT_DIR$/app/assets/images/samplepathology.json" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" />
         <option value="$PROJECT_DIR$/app/assets/images/samplemedications.json" />
         <option value="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" />
       </list>
     </option>
   </component>
@@ -1124,7 +1104,11 @@
       <created>1413772197521</created>
       <updated>1413772197521</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Added filter to patient search, still broken CSS">
+      <created>1413903227776</created>
+      <updated>1413903227776</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1151,6 +1135,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1165,7 +1150,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1280,6 +1264,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepathology.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1303,7 +1315,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/sampleimages.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="0.0">
+        <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="-1.3076923">
           <folding />
         </state>
       </provider>
@@ -1322,51 +1334,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="496" selection-end="496" vertical-scroll-proportion="-22.44">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepathology.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="4" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.8873072">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="0" selection-start="5274" selection-end="5864" vertical-scroll-proportion="-5.117647">
+        <state line="211" column="16" selection-start="5487" selection-end="5487" vertical-scroll-proportion="-9.3529415">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="20" selection-start="5656" selection-end="5656" vertical-scroll-proportion="0.9118028">
+        <state line="72" column="59" selection-start="2153" selection-end="2153" vertical-scroll-proportion="0.9592326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="527" selection-end="527" vertical-scroll-proportion="0.5403423">
           <folding />
         </state>
       </provider>

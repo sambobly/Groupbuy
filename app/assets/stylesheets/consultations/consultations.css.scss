@@ -14,16 +14,23 @@
 
 #notes {
   width: 60%;
-  opacity: 0.9;
+  textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  };
+  canvas {
+    opacity: 0.1;
+  }
 }
 
 body.consultations {
   padding-top: 110px;
   opacity: 0.9
-}
-
-#images {
-
 }
 
 #testresults {
