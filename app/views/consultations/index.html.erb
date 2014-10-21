@@ -68,13 +68,13 @@
         </p>
       </div>
   </div>
+    </div>
   
   <!-- appointments panel -->
   <div class="panel panel-info consult" id = "testresults">
     <div class="panel-heading">
       <h3 class="panel-title">Recent test results</h3>
     </div>
-
         <table class="table">
           <thead>
           <tr>
@@ -97,7 +97,6 @@
           </tbody>
 
 
-  </div>
   
   <!-- other stuff panel -->
   <div class="panel panel-image consult" id="images">
@@ -130,62 +129,57 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
-  </div>
+
   
   <!-- important stuff panel -->
-  <div class="panel panel-danger consult">
-    <div class="panel-heading">
-      <h3 class="panel-title">Search patient</h3>
-    </div>
+  <div class="panel panel-danger patient">
     <div class="panel-body">
-      <span class="lead">These could be tabbable!</span>
-    </div>
+      <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
+        <div class="panel-heading">
+          <h3 class="panel-title">Appointments</h3>
+        </div>
+
+        <div ng-repeat="appointment in appointments">
+          {{appointment.id}}
+          Display appointment patient and time (next 3) here
+        </div>
+      </div>
+
   </div>
+    </div>
   <!-- test for next 3 appointments panel -->
-  <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
+
+  <div class="panel panel-info consult" id="background">
     <div class="panel-heading">
-      <h3 class="panel-title">Appointments</h3>
+      <h3 class="panel-title">Medications</h3>
     </div>
 
-    <div ng-repeat="appointment in appointments">
-      {{appointment.id}}
-      Display appointment patient and time (next 3) here
-    </div>
-     </div>
 
-    <div class="panel panel-info consult" id="background">
-      <div class="panel-heading">
-        <h3 class="panel-title">Medications</h3>
-      </div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>lastscript</th>
+        <th>nextscript</th>
+        <th>tablets</th>
+        <th>dose</th>
+      </tr>
+      </thead>
+      <tbody ng-controller="MedicationController">
 
-
-          <table class="table">
-            <thead>
-            <tr>
-              <th>Name</th>
-              <th>lastscript</th>
-              <th>nextscript</th>
-              <th>tablets</th>
-              <th>dose</th>
-            </tr>
-            </thead>
-            <tbody ng-controller="MedicationController">
-
-            <tr ng-repeat="medication in medications">
-              <td>{{medication.name}}</td>
-              <td>{{medication.lastscript}}</td>
-              <td>{{medication.nextscript}}</td>
-              <td>{{medication.tablets}}</td>
-              <td>{{medication.dose}}</td>
-            </tr>
-            </tbody>
-    </div>
-    <div class="panel panel-info consult" id="background">
-      <div class="panel-heading">
-        <h3 class="panel-title">Medications</h3>
-      </div>
+      <tr ng-repeat="medication in medications">
+        <td>{{medication.name}}</td>
+        <td>{{medication.lastscript}}</td>
+        <td>{{medication.nextscript}}</td>
+        <td>{{medication.tablets}}</td>
+        <td>{{medication.dose}}</td>
+      </tr>
+      </tbody>
+        </table>
+  </div>
 
 
+<% if false %>
       <table class="table">
         <thead>
         <tr>
@@ -200,4 +194,5 @@
           <td>{{Appointment.date}}</td>
         </tr>
         </tbody>
-    </div>
+<% end %>
+</div>
