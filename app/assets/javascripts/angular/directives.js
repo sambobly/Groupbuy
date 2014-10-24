@@ -4,7 +4,7 @@ opthoDirectives.directive("myWidget", function() {
     var linkFunction = function(scope, element, attributes) {
         var paragraph = element.children()[0];
         $(paragraph).on("click", function() {
-            $(this).css({ "background-color": "red" });
+            $(this).css({ "min-height": "400px" });
         });
     };
 
@@ -16,7 +16,7 @@ opthoDirectives.directive("myWidget", function() {
 
 opthoDirectives.directive('drawing', function(){
     return {
-        restrict: "A",
+        restrict: "A, E",
         link: function(scope, element){
             var ctx = element[0].getContext('2d');
 
