@@ -1,6 +1,6 @@
 var opthoDirectives = angular.module('opthoDirectives', []) ;
 
-opthoDirectives.directive("myWidget", function() {
+opthoDirectives.directive("myResize", function() {
     var linkFunction = function(scope, element, attributes) {
         var paragraph = element.children()[0];
         $(paragraph).on("click", function() {
