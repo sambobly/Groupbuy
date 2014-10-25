@@ -42,6 +42,7 @@
   
   
   <!-- appointments panel -->
+  <div my-widget>
   <div class="panel panel-primary consult" id="notes">
     <div class="panel-heading">
       <h3 class="panel-title">Consultation notes</h3>
@@ -57,7 +58,7 @@
       </ul>
       <div id="consultTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="home">
-          <p> <textarea ng-model="consulttext" cols="40" rows="10"></textarea></p>
+          <p> <textarea ng-model="consulttext" cols="50" rows="10"></textarea></p>
         </div>
         <div class="tab-pane fade" id="consultDrawing">
           <canvas width="500" height="300" id="canvas" drawing></canvas>
@@ -68,6 +69,7 @@
         </p>
       </div>
   </div>
+    </div>
     </div>
   
   <!-- appointments panel -->
@@ -99,6 +101,7 @@
 
   
   <!-- other stuff panel -->
+          <div my-widget>
   <div class="panel panel-image consult" id="images">
     <div class="panel-heading" >
       <h3 class="panel-title">Other stuff</h3>
@@ -129,7 +132,7 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
-
+       </div>
   
   <!-- important stuff panel -->
   <div class="panel panel-danger patient">

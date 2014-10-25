@@ -22,6 +22,9 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   };
   canvas {
     opacity: 0.1;
@@ -39,4 +42,9 @@ body.consultations {
 
 #patientinfo {
   width: 60%
+}
+
+#images {
+  width: 40%;
+  min-height: 100px;
 }

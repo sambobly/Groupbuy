@@ -4,7 +4,8 @@ opthoDirectives.directive("myWidget", function() {
     var linkFunction = function(scope, element, attributes) {
         var paragraph = element.children()[0];
         $(paragraph).on("click", function() {
-            $(this).css({ "min-height": "400px" });
+            $(this).css({ "min-height": "800px",
+            "width": "1000"});
         });
     };
 
