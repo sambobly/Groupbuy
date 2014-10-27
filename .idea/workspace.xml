@@ -7,12 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414203573246" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414360595374" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -77,7 +76,7 @@
     <file path="/samplepatients.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412118496054" ignored="false" />
     <file path="/whiteboardRenderFactory.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412211116205" ignored="false" />
     <file path="/drawing.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412685034237" ignored="false" />
-    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414204713358" ignored="false" />
+    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414378912207" ignored="false" />
     <file path="/samplepathology.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413429284085" ignored="false" />
     <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414203514920" ignored="false" />
     <file path="/samplemedications.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902604632" ignored="false" />
@@ -105,7 +104,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="87" column="0" selection-start="2590" selection-end="2590" vertical-scroll-proportion="0.86178863">
+                <state line="87" column="0" selection-start="2590" selection-end="2590" vertical-scroll-proportion="1.5048543">
                   <folding />
                 </state>
               </provider>
@@ -186,7 +185,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.34805346">
+        <splitter split-orientation="horizontal" split-proportion="0.65363634">
           <split-first>
             <leaf>
               <file leaf-file-name="drawing.css" pinned="false" current="false" current-in-tab="false">
@@ -228,7 +227,7 @@
               <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="10" column="55" selection-start="368" selection-end="368" vertical-scroll-proportion="0.2035928">
+                    <state line="14" column="43" selection-start="567" selection-end="567" vertical-scroll-proportion="0.4257603">
                       <folding />
                     </state>
                   </provider>
@@ -264,13 +263,13 @@
             </leaf>
           </split-first>
           <split-second>
-            <splitter split-orientation="horizontal" split-proportion="0.31210762">
+            <splitter split-orientation="horizontal" split-proportion="0.73163843">
               <split-first>
                 <leaf>
                   <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="96" column="72" selection-start="2562" selection-end="2586" vertical-scroll-proportion="0.5987097">
+                        <state line="96" column="72" selection-start="2562" selection-end="2586" vertical-scroll-proportion="0.041769043">
                           <folding />
                         </state>
                       </provider>
@@ -355,7 +354,7 @@
                   <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="44" column="16" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.33293125">
+                        <state line="44" column="16" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.03219697">
                           <folding />
                         </state>
                       </provider>
@@ -399,16 +398,15 @@
         <option value="$PROJECT_DIR$/app/assets/images/samplemedications.json" />
         <option value="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" />
         <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-15" />
+    <option name="width" value="1080" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1019,7 +1017,11 @@
       <created>1414203576737</created>
       <updated>1414203576737</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="On click increase size now works on both text and images divs, need to code the downclick">
+      <created>1414205000935</created>
+      <updated>1414205000935</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1043,10 +1045,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-15" y="0" width="1080" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1054,13 +1055,14 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28802082" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6719577" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33369213" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1154,6 +1156,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application_bootstrap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1168,9 +1184,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplemedications.json">
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+        <state line="96" column="72" selection-start="2562" selection-end="2586" vertical-scroll-proportion="0.041769043">
           <folding />
         </state>
       </provider>
@@ -1196,16 +1212,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/sampleimages.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1967" selection-end="2517" vertical-scroll-proportion="0.0">
+        <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/sampleimages.json">
+    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="0" selection-end="150" vertical-scroll-proportion="0.0">
+        <state line="49" column="4" selection-start="1967" selection-end="2517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1224,9 +1240,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/rubymine.jar!/resources/html5-schema/web-forms.rnc">
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="347" column="16" selection-start="7705" selection-end="7705" vertical-scroll-proportion="0.33295324">
+        <state line="160" column="24" selection-start="4940" selection-end="4940" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1238,30 +1261,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="72" selection-start="2562" selection-end="2586" vertical-scroll-proportion="0.5987097">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="19" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="24" selection-start="4940" selection-end="4940" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="55" selection-start="368" selection-end="368" vertical-scroll-proportion="0.2035928">
+        <state line="14" column="43" selection-start="567" selection-end="567" vertical-scroll-proportion="0.4257603">
           <folding />
         </state>
       </provider>

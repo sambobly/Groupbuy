@@ -1,17 +1,28 @@
 var opthoDirectives = angular.module('opthoDirectives', []) ;
 
 opthoDirectives.directive("myResize", function() {
-    var linkFunction = function(scope, element, attributes) {
-        var paragraph = element.children()[0];
-        $(paragraph).on("click", function() {
-            $(this).css({ "min-height": "800px",
-            "width": "1000"});
-        });
-    };
-
     return {
         restrict: "E, A",
-        link: linkFunction
+        scope: {myResize: '=',
+        width: '='},
+        link: function(scope, element, attributes) {
+            element.val(scope.myResize);
+            element.data('old-value', scope.myResize);
+            var resizeValue = element.children()[0];
+
+            scope.$watch('myResize', function(newval, oldval, scope) {
+                element.val(scope.myResize);
+                if (element.data('old-value') == element.val()) {
+                    $(resizeValue).on("click", function() {
+                        $(this).css({ "min-height": "4px",
+                            "width": "10000"});
+                    })}
+                else {
+                    $(resizeValue).on("click", function() {
+                        $(this).css({ "min-height": "800px",
+                            "width": "1"});
+                    })}});
+        }
     };
 });
 
