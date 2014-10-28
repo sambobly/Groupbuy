@@ -4,14 +4,14 @@ opthoDirectives.directive("myResize", function() {
     return {
         restrict: "E, A",
         scope: {myResize: '=',
-        width: '='},
+        notes: '='},
         link: function(scope, element, attributes) {
-            element.val(scope.myResize);
-            element.data('old-value', scope.myResize);
+            element.val(scope.notes);
+            element.data('old-value', scope.notes);
             var resizeValue = element.children()[0];
 
-            scope.$watch('myResize', function(newval, oldval, scope) {
-                element.val(scope.myResize);
+            scope.$watch('notes', function(newval, oldval, scope) {
+                element.val(scope.notes);
                 if (element.data('old-value') == element.val()) {
                     $(resizeValue).on("click", function() {
                         $(this).css({ "min-height": "4px",
@@ -20,7 +20,7 @@ opthoDirectives.directive("myResize", function() {
                 else {
                     $(resizeValue).on("click", function() {
                         $(this).css({ "min-height": "800px",
-                            "width": "1"});
+                            "width": "1000"});
                     })}});
         }
     };
@@ -93,5 +93,20 @@ opthoDirectives.directive('drawing', function(){
                 ctx.stroke();
             }
         }
+    };
+});
+opthoDirectives.directive("myDownsize", function() {
+    return {
+        restrict: "E, A",
+        scope: {value: "=myDownsize",
+            },
+        template: '<button ng-click="click()">Downsize</button>',
+       link: function(scope, element, attributes) {
+            scope.click = function(){
+                $(this).css({ "min-height": "800px",
+                    "width": "10"});
+            }
+        }
+
     };
 });
