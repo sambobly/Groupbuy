@@ -26,6 +26,23 @@ opthoDirectives.directive("myResize", function() {
     };
 });
 
+opthoDirectives.directive("myCutsize", function() {
+    return {
+        restrict: "E, A",
+        scope: {myCutsize: '=',
+            notes: '='},
+        link: function(scope, element, attributes) {
+            var cutsizeValue = element.children()[0];
+{
+                    $(cutsizeValue).on("dblclick", function() {
+                        $(this).css({ "min-height": "800px",
+                            "width": "1"});
+                     })};
+        }
+    };
+});
+
+
 opthoDirectives.directive('drawing', function(){
     return {
         restrict: "A, E",
@@ -100,7 +117,7 @@ opthoDirectives.directive("myDownsize", function() {
         var paragraph = element.children()[0];
         $(paragraph).on("click", function() {
             $(this).css({ "min-height": "800px",
-                "width": "1000"});
+                "width": "1 "});
         });
     };
     return {
