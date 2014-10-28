@@ -6,22 +6,14 @@ opthoDirectives.directive("myResize", function() {
         scope: {myResize: '=',
         notes: '='},
         link: function(scope, element, attributes) {
-            element.val(scope.notes);
-            element.data('old-value', scope.notes);
-            var resizeValue = element.children()[0];
 
-            scope.$watch('notes', function(newval, oldval, scope) {
-                element.val(scope.notes);
-                if (element.data('old-value') == element.val()) {
-                    $(resizeValue).on("click", function() {
-                        $(this).css({ "min-height": "4px",
-                            "width": "10000"});
-                    })}
-                else {
+            var resizeValue = element.find('#notes', '#images'); {
+
+
                     $(resizeValue).on("click", function() {
                         $(this).css({ "min-height": "800px",
                             "width": "1000"});
-                    })}});
+                    })};
         }
     };
 });
