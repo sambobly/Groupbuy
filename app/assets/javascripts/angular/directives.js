@@ -96,17 +96,18 @@ opthoDirectives.directive('drawing', function(){
     };
 });
 opthoDirectives.directive("myDownsize", function() {
+    var linkFunction = function(scope, element, attributes) {
+        var paragraph = element.children()[0];
+        $(paragraph).on("click", function() {
+            $(this).css({ "min-height": "800px",
+                "width": "1000"});
+        });
+    };
     return {
         restrict: "E, A",
         scope: {value: "=myDownsize",
             },
         template: '<button ng-click="click()">Downsize</button>',
-       link: function(scope, element, attributes) {
-            scope.click = function(){
-                $(this).css({ "min-height": "800px",
-                    "width": "10"});
-            }
-        }
-
+       link: linkFunction
     };
 });
