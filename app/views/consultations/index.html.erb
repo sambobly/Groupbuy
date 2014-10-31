@@ -75,36 +75,11 @@
     </div>
     </div>
   
-  <!-- appointments panel -->
-  <div class="panel panel-info consult" id = "testresults">
-    <div class="panel-heading">
-      <h3 class="panel-title">Recent test results</h3>
-    </div>
-        <table class="table">
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Hb</th>
-            <th>K+</th>
-            <th>Na+</th>
-            <th>Cl-</th>
-          </tr>
-          </thead>
-          <tbody ng-controller="PathologyController">
-
-          <tr ng-repeat="pathology in pathology">
-            <td>{{pathology.name}}</td>
-            <td>{{pathology.Hb}}</td>
-            <td>{{pathology.K}}</td>
-            <td>{{pathology.Na}}</td>
-            <td>{{pathology.Cl}}</td>
-          </tr>
-          </tbody>
-
 
   
   <!-- other stuff panel -->
           <div my-resize>
+            <div my-cutsize>
   <div class="panel panel-image consult" id="images">
     <div class="panel-heading" >
       <h3 class="panel-title">Other stuff</h3>
@@ -136,7 +111,7 @@
           </a>
         </div>
        </div>
-  
+  </div>
   <!-- important stuff panel -->
   <div class="panel panel-danger patient">
     <div class="panel-body">
@@ -155,37 +130,104 @@
     </div>
   <!-- test for next 3 appointments panel -->
 
-  <div class="panel panel-info consult" id="background">
-    <div class="panel-heading">
-      <h3 class="panel-title">Medications</h3>
+
+    <!-- appointments panel -->
+    <div class="panel panel-info consult" id = "testresults">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent test results</h3>
+      </div>
+      <table class="table" ng-controller="PathologyController">
+        <thead>
+        <tr>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Hb</th>
+          <th>WCC</th>
+        </tr>
+        </thead>
+        <tbody ng-controller="PathologyController">
+        <tr ng-repeat="pathology in pathology | filter:query">
+          <td>{{pathology.name}}</td>
+          <td>{{pathology.date}}</td>
+          <td>{{pathology.Hb}}</td>
+          <td>{{pathology.WCC}}</td>
+        </tr>
+        <tr>
+          <td align="right">Search :</td>
+          <td><input ng-model="query[queryBy]" /></td>
+        </tr>
+        <tr>
+          <td align="right">Search By :</td>
+          <td>
+            <select ng-model="queryBy">
+              <option value="$"></option>
+              <option value="name">Type</option>
+            </select>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
 
 
-    <table class="table ">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>lastscript</th>
-        <th>nextscript</th>
-        <th>tablets</th>
-        <th>dose</th>
-      </tr>
-      </thead>
-      <tbody ng-controller="MedicationController">
+   <div class="panel panel-info medications" id="Medications">
+     <div class="panel-heading">
+      <h3 class="panel-title">Medications</h3>
+    </div>
+     <div>
+       <table class="table">
+         <thead>
+         <tr>
+           <th>Name</th>
+           <th>lastscript</th>
+           <th>nextscript</th>
+           <th>tablets</th>
+           <th>dose</th>
+         </tr>
+         </thead>
+         <tbody ng-controller="MedicationController">
 
-      <tr ng-repeat="medication in medications">
-        <td>{{medication.name}}</td>
-        <td>{{medication.lastscript}}</td>
-        <td>{{medication.nextscript}}</td>
-        <td>{{medication.tablets}}</td>
-        <td>{{medication.dose}}</td>
-      </tr>
-      </tbody>
-        </table>
+         <tr ng-repeat="medication in medications">
+           <td>{{medication.name}}</td>
+           <td>{{medication.lastscript}}</td>
+           <td>{{medication.nextscript}}</td>
+           <td>{{medication.tablets}}</td>
+           <td>{{medication.dose}}</td>
+           <td><button ng_click="save()">Print script</button>
+         </tr>
+         </tbody>
+       </table>
+       <td><button ng_click="save()">New medication</button>
+       <span  class="nullable">
+    <select ng-model="mypastmedications" ng-options="pastmedication.name for pastmedication in pastmedications">
+      <option value="">previous medications</option>
+    </select>
+  </span>
+     </div>
   </div>
 
+              <div>
+                <table class="table" ng-controller="PastAppointmentsController">
+                  <thead>
+                  <tr>
+                    <th>Summary</th>
+                    <th>Date</th>
+                  </tr>
+                  </thead>
+                  <tbody ng-controller="PastAppointmentsController">
+                  <tr ng-repeat="pastappointment in pastappointments">
+                    <td>{{pastappointment.summary}}</td>
+                    <td>{{pastappointment.date}}</td>
+                    <td><button ng_click="save()">View</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
 
-<% if false %>
+
+
+              <% if false %>
       <table class="table">
         <thead>
         <tr>
@@ -201,4 +243,3 @@
         </tr>
         </tbody>
 <% end %>
-</div>

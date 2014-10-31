@@ -7,7 +7,7 @@ opthoDirectives.directive("myResize", function() {
         notes: '='},
         link: function(scope, element, attributes) {
 
-            var resizeValue = element.find('#notes', '#images'); {
+            var resizeValue = element.find('#notes, #images'); {
 
 
                     $(resizeValue).on("click", function() {
@@ -24,8 +24,7 @@ opthoDirectives.directive("myCutsize", function() {
         scope: {myCutsize: '=',
             notes: '='},
         link: function(scope, element, attributes) {
-            var cutsizeValue = element.children()[0];
-{
+            var cutsizeValue = element.find('#notes, #images'); {
                     $(cutsizeValue).on("dblclick", function() {
                         $(this).css({ "min-height": "800px",
                             "width": "1"});

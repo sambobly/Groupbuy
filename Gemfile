@@ -59,6 +59,7 @@ gem 'tzinfo-data'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
+gem "bower-rails", "~> 0.9.1"
 # Use unicorn as the app server
 # gem 'unicorn'
 

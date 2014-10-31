@@ -21,6 +21,8 @@ opthoControllers.controller('PtntInfoCtrl', ['$scope', '$routeParams', '$http', 
     });
 }]);
 opthoControllers.controller('PathologyController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $scope.query = {}
+    $scope.queryBy = '$'
     $http.get('/assets/samplepathology.json').success(function(data) {
         $scope.pathology = data.pathology;
     });
@@ -37,9 +39,19 @@ opthoControllers.controller('ConsultController', ['$scope', function($scope) {
     };
 
     $scope.reset();
+
 }])
 opthoControllers.controller('MedicationController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
     $http.get('/assets/samplemedications.json').success(function(data) {
         $scope.medications = data.medications
+        $scope.pastmedications = [
+            {name: 'Pantoprazole'},
+            {name: 'Pregabalin'}];
+        $scope.mypastmedications = $scope.pastmedications[2];
+    });
+}]);
+opthoControllers.controller('PastAppointmentsController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $http.get('/assets/samplepastappointments.json').success(function(data) {
+        $scope.pastappointments = data.pastappointments
     });
 }]);
