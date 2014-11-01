@@ -55,3 +55,38 @@ opthoControllers.controller('PastAppointmentsController', ['$scope', '$routePara
         $scope.pastappointments = data.pastappointments
     });
 }]);
+opthoControllers.controller('EmailController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    $http.get('/assets/sampleemails.json').success(function(data) {
+        $scope.emails = data.emails;
+        $scope.sentEmails = data.sentEmails;
+        $scope.isPopupVisible = false;
+        $scope.isComposePopupVisible = false;
+        $scope.composeEmail = {};
+
+        $scope.sendEmail = function() {
+            $scope.isComposePopupVisible = false;
+            $scope.composeEmail.from = "me";
+            $scope.composeEmail.date = new Date();
+            $scope.sentEmails.push($scope.composeEmail);
+        };
+
+        $scope.showComposePopup = function() {
+            $scope.composeEmail = {};
+            $scope.isComposePopupVisible = true;
+        };
+
+        $scope.closeComposePopup = function() {
+            $scope.isComposePopupVisible = false;
+        };
+
+        $scope.showPopup = function(email) {
+            $scope.isPopupVisible = true;
+            $scope.selectedEmail = email;
+        };
+
+        $scope.closePopup = function() {
+            $scope.isPopupVisible = false;
+        };
+        $scope.activeTab = "inbox";
+    });
+}]);
