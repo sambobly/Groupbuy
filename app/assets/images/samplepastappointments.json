@@ -1,8 +1,11 @@
 {"pastappointments": [{
     "summary": "Booking in appointment",
-    "date": "9-9-14"
+    "date": "9-9-14",
+    "body": "This is the body"
+
 }, {"summary": "R cataract operation",
-    "date": "11-10-14"
+    "date": "11-10-14",
+    "body": "The body of Christ"
     }
 ]
 }

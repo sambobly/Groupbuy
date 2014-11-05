@@ -177,8 +177,9 @@
     <canvas width="500" height="300" id="canvas" drawing></canvas>
   </div>
 </div>
+<% end %>
 
-   <div>
+   <div class="container" ng-controller="MedicationController">
     <table class="table">
       <thead>
       <tr>
@@ -189,7 +190,7 @@
         <th>dose</th>
       </tr>
       </thead>
-      <tbody ng-controller="MedicationController">
+      <tbody >
 
       <tr ng-repeat="medication in medications">
         <td>{{medication.name}}</td>
@@ -201,110 +202,100 @@
       </tr>
       </tbody>
         </table>
-     <td><button ng_click="save()">New medication</button>
+     <td><button ng_click="showPopup(newmedication)">New medication</button>
        <span  class="nullable">
     <select ng-model="mypastmedications" ng-options="pastmedication.name for pastmedication in pastmedications">
       <option value="">previous medications</option>
     </select>
   </span>
+     <div class="modal" ng-show="isPopupVisible">
+       <div class="modal-header">
+         <button type="button" class="close" ng-click="closePopup()">&times;</button>
+         <h3>Prescribe Medication</h3>
+       </div>
+       <div class="modal-body">
+         <form>
+           <input type="text" placeholder="Medication" style="width:95%;"
+                  ng-model="composeEmail.to"><br />
+           <input type="text" placeholder="Dose" style="width:95%;"
+                  ng-model="composeEmail.subject"><br />
+           <input type="text" placeholder="Tablets" style="width:95%;"
+                  ng-model="composeEmail.subject"><br />
+         </form>
+       </div>
+       <div class="modal-footer">
+         <a href="#" class="btn"ng-click="closePopup()">Close</a>
+         <a href="#" class="btn btn-primary" ng-click="saveMedication()">Prescrie</a>
+       </div>
+     </div>
    </div>
 
-<div>
-      <table class="table" ng-controller="PathologyController">
+<div class="container" ng-controller="PathologyController">
+      <table class="table">
         <thead>
         <tr>
           <th>Type</th>
-          <th>Date</th>
+          <th>Most recent test date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="pathology in pathology" ng-click="showPopup(pathology)">
+          <td>{{pathology.name}}</td>
+          <td>{{pathology.date}}</td>
+        </tr>
+        </tbody>
+      </table>
+  <div class="modal" ng-show="isPopupVisible">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closePopup()">&times;</button>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Most recent test date</th>
           <th>Hb</th>
           <th>WCC</th>
         </tr>
         </thead>
-        <tbody ng-controller="PathologyController">
+        <tbody>
         <tr ng-repeat="pathology in pathology">
-          <td>{{pathology.name}}</td>
           <td>{{pathology.date}}</td>
           <td>{{pathology.Hb}}</td>
           <td>{{pathology.WCC}}</td>
         </tr>
         </tbody>
       </table>
+    <div class="modal-footer">
+      <a href="#" class="btn btn-primary" ng-click="closePopup()">Close</a>
     </div>
-
-<div>
-  <table class="table" ng-controller="PastAppointmentsController">
+  </div>
+    </div>
+<div class="container" ng-controller="PastAppointmentsController">
+  <table class="table">
     <thead>
     <tr>
       <th>Summary</th>
       <th>Date</th>
     </tr>
     </thead>
-    <tbody ng-controller="PastAppointmentsController">
-    <tr ng-repeat="pastappointment in pastappointments">
+    <tbody>
+    <tr ng-repeat="pastappointment in pastappointments" ng-click="showPopup(pastappointment)">
       <td>{{pastappointment.summary}}</td>
       <td>{{pastappointment.date}}</td>
-      <td><button ng_click="save()">View</button>
-      </td>
     </tr>
     </tbody>
   </table>
-</div>
-<% end %>
-<div class="container" ng-controller="EmailController">
-  <ul class="nav nav-tabs">
-    <li ng-class="{active: activeTab == 'inbox'}">
-      <a ng-click="activeTab='inbox'">Inbox</a>
-    </li>
-    <li ng-class="{active: activeTab == 'sent'}">
-      <a ng-click="activeTab='sent'">Sent</a>
-    </li>
-  </ul>
-  <table ng-show="activeTab=='inbox'" class="table table-bordered table-condensed">    <tbody>
-    <tr ng-repeat="email in emails" ng-click="showPopup(email)">
-      <td>{{ email.from }}</td>
-      <td>{{ email.subject }}</td>
-      <td>{{ email.date }}</td>
-      <td>{{email.body}}</td>
-    </tr>
-    </tbody>
-  </table>
-  <table ng-show="activeTab=='sent'" class="table table-bordered table-condensed">
-    <tbody>
-    <tr ng-repeat="email in sentEmails" ng-click="showPopup(email)">
-      <td>{{ email.to }}</td>
-      <td>{{ email.subject }}</td>
-      <td>{{ email.date }}</td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="modal" ng-show='isPopupvisible'>
+  <div class="modal" ng-show="isPopupVisible">
     <div class="modal-header">
-      <button type="button" class="close" ng-click="closePopup()">×</button>
-      <h3>{{selectedEmail.subject}}</h3>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closePopup()">&times;</button>
+      <h3>{{selectedpastappointment.summary}}</h3>
     </div>
     <div class="modal-body">
-      <strong>From:</strong> {{selectedEmail.from}} <br />
-      <strong>Date:</strong> {{selectedEmail.date}} <br />
-      <strong>Body:</strong> {{selectedEmail.body}} <br />
+        <strong>Date:</strong> {{selectedpastappointment.date | date:'MMM d' }}<br />
+        <br />
+        {{selectedpastappointment.body}}
     </div>
     <div class="modal-footer">
       <a href="#" class="btn btn-primary" ng-click="closePopup()">Close</a>
-    </div>
-  </div>
-  <button class="btn btn-primary" ng-click="showComposePopup()">Compose</button>  <div class="modal" ng-show="isComposePopupVisible">
-    <div class="modal-header">
-      <button type="button" class="close"  ng-click="closePopup()">×</button>
-      <h3>Compose Email</h3>
-    </div>
-    <div class="modal-body">
-      <form>
-        <input type="text" placeholder="To" ng-model="composeEmail.to" style="width:95%;"><br />
-        <input type="text" placeholder="Subject" ng-model="composeEmail.subject" style="width:95%;"><br />
-        <textarea style="width:95%;" rows="10" ng-model="composeEmail.body"></textarea>
-      </form>
-    </div>
-  <div class="modal-footer">
-    <a href="#" class="btn btn-primary" ng-click="closeComposePopup()">Close</a>
-      <a href="#" class="btn btn-primary" ng-click="sendEmail()">Send</a>
     </div>
   </div>
 </div>
@@ -345,13 +336,15 @@
     </div>
     <div class="modal-body">
       <strong>From:</strong> {{selectedEmail.from}}<br />
-      <strong>To:</strong> {{selectedEmail.to}}<br />
+      <strong>To:</str  ong> {{selectedEmail.to}}<br />
       <strong>Date:</strong> {{selectedEmail.date | date:'MMM d' }}<br />
       <br />
       {{selectedEmail.body}}
     </div>
     <div class="modal-footer">
       <a href="#" class="btn btn-primary" ng-click="closePopup()">Close</a>
+      <a href="#" class="btn" ng-click="forward()">Forward</a>
+      <a href="#" class="btn" ng-click="reply()">Reply</a>
     </div>
   </div>
 
