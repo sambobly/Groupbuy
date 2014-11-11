@@ -113,7 +113,7 @@
        </div>
   </div>
   <!-- important stuff panel -->
-  <div class="panel panel-danger patient">
+  <div class="panel panel-danger patient consult">
     <div class="panel-body">
       <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
         <div class="panel-heading">
@@ -170,7 +170,7 @@
     </div>
 
 
-   <div class="panel panel-info medications" id="Medications">
+   <div class="panel panel-info medications consult" id="Medications">
      <div class="panel-heading">
       <h3 class="panel-title">Medications</h3>
     </div>
@@ -205,41 +205,3 @@
   </span>
      </div>
   </div>
-
-              <div>
-                <table class="table" ng-controller="PastAppointmentsController">
-                  <thead>
-                  <tr>
-                    <th>Summary</th>
-                    <th>Date</th>
-                  </tr>
-                  </thead>
-                  <tbody ng-controller="PastAppointmentsController">
-                  <tr ng-repeat="pastappointment in pastappointments">
-                    <td>{{pastappointment.summary}}</td>
-                    <td>{{pastappointment.date}}</td>
-                    <td><button ng_click="save()">View</button>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-
-
-
-              <% if false %>
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Summary</th>
-          <th>Date</th>
-        </tr>
-        </thead>
-        <tbody ng-controller="PrevAppointmentController">
-
-        <tr ng-repeat="appointment in appointments">
-          <td>{{Appointment.summary}}</td>
-          <td>{{Appointment.date}}</td>
-        </tr>
-        </tbody>
-<% end %>
