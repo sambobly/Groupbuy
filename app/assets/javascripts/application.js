@@ -52,7 +52,8 @@
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
 //= require appointments/jquery.multiselect
-
+//= require textAngular/src/textangular-sanitize.js
+//= require textAngular/dist/textangular.min.js
 //= require appointments/appointments
 //= require consultations
 
@@ -63,7 +64,8 @@
 // library
 //= require angular
 //= require angular-route
-
+//= require textAngular/src/textangular-sanitize.js
+//= require textAngular/dist/textangular.min.js
 // app implementation
 
 //= require_tree ./angular
