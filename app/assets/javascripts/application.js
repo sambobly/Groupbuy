@@ -52,8 +52,11 @@
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
 //= require appointments/jquery.multiselect
-//= require textAngular/src/textangular-sanitize.js
-//= require textAngular/dist/textangular.min.js
+//= require dist/textAngular.min.js
+//= require src/textAngular.js
+//= require src/textAngular-sanitize.js
+//= require rangy-core
+//= require rangy-textrange
 //= require appointments/appointments
 //= require consultations
 

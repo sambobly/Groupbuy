@@ -7,7 +7,6 @@ var opthoApp = angular.module('opthoApp', [
 ]);
 
 
-
 opthoApp.config(['$routeProvider',
 function($routeProvider) {
     $routeProvider.when('/consultations/app/sampleimages.json', {

@@ -1,6 +1,4 @@
-<link rel='stylesheet' href='/path/to/unzipped/files/src/textAngular.min.css'>
-<script src='optho/vendor/asssets/bower_Components/textAngular/src/textAngular-sanitize.min.js'></script>
-<script src='optho/vendor/asssets/bower_Components/textAngular/dist/textAngular.min.js'></script>>
+
 <div id="container">
   
   <!-- appointments panel -->
@@ -62,7 +60,7 @@
         </ul>
         <div id="consultTabContent" class="tab-content">
           <div class="tab-pane fade in active" id="home">
-            <p> <textarea ng-model="consulttext" cols="50" rows="10"></textarea></p>
+            <p> <div text-angular ng-model="consultText"></div></p>
           </div>
           <div class="tab-pane fade" id="consultDrawing">
             <canvas width="500" height="300" id="canvas" drawing></canvas>

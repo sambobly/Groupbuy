@@ -2,16 +2,33 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/views/appointments/index.html.erb" line="44" />
-    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js" line="15" />
-    <bookmark url="file://$PROJECT_DIR$/app/views/consultations/index.html.erb" line="239" />
+    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js" line="14" />
+    <bookmark url="file://$PROJECT_DIR$/app/views/consultations/index.html.erb" line="237" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/karma-jqlite.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/karma-jquery.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/src/textAngular-sanitize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/dist/textAngular-sanitize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/src/textAngular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/dist/textAngular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/src/textAngularSetup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/consultations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416401122147" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416482672966" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -26,7 +43,7 @@
     <file path="/doctors_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389495428274" ignored="false" />
     <file path="/doctorpatient.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386574212695" ignored="false" />
     <file path="/application.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386585358807" ignored="false" />
-    <file path="/Gemfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414631699738" ignored="false" />
+    <file path="/Gemfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416481079263" ignored="false" />
     <file path="/appointments.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1387703805147" ignored="false" />
     <file path="/routes.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1411298786198" ignored="false" />
     <file path="/search.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386587767504" ignored="false" />
@@ -34,7 +51,7 @@
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
     <file path="/appointments_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410167014358" ignored="false" />
     <file path="/week.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386669188074" ignored="false" />
-    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416399877601" ignored="false" />
+    <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416482363710" ignored="false" />
     <file path="/application.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391580469396" ignored="false" />
     <file path="/application.css" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412570333957" ignored="false" />
     <file path="/find.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408849516224" ignored="false" />
@@ -106,23 +123,36 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.629979">
+    <splitter split-orientation="horizontal" split-proportion="0.23992197">
       <split-first>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.09872241">
+                <state line="19" column="84" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="67" column="47" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+                <state line="56" column="39" selection-start="1762" selection-end="1762" vertical-scroll-proportion="1.0628803">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="textAngular.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/src/textAngular.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <marker date="1415704369820" expanded="false" signature="1482:1579" placeholder="..." />
+                    <marker date="1415704369820" expanded="false" signature="15605:15619" placeholder="..." />
+                    <marker date="1415704369820" expanded="false" signature="15906:15936" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -193,7 +223,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.757329">
+        <splitter split-orientation="horizontal" split-proportion="0.1762557">
           <split-first>
             <leaf>
               <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
@@ -205,10 +235,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="angular.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="angular.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="2" selection-start="409" selection-end="409" vertical-scroll-proportion="0.02425107">
+                    <state line="16" column="2" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
                       <folding>
                         <marker date="1415704369662" expanded="true" signature="783084:783110" placeholder="{...}" />
                         <marker date="1415704369662" expanded="true" signature="783119:783135" placeholder="{...}" />
@@ -222,7 +252,7 @@
               <file leaf-file-name="samplesentemails.json" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/images/samplesentemails.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="5" column="2" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+                    <state line="5" column="2" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.2692308">
                       <folding />
                     </state>
                   </provider>
@@ -231,7 +261,7 @@
               <file leaf-file-name="samplepastappointments.json" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/images/samplepastappointments.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="10" column="101" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+                    <state line="10" column="101" selection-start="224" selection-end="224" vertical-scroll-proportion="-6.5384617">
                       <folding />
                     </state>
                   </provider>
@@ -240,7 +270,7 @@
               <file leaf-file-name="samplepathology.json" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/images/samplepathology.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="1" column="4" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+                    <state line="1" column="4" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.65384614">
                       <folding />
                     </state>
                   </provider>
@@ -255,10 +285,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                    <state line="10" column="41" selection-start="324" selection-end="324" vertical-scroll-proportion="0.41564792">
                       <folding />
                     </state>
                   </provider>
@@ -295,10 +325,10 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="28" column="12" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -307,21 +337,8 @@
               <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Gemfile">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="61" column="29" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+                    <state line="31" column="20" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
                       <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="consultations.js.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/consultations.js.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding>
-                        <marker date="1409565157173" expanded="true" signature="32:740" placeholder="{...}" />
-                        <marker date="1409565157173" expanded="true" signature="190:703" placeholder="{...}" />
-                        <marker date="1409565157173" expanded="true" signature="260:366" placeholder="{&quot;itemSelector&quot;: &quot;.consult.panel&quot;...}" />
-                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -329,8 +346,101 @@
               <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="5" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0">
+                    <state line="0" column="5" selection-start="0" selection-end="15" vertical-scroll-proportion="-0.0">
                       <folding>
+                        <marker date="1416356165138" expanded="true" signature="20:72" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="36:64" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="108:713" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="116:466" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="123:216" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="223:457" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="271:449" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="305:439" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="477:705" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="487:698" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="496:559" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="615:687" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="729:1051" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="817:909" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="847:902" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="957:1044" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1085:11239" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1091:1272" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1126:1266" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1225:1258" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1291:1462" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1326:1455" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1354:1450" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1488:1515" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1547:11239" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1620:2471" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1657:1802" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1835:2131" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="1943:2120" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2016:2107" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2226:2296" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2391:2462" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2493:2925" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2520:2916" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2548:2910" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2564:2677" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2577:2660" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2722:2904" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2768:2887" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="2964:3112" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3004:3101" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3012:3065" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3132:3280" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3153:3179" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3200:3223" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3244:3271" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3339:3523" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3564:11239" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3593:3797" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3820:3894" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="3935:4140" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4036:4133" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4182:4347" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4204:4278" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4243:4270" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4396:4664" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4446:4531" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4581:4657" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4739:6489" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4765:5311" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4779:4942" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4790:4927" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="4956:5294" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5007:5279" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5220:5274" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5321:6483" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5420:5610" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5533:5600" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5660:6479" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5694:5833" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5865:6267" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5881:6253" placeholder="..." />
+                        <marker date="1416356165138" expanded="false" signature="5945:5955" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="5956:5996" placeholder="..." />
+                        <marker date="1416356165138" expanded="false" signature="6060:6070" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6071:6111" placeholder="..." />
+                        <marker date="1416356165138" expanded="false" signature="6178:6188" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6189:6230" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6301:6467" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6550:7664" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6578:6921" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6594:6703" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6607:6686" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6719:6906" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6799:6889" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6968:7655" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="6999:7644" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7150:7517" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7166:7296" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7179:7279" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7312:7502" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7360:7485" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="7548:7635" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="7732:8646" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="7756:8067" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="7768:7843" placeholder="..." />
@@ -362,10 +472,14 @@
                         <marker date="1416356165138" expanded="true" signature="10670:11024" placeholder="..." />
                         <marker date="1416356165138" expanded="false" signature="10723:10733" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="10734:10776" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="10734:10776" placeholder="..." />
                         <marker date="1416356165138" expanded="false" signature="10840:10850" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="10851:10898" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="10851:10898" placeholder="..." />
                         <marker date="1416356165138" expanded="false" signature="10931:10941" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="10952:11010" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="10952:11010" placeholder="..." />
+                        <marker date="1416356165138" expanded="true" signature="11066:11221" placeholder="..." />
                         <marker date="1416356165138" expanded="true" signature="11066:11221" placeholder="..." />
                       </folding>
                     </state>
@@ -381,7 +495,7 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -450,7 +564,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/assets/images/samplemedications.json" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/directives.js" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/app/assets/images/sampleletters.json" />
         <option value="$PROJECT_DIR$/app/assets/images/sampleprevs.json" />
@@ -461,15 +574,18 @@
         <option value="$PROJECT_DIR$/app/assets/images/samplepathology.json" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" />
         <option value="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
+        <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="970" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -501,7 +617,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -512,20 +628,347 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="textAngular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -1128,7 +1571,11 @@
       <created>1416400958403</created>
       <updated>1416400958403</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Added textangular to application.js and app.js, throwing module not found error. Need to fix!">
+      <created>1416401134361</created>
+      <updated>1416401134361</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1152,14 +1599,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="970" height="1040" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.33544973" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51875" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19895834" sideWeight="0.67407405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6719577" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32723358" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1217,7 +1664,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added textangular to application.js and app.js, throwing module not found error. Need to fix!" />
+    <option name="LAST_COMMIT_MESSAGE" value="TextAngular working, some of the buttons not displaying properly." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1231,7 +1678,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Canvas in consultations/show, not working" />
     <MESSAGE value="Getting imagectrl error, why?&#10;" />
     <MESSAGE value="Reset changes to fix error" />
     <MESSAGE value="Still unable to get canvas working, however other errors fixed" />
@@ -1256,6 +1702,7 @@
     <MESSAGE value="Letters, pathology, past appointments and medications are all working functionally, require CSS touch ups" />
     <MESSAGE value="Added letters etc. to consultations/index" />
     <MESSAGE value="Added textangular to application.js and app.js, throwing module not found error. Need to fix!" />
+    <MESSAGE value="TextAngular working, some of the buttons not displaying properly." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1270,28 +1717,157 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="29" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+        <state line="16" column="2" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1415704369662" expanded="true" signature="783084:783110" placeholder="{...}" />
+            <marker date="1415704369662" expanded="true" signature="783119:783135" placeholder="{...}" />
+            <marker date="1415704369662" expanded="true" signature="783164:783230" placeholder="{...}" />
+            <marker date="1415704369662" expanded="true" signature="783265:783291" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/consultations.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplesentemails.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="311" selection-end="311" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepastappointments.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="101" selection-start="224" selection-end="224" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepathology.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1409565157173" expanded="true" signature="32:740" placeholder="{...}" />
-            <marker date="1409565157173" expanded="true" signature="190:703" placeholder="{...}" />
-            <marker date="1409565157173" expanded="true" signature="260:366" placeholder="{&quot;itemSelector&quot;: &quot;.consult.panel&quot;...}" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="0" selection-end="15" vertical-scroll-proportion="-0.0">
+        <state line="0" column="5" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0">
           <folding>
+            <marker date="1416356165138" expanded="true" signature="20:72" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="36:64" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="108:713" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="116:466" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="123:216" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="223:457" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="271:449" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="305:439" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="477:705" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="487:698" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="496:559" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="615:687" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="729:1051" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="817:909" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="847:902" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="957:1044" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1085:11239" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1091:1272" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1126:1266" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1225:1258" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1291:1462" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1326:1455" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1354:1450" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1488:1515" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1547:11239" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1620:2471" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1657:1802" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1835:2131" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="1943:2120" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2016:2107" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2226:2296" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2391:2462" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2493:2925" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2520:2916" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2548:2910" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2564:2677" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2577:2660" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2722:2904" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2768:2887" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="2964:3112" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3004:3101" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3012:3065" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3132:3280" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3153:3179" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3200:3223" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3244:3271" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3339:3523" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3564:11239" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3593:3797" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3820:3894" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="3935:4140" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4036:4133" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4182:4347" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4204:4278" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4243:4270" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4396:4664" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4446:4531" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4581:4657" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4739:6489" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4765:5311" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4779:4942" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4790:4927" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="4956:5294" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5007:5279" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5220:5274" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5321:6483" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5420:5610" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5533:5600" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5660:6479" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5694:5833" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5865:6267" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5881:6253" placeholder="..." />
+            <marker date="1416356165138" expanded="false" signature="5945:5955" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="5956:5996" placeholder="..." />
+            <marker date="1416356165138" expanded="false" signature="6060:6070" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6071:6111" placeholder="..." />
+            <marker date="1416356165138" expanded="false" signature="6178:6188" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6189:6230" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6301:6467" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6550:7664" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6578:6921" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6594:6703" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6607:6686" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6719:6906" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6799:6889" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6968:7655" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="6999:7644" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7150:7517" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7166:7296" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7179:7279" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7312:7502" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7360:7485" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="7548:7635" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="7732:8646" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="7756:8067" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="7768:7843" placeholder="..." />
@@ -1323,107 +1899,79 @@
             <marker date="1416356165138" expanded="true" signature="10670:11024" placeholder="..." />
             <marker date="1416356165138" expanded="false" signature="10723:10733" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="10734:10776" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="10734:10776" placeholder="..." />
             <marker date="1416356165138" expanded="false" signature="10840:10850" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="10851:10898" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="10851:10898" placeholder="..." />
             <marker date="1416356165138" expanded="false" signature="10931:10941" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="10952:11010" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="10952:11010" placeholder="..." />
+            <marker date="1416356165138" expanded="true" signature="11066:11221" placeholder="..." />
             <marker date="1416356165138" expanded="true" signature="11066:11221" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="20" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/consultations.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1409565157173" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1409565157173" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1409565157173" expanded="true" signature="-1:-1" placeholder="{&quot;itemSelector&quot;: &quot;.consult.panel&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/textAngular/dist/textAngular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1967" selection-end="2517" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="17" selection-start="3525" selection-end="3525" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="2" selection-start="409" selection-end="409" vertical-scroll-proportion="0.02425107">
-          <folding>
-            <marker date="1415704369662" expanded="true" signature="783084:783110" placeholder="{...}" />
-            <marker date="1415704369662" expanded="true" signature="783119:783135" placeholder="{...}" />
-            <marker date="1415704369662" expanded="true" signature="783164:783230" placeholder="{...}" />
-            <marker date="1415704369662" expanded="true" signature="783265:783291" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="47" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+        <state line="10" column="41" selection-start="324" selection-end="324" vertical-scroll-proportion="0.41564792">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.09872241">
+        <state line="19" column="84" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/textAngular/src/textAngular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1415704369820" expanded="false" signature="1482:1579" placeholder="..." />
+            <marker date="1415704369820" expanded="false" signature="15605:15619" placeholder="..." />
+            <marker date="1415704369820" expanded="false" signature="15906:15936" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="39" selection-start="1762" selection-end="1762" vertical-scroll-proportion="1.0628803">
           <folding />
         </state>
       </provider>
