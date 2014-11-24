@@ -58,7 +58,7 @@
 //= require rangy-core
 //= require rangy-textrange
 //= require appointments/appointments
-//= require consultations
+//= require metro-base
 
 // ============================
 // = Angular (application) js =
