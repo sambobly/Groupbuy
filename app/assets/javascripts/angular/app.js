@@ -3,7 +3,8 @@ var opthoApp = angular.module('opthoApp', [
 'ngResource',
 'opthoControllers',
 'opthoDirectives',
-'textAngular',
+'opthoServices',
+'textAngular'
 ]);
 
 

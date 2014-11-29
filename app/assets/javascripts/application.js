@@ -55,6 +55,8 @@
 //= require dist/textAngular.min.js
 //= require src/textAngular.js
 //= require src/textAngular-sanitize.js
+//= require textAngular/karma-jqlite.conf.js
+//= require textAngular/karma-jquery.conf.js
 //= require rangy-core
 //= require rangy-textrange
 //= require appointments/appointments

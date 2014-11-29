@@ -177,7 +177,6 @@
     <canvas width="500" height="300" id="canvas" drawing></canvas>
   </div>
 </div>
-<% end %>
 
    <div class="container" ng-controller="MedicationController">
     <table class="table">
@@ -371,4 +370,20 @@
     </div>
   </div>
 </div>
+<% end %>
 
+<div class="panel panel-danger patient consult">
+  <div class="panel-body">
+    <div class="panel panel-info consult" id="background" ng-controller="CalendarListCtrl">
+      <div class="panel-heading">
+        <h3 class="panel-title">Appointments</h3>
+      </div>
+
+      <div ng-repeat="appointment in appointments">
+        {{appointment.doctor_id}}
+        Display appointment patient and time (next 3) here
+      </div>
+    </div>
+
+  </div>
+</div>

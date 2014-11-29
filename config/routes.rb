@@ -1,6 +1,9 @@
 Optho::Application.routes.draw do
   resources :checkouts
 
+  scope '/api' do
+    resources :appointments
+  end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
