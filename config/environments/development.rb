@@ -34,4 +34,10 @@ Optho::Application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+  config.middleware.use Rack::Cors do
+    allow do
+      origins 'localhost:9000'
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
+    end
+  end
 end

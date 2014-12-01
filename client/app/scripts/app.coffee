@@ -16,16 +16,22 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router',
+    'clientControllers',
+    'clientDirectives',
+    'clientServices'
   ])
-  .config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
-      .otherwise
-        redirectTo: '/'
-
+  .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
+    $urlRouterProvider.otherwise("index")
+    $stateProvider
+      .state 'index',
+          url: '/index'
+          templateUrl: 'views/home.html'
+          controller: 'MainCtrl'
+      .state 'consultations',
+          url: '/consultations'
+          templateUrl: 'views/consultations.html'
+          controller: 'MainCtrl'
+    ''
+  ])

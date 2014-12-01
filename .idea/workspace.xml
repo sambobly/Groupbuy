@@ -4,601 +4,35 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/appointments/index.html.erb" line="44" />
     <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js" line="15" />
     <bookmark url="file://$PROJECT_DIR$/app/views/consultations/index.html.erb" line="237" />
+    <bookmark url="file://$PROJECT_DIR$/client/app/views/consultations.html" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/doc/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/.gitmodules" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/00-setup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/00-setup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/10-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/10-stdout-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/10-stdout.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/100-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/100-stdout-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/100-stdout.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/1000-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/1000-stdout-stderr.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/1000-stdout.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/AUTHORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/CNAME" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/CNAME" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/Gruntfile-execArgv-child.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/Gruntfile-execArgv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/Gruntfile-print-text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/HISTORY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/HISTORY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/LICENSE-MIT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/which/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/README.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/README.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/README.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/benchmark/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/eventemitter2/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/inherits/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/which/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/ReadMe.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/dateformat/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/UPGRADING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/test/fixtures/a.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/test/fixtures/aaa.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/abbrev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action_container.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/help/added_formatters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/fixtures/agent2-cert.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/fixtures/agent2-csr.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/fixtures/agent2-key.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/fixtures/agent2.cnf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/append.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/appveyor.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argparse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument_parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/arguments.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/arrays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/arrays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/arrays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/lib/async.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/dist/ba-hooker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/dist/ba-hooker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/test/fixtures/a/b/bar.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/bash-comparison.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/bash-comparison.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/bash-results.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/bash-results.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/basic-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/bin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/binary.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/middleware/bodyDecoder-middleware.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/internal-tasks/bump.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/cake.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/cake.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/cake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/bin/cake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/chaining.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/chaining.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/chaining.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/child.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/choice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/cli.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/coffee-script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/coffee.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/bin/coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/collections.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/collections.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/collections.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/colors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/command.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/test/compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/concurrent-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/tasks/connect_proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/test/connect_proxy_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/const.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/append/constant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/store/constant.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/constants.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/count.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/create-files.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/custom-proxy-error.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/custom_types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/custom_types.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/cwd-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/cwd-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/dateformat/lib/dateformat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/schema/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/dumper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/dumper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/dumper.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/error-handling.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument/error.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esparse.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esparse" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/esprima.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esvalidate.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esvalidate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/eventemitter2/lib/eventemitter2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/example.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/examples-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/examples.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/exception.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument/exclusive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/exec.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/exec.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/lib/exit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/exit_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/fail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/store/false.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/file.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/lib/findup-sync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/test/findup-sync_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/float.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/test/fixtures/a/foo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/help/formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/forward-and-target-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/forward-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/js/function.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/examples/g.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/examples/g.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/lib/getobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/glob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/glob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/globstar-match.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/graceful-fs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/grammar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument/group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/grunt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/middleware/gzip-middleware.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/benchmark/scripts/hello.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/help.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/help.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/help.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/lib/hooker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/test/hooker_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/eventemitter2/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/test/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/inherits/inherits.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/inherits_browser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/int.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/vendor/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/js-yaml.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/bin/js-yaml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/js-yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/extras/jsl.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jslitmus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/jslitmus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/vendor/jslitmus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/latent-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/websocket/latent-websocket-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/lexer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-http-proxy-common-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-http-proxy-passes-web-incoming-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-http-proxy-passes-web-outgoing-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-http-proxy-passes-ws-incoming-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-http-proxy-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/test/lib-https-proxy-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/libpeerconnection.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/libpeerconnection.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/lodash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/lodash.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/lodash.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/lodash.underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/lodash.underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/lodash.underscore.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.underscore.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.underscore.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/lodash.underscore.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/log-broken.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/test/fixtures/log.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/mark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/mark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/mark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/merge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/schema/minimal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/middleware/modifyResponse-middleware.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/examples/my-program.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/namespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/test/namespace_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/nargs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/new-glob-optional-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/nocase-nomagic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/nocase-nomagic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/nodes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/nopt.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/bin/nopt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/lib/nopt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/nopt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/null.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/objects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/objects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/objects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/omap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/test/open.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/option.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/optparse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/lodash/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/async/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/dateformat/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/eventemitter2/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/exit/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/getobject/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/inherits/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/which/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/pairs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/hooker/parent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/parents.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/pause-resume.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/pause-resume.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/prefix_chars.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/proxy-http-to-https.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/proxy-https-to-http.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/proxy-https-to-https.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/benchmark/scripts/proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/qunit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/qunit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/vendor/qunit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/vendor/qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/readme-issue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/test/reflect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/js/regexp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/repl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/test/request_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/rewriter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/rimraf.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/rimraf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/rimraf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/root-nomount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/root-nomount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/root.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/root.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/run-qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/run-qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/run-qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/test/run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/test/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/test/runner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/schema/safe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/examples/sample.yeoman.grunt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/sample_document.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/examples/sample_document.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/schema.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/scope.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/seq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/test/server2_proxy_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/test/server3_proxy_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/set.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/test/setup.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/balancer/simple-balancer-with-websockets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/balancer/simple-balancer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/spawn-multibyte.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/spawn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/speed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/http/standalone-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/websocket/standalone-websocket-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/stat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/helpers/store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/str.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/strings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/strings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/strings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/strings_standalone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/strings_standalone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/strings_standalone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sub_commands.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/internal-tasks/subgrunt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/subparsers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/task.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/util/task.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/temp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/temp_tests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/lib/grunt/template.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/test/test-async.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/rimraf/test/test-sync.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/node_modules/eventemitter3/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/node_modules/inherits/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/test/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/nopt/node_modules/abbrev/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_standalone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_standalone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_standalone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/dateformat/test/test_weekofyear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/dateformat/test/test_weekofyear.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/testformatters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/timestamp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/store/true.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/node_modules/graceful-fs/test/ulimit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/type/js/undefined.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/underscore-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/lib/underscore.string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/lib/underscore.string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/lib/underscore.string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/dist/underscore.string.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/dist/underscore.string.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/dist/underscore.string.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/examples/usr-local.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/examples/usr-local.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/utility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore/utility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/utility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/lib/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/test/utils_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/version.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy/passes/web-outgoing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/examples/websocket/websocket-proxy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/benchmark/scripts/websockets-throughput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/which.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/which/which.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/.bin/which" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/which/bin/which" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/themes/winston-dark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/colors/themes/winston-light.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-connect-proxy/node_modules/http-proxy/lib/http-proxy/passes/ws-incoming.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/zz-cleanup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/glob/test/zz-cleanup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/consultations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/controllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/sampleemails.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/sampleimages.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/samplemedications.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/samplepastappointments.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/samplepathology.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/samplepatients.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/samplesentemails.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/services.js" />
+      <change type="MOVED" beforePath="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app\views\main.html" afterPath="$PROJECT_DIR$/client/app/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Gruntfile.js" afterPath="$PROJECT_DIR$/client/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower.json" afterPath="$PROJECT_DIR$/client/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417247750796" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417420001778" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -652,9 +86,9 @@
     <file path="/checkouts_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408850045653" ignored="false" />
     <file path="/checkout.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408789427899" ignored="false" />
     <file path="/app.js.coffee" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412989362923" ignored="false" />
-    <file path="/controllers.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417240030537" ignored="false" />
+    <file path="/controllers.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417425892482" ignored="false" />
     <file path="/script.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410076214244" ignored="false" />
-    <file path="/services.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417239821227" ignored="false" />
+    <file path="/services.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417421461788" ignored="false" />
     <file path="/app.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412741647856" ignored="false" />
     <file path="/application_bootstrap.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412741933288" ignored="false" />
     <file path="/angular-route.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1411299783070" ignored="false" />
@@ -663,7 +97,7 @@
     <file path="/samplepatients.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412118496054" ignored="false" />
     <file path="/whiteboardRenderFactory.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412211116205" ignored="false" />
     <file path="/drawing.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412685034237" ignored="false" />
-    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414541021862" ignored="false" />
+    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417421434774" ignored="false" />
     <file path="/samplepathology.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1415032743136" ignored="false" />
     <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416828230471" ignored="false" />
     <file path="/samplemedications.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902604632" ignored="false" />
@@ -676,6 +110,10 @@
     <file path="/samplesentemails.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414811228516" ignored="false" />
     <file path="/samplepastappointments.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1415032109487" ignored="false" />
     <file path="/Gruntfile.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417245684917" ignored="false" />
+    <file path="/app.coffee" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417325411266" ignored="false" />
+    <file path="/consultations.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417434055071" ignored="false" />
+    <file path="/index.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417422090591" ignored="false" />
+    <file path="/home.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417326342553" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -694,13 +132,13 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.24984066">
+    <splitter split-orientation="horizontal" split-proportion="0.12158809">
       <split-first>
         <leaf>
           <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="36" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
+                <state line="41" column="27" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -709,7 +147,7 @@
           <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/routes.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="27" selection-start="103" selection-end="103" vertical-scroll-proportion="0.020681266">
+                <state line="18" column="0" selection-start="103" selection-end="350" vertical-scroll-proportion="0.36480686">
                   <folding />
                 </state>
               </provider>
@@ -785,7 +223,7 @@
           <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/checkouts/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+                <state line="4" column="8" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -794,109 +232,133 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.5545315">
+        <splitter split-orientation="horizontal" split-proportion="0.6995192">
           <split-first>
-            <leaf>
-              <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/init.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="bootstrap-colorpicker.css" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/colorpicker/bootstrap-colorpicker.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="17" column="8" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="5" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="1" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/node_modules/grunt-connect-proxy/Gruntfile.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="146" column="18" selection-start="3456" selection-end="3456" vertical-scroll-proportion="0.32611173">
-                      <folding>
-                        <element signature="n#!!doc" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="consultations_controller.rb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/controllers/consultations_controller.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="app.js.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js.coffee">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="10" column="11" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="active_admin.css.scss" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.scss">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="checkins.js.coffee" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/checkins.js.coffee">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
+            <splitter split-orientation="horizontal" split-proportion="0.5032258">
+              <split-first>
+                <leaf>
+                  <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/controllers.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="6" column="22" selection-start="256" selection-end="256" vertical-scroll-proportion="0.12423874">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="about.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/.tmp/scripts/controllers/about.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="samplepatients.json" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/images/samplepatients.json">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/.tmp/scripts/controllers/main.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="26" column="59" selection-start="800" selection-end="805" vertical-scroll-proportion="-17.68">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/script.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/home.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="308" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.coffee">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="34" column="31" selection-start="788" selection-end="788" vertical-scroll-proportion="-23.12">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="21" column="14" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="consultations.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/consultations.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="2" column="4" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.6666667">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-first>
+              <split-second>
+                <leaf>
+                  <file leaf-file-name="consultations.html" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/consultations.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="1" column="4" selection-start="52" selection-end="52" vertical-scroll-proportion="0.019721577">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-second>
+            </splitter>
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="24" column="4" selection-start="1114" selection-end="1228" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="137" column="85" selection-start="4332" selection-end="4341" vertical-scroll-proportion="0.0">
+                    <state line="37" column="16" selection-start="284" selection-end="1035" vertical-scroll-proportion="0.8598901">
                       <folding />
                     </state>
                   </provider>
@@ -905,7 +367,7 @@
               <file leaf-file-name="consultations.css.scss" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="1332" column="67" selection-start="29036" selection-end="29036" vertical-scroll-proportion="0.0">
+                    <state line="1332" column="1" selection-start="29036" selection-end="29036" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -914,7 +376,7 @@
               <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="19" column="36" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+                    <state line="19" column="35" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -923,18 +385,16 @@
               <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="346" column="8" selection-start="10270" selection-end="10270" vertical-scroll-proportion="0.0">
-                      <folding>
-                        <marker date="1417089539681" expanded="true" signature="3:11235" placeholder="if ... end" />
-                      </folding>
+                    <state line="24" column="0" selection-start="473" selection-end="706" vertical-scroll-proportion="-8.0">
+                      <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="27" column="4" selection-start="944" selection-end="944" vertical-scroll-proportion="0.53125">
+                    <state line="18" column="9" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -952,7 +412,7 @@
               <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="51" column="29" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+                    <state line="62" column="46" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -998,30 +458,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/images/sampleprevs.json" />
-        <option value="$PROJECT_DIR$/app/assets/images/sampleemails.json" />
-        <option value="$PROJECT_DIR$/app/assets/images/samplesentemails.json" />
-        <option value="$PROJECT_DIR$/app/assets/images/samplepastappointments.json" />
-        <option value="$PROJECT_DIR$/app/assets/images/samplepathology.json" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/consultations/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/services.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js" />
         <option value="$PROJECT_DIR$/node_modules/grunt-connect-proxy/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/client/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
+        <option value="$PROJECT_DIR$/client/app/views/home.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/directives.js" />
+        <option value="$PROJECT_DIR$/client/app/scripts/services.js" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/controllers.js" />
+        <option value="$PROJECT_DIR$/client/app/views/consultations.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1918" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1065,7 +525,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1094,11 +553,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1112,19 +567,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="textAngular" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1138,71 +581,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="textAngular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="textAngular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1220,37 +599,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1272,33 +621,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1312,175 +639,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt-connect-proxy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grunt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="internal-tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1489,6 +648,142 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1542,56 +837,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -1599,14 +847,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -1624,18 +872,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app\images" />
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app\scripts" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets\images" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets\font" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\javascripts" />
-      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets\consultations" />
-      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\javascripts\angular" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\assets" />
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app\scripts\controllers" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets\consultations" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\images" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets" />
-      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app" />
-      <recent name="C:\Users\Tom\Dropbox\Theo and Tom Folder\optho\app\views\appointments" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: optho">
@@ -1750,6 +998,13 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
@@ -2230,7 +1485,11 @@
       <created>1417247753542</created>
       <updated>1417247753542</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Added theme files + all new servers to start using Rails backend. Not functioning yet">
+      <created>1417247931465</created>
+      <updated>1417247931465</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2254,15 +1513,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1" y="1" width="1918" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.33544973" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.67407405" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29127234" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6719577" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32723358" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -2272,6 +1530,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2372,119 +1631,115 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+        <state line="91" column="21" selection-start="4619" selection-end="4619" vertical-scroll-proportion="0.9025522">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/consultations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js.coffee">
+    <entry file="file://$PROJECT_DIR$/client/app/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="308" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.scss">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="103" selection-end="350" vertical-scroll-proportion="0.36480686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="59" selection-start="800" selection-end="805" vertical-scroll-proportion="-17.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/images/samplepatients.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.tmp/scripts/controllers/about.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/checkins.js.coffee">
+    <entry file="file://$PROJECT_DIR$/client/.tmp/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="85" selection-start="4332" selection-end="4341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/consultations/consultations.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1332" column="67" selection-start="29036" selection-end="29036" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="346" column="8" selection-start="10270" selection-end="10270" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1417089539681" expanded="true" signature="3:11235" placeholder="if ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="944" selection-end="944" vertical-scroll-proportion="0.53125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="34" column="31" selection-start="788" selection-end="788" vertical-scroll-proportion="-23.12">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="29" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0">
+        <state line="62" column="46" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/samplepatients.json">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="24" column="4" selection-start="1114" selection-end="1228" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/appointment.rb">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+        <state line="6" column="22" selection-start="256" selection-end="256" vertical-scroll-proportion="0.12423874">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/grunt-connect-proxy/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="18" selection-start="3456" selection-end="3456" vertical-scroll-proportion="0.32611173">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="24" column="0" selection-start="473" selection-end="706" vertical-scroll-proportion="-8.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="16" selection-start="284" selection-end="1035" vertical-scroll-proportion="0.8598901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/consultations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="52" selection-end="52" vertical-scroll-proportion="0.019721577">
+          <folding />
         </state>
       </provider>
     </entry>
