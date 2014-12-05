@@ -46,6 +46,7 @@ end
 
 group :test do
   gem 'debugger'
+  gem 'rspec-rails'
 end
 
 gem 'appointments', "~> 1.3.3" # THEO: Do we need this Gem?

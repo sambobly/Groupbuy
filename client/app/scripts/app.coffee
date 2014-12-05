@@ -33,5 +33,9 @@ angular
           url: '/consultations'
           templateUrl: 'views/consultations.html'
           controller: 'MainCtrl'
+      .state 'patients',
+          url: '/patients'
+          templateURL: 'views/patients.html'
+          controller: 'PatientsController'
     ''
   ])
