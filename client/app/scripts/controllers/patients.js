@@ -8,6 +8,8 @@
  * Controller of the fakeLunchHubApp
  */
 angular.module('clientApp')
-    .controller('PatientsController', ['$scope', 'Patients', function ($scope, Patients) {
-        $scope.patients = Patient.query();
+    .controller('PatientsController', ['$scope', 'patient', function ($scope, patient) {
+        $scope.patient = patient.query();
+        console.log("hi");
+
     }]);

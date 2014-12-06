@@ -4,7 +4,7 @@ class Patient < ActiveRecord::Base
   has_and_belongs_to_many :doctors
   has_many :appointments
   has_many :line_items
-  attr_accessible :first_name, :last_name, :UR_number, :email
+  attr_accessible :first_name, :last_name, :UR_number, :email, :id
 
   def name
     first_name + " " + last_name
