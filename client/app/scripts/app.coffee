@@ -39,3 +39,10 @@ angular
           controller: 'PatientsController'
     ''
   ])
+
+app.factory('clientApp', ['$resource', function($resource) {
+return $resource('/api/patients/:id.json', null, {
+  'update': { method:'PUT' }
+});
+}]);
+

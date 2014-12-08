@@ -66,9 +66,28 @@ end
     end
   end
 
-  resources :patients
+  resources :patients do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      post 'edit'
+      get 'update'
+      get 'show'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'edit'
+      get 'show'
+    end
+  end
 
-  resources :doctors do
+resources :doctors do
 
     collection do
       get 'search'
@@ -121,7 +140,7 @@ end
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/.id(.:format)" => "appointments#show"
     get "/patients(.:format)" => "patients#index"
-    get "/patients/.id(.:format)" => "patients#show"
+    get "/patients/.id(.:format)" => "patients#index"
 
   end
 end
