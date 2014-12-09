@@ -1,8 +1,6 @@
 Optho::Application.routes.draw do
   resources :checkouts
 
-  scope '/api' do
-    resources :patients
   end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -140,7 +138,7 @@ resources :doctors do
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/.id(.:format)" => "appointments#show"
     get "/patients(.:format)" => "patients#index"
-    get "/patients/.id(.:format)" => "patients#index"
+    get "/patients/.id(.:format)" => "patients#show"
 
   end
 end
