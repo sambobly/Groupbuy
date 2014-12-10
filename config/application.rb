@@ -22,22 +22,12 @@ module Optho
     
     # Bower (js package manager) configuration
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
-    
-  end
-  config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors", :debug => true, :logger => Rails.logger do
-    allow do
-      origins '*'
-
-      resource '/cors',
-               :headers => :any,
-               :methods => [:post],
-               :credentials => true,
-               :max_age => 0
-
-      resource '*',
-               :headers => :any,
-               :methods => [:get, :post, :delete, :put, :options],
-               :max_age => 0
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
     end
   end
+
 end

@@ -63,7 +63,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 # Use unicorn as the app server
 # gem 'unicorn'
 
