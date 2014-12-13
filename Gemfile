@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'ransack'
 gem 'dashing-rails', git: "https://github.com/tdenovan/dashing-rails.git"
 gem 'puma', '= 2.8.2'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -61,6 +63,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
+gem 'rack-cors', :require => 'rack/cors'
 # Use unicorn as the app server
 # gem 'unicorn'
 

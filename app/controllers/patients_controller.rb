@@ -1,6 +1,7 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
-  has_many :line_items #attempting to create checkin
+  respond_to :json
+ # has_many :line_items #attempting to create checkin
   # GET /patients
   # GET /patients.json
   def index
@@ -10,6 +11,7 @@ class PatientsController < ApplicationController
   # GET /patients/1
   # GET /patients/1.json
   def show
+    respond_with Patient.all
   end
 
   # GET /patients/new

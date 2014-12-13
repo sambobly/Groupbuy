@@ -22,7 +22,9 @@ module.exports = function (grunt) {
   };
 
   // Define the configuration for all the tasks
-  grunt.initConfig({
+    grunt.loadNpmTasks('grunt-connect-proxy');
+    grunt.loadNpmTasks('grunt-shell-spawn');
+    grunt.initConfig({
 
     // Project settings
     yeoman: appConfig,
@@ -69,6 +71,13 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
+      proxies: [
+          {
+              context: '/api',
+              host: 'localhost',
+              port: 3000
+          }
+      ],
       livereload: {
         options: {
           open: true,
@@ -81,9 +90,15 @@ module.exports = function (grunt) {
               ),
               connect.static(appConfig.app)
             ];
+              var directory = options.directory || options.base[options.base.length - 1];
+              middlewares.push(connect.directory(directory));
+
+              return middlewares;
+          }
           }
         }
       },
+
       test: {
         options: {
           port: 9001,
@@ -107,6 +122,17 @@ module.exports = function (grunt) {
         }
       }
     },
+        shell: {
+            startRailsServer: {
+                command: 'rails server',
+                options: {
+                    // If async: true were omitted, the rails server
+                    // command would prevent subsequent commands
+                    // from running.
+                    async: true
+                }
+            }
+        },
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
@@ -419,6 +445,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
+      'shell:startRailsServer',
       'watch'
     ]);
   });

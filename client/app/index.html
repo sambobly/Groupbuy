@@ -29,8 +29,8 @@
         </ul>
         <h3 class="text-muted">client</h3>
       </div>
-
-      <div ng-view=""></div>
+        ﻿
+      <div ui-view autoscroll="true"></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -79,6 +79,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -86,6 +87,11 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/directives.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="scripts/controllers/controllers.js"></script>
+        <script src="scripts/controllers/patients.js"></script>
+
+    <!-- endbuild -->
 </body>
 </html>
