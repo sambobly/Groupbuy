@@ -15,7 +15,7 @@ angular
   "ngMessages"
   "ngResource"
   "ngRoute"
-  "ngS  anitize"
+  "ngSanitize"
   "ngTouch"
   "ui.router"
   "clientControllers"
