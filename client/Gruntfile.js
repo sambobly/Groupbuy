@@ -71,13 +71,13 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
-      proxies: [
-          {
-              context: '/api',
-              host: 'localhost',
-              port: 3000
-          }
-      ],
+        proxies: [
+            {
+                context: '/api',
+                host: 'localhost',
+                port: 3000
+            }
+        ],
       livereload: {
         options: {
           open: true,
@@ -90,15 +90,9 @@ module.exports = function (grunt) {
               ),
               connect.static(appConfig.app)
             ];
-              var directory = options.directory || options.base[options.base.length - 1];
-              middlewares.push(connect.directory(directory));
-
-              return middlewares;
-          }
           }
         }
       },
-
       test: {
         options: {
           port: 9001,
