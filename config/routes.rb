@@ -19,7 +19,6 @@ Optho::Application.routes.draw do
   get "sessions/destroy"
   resources :users
 
-  mount Dashing::Engine, at: Dashing.config.engine_path
   resources :line_items do
   collection do
     get 'find'
@@ -64,26 +63,29 @@ end
     end
   end
 
-  resources :patients do
-    collection do
-      get 'find'
-      get 'index'
-      post 'create'
-      post 'destroy'
-      post 'edit'
-      get 'update'
-      get 'show'
+  
+  scope '/api' do
+    resources :patients do
+      collection do
+        get 'find'
+        get 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
     end
-    member do
-      post 'destroy'
-      post 'update'
-      get 'edit'
-      patch 'edit'
-      patch 'update'
-      post 'edit'
-      get 'show'
-    end
-  end
+  end # api scope
 
 resources :doctors do
 
