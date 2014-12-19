@@ -46,4 +46,4 @@ angular.module('clientApp')
                 return console.error('Failed to create new patient.');
             }));
          return true;
-        }])}
+        }])};
