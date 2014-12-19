@@ -1,5 +1,22 @@
 <h1>Groups</h1>
-
+<div ng-controller="PatientsController">
 <ul ng-repeat="patient in patients">
     <li>{{patient.id}}</li>
+    <li>{{patient.name}}</li>
+
 </ul>
+</div>
+
+    <div class="container" ng-controller="PatientsController" style="margin-top: 40px">
+        <h1 class="text-center">Create new post</h1>
+        <form>
+            <fieldset>
+                <label><strong>First Name</strong></label>
+                <input class="span12" ng-model="formData.newPatientFirstName" placeholder="First Name" type="text" maxlength="250">
+                <label><strong>Last Name</strong></label>
+                <input class="span12" ng-model="formData.newPatientLastName" placeholder="Last Name" type="text" maxlength="250">
+                <button class="btn btn-primary" ng-click="createPatient()">Create</button>
+                <button class="btn btn-danger pull-right" ng-click="clearPatient()">Clear post</button>
+            </fieldset>
+        </form>
+    </div>

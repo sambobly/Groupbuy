@@ -1,10 +1,10 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '0.3.16'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -63,7 +63,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
-gem 'rack-cors', :require => 'rack/cors'
 # Use unicorn as the app server
 # gem 'unicorn'
 

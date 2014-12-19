@@ -6,6 +6,7 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all
+    render json: @patients
   end
 
   # GET /patients/1
@@ -26,18 +27,37 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.json
   def create
-    @patient = Patient.new(patient_params)
+    # Create and save new patient from data received from the client
+    new_patient = Patient.new
+    new_patient.first_name = params[:new_patient][:first_name] # Get only first 250 characters
+    new_patient.last_name = params[:new_patient][:last_name]
 
-    respond_to do |format|
-      if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @patient }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
-      end
+    # Confirm patient is valid and save or return HTTP error
+    if new_patient.valid?
+      new_patient.save!
+    else
+      render "public/422", :status => 422
+      return
     end
+
+    # Respond with newly created patient in json format
+    respond_with(new_patient) do |format|
+      format.json { render :json => new_patient.as_json }
+    end
+
   end
+    #@patient = Patient.new(patient_params)
+
+   # respond_to do |format|
+   #   if @patient.save
+   #     format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+    #    format.json { render action: 'show', status: :created, location: @patient }
+    #  else
+    #    format.html { render action: 'new' }
+    #    format.json { render json: @patient.errors, status: :unprocessable_entity }
+   #   end
+   # end
+  #end
 
   # PATCH/PUT /patients/1
   # PATCH/PUT /patients/1.json

@@ -15,7 +15,7 @@ angular
   "ngMessages"
   "ngResource"
   "ngRoute"
-  "ngS  anitize"
+  "ngSanitize"
   "ngTouch"
   "ui.router"
   "clientControllers"
@@ -36,7 +36,7 @@ angular
       controller: "MainCtrl"
     ).state "patients",
       url: "/patients"
-      templateURL: "views/patients.html"
+      templateUrl: "views/patients.html"
       controller: "PatientsController"
 
     return ""
