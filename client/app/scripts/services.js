@@ -25,3 +25,59 @@ clientServices.factory('AppointmentService', ['$resource',
       query: {method:'GET', params:{appointmentId:'appointments'}, isArray:true}
         });
     }]);
+clientServices.factory('patientData', ['$http',
+    function($http) {
+        var patientData;
+        patientData = {
+            data: {
+                patients: [
+                    {
+                        FirstName: 'Loading',
+                        LastName: ''
+                    }
+                ]
+            },
+            isLoaded: false
+        };
+        patientData.loadPatients = function(deferred) {
+            if (!patientData.isLoaded) {
+                return $http.get('./patients.json').success(function(data) {
+                    patientData.data.patients = data;
+                    patientData.isLoaded = true;
+                    console.log('Successfully loaded patients.');
+                    if (deferred) {
+                        return deferred.resolve();
+                    }
+                }).error(function() {
+                        console.error('Failed to load posts.');
+                        if (deferred) {
+                            return deferred.resolve();
+                        }
+                    });
+            } else {
+                if (deferred) {
+                    return deferred.resolve();
+                }
+            }
+        };
+
+        patientData.createPatient = function(newPatient) {
+            var data;
+            if (newPatient.newPatientFirstName === '' || newPost.newPatientLastName === '') {
+                alert('Neither the Title nor the Body are allowed to be left blank.');
+                return false;
+            }
+            data = {
+                new_patient: {
+                    FirstName: newPatient.newPatientFirstName,
+                    LastName: newPatient.newPatientLastName
+                }
+            };
+            $http.post('./patients.json', data).success(function(data) {
+                patientData.data.patients.push(data);
+                return console.log('Successfully created patient.');
+            }).error(function() {
+                    return console.error('Failed to create new patient.');
+                });
+            return true;
+        }}])

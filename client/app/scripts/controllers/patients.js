@@ -8,10 +8,10 @@
  * Controller of the fakeLunchHubApp
  */
 angular.module('clientApp')
-    .controller('PatientsController', ['$scope', '$resource', '$location', function ($scope, $resource, $location) {
-       var Patients = $resource('/api/patients');
+    .controller('PatientsController', ['$scope', '$resource', '$location', 'patientData', function ($scope, $resource, $location, patientData) {
+        var Patients = $resource('/api/patients');
         $scope.patients = Patients.query();
-        console.log("yo yo yo");
+        $scope.patients = patientData.data;
 
         $scope.formData = {
             newPatientFirstName: '',
@@ -26,7 +26,9 @@ angular.module('clientApp')
         $scope.createPatient = function() {
             return console.log($scope.formData);
         };
-       // patientData.createPatient = function(newPatient) {};
+
+
+        // patientData.createPatient = function(newPatient) {};
         //if (newPatient.newPatientFirstName === '' || newPatient.newPatientLastName === '') {
         //    alert('Neither the First nor the Last name are allowed to be left blank.');
          //   return false;
