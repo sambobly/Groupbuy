@@ -36,11 +36,9 @@ angular
       controller: "MainCtrl"
     ).state "patients",
       url: "/patients"
-      templateURL: "views/patients.html"
+      templateUrl: "views/patients.html"
       controller: "PatientsController"
-
-    return ""
-])
+    ])
 .factory "Patient", [
   "$resource"
   ($resource) ->
