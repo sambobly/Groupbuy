@@ -8,10 +8,11 @@
  * Controller of the fakeLunchHubApp
  */
 angular.module('clientApp')
-    .controller('PatientsController', ['$scope', '$resource', '$location', 'patientData', function ($scope, $resource, $location, patientData) {
-        var Patients = $resource('/api/patients');
+    .controller('PatientsController', ['$scope', '$resource', '$location', '$routeParams', 'patientData', function ($scope, $resource, $location, $routeParams, patientData) {
+     //   var Patients = $resource('/api/patients');
         $scope.patients = Patients.query();
         $scope.patients = patientData.data;
+        $scope.data.patientId = $routeParams.patientId
 
         $scope.formData = {
             newPatientFirstName: '',

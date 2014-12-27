@@ -25,6 +25,7 @@ clientServices.factory('AppointmentService', ['$resource',
       query: {method:'GET', params:{appointmentId:'appointments'}, isArray:true}
         });
     }]);
+
 clientServices.factory('patientData', ['$http',
     function($http) {
         var patientData;
@@ -41,7 +42,7 @@ clientServices.factory('patientData', ['$http',
         };
         patientData.loadPatients = function(deferred) {
             if (!patientData.isLoaded) {
-                return $http.get('./patients.json').success(function(data) {
+                return $http.get('/api/patients.json').success(function(data) {
                     patientData.data.patients = data;
                     patientData.isLoaded = true;
                     console.log('Successfully loaded patients.');
@@ -49,7 +50,7 @@ clientServices.factory('patientData', ['$http',
                         return deferred.resolve();
                     }
                 }).error(function() {
-                        console.error('Failed to load posts.');
+                        console.error('Failed to load patients.');
                         if (deferred) {
                             return deferred.resolve();
                         }
@@ -73,7 +74,7 @@ clientServices.factory('patientData', ['$http',
                     LastName: newPatient.newPatientLastName
                 }
             };
-            $http.post('./patients.json', data).success(function(data) {
+            $http.post('./api/patients.json', data).success(function(data) {
                 patientData.data.patients.push(data);
                 return console.log('Successfully created patient.');
             }).error(function() {
