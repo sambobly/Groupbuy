@@ -64,7 +64,7 @@ clientServices.factory('patientData', ['$http',
 
         patientData.createPatient = function(newPatient) {
             var data;
-            if (newPatient.newPatientFirstName === '' || newPost.newPatientLastName === '') {
+            if (newPatient.newPatientFirstName === '' || newPatient.newPatientLastName === '') {
                 alert('Neither the Title nor the Body are allowed to be left blank.');
                 return false;
             }
@@ -81,4 +81,6 @@ clientServices.factory('patientData', ['$http',
                     return console.error('Failed to create new patient.');
                 });
             return true;
-        }}])
+        };
+    return patientData;
+    }])

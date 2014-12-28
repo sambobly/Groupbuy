@@ -29,7 +29,7 @@ class PatientsController < ApplicationController
   def create
     # Create and save new patient from data received from the client
     new_patient = Patient.new
-    new_patient.first_name = params[:new_patient][:first_name] # Get only first 250 characters
+    new_patient.first_name = params[:new_patient][:first_name]
     new_patient.last_name = params[:new_patient][:last_name]
 
     # Confirm patient is valid and save or return HTTP error
