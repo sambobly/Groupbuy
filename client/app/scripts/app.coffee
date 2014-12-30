@@ -8,6 +8,8 @@
  #
  # Main module of the application.
 ###
+Client = angular.module('Client', [])
+
 angular
 .module("clientApp", [
   "ngAnimate"
@@ -40,8 +42,8 @@ angular
       controller: "PatientsController"
     ])
 .config(["$httpProvider", (provider) ->
-  provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-    ])
+    provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+  ])
 .factory "Patient", [
   "$resource"
   ($resource) ->
@@ -50,4 +52,11 @@ angular
         method: "PUT"
     )
 ]
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/patient/new', { templateUrl: '../api/patients.html', controller: 'PatientsController' } )
+  .when('/patient/:patientId', { templateUrl: '../api/patients.html', controller: 'PatientsController' } )
+  ])
+#.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
 

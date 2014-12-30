@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  before_action :set_patient, only: [:show, :edit, :update, :destroy, :create]
   respond_to :json
  # has_many :line_items #attempting to create checkin
   # GET /patients
@@ -35,8 +35,9 @@ class PatientsController < ApplicationController
     # Confirm patient is valid and save or return HTTP error
     if new_patient.valid?
       new_patient.save!
+      render "/patients"
     else
-      render "public/422", :status => 422
+      render "/patients", :status => 422
       return
     end
 
@@ -91,7 +92,7 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:name, :UR_number)
+      params.require(:patient).permit(:name, :UR_number, :id, :first_name, :last_name)
     end
 
     def ensure_not_referenced_by_any_line_item
