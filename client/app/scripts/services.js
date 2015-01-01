@@ -18,6 +18,12 @@ var clientServices = angular.module('clientServices', ['ngResource']);
     // return service;
    // });
 
+clientServices.factory('Patient', ['railsResourceFactory', function (railsResourceFactory) {
+   return railsResourceFactory({
+       url: '/api/patients',
+       name: 'patient'
+   });
+}]);
 
 clientServices.factory('AppointmentService', ['$resource',
   function($resource){

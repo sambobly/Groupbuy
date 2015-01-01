@@ -15,11 +15,11 @@ angular
   "ngAnimate"
   "ngCookies"
   "ngMessages"
-  "ngResource"
   "ngRoute"
   "ngSanitize"
   "ngTouch"
   "ui.router"
+  "rails"
   "clientControllers"
   "clientDirectives"
   "clientServices"
@@ -44,14 +44,6 @@ angular
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
-.factory "Patient", [
-  "$resource"
-  ($resource) ->
-    return $resource("/api/patients/:id.json", null,
-      update:
-        method: "PUT"
-    )
-]
 Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider

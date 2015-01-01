@@ -8,13 +8,9 @@
  * Controller of the fakeLunchHubApp
  */
 angular.module('clientApp')
-    .controller('PatientsController', ['$scope', '$resource', '$location', '$routeParams', 'patientData', function ($scope, $resource, $location, $routeParams, patientData) {
-        var Patients = $resource('/api/patients');
-        $scope.data = patientData.data;
-        $scope.patients = Patients.query();
-        $scope.patients = patientData.data;
-
-        $scope.data.patientId = $routeParams.patientId;
+    .controller('PatientsController', ['$scope', '$resource', '$location', '$routeParams', 'patientData', 'Patient', function ($scope, $resource, $location, $routeParams, patientData, Patient) {
+      $scope.patient = new Patient();
+      
         $scope.formData = {
             newPatientFirstName: '',
             newPatientLastName: ''
@@ -26,7 +22,13 @@ angular.module('clientApp')
             return $location.url('/');
         };
         $scope.createPatient = function() {
-            return patientData.createPatient($scope.formData);
+          $scope.patient.create()
+            .then(function(response) {
+              console.log("SUCCESS", response);
+            })
+            .catch(function(response) {
+              console.log("FAILURE!", response);
+            });
         };
 
 
