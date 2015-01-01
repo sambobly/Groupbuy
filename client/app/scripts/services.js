@@ -74,7 +74,7 @@ clientServices.factory('patientData', ['$http',
                     LastName: newPatient.newPatientLastName
                 }
             };
-            $http.post('./api/patients.json', data).success(function(data) {
+            $http.post('./api/patients', data).success(function(data) {
                 patientData.data.patients.push(data);
                 return console.log('Successfully created patient.');
             }).error(function() {

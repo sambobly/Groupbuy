@@ -33,17 +33,10 @@ class PatientsController < ApplicationController
     new_patient.last_name = params[:new_patient][:last_name]
 
     # Confirm patient is valid and save or return HTTP error
-    if new_patient.valid?
-      new_patient.save!
-      render "/patients"
+    if new_patient.save
+      render json: new_patient
     else
-      render "/patients", :status => 422
-      return
-    end
-
-    # Respond with newly created patient in json format
-    respond_with(new_patient) do |format|
-      format.json { render :json => new_patient.as_json }
+      render json: { errors: new_patient.errors.full_messages }, status: 500
     end
 
   end
@@ -87,7 +80,7 @@ class PatientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
-      @patient = Patient.find(params[:id])
+      @patient = Patient.find_by_id(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
