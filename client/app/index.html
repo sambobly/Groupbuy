@@ -11,7 +11,9 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/metro/metro-bootstrap.css">
+    <link rel="stylesheet" href="styles/metro/font-awesome.css">
+
     <!-- endbuild -->
   </head>
   <body ng-app="clientApp">
@@ -29,6 +31,18 @@
         </ul>
         <h3 class="text-muted">client</h3>
       </div>
+
+        <!-- side left, its part to menu on left-->
+        <div class="side-left">
+            <!--nav, this structure create with nav (find the bootstrap doc about .nav list) -->
+            <ul class="nav nav-list">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li class="active"><a href="#">Patients</a></li>
+                <li class="active"><a href="#">Consultations</a></li>
+
+
+            </ul><!--/ nav -->
+        </div><!--/ side left-->
 
       <div ui-view autoscroll="true"></div>
 
@@ -92,6 +106,8 @@
         <script src="scripts/services.js"></script>
         <script src="scripts/controllers/controllers.js"></script>
         <script src="scripts/controllers/patients.js"></script>
+        <script src="scripts/metro/metro-base.js"></script>
+        <script src="scripts/metro/demo/dashboard.js"></script>
 
     <!-- endbuild -->
 </body>

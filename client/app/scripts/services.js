@@ -24,7 +24,9 @@ clientServices.factory('Patient', ['railsResourceFactory', function (railsResour
        name: 'patient'
    });
 }]);
-
+  //Create a rails resource factory for every model that needs to sync.
+// Tells rails resource factory to automatically implemetn the RESTful routes
+// dont have to manually set urls
 clientServices.factory('AppointmentService', ['$resource',
   function($resource){
     return $resource('Appointments/:appointmentId.json', {}, {
