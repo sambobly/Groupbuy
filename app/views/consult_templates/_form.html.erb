@@ -1,0 +1,25 @@
+<%= form_for(@consult_template) do |f| %>
+  <% if @consult_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@consult_template.errors.count, "error") %> prohibited this consult_template from being saved:</h2>
+
+      <ul>
+      <% @consult_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

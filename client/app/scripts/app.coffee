@@ -36,11 +36,15 @@ angular
       url: "/consultations"
       templateUrl: "views/consultations.html"
       controller: "MainCtrl"
-    ).state "patients",
+    ).state("patients",
       url: "/patients"
       templateUrl: "views/patients.html"
       controller: "PatientsController"
-    ])
+    ).state("consulttemplates",
+      url: "/consulttemplates"
+      templateUrl: "views/consulttemplates.html"
+      controller: "ConsultTemplatesController"
+    )])
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])

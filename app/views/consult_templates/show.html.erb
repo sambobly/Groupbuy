@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consult_template.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @consult_template.content %>
+</p>
+
+<%= link_to 'Edit', edit_consult_template_path(@consult_template) %> |
+<%= link_to 'Back', consult_templates_path %>

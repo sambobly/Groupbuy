@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :consult_templates
+
   resources :checkouts
 
 
@@ -135,12 +137,14 @@ resources :doctors do
   namespace :api, defaults: {format: :json} do
     resources :consultations, only: [:index]
     resources :patients, only:[:index, :create, :update, :destroy]
+    resources :consulttemplates, only:[:index, :create, :update, :destroy]
   end
   scope :api do
+
+  end
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/.id(.:format)" => "appointments#show"
     get "/patients(.:format)" => "patients#index"
     get "/patients/.id(.:format)" => "patients#index"
-
-  end
 end
+
