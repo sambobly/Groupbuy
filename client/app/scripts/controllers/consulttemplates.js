@@ -5,8 +5,7 @@ angular.module('clientApp')
         $scope.consulttemplate = new ConsultTemplate();
 
         $scope.formData = {
-            newConsultTemplateName: '',
-            newConsultTemplateContent: ''
+                newConsultTemplateContent: ''
         };
         $scope.createConsultTemplate = function() {
             $scope.consulttemplate.create()

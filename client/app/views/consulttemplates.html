@@ -563,13 +563,26 @@
 
                 <!-- widget content -->
                 <div class="widget-content">
-                    <textarea id="consulttemplate" name="consulttemplate"></textarea>
+                    <textarea id="consulttemplate" ng-model="consulttemplate.content"></textarea>
                     <script type="text/javascript">
                         CKEDITOR.replace( 'consulttemplate' );
                     </script>
                     <button class="btn btn-primary" ng-click="createConsultTemplate()">Create Template</button>
                     <button class="btn btn-danger pull-right" ng-click="loadTemplate()">Load Template</button>
 
+                </div>
+
+                <div class="container" style="margin-top: 40px">
+                    <h1 class="text-center">Create new post</h1>
+                    <form>
+                        <fieldset>
+                            <label><strong>First Name</strong></label>
+                            <input class="span12" ng-model="consulttemplate.content" placeholder="First Name" type="text" maxlength="250">
+                            <label><strong>Last Name</strong></label>
+                            <button class="btn btn-primary" ng-click="createConsultTemplate()">Create</button>
+                            <button class="btn btn-danger pull-right" ng-click="clearPatient()">Clear post</button>
+                        </fieldset>
+                    </form>
                 </div><!-- /widget content -->
             </div> <!-- /widget ckeditor -->
                 </div><!-- /content-inner-->

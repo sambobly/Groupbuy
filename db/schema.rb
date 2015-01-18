@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823101647) do
+ActiveRecord::Schema.define(version: 20150117071706) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -48,15 +48,16 @@ ActiveRecord::Schema.define(version: 20140823101647) do
 
   create_table "appointments", force: true do |t|
     t.string   "name"
+    t.date     "date"
     t.string   "patient_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dr_comment"
     t.text     "receptionist_comment"
-    t.time     "start_time"
-    t.time     "end_time"
     t.integer  "doctor_id"
     t.integer  "patient_id"
+    t.time     "start_time"
+    t.time     "end_time"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "doctor_name"
@@ -70,6 +71,13 @@ ActiveRecord::Schema.define(version: 20140823101647) do
   end
 
   create_table "checkouts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "consult_templates", force: true do |t|
+    t.text     "name"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
