@@ -58,6 +58,8 @@ Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider
   .when('/consulttemplates/new', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+  .when('/consulttemplates/:consultId', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+
   ])
 #.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
 
