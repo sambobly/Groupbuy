@@ -44,6 +44,10 @@ angular
       url: "/consulttemplates"
       templateUrl: "views/consulttemplates.html"
       controller: "ConsultTemplatesController"
+    ).state("products",
+      url: "/products"
+      templateUrl: "views/products.html"
+      controller: "ProductsController"
     )])
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
@@ -57,9 +61,14 @@ Client.config(['$routeProvider', ($routeProvider) ->
 Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider
-  .when('/consulttemplates/new', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
-  .when('/consulttemplates/:consultId', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
-
+  .when('/consulttemplate/new', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+  .when('/consulttemplate/:consulttemplateId', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+  ])
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/product/new', { templateUrl: '../api/products.html', controller: 'ProductsController' } )
+  .when('/product/:productId', { templateUrl: '../api/products.html', controller: 'ProductsController' } )
   ])
 #.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
 
