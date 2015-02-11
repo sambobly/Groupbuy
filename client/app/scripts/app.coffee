@@ -52,7 +52,7 @@ angular
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
-Client.config(['$routeProvider', ($routeProvider) ->
+Client.config(  ['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider
   .when('/patient/new', { templateUrl: '../api/patients.html', controller: 'PatientsController' } )
@@ -61,8 +61,8 @@ Client.config(['$routeProvider', ($routeProvider) ->
 Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider
-  .when('/consulttemplate/new', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
-  .when('/consulttemplate/:consulttemplateId', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+  .when('/consulttemplates/new', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
+  .when('/consulttemplates/:consulttemplateId', { templateUrl: '../api/consulttemplates.html', controller: 'ConsultTemplatesController' } )
   ])
 Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
