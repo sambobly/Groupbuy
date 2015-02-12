@@ -48,7 +48,11 @@ angular
       url: "/products"
       templateUrl: "views/products.html"
       controller: "ProductsController"
-    )])
+    ).state("templates",
+      url: "/templates",
+      templateUrl: "views/templates.html"
+      controller: "TemplatesController")
+    ])
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
@@ -70,5 +74,12 @@ Client.config(['$routeProvider', ($routeProvider) ->
   .when('/product/new', { templateUrl: '../api/products.html', controller: 'ProductsController' } )
   .when('/product/:productId', { templateUrl: '../api/products.html', controller: 'ProductsController' } )
   ])
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/template/new', { templateUrl: '../api/templates.html', controller: 'TemplatesController' } )
+  .when('/template/:templateId', { templateUrl: '../api/templates.html', controller: 'TemplatesController'} )
+  ])
+
 #.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
 
