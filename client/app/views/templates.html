@@ -575,31 +575,36 @@
                     <h1 class="text-center">Create new post</h1>
                     <form>
                         <fieldset>
-                            <label><strong>First Name</strong></label>
-                            <input class="span12" ng-model="template.content" placeholder="First Name" type="text" maxlength="250">
+                            <label><strong>Template Name</strong></label>
+                            <input class="span12" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
                             <label><strong>Last Name</strong></label>
-                            <button class="btn btn-primary" ng-click="showPopup()">Compose</button>
+                            <input class="span12" ng-model="template.content" placeholder="Content" type="text" maxlength="250">
+                            <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
                             <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
                         </fieldset>
                     </form>
                 </div><!-- /widget content -->
             </div> <!-- /widget ckeditor -->
-            <div class="modal" ng-show="isPopupVisible">
-                <div class="modal-header">
-                    <button type="button" class="close" ng-click="closePopup()">&times;</button>
-                    <h3>Save Template</h3>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <input type="text" placeholder="Name" style="width:95%;"
-                               ng-model="template.name">
-                    </form>
-                    <div class="modal-footer">
-                        <a href="#" class="btn"ng-click="closePopup()">Close</a>
-                        <a href="#" class="btn btn-primary" ng-click="createTemplate()">Create Template</a>
+            <a href="#" class="btn btn-lg btn-success"
+               data-toggle="modal"
+               data-target="#basicModal">Click to open Modal</a>
+            <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Modal Body</h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
     </div><!-- /content-inner-->
     </div><!-- /main-page-->
 
