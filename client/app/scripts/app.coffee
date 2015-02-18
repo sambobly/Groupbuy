@@ -20,6 +20,7 @@ angular
   "ngTouch"
   "ui.router"
   "ui.bootstrap"
+  "ui.bootstrap.tpls"
   "rails"
   "clientControllers"
   "clientDirectives"

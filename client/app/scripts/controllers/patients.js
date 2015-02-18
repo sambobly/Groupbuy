@@ -10,7 +10,15 @@
 angular.module('clientApp')
     .controller('PatientsController', ['$scope', '$resource', '$location', '$routeParams', 'patientData', 'Patient', function ($scope, $resource, $location, $routeParams, patientData, Patient) {
       $scope.patient = new Patient();
-      
+      $scope.patients = function() {
+          $scope.patient.query()
+              .then(function(response) {
+                  console.log("SUCCESS", response);
+              })
+              .catch(function(response) {
+                  console.log("FAILURE!", response);
+              });
+      },
         $scope.formData = {
             newPatientFirstName: '',
             newPatientLastName: ''
