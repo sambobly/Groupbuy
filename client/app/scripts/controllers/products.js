@@ -4,16 +4,10 @@
 angular.module('clientApp')
     .controller('ProductsController', ['$scope', '$resource', '$location', '$routeParams', 'Product', '$modal', '$log', function ($scope, $resource, $location, $routeParams, Product, $modal, $log) {
         $scope.product = new Product();
-        $scope.products = function() {
-            $scope.product.query()
-                .then(function(response) {
-                    console.log("SUCCESS", response);
-                })
-                .catch(function(response) {
-                    console.log("FAILURE!", response);
-                });
-        },
 
+        Product.query().then(function(products){
+            $scope.products = products;
+        });
         $scope.formData = {
             newProductName: '',
             newProductPrice: ''
@@ -29,7 +23,7 @@ angular.module('clientApp')
         };
         $scope.delete = function() {
             Product.delete(product);
-        };
+    };
 
 
         $scope.open = function (size) {
