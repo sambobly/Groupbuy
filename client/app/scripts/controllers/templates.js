@@ -55,4 +55,6 @@ angular.module('clientApp')
                 $log.info('Modal dismissed at: ' + new Date());
             });
         };
+
+
     }])

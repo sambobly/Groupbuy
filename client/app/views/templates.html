@@ -15,32 +15,7 @@
 
 
 
-            <!-- ckeditor widget -->
-            <div class="widget border-cyan" id="widget-ckeditor">
-                <!-- widget header -->
-                <div class="widget-header bg-cyan">
-                    <!-- widget icon -->
-                    <div class="widget-icon"><i class="aweso-edit"></i></div>
-                    <!-- widget title -->
-                    <h4 class="widget-title">CKEditor</h4>
-                    <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
-                    <div class="widget-action color-cyan">
-                        <button data-toggle="collapse" data-collapse="#widget-ckeditor" class="btn">
-                            <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
-                        </button>
-                    </div>
-                </div><!-- /widget header -->
 
-                <!-- widget content -->
-                <div class="widget-content">
-                    <textarea id="template" ng-model="template.content"></textarea>
-                    <script type="text/javascript">
-                        CKEDITOR.replace( 'template' );
-                    </script>
-                    <button class="btn btn-primary" ng-click="createTemplate()">Create Template</button>
-                    <button class="btn btn-danger pull-right" ng-click="loadTemplate()">Load Template</button>
-
-                </div>
                 <div class="container" style="margin-top: 40px">
                     <h1 class="text-center">Create new post</h1>
                     <form>
@@ -87,9 +62,13 @@
                     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
                 </div>
             </script>
-            <textarea ck-editor ng-model="value"></textarea>
+            <fieldset>
+                <input class="span12" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
 
-
+                <textarea ck-editor ng-model="template.content" placeholder="Template Content" type="text"></textarea>
+            <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
+            <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
+            </fieldset>
             </div><!-- /content-inner-->
     </div><!-- /main-page-->
 
