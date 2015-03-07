@@ -34,15 +34,7 @@
             <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
             <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
             <div ng-show="selected">Selection from a modal: {{ selected.name }}
-                <form>
-                    <fieldset>
-                        <input class="span12" id="formData.templateName" ng-model="selected.name" placeholder="Template Name" type="text" maxlength="250">
-
-                            <textarea ck-editor id="formData.templateContent" ng-model="selected.content" placeholder="Template Content" type="text"></textarea>
-                            <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
-                            <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
-                    </fieldset>
-                </form></div>
+                </div>
             <script type="text/ng-template" id="templatesModal.html">
                 <div class="modal-header">
                     <h3 class="modal-title">I'm a modal!</h3>
