@@ -21,9 +21,9 @@
                     <form>
                         <fieldset>
                             <label><strong>Template Name</strong></label>
-                            <input class="span12" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
+                            <input class="span12" id="formData.templateName" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
                             <label><strong>Last Name</strong></label>
-                            <input class="span12" ng-model="template.content" placeholder="Content" type="text" maxlength="250">
+                            <input class="span12" id="formData.templateContent" ng-model="template.content" placeholder="Content" type="text" maxlength="250">
                             <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
                             <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
                         </fieldset>
@@ -33,8 +33,17 @@
             <button class="btn btn-default" ng-click="open()">Open me!</button>
             <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
             <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
-            <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-            <script type="text/ng-template" id="myModalContent.html">
+            <div ng-show="selected">Selection from a modal: {{ selected.name }}
+                <form>
+                    <fieldset>
+                        <input class="span12" id="formData.templateName" ng-model="selected.name" placeholder="Template Name" type="text" maxlength="250">
+
+                            <textarea ck-editor id="formData.templateContent" ng-model="selected.content" placeholder="Template Content" type="text"></textarea>
+                            <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
+                            <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
+                    </fieldset>
+                </form></div>
+            <script type="text/ng-template" id="templatesModal.html">
                 <div class="modal-header">
                     <h3 class="modal-title">I'm a modal!</h3>
                 </div>
@@ -63,9 +72,9 @@
                 </div>
             </script>
             <fieldset>
-                <input class="span12" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
+                <input class="span12" id="formData.templateName" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250">
 
-                <textarea ck-editor ng-model="template.content" placeholder="Template Content" type="text"></textarea>
+                <textarea ck-editor id="formData.templateContent" ng-model="template.content" placeholder="Template Content" type="text"></textarea>
             <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
             <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
             </fieldset>

@@ -6,12 +6,13 @@ angular.module('clientApp')
 
         $scope.template = new Template();
 
+
         Template.query().then(function(templates){
             $scope.templates = templates;
         });
         $scope.formData = {
-            newTemplateName: '',
-            newTemplateContent: ''
+            templateName: '',
+            templateContent: ''
         };
         $scope.createTemplate = function() {
             $scope.template.create()
@@ -25,14 +26,23 @@ angular.module('clientApp')
         $scope.open = function (size) {
 
             var modalInstance = $modal.open({
-                templateUrl: 'myModalContent.html',
+                templateUrl: 'templatesModal.html',
                 controller: function ($scope, $modalInstance, templates) {
                     $scope.templates = templates;
+
+
                     $scope.selected = {
-                        template: $scope.templates[0]
+                        template: $scope.templates[0],
                     };
 
+                    $scope.template = {
+                        template: $scope.templates[0],
+                    };
                     $scope.ok = function () {
+                        $scope.formData = {
+                            templateName: $scope.selected.name,
+                            templateContent: $scope.selected.content,
+                        };
                         $modalInstance.close($scope.selected.template);
                     };
 
@@ -51,8 +61,7 @@ angular.module('clientApp')
 
             modalInstance.result.then(function (selectedTemplate) {
                 $scope.selected = selectedTemplate;
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
+                $scope.template = selectedTemplate;
             });
         };
 
