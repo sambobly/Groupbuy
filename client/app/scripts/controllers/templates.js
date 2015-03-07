@@ -23,6 +23,16 @@ angular.module('clientApp')
                     console.log("FAILURE!", response);
                 });
         };
+
+        $scope.updateTemplate = function() {
+            $scope.template.update()
+                .then(function(response) {
+                    console.log("SUCCESS", response);
+                })
+                .catch(function(response) {
+                    console.log("FAILURE!", response);
+                });
+        };
         $scope.open = function (size) {
 
             var modalInstance = $modal.open({
