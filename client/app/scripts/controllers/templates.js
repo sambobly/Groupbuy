@@ -17,6 +17,18 @@ angular.module('clientApp')
         $scope.createTemplate = function() {
             $scope.template.create()
                 .then(function(response) {
+                    c.$setValidity('unique', formData.isUnique);
+                    console.log("SUCCESS", response);
+                })
+                .catch(function(response) {
+                    c.$setValidity('unique', false)
+                    console.log("FAILURE!", response);
+                });
+        };
+
+        $scope.updateTemplate = function() {
+            $scope.template.update()
+                .then(function(response) {
                     console.log("SUCCESS", response);
                 })
                 .catch(function(response) {
@@ -24,8 +36,8 @@ angular.module('clientApp')
                 });
         };
 
-        $scope.updateTemplate = function() {
-            $scope.template.update()
+        $scope.destroyTemplate = function() {
+            $scope.template.delete()
                 .then(function(response) {
                     console.log("SUCCESS", response);
                 })
