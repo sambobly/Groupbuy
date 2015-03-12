@@ -113,6 +113,17 @@
                 <input type="button" ng-click="reset(form)" value="Reset" />
                 <input type="submit" ng-click="update(user)" value="Save" />
             </form>
+            <form>
+                Username:
+                <input type="text" ng-model="form.templateName" name="templateName"
+                       required
+                       unique-templateName />
+            </form>
+
+            <ng-messages for="form.templateName.$error" ng-if="form.templateName.$dirty">
+                <ng-message when="unique" class="error">This is taken</ng-message>
+                <ng-message when="required" class="error">This is required</ng-message>
+            </ng-messages>
             </div><!-- /content-inner-->
     </div><!-- /main-page-->
 

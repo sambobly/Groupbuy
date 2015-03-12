@@ -139,3 +139,12 @@ clientDirectives.directive ('ckEditor', function() {
         }
     };
 });
+clientDirectives.directive('uniquetemplateName', function(istemplateNameAvailable) {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, element, attrs, ngModel) {
+            ngModel.$asyncValidators.unique = istemplateNameAvailable;
+        }
+    };
+});

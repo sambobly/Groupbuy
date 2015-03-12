@@ -113,3 +113,18 @@ clientServices.factory('patientData', ['$http',
         };
     return patientData;
     }])
+clientServices.factory('istemplateNameAvailable', function($q, $http) {
+    return function(templateName) {
+        var deferred = $q.defer();
+
+        $http.get('/api/templates/' + templateName).then(function() {
+            // Found the user, therefore not unique.
+            deferred.reject();
+        }, function() {
+            // User not found, therefore unique!
+            deferred.resolve();
+        });
+
+        return deferred.promise;
+    }
+});

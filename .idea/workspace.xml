@@ -8,13 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/directives.js" afterPath="$PROJECT_DIR$/client/app/scripts/directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/services.js" afterPath="$PROJECT_DIR$/client/app/scripts/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/templates.html" afterPath="$PROJECT_DIR$/client/app/views/templates.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/templates.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/templates.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1425987107962" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426158758880" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -70,7 +71,7 @@
     <file path="/app.js.coffee" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412989362923" ignored="false" />
     <file path="/controllers.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417767750239" ignored="false" />
     <file path="/script.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1410076214244" ignored="false" />
-    <file path="/services.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1419729020638" ignored="false" />
+    <file path="/services.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426162038895" ignored="false" />
     <file path="/app.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1418165718561" ignored="false" />
     <file path="/application_bootstrap.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412741933288" ignored="false" />
     <file path="/angular-route.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1411299783070" ignored="false" />
@@ -79,7 +80,7 @@
     <file path="/samplepatients.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412118496054" ignored="false" />
     <file path="/whiteboardRenderFactory.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412211116205" ignored="false" />
     <file path="/drawing.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1412685034237" ignored="false" />
-    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1424776882810" ignored="false" />
+    <file path="/directives.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426162055648" ignored="false" />
     <file path="/samplepathology.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1415032743136" ignored="false" />
     <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416828230471" ignored="false" />
     <file path="/samplemedications.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902604632" ignored="false" />
@@ -111,7 +112,7 @@
     <file path="/product.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1421579706113" ignored="false" />
     <file path="/templates.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1425989134791" ignored="false" />
     <file path="/template.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1423715621242" ignored="false" />
-    <file path="/templates.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1425989078287" ignored="false" />
+    <file path="/templates.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426162308194" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +131,7 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5368984">
+    <splitter split-orientation="horizontal" split-proportion="0.15172414">
       <split-first>
         <leaf>
           <file leaf-file-name="products.js" pinned="false" current="false" current-in-tab="false">
@@ -154,7 +155,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="618" column="0" selection-start="32326" selection-end="32326" vertical-scroll-proportion="-14.076923">
+                <state line="618" column="0" selection-start="32326" selection-end="32326" vertical-scroll-proportion="-12.615385">
                   <folding />
                 </state>
               </provider>
@@ -163,7 +164,7 @@
           <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="119" column="50" selection-start="4187" selection-end="4187" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -205,10 +206,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="templates.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="templates.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/templates.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="30" selection-start="876" selection-end="876" vertical-scroll-proportion="0.4722222">
+                <state line="24" column="30" selection-start="876" selection-end="876" vertical-scroll-proportion="0.023709903">
                   <folding />
                 </state>
               </provider>
@@ -217,7 +218,7 @@
           <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="121" column="27" selection-start="3776" selection-end="3776" vertical-scroll-proportion="0.0">
+                <state line="143" column="43" selection-start="4412" selection-end="4412" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -236,10 +237,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="templates.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="templates.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/views/templates.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="71" column="97" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.35406092">
+                <state line="114" column="12" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.5844005">
                   <folding />
                 </state>
               </provider>
@@ -248,7 +249,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="2" column="13" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -319,8 +320,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/template.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/templates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/consultations/index.html.erb" />
         <option value="$PROJECT_DIR$/client/bower_components/angular-bootstrap/bower.json" />
@@ -331,16 +330,18 @@
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
         <option value="$PROJECT_DIR$/client/app/views/products.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/products.js" />
-        <option value="$PROJECT_DIR$/client/app/scripts/directives.js" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/views/templates.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/templates.js" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/angular/app.js" />
+        <option value="$PROJECT_DIR$/client/app/scripts/services.js" />
+        <option value="$PROJECT_DIR$/client/app/scripts/directives.js" />
+        <option value="$PROJECT_DIR$/client/app/views/templates.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="951" />
+    <option name="width" value="847" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -390,14 +391,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -1173,7 +1174,11 @@
       <created>1425815087533</created>
       <updated>1425815087533</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Added delete function, yet to fix validations">
+      <created>1425989552294</created>
+      <updated>1425989552294</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1197,7 +1202,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="951" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="847" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1262,7 +1267,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding in validation to create function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added delete function, yet to fix validations" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1276,7 +1281,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added all the theme files to the project. Are they in the right spots and being called correctly?" />
     <MESSAGE value="Added theme files + all new servers to start using Rails backend. Not functioning yet" />
     <MESSAGE value="First directive working in yeoman client" />
     <MESSAGE value="Rails routing leading to network 404 error" />
@@ -1301,6 +1305,7 @@
     <MESSAGE value="Actually did fix it" />
     <MESSAGE value="Update function added" />
     <MESSAGE value="Adding in validation to create function" />
+    <MESSAGE value="Added delete function, yet to fix validations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1329,13 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/node_modules/grunt-connect-proxy/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="68" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.0">
@@ -1343,7 +1341,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="45" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1568" selection-end="1854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="38" selection-start="2914" selection-end="2918" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1357,9 +1376,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/products.html">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1371,58 +1390,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="618" column="0" selection-start="32326" selection-end="32326" vertical-scroll-proportion="-12.615385">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="38" selection-start="2914" selection-end="2918" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="27" selection-start="3776" selection-end="3776" vertical-scroll-proportion="0.0">
+        <state line="2" column="13" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="119" column="50" selection-start="4187" selection-end="4187" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="618" column="0" selection-start="32326" selection-end="32326" vertical-scroll-proportion="-14.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="97" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.35406092">
+        <state line="143" column="43" selection-start="4412" selection-end="4412" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/templates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="876" selection-end="876" vertical-scroll-proportion="0.4722222">
+        <state line="24" column="30" selection-start="876" selection-end="876" vertical-scroll-proportion="0.023709903">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="12" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.5844005">
           <folding />
         </state>
       </provider>
