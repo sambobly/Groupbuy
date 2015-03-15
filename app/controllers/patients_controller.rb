@@ -31,6 +31,10 @@ class PatientsController < ApplicationController
     new_patient = Patient.new
     new_patient.first_name = params[:patient][:first_name]
     new_patient.last_name = params[:patient][:last_name]
+    new_patient.email = params[:patient][:email]
+    new_patient.title = params[:patient][:title]
+
+
 
     # Confirm patient is valid and save or return HTTP error
     if new_patient.save

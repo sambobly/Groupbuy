@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212041426) do
+ActiveRecord::Schema.define(version: 20150315111118) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -120,6 +120,16 @@ ActiveRecord::Schema.define(version: 20150212041426) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
+    t.text     "title"
+    t.date     "date_of_birth"
+    t.text     "gender"
+    t.text     "concession_type"
+    t.text     "address"
+    t.text     "emergency_contact"
+    t.decimal  "medicare_number",   precision: 10, scale: 0
+    t.text     "referral_type"
+    t.text     "referring_doctor"
+    t.integer  "phone_number"
   end
 
   create_table "products", force: true do |t|

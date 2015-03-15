@@ -21,7 +21,9 @@ angular.module('clientApp')
       },
         $scope.formData = {
             newPatientFirstName: '',
-            newPatientLastName: ''
+            newPatientLastName: '',
+            newPatientEmail: '',
+            newPatientTitle: ''
         };
         $scope.navNewPatient = function() {
             return $location.url('/patient/new');
