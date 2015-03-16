@@ -44,13 +44,32 @@
     <!-- widget content -->
     <div class="widget-content">
         <form class="form-horizontal">
+            <label class="control-label" for="inputSelect">Title</label>
+            <div class="controls">
+                <select id="inputSelect">
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Ms</option>
+                    <option>Master</option>
+                    <option>Dr</option>
+                </select>
+            </div>
             <div class="control-group">
-                <label class="control-label" for="input">Input</label>
+                <label class="control-label" for="input">First Name</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" id="input" ng-model="patient.firstName" placeholder="First Name" type="text">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Last Name</label>
                 <div class="controls">
                     <input type="text" class="input-xxlarge" id="input">
-                    <span class="help-inline">Inline help text</span>
                 </div>
             </div><!-- /control-group -->
+            <label class="control-label" for="datepicker">Datepicker #1</label>
+            <div class="controls">
+                <input type="text" value="06-16-2013" data-fx="datepicker" id="datepicker">
+            </div>
             <div class="control-group">
                 <label class="control-label" for="inputPass">Password Input</label>
                 <div class="controls">
