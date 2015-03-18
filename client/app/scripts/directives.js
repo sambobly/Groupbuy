@@ -148,3 +148,9 @@ clientDirectives.directive('uniquetemplateName', function(istemplateNameAvailabl
         }
     };
 });
+clientDirectives.directive('datepicker', function(){
+
+        ('#datepicker').datepicker({
+            format: "dd/mm/yyyy"
+        });
+});
