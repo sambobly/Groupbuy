@@ -148,9 +148,23 @@ clientDirectives.directive('uniquetemplateName', function(istemplateNameAvailabl
         }
     };
 });
-clientDirectives.directive('datepicker', function(){
+clientDirectives.directive ('datepicker', function() {
+    return {
+        require: '?ngModel',
+        link: function(scope, elm, attr, ngModel) {
+            var ck = datepicker.replace(elm[0]);
 
-        ('#datepicker').datepicker({
-            format: "dd/mm/yyyy"
-        });
+            if (!ngModel) return;
+
+            ck.on('pasteState', function() {
+                scope.$apply(function() {
+                    ngModel.$setViewValue(ck.getData());
+                });
+            });
+
+            ngModel.$render = function(value) {
+                ck.setData(ngModel.$viewValue);
+            };
+        }
+    };
 });
