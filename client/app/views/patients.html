@@ -179,8 +179,11 @@
                     <div class="control-group">
                         <label class="control-label" for="datepicker">Datepicker #1</label>
                         <div class="controls">
-                            <input type="text" value="06-16-2013" data-fx="datepicker" id="datepicker">
+                            <input type="text" value="06-16-2013" data-fx="datepicker" id="datepicker" ng-model="dt">
                         </div>
+                        <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
                     </div><!-- /control-group -->
                     <div class="control-group">
                         <label class="control-label" for="datepicker2">Datepicker #2</label>
@@ -209,6 +212,7 @@
                         </div>
                     </div><!-- /control-group -->
                 </form>
+                <!-- stuff from datepicker example -->
                 <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
 
                 <h4>Inline</h4>
@@ -239,27 +243,11 @@
                 <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
                 <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
             </div>
-            </div><!-- /widget content -->
+            <!-- stuff from datepicker example -->
+
+        </div><!-- /widget content -->
         </div> <!-- / widget datepicker -->
     </div><!-- /widget content -->
 </div> <!-- /widget basic form -->
 
-<script type="text/ng-template" id="custom-datepicker.html">
-    <div class="form-inline enhanced-datepicker">
-        <label>
-            <input
-                    type="text"
-                    id="{{id}}"
-                    name="{{name}}"
-                    ng-model="ngModel"
-                    datepicker-popup="{{popup}}"
-                    datepicker-options="{{options}}"
-                    date-disabled="{{dateDisabled}}"
-                    min="{{min}}"
-                    max="{{max}}"
-                    open="opened"
-                    ng-pattern="/^(?:[1-9]|1\d|2\d|3[0-1]) (?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) (?:1|2)(?:\d{3})$/gim"/>
-            <span class="btn"><i class="icon-calendar"></i></span>
-        </label>
-    </div>
-</script>
+

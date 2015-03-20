@@ -8,14 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/directives.js" afterPath="$PROJECT_DIR$/client/app/scripts/directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/patients.html" afterPath="$PROJECT_DIR$/client/app/views/patients.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426761208100" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426836778227" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -98,7 +98,7 @@
     <file path="/index.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426763700670" ignored="false" />
     <file path="/home.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1424062883076" ignored="false" />
     <file path="/main.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417768685920" ignored="false" />
-    <file path="/patients.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426762144597" ignored="false" />
+    <file path="/patients.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426837885449" ignored="false" />
     <file path="/patients.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426764370005" ignored="false" />
     <file path="/config.ru" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1418174460808" ignored="false" />
     <file path="/patient.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1419473558074" ignored="false" />
@@ -133,15 +133,15 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6681061">
+    <splitter split-orientation="horizontal" split-proportion="0.23442319">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5">
+        <splitter split-orientation="horizontal" split-proportion="0.9">
           <split-first>
             <leaf>
               <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/app/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="596" column="52" selection-start="30185" selection-end="30191" vertical-scroll-proportion="-3.4935064">
+                    <state line="594" column="42" selection-start="30185" selection-end="30191" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -150,7 +150,7 @@
               <file leaf-file-name="patients.html" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/views/patients.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="240" column="18" selection-start="12739" selection-end="12739" vertical-scroll-proportion="0.9581796">
+                    <state line="185" column="21" selection-start="9200" selection-end="9200" vertical-scroll-proportion="0.48422498">
                       <folding>
                         <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                       </folding>
@@ -188,7 +188,7 @@
               <file leaf-file-name="form-elements.html" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/../../fom/projects/optho/graphics/templates/metro/stilearn-metro/form-elements.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="2078" column="71" selection-start="165166" selection-end="165166" vertical-scroll-proportion="-7.607843">
+                    <state line="2078" column="71" selection-start="165166" selection-end="165166" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -228,7 +228,7 @@
               <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="621" column="8" selection-start="32404" selection-end="32404" vertical-scroll-proportion="0.30409357">
+                    <state line="620" column="0" selection-start="32405" selection-end="32405" vertical-scroll-proportion="0.3625">
                       <folding />
                     </state>
                   </provider>
@@ -240,10 +240,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="patients.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="patients.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="8" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+                <state line="36" column="6" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.2030905">
                   <folding />
                 </state>
               </provider>
@@ -294,10 +294,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="150" column="51" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.5671296">
+                <state line="150" column="51" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -361,11 +361,11 @@
         <option value="$PROJECT_DIR$/db/migrate/20150315105701_fix_patient_title.rb" />
         <option value="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
         <option value="$PROJECT_DIR$/../../fom/projects/optho/graphics/templates/metro/stilearn-metro/form-elements.html" />
-        <option value="$PROJECT_DIR$/client/app/views/patients.html" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/client/app/scripts/directives.js" />
+        <option value="$PROJECT_DIR$/client/app/index.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
+        <option value="$PROJECT_DIR$/client/app/views/patients.html" />
       </list>
     </option>
   </component>
@@ -418,7 +418,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -979,20 +978,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -1788,7 +1788,11 @@
       <created>1426680929370</created>
       <updated>1426680929371</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Datepicker still not working why??? Added to index css and js, is it lack of directive?">
+      <created>1426764945515</created>
+      <updated>1426764945515</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1877,7 +1881,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datepicker added, broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datepicker still not working why??? Added to index css and js, is it lack of directive?" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1891,7 +1895,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Problem narrowed down to proxy server issue, why no work? Not configured properly? Added middlewares.push to gruntfile.js" />
     <MESSAGE value="Midway through setting up new patient directive, syntax error in controller" />
     <MESSAGE value="Fixed patients view to display correctly again" />
     <MESSAGE value="patientData factory not providing data with  $get method ?why" />
@@ -1916,6 +1919,7 @@
     <MESSAGE value="Fixing patient form" />
     <MESSAGE value="Adding datepicker to form" />
     <MESSAGE value="Datepicker added, broken" />
+    <MESSAGE value="Datepicker still not working why??? Added to index css and js, is it lack of directive?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1930,13 +1934,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/metro/datepicker/bootstrap-datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="46" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/styles/metro/datepicker/datepicker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1981,11 +1978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../fom/projects/optho/graphics/templates/metro/stilearn-metro/js/select2/select2.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
@@ -1997,23 +1990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../fom/projects/optho/graphics/templates/metro/stilearn-metro/form-elements.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2078" column="71" selection-start="165166" selection-end="165166" vertical-scroll-proportion="-7.607843">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/patients.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="18" selection-start="12739" selection-end="12739" vertical-scroll-proportion="0.9581796">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="596" column="52" selection-start="30185" selection-end="30191" vertical-scroll-proportion="-3.4935064">
+        <state line="2078" column="71" selection-start="165166" selection-end="165166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2025,13 +2002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="8" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/app.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="21" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
@@ -2039,9 +2009,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="51" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.5671296">
+        <state line="150" column="51" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="594" column="42" selection-start="30185" selection-end="30191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/patients.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="21" selection-start="9200" selection-end="9200" vertical-scroll-proportion="0.48422498">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="6" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.2030905">
           <folding />
         </state>
       </provider>
