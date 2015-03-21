@@ -33,6 +33,18 @@ class PatientsController < ApplicationController
     new_patient.last_name = params[:patient][:last_name]
     new_patient.email = params[:patient][:email]
     new_patient.title = params[:patient][:title]
+    new_patient.date_of_birth = params[:patient][:date_of_birth]
+    new_patient.gender = params[:patient][:gender]
+    new_patient.concession_type = params[:patient][:concession_type]
+    new_patient.address = params[:patient][:address]
+    new_patient.emergency_contact = params[:patient][:emergency_contact]
+    new_patient.medicare_number = params[:patient][:medicare_number]
+    new_patient.referral_type = params[:patient][:referral_type]
+    new_patient.phone_number = params[:patient][:phone_number]
+    new_patient.referring_doctor = params[:patient][:referring_doctor]
+
+
+
 
 
 

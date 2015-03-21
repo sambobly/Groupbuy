@@ -63,9 +63,83 @@
             <div class="control-group">
                 <label class="control-label" for="input">Last Name</label>
                 <div class="controls">
-                    <input type="text" class="input-xxlarge" id="input">
+                    <input type="text" class="input-xxlarge" id="input" ng-model="patient.lastName">
                 </div>
             </div><!-- /control-group -->
+            <div class="control-group" ng-model="patient.dateOfBirth">
+                <label class="control-label">DOB</label>
+                <div class="controls controls-row">
+                    <input class="span1" type="text" placeholder="DD">
+                    <input class="span1" type="text" placeholder="MM">
+                    <input class="span1" type="text" placeholder="YYYY">
+
+                </div>
+            </div>
+            <label class="control-label" for="inputSelect">Gender</label>
+            <div class="controls">
+                <select id="inputSelect" ng-model="patient.gender">
+                    <option>M</option>
+                    <option>F</option>
+                    <option>NA</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Phone Number</label>
+                <div class="controls">
+                    <input type="integer" class="input-medium" id="input" ng-model="patient.phoneNumber" placeholder="Phone Number">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="input">Email</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" id="input" ng-model="patient.email" placeholder="Email">
+                </div>
+            </div>
+            <label class="control-label" for="inputSelect">Automated reminder type</label>
+            <div class="controls">
+                <select id="inputSelect"  ng-model="patient.address">
+                    <option>None</option>
+                    <option>Email</option>
+                    <option>SMS</option>
+                    <option>Email & SMS</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Address</label>
+                <div class="controls">
+                    <input type="text" class="input-xxlarge" id="input" ng-model="patient.address">
+                </div>
+            </div>
+            <label class="control-label" for="inputSelect">Concession type</label>
+
+            <div class="controls">
+                <select id="inputSelect"  ng-model="patient.concession">
+                    <option>None</option>
+                    <option>Student</option>
+                    <option>Seniors</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Emergency Contact</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" id="input" ng-model="patient.emergencyContact" placeholder="Emergency Contact">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Medicare Number</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" id="input" ng-model="patient.medicareNumber" placeholder="Medicare Number">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input">Referring Doctor</label>
+                <div class="controls">
+                    <input type="text" class="input-medium" id="input" ng-model="patient.referringDoctor" placeholder="Referring Doctor">
+                </div>
+            </div>
+
+            </div>
             <label class="control-label" for="datepicker">Datepicker #1</label>
             <div class="controls">
                 <input type="text" value="06-16-2013" data-fx="datepicker" id="datepicker">

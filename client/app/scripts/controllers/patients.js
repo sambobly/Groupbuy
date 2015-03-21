@@ -23,7 +23,17 @@ angular.module('clientApp')
             newPatientFirstName: '',
             newPatientLastName: '',
             newPatientEmail: '',
-            newPatientTitle: ''
+            newPatientTitle: '',
+            newPatientDateOfBirth: '',
+            newPatientGender: '',
+            newPatientConcessionType: '',
+            newPatientAddress: '',
+            newPatientMedicareNumber: '',
+            newPatientEmergencyContact: '',
+            newPatientReferralType: '',
+            newPatientPhoneNumber: '',
+            newPatientReferringDoctor: '',
+
         };
         $scope.navNewPatient = function() {
             return $location.url('/patient/new');
@@ -73,6 +83,9 @@ angular.module('clientApp')
 
         $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
         $scope.format = $scope.formats[0];
+        $scope.example = {
+            value: new Date(2013, 9, 22)
+        };
 
         // patientData.createPatient = function(newPatient) {};
         //if (newPatient.newPatientFirstName === '' || newPatient.newPatientLastName === '') {
