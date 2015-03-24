@@ -6,7 +6,6 @@ Optho::Application.routes.draw do
 
   resources :checkouts
 
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -174,8 +173,6 @@ resources :doctors do
     collection do
       get 'find'
       get 'index'
-      get 'findByDate'
-      get 'findNextAvailableSlot'
       post 'create'
       post 'destroy'
       post 'edit'
@@ -192,6 +189,7 @@ resources :doctors do
       get 'show'
     end
   end
+
   
   # =========================================
   # = Routing for the API (used by Angular) =
@@ -204,6 +202,8 @@ resources :doctors do
   resources :consulttemplates, only:[:index, :create, :update, :destroy]
   resources :products, only:[:index, :create, :update, :destroy]
   resources :templates, only:[:index, :create, :update, :destroy]
+  resources :appointments, only:[:index, :create, :update, :destroy]
+
 
 
 end
@@ -211,7 +211,7 @@ end
 
   end
     get "/appointments(.:format)" => "appointments#index"
-    get "/appointments/.id(.:format)" => "appointments#show"
+    get "/appointments/.id(.:format)" => "appointments#index"
     get "/patients(.:format)" => "patients#index"
     get "/patients/.id(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"

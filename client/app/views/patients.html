@@ -46,7 +46,7 @@
         <form class="form-horizontal">
             <label class="control-label" for="inputSelect">Title</label>
             <div class="controls">
-                <select id="inputSelect">
+                <select id="inputSelect" ng-model="patient.title">
                     <option>Mr</option>
                     <option>Mrs</option>
                     <option>Ms</option>
@@ -69,11 +69,16 @@
             <div class="control-group" ng-model="patient.dateOfBirth">
                 <label class="control-label">DOB</label>
                 <div class="controls controls-row">
-                    <input class="span1" type="text" placeholder="DD">
-                    <input class="span1" type="text" placeholder="MM">
-                    <input class="span1" type="text" placeholder="YYYY">
+                    <input class="span1" type="integer" placeholder="DD">
+                    <input class="span1" type="integer" placeholder="MM">
+                    <input class="span1" type="integer" placeholder="YYYY">
 
                 </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputSelect">Date of birth</label>
+                <input type="date" class="input-medium" id="input" ng-model="patient.dateOfBirth">
+
             </div>
             <label class="control-label" for="inputSelect">Gender</label>
             <div class="controls">
@@ -114,7 +119,7 @@
             <label class="control-label" for="inputSelect">Concession type</label>
 
             <div class="controls">
-                <select id="inputSelect"  ng-model="patient.concession">
+                <select id="inputSelect"  ng-model="patient.concessionType">
                     <option>None</option>
                     <option>Student</option>
                     <option>Seniors</option>

@@ -1,4 +1,14 @@
-class AppointmentsController < ApplicationController
+  class AppointmentsController < ApplicationController
+  respond_to :json
+  private
+
+  def product_params
+    params.require(:appointment).permit(:name, :start_time, :end_time, :start_date, :end_date :doctor_name, :doctor_id, :patient_id)
+  end
+  end
+
+  before_action :set_appointment, only: [:show, :edit, :update, :destroy, :create]
+
   layout 'bootstrap'
   before_filter :set_search
 

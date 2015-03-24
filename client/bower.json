@@ -15,7 +15,9 @@
     "angular-sanitize": "^1.3.0",
     "angular-touch": "^1.3.0",
     "angular-ui-router": "~0.2.13",
-    "angularjs-rails-resource": "~1.2.1"
+    "angularjs-rails-resource": "~1.2.1",
+    "angular-ui-calendar": "latest"
+
   },
   "devDependencies": {
     "angular-mocks": "~1.3.0",

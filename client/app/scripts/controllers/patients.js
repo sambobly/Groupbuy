@@ -33,7 +33,6 @@ angular.module('clientApp')
             newPatientReferralType: '',
             newPatientPhoneNumber: '',
             newPatientReferringDoctor: '',
-
         };
         $scope.navNewPatient = function() {
             return $location.url('/patient/new');

@@ -21,6 +21,7 @@ angular
   "ui.router"
   "ui.bootstrap"
   "ui.bootstrap.tpls"
+  "ui.calendar"
   "rails"
   "clientControllers"
   "clientDirectives"
@@ -53,8 +54,12 @@ angular
     ).state("templates",
       url: "/templates",
       templateUrl: "views/templates.html"
-      controller: "TemplatesController")
-    ])
+      controller: "TemplatesController"
+    ).state("appointments",
+      url: "/appointments",
+      templateUrl: "views/appointments.html"
+      controller: "AppointmentsController"
+  )])
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
@@ -81,6 +86,12 @@ Client.config(['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when('/template/new', { templateUrl: '../api/templates.html', controller: 'TemplatesController' } )
   .when('/template/:templateId', { templateUrl: '../api/templates.html', controller: 'TemplatesController'} )
+  ])
+Client.config(  ['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/appointment/new', { templateUrl: '../api/appointments.html', controller: 'AppointmentsController' } )
+  .when('/appointment/:appointmentId', { templateUrl: '../api/appointments.html', controller: 'AppointmentsController' } )
   ])
 
 #.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
