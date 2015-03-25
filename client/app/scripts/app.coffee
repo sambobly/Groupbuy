@@ -59,7 +59,11 @@ angular
       url: "/appointments",
       templateUrl: "views/appointments.html"
       controller: "AppointmentsController"
-  )])
+    ).state("taxes",
+      url: "/taxes",
+      templateUrl: "views/taxes.html"
+      controller: "TaxesController"
+)])
 .config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
@@ -93,6 +97,11 @@ Client.config(  ['$routeProvider', ($routeProvider) ->
   .when('/appointment/new', { templateUrl: '../api/appointments.html', controller: 'AppointmentsController' } )
   .when('/appointment/:appointmentId', { templateUrl: '../api/appointments.html', controller: 'AppointmentsController' } )
   ])
-
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/tax/new', { templateUrl: '../api/taxes.html', controller: 'TaxController' } )
+  .when('/tax/:templateId', { templateUrl: '../api/taxes.html', controller: 'TaxController'} )
+  ])
 #.when('/post/:postId/edit', { templateUrl: '../assets/mainEditPost.html', controller: 'EditPostCtrl' } )
 

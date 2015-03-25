@@ -53,6 +53,13 @@ clientServices.factory('Appointment', ['railsResourceFactory', function (railsRe
         name: 'appointment'
     });
 }]);
+
+clientServices.factory('Tax', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/taxes',
+        name: 'tax'
+    });
+}]);
   //Create a rails resource factory for every model that needs to sync.
 // Tells rails resource factory to automatically implemetn the RESTful routes
 // dont have to manually set urls

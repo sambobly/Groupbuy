@@ -1,5 +1,7 @@
 Optho::Application.routes.draw do
 
+  resources :taxes
+
   resources :templates
 
   resources :products
@@ -90,6 +92,26 @@ end
       end
     end
     resources :products do
+      collection do
+        get 'find'
+        get 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :taxes do
       collection do
         get 'find'
         get 'index'
@@ -203,6 +225,7 @@ resources :doctors do
   resources :products, only:[:index, :create, :update, :destroy]
   resources :templates, only:[:index, :create, :update, :destroy]
   resources :appointments, only:[:index, :create, :update, :destroy]
+  resources :taxes, only:[:index, :create, :update, :destroy]
 
 
 
@@ -220,6 +243,7 @@ end
     get "/products/.id(.:format)" => "products#index"
     get "/templates(.:format)" => "templates#index"
     get "/templates/.id(.:format)" => "templates#index"
-
+    get "/taxes(.:format)" => "taxes#index"
+    get "/taxes/.id(.:format)" => "taxes#index"
 end
 
