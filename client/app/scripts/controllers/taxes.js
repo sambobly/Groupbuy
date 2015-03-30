@@ -14,7 +14,7 @@ angular.module('clientApp')
             taxName: '',
             taxAmount: ''
         };
-        $scope.createTax = function() {
+        $        scope.createTax = function() {
             $scope.tax.create()
                 .then(function(response) {
                     c.$setValidity('unique', formData.isUnique);
