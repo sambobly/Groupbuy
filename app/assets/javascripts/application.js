@@ -52,7 +52,6 @@
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
 //= require appointments/jquery.multiselect
-//= require dist/textAngular.min.js
 //= require src/textAngular.js
 //= require src/textAngular-sanitize.js
 //= require textAngular/karma-jqlite.conf.js
@@ -70,7 +69,6 @@
 //= require angular
 //= require angular-route
 //= require textAngular/src/textangular-sanitize.js
-//= require textAngular/dist/textangular.min.js
 // app implementation
 
 //= require_tree ./angular
