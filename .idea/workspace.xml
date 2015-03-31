@@ -13,7 +13,7 @@
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427842776303" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427843039464" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -279,7 +279,7 @@
               <file leaf-file-name="appointments_controller.rb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="93" selection-start="452" selection-end="452" vertical-scroll-proportion="0.30734465">
+                    <state line="88" column="4" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.63502824">
                       <folding />
                     </state>
                   </provider>
@@ -1388,7 +1388,11 @@
       <created>1427842780295</created>
       <updated>1427842780295</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Trying to deploy to heroku to allow fb devl, cchanged database to production progsql&#10;">
+      <created>1427843043298</created>
+      <updated>1427843043298</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1644,7 +1648,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="93" selection-start="452" selection-end="452" vertical-scroll-proportion="0.30734465">
+        <state line="88" column="4" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.63502824">
           <folding />
         </state>
       </provider>
