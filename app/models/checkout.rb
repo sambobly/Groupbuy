@@ -21,4 +21,4 @@ class Checkout < ActiveRecord::Base
     # TODO check if the most recent checkin is correct
   end
 end
-end
+
