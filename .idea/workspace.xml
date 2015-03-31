@@ -8,12 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/checkout.rb" afterPath="$PROJECT_DIR$/app/models/checkout.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427843180863" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427843310022" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -258,15 +258,6 @@
         <splitter split-orientation="horizontal" split-proportion="0.6339223">
           <split-first>
             <leaf>
-              <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/index.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="624" column="0" selection-start="32712" selection-end="32712" vertical-scroll-proportion="-8.192307">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
               <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/Gemfile">
                   <provider selected="true" editor-type-id="text-editor">
@@ -285,10 +276,19 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="checkout.rb" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="checkout.rb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/models/checkout.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="15" column="62" selection-start="468" selection-end="468" vertical-scroll-proportion="0.28396437">
+                    <state line="13" column="45" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="85" column="3" selection-start="2107" selection-end="2107" vertical-scroll-proportion="0.8674833">
                       <folding />
                     </state>
                   </provider>
@@ -392,7 +392,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/app/views/appointments.html" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
         <option value="$PROJECT_DIR$/app/controllers/taxes_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/tax.rb" />
@@ -408,6 +407,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/checkout.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       </list>
     </option>
   </component>
@@ -1396,7 +1396,11 @@
       <created>1427843185143</created>
       <updated>1427843185143</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Trying to deploy to heroku to allow fb devl, cchanged database to production progsql&#10;">
+      <created>1427843314767</created>
+      <updated>1427843314767</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1543,20 +1547,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="2" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/boot.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1652,7 +1642,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/checkout.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="62" selection-start="468" selection-end="468" vertical-scroll-proportion="0.28396437">
+        <state line="13" column="45" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="624" column="0" selection-start="32712" selection-end="32712" vertical-scroll-proportion="-8.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="3" selection-start="2107" selection-end="2107" vertical-scroll-proportion="0.8674833">
           <folding />
         </state>
       </provider>

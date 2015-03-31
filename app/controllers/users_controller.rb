@@ -71,7 +71,7 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
