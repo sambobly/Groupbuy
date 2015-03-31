@@ -3,7 +3,7 @@
   private
 
   def product_params
-    params.require(:appointment).permit(:name, :start_time, :end_time, :start_date, :end_date :doctor_name, :doctor_id, :patient_id)
+    params.require(:appointment).permit(:name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
   end
   end
 
