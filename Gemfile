@@ -6,10 +6,10 @@ gem 'rails'
 # Use mysql as the database for Active Record
 group :test, :production do
   gem 'og'
+  gem 'rails_12factor'
 end
-group :development do
   gem 'mysql2', '0.3.16'
-end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

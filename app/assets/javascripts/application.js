@@ -52,10 +52,11 @@
 //= require appointments/jquery.timepicker
 //= require appointments/jquery.datepair
 //= require appointments/jquery.multiselect
-//= require src/textAngular.js
-//= require src/textAngular-sanitize.js
-//= require textAngular/karma-jqlite.conf.js
-//= require textAngular/karma-jquery.conf.js
+//= require angular/textAngular/dist/textAngular.min.js
+//= require angular/textAngular/src/textAngular.js
+//= require angular/textAngular/src/textAngular-sanitize.js
+//= require angular/textAngular/karma-jqlite.conf.js
+//= require angular/textAngular/karma-jquery.conf.js
 //= require rangy-core
 //= require rangy-textrange
 //= require appointments/appointments
@@ -68,7 +69,7 @@
 // library
 //= require angular
 //= require angular-route
-//= require textAngular/src/textangular-sanitize.js
+//= require textAngular
 // app implementation
 
 //= require_tree ./angular
