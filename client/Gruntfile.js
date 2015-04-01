@@ -451,7 +451,7 @@ module.exports = function (grunt) {
           },
           heroku: {
               options: {
-                  remote: 'git@heroku.com/pure-citadel-1687 .git',
+                  remote: 'git@heroku.com/pure-citadel-1687.1git',
                   branch: 'master',
                   tag: pkg.version
               }
