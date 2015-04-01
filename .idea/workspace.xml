@@ -8,12 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/index.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427843954975" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427846325148" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -30,7 +30,7 @@
     <file path="/application.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386585358807" ignored="false" />
     <file path="/Gemfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427842754996" ignored="false" />
     <file path="/appointments.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427194774766" ignored="false" />
-    <file path="/routes.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427287162044" ignored="false" />
+    <file path="/routes.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427846872372" ignored="false" />
     <file path="/search.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386587767504" ignored="false" />
     <file path="/search.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389147921800" ignored="false" />
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
@@ -140,21 +140,21 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.12631579">
+    <splitter split-orientation="horizontal" split-proportion="0.66707766">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
             <leaf>
-              <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/config/routes.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="227" column="0" selection-start="4506" selection-end="4506" vertical-scroll-proportion="0.0">
+                    <state line="191" column="22" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.2920143">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="grunt.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="grunt.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/node_modules/grunt/lib/grunt.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -285,10 +285,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="3" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.059371363">
+                    <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.92129034">
                       <folding />
                     </state>
                   </provider>
@@ -393,7 +393,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/client/app/scripts/services.js" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/taxes.js" />
         <option value="$PROJECT_DIR$/client/app/views/taxes.html" />
@@ -408,6 +407,7 @@
         <option value="$PROJECT_DIR$/app/jobs/sample.rb" />
         <option value="$PROJECT_DIR$/app/jobs/waitingroom.rb" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -1466,7 +1466,15 @@
       <created>1427843958080</created>
       <updated>1427843958080</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="Trying to deploy to heroku to allow fb devl, cchanged database to production progsql&#10;">
+      <created>1427845554080</created>
+      <updated>1427845554080</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Trying to deploy to heroku to allow fb devl, cchanged database to production progsql&#10;">
+      <created>1427846328444</created>
+      <updated>1427846328444</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1613,20 +1621,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="34" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="60" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
@@ -1720,7 +1714,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.059371363">
+        <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.92129034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/node_modules/grunt/lib/grunt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="22" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.2920143">
           <folding />
         </state>
       </provider>
