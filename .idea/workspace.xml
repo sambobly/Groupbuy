@@ -255,48 +255,15 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.6339223">
+        <splitter split-orientation="horizontal" split-proportion="0.88912886">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.5124434">
+            <splitter split-orientation="horizontal" split-proportion="0.5">
               <split-first>
                 <leaf>
-                  <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+                  <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/client/app/index.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="624" column="0" selection-start="32712" selection-end="32712" vertical-scroll-proportion="-6.576923">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/app/index.html">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="17" column="18" selection-start="552" selection-end="552" vertical-scroll-proportion="0.3617021">
-                          <folding>
-                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="-27.461538">
+                        <state line="570" column="33" selection-start="1639" selection-end="29225" vertical-scroll-proportion="0.8251928">
                           <folding />
                         </state>
                       </provider>
@@ -347,10 +314,37 @@
                       </provider>
                     </entry>
                   </file>
+                  <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/index.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="557" column="0" selection-start="28341" selection-end="28341" vertical-scroll-proportion="-13.076923">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
                   <file leaf-file-name="manifest-17e39620e9c849307d9a1b90e66d8c79.json" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/public/assets/manifest-17e39620e9c849307d9a1b90e66d8c79.json">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="-27.461538">
                           <folding />
                         </state>
                       </provider>
@@ -360,11 +354,17 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+                  <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/app/index.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="188" column="25" selection-start="4960" selection-end="8191" vertical-scroll-proportion="0.7853828">
-                          <folding />
+                        <state line="553" column="27" selection-start="28122" selection-end="28122" vertical-scroll-proportion="0.96055686">
+                          <folding>
+                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                          </folding>
                         </state>
                       </provider>
                     </entry>
@@ -387,7 +387,7 @@
               <file leaf-file-name="doctors_controller.rb" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                    <state line="14" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.27450982">
                       <folding />
                     </state>
                   </provider>
@@ -1597,7 +1597,11 @@
       <created>1427853205659</created>
       <updated>1427853205659</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Trying to deploy to heroku to allow fb devl, cchanged database to production progsql&#10;">
+      <created>1427853385304</created>
+      <updated>1427853385304</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1744,62 +1748,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/checkout.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/boot.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/jobs/waitingroom.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/jobs/sample.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="56" selection-start="1" selection-end="1" vertical-scroll-proportion="0.019473081">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="3" selection-start="2107" selection-end="2107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="2" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1830,13 +1778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="-27.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="200" column="25" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.5">
@@ -1844,22 +1785,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.27450982">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="8" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="60" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/checkout.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="3" selection-start="2107" selection-end="2107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="36" selection-start="2707" selection-end="2707" vertical-scroll-proportion="-0.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/manifest-17e39620e9c849307d9a1b90e66d8c79.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="5" selection-start="1756" selection-end="1756" vertical-scroll-proportion="-27.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="624" column="0" selection-start="32712" selection-end="32712" vertical-scroll-proportion="-6.576923">
+        <state line="570" column="33" selection-start="1639" selection-end="29225" vertical-scroll-proportion="0.8251928">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="552" selection-end="552" vertical-scroll-proportion="0.3617021">
+        <state line="553" column="27" selection-start="28122" selection-end="28122" vertical-scroll-proportion="0.96055686">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
