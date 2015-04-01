@@ -189,7 +189,7 @@ resources :doctors do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root '#consultations'
+  root 'welcome#index'
   
   resources :appointments do
     collection do
