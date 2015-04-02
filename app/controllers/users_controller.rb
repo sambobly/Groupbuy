@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @users = User.order(:name)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html
       format.json { render json: @users }
     end
   end

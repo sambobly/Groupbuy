@@ -11,7 +11,7 @@ class DoctorsController < ApplicationController
   def all
     @doctors = Doctor.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html
       format.json { render json: @doctors}
     end
   end
@@ -20,7 +20,7 @@ class DoctorsController < ApplicationController
   def show
     @doctor = Doctor.find(params[:id])
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html
       format.json { render json: @doctors}
     end
   end
