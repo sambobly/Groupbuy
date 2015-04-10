@@ -113,7 +113,6 @@ end
       end
     end
     resources :taxes do
-      match 'index', to:'taxes#index', via:[:get, :post]
       collection do
         get 'find'
         get 'index'
@@ -192,7 +191,7 @@ resources :doctors do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'taxes#index'
+  root :to => 'taxes#index(get, post)'
 
   
   resources :appointments do
