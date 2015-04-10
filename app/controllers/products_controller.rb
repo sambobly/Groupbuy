@@ -2,6 +2,7 @@ class ProductsController < InheritedResources::Base
  def index
 
  end
+
   respond_to :json
   private
 
