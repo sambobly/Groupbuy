@@ -103,7 +103,6 @@ end
       member do
         post 'destroy'
         post 'update'
-        post 'index'
         get 'edit'
         patch 'edit'
         patch 'update'
