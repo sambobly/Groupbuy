@@ -1,5 +1,5 @@
 Optho::Application.routes.draw do
-  #post "/" => "taxes#index", :as => "root"
+  get "/" => "taxes#index", :as => "root"
 
   resources :taxes
 
