@@ -116,6 +116,7 @@ end
       collection do
         get 'find'
         get 'index'
+        post 'index'
         post 'create'
         post 'destroy'
         post 'edit'
