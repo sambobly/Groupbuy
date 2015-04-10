@@ -113,6 +113,7 @@ end
       end
     end
     resources :taxes do
+      match 'index', to:'taxes#index', via:[:get, :post]
       collection do
         get 'find'
         get 'index'
@@ -192,6 +193,7 @@ resources :doctors do
 
   # You can have the root of your site routed with "root"
   root 'taxes#index'
+
   
   resources :appointments do
     collection do
