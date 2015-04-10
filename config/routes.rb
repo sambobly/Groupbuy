@@ -95,6 +95,7 @@ end
       collection do
         get 'find'
         get 'index'
+        post 'index'
         post 'create'
         post 'destroy'
         post 'edit'
@@ -189,7 +190,7 @@ resources :doctors do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'products#index'
   
   resources :appointments do
     collection do
