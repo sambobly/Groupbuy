@@ -4,6 +4,8 @@ Optho::Application.routes.draw do
 
   resources :templates
 
+  resources :products
+
   resources :checkouts
 
   devise_for :admin_users, ActiveAdmin::Devise.config
