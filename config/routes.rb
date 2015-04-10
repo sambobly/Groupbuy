@@ -193,6 +193,8 @@ resources :doctors do
 
   # You can have the root of your site routed with "root"
   root 'taxes#index'
+  match '/', to: 'taxes#index', via: [:get, :post]
+
 
   resources :appointments do
     collection do
