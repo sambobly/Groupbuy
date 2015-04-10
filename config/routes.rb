@@ -4,8 +4,6 @@ Optho::Application.routes.draw do
 
   resources :templates
 
-  resources :products
-
   resources :checkouts
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -105,6 +103,7 @@ end
       member do
         post 'destroy'
         post 'update'
+        post 'index'
         get 'edit'
         patch 'edit'
         patch 'update'
