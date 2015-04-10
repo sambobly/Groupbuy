@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  push "/" => "taxes#index", :as => "root"
 
   resources :taxes
 
