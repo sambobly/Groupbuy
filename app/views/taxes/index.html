@@ -29,7 +29,7 @@
     function goLogIn() {
     FB.login(function(response) {
     $("loggedOn").css('display', 'block');
-    $('loggedOff').css('display', 'none');
+    $("loggedOff").css('display', 'none');
     }, {scope: 'email,user_likes'});
     }
 
