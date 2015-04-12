@@ -20,7 +20,7 @@
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
             } else if (response.status === 'not_authorized') {
-                console.log;("USER IS IN FACEBOOK, NOT APP");
+                console.log;("USER IS IN FACEBOOK, NOT APP")
                 // the user is logged in to Facebook,
                 // but has not authenticated your app
             } else {
@@ -34,7 +34,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";           11
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
