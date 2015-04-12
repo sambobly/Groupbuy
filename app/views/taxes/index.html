@@ -8,7 +8,13 @@
             xfbml      : true,
             version    : 'v2.3'
         });
-
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.likes',
+            action_properties: JSON.stringify({
+                object:'https://developers.facebook.com/docs/',
+            })
+        }, function(response){});
         FB.login(function(){}, {scope: 'publish_actions'});
         FB.getLoginStatus(function(response) {
             if (response.status === 'connected') {
@@ -22,21 +28,12 @@
             } else if (response.status === 'not_authorized')  user is logged in to Facebook,
                 // but has not authenticated your app
             } else {
-                window.top.location="https://www.facebook.com/index.php"
+            FB.login();
                 // the user isn't logged in to Facebook.
             })
+
         };
-    function goLogIn() {
-        FB.login(function(response) {
-            if (response.authResponse) {
-                console.log('Welcome!  Fetching your information.... ');
-                FB.api('/me', function(response) {
-                    console.log('Good to see you, ' + response.name + '.');
-                });
-            } else {
-                console.log('User cancelled login or did not fully authorize.');
-            }
-        })};
+
 
     (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -53,7 +50,7 @@
         data-width="450"
         data-show-faces="true">
 </div>
-
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
 <table>
   <thead>
     <tr>
