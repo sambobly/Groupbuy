@@ -19,19 +19,19 @@
                 // and signed request each expire
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
-            } else if (response.status === 'not_authorized') {
-                console.log;("USER IS IN FACEBOOK, NOT APP");
-                FB.login(function(response) {
-                }, {scope: 'email, user_likes'});
-                });
-                // the user is logged in to Facebook,
+            } else if (response.status === 'not_authorized')  user is logged in to Facebook,
                 // but has not authenticated your app
             } else {
                 window.top.location="https://www.facebook.com/index.php"
                 // the user isn't logged in to Facebook.
-            }
-        });
-    };
+            })
+        };
+    function goLogin() {
+    FB.login(function(response) {
+    $("loggedOn").css('display', 'block');
+    $('loggedOff').css('display', 'none');
+    }, {scope: 'email,user_likes'});
+    }
 
     (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -74,3 +74,7 @@
 <br>
 
 <%= link_to 'New Tax', new_tax_path %>
+<div id="content">
+ <div class="loggedOff">"Mate, login huh?"</div>
+ <div class="loggedOn">"Welcome mate! Thanks for visiting!</div>
+</div>

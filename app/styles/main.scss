@@ -88,4 +88,10 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+  .loggedOff {
+    display: block;
+  }
+  .loggedOn {
+    display: none;
+  }
 }
