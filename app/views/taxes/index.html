@@ -20,7 +20,10 @@
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
             } else if (response.status === 'not_authorized') {
-                console.log;("USER IS IN FACEBOOK, NOT APP")
+                console.log;("USER IS IN FACEBOOK, NOT APP");
+                FB.login(function(response) {
+                }, {scope: 'email, user_likes'});
+                });
                 // the user is logged in to Facebook,
                 // but has not authenticated your app
             } else {
