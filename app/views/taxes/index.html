@@ -1,6 +1,6 @@
 <h1>Listing taxes</h1>
 
-
+<div id="fb-root"></div>
 <script>
     window.fbAsyncInit = function() {
         FB.init({
@@ -16,6 +16,7 @@
                 FB.login();
             }
         });
+        FB.login(function(){}, {scope: 'publish_actions'});
     };
 
     (function(d, s, id){
