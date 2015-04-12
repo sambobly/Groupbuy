@@ -26,7 +26,7 @@
                 // the user isn't logged in to Facebook.
             })
         };
-    function goLogin() {
+    function goLogIn() {
     FB.login(function(response) {
     $("loggedOn").css('display', 'block');
     $('loggedOff').css('display', 'none');
@@ -75,6 +75,7 @@
 
 <%= link_to 'New Tax', new_tax_path %>
 <div id="content">
- <div class="loggedOff">"Mate, login huh?"</div>
+ <div class="loggedOff">Mate, login huh? <a href="a" onclick="goLogIn()">Log In</a>
+ </div>
  <div class="loggedOn">"Welcome mate! Thanks for visiting!</div>
 </div>
