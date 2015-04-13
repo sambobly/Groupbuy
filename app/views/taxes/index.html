@@ -12,7 +12,7 @@
             method: 'share_open_graph',
             action_type: 'og.likes',
             action_properties: JSON.stringify({
-                object:'https://developers.facebook.com/docs/',
+                object:'https://developers.facebook.com/docs/'
             })
         }, function(response){});
         FB.login(function(){}, {scope: 'publish_actions'});
@@ -25,7 +25,7 @@
                 // and signed request each expire
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
-            } else if (response.status === 'not_authorized')  user is logged in to Facebook,
+            } else if (response.status === 'not_authorized')
                 // but has not authenticated your app
                     FB.login(function(response) {
                     }, {scope: 'email'});
