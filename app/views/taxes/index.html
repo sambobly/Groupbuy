@@ -25,14 +25,27 @@
                 // and signed request each expire
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
-            } else if (response.status === 'not_authorized')
-                // but has not authenticated your app
-                    FB.login(function(response) {
-                    }, {scope: 'email'});
-             else {
-            FB.login();
-                // the user isn't logged in to Facebook.
-            }})
+            } else if (response.status === 'not_authorized') {
+                FB.login(
+                        function(response) {
+                            if (response.authResponse) {
+                                top.location.href='http://domain.com/directory/mobile/';
+                            } else {}
+                        },
+                        { scope: 'email,user_birthday,user_location,user_likes' }
+                );
+            } else {
+                FB.login(
+                        function(response) {
+                            if (response.authResponse) {
+                                top.location.href='http://domain.com/directory/mobile/';
+                            } else {}
+                        },
+                        { scope: 'email,user_birthday,user_location,user_likes' }
+                );
+            }
+            }
+    //})
 
 
     (function(d, s, id){
