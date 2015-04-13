@@ -28,14 +28,11 @@
             } else if (response.status === 'not_authorized')  user is logged in to Facebook,
                 // but has not authenticated your app
                     FB.login(function(response) {
-                    }, {scope: 'email'})
-                    });
-            } else {
+                    }, {scope: 'email'});
+             else {
             FB.login();
                 // the user isn't logged in to Facebook.
-            })
-
-        };
+            }})
 
 
     (function(d, s, id){
