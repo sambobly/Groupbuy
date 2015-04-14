@@ -77,12 +77,12 @@
         FB.api('/me', function(response) {
             console.log('Successful login for: ' + response.name + response.gender);
             document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + response.gender + response.likes + '!';
+                    'Thanks for logging in, ' + response.name + response.gender + response.place-tag-id + '!';
         });
     };
     function test2API() {
         FB.api('/'+uid+'/friends', {
-            fields: 'id,first_name,last_name,name,birthday,gender,location,link,installed'
+            fields: ',first_name,last_name,name,photo-place'
         }, function(response){
             console.log(response.data);
         });
