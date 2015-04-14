@@ -77,9 +77,14 @@
         FB.api('/me', function(response) {
             console.log('Successful login for: ' + response.name + response.gender);
             document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + response.gender + '!';
+                    'Thanks for logging in, ' + response.name + response.gender + response.likes + '!';
         });
-    }
+    };
+    FB.api('/'+uid+'/friends', {
+        fields: 'id,first_name,last_name,name,birthday,gender,location,link,installed'
+    }, function(response){
+        console.log(response.data);
+    });
 </script>
 
 <!--
