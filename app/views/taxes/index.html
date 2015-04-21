@@ -75,15 +75,15 @@
     function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name + response.gender);
+            console.log('Successful login for: ' + response.name + response.gender + response.place-tag-place);
             document.getElementById('status').innerHTML =
                     'Thanks for logging in, ' + response.name + response.gender + '!';
         });
     };
     function test2API() {
-        FB.api('/'+uid+'/friends', {
+        FB.api('/me', {
             fields: ',first_name,last_name,name,place-tag-place'
-        }, function(response){
+        }, function(response){                                1
             console.log(response.data);
         });
     }
