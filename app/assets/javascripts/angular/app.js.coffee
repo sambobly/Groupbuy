@@ -6,6 +6,12 @@
 
 angular.module('opthoApp', [
   'ngRoute',
-  'rails'
+  'ngResource',
+  'opthoControllers',
+  'opthoDirectives',
+  'opthoServices',
+  'textAngular',
+  'rails',
+  ''
   ]);
 
