@@ -83,7 +83,7 @@
     function test2API() {
         FB.api('/me', {
             fields: 'first_name,last_name,name,place-tag-place'
-        }, function(response){                                1
+        }, function(response){
             console.log(response.data);
         });
     }
@@ -96,7 +96,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email, user_likes, user_places" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_likes,user_place_visits,user_friends,user_photos,user_posts,user_tagged_places" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
