@@ -4,7 +4,8 @@ var opthoApp = angular.module('opthoApp', [
 'opthoControllers',
 'opthoDirectives',
 'opthoServices',
-'textAngular'
+'textAngular',
+'ezfb'
 ]);
 
 
@@ -17,10 +18,12 @@ function($routeProvider) {
             redirectTo: '/images'
         });
 }]);
-opthoApp.config(function (ezfbProvider) {
+opthoApp.config(['$ezfbProvider',
+    function (ezfbProvider) {
     ezfbProvider.setLocale('zh_TW');
-});
-opthoApp.config(function (ezfbProvider) {
+}]);
+opthoApp.config(['$ezfbProvider',
+    function (ezfbProvider) {
     ezfbProvider.setInitParams({
         // This is my FB app id for plunker demo app
         appId: '614823908618705',
@@ -30,4 +33,4 @@ opthoApp.config(function (ezfbProvider) {
         // https://developers.facebook.com/docs/javascript/reference/FB.init/v2.0
         version: 'v2.0'
     });
-});
+}]);

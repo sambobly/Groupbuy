@@ -54,7 +54,7 @@ opthoControllers.controller('ConsultController', ['$scope', function($scope) {
 
     $scope.reset();
 
-}])
+}]);
 opthoControllers.controller('MedicationController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
     $http.get('/assets/samplemedications.json').success(function(data) {
         $scope.medications = data.medications;
@@ -176,7 +176,7 @@ opthoControllers.controller('EmailController', ['$scope', '$routeParams', '$http
         };
     });
 }]);
-opthoControllers..controller('MainCtrl', function($scope, ezfb, $window, $location, $q) {
+opthoControllers.controller('MainCtrl', function($scope, ezfb, $window, $location, $q) {
 
     updateMe();
 
