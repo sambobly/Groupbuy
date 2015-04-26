@@ -119,3 +119,80 @@ opthoDirectives.directive("myDownsize", function() {
        link: linkFunction
     };
 });
+opthoDirectives.directive ('facebook', function ($location, facebook) {
+    var template = "<div id='fb-root'></div>";
+
+    var script = document.createElement('script');
+    script.src = "//connect.facebook.net/en_US/all.js'"
+    script.id = 'facebook-jssdk'
+    script.async = true
+
+    return {
+        restrict:'EA',
+        template: template,
+
+        scope: {
+            appId: '@',
+            parameters: '='
+        },
+
+        link: function (scope, element, attrs) {
+            if (!facebook.initialized ()) {
+                document.body.appendChild(script);
+                var parameters = scope.parameters || {};
+
+                angular.extend (parameters, {appId: scope.appId});
+                facebook.init (parameters);
+            }
+        }
+    }
+});
+opthoDirectives.directive ('facebookLogin', function () {
+    var template =
+        '<div class="fb-login-button" ' +
+            'data-max-rows="1" ' +
+            'data-size="{{size||\'medium\'}}" ' +
+            'data-show-faces="{{!!showFaces}}" ' +
+            'data-auto-logout-link="{{!!autoLogout}}" ' +
+            'data-scope="{{scope || \'basic_info\'}}"' +
+            '></div>';
+
+    return {
+        restrict: 'E',
+        scope: {
+            'autoLogout': '@',
+            'size': '@',
+            'showFaces': '@',
+            'scope': '@'
+        },
+        template: template
+    }
+});
+opthoDirectives.directive('facebookLike', function ($location) {
+    var template = '<div class="fb-like" ' +
+        'data-href="{{href || currentPage}}" ' +
+        'data-colorscheme="{{colorScheme || \'light\'}}" ' +
+        'data-layout="{{layout || \'standard\'}}" ' +
+        'data-action="{{ action || \'like\'}}" ' +
+        'data-show-faces="{{!!showFaces}}" ' +
+        'data-share="{{!!share}}"' +
+        'data-action="{{action || \'like\'}}"' +
+        'data-send="false"></div>';
+
+    return {
+        restrict:'E',
+        scope: {
+            'colorScheme': '@',
+            'layout':      '@',
+            'showFaces':   '@',
+            'href':        '@',
+            'action':      '@',
+            'share':       '@',
+        },
+        template: template,
+        link: function(scope, element, attrs) {
+            scope.currentPage = $location.absUrl();
+        },
+    }
+});
+
