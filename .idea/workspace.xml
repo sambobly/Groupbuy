@@ -9,16 +9,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="1973ec33-d897-4dc0-a32e-541a7ff7fc41" name="New changelist" comment="" />
+    <list id="961ad294-cb28-4097-a08f-dec4b1c2df4f" name="Failed commit: Default" comment="Trying ye old facebook api to get user data">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/taxes.html" afterPath="$PROJECT_DIR$/client/app/views/taxes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="1973ec33-d897-4dc0-a32e-541a7ff7fc41" name="New changelist" comment="" />
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430047859690" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430048483641" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -155,37 +157,22 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.15547264">
+    <splitter split-orientation="horizontal" split-proportion="0.43097016">
       <split-first>
         <leaf>
-          <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/node_modules/grunt-build-control/package.json">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/dist/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="40" column="19" selection-start="1196" selection-end="1196" vertical-scroll-proportion="-17.0">
+                <state line="10" column="29" selection-start="20270" selection-end="20270" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/dist/index.html">
+          <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/Gruntfile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="29" selection-start="20270" selection-end="20270" vertical-scroll-proportion="0.37362638">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".buildignore" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/.buildignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="521" column="11" selection-start="12763" selection-end="12763" vertical-scroll-proportion="0.89943504">
                   <folding />
                 </state>
               </provider>
@@ -263,7 +250,7 @@
               <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="278" column="31" selection-start="9896" selection-end="9896" vertical-scroll-proportion="0.30185184">
+                    <state line="278" column="31" selection-start="9896" selection-end="9896" vertical-scroll-proportion="0.15605493">
                       <folding />
                     </state>
                   </provider>
@@ -281,7 +268,7 @@
               <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/bower.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="15" column="24" selection-start="431" selection-end="432" vertical-scroll-proportion="-5.0">
+                    <state line="15" column="24" selection-start="431" selection-end="432" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -325,7 +312,7 @@
                       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/client/app/index.html">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                               <folding />
                             </state>
                           </provider>
@@ -334,7 +321,7 @@
                       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/app/index.html">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="65" column="61" selection-start="2320" selection-end="2320" vertical-scroll-proportion="-8.470589">
+                            <state line="65" column="61" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0">
                               <folding />
                             </state>
                           </provider>
@@ -343,7 +330,7 @@
                       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="20" column="19" selection-start="445" selection-end="445" vertical-scroll-proportion="-13.6">
+                            <state line="20" column="19" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
                               <folding />
                             </state>
                           </provider>
@@ -352,10 +339,8 @@
                       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/app/views/taxes/index.html">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="89" column="4" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.56929636">
-                              <folding>
-                                <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#!!top" expanded="true" />
-                              </folding>
+                            <state line="89" column="4" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.022911051">
+                              <folding />
                             </state>
                           </provider>
                         </entry>
@@ -363,7 +348,7 @@
                       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                               <folding />
                             </state>
                           </provider>
@@ -372,15 +357,8 @@
                       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="23" column="8" selection-start="84" selection-end="477" vertical-scroll-proportion="-12.692307">
-                              <folding>
-                                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                                <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                                <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                                <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                                <element signature="n#style#0;n#textarea#0;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-                              </folding>
+                            <state line="23" column="8" selection-start="84" selection-end="477" vertical-scroll-proportion="0.0">
+                              <folding />
                             </state>
                           </provider>
                         </entry>
@@ -401,7 +379,7 @@
                       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/app/index.html">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="13" column="44" selection-start="464" selection-end="468" vertical-scroll-proportion="0.4291262">
+                            <state line="13" column="44" selection-start="464" selection-end="468" vertical-scroll-proportion="0.020987654">
                               <folding />
                             </state>
                           </provider>
@@ -413,13 +391,11 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="true">
+                  <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="18" column="5" selection-start="715" selection-end="715" vertical-scroll-proportion="43.714287">
-                          <folding>
-                            <element signature="n#!!doc" expanded="true" />
-                          </folding>
+                        <state line="18" column="5" selection-start="715" selection-end="715" vertical-scroll-proportion="0.27419356">
+                          <folding />
                         </state>
                       </provider>
                     </entry>
@@ -427,7 +403,7 @@
                   <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="166" column="11" selection-start="5089" selection-end="5089" vertical-scroll-proportion="-4.88">
+                        <state line="166" column="11" selection-start="5089" selection-end="5089" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -436,7 +412,7 @@
                   <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/index.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="72" column="0" selection-start="2616" selection-end="2616" vertical-scroll-proportion="-5.0392156">
+                        <state line="72" column="0" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -572,11 +548,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -590,25 +562,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -626,11 +580,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -645,40 +629,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optho" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,14 +640,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="80" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="755" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="755" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="81" />
     <property name="GoToClass.includeJavaFiles" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="79" />
@@ -1907,14 +1857,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3164021" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31851852" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.33544973" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1625" sideWeight="0.68359786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1625" sideWeight="0.68359786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6719577" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5005314" order="10" side_tool="true" content_ui="tabs" />
@@ -1924,6 +1873,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267544" sideWeight="0.49946865" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3164021" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1935,7 +1885,7 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -2024,63 +1974,54 @@
           <line>76</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js</url>
+          <line>278</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="84" selection-end="477" vertical-scroll-proportion="-12.692307">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#div#0;n#td#0;n#div#4;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#1;n#div#1;n#div#7;n#form#0;n#div#2;n#body#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/taxes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="8" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.69835234">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/consulttemplates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="31" selection-start="9896" selection-end="9896" vertical-scroll-proportion="0.30185184">
+        <state line="278" column="31" selection-start="9896" selection-end="9896" vertical-scroll-proportion="0.15605493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="431" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="34" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="20" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="34" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2092,9 +2033,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2616" selection-end="2616" vertical-scroll-proportion="-5.0392156">
+        <state line="20" column="19" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxes/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="4" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.022911051">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/consultations/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="84" selection-end="477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2106,55 +2068,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0">
+        <state line="18" column="5" selection-start="715" selection-end="715" vertical-scroll-proportion="0.27419356">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="11" selection-start="5089" selection-end="5089" vertical-scroll-proportion="-4.88">
+        <state line="166" column="11" selection-start="5089" selection-end="5089" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/script.js">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="715" selection-end="715" vertical-scroll-proportion="43.714287">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="445" selection-end="445" vertical-scroll-proportion="-13.6">
+        <state line="72" column="0" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxes/index.html">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/angular/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="4" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.56929636">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="20270" selection-end="20270" vertical-scroll-proportion="0.37362638">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#5;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="28" column="27" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
