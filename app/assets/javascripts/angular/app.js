@@ -18,11 +18,11 @@ function($routeProvider) {
             redirectTo: '/images'
         });
 }]);
-opthoApp.config(['$ezfbProvider',
+opthoApp.config(['ezfbProvider',
     function (ezfbProvider) {
     ezfbProvider.setLocale('zh_TW');
 }]);
-opthoApp.config(['$ezfbProvider',
+opthoApp.config(['ezfbProvider',
     function (ezfbProvider) {
     ezfbProvider.setInitParams({
         // This is my FB app id for plunker demo app
