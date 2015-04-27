@@ -92,15 +92,15 @@
     function testAPI3() {
         console.log('CALL AGAIN!  Fetching your information.... ');
         FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name + response.gender + response.place);
+            console.log('Successful login for: ' + response.name + response.gender + response.friends);
             document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + response.gender + response.place +  '!';
+                    'Thanks for logging in, ' + response.name + response.gender + response.posts +  '!';
         });
     }
     function test2API() {
         console.log('IS THIS WORKING 1!');
         FB.api('/me', {
-            fields: 'first_name,last_name,name,place-tag-place'
+            fields: 'first_name,last_name,name,friends,photos,posts'
         }, function(response){
             console.log(response.data);
         });
