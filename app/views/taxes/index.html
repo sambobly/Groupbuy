@@ -81,19 +81,22 @@
         });
     };
     function test2API() {
+        console.log('IS THIS WORKING 1!');
         FB.api('/me', {
             fields: 'first_name,last_name,name,place-tag-place'
         }, function(response){
             console.log(response.data);
         });
     }
+    function testpermissions() {
     FB.api("me/permissions", function(response) {
+        console.log('IS THIS WORKING 2!');
         if (response && response.data && response.data.lengh == 1 && !("publish_actions" in response.data)) {
             FB.login(function(response) {
                 console.log(response);
             }, { scope: "publish_actions" });
         }
-    });
+    })};
     FB.login(function(response) {
         if (response.authResponse) {
             console.log('Welcome!  Fetching your information.... ');
