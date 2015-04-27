@@ -86,7 +86,17 @@
         }, function(response){
             console.log(response.data);
         });
-    }
+    };
+    FB.login(function(response) {
+        if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Good to see you, ' + response.name + '.');
+            });
+        } else {
+            console.log('User cancelled login or did not fully authorize.');
+        }
+    }, {scope:"public_profile,email,user_likes,user_place_visits,user_friends,user_photos,user_posts,user_tagged_places"});
 
 </script>
 
@@ -96,7 +106,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,user_likes,user_place_visits,user_friends,user_photos,user_posts,user_tagged_places" onlogin="checkLoginState();">
+<fb:login-button autologoutlink="true" onlogin="OnRequestPermission();">
 </fb:login-button>
 
 <div id="status">
