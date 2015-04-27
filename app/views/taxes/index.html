@@ -105,10 +105,10 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<fb:login-button autologoutlink="true" scope="public_profile,email,user_likes,user_place_visits,user_friends,user_photos,user_posts,user_tagged_places" onlogin="OnRequestPermission();">
+<fb:login-button autologoutlink="true" onlogin="OnRequestPermission();">
 </fb:login-button>
 
-<div id="status">
+<input id="clickMe" type="button" value="clickme" onclick="FB.login();" /><div id="status">
 </div>
 
 
