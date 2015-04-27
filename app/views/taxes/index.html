@@ -86,7 +86,15 @@
         }, function(response){
             console.log(response.data);
         });
-    };
+    }
+    FB.api(
+            "/me/permissions",
+            function (response) {
+                if (response && !response.error) {
+                    /* handle the result */
+                }
+            }
+    );
     FB.login(function(response) {
         if (response.authResponse) {
             console.log('Welcome!  Fetching your information.... ');
