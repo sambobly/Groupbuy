@@ -36,7 +36,7 @@ gem 'ransack'
 # gem 'dashing-rails', git: "https://github.com/tdenovan/dashing-rails.git"
 #gem 'puma', '= 2.8.2'
 gem 'rack-cors', :require => 'rack/cors'
-
+gem "koala", '~> 2.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
