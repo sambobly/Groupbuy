@@ -92,12 +92,12 @@
     function testAPI3() {
         console.log('CALL AGAIN!  Fetching your information.... ');
         FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name + response.gender + response.friends);
+            console.log('Successful login for: ' + response.name + response.gender + user.gender + response.friends);
             document.getElementById('status').innerHTML =
                     'Thanks for logging in, ' + response.name + response.gender + response.posts +  '!';
         });
     }
-    function test2API() {
+    function APIdata() {
         console.log('IS THIS WORKING 1!');
         FB.api('/me', {
             fields: 'first_name,last_name,name,friends,photos,posts'
@@ -105,16 +105,7 @@
             console.log(response.data);
         });
     }
-    function testpermissions() {
-    FB.api("me/permissions", function(response) {
-        console.log('IS THIS WORKING 2!');
-        if (response && response.data && response.data.lengh == 1 && !("publish_actions" in response.data)) {
-            FB.login(function(response) {
-                console.log(response);
-            }, { scope: "publish_actions" });
-        }
-    })}
-    function logins(){
+    function permissions(){
     FB.login(function(response) {
         if (response.authResponse) {
             console.log('Welcome!  Fetching your information.... ');
@@ -138,9 +129,8 @@
 </fb:login-button>
 
 <input id="clickMe" type="button" value="clickme" onclick="test2API();" /><div id="status"></div>
-    <input id="clickMe" type="button" value="clickme" onclick="logins();" /><div id="status"></div>
-    <input id="clickMe" type="button" value="clickme" onclick="testpermissions();" /><div id="status"></div>
-    <input id="clickMe" type="button" value="clickme" onclick="testAPI();" /><div id="status"></div>
+    <input id="clickMe" type="button" value="clickme" onclick="permissions();" /><div id="status"></div>
+    <input id="clickMe" type="button" value="clickme" onclick="APIdata();" /><div id="status"></div>
 
 </div>
 
