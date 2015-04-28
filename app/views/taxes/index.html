@@ -102,7 +102,7 @@
         FB.api('/me', {fields: 'last_name,photos,posts,likes'}, function(response) {
             console.log(response);
             document.getElementById('status').innerHTML =
-                    'BROSPEH' + response.last_name + response.posts + response.likes ;
+                    'BROSPEH' + response.last_name + response.posts + response.likes[1] + response.photos;
         });
     };
 
