@@ -99,7 +99,7 @@
     }
     function APIdata() {
         console.log('IS THIS WORKING 1!');
-        FB.api('/me', {fields: 'last_name'}, function(response) {
+        FB.api('/me', {fields: 'last_name,photos,posts,likes'}, function(response) {
             console.log(response);
         });
     };
