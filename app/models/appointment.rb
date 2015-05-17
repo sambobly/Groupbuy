@@ -1,9 +1,10 @@
 class Appointment < ActiveRecord::Base
 
-  belongs_to    :doctor
-  belongs_to    :patient
 
   attr_accessible :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name, :appointment_id
+=begin
+  belongs_to    :doctor
+  belongs_to    :patient
 
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
@@ -31,4 +32,5 @@ class Appointment < ActiveRecord::Base
  validates :end_date, :presence => true
  #validates_uniqueness_of :start_time, :scope => [:start_date, :doctor_name]#(note that start_time includes the date)
  # {message: "Appointment clash. Do you wish to continue?"}
+=end
 end

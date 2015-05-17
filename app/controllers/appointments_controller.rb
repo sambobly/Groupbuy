@@ -1,12 +1,12 @@
-  class AppointmentsController < ApplicationController
+  class AppointmentsController < InheritedResources::Base
   respond_to :json
   private
 
-  def product_params
+  def appointment_params
     params.require(:appointment).permit(:name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
   end
 
-
+=begin
   before_action :set_appointment, only: [:show, :edit, :update, :destroy, :create]
 
   layout 'bootstrap'
@@ -102,4 +102,5 @@
       render 'new'
     end
   end
+=end
 end
