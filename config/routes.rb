@@ -1,4 +1,24 @@
 Optho::Application.routes.draw do
+  resources :invoices
+
+  resources :inovices
+
+  resources :consults
+
+  resources :billable_items
+
+  resources :businesses
+
+  resources :accounts
+
+  resources :concession_types
+
+  resources :payment_types
+
+  resources :contacts
+
+  resources :expenses
+
   #get "/" => "taxes#index", :as => "root"
 
   resources :taxes
@@ -113,7 +133,176 @@ end
         get 'show'
       end
     end
+    resources :consults do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :billable_items do
+    collection do
+      get 'find'
+      get 'index'
+      post 'index'
+      post 'create'
+      post 'destroy'
+      post 'edit'
+      get 'update'
+      get 'show'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'edit'
+      get 'show'
+    end
+  end
+    resources :expenses do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :invoices do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :businesses do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :contacts do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :taxes do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :payment_types do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :concession_types do
       collection do
         get 'find'
         get 'index'
@@ -233,6 +422,13 @@ resources :doctors do
   resources :templates, only:[:index, :create, :update, :destroy]
   resources :taxes, only:[:index, :create, :update, :destroy]
   resources :appointments, only:[:index, :create, :update, :destroy]
+  resources :expenses, only:[:index, :create, :update, :destroy]
+  resources :contacts, only:[:index, :create, :update, :destroy]
+  resources :payment_types, only:[:index, :create, :update, :destroy]
+  resources :concession_types, only:[:index, :create, :update, :destroy]
+  resources :businesses, only:[:index, :create, :update, :destroy]
+  resources :billable_items, only:[:index, :create, :update, :destroy]
+  resources :invoices, only:[:index, :create, :update, :destroy]
 
 end
   scope :api do
@@ -250,5 +446,23 @@ end
     get "/templates/.id(.:format)" => "templates#index"
     get "/taxes(.:format)" => "taxes#index"
     get "/taxes/.id(.:format)" => "taxes#index"
+    get "/expenses(.:format)" => "expenses#index"
+    get "/expenses/.id(.:format)" => "expenses#index"
+    get "/contacts(.:format)" => "contacts#index"
+    get "/contacts/.id(.:format)" => "contacts#index"
+    get "/payment_types(.:format)" => "payment_types#index"
+    get "/payment_types/.id(.:format)" => "payment_types#index"
+    get "/concession_types(.:format)" => "concession_types#index"
+    get "/concession_types/.id(.:format)" => "concession_types#index"
+    get "/businesses(.:format)" => "businesses#index"
+    get "/businesses/.id(.:format)" => "businesses#index"
+    get "/billable_items(.:format)" => "billable_items#index"
+    get "/billable_items/.id(.:format)" => "billable_items#index"
+    get "/invoices(.:format)" => "invoices#index"
+    get "/invoices/.id(.:format)" => "invoices#index"
+    get "/example(.:format)" => "example#index"
+    get "/example/.id(.:format)" => "example#index"
+
+
 end
 

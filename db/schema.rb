@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150325123324) do
+ActiveRecord::Schema.define(version: 20150618105022) do
+
+  create_table "accounts", force: true do |t|
+    t.string   "companyname"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -65,12 +75,45 @@ ActiveRecord::Schema.define(version: 20150325123324) do
     t.string   "doctor_last"
   end
 
+  create_table "billable_items", force: true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.decimal  "price",      precision: 10, scale: 0
+    t.integer  "tax"
+    t.decimal  "total",      precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "businesses", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "postcode"
+    t.string   "country"
+    t.string   "registrationname"
+    t.integer  "registrationnumber"
+    t.string   "website"
+    t.string   "contact"
+    t.boolean  "online"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "checkins", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "checkouts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "concession_types", force: true do |t|
+    t.string   "name"
+    t.integer  "percentage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -90,6 +133,33 @@ ActiveRecord::Schema.define(version: 20150325123324) do
     t.datetime "updated_at"
   end
 
+  create_table "consults", force: true do |t|
+    t.string   "patient"
+    t.string   "doctor"
+    t.string   "appointment"
+    t.date     "date"
+    t.time     "time"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "phone"
+    t.string   "occupation"
+    t.string   "company"
+    t.string   "email"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "postcode"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "doctors", force: true do |t|
     t.string   "first_name"
     t.string   "position"
@@ -101,6 +171,53 @@ ActiveRecord::Schema.define(version: 20150325123324) do
   create_table "doctors_patients", force: true do |t|
     t.integer "doctor_id"
     t.integer "patient_id"
+  end
+
+  create_table "expenses", force: true do |t|
+    t.date     "date"
+    t.string   "vendor"
+    t.string   "category"
+    t.decimal  "amount",     precision: 10, scale: 0
+    t.decimal  "tax",        precision: 10, scale: 0
+    t.decimal  "taxamount",  precision: 10, scale: 0
+    t.string   "note"
+    t.boolean  "product"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inovices", force: true do |t|
+    t.date     "date"
+    t.string   "patient"
+    t.string   "doctor"
+    t.string   "appointment"
+    t.string   "item"
+    t.decimal  "price",       precision: 10, scale: 0
+    t.integer  "quantity"
+    t.integer  "tax"
+    t.integer  "discount"
+    t.decimal  "total",       precision: 10, scale: 0
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invoices", force: true do |t|
+    t.date     "date"
+    t.string   "patient"
+    t.string   "doctor"
+    t.string   "appointment"
+    t.string   "item"
+    t.decimal  "price",       precision: 10, scale: 0
+    t.integer  "quantity"
+    t.integer  "tax"
+    t.integer  "discount"
+    t.decimal  "total",       precision: 10, scale: 0
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "item_name"
   end
 
   create_table "line_items", force: true do |t|
@@ -130,6 +247,12 @@ ActiveRecord::Schema.define(version: 20150325123324) do
     t.text     "referral_type"
     t.text     "referring_doctor"
     t.integer  "phone_number"
+  end
+
+  create_table "payment_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
