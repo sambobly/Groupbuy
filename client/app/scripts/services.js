@@ -60,6 +60,56 @@ clientServices.factory('Tax', ['railsResourceFactory', function (railsResourceFa
         name: 'tax'
     });
 }]);
+
+clientServices.factory('Expense', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/expenses',
+        name: 'expense'
+    });
+}]);
+
+clientServices.factory('Contact', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/contacts',
+        name: 'contact'
+    });
+}]);
+clientServices.factory('Payment_type', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/payment_types',
+        name: 'payment_type'
+    });
+}]);
+clientServices.factory('Concession_type', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/concession_types',
+        name: 'concession_type'
+    });
+}]);
+clientServices.factory('Business', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/businesses',
+        name: 'business'
+    });
+}]);
+clientServices.factory('Billable_item', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/billable_items',
+        name: 'billable_items'
+    });
+}]);
+clientServices.factory('Consult', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/consults',
+        name: 'consult'
+    });
+}]);
+clientServices.factory('Invoice', ['railsResourceFactory', function (railsResourceFactory) {
+    return railsResourceFactory({
+        url: '/api/invoices',
+        name: 'invoice'
+    });
+}]);
   //Create a rails resource factory for every model that needs to sync.
 // Tells rails resource factory to automatically implemetn the RESTful routes
 // dont have to manually set urls

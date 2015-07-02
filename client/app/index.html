@@ -6,14 +6,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
+    <!-- build:css(.) styles/vendor.css -->         3
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="styles/metro/animate-loader.css">
+    <link rel="stylesheet" href="styles/metro/icomoon.css">
+    <link rel="stylesheet" href="styles/metro/metro-icons.css">
     <link rel="stylesheet" href="styles/metro/bootstrap.css">
     <link rel="stylesheet" href="styles/metro/bootstrap-responsive.css">
     <link rel="stylesheet" href="styles/metro/metro-bootstrap.css">
@@ -23,11 +27,14 @@
     <link rel="stylesheet" href="styles/metro/font-awesome.css">
       <link rel="stylesheet" href="styles/metro/datepicker/datepicker.css">
     <link rel="stylesheet" href="styles/metro/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="styles/metro/metro-responsive.css">
+    <link rel="stylesheet" href="styles/example.css">
 
       <link href="styles/metro/m-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="styles/metro/select2/select2-metro.css" rel="stylesheet">
     <link href="styles/metro/wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet">
     <link href="styles/metro/morrisjs/morris.css" rel="stylesheet">
+
 
     <!-- endbuild -->
   </head>
@@ -406,7 +413,6 @@
 
   <!-- Everything you want hidden at 940px or less, leave it blank! (this use when side-left collapse) -->
   <div id="navbar-collapse" class="nav-collapse collapse hidden-desktop"></div>
-
   </div><!--/container-->
   </div><!--/navbar-inner-->
 
@@ -553,7 +559,13 @@
               </ul>
           </header> <!--/ content header -->
 
+          <div class="container">
 
+              <div ui-view autoscroll="true"></div>
+
+
+
+          </div>
 
 
       </div><!-- /content-inner -->
@@ -573,9 +585,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-      <div ui-view autoscroll="true"></div>
-
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -593,41 +602,51 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/interact/interact.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angularjs-rails-resource/angularjs-rails-resource.js"></script>
-    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
-    <script src="bower_components/fullcalendar/fullcalendar.js"></script>
-    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angularjs-rails-resource/angularjs-rails-resource.js"></script>
+  <script src="bower_components/acute.select/acute.select.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-
+  <script src="bower_components/fullcalendar/fullcalendar.js"></script>
+  <script src="bower_components/fullcalendar/gcal.js"></script>
+  <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+  <script src="bower_components/angular-easyfb/angular-easyfb.js"></script>
+  <script src="bower_components/daypilot/js/daypilot-all.min.js"></script>
+  <script src="bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
   <!-- endbower -->
-    <!-- endbuild -->
+  <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
@@ -635,14 +654,23 @@
         <script src="scripts/directives.js"></script>
         <script src="scripts/services.js"></script>
         <script src="scripts/controllers/controllers.js"></script>
+        <script src="scripts/controllers/calendar.js"></script>
+        <script src="scripts/controllers/demo.js"></script>
         <script src="scripts/controllers/patients.js"></script>
         <script src="scripts/controllers/consulttemplates.js"></script>
         <script src="scripts/controllers/appointments.js"></script>
         <script src="scripts/controllers/products.js"></script>
         <script src="scripts/controllers/templates.js"></script>
-  <script src="scripts/controllers/taxes.js"></script>
-
-  <script src="scripts/metro/metro-base.js"></script>
+        <script src="scripts/controllers/expenses.js"></script>
+        <script src="scripts/controllers/payment_types.js"></script>
+        <script src="scripts/controllers/billable_items.js"></script>
+        <script src="scripts/controllers/concession_types.js"></script>
+        <script src="scripts/controllers/invoices.js"></script>
+        <script src="scripts/controllers/contacts.js"></script>
+        <script src="scripts/controllers/consults.js"></script>
+        <script src="scripts/controllers/business.js"></script>
+        <script src="scripts/controllers/taxes.js"></script>
+        <script src="scripts/metro/metro-base.js"></script>
         <script src="scripts/metro/demo/dashboard.js"></script>
         <script src="scripts/metro/ckeditor/ckeditor.js"></script>
         <script src="scripts/metro/ckeditor/styles.js"></script>
@@ -652,6 +680,8 @@
         <script src="scripts/metro/datepicker/bootstrap-datepicker.js"></script>
         <script src="scripts/metro/fullcalendar/fullcalendar.js"></script>
         <script src="scripts/metro/fullcalendar/gcal.js"></script>
+        <script src="scripts/controllers/example.js"></script>
+
 
 
 

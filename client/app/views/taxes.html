@@ -1,57 +1,76 @@
-<h1 id="fb-welcome"></h1>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '614823908618705',
-            xfbml      : true,
-            version    : 'v2.3'
-        });
 
-        // ADD ADDITIONAL FACEBOOK CODE HERE
-        // Place following code after FB.init call.
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Taxes List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
 
-        function onLogin(response) {
-            if (response.status == 'connected') {
-                FB.api('/me?fields=first_name', function(data) {
-                    var welcomeBlock = document.getElementById('fb-welcome');
-                    welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-                });
-            }
-        }
+    </div><!-- /widget header -->
 
-        FB.getLoginStatus(function(response) {
-            // Check login status on load, and if the user is
-            // already logged in, go directly to the welcome message.
-            if (response.status == 'connected') {
-                onLogin(response);
-            } else {
-                // Otherwise, show Login dialog first.
-                FB.login(function(response) {
-                    onLogin(response);
-                }, {scope: 'user_friends, email'});
-            }
-        });
-    };
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tax</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="tax in taxes" ng-click="update('sm', tax)">
+            <tr>
+                <td>{{tax.id}}</td>
+                <td>{{tax.name}}</td>
+                <td>{{tax.amount}}</td>
 
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a Tax!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Tax Name</strong></label>
+                <input class="span3" id="formData.taxName" ng-model="tax.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Price</strong></label>
+                <input class="span3" id="formData.taxAmount" ng-model="tax.amount" placeholder="$" type="text" maxlength="40">
+                <button class="btn btn-primary" ng-click="createTax()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
 </script>
-
-<div class="container" style="margin-top: 40px">
-    <h1 class="text-center">Create new tax</h1>
-    <form>
-        <fieldset>
-            <label><strong>Product Name</strong></label>
-            <input class="span12" ng-model="tax.name" placeholder="Name" type="text" maxlength="250">
-            <label><strong>Price</strong></label>
-            <input class="span12" ng-model="tax.amount" placeholder="$" type="integer" maxlength="250">
-            <button class="btn btn-primary" ng-click="createTax()">Create</button>
-            <button class="btn btn-danger pull-right" ng-click="clearTax()">Clear post</button>
-        </fieldset>
-    </form>
-</div>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Tax Name</strong></label>
+                <input class="span3" id="formData.taxName" ng-model="tax.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Price</strong></label>
+                <input class="span3" id="formData.taxAmount" ng-model="tax.amount" placeholder="$" type="text" maxlength="40">
+                <button class="btn btn-primary" ng-click="updateTax()">Update</button>
+                <button class="btn btn-danger pull-right" ng-click="destroyTax()">Delete tax</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>

@@ -1,7 +1,8 @@
+
 <article class="content-page">
     <!-- main page, you're application here -->
     <div class="main-page">
-        <div ui-calendar="uiConfig.calendar"  ng-model="eventSources"></div>
+        <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
 
         <div class="content-inner">
             <div class="row-fluid">
@@ -79,7 +80,12 @@
                         <label><strong>Patient</strong></label>
                         <input class="span12" id="formData.appointmentPatientName" ng-model="appointment.patient_name" placeholder="Template Name" type="text" maxlength="250" ensure-unique="templateName">
                         <label><strong>Last Name</strong></label>
-                        <input class="span12" id="formData.appointmentDoctorName" ng-model="appointment.doctor_name" placeholder="Content" type="text" maxlength="250">
+                        <input class="span12" id="formData.appointmentDoctorName" ng-model="appointment.doctor_name" placeholder="Dr" type="text" maxlength="250">
+                        <input class="span12" id="formData.appointmentStartTime" ng-model="appointment.start_time" placeholder="Start" type="time" value="22:38">
+                        <input class="span12" id="formData.appointmentEndTime" ng-model="appointment.end_time" placeholder="End" type="time">
+                        <input class="span12" id="formData.appointmentStartDate" ng-model="appointment.start_date" placeholder="Date" type="date" maxlength="250">
+                        <input class="span12" id="formData.appointmentEndDate" ng-model="appointment.end_date" placeholder="Date" type="date" maxlength="250">
+
                         <button class="btn btn-primary" ng-click="createAppointment()">Compose</button>
                         <button class="btn btn-danger pull-right" ng-click="clearAppointment()">Clear template</button>
                         <button class="btn btn-danger pull-right" ng-click="destroyAppointmnet()">Delete template</button>
@@ -87,4 +93,13 @@
                     </fieldset>
                 </form>
             </div>
-        </div><!-- /content-inner-->
+            <div style="float:left; width: 150px;">
+                <div id="nav"></div>
+            </div>
+            <div style="margin-left: 150px;">
+                <div id="dp"></div>
+            </div>
+
+
+            </div>
+        </div>
