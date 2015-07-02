@@ -1,0 +1,27 @@
+<h1>Listing concession_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concession_types.each do |concession_type| %>
+      <tr>
+        <td><%= concession_type.name %></td>
+        <td><%= concession_type.percentage %></td>
+        <td><%= link_to 'Show', concession_type %></td>
+        <td><%= link_to 'Edit', edit_concession_type_path(concession_type) %></td>
+        <td><%= link_to 'Destroy', concession_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concession type', new_concession_type_path %>

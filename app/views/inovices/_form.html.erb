@@ -1,0 +1,61 @@
+<%= form_for(@inovice) do |f| %>
+  <% if @inovice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inovice.errors.count, "error") %> prohibited this inovice from being saved:</h2>
+
+      <ul>
+      <% @inovice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :patient %><br>
+    <%= f.text_field :patient %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor %><br>
+    <%= f.text_field :doctor %>
+  </div>
+  <div class="field">
+    <%= f.label :appointment %><br>
+    <%= f.text_field :appointment %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :tax %><br>
+    <%= f.number_field :tax %>
+  </div>
+  <div class="field">
+    <%= f.label :discount %><br>
+    <%= f.number_field :discount %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.text_field :total %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @concession_type.name %>
+</p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @concession_type.percentage %>
+</p>
+
+<%= link_to 'Edit', edit_concession_type_path(@concession_type) %> |
+<%= link_to 'Back', concession_types_path %>

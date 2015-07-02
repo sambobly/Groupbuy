@@ -1,0 +1,33 @@
+<h1>Listing billable_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Tax</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @billable_items.each do |billable_item| %>
+      <tr>
+        <td><%= billable_item.name %></td>
+        <td><%= billable_item.type %></td>
+        <td><%= billable_item.price %></td>
+        <td><%= billable_item.tax %></td>
+        <td><%= billable_item.total %></td>
+        <td><%= link_to 'Show', billable_item %></td>
+        <td><%= link_to 'Edit', edit_billable_item_path(billable_item) %></td>
+        <td><%= link_to 'Destroy', billable_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Billable item', new_billable_item_path %>

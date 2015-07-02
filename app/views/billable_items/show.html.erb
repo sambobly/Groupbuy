@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @billable_item.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @billable_item.type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @billable_item.price %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @billable_item.tax %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @billable_item.total %>
+</p>
+
+<%= link_to 'Edit', edit_billable_item_path(@billable_item) %> |
+<%= link_to 'Back', billable_items_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @inovice.date %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @inovice.patient %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @inovice.doctor %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @inovice.appointment %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @inovice.item %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @inovice.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @inovice.quantity %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @inovice.tax %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @inovice.discount %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @inovice.total %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @inovice.note %>
+</p>
+
+<%= link_to 'Edit', edit_inovice_path(@inovice) %> |
+<%= link_to 'Back', inovices_path %>
