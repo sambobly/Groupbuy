@@ -24,8 +24,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/example.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/example.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/expenses.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/invoices.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/payment_types.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/payment_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/testcalendar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/.gitignore" afterPath="$PROJECT_DIR$/client/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1973ec33-d897-4dc0-a32e-541a7ff7fc41" name="New changelist" comment="" />
@@ -35,7 +40,7 @@
     <list id="35217664-370d-4cae-9ec5-9d3d800e7112" name="Failed commit: Default (4)" comment="Fixing git" />
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1435803413927" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1435803625869" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -144,7 +149,7 @@
     <file path="/server.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427929912216" ignored="false" />
     <file path="/Procfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427931414954" ignored="false" />
     <file path="/web.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430030883634" ignored="false" />
-    <file path="/.gitignore" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430031460539" ignored="false" />
+    <file path="/.gitignore" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1435804013434" ignored="false" />
     <file path="$PROJECT_DIR$/client/node_modules/grunt/node_modules/coffee-script/Rakefile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427935541668" ignored="false" />
     <file path="/production.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1428017052282" ignored="false" />
     <file path="/taxes_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430098989200" ignored="false" />
@@ -336,10 +341,10 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+                  <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/client/.gitignore">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="8" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0">
+                        <state line="4" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07753706">
                           <folding />
                         </state>
                       </provider>
@@ -359,15 +364,18 @@
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding>
-                            <marker date="1435803556459" expanded="true" signature="59:138037" placeholder="..." />
-                            <marker date="1435803556459" expanded="true" signature="416:510" placeholder="..." />
-                            <marker date="1435803556459" expanded="true" signature="137381:137636" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="59:139409" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="416:510" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="138922:139008" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="138922:138993" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="138922:138980" placeholder="..." />
+                            <marker date="1435804019973" expanded="true" signature="138923:138962" placeholder="..." />
                           </folding>
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="billable_items.js" pinned="false" current="true" current-in-tab="true">
+                  <file leaf-file-name="billable_items.js" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/billable_items.js">
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -597,8 +605,8 @@
         <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
-        <option value="$PROJECT_DIR$/client/.gitignore" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/client/.gitignore" />
       </list>
     </option>
   </component>
@@ -2096,7 +2104,11 @@
       <created>1435803420977</created>
       <updated>1435803420977</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="Adding everything to git">
+      <created>1435803629970</created>
+      <updated>1435803629971</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2121,14 +2133,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31851852" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.33544973" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3734375" sideWeight="0.6846561" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3734375" sideWeight="0.6846561" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6719577" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5005314" order="10" side_tool="true" content_ui="tabs" />
@@ -2304,20 +2316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/findbydate.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -2345,9 +2343,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1435803556459" expanded="true" signature="59:138037" placeholder="..." />
-            <marker date="1435803556459" expanded="true" signature="416:510" placeholder="..." />
-            <marker date="1435803556459" expanded="true" signature="137381:137636" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="59:139409" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="416:510" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="138922:139008" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="138922:138993" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="138922:138980" placeholder="..." />
+            <marker date="1435804019973" expanded="true" signature="138923:138962" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2362,6 +2363,20 @@
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/billable_items.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.07753706">
           <folding />
         </state>
       </provider>
