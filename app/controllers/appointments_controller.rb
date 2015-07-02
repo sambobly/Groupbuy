@@ -49,7 +49,7 @@
     search = params[:search]
     @appointments = Appointment.joins(:patient).joins(:doctor).where( "CONCAT(doctors.first_name, ' ', doctors.last_name) LIKE '%#{search}%' OR CONCAT(patients.first_name, ' ', patients.last_name) LIKE '%#{search}%'")
   end
-  
+
   def findByDate
     # TODO: FIx this since refactoring model to start_date and start_time from start_datetime
     # TODO: handle invalid datetime parameters gracefully - currently expects unix time

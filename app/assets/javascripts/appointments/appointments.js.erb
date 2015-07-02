@@ -189,3 +189,31 @@ $( document ).ready( function() {
 	}
 
 });
+eventSources: [
+    {url: '/api/appointments',
+        data: 'eventsBy=' + '&start=' + '&end=' + '&selectedId=',
+        success: function (data, callback, event) {
+            var events = [];
+            $(event).each(function (appointment, start, end) {
+                events.push({
+                    "id": appointment.id,
+                    "start": moment(start).format('YYYY/MM/DD hh:mm'),
+                    "end": moment(end).format('YYYY/MM/DD hh:mm')
+                });
+            });
+            callback(events);
+        },
+        error: function () { alert('Failed!'); },
+    }
+],
+
+        eventSources: [
+    {url: '/api/appointments',
+        data: {
+            "id": 'appointment.id',
+            "start": 'Date.new(appointment.start_date.year, appointment.start_date.month, appointment.start_date.day, appointment.start_time.hour, appointment.start_time.min)'
+            "end": 'Date.new(appointment.end_date.year, appointment.end_date.month, appointment.end_date.day, appointment.end_time.hour, appointment.end_time.min)'
+        },
+        error: function () { alert('Failed!'); },
+    }
+],
