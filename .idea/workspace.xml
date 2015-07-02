@@ -8,13 +8,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/accounts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/acute.select.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/billable_items.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/billable_items.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/business.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/business.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/concession_types.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/concession_types.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/consults.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/contacts.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/example.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/payment_types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1973ec33-d897-4dc0-a32e-541a7ff7fc41" name="New changelist" comment="" />
@@ -24,7 +32,7 @@
     <list id="35217664-370d-4cae-9ec5-9d3d800e7112" name="Failed commit: Default (4)" comment="Fixing git" />
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1435803233594" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1435803413927" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -348,9 +356,9 @@
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding>
-                            <marker date="1435803247618" expanded="true" signature="59:135517" placeholder="..." />
-                            <marker date="1435803247618" expanded="true" signature="416:510" placeholder="..." />
-                            <marker date="1435803247618" expanded="true" signature="134861:135116" placeholder="..." />
+                            <marker date="1435803412909" expanded="true" signature="59:137175" placeholder="..." />
+                            <marker date="1435803412909" expanded="true" signature="416:510" placeholder="..." />
+                            <marker date="1435803412909" expanded="true" signature="136519:136774" placeholder="..." />
                           </folding>
                         </state>
                       </provider>
@@ -687,6 +695,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2055,7 +2085,11 @@
       <created>1435803239377</created>
       <updated>1435803239377</updated>
     </task>
-    <option name="localTasksCounter" value="258" />
+    <task id="LOCAL-00258" summary="Adding everything to git">
+      <created>1435803299344</created>
+      <updated>1435803299344</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2144,7 +2178,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding everything to git" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2158,7 +2192,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Modals working (kind of), having issues with angularrailsresource for providing data from database" />
     <MESSAGE value="Modal functioning, query functioning, selection via modal possible" />
     <MESSAGE value="CKeditor now working as directive" />
     <MESSAGE value="Might have fixed two way binding problem in templates" />
@@ -2183,6 +2216,7 @@
     <MESSAGE value="Trying ye old facebook api to get user data" />
     <MESSAGE value="Fixing products to full functionality" />
     <MESSAGE value="Fixing git" />
+    <MESSAGE value="Adding everything to git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2304,9 +2338,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1435803247618" expanded="true" signature="59:135517" placeholder="..." />
-            <marker date="1435803247618" expanded="true" signature="416:510" placeholder="..." />
-            <marker date="1435803247618" expanded="true" signature="134861:135116" placeholder="..." />
+            <marker date="1435803412909" expanded="true" signature="59:137175" placeholder="..." />
+            <marker date="1435803412909" expanded="true" signature="416:510" placeholder="..." />
+            <marker date="1435803412909" expanded="true" signature="136519:136774" placeholder="..." />
           </folding>
         </state>
       </provider>
