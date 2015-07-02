@@ -16,10 +16,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/calendar.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/concession_types.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/concession_types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/consults.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/consults.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/contacts.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/contacts.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/demo.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/example.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/example.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/example.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/payment_types.js" />
@@ -356,9 +359,9 @@
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding>
-                            <marker date="1435803412909" expanded="true" signature="59:137175" placeholder="..." />
-                            <marker date="1435803412909" expanded="true" signature="416:510" placeholder="..." />
-                            <marker date="1435803412909" expanded="true" signature="136519:136774" placeholder="..." />
+                            <marker date="1435803556459" expanded="true" signature="59:138037" placeholder="..." />
+                            <marker date="1435803556459" expanded="true" signature="416:510" placeholder="..." />
+                            <marker date="1435803556459" expanded="true" signature="137381:137636" placeholder="..." />
                           </folding>
                         </state>
                       </provider>
@@ -2089,7 +2092,11 @@
       <created>1435803299344</created>
       <updated>1435803299344</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Adding everything to git">
+      <created>1435803420977</created>
+      <updated>1435803420977</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2338,9 +2345,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1435803412909" expanded="true" signature="59:137175" placeholder="..." />
-            <marker date="1435803412909" expanded="true" signature="416:510" placeholder="..." />
-            <marker date="1435803412909" expanded="true" signature="136519:136774" placeholder="..." />
+            <marker date="1435803556459" expanded="true" signature="59:138037" placeholder="..." />
+            <marker date="1435803556459" expanded="true" signature="416:510" placeholder="..." />
+            <marker date="1435803556459" expanded="true" signature="137381:137636" placeholder="..." />
           </folding>
         </state>
       </provider>
