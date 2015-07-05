@@ -1,0 +1,104 @@
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Concession List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Tax</th>
+                <th>Total</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="billable_item in billable_items" ng-click="update('sm', billable_item)">
+            <tr>
+                <td>{{billable_item.name}}</td>
+                <td>{{billable_item.type}}</td>
+                <td>{{billable_item.price}}</td>
+                <td>{{billable_item.tax}}</td>
+                <td>{{billable_item.total}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a concession type!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new concession type!</strong></label>
+                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Concession name</strong></label>
+                <input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40">
+                <label><strong>Type</strong></label>
+                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40">
+                <label><strong>Price</strong></label>
+                <input class="span3" id="formData.billable_itemTax" ng-model="billable_item.tax" placeholder="Tax" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+                <input class="span3" id="formData.billable_itemTotal" ng-model="billable_item.total" placeholder="Total" type="decimal" maxlength="40">
+                <label><strong>Total</strong></label>
+                <button class="btn btn-primary" ng-click="createBillable_item()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new concession type!</strong></label>
+                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Concession name</strong></label>
+                <input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40">
+                <label><strong>Type</strong></label>
+                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40">
+                <label><strong>Price</strong></label>
+                <input class="span3" id="formData.billable_itemTax" ng-model="billable_item.tax" placeholder="Tax" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+                <input class="span3" id="formData.billable_itemTotal" ng-model="billable_item.total" placeholder="Total" type="decimal" maxlength="40">
+                <label><strong>Total</strong></label>
+                <button class="btn btn-primary" ng-click="updateBillable_item()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyBillable_item()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+

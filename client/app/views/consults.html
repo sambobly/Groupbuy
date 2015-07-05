@@ -1,0 +1,204 @@
+<select ng-model="consult.patient" id="formData.consultPatient" ng-options="patient.id as consult.patient for patient in patients" placeholder="Patient">
+    <option value="">Select Patient</option>
+</select>
+<label><strong>
+    <div class='wrap'>
+  <span>
+    {{selected}}
+    <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
+  </span>
+        <input ng-change='change()' ng-model='query' placeholder='patient' type='text' xng-focus='cleared'>
+        <ul class='{{state}}' ng-show='query'>
+            <li ng-click='select(patient)' ng-repeat='patient in patients | filter: query'>
+                {{patient}}
+            </li>
+        </ul>
+    </div>
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Patient</th>
+                <th>Appointment</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Note</th>
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="consult in consults" ng-click="update('sm', consult)">
+            <tr>
+                <td>{{consult.doctor}}</td>
+                <td>{{consult.patient}}</td>
+                <td>{{consult.date}}</td>
+                <td>{{consult.appointment}}</td>
+                <td>{{consult.time}}</td>
+                <td>{{consult.note}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create new Contact!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Doctor</strong></label>
+                <input class="span3" id="formData.consultDoctor" ng-model="consult.doctor" placeholder="Doctor" type="text" maxlength="40">
+                <label><strong>Patient</strong></label>
+
+                <div class='wrap'>
+  <span>
+    {{selected}}
+    <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
+  </span>
+                    <input id="formData.consultPatient" ng-change='change()' ng-model='query' placeholder='patient' type='text' xng-focus='cleared'>
+                    <ul class='{{state}}' ng-show='query'>
+                        <li ng-click='select(patient.id)' ng-repeat='patient in patients | filter: query'>
+                            {{patient.id}}
+                        </li>
+                    </ul>
+                </div>
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" id="formData.consultAppointment" ng-model="consult.appointment" placeholder="Appointment" type="text" maxlength="40">
+                <label><strong>Date</strong></label>
+
+                <input class="span3" id="formData.consultDate" ng-model="consult.date" placeholder="date" type="text" maxlength="40">
+                <label><strong>Time</strong></label>
+
+                <input class="span3" id="formData.consultTime" ng-model="consult.time" placeholder="time" type="text" maxlength="40">
+                <label><strong>Note</strong></label>
+
+                <textarea ck-editor id="formData.consultNote" ng-model="consult.note" placeholder="Template Content" type="text"></textarea>
+                <label><strong>Address</strong></label>
+
+                <button class="btn btn-primary" ng-click="createConsult()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Doctor</strong></label>
+                <input class="span3" id="formData.consultDoctor" ng-model="consult.doctor" placeholder="Doctor" type="text" maxlength="40">
+                <label><strong>Patient</strong></label>
+                <input class="span3" id="formData.consultPatient" ng-model="consult.patient" placeholder="Patient" type="text" maxlength="40">
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" id="formData.consultAppointment" ng-model="consult.appointment" placeholder="Appointment" type="text" maxlength="40">
+                <label><strong>Date</strong></label>
+
+                <input class="span3" id="formData.consultDate" ng-model="consult.date" placeholder="date" type="text" maxlength="40">
+                <label><strong>Time</strong></label>
+
+                <input class="span3" id="formData.consultTime" ng-model="consult.time" placeholder="time" type="text" maxlength="40">
+                <label><strong>Note</strong></label>
+
+                <input class="span3" id="formData.consultNote" ng-model="consult.note" placeholder="note" type="text" maxlength="40">
+                <button class="btn btn-primary" ng-click="updateConsult()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyConsult()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+<select ng-model="consult.patient" id="formData.consultPatient" ng-options="patient.id for patient in patients">
+    <option value="">Select Patient</option>
+</select>
+
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Concession List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <label>Search: <input ng-model="searchText"></label>
+        <table id="searchTextResults">
+            <tr><th>Name</th><th>Phone</th></tr>
+            <tr ng-repeat="patient in patients | filter:searchText">
+                <td>{{patient.name}}</td>
+                <td>{{patient.id}}</td>
+            </tr>
+        </table>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div>
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Concession List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="template in templates" ng-click="update('sm', template)">
+            <tr>
+                <td>{{template.name}}</td>
+                <td>{{patient.id}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div>
+
+
+

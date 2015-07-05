@@ -1,0 +1,162 @@
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Postcode</th>
+                <th>Country</th>
+                <th>Registration name</th>
+                <th>Registration number</th>
+                <th>Website</th>
+                <th>Contact infomation</th>
+                <th>Online</th>
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="business in businesses" ng-click="update('sm', business)">
+            <tr>
+                <td>{{business.name}}</td>
+                <td>{{business.lastname}}</td>
+                <td>{{business.city}}</td>
+                <td>{{business.state}}</td>
+                <td>{{business.postcode}}</td>
+                <td>{{business.country}}</td>
+                <td>{{business.registrationname}}</td>
+                <td>{{business.registrationnumber}}</td>
+                <td>{{business.website}}</td>
+                <td>{{business.contact}}</td>
+                <td>{{business.online}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create new Contact!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Company name</strong></label>
+                <input class="span3" id="formData.businessName" ng-model="business.name" placeholder="Company Name" type="text" maxlength="40">
+                <label><strong>Address</strong></label>
+                <input class="span3" id="formData.businessAddress" ng-model="business.address" placeholder="Address" type="text" maxlength="40">
+                <label><strong>City</strong></label>
+
+                <input class="span3" id="formData.businessCity" ng-model="business.city" placeholder="category" type="text" maxlength="40">
+                <label><strong>State</strong></label>
+
+                <input class="span3" id="formData.businessState" ng-model="business.state" placeholder="category" type="text" maxlength="40">
+                <label><strong>Post code</strong></label>
+
+                <input class="span3" id="formData.businessPostcode" ng-model="business.postcode" placeholder="category" type="integer" maxlength="40">
+                <label><strong>Country</strong></label>
+
+                <input class="span3" id="formData.businessCountry" ng-model="business.country" placeholder="category" type="text" maxlength="40">
+                <label><strong>Registration </strong></label>
+
+                <input class="span3" id="formData.businessRegistrationname" ng-model="business.registrationname" placeholder="category" type="integer" maxlength="40">
+                <label><strong>Reg number</strong></label>
+
+                <input class="span3" id="formData.businessRegistrationnumber" ng-model="business.registrationnumber" placeholder="category" type="text" maxlength="40">
+                <label><strong>Website</strong></label>
+
+                <input class="span3" id="formData.businessWebsite" ng-model="business.website" placeholder="category" type="text" maxlength="40">
+                <label><strong>Contact</strong></label>
+
+                <input class="span3" id="formData.businessContact" ng-model="business.contact" placeholder="category" type="text" maxlength="40">
+
+                <label><strong>Online bookings?</strong></label>
+
+                    <input type="checkbox" ng-model="business.online"
+                           ng-true-value="'1'" ng-false-value="'0'">
+                </label>
+                <button class="btn btn-primary" ng-click="createBusiness ()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Company name</strong></label>
+                <input class="span3" id="formData.businessName" ng-model="business.name" placeholder="Company Name" type="text" maxlength="40">
+                <label><strong>Address</strong></label>
+                <input class="span3" id="formData.businessAddress" ng-model="business.address" placeholder="Address" type="text" maxlength="40">
+                <label><strong>City</strong></label>
+
+                <input class="span3" id="formData.businessCity" ng-model="business.city" placeholder="category" type="text" maxlength="40">
+                <label><strong>State</strong></label>
+
+                <input class="span3" id="formData.businessState" ng-model="business.state" placeholder="category" type="text" maxlength="40">
+                <label><strong>Post code</strong></label>
+
+                <input class="span3" id="formData.businessPostcode" ng-model="business.postcode" placeholder="category" type="integer" maxlength="40">
+                <label><strong>Country</strong></label>
+
+                <input class="span3" id="formData.businessCountry" ng-model="business.country" placeholder="category" type="text" maxlength="40">
+                <label><strong>Registration </strong></label>
+
+                <input class="span3" id="formData.businessRegistrationname" ng-model="business.registrationname" placeholder="category" type="integer" maxlength="40">
+                <label><strong>Reg number</strong></label>
+
+                <input class="span3" id="formData.businessRegistrationnumber" ng-model="business.registrationnumber" placeholder="category" type="text" maxlength="40">
+                <label><strong>Website</strong></label>
+
+                <input class="span3" id="formData.businessWebsite" ng-model="business.website" placeholder="category" type="text" maxlength="40">
+                <label><strong>Contact</strong></label>
+
+                <input class="span3" id="formData.businessContact" ng-model="business.contact" placeholder="category" type="text" maxlength="40">
+
+                <label><strong>Online bookings?</strong></label>
+
+                <input type="checkbox" ng-model="business.online"
+                       ng-true-value="true" ng-false-value="false">
+                </label>
+
+                <button class="btn btn-primary" ng-click="updateBusiness()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyBusinesst()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+

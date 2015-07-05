@@ -1,0 +1,151 @@
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Occupation</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Post code</th>
+                <th>Note</th>
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="contact in contacts" ng-click="update('sm', contact)">
+            <tr>
+                <td>{{contact.firstname}}</td>
+                <td>{{contact.lastname}}</td>
+                <td>{{contact.phone}}</td>
+                <td>{{contact.occupation}}</td>
+                <td>{{contact.company}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.address}}</td>
+                <td>{{contact.city}}</td>
+                <td>{{contact.state}}</td>
+                <td>{{contact.postcode}}</td>
+                <td>{{contact.note}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create new Contact!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>First Name</strong></label>
+                <input class="span3" id="formData.contactFirstName" ng-model="contact.firstname" placeholder="Vendor" type="text" maxlength="40">
+                <label><strong>Last Name</strong></label>
+                <input class="span3" id="formData.contactLastName" ng-model="contact.lastname" placeholder="category" type="text" maxlength="40">
+                <label><strong>Phone number</strong></label>
+
+                <input class="span3" id="formData.contactPhone" ng-model="contact.phone" placeholder="category" type="text" maxlength="40">
+                <label><strong>Occupation</strong></label>
+
+                <input class="span3" id="formData.contactOccupation" ng-model="contact.occupation" placeholder="category" type="text" maxlength="40">
+                <label><strong>Company</strong></label>
+
+                <input class="span3" id="formData.contactCompany" ng-model="contact.company" placeholder="category" type="text" maxlength="40">
+                <label><strong>Email</strong></label>
+
+                <input class="span3" id="formData.contactEmail" ng-model="contact.email" placeholder="category" type="text" maxlength="40">
+                <label><strong>Address</strong></label>
+
+                <input class="span3" id="formData.contactAddress" ng-model="contact.address" placeholder="category" type="text" maxlength="40">
+                <label><strong>State</strong></label>
+
+                <input class="span3" id="formData.contactState" ng-model="contact.state" placeholder="category" type="text" maxlength="40">
+                <label><strong>Post Code</strong></label>
+
+                <input class="span3" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="category" type="text" maxlength="40">
+                <label><strong>Note</strong></label>
+
+                <input class="span3" id="formData.contactNote" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="createContact ()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>First Name</strong></label>
+                <input class="span3" id="formData.contactFirstName" ng-model="contact.firstname" placeholder="Vendor" type="text" maxlength="40">
+                <label><strong>Last Name</strong></label>
+                <input class="span3" id="formData.contactLastName" ng-model="contact.lastname" placeholder="category" type="text" maxlength="40">
+                <label><strong>Phone number</strong></label>
+
+                <input class="span3" id="formData.contactPhone" ng-model="contact.phone" placeholder="category" type="text" maxlength="40">
+                <label><strong>Occupation</strong></label>
+
+                <input class="span3" id="formData.contactOccupation" ng-model="contact.occupation" placeholder="category" type="text" maxlength="40">
+                <label><strong>Company</strong></label>
+
+                <input class="span3" id="formData.contactCompany" ng-model="contact.company" placeholder="category" type="text" maxlength="40">
+                <label><strong>Email</strong></label>
+
+                <input class="span3" id="formData.contactEmail" ng-model="contact.email" placeholder="category" type="text" maxlength="40">
+                <label><strong>Address</strong></label>
+
+                <input class="span3" id="formData.contactAddress" ng-model="contact.address" placeholder="category" type="text" maxlength="40">
+                <label><strong>State</strong></label>
+
+                <input class="span3" id="formData.contactState" ng-model="contact.state" placeholder="category" type="text" maxlength="40">
+                <label><strong>Post Code</strong></label>
+
+                <input class="span3" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="category" type="text" maxlength="40">
+                <label><strong>Note</strong></label>
+
+                <input class="span3" id="formData.contactNote" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="updateContact()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyContact()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+

@@ -1,0 +1,86 @@
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="payment_type in payment_types" ng-click="update('sm', payment_type)">
+            <tr>
+                <td>{{payment_type.name}}</td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a payment type!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new payment type!</strong></label>
+                <input class="span3" id="formData.payment_typeName" ng-model="payment_type.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Name</strong></label>
+
+                <button class="btn btn-primary" ng-click="createPayment_type()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new payment type!</strong></label>
+                <input class="span3" id="formData.payment_typeName" ng-model="payment_type.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Name</strong></label>
+
+
+                <button class="btn btn-primary" ng-click="updatePayment_type()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyPayment_type()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+

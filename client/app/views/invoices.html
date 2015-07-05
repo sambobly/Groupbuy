@@ -1,0 +1,272 @@
+<div class="container" width="800px" id="invoice" >
+    <a ng-hide="printMode" href="https://github.com/metaware/angular-invoicing"><img ng-hide="printMode" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <table class="table">
+        <tr>
+            <td align="center" style="background-color:#357EBD;color:#FFF" colspan="2">
+                INVOICE
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Invoice #<input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
+            </td>
+            <td align="right">
+                <input type='file' id="imgInp" />
+                <img ng-hide="logoRemoved" id="company_logo" src="images/metaware_logo.png" alt="your image" width="300" />
+                <br/>
+                <div class="noPrint" ng-hide="printMode">
+                    <a ng-click="editLogo()" href >Edit Logo</a>
+                    <a ng-click="removeLogo()" id="remove_logo" href >Remove logo</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <tr>
+            <td>
+                <div class="infos">
+                    <div><strong><input type="text" ng-model="invoice.customer_info.name"/></strong></div>
+                    <div><input type="text" ng-model="invoice.customer_info.web_link"/></div>
+                    <div><input type="text" ng-model="invoice.customer_info.address1"/></div>
+                    <div><input type="text" ng-model="invoice.customer_info.address2"/></div>
+                    <div><input type="text" ng-model="invoice.customer_info.postal"/></div>
+                </div>
+            </td>
+            <td align="right">
+                <div class="align-right">
+                    <div><strong><input type="text" ng-model="invoice.company_info.name"/></strong></div>
+                    <div><input type="text" ng-model="invoice.company_info.web_link"/></div>
+                    <div><input type="text" ng-model="invoice.company_info.address1"/></div>
+                    <div><input type="text" ng-model="invoice.company_info.address2"/></div>
+                    <div><input type="text" ng-model="invoice.company_info.postal"/></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="table table-striped" align="center" >
+        <tr>
+            <th></th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Cost</th>
+            <th style="text-align:right;">Total</th>
+
+        </tr>
+        <tr data-ng-repeat="item in invoice.items track by $index">
+            <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a></td>
+            <td><select ng-model="product" id="formData.invoiceItem" ng-options="product.name for product in products" placeholder="Product">
+                <option value="">Select product</option>
+            </select></td>
+            <td><input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="qty"></td>
+            <td><input class="span3" id="formData.invoicePrice" ng-model="product.price" placeholder="price" type="integer" maxlength="40">
+            </td>
+            <td align="right">{{invoice.price * item.qty | currency}}</td>
+
+        </tr>
+        <tr ng-hide="printMode">
+            <td colspan="5"><a class="btn btn-primary" href ng-click="addItem()" >Add Item</a></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">
+                Sub Total
+            </td>
+            <td align="right">
+                {{invoice_sub_total() | currency}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">
+                Tax(%): <input ng-model="invoice.tax" ng-validate="number" style="width:43px">
+            </td>
+            <td align="right">
+                {{calculate_tax() | currency}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">
+                Grand Total:
+            </td>
+            <td align="right">
+                {{calculate_grand_total() | currency}}
+            </td>
+        </tr>
+    </table>
+    <div class="noPrint">
+        <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Print</a>
+        <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">Reset</a>
+        <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">Turn On Print Mode</a>
+        <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">Turn Off Print Mode</a>
+    </div>
+</div>
+
+<div ng-hide="printMode" class="copy noPrint">
+    <a href="http://jasdeep.ca/?utm_source=angular_invoicing">Jasdeep Singh</a> &
+    <a href="http://github.com/manpreetrules">Manpreet Singh</a>
+    Made with
+    <span class="love">&#9829;</span> in Toronto by
+    <a href="http://metawarelabs.com/?utm_source=angular_invoicing">Metaware Labs Inc.</a>
+</div>
+
+<div>
+<select ng-options="product.name for product in products" ng-model="current.invoice" ng-change="change()"></select>
+</div>
+<input class="span3" id="formData.invoiceName" ng-model="current.invoice" placeholder="[selected.product}" type="text" maxlength="40">
+<input class="span3" id="formData.invoicePrice" ng-model="invoice.price" placeholder="price" type="integer" maxlength="40">
+
+<input class="span3" id="formData.invoiceName" ng-model="current.invoice.name" placeholder="item" type="text" maxlength="40">
+
+<input class="span3" id="formData.invoicePrice" ng-model="current.invoice.price" placeholder="price" type="integer" maxlength="40">
+
+
+<select ng-model="invoice" id="formData.invoiceItem" ng-options="product.name group by invoice for product in products" placeholder="Product">
+    <option value="">Select product</option>
+</select>
+<input class="span3" id="formData.invoiceItem" ng-model="invoice.name" placeholder="item" type="text" maxlength="40">
+<input class="span3" id="formData.invoicePrice" ng-model="invoice.price" placeholder="price" type="integer" maxlength="40">
+<button ng-click="selectProduct2(product)">check item</button>
+
+
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Vendor</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Tax</th>
+                <th>Tax Amount</th>
+                <th>Note</th>
+                <th>Product</th>
+                <th>Date</th>
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="invoice in invoices track by $index" ng-click="update('sm', invoice)">
+            <tr>
+                <td>{{invoice.date}}</td>
+                <td>{{invoice.patient}}</td>
+                <td>{{invoice.doctor}}</td>
+                <td>{{invoice.appointment}}</td>
+                <td>{{invoice.item}}</td>
+                <td>{{invoice.name}}</td>
+
+                <td>{{invoice.price}}</td>
+                <td>{{invoice.quantity}}</td>
+                <td>{{invoice.tax}}</td>
+                <td>{{invoice.discount}}</td>
+                <td>{{invoice.total}}</td>
+                <td>{{invoice.note}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a product!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new invoice!</strong></label>
+                <input class="span3" id="formData.invoiceDate" ng-model="invoice.date" placeholder="Date" type="text" maxlength="40">
+                <label><strong>Date</strong></label>
+                <input class="span3" id="formData.invoicePatient" ng-model="invoice.patient" placeholder="Patient" type="text" maxlength="40">
+                <label><strong>Doctor</strong></label>
+
+                <input class="span3" id="formData.invoiceDoctor" ng-model="invoice.doctor" placeholder="Doctor" type="text" maxlength="40">
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" id="formData.invoiceAppointment" ng-model="invoice.appointment" placeholder="Appointment" type="text" maxlength="40">
+                <label><strong>Time</strong></label>
+
+                <select ng-model="invoice.item" ng-options="product.name group by invoice.item for product in products" placeholder="Item">
+                    <option value="">Select product</option>
+                </select>
+                <input class="span3" id="formData.invoiceItemName" ng-model="invoice.item.name" placeholder="item" type="text" maxlength="40">
+                <input class="span3" id="formData.invoicePrice" ng-model="invoice.item.price" placeholder="price" type="integer" maxlength="40">
+                <button ng-click="toggleChecked($index)">check item</button>
+
+                <input class="span3" id="formData.invoiceQuantity" ng-model="invoice.quantity" placeholder="quantity" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+
+                <input class="span3" id="formData.invoiceTax" ng-model="invoice.tax" placeholder="tax" type="text" maxlength="40">
+                <input class="span3" id="formData.invoiceDiscount" ng-model="invoice.discount" placeholder="discount" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceTotal" ng-model="invoice.total" placeholder="total" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceNote" ng-model="invoice.note" placeholder="note" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="createInvoice()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="ok()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new invoice!</strong></label>
+                <input class="span3" id="formData.invoiceDate" ng-model="invoice.date" placeholder="Date" type="date" maxlength="40">
+                <label><strong>Date</strong></label>
+                <input class="span3" id="formData.invoicePatient" ng-model="invoice.patient" placeholder="Patient" type="text" maxlength="40">
+                <label><strong>Doctor</strong></label>
+
+                <input class="span3" id="formData.invoiceDoctor" ng-model="invoice.doctor" placeholder="Doctor" type="text" maxlength="40">
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" id="formData.invoiceAppointment" ng-model="invoice.appointment" placeholder="Appointment" type="text" maxlength="40">
+                <label><strong>Time</strong></label>
+
+                <input class="span3" id="formData.invoiceItem" ng-model="invoice.item" placeholder="Item" type="text" maxlength="40">
+                <label><strong>Price</strong></label>
+
+                <input class="span3" id="formData.invoicePrice" ng-model="invoice.price" placeholder="price" type="integer" maxlength="40">
+                <label><strong>Quantity</strong></label>
+
+                <input class="span3" id="formData.invoiceQuantity" ng-model="invoice.quantity" placeholder="quantity" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+
+                <input class="span3" id="formData.invoiceTax" ng-model="invoice.tax" placeholder="tax" type="text" maxlength="40">
+                <input class="span3" id="formData.invoiceDiscount" ng-model="invoice.discount" placeholder="discount" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceTotal" ng-model="invoice.total" placeholder="total" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceNote" ng-model="invoice.note" placeholder="note" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="updateInvoice()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyInvoice()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+

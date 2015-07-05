@@ -1,47 +1,5 @@
 angular.module('clientApp')
-    .controller('AppointmentsController', ['$scope', '$timeout', '$http', '$resource', '$location', '$routeParams', 'uiCalendarConfig', 'Appointment', '$modal', function ($scope, $timeout, $http, $resource, $location, $routeParams, uiCalendarConfig, Appointment, $modal) {
-
-        $scope.appointment = new Appointment();
-        $scope.appointments = [];
-
-        Appointment.query().then(function(appointments){
-            $scope.appointments = appointments;
-        });
-        $scope.formData = {
-            appointmentStartTime: '',
-            appointmentEndTime: '',
-            appointmentPatientName: '',
-            appointmentDoctorName: '',
-            appointmentStartDate: '',
-            appointmentEndDate: ''
-        };
-        $scope.createAppointment = function() {
-            $scope.appointment.create()
-                .then(function(response) {
-                    console.log("SUCCESS", response);
-                })
-                .catch(function(response) {
-                    console.log("FAILURE!", response);
-                })};
-        $scope.updateAppointment = function() {
-            $scope.appointment.update()
-                .then(function(response) {
-                    console.log("SUCCESS", response);
-                })
-                .catch(function(response) {
-                    console.log("FAILURE!", response);
-                });
-        };
-        $scope.destroyAppointment = function() {
-            $scope.appointment.delete()
-                .then(function(response) {
-                    console.log("SUCCESS", response);
-                })
-                .catch(function(response) {
-                    console.log("FAILURE!", response);
-                });
-        };
-
+    .controller('CalendarCtrl' ['$scope', '$http', '$compile', 'ui.CalendarConfig', function($scope,$compile,$http,uiCalendarConfig) {
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -49,6 +7,11 @@ angular.module('clientApp')
 
         $scope.changeTo = 'Hungarian';
         /* event source that pulls from google.com */
+        $scope.eventSource = {
+            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+            className: 'gcal-event',           // an option!
+            currentTimezone: 'America/Chicago' // an option!
+        };
         /* event source that contains custom events on the scope */
         $scope.events = [
             {title: 'All Day Event',start: new Date(y, m, 1)},
@@ -58,35 +21,6 @@ angular.module('clientApp')
             {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
             {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
         ];
-
-        $scope.myEvents = [
-            {
-                title: 'All Day Test Event',
-                start: new Date(y, m, 1)
-            },
-            {
-                title: 'Long Test Event',
-                start: new Date(y, m, d - 5),
-                end: new Date(y, m, d - 2)
-            },
-            {
-                title: 'Test Birthday Party',
-                start: new Date(y, m, d + 1, 19, 0),
-                end: new Date(y, m, d + 1, 22, 30),
-                allDay: false
-            }];
-
-            $scope.eventSource = function(start, end, date, timezone, callback, appointment) {
-                    $( '#calendar' ).fullCalendar({
-                        doctorsSource: '/doctors/list',
-                        eventSources: [
-                            {url: '/api/appointments'}
-                        ]
-
-
-                })
-        };
-
         /* event source that calls a function on every view switch */
         $scope.eventsF = function (start, end, timezone, callback) {
             var s = new Date(start).getTime() / 1000;
@@ -165,38 +99,14 @@ angular.module('clientApp')
                 height: 450,
                 editable: true,
                 header:{
-                    left: 'month basicWeek basicDay agendaWeek agendaDay',
-                    center: 'title',
+                    left: 'title',
+                    center: '',
                     right: 'today prev,next'
                 },
-                dayClick: $scope.alertEventOnClick,
+                eventClick: $scope.alertOnEventClick,
                 eventDrop: $scope.alertOnDrop,
                 eventResize: $scope.alertOnResize,
-                defaultView: 'agendaWeek',
-                doctorsSource: '/doctors/list',
-                eventSources: [
-                    {url: '/api/appointments',
-                        data: 'eventsBy=' + '&start=' + '&end=' + '&selectedId=',
-                        success: function (data, callback, event) {
-                            var events = [];
-                            $(event).each(function (appointment, start, end) {
-                                events.push({
-                                    "id": appointment.id,
-                                    "start": moment(start).format('YYYY/MM/DD hh:mm'),
-                                    "end": moment(end).format('YYYY/MM/DD hh:mm')
-                                });
-                            });
-                            callback(events);
-                        },
-                        error: function () { alert('Failed!'); },
-                    }
-                ],
-                allDaySlot: false,
-                minTime: '7:30am',
-                maxTime: '6:00pm',
-                slotMinutes: 10,
-                selectable: true,
-                selectHelper: true
+                eventRender: $scope.eventRender
             }
         };
 
@@ -212,7 +122,7 @@ angular.module('clientApp')
             }
         };
         /* event sources array*/
-        $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF, $scope.myEvents];
+        $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
         $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
-    }]);
+    }])

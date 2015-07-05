@@ -1,0 +1,133 @@
+
+
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Vendor</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Tax</th>
+                <th>Tax Amount</th>
+                <th>Note</th>
+                <th>Product</th>
+                <th>Date</th>
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="expense in expenses" ng-click="update('sm', expense)">
+            <tr>
+                <td>{{expense.id}}</td>
+                <td>{{expense.vendor}}</td>
+                <td>{{expense.category}}</td>
+                <td>{{expense.amount}}</td>
+                <td>{{expense.tax}}</td>
+                <td>{{expense.taxamount}}</td>
+                <td>{{expense.note}}</td>
+                <td>{{expense.product}}</td>
+                <td>{{expense.date}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create a product!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new expense!</strong></label>
+                <input class="span3" id="formData.expenseVendor" ng-model="expense.vendor" placeholder="Vendor" type="text" maxlength="40">
+                <label><strong>Category</strong></label>
+                <input class="span3" id="formData.expenseCategory" ng-model="expense.category" placeholder="category" type="text" maxlength="40">
+                <label><strong>Amount</strong></label>
+
+                <input class="span3" id="formData.expenseAmount" ng-model="expense.amount" placeholder="category" type="text" maxlength="40">
+                <label><strong>Tax</strong></label>
+
+                <input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="text" maxlength="40">
+                <label><strong>Taxamount</strong></label>
+
+                <input class="span3" id="formData.expenseTaxamount" ng-model="expense.taxamount" placeholder="category" type="text" maxlength="40">
+                <label><strong>note</strong></label>
+
+                <input class="span3" id="formData.expenseNote" ng-model="expense.note" placeholder="category" type="text" maxlength="40">
+                <label><strong>product</strong></label>
+
+                <input class="span3" id="formData.expenseProduct" ng-model="expense.product" placeholder="category" type="text" maxlength="40">
+                <label><strong>date</strong></label>
+
+                <input class="span3" id="formData.expenseDate" ng-model="expense.date" placeholder="category" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="createExpense()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new expense!</strong></label>
+                <input class="span3" id="formData.expenseVendor" ng-model="expense.vendor" placeholder="Vendor" type="text" maxlength="40">
+                <label><strong>Category</strong></label>
+                <input class="span3" id="formData.expenseCategory" ng-model="expense.category" placeholder="category" type="text" maxlength="40">
+                <label><strong>Amount</strong></label>
+
+                <input class="span3" id="formData.expenseAmount" ng-model="expense.amount" placeholder="category" type="text" maxlength="40">
+                <label><strong>Tax</strong></label>
+
+                <input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="text" maxlength="40">
+                <label><strong>Taxamount</strong></label>
+
+                <input class="span3" id="formData.expenseTaxamount" ng-model="expense.taxamount" placeholder="category" type="text" maxlength="40">
+                <label><strong>note</strong></label>
+
+                <input class="span3" id="formData.expenseNote" ng-model="expense.note" placeholder="category" type="text" maxlength="40">
+                <label><strong>product</strong></label>
+
+                <input class="span3" id="formData.expenseProduct" ng-model="expense.product" placeholder="category" type="text" maxlength="40">
+                <label><strong>date</strong></label>
+
+                <input class="span3" id="formData.expenseDate" ng-model="expense.date" placeholder="category" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="updateExpense()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyExpense()">Delete</button>
+
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+
