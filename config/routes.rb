@@ -462,6 +462,8 @@ end
     get "/invoices/.id(.:format)" => "invoices#index"
     get "/example(.:format)" => "example#index"
     get "/example/.id(.:format)" => "example#index"
+    get "/calendar(.:format)" => "calendar#index"
+    get "/calendar/.id(.:format)" => "calendar#index"
 
 
 end
