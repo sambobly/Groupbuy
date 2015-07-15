@@ -23,7 +23,7 @@
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1436399973490" ignored="false" />
+    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1436917728689" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -123,7 +123,7 @@
     <file path="/templates.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426162308194" ignored="false" />
     <file path="/20150315105701_fix_patient_title.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426417604016" ignored="false" />
     <file path="/form-elements.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1426680858266" ignored="false" />
-    <file path="/appointments.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1436399591685" ignored="false" />
+    <file path="/appointments.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1436919230164" ignored="false" />
     <file path="/tax.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427286923730" ignored="false" />
     <file path="/taxes.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1432554459065" ignored="false" />
     <file path="/taxes.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1432554295747" ignored="false" />
@@ -205,24 +205,24 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.572264">
+    <splitter split-orientation="horizontal" split-proportion="0.38489583">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="618" column="63" selection-start="31928" selection-end="31928" vertical-scroll-proportion="-14.076923">
+                <state line="643" column="20" selection-start="33882" selection-end="33882" vertical-scroll-proportion="-31.076923">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="appointments.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="appointments.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/views/appointments.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="187" column="130" selection-start="11131" selection-end="11131" vertical-scroll-proportion="0.7427241">
+                <state line="235" column="1" selection-start="14068" selection-end="14068" vertical-scroll-proportion="0.9604191">
                   <folding>
-                    <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#article#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#3;n#article#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -306,10 +306,10 @@
         <splitter split-orientation="horizontal" split-proportion="0.78214973">
           <split-first>
             <leaf>
-              <file leaf-file-name="appointments.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="appointments.js" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="279" column="42" selection-start="11639" selection-end="11639" vertical-scroll-proportion="0.61744183">
+                    <state line="326" column="8" selection-start="14226" selection-end="14226" vertical-scroll-proportion="0.21920905">
                       <folding />
                     </state>
                   </provider>
@@ -354,7 +354,7 @@
               <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="6" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+                    <state line="11" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -403,7 +403,7 @@
               <file leaf-file-name="invoices.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/invoices.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="171" column="18" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.17052023">
+                    <state line="171" column="18" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.02303523">
                       <folding />
                     </state>
                   </provider>
@@ -488,7 +488,7 @@
               <file leaf-file-name="consults.html" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/app/views/consults.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="4" column="37" selection-start="247" selection-end="247" vertical-scroll-proportion="-2.6153846">
+                    <state line="4" column="37" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -497,7 +497,7 @@
               <file leaf-file-name="appointments.js.erb" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="13" column="2" selection-start="448" selection-end="448" vertical-scroll-proportion="-1.1923077">
+                    <state line="13" column="2" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -548,8 +548,8 @@
         <option value="$PROJECT_DIR$/app/models/appointment.rb" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/products.js" />
         <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
         <option value="$PROJECT_DIR$/client/app/views/appointments.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
       </list>
     </option>
   </component>
@@ -1938,7 +1938,11 @@
       <created>1436399485677</created>
       <updated>1436399485677</updated>
     </task>
-    <option name="localTasksCounter" value="264" />
+    <task id="LOCAL-00264" summary="Calendar displays events, working on update modal">
+      <created>1436399983942</created>
+      <updated>1436399983942</updated>
+    </task>
+    <option name="localTasksCounter" value="265" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1965,7 +1969,6 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31851852" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1980,6 +1983,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.49946865" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2151,54 +2155,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="618" column="63" selection-start="31928" selection-end="31928" vertical-scroll-proportion="-14.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/consults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="247" selection-end="247" vertical-scroll-proportion="-2.6153846">
+        <state line="4" column="37" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="36" selection-start="5578" selection-end="5578" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="121" column="36" selection-start="5578" selection-end="5578" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/appointments/appointments.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="448" selection-end="448" vertical-scroll-proportion="-1.1923077">
+        <state line="13" column="2" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/invoices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="18" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.17052023">
+        <state line="171" column="18" selection-start="5715" selection-end="5715" vertical-scroll-proportion="0.02303523">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="42" selection-start="11639" selection-end="11639" vertical-scroll-proportion="0.61744183">
+        <state line="643" column="20" selection-start="33882" selection-end="33882" vertical-scroll-proportion="-31.076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/appointments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="130" selection-start="11131" selection-end="11131" vertical-scroll-proportion="0.7427241">
+        <state line="235" column="1" selection-start="14068" selection-end="14068" vertical-scroll-proportion="0.9604191">
           <folding>
-            <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#3;n#article#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="326" column="8" selection-start="14226" selection-end="14226" vertical-scroll-proportion="0.21920905">
+          <folding />
         </state>
       </provider>
     </entry>
