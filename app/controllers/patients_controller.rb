@@ -22,6 +22,7 @@ class PatientsController < ApplicationController
 
   # GET /patients/1/edit
   def edit
+
   end
 
   # POST /patients

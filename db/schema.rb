@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618105022) do
+ActiveRecord::Schema.define(version: 20150805083717) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -177,13 +177,14 @@ ActiveRecord::Schema.define(version: 20150618105022) do
     t.date     "date"
     t.string   "vendor"
     t.string   "category"
-    t.decimal  "amount",     precision: 10, scale: 0
-    t.decimal  "tax",        precision: 10, scale: 0
-    t.decimal  "taxamount",  precision: 10, scale: 0
+    t.decimal  "amount",          precision: 10, scale: 0
+    t.decimal  "tax",             precision: 10, scale: 0
+    t.decimal  "taxamount",       precision: 10, scale: 0
     t.string   "note"
     t.boolean  "product"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "concession_type"
   end
 
   create_table "inovices", force: true do |t|
@@ -208,16 +209,18 @@ ActiveRecord::Schema.define(version: 20150618105022) do
     t.string   "doctor"
     t.string   "appointment"
     t.string   "item"
-    t.decimal  "price",       precision: 10, scale: 0
+    t.decimal  "price",           precision: 10, scale: 0
     t.integer  "quantity"
     t.integer  "tax"
     t.integer  "discount"
-    t.decimal  "total",       precision: 10, scale: 0
+    t.decimal  "total",           precision: 10, scale: 0
     t.string   "note"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
     t.string   "item_name"
+    t.string   "product"
+    t.string   "concession_type"
   end
 
   create_table "line_items", force: true do |t|

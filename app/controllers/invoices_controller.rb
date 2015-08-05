@@ -5,7 +5,7 @@ class InvoicesController < InheritedResources::Base
   private
 
     def invoice_params
-      params.require(:invoice).permit(:date, :patient, :doctor, :name, :appointment, :item, :price, :quantity, :tax, :discount, :total, :note, :item_name)
+      params.require(:invoice).permit(:date, :patient, :doctor, :name, :appointment, :item, :price, :quantity, :tax, :discount, :total, :note, :item_name, :product, :concession_type)
     end
 end
 

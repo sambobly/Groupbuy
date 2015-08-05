@@ -384,6 +384,26 @@ end
         get 'show'
       end
     end
+    resources :consulttemplates do
+      collection do
+        get 'find'
+        get 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
   end # api scope
 
 resources :doctors do
