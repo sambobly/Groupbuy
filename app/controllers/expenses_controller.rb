@@ -1,5 +1,6 @@
 class ExpensesController < InheritedResources::Base
 
+
 #class ExpensesController < ApplicationController
 #  before_action :set_expense, only: [:show, :edit, :update, :destroy, :create]
 
@@ -28,13 +29,13 @@ class ExpensesController < InheritedResources::Base
   #  end
   # end
 
-   private
+  private
   #def set_expense
   #  @expense = Expense.find_by_id(params[:id])
   #end
 
     def expense_params
-      params.require(:expense).permit(:date, :vendor, :category, :amount, :tax, :taxamount, :note, :product, :concession_type)
+      params.require(:expense).permit(:date, :vendor, :category, :amount, {:tax => [:name, :id, :amount, :url]}, :taxamount, :note, :product, :test, {:concession_type => [:name, :id, :percentage, :url]});
     end
 end
 
