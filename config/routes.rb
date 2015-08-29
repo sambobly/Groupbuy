@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :tests
+
   resources :invoices
 
   resources :inovices
@@ -18,6 +20,9 @@ Optho::Application.routes.draw do
   resources :contacts
 
   resources :expenses
+
+  resources :tests
+
 
   #get "/" => "taxes#index", :as => "root"
 
@@ -177,6 +182,27 @@ end
     end
   end
     resources :expenses do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :tests do
       collection do
         get 'find'
         get 'index'
@@ -443,6 +469,7 @@ resources :doctors do
   resources :taxes, only:[:index, :create, :update, :destroy]
   resources :appointments, only:[:index, :create, :update, :destroy]
   resources :expenses, only:[:index, :create, :update, :destroy]
+  resources :tests, only:[:index, :create, :update, :destroy]
   resources :contacts, only:[:index, :create, :update, :destroy]
   resources :payment_types, only:[:index, :create, :update, :destroy]
   resources :concession_types, only:[:index, :create, :update, :destroy]
@@ -468,6 +495,8 @@ end
     get "/taxes/.id(.:format)" => "taxes#index"
     get "/expenses(.:format)" => "expenses#index"
     get "/expenses/.id(.:format)" => "expenses#index"
+    get "/tests(.:format)" => "tests#index"
+    get "/tests/.id(.:format)" => "tests#index"
     get "/contacts(.:format)" => "contacts#index"
     get "/contacts/.id(.:format)" => "contacts#index"
     get "/payment_types(.:format)" => "payment_types#index"
