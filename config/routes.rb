@@ -513,6 +513,8 @@ end
     get "/example/.id(.:format)" => "example#index"
     get "/calendar(.:format)" => "calendar#index"
     get "/calendar/.id(.:format)" => "calendar#index"
+    get "/patientnotes(.:format)" => "patientnotes#index"
+    get "/patientnotes/patientId(.:format)" => "patientnotes#index"
 
 
 end
