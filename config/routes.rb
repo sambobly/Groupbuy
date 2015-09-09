@@ -485,6 +485,7 @@ end
     get "/appointments/.id(.:format)" => "appointments#index"
     get "/patients(.:format)" => "patients#index"
     get "/patients/.id(.:format)" => "patients#index"
+    get "/patients.detail(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"
     get "/consulttemplates/.id(.:format)" => "consultemplates#index"
     get "/products(.:format)" => "products#index"
