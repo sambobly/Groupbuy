@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822042956) do
+ActiveRecord::Schema.define(version: 20150929110654) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -174,6 +174,13 @@ ActiveRecord::Schema.define(version: 20150822042956) do
     t.integer "patient_id"
   end
 
+  create_table "eggs", force: true do |t|
+    t.string   "name"
+    t.integer  "nest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "expenses", force: true do |t|
     t.date     "date"
     t.string   "vendor"
@@ -233,6 +240,12 @@ ActiveRecord::Schema.define(version: 20150822042956) do
     t.datetime "check_in_time"
     t.datetime "check_out_time"
     t.boolean  "checked_in",     default: true
+  end
+
+  create_table "nests", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "patients", force: true do |t|

@@ -1,5 +1,6 @@
   class AppointmentsController < InheritedResources::Base
   respond_to :json
+  belongs_to :patient
   private
 
   def appointment_params

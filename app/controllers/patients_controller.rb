@@ -5,7 +5,7 @@ class PatientsController < InheritedResources::Base
   private
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :email, :title, :UR_number, :date_of_birth, :gender, {:concession_type => [:name, :id, :percentage, :url]}, :address, :emergency_contact, :medicare_number, :referral_type, :referring_doctor, :phone_number)
+    params.require(:patient).permit(:first_name, :last_name, :email, :title, :UR_number, :date_of_birth, :gender, :id, {:concession_type => [:name, :id, :percentage, :url]}, :address, :emergency_contact, :medicare_number, :referral_type, :referring_doctor, :phone_number)
   end
 end
 

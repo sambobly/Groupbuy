@@ -1,4 +1,8 @@
 Optho::Application.routes.draw do
+  resources :eggs
+
+  resources :nests
+
   resources :tests
 
   resources :invoices
@@ -51,12 +55,54 @@ Optho::Application.routes.draw do
   get "sessions/destroy"
   resources :users
 
+
+  resources :nests do
+    collection do
+      get 'find'
+      get 'index'
+      get 'findByDate'
+      get 'findNextAvailableSlot'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      get 'checkout'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
+  resources :eggs do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
   resources :line_items do
   collection do
     get 'find'
     get 'index'
-    get 'findByDate'
-    get 'findNextAvailableSlot'
     post 'create'
     post 'destroy'
     get 'edit'
@@ -64,7 +110,6 @@ Optho::Application.routes.draw do
   end
   member do
     delete 'destroy'
-    get 'checkout'
     post 'update'
     post 'create'
     get 'edit'
@@ -98,6 +143,7 @@ end
   
   scope '/api' do
     resources :patients do
+
       collection do
         get 'find'
         get 'index'
@@ -307,6 +353,49 @@ end
         get 'show'
       end
     end
+    resources :nests do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :eggs do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :payment_types do
       collection do
         get 'find'
@@ -476,6 +565,9 @@ resources :doctors do
   resources :businesses, only:[:index, :create, :update, :destroy]
   resources :billable_items, only:[:index, :create, :update, :destroy]
   resources :invoices, only:[:index, :create, :update, :destroy]
+  resources :nests, only:[:index, :create, :update, :destroy]
+  resources :eggs, only:[:index, :create, :update, :destroy]
+
 
 end
   scope :api do
@@ -516,7 +608,9 @@ end
     get "/calendar/.id(.:format)" => "calendar#index"
     get "/patientnotes(.:format)" => "patientnotes#index"
     get "/patientnotes/patientId(.:format)" => "patientnotes#index"
-
-
+    get "/nests(.:format)" => "nests#index"
+    get "/nests/.id(.:format)" => "nests#index"
+    get "/eggs(.:format)" => "eggs#index"
+    get "/eggs/.id(.:format)" => "eggs#index"
 end
 
