@@ -610,6 +610,7 @@ end
     get "/patientnotes/patientId(.:format)" => "patientnotes#index"
     get "/nests(.:format)" => "nests#index"
     get "/nests/.id(.:format)" => "nests#index"
+    get "/nests/.id(.:format)/eggs" => "nests#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
 end
