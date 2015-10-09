@@ -38,7 +38,7 @@
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1444392383006" ignored="false" />
+    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1444392389752" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -267,7 +267,7 @@
               <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="128" column="30" selection-start="4311" selection-end="4311" vertical-scroll-proportion="0.018763797">
+                    <state line="128" column="30" selection-start="4311" selection-end="4311" vertical-scroll-proportion="0.027960526">
                       <folding />
                     </state>
                   </provider>
@@ -361,7 +361,7 @@
               <file leaf-file-name="nests.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/nests.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="65" column="55" selection-start="2129" selection-end="2141" vertical-scroll-proportion="0.13285884">
+                    <state line="65" column="55" selection-start="2129" selection-end="2141" vertical-scroll-proportion="0.20550458">
                       <folding />
                     </state>
                   </provider>
@@ -423,7 +423,7 @@
               <file leaf-file-name="patientnotes.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patientnotes.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="60" column="25" selection-start="2198" selection-end="2338" vertical-scroll-proportion="0.44715446">
+                    <state line="60" column="25" selection-start="2198" selection-end="2338" vertical-scroll-proportion="0.75">
                       <folding />
                     </state>
                   </provider>
@@ -562,7 +562,7 @@
               <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/config/routes.rb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="612" column="34" selection-start="13322" selection-end="13322" vertical-scroll-proportion="0.7781732">
+                    <state line="617" column="34" selection-start="13434" selection-end="13434" vertical-scroll-proportion="0.9376147">
                       <folding />
                     </state>
                   </provider>
@@ -2107,6 +2107,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31851852" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2121,7 +2122,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.49946865" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2328,14 +2328,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/nests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="55" selection-start="2129" selection-end="2141" vertical-scroll-proportion="0.13285884">
+        <state line="65" column="55" selection-start="2129" selection-end="2141" vertical-scroll-proportion="0.20550458">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="30" selection-start="4311" selection-end="4311" vertical-scroll-proportion="0.018763797">
+        <state line="128" column="30" selection-start="4311" selection-end="4311" vertical-scroll-proportion="0.027960526">
           <folding />
         </state>
       </provider>
@@ -2349,7 +2349,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="612" column="34" selection-start="13322" selection-end="13322" vertical-scroll-proportion="0.7781732">
+        <state line="617" column="34" selection-start="13434" selection-end="13434" vertical-scroll-proportion="0.9376147">
           <folding />
         </state>
       </provider>
