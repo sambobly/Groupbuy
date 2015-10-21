@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :birds
+
   resources :eggs
 
   resources :nests
@@ -80,6 +82,26 @@ Optho::Application.routes.draw do
   end
 
   resources :eggs do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
+  resources :birds do
     collection do
       get 'find'
       get 'index'
@@ -396,6 +418,27 @@ end
         get 'show'
       end
     end
+    resources :birds do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :payment_types do
       collection do
         get 'find'
@@ -567,6 +610,8 @@ resources :doctors do
   resources :invoices, only:[:index, :create, :update, :destroy]
   resources :nests, only:[:index, :create, :update, :destroy]
   resources :eggs, only:[:index, :create, :update, :destroy]
+  resources :birds, only:[:index, :create, :update, :destroy]
+
 
 
 end
@@ -613,5 +658,7 @@ end
     get "/nests/.id(.:format)/eggs" => "nests#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
+    get "/birds(.:format)" => "birds#index"
+    get "/birds/.id(.:format)" => "birds#index"
 end
 
