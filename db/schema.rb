@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151011092754) do
+ActiveRecord::Schema.define(version: 20151021224334) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -307,6 +307,15 @@ ActiveRecord::Schema.define(version: 20151011092754) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "twigs", force: true do |t|
+    t.text     "name"
+    t.integer  "nest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "twigs", ["nest_id"], name: "index_twigs_on_nest_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :twigs
+
   resources :birds
 
   resources :eggs
@@ -82,6 +84,26 @@ Optho::Application.routes.draw do
   end
 
   resources :eggs do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
+  resources :twigs do
     collection do
       get 'find'
       get 'index'
@@ -395,6 +417,27 @@ end
         post 'edit'
         get 'show'
       end
+      resources :eggs do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
     end
 
     resources :eggs do
@@ -418,7 +461,30 @@ end
         get 'show'
       end
     end
+
     resources :birds do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :twigs do
       collection do
         get 'find'
         get 'index'
@@ -608,9 +674,12 @@ resources :doctors do
   resources :businesses, only:[:index, :create, :update, :destroy]
   resources :billable_items, only:[:index, :create, :update, :destroy]
   resources :invoices, only:[:index, :create, :update, :destroy]
-  resources :nests, only:[:index, :create, :update, :destroy]
+  resources :nests, only:[:index, :create, :update, :destroy] do
+    resources :eggs, only:[:index, :create, :update, :destroy]
+  end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :birds, only:[:index, :create, :update, :destroy]
+  resources :twigs, only:[:index, :create, :update, :destroy]
 
 
 
@@ -656,9 +725,13 @@ end
     get "/nests(.:format)" => "nests#index"
     get "/nests/.id(.:format)" => "nests#index"
     get "/nests/.id(.:format)/eggs" => "nests#index"
+    #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
+    get "/twigs(.:format)" => "twigs#index"
+    get "/twigs/.id(.:format)" => "twigs#index"
+
 end
 
