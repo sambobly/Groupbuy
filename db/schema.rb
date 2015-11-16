@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021224334) do
+ActiveRecord::Schema.define(version: 20151111120219) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -286,6 +286,15 @@ ActiveRecord::Schema.define(version: 20151021224334) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sticks", force: true do |t|
+    t.text     "name"
+    t.integer  "nest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sticks", ["nest_id"], name: "index_sticks_on_nest_id", using: :btree
 
   create_table "taxes", force: true do |t|
     t.text     "name"

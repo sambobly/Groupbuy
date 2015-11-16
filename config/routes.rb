@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :sticks
+
   resources :twigs
 
   resources :birds
@@ -397,6 +399,27 @@ end
         get 'show'
       end
     end
+    resources :sticks do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :nests do
       collection do
         get 'find'
@@ -665,6 +688,7 @@ resources :doctors do
   resources :products, only:[:index, :create, :update, :destroy]
   resources :templates, only:[:index, :create, :update, :destroy]
   resources :taxes, only:[:index, :create, :update, :destroy]
+  resources :sticks, only:[:index, :create, :update, :destroy]
   resources :appointments, only:[:index, :create, :update, :destroy]
   resources :expenses, only:[:index, :create, :update, :destroy]
   resources :tests, only:[:index, :create, :update, :destroy]
@@ -700,6 +724,8 @@ end
     get "/templates/.id(.:format)" => "templates#index"
     get "/taxes(.:format)" => "taxes#index"
     get "/taxes/.id(.:format)" => "taxes#index"
+    get "/sticks(.:format)" => "sticks#index"
+    get "/sticks/.id(.:format)" => "sticks#index"
     get "/expenses(.:format)" => "expenses#index"
     get "/expenses/.id(.:format)" => "expenses#index"
     get "/tests(.:format)" => "tests#index"
