@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111120219) do
+ActiveRecord::Schema.define(version: 20151122065112) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -248,6 +248,21 @@ ActiveRecord::Schema.define(version: 20151111120219) do
     t.datetime "check_out_time"
     t.boolean  "checked_in",     default: true
   end
+
+  create_table "lines", force: true do |t|
+    t.integer  "invoice_id"
+    t.text     "item"
+    t.decimal  "price",      precision: 10, scale: 0
+    t.integer  "quantity"
+    t.decimal  "tax",        precision: 10, scale: 0
+    t.decimal  "discount",   precision: 10, scale: 0
+    t.decimal  "total",      precision: 10, scale: 0
+    t.text     "product"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lines", ["invoice_id"], name: "index_lines_on_invoice_id", using: :btree
 
   create_table "nests", force: true do |t|
     t.string   "name"
