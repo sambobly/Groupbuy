@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :widgets
+
   resources :lines
 
   resources :sticks
@@ -148,6 +150,26 @@ Optho::Application.routes.draw do
   end
 
   resources :birds do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
+  resources :widgets do
     collection do
       get 'find'
       get 'index'
@@ -571,6 +593,28 @@ end
       end
     end
 
+    resources :widgets do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
     resources :twigs do
       collection do
         get 'find'
@@ -769,6 +813,8 @@ resources :doctors do
   end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :birds, only:[:index, :create, :update, :destroy]
+  resources :widgets, only:[:index, :create, :update, :destroy]
+
   resources :twigs, only:[:index, :create, :update, :destroy]
   resources :lines, only:[:index, :create, :update, :destroy]
 
@@ -825,6 +871,8 @@ resources :doctors do
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
+    get "/widgets(.:format)" => "widgets#index"
+    get "/widgets/.id(.:format)" => "widgets#index"
     get "/twigs(.:format)" => "twigs#index"
     get "/twigs/.id(.:format)" => "twigs#index"
     get "/lines(.:format)" => "lines#index"

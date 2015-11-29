@@ -46,7 +46,7 @@ end
 
 group :development do
   gem 'debugger'
-  
+
   gem 'ffaker' # Gem for generating fake data, see lib/tasks/populate
 
 end

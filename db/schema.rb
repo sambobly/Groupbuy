@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122065112) do
+ActiveRecord::Schema.define(version: 20151129033247) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -237,7 +237,11 @@ ActiveRecord::Schema.define(version: 20151122065112) do
     t.string   "item_name"
     t.string   "product"
     t.string   "concession_type"
+    t.integer  "patient_id"
+    t.string   "lines"
   end
+
+  add_index "invoices", ["patient_id"], name: "index_invoices_on_patient_id", using: :btree
 
   create_table "line_items", force: true do |t|
     t.integer  "appointment_id"
@@ -260,9 +264,11 @@ ActiveRecord::Schema.define(version: 20151122065112) do
     t.text     "product"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "product_id"
   end
 
   add_index "lines", ["invoice_id"], name: "index_lines_on_invoice_id", using: :btree
+  add_index "lines", ["product_id"], name: "index_lines_on_product_id", using: :btree
 
   create_table "nests", force: true do |t|
     t.string   "name"
@@ -364,5 +370,22 @@ ActiveRecord::Schema.define(version: 20151122065112) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "widgets", force: true do |t|
+    t.integer  "product_id"
+    t.integer  "invoice_id"
+    t.string   "item"
+    t.decimal  "price",      precision: 10, scale: 0
+    t.integer  "quantity"
+    t.decimal  "tax",        precision: 10, scale: 0
+    t.decimal  "discount",   precision: 10, scale: 0
+    t.decimal  "total",      precision: 10, scale: 0
+    t.string   "product"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "widgets", ["invoice_id"], name: "index_widgets_on_invoice_id", using: :btree
+  add_index "widgets", ["product_id"], name: "index_widgets_on_product_id", using: :btree
 
 end
