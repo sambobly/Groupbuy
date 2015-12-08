@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :procurators
+
   resources :widgets
 
   resources :lines
@@ -170,6 +172,26 @@ Optho::Application.routes.draw do
   end
 
   resources :widgets do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
+  resources :procurators do
     collection do
       get 'find'
       get 'index'
@@ -421,6 +443,27 @@ end
           get 'show'
         end
       end
+      resources :procurators do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
     end
     resources :businesses do
       collection do
@@ -594,6 +637,28 @@ end
     end
 
     resources :widgets do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :procurators do
       collection do
         get 'find'
         get 'index'
@@ -807,6 +872,8 @@ resources :doctors do
   resources :billable_items, only:[:index, :create, :update, :destroy]
   resources :invoices, only:[:index, :create, :update, :destroy] do
     resources :lines, only:[:index, :create, :update, :destroy]
+    resources :procurators, only:[:index, :create, :update, :destroy]
+
   end
   resources :nests, only:[:index, :create, :update, :destroy] do
     resources :eggs, only:[:index, :create, :update, :destroy]
@@ -814,6 +881,7 @@ resources :doctors do
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :birds, only:[:index, :create, :update, :destroy]
   resources :widgets, only:[:index, :create, :update, :destroy]
+  resources :procurators, only:[:index, :create, :update, :destroy]
 
   resources :twigs, only:[:index, :create, :update, :destroy]
   resources :lines, only:[:index, :create, :update, :destroy]
@@ -856,7 +924,7 @@ resources :doctors do
     get "/invoices(.:format)" => "invoices#index"
     get "/invoices/.id(.:format)" => "invoices#index"
     get "/invoices/.id(.:format)/lines" => "invoices#index"
-
+    get "/invoices/.id(.:format)/procurators" => "invoices#index"
     get "/example(.:format)" => "example#index"
     get "/example/.id(.:format)" => "example#index"
     get "/calendar(.:format)" => "calendar#index"
@@ -873,6 +941,8 @@ resources :doctors do
     get "/birds/.id(.:format)" => "birds#index"
     get "/widgets(.:format)" => "widgets#index"
     get "/widgets/.id(.:format)" => "widgets#index"
+    get "/procurators(.:format)" => "procurators#index"
+    get "/procurators/.id(.:format)" => "procurators#index"
     get "/twigs(.:format)" => "twigs#index"
     get "/twigs/.id(.:format)" => "twigs#index"
     get "/lines(.:format)" => "lines#index"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129033247) do
+ActiveRecord::Schema.define(version: 20151206045147) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -301,6 +301,15 @@ ActiveRecord::Schema.define(version: 20151129033247) do
     t.datetime "updated_at"
   end
 
+  create_table "procurators", force: true do |t|
+    t.text     "name"
+    t.integer  "invoice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "procurators", ["invoice_id"], name: "index_procurators_on_invoice_id", using: :btree
+
   create_table "products", force: true do |t|
     t.text     "name"
     t.decimal  "price",      precision: 10, scale: 0
@@ -383,9 +392,11 @@ ActiveRecord::Schema.define(version: 20151129033247) do
     t.string   "product"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tax_id"
   end
 
   add_index "widgets", ["invoice_id"], name: "index_widgets_on_invoice_id", using: :btree
   add_index "widgets", ["product_id"], name: "index_widgets_on_product_id", using: :btree
+  add_index "widgets", ["tax_id"], name: "index_widgets_on_tax_id", using: :btree
 
 end
