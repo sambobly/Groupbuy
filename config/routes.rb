@@ -464,6 +464,27 @@ end
           get 'show'
         end
       end
+      resources :widgets do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
     end
     resources :businesses do
       collection do
@@ -873,6 +894,7 @@ resources :doctors do
   resources :invoices, only:[:index, :create, :update, :destroy] do
     resources :lines, only:[:index, :create, :update, :destroy]
     resources :procurators, only:[:index, :create, :update, :destroy]
+    resources :widgets, only:[:index, :create, :update, :destroy]
 
   end
   resources :nests, only:[:index, :create, :update, :destroy] do
@@ -925,6 +947,7 @@ resources :doctors do
     get "/invoices/.id(.:format)" => "invoices#index"
     get "/invoices/.id(.:format)/lines" => "invoices#index"
     get "/invoices/.id(.:format)/procurators" => "invoices#index"
+    get "/invoices/.id(.:format)/widgets" => "invoices#index"
     get "/example(.:format)" => "example#index"
     get "/example/.id(.:format)" => "example#index"
     get "/calendar(.:format)" => "calendar#index"

@@ -4,4 +4,6 @@ class Invoice < ActiveRecord::Base
   accepts_nested_attributes_for :lines
   has_many :procurators
   accepts_nested_attributes_for :procurators
+  has_many :widgets
+  accepts_nested_attributes_for :widgets
 end
