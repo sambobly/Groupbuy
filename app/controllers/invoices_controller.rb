@@ -16,8 +16,8 @@ class InvoicesController < InheritedResources::Base
   # Figure out how to write in ruby
   private
 
-    def invoice_params
-      params.require(:invoice).permit(:date, :patient, :doctor, :name, :appointment, :item, :price, :quantity, :tax, :discount, :total, :note, :item_name, :product, :concession_type, :patient_id)
-    end
+  def invoice_params
+    params.require(:invoice).permit(:id, :date, :patient, :doctor, :appointment, :item, :name, :price, :quantity, :tax, :discount, :total, :note, :item_name, :product, :concession_type, :patient_id)
+  end
 end
 

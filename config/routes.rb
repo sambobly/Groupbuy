@@ -171,6 +171,26 @@ Optho::Application.routes.draw do
     end
   end
 
+  resources :payments do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+
   resources :widgets do
     collection do
       get 'find'
@@ -422,6 +442,25 @@ end
         post 'edit'
         get 'show'
       end
+      resources :payments do
+        collection do
+          get 'find'
+          get 'index'
+          post 'create'
+          post 'destroy'
+          get 'edit'
+          post 'index'
+        end
+        member do
+          delete 'destroy'
+          post 'update'
+          post 'create'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'index'
+        end
+      end
       resources :lines do
         collection do
           get 'find'
@@ -636,6 +675,28 @@ end
     end
 
     resources :birds do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :payments do
       collection do
         get 'find'
         get 'index'
@@ -895,13 +956,15 @@ resources :doctors do
     resources :lines, only:[:index, :create, :update, :destroy]
     resources :procurators, only:[:index, :create, :update, :destroy]
     resources :widgets, only:[:index, :create, :update, :destroy]
-
+    resources :payments, only:[:index, :create, :update, :destroy]
   end
   resources :nests, only:[:index, :create, :update, :destroy] do
     resources :eggs, only:[:index, :create, :update, :destroy]
   end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :birds, only:[:index, :create, :update, :destroy]
+  resources :payments, only:[:index, :create, :update, :destroy]
+
   resources :widgets, only:[:index, :create, :update, :destroy]
   resources :procurators, only:[:index, :create, :update, :destroy]
 
@@ -948,6 +1011,8 @@ resources :doctors do
     get "/invoices/.id(.:format)/lines" => "invoices#index"
     get "/invoices/.id(.:format)/procurators" => "invoices#index"
     get "/invoices/.id(.:format)/widgets" => "invoices#index"
+    get "/invoices/.id(.:format)/payments" => "invoices#index"
+
     get "/example(.:format)" => "example#index"
     get "/example/.id(.:format)" => "example#index"
     get "/calendar(.:format)" => "calendar#index"
@@ -962,6 +1027,8 @@ resources :doctors do
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
+    get "/payments(.:format)" => "payments#index"
+    get "/payments/.id(.:format)" => "payments#index"
     get "/widgets(.:format)" => "widgets#index"
     get "/widgets/.id(.:format)" => "widgets#index"
     get "/procurators(.:format)" => "procurators#index"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206045147) do
+ActiveRecord::Schema.define(version: 20151223062049) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -300,6 +300,25 @@ ActiveRecord::Schema.define(version: 20151206045147) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "payments", force: true do |t|
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.integer  "invoice_id"
+    t.integer  "paymentType_id"
+    t.integer  "appointment_id"
+    t.date     "date"
+    t.text     "note"
+    t.decimal  "total",          precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "payments", ["appointment_id"], name: "index_payments_on_appointment_id", using: :btree
+  add_index "payments", ["doctor_id"], name: "index_payments_on_doctor_id", using: :btree
+  add_index "payments", ["invoice_id"], name: "index_payments_on_invoice_id", using: :btree
+  add_index "payments", ["patient_id"], name: "index_payments_on_patient_id", using: :btree
+  add_index "payments", ["paymentType_id"], name: "index_payments_on_paymentType_id", using: :btree
 
   create_table "procurators", force: true do |t|
     t.text     "name"

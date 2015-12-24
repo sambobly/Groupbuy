@@ -1,10 +1,10 @@
 class TaxesController < InheritedResources::Base
-  respond_to :json
+ respond_to :json
 
-  private
+private
 
-    def tax_params
-      params.require(:tax).permit(:name, :amount)
-    end
+def tax_params
+  params.require(:tax).permit(:name, :amount)
+end
 end
 
