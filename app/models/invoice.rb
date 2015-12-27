@@ -9,7 +9,7 @@ class Invoice < ActiveRecord::Base
     accepts_nested_attributes_for :widgets
     has_many :payments
     accepts_nested_attributes_for :payments
-
+  belongs_to :patient
 end
 
 

@@ -1,13 +1,32 @@
 class PatientsController < InheritedResources::Base
-
   respond_to :json
+
+  #protected
+  #def begin_of_association_chain
+  #  egg = Egg.find(params[:egg_id])
+  #end
+  #def show
+  #  @nest = Nest.find(params[:id])
+  #  @eggs = @nest.eggs
+  #end
+
+
 
   private
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :email, :title, :UR_number, :date_of_birth, :gender, :id, {:concession_type => [:name, :id, :percentage, :url]}, :address, :emergency_contact, :medicare_number, :referral_type, :referring_doctor, :phone_number)
+    params.require(:patient).permit(:first_name, :last_name, :email, :title, :UR_number, :date_of_birth, :gender, {:concession_type => [:name, :id, :percentage, :url]}, :address, :emergency_contact, :medicare_number, :referral_type, :referring_doctor, :phone_number)
   end
 end
+#
+#  respond_to :json
+#
+#  private
+#
+#  def patient_params
+#    params.require(:patient).permit(:first_name, :last_name, :email, :title, :UR_number, :date_of_birth, :gender, :id, {:concession_type => [:name, :id, :percentage, :url]}, :address, :emergency_contact, :medicare_number, :referral_type, :referring_doctor, :phone_number)
+#  end
+#end
 
 
 

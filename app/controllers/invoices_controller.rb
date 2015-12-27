@@ -14,6 +14,15 @@ class InvoicesController < InheritedResources::Base
   #    // isnert line in the database
   #}
   # Figure out how to write in ruby
+
+  protected
+  def begin_of_association_chain
+    if params[:patient_id]
+      patient = Patient.find(params[:patient_id])
+    else
+      nil
+    end
+  end
   private
 
   def invoice_params

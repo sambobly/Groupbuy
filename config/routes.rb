@@ -91,6 +91,29 @@ Optho::Application.routes.draw do
     end
   end
 
+  resources :patients do
+
+    collection do
+      get 'find'
+      get 'index'
+      post 'index'
+      post 'create'
+      post 'destroy'
+      post 'edit'
+      get 'update'
+      get 'show'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'edit'
+      get 'show'
+    end
+    end
+
   resources :eggs do
     collection do
       get 'find'
@@ -275,24 +298,47 @@ end
   
   scope '/api' do
     resources :patients do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
 
-      collection do
-        get 'find'
-        get 'index'
-        post 'create'
-        post 'destroy'
-        post 'edit'
-        get 'update'
-        get 'show'
-      end
-      member do
-        post 'destroy'
-        post 'update'
-        get 'edit'
-        patch 'edit'
-        patch 'update'
-        post 'edit'
-        get 'show'
+
+      resources :invoices do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
       end
     end
     resources :products do
@@ -937,7 +983,9 @@ resources :doctors do
 
   namespace :api, defaults: {format: :json} do
   resources :consultations, only: [:index]
-  resources :patients, only:[:index, :create, :update, :destroy]
+  resources :patients, only:[:index, :create, :update, :destroy] do
+    resources :invoices, only:[:index, :create, :update, :destroy]
+  end
   resources :consult_templates, only:[:index, :create, :update, :destroy]
   resources :consulttemplates, only:[:index, :create, :update, :destroy]
   resources :products, only:[:index, :create, :update, :destroy]
@@ -981,6 +1029,7 @@ resources :doctors do
     get "/appointments/.id(.:format)" => "appointments#index"
     get "/patients(.:format)" => "patients#index"
     get "/patients/.id(.:format)" => "patients#index"
+    get "/patients/.id(.:format)/invoices" => "patients#index"
     get "/patients.detail(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"
     get "/consulttemplates/.id(.:format)" => "consultemplates#index"
