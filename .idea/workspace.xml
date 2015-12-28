@@ -13,9 +13,11 @@
     <list id="f7cb44c2-835c-4b80-98d4-cb6584269874" name="Failed commit: Default (3)" comment="Trying ye old facebook api to get user data" />
     <list id="35217664-370d-4cae-9ec5-9d3d800e7112" name="Failed commit: Default (4)" comment="Fixing git" />
     <list default="true" id="381b509f-7ae1-4626-9291-06a431daeb0f" name="Failed commit: Default (5)" comment="Payments page2">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/appointments.html" afterPath="$PROJECT_DIR$/client/app/views/appointments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/billable_items.html" afterPath="$PROJECT_DIR$/client/app/views/billable_items.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/billable_items.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/billable_items.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" afterPath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" />
@@ -25,15 +27,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/contacts.html" afterPath="$PROJECT_DIR$/client/app/views/contacts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/expenses.html" afterPath="$PROJECT_DIR$/client/app/views/expenses.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/invoice.rb" afterPath="$PROJECT_DIR$/app/models/invoice.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/invoices.html" afterPath="$PROJECT_DIR$/client/app/views/invoices.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/invoices_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/invoices_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/metro/metro.css" afterPath="$PROJECT_DIR$/client/app/styles/metro/metro.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/patient.rb" afterPath="$PROJECT_DIR$/app/models/patient.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/patients.html" afterPath="$PROJECT_DIR$/client/app/views/patients.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/patients_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/populate.rake" afterPath="$PROJECT_DIR$/lib/tasks/populate.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/products.html" afterPath="$PROJECT_DIR$/client/app/views/products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/products.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/products.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
@@ -45,7 +46,7 @@
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451217357648" ignored="false" />
+    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451305603629" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397005126712" ignored="false" />
@@ -55,18 +56,18 @@
     <file path="/20131209022344_create_patients.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386555905621" ignored="false" />
     <file path="/show.json.jbuilder" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1445075073656" ignored="false" />
     <file path="/show.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430042454150" ignored="false" />
-    <file path="/patient.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451022965475" ignored="false" />
+    <file path="/patient.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451303337431" ignored="false" />
     <file path="/appointment.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1436334980749" ignored="false" />
     <file path="/doctors_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389495428274" ignored="false" />
     <file path="/doctorpatient.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386574212695" ignored="false" />
     <file path="/application.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386585358807" ignored="false" />
     <file path="/Gemfile" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1448543472974" ignored="false" />
-    <file path="/appointments.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1441103502738" ignored="false" />
-    <file path="/routes.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451218834498" ignored="false" />
+    <file path="/appointments.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451306871504" ignored="false" />
+    <file path="/routes.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451302810075" ignored="false" />
     <file path="/search.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386587767504" ignored="false" />
     <file path="/search.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389147921800" ignored="false" />
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
-    <file path="/appointments_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1443437123482" ignored="false" />
+    <file path="/appointments_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451304182879" ignored="false" />
     <file path="/week.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386669188074" ignored="false" />
     <file path="/index.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1430271045561" ignored="false" />
     <file path="/application.html.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1391580469396" ignored="false" />
@@ -91,7 +92,7 @@
     <file path="/application_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1428626953951" ignored="false" />
     <file path="/checkin.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397110891236" ignored="false" />
     <file path="/line_item.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397110928078" ignored="false" />
-    <file path="/patients_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451217762657" ignored="false" />
+    <file path="/patients_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451303427883" ignored="false" />
     <file path="/line_items_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408844201067" ignored="false" />
     <file path="/checkins_controller.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1408844063166" ignored="false" />
     <file path="/line_items_controller_test.rb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397112327751" ignored="false" />
@@ -253,7 +254,6 @@
     <file path="/payments_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1450851791787" ignored="false" />
     <file path="/payments.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451201685310" ignored="false" />
     <file path="/payments.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451202452078" ignored="false" />
-    <file path="$PROJECT_DIR$/client/.tmp/scripts/app.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451200670675" ignored="false" />
     <file path="/payment.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1451200872071" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,26 +277,35 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59166664">
+    <splitter split-orientation="horizontal" split-proportion="0.55625">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.8369863">
+        <splitter split-orientation="horizontal" split-proportion="0.6900749">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.1994135">
+            <splitter split-orientation="horizontal" split-proportion="0.5958904">
               <split-first>
                 <leaf>
-                  <file leaf-file-name="payments.js" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/payments.js">
+                  <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.coffee">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="65" column="25" selection-start="1951" selection-end="1961" vertical-scroll-proportion="0.0">
+                        <state line="148" column="3" selection-start="4168" selection-end="4168" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="app.coffee" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/client/app/scripts/app.coffee">
+                  <file leaf-file-name="patients_controller.rb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="328" column="50" selection-start="13067" selection-end="13067" vertical-scroll-proportion="0.0">
+                        <state line="34" column="19" selection-start="1175" selection-end="1224" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="patient.rb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/models/patient.rb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="17" column="52" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -320,19 +329,19 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="invoices.html" pinned="false" current="true" current-in-tab="true">
+                  <file leaf-file-name="invoices.html" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/client/app/views/invoices.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="55" column="83" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.023876404">
+                        <state line="55" column="83" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="invoices.js" pinned="false" current="false" current-in-tab="false">
+                  <file leaf-file-name="invoices.js" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/invoices.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="316" column="19" selection-start="11826" selection-end="12000" vertical-scroll-proportion="0.0">
+                        <state line="11" column="72" selection-start="430" selection-end="430" vertical-scroll-proportion="-1.2916666">
                           <folding />
                         </state>
                       </provider>
@@ -368,22 +377,55 @@
                 </leaf>
               </split-first>
               <split-second>
-                <splitter split-orientation="horizontal" split-proportion="0.6807817">
+                <splitter split-orientation="horizontal" split-proportion="0.34586465">
                   <split-first>
                     <leaf>
                       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/config/routes.rb">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="434" column="8" selection-start="7353" selection-end="7353" vertical-scroll-proportion="-5.58">
-                              <folding>
-                                <marker date="1451218835088" expanded="true" signature="1407:1416" placeholder="do ... end" />
-                                <marker date="1451218835088" expanded="true" signature="1716:1721" placeholder="do ... end" />
-                              </folding>
+                            <state line="1028" column="22" selection-start="20161" selection-end="20173" vertical-scroll-proportion="0.0">
+                              <folding />
                             </state>
                           </provider>
                         </entry>
                       </file>
-                      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="true">
+                      <file leaf-file-name="appointment.rb" pinned="false" current="false" current-in-tab="false">
+                        <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/appointments-1.3.3/lib/generators/appointments/templates/appointment.rb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="true">
+                        <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="114" column="5" selection-start="3998" selection-end="3998" vertical-scroll-proportion="2.4820514">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="8" column="36" selection-start="242" selection-end="243" vertical-scroll-proportion="0.0">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="19" column="39" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-12.423077">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/client/app/views/home.html">
                           <provider selected="true" editor-type-id="text-editor">
                             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -395,7 +437,7 @@
                       <file leaf-file-name="nests.js" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/nests.js">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="1" column="65" selection-start="14" selection-end="14" vertical-scroll-proportion="154.44">
+                            <state line="1" column="65" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
                               <folding />
                             </state>
                           </provider>
@@ -405,10 +447,28 @@
                   </split-first>
                   <split-second>
                     <leaf>
-                      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="true">
+                      <file leaf-file-name="payments.js" pinned="false" current="false" current-in-tab="false">
+                        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/payments.js">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="12" column="1" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/config/routes.rb">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="662" column="9" selection-start="11884" selection-end="11884" vertical-scroll-proportion="0.4290579">
+                            <state line="1010" column="4" selection-start="19604" selection-end="19672" vertical-scroll-proportion="0.0">
+                              <folding />
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file leaf-file-name="patients.js" pinned="false" current="false" current-in-tab="true">
+                        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state line="74" column="22" selection-start="2363" selection-end="2411" vertical-scroll-proportion="0.942789">
                               <folding />
                             </state>
                           </provider>
@@ -422,19 +482,73 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="patient.rb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/models/patient.rb">
+              <file leaf-file-name="patientnotes.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/patientnotes.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="8" column="60" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.44">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="nested.js" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/node_modules/grunt-contrib-cssmin/node_modules/maxmin/node_modules/gzip-size/node_modules/zlib-browserify/node_modules/tape/example/nested.js">
+              <file leaf-file-name="templates.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/templates.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="28" column="12" selection-start="632" selection-end="650" vertical-scroll-proportion="-18.04">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="twigs.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/twigs.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/about.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="acute.select.htm" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/acute.select.htm">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="billable_items.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/billable_items.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="appointments.html" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/app/views/appointments.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="117" column="69" selection-start="6214" selection-end="6214" vertical-scroll-proportion="0.021935483">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="birds.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/birds.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -443,68 +557,14 @@
               <file leaf-file-name="business.html" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/app/views/business.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+                    <state line="13" column="53" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="calendar.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/views/calendar.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="consultations.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/views/consultations.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/client/app/views/test.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.9421129">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="concession_types.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/views/concession_types.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="patients.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/views/patients.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="25" column="36" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="patients_controller.rb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="17" column="49" selection-start="326" selection-end="326" vertical-scroll-proportion="-11.56">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="patient.html" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/client/app/views/patient.html">
+              <file leaf-file-name="widgets.html" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/app/views/widgets.html">
                   <provider selected="true" editor-type-id="text-editor">
                     <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                       <folding />
@@ -518,37 +578,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="birds_controller.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/birds_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="11" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="stick.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/stick.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="33" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Desktop/New Folder (2)/Ajax Full Featured Calendar 1.6.4.3/Current/Demos/Bootstrap 3.X/Simple/Demo 3/js/custom.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="payments.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/views/payments.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="46" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-8.5">
+                <state line="45" column="46" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -557,7 +590,43 @@
           <file leaf-file-name="nests.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/views/nests.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="39" selection-start="39" selection-end="55" vertical-scroll-proportion="0.0">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Gemfile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="50" column="49" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="populate.rake" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="31" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="appointments.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="239" column="52" selection-start="9803" selection-end="9803" vertical-scroll-proportion="0.39534885">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/appointments-1.3.3/lib/generators/appointments/templates/appointments_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -566,7 +635,7 @@
           <file leaf-file-name="nests_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/nests_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+                <state line="20" column="29" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -575,13 +644,13 @@
           <file leaf-file-name="nest.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/nest.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="23" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+                <state line="10" column="23" selection-start="0" selection-end="190" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="lines.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="lines.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/views/lines.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -619,22 +688,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/app/views/invoices.html" />
-        <option value="$PROJECT_DIR$/client/app/index.html" />
-        <option value="$PROJECT_DIR$/client/app/views/birds.html" />
-        <option value="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
         <option value="$PROJECT_DIR$/client/app/scripts/services.js" />
         <option value="$PROJECT_DIR$/app/models/payment.rb" />
         <option value="$PROJECT_DIR$/app/models/invoice.rb" />
         <option value="$PROJECT_DIR$/app/controllers/invoices_controller.rb" />
-        <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/payments.js" />
         <option value="$PROJECT_DIR$/client/app/views/payments.html" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
-        <option value="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/patient.rb" />
+        <option value="$PROJECT_DIR$/client/app/views/consulttemplates.html" />
+        <option value="$PROJECT_DIR$/lib/tasks/populate.rake" />
+        <option value="$PROJECT_DIR$/client/app/scripts/app.coffee" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/patients.js" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/payments.js" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/invoices.js" />
+        <option value="$PROJECT_DIR$/app/models/patient.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/appointments.js" />
       </list>
     </option>
   </component>
@@ -772,10 +841,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1088,12 +1175,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.tests" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: optho" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: optho" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.eggs_controller" />
-      <item index="5" class="java.lang.String" itemvalue="IRB console.Rails console: optho" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.eggs_controller" />
+      <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: optho" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.tests" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: optho" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: optho" />
     </list>
     <recent_temporary>
       <list size="4">
@@ -2282,7 +2369,11 @@
       <created>1450929408204</created>
       <updated>1450929408204</updated>
     </task>
-    <option name="localTasksCounter" value="289" />
+    <task id="LOCAL-00289" summary="Payments page2">
+      <created>1451219535105</created>
+      <updated>1451219535105</updated>
+    </task>
+    <option name="localTasksCounter" value="290" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2307,13 +2398,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31851852" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6814815" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35416666" sideWeight="0.49514562" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.146875" sideWeight="0.6846561" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35455024" sideWeight="0.5037756" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33862433" sideWeight="0.5005314" order="10" side_tool="true" content_ui="tabs" />
@@ -2323,7 +2414,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.49946865" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31534392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2426,7 +2517,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js</url>
-          <line>339</line>
+          <line>338</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -2444,66 +2535,97 @@
           <line>10</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js</url>
+          <line>489</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/config/routes.rb</url>
-          <line>1083</line>
+          <line>1084</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="36" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/eggs_controller.rb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/appointments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="115" selection-end="243" vertical-scroll-proportion="0.0">
+        <state line="117" column="69" selection-start="6214" selection-end="6214" vertical-scroll-proportion="0.021935483">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/business.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/nests_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="29" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/payments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/birds_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+        <state line="11" column="11" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1028" column="22" selection-start="20161" selection-end="20173" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/calendar.html">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/payments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="12" column="1" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/birds.js">
+    <entry file="file://$PROJECT_DIR$/app/models/patient.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
+        <state line="17" column="52" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bird.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/concession_types.html">
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/appointments-1.3.3/lib/generators/appointments/templates/appointment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/consultations.html">
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="36" selection-start="242" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="46" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="39" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-12.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="5" selection-start="3998" selection-end="3998" vertical-scroll-proportion="2.4820514">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/appointments-1.3.3/lib/generators/appointments/templates/appointments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -2512,59 +2634,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/patients.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="549" selection-end="551" vertical-scroll-proportion="-8.84">
+        <state line="74" column="22" selection-start="2363" selection-end="2411" vertical-scroll-proportion="0.942789">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/test.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.9421129">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/nest.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/lines.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="434" column="8" selection-start="7353" selection-end="7353" vertical-scroll-proportion="-5.58">
-          <folding>
-            <marker date="1451218835088" expanded="true" signature="1407:1416" placeholder="do ... end" />
-            <marker date="1451218835088" expanded="true" signature="1716:1721" placeholder="do ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="34" column="19" selection-start="1175" selection-end="1224" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/invoices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="316" column="19" selection-start="11826" selection-end="12000" vertical-scroll-proportion="0.0">
+        <state line="11" column="72" selection-start="430" selection-end="430" vertical-scroll-proportion="-1.2916666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/invoices.html">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/appointments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="83" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.023876404">
+        <state line="239" column="52" selection-start="9803" selection-end="9803" vertical-scroll-proportion="0.39534885">
           <folding />
         </state>
       </provider>

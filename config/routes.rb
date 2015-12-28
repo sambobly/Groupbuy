@@ -15,6 +15,8 @@ Optho::Application.routes.draw do
 
   resources :nests
 
+  resources :patients
+
   resources :tests
 
   resources :invoices
@@ -92,27 +94,27 @@ Optho::Application.routes.draw do
   end
 
   resources :patients do
-
     collection do
       get 'find'
       get 'index'
-      post 'index'
+      get 'findByDate'
+      get 'findNextAvailableSlot'
       post 'create'
       post 'destroy'
-      post 'edit'
-      get 'update'
-      get 'show'
+      get 'edit'
+      post 'index'
     end
     member do
-      post 'destroy'
+      delete 'destroy'
+      get 'checkout'
       post 'update'
+      post 'create'
       get 'edit'
       patch 'edit'
       patch 'update'
-      post 'edit'
-      get 'show'
+      post 'index'
     end
-    end
+  end
 
   resources :eggs do
     collection do
@@ -297,50 +299,7 @@ end
 
   
   scope '/api' do
-    resources :patients do
-        collection do
-          get 'find'
-          get 'index'
-          post 'index'
-          post 'create'
-          post 'destroy'
-          post 'edit'
-          get 'update'
-          get 'show'
-        end
-        member do
-          post 'destroy'
-          post 'update'
-          get 'edit'
-          patch 'edit'
-          patch 'update'
-          post 'edit'
-          get 'show'
-        end
 
-
-      resources :invoices do
-        collection do
-          get 'find'
-          get 'index'
-          post 'index'
-          post 'create'
-          post 'destroy'
-          post 'edit'
-          get 'update'
-          get 'show'
-        end
-        member do
-          post 'destroy'
-          post 'update'
-          get 'edit'
-          patch 'edit'
-          patch 'update'
-          post 'edit'
-          get 'show'
-        end
-      end
-    end
     resources :products do
       collection do
         get 'find'
@@ -697,6 +656,48 @@ end
         end
       end
     end
+    resources :patients do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :invoices do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+    end
 
     resources :eggs do
       collection do
@@ -983,9 +984,6 @@ resources :doctors do
 
   namespace :api, defaults: {format: :json} do
   resources :consultations, only: [:index]
-  resources :patients, only:[:index, :create, :update, :destroy] do
-    resources :invoices, only:[:index, :create, :update, :destroy]
-  end
   resources :consult_templates, only:[:index, :create, :update, :destroy]
   resources :consulttemplates, only:[:index, :create, :update, :destroy]
   resources :products, only:[:index, :create, :update, :destroy]
@@ -1009,6 +1007,9 @@ resources :doctors do
   resources :nests, only:[:index, :create, :update, :destroy] do
     resources :eggs, only:[:index, :create, :update, :destroy]
   end
+  resources :patients, only:[:index, :create, :update, :destroy] do
+    resources :invoices, only:[:index, :create, :update, :destroy]
+  end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :birds, only:[:index, :create, :update, :destroy]
   resources :payments, only:[:index, :create, :update, :destroy]
@@ -1027,10 +1028,7 @@ resources :doctors do
   end
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/.id(.:format)" => "appointments#index"
-    get "/patients(.:format)" => "patients#index"
-    get "/patients/.id(.:format)" => "patients#index"
-    get "/patients/.id(.:format)/invoices" => "patients#index"
-    get "/patients.detail(.:format)" => "patients#index"
+  #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"#get "/patients.detail(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"
     get "/consulttemplates/.id(.:format)" => "consultemplates#index"
     get "/products(.:format)" => "products#index"
@@ -1072,6 +1070,9 @@ resources :doctors do
     get "/nests/.id(.:format)" => "nests#index"
     get "/nests/.id(.:format)/eggs" => "nests#index"
     #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"
+    get "/patients(.:format)" => "nests#index"
+    get "/patients/.id(.:format)" => "nests#index"
+    get "/patients/.id(.:format)/eggs" => "nests#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/birds(.:format)" => "birds#index"

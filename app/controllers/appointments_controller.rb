@@ -1,11 +1,19 @@
-  class AppointmentsController < InheritedResources::Base
-  respond_to :json
-  belongs_to :patient
-  private
+  #class AppointmentsController < InheritedResources::Base
+  #respond_to :json
+  #belongs_to :patient
+  #private
+  #
+  #def appointment_params
+  #  params.require(:appointment).permit(:id, :name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
+  #end
 
-  def appointment_params
-    params.require(:appointment).permit(:id, :name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
-  end
+  class AppointmentsController < InheritedResources::Base
+    respond_to :json
+    private
+
+    def appointment_params
+      params.require(:appointment).permit(:id, :name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
+    end
 
 =begin
   before_action :set_appointment, only: [:show, :edit, :update, :destroy, :create]
@@ -104,4 +112,4 @@
     end
   end
 =end
-end
+  end

@@ -11,7 +11,7 @@ namespace :db do
     end
     
     [Doctor, Appointment, Patient].map(&:delete_all)
-        
+
     # create doctors
     10.times do |i|
       Doctor.create!(
