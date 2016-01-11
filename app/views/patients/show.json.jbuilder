@@ -1,1 +1,1 @@
-json.extract! @patient, :name, :UR_number, :created_at, :updated_at
+json.extract! @patient, :first_name, :last_name, :UR_number, :email, :id, :date_of_birth, :gender, :concession_type, :address, :emergency_contact, :medicare_number,:referral_type, :referring_doctor, :created_at, :updated_at

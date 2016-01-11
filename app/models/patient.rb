@@ -3,9 +3,15 @@ class Patient < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :UR_number, :email, :id, :patient_title, :date_of_birth, :gender, :concession_type, :address, :emergency_contact, :medicare_number,:referral_type, :referring_doctor
   has_many :invoices
   has_many :appointments
+  has_many :consults
+  has_many :meetings
+
   has_and_belongs_to_many :doctors
   accepts_nested_attributes_for :invoices
   accepts_nested_attributes_for :appointments
+  accepts_nested_attributes_for :consults
+  accepts_nested_attributes_for :meetings
+
 
 
 end

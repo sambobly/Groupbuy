@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :meetings
+
   resources :procurators
 
   resources :widgets
@@ -117,6 +119,25 @@ Optho::Application.routes.draw do
   end
 
   resources :eggs do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+    end
+  end
+  resources :meetings do
     collection do
       get 'find'
       get 'index'
@@ -656,6 +677,71 @@ end
         end
       end
     end
+
+    resources :doctors do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+     end
+    resources :appointments do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :consults do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+    end
+
     resources :patients do
       collection do
         get 'find'
@@ -700,6 +786,28 @@ end
     end
 
     resources :eggs do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+
+    resources :meetings do
       collection do
         get 'find'
         get 'index'
@@ -893,6 +1001,28 @@ end
         get 'show'
       end
     end
+
+    resources :doctors do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :templates do
       collection do
         get 'find'
@@ -985,12 +1115,17 @@ resources :doctors do
   namespace :api, defaults: {format: :json} do
   resources :consultations, only: [:index]
   resources :consult_templates, only:[:index, :create, :update, :destroy]
+  resources :consults, only:[:index, :create, :update, :destroy]
   resources :consulttemplates, only:[:index, :create, :update, :destroy]
   resources :products, only:[:index, :create, :update, :destroy]
   resources :templates, only:[:index, :create, :update, :destroy]
   resources :taxes, only:[:index, :create, :update, :destroy]
   resources :sticks, only:[:index, :create, :update, :destroy]
-  resources :appointments, only:[:index, :create, :update, :destroy]
+  resources :doctors, only:[:index, :create, :update, :destroy] do
+
+  resources :appointments, only:[:index, :create, :update, :destroy] do
+    resources :consults, only:[:index, :create, :update, :destroy]
+  end
   resources :expenses, only:[:index, :create, :update, :destroy]
   resources :tests, only:[:index, :create, :update, :destroy]
   resources :contacts, only:[:index, :create, :update, :destroy]
@@ -1011,6 +1146,8 @@ resources :doctors do
     resources :invoices, only:[:index, :create, :update, :destroy]
   end
   resources :eggs, only:[:index, :create, :update, :destroy]
+  resources :meetings, only:[:index, :create, :update, :destroy]
+
   resources :birds, only:[:index, :create, :update, :destroy]
   resources :payments, only:[:index, :create, :update, :destroy]
 
@@ -1028,6 +1165,11 @@ resources :doctors do
   end
     get "/appointments(.:format)" => "appointments#index"
     get "/appointments/.id(.:format)" => "appointments#index"
+    get "/appointments/.id(.:format)/consults" => "appointments#index"
+    get "/doctors(.:format)" => "doctors#index"
+    get "/doctors/.id(.:format)" => "doctors#index"
+    get "/doctors/.id(.:format)/consults" => "doctors#index"
+
   #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"#get "/patients.detail(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"
     get "/consulttemplates/.id(.:format)" => "consultemplates#index"
@@ -1075,6 +1217,8 @@ resources :doctors do
     get "/patients/.id(.:format)/eggs" => "nests#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
+    get "/meetings(.:format)" => "meetings#index"
+    get "/meetings/.id(.:format)" => "meetings#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
     get "/payments(.:format)" => "payments#index"
@@ -1088,5 +1232,6 @@ resources :doctors do
     get "/lines(.:format)" => "lines#index"
     get "/lines/.id(.:format)" => "lines#index"
 
-end
+  end
+  end
 

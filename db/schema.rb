@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223062049) do
+ActiveRecord::Schema.define(version: 20160110093823) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -150,7 +150,14 @@ ActiveRecord::Schema.define(version: 20151223062049) do
     t.string   "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.integer  "appointment_id"
   end
+
+  add_index "consults", ["appointment_id"], name: "index_consults_on_appointment_id", using: :btree
+  add_index "consults", ["doctor_id"], name: "index_consults_on_doctor_id", using: :btree
+  add_index "consults", ["patient_id"], name: "index_consults_on_patient_id", using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "firstname"
@@ -186,6 +193,7 @@ ActiveRecord::Schema.define(version: 20151223062049) do
     t.integer  "nest_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "content"
   end
 
   create_table "expenses", force: true do |t|
@@ -269,6 +277,21 @@ ActiveRecord::Schema.define(version: 20151223062049) do
 
   add_index "lines", ["invoice_id"], name: "index_lines_on_invoice_id", using: :btree
   add_index "lines", ["product_id"], name: "index_lines_on_product_id", using: :btree
+
+  create_table "meetings", force: true do |t|
+    t.integer  "doctor_id"
+    t.integer  "patient_id"
+    t.integer  "appointment_id"
+    t.text     "content"
+    t.date     "date"
+    t.time     "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meetings", ["appointment_id"], name: "index_meetings_on_appointment_id", using: :btree
+  add_index "meetings", ["doctor_id"], name: "index_meetings_on_doctor_id", using: :btree
+  add_index "meetings", ["patient_id"], name: "index_meetings_on_patient_id", using: :btree
 
   create_table "nests", force: true do |t|
     t.string   "name"

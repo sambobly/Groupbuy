@@ -1,6 +1,5 @@
 <%= csrf_meta_tag %>
-<%
-   =begin%>
+
 <%= javascript_tag "var AUTH_TOKEN = '#{form_authenticity_token}';" if protect_against_forgery? %>
 <div class="-1u 10u options">
 	<div class="title">Options</div>
@@ -114,5 +113,3 @@
   </div>
 
  <%= collection_select(:post, :doctor_id, Doctor.all, :id, :name, {}, {multiple: true}) %>
-<%
-   =end %>
