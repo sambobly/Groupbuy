@@ -762,6 +762,27 @@ end
         post 'edit'
         get 'show'
       end
+      resources :meetings do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
       resources :invoices do
         collection do
           get 'find'
@@ -1144,6 +1165,8 @@ resources :doctors do
   end
   resources :patients, only:[:index, :create, :update, :destroy] do
     resources :invoices, only:[:index, :create, :update, :destroy]
+    resources :meetings, only:[:index, :create, :update, :destroy]
+
   end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :meetings, only:[:index, :create, :update, :destroy]
@@ -1212,9 +1235,9 @@ resources :doctors do
     get "/nests/.id(.:format)" => "nests#index"
     get "/nests/.id(.:format)/eggs" => "nests#index"
     #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"
-    get "/patients(.:format)" => "nests#index"
-    get "/patients/.id(.:format)" => "nests#index"
-    get "/patients/.id(.:format)/eggs" => "nests#index"
+    get "/patients(.:format)" => "patients#index"
+    get "/patients/.id(.:format)" => "patients#index"
+    get "/patients/.id(.:format)/meetings" => "patients#index"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/meetings(.:format)" => "meetings#index"
