@@ -20,7 +20,6 @@
 (function($, undefined) {
 
 
-    ;;
 
     var defaults = {
 
@@ -214,7 +213,7 @@
 
         // exports
         t.doctors = doctors;
-        t.visible_dcotors = doctors;
+        t.visible_doctors = doctors;
         t.options = options;
         t.render = render;
         t.destroy = destroy;
