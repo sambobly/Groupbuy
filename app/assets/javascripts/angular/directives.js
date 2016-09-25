@@ -18,6 +18,8 @@ opthoDirectives.directive("myResize", function() {
     };
 });
 
+
+
 opthoDirectives.directive("myCutsize", function() {
     return {
         restrict: "E, A",
@@ -194,5 +196,9 @@ opthoDirectives.directive('facebookLike', function ($location) {
             scope.currentPage = $location.absUrl();
         },
     }
-});
-
+}
+opthoDirectives.directive('makeUppercase', function () {
+    return function (item) {
+        return item.toUpperCase();
+    };
+})  ;

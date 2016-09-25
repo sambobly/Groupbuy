@@ -1,7 +1,7 @@
 class Appointment < ActiveRecord::Base
 
 
-  attr_accessible :id, :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name, :appointment_id
+  attr_accessible :id, :start_time, :end_time, :start_date, :end_date, :patient_id, :doctor_id, :name, :doctor_name, :patient_name, :appointment_id, :attended, :fail
   belongs_to    :doctor
   belongs_to    :patient
 =begin

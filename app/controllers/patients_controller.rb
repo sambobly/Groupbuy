@@ -11,12 +11,18 @@ class PatientsController < InheritedResources::Base
   #  @eggs = @nest.eggs
   #end
 
-
+  def test
+    @patient = Patient.find_by_id(params[:patient])
+    p "RAILS TEST"
+    ModelMailer.new_record_notification(@patient).deliver
+    #debugger
+    puts "Rails"
+  end
 
   private
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :UR_number, :email, :id, :patient_title, :date_of_birth, :gender, :concession_type, :address, :emergency_contact, :medicare_number,:referral_type, :referring_doctor)
+    params.require(:patient).permit(:first_name, :last_name, :UR_number, :email,  :patient_title, :date_of_birth, :gender, :concession_type, :address, :emergency_contact, :medicare_number,:referral_type, :referring_doctor)
   end
 end
 

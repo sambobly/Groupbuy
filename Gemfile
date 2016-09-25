@@ -48,7 +48,7 @@ group :development do
   gem 'debugger'
 
   gem 'ffaker' # Gem for generating fake data, see lib/tasks/populate
-
+  gem 'awesome_print'
 end
 
 group :test do
@@ -68,6 +68,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

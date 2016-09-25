@@ -14,7 +14,7 @@ Optho::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -31,13 +31,56 @@ Optho::Application.configure do
   # Automatically inject JavaScript needed for LiveReload
   # config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
   config.middleware.use Rack::Cors do
     allow do
       origins 'localhost:9000'
       resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
     end
   end
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
+  #config.action_mailer.smtp_settings = {
+  #    :authentication => :login,
+  #    :address => "smtp.gmail.com",
+  #    :port => 587,
+  #    :domain => "gmail.com",
+  #    :user_name => "regreginald32@gmail.com",
+  #    :password => "Reginald1",
+  #    :enable_starttls_auto => true
+  #
+  #
+  #}
+  config.action_mailer.smtp_settings = {
+      #:authentication => :login,
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :user_name => "regreginald32@gmail.com",
+      :password => "Reginald1",
+      :authentication => :plain,
+      :enable_starttls_auto => true
+
+
+
+  }
+  #config.action_mailer.smtp_settings = {
+  #    :enable_starttls_auto => true,
+  #    :address              => "smtp.gmail.com",
+  #    :port                 => 587,
+  #    :domain               => "gmail.com",
+  #    :user_name            => "sambobly1@gmail.com",
+  #    :password             => "No67mki2",
+  #    :authentication       => :login
+  #}
+
+
+  #config.action_mailer.smtp_settings = {
+  #    :authentication => :plain,
+  #    :address => "smtp.mailgun.org",
+  #    :port => 587,
+  #    :domain => "sandbox3fd8e35d98b44a6d97b090709ef48ceb.mailgun.org",
+  #    :user_name => "postmaster@sandbox3fd8e35d98b44a6d97b090709ef48ceb.mailgun.org",
+  #    :password => "no67mki1"
+  #}
 end

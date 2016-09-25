@@ -16,7 +16,7 @@ class DoctorsController < InheritedResources::Base
   private
 
   def doctor_params
-    params.require(:doctor).permit(:first_name, :last_name, :position, :id)
+    params.require(:doctor).permit(:name, :first_name, :last_name, :position, :id)
   end
 end
 #

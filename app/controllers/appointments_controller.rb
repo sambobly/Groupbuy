@@ -1,9 +1,19 @@
 class AppointmentsController < InheritedResources::Base
   respond_to :json
+
+  protected
+  def begin_of_association_chain
+    if params[:patient_id]
+      patient = Patient.find(params[:patient_id])
+    else
+      nil
+    end
+  end
+
   private
 
   def appointment_params
-    params.require(:appointment).permit(:id, :name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_id)
+    params.require(:appointment).permit(:id, :name, :start_time, :end_time, :start_date, :end_date, :doctor_name, :doctor_id, :patient_name, :patient_id, :attended, :fail)
   end
   #class AppointmentsController < InheritedResources::Base
   #respond_to :json

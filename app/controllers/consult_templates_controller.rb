@@ -1,5 +1,5 @@
 class ConsultTemplatesController < InheritedResources::Base
-  before_action :set_consult_template, only: [:show, :edit, :update, :destroy, :create]
+  #before_action :set_consult_template, only: [:show, :edit, :update, :destroy, :create]
 
   respond_to :json
   private

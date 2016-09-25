@@ -1,4 +1,10 @@
 Optho::Application.routes.draw do
+  resources :recipients
+
+  resources :letters
+
+  resources :emails
+
   resources :meetings
 
   resources :procurators
@@ -105,6 +111,7 @@ Optho::Application.routes.draw do
       post 'destroy'
       get 'edit'
       post 'index'
+      post 'test'
     end
     member do
       delete 'destroy'
@@ -115,6 +122,7 @@ Optho::Application.routes.draw do
       patch 'edit'
       patch 'update'
       post 'index'
+      post 'test'
     end
   end
 
@@ -156,6 +164,52 @@ Optho::Application.routes.draw do
       post 'index'
     end
   end
+  resources :letters do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+      post 'test'
+
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+      post 'test'
+
+    end
+  end
+  resources :recipients do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+      post 'test'
+
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+      post 'test'
+
+    end
+  end
   resources :lines do
     collection do
       get 'find'
@@ -185,6 +239,7 @@ Optho::Application.routes.draw do
       post 'destroy'
       get 'edit'
       post 'index'
+      post 'test'
     end
     member do
       delete 'destroy'
@@ -194,6 +249,7 @@ Optho::Application.routes.draw do
       patch 'edit'
       patch 'update'
       post 'index'
+      post 'test'
     end
   end
 
@@ -221,19 +277,24 @@ Optho::Application.routes.draw do
     collection do
       get 'find'
       get 'index'
+      post 'index'
       post 'create'
       post 'destroy'
-      get 'edit'
-      post 'index'
+      post 'edit'
+      get 'update'
+      get 'show'
+      put 'update'
     end
     member do
-      delete 'destroy'
+      post 'destroy'
       post 'update'
-      post 'create'
       get 'edit'
       patch 'edit'
       patch 'update'
-      post 'index'
+      post 'edit'
+      get 'show'
+      put 'update'
+
     end
   end
 
@@ -320,6 +381,7 @@ end
 
   
   scope '/api' do
+    #get "/acute.select" => "#index"
 
     resources :products do
       collection do
@@ -472,19 +534,24 @@ end
         collection do
           get 'find'
           get 'index'
+          post 'index'
           post 'create'
           post 'destroy'
-          get 'edit'
-          post 'index'
+          post 'edit'
+          get 'update'
+          get 'show'
+          put 'update'
         end
         member do
-          delete 'destroy'
+          post 'destroy'
           post 'update'
-          post 'create'
           get 'edit'
           patch 'edit'
           patch 'update'
-          post 'index'
+          post 'edit'
+          get 'show'
+          put 'update'
+
         end
       end
       resources :lines do
@@ -752,6 +819,7 @@ end
         post 'edit'
         get 'update'
         get 'show'
+        post 'test'
       end
       member do
         post 'destroy'
@@ -761,6 +829,28 @@ end
         patch 'update'
         post 'edit'
         get 'show'
+        post 'test'
+      end
+      resources :appointments do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
       end
       resources :meetings do
         collection do
@@ -783,7 +873,51 @@ end
           get 'show'
         end
       end
+      resources :letters do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+          post 'test'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+          post 'test'
+        end
+      end
       resources :invoices do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :payments do
         collection do
           get 'find'
           get 'index'
@@ -849,7 +983,52 @@ end
         get 'show'
       end
     end
-
+    resources :letters do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+        post 'test'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+        post 'test'
+      end
+    end
+    resources :recipients do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+        post 'test'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+        post 'test'
+      end
+    end
     resources :birds do
       collection do
         get 'find'
@@ -882,6 +1061,7 @@ end
         post 'edit'
         get 'update'
         get 'show'
+        put 'update'
       end
       member do
         post 'destroy'
@@ -891,6 +1071,8 @@ end
         patch 'update'
         post 'edit'
         get 'show'
+        put 'update'
+
       end
     end
 
@@ -948,6 +1130,7 @@ end
         post 'edit'
         get 'update'
         get 'show'
+        post 'test'
       end
       member do
         post 'destroy'
@@ -957,6 +1140,7 @@ end
         patch 'update'
         post 'edit'
         get 'show'
+        post 'test'
       end
     end
     resources :payment_types do
@@ -1143,9 +1327,12 @@ resources :doctors do
   resources :taxes, only:[:index, :create, :update, :destroy]
   resources :sticks, only:[:index, :create, :update, :destroy]
   resources :doctors, only:[:index, :create, :update, :destroy] do
-
-  resources :appointments, only:[:index, :create, :update, :destroy] do
+    resources :letters, only:[:index, :create, :update, :destroy]
+    resources :meetings, only:[:index, :create, :update, :destroy]
+    resources :appointments, only:[:index, :create, :update, :destroy] do
     resources :consults, only:[:index, :create, :update, :destroy]
+    resources :meetings, only:[:index, :create, :update, :destroy]
+    resources :letters, only:[:index, :create, :update, :destroy]
   end
   resources :expenses, only:[:index, :create, :update, :destroy]
   resources :tests, only:[:index, :create, :update, :destroy]
@@ -1165,11 +1352,16 @@ resources :doctors do
   end
   resources :patients, only:[:index, :create, :update, :destroy] do
     resources :invoices, only:[:index, :create, :update, :destroy]
+    resources :payments, only:[:index, :create, :update, :destroy]
     resources :meetings, only:[:index, :create, :update, :destroy]
+    resources :letters, only:[:index, :create, :update, :destroy]
+    resources :appointments, only:[:index, :create, :update, :destroy]
 
   end
   resources :eggs, only:[:index, :create, :update, :destroy]
   resources :meetings, only:[:index, :create, :update, :destroy]
+  resources :letters, only:[:index, :create, :update, :destroy]
+  resources :recipients, only:[:index, :create, :update, :destroy]
 
   resources :birds, only:[:index, :create, :update, :destroy]
   resources :payments, only:[:index, :create, :update, :destroy]
@@ -1177,7 +1369,7 @@ resources :doctors do
   resources :widgets, only:[:index, :create, :update, :destroy]
   resources :procurators, only:[:index, :create, :update, :destroy]
 
-  resources :twigs, only:[:index, :create, :update, :destroy]
+  resources :twigs, only:[:index, :create, :update, :destroy, :post]
   resources :lines, only:[:index, :create, :update, :destroy]
 
 
@@ -1238,10 +1430,18 @@ resources :doctors do
     get "/patients(.:format)" => "patients#index"
     get "/patients/.id(.:format)" => "patients#index"
     get "/patients/.id(.:format)/meetings" => "patients#index"
+    get "/patients/.id(.:format)/appointments" => "patients#index"
+    get "/patients/.id(.:format)/letters" => "patients#index"
+    get "/patients/test" => "patients#test"
     get "/eggs(.:format)" => "eggs#index"
     get "/eggs/.id(.:format)" => "eggs#index"
     get "/meetings(.:format)" => "meetings#index"
     get "/meetings/.id(.:format)" => "meetings#index"
+    get "/recipients(.:format)" => "recipients#index"
+    get "/recipients/.id(.:format)" => "recipients#index"
+    get "/letters(.:format)" => "letters#index"
+    get "/letters/test" => "letters#test"
+    get "/letters/.id(.:format)" => "letters#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
     get "/payments(.:format)" => "payments#index"
@@ -1251,6 +1451,7 @@ resources :doctors do
     get "/procurators(.:format)" => "procurators#index"
     get "/procurators/.id(.:format)" => "procurators#index"
     get "/twigs(.:format)" => "twigs#index"
+    get "/twigs/test" => "twigs#index"
     get "/twigs/.id(.:format)" => "twigs#index"
     get "/lines(.:format)" => "lines#index"
     get "/lines/.id(.:format)" => "lines#index"

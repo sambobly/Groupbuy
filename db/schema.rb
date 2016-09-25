@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110093823) do
+ActiveRecord::Schema.define(version: 20160905105518) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20160110093823) do
     t.string   "doctor_first"
     t.string   "doctor_last"
     t.boolean  "attended"
+    t.boolean  "fail"
   end
 
   create_table "billable_items", force: true do |t|
@@ -181,6 +182,7 @@ ActiveRecord::Schema.define(version: 20160110093823) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "last_name"
+    t.string   "name"
   end
 
   create_table "doctors_patients", force: true do |t|
@@ -195,6 +197,18 @@ ActiveRecord::Schema.define(version: 20160110093823) do
     t.datetime "updated_at"
     t.text     "content"
   end
+
+  create_table "emails", force: true do |t|
+    t.string   "subject"
+    t.string   "content"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "emails", ["doctor_id"], name: "index_emails_on_doctor_id", using: :btree
+  add_index "emails", ["patient_id"], name: "index_emails_on_patient_id", using: :btree
 
   create_table "expenses", force: true do |t|
     t.date     "date"
@@ -250,6 +264,21 @@ ActiveRecord::Schema.define(version: 20160110093823) do
   end
 
   add_index "invoices", ["patient_id"], name: "index_invoices_on_patient_id", using: :btree
+
+  create_table "letters", force: true do |t|
+    t.string   "subject"
+    t.string   "content"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.integer  "appointment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+  end
+
+  add_index "letters", ["appointment_id"], name: "index_letters_on_appointment_id", using: :btree
+  add_index "letters", ["doctor_id"], name: "index_letters_on_doctor_id", using: :btree
+  add_index "letters", ["patient_id"], name: "index_letters_on_patient_id", using: :btree
 
   create_table "line_items", force: true do |t|
     t.integer  "appointment_id"
@@ -358,6 +387,19 @@ ActiveRecord::Schema.define(version: 20160110093823) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "recipients", force: true do |t|
+    t.integer  "letter_id"
+    t.text     "email"
+    t.text     "name"
+    t.text     "first_name"
+    t.text     "last_name"
+    t.text     "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "recipients", ["letter_id"], name: "index_recipients_on_letter_id", using: :btree
 
   create_table "sticks", force: true do |t|
     t.text     "name"
