@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905105518) do
+ActiveRecord::Schema.define(version: 20170105194522) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -77,6 +77,19 @@ ActiveRecord::Schema.define(version: 20160905105518) do
     t.boolean  "fail"
   end
 
+  create_table "bids", force: true do |t|
+    t.integer  "consumer_id"
+    t.decimal  "value",          precision: 10, scale: 0
+    t.string   "comment"
+    t.integer  "merchandise_id"
+    t.boolean  "success"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bids", ["consumer_id"], name: "index_bids_on_consumer_id", using: :btree
+  add_index "bids", ["merchandise_id"], name: "index_bids_on_merchandise_id", using: :btree
+
   create_table "billable_items", force: true do |t|
     t.string   "name"
     t.string   "type"
@@ -106,6 +119,13 @@ ActiveRecord::Schema.define(version: 20160905105518) do
     t.string   "website"
     t.string   "contact"
     t.boolean  "online"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -159,6 +179,24 @@ ActiveRecord::Schema.define(version: 20160905105518) do
   add_index "consults", ["appointment_id"], name: "index_consults_on_appointment_id", using: :btree
   add_index "consults", ["doctor_id"], name: "index_consults_on_doctor_id", using: :btree
   add_index "consults", ["patient_id"], name: "index_consults_on_patient_id", using: :btree
+
+  create_table "consumers", force: true do |t|
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "date_of_birth"
+    t.integer  "payment_method_id"
+    t.string   "public"
+    t.string   "gender"
+    t.string   "pronoun"
+    t.string   "email"
+    t.string   "number"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "consumers", ["payment_method_id"], name: "index_consumers_on_payment_method_id", using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "firstname"
@@ -322,6 +360,29 @@ ActiveRecord::Schema.define(version: 20160905105518) do
   add_index "meetings", ["doctor_id"], name: "index_meetings_on_doctor_id", using: :btree
   add_index "meetings", ["patient_id"], name: "index_meetings_on_patient_id", using: :btree
 
+  create_table "merchandises", force: true do |t|
+    t.decimal  "value",         precision: 10, scale: 0
+    t.integer  "category_id"
+    t.integer  "consumer_id"
+    t.text     "title"
+    t.text     "description"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "category_name"
+    t.decimal  "bid",           precision: 10, scale: 0
+    t.decimal  "difference",    precision: 10, scale: 0
+    t.string   "consumer_name"
+    t.boolean  "complete"
+    t.boolean  "email"
+    t.boolean  "received"
+    t.boolean  "paid"
+  end
+
+  add_index "merchandises", ["category_id"], name: "index_merchandises_on_category_id", using: :btree
+  add_index "merchandises", ["consumer_id"], name: "index_merchandises_on_consumer_id", using: :btree
+
   create_table "nests", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -431,6 +492,20 @@ ActiveRecord::Schema.define(version: 20160905105518) do
     t.datetime "updated_at"
   end
 
+  create_table "tickets", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "bid_id"
+    t.integer  "merchandise_id"
+    t.boolean  "win"
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tickets", ["bid_id"], name: "index_tickets_on_bid_id", using: :btree
+  add_index "tickets", ["consumer_id"], name: "index_tickets_on_consumer_id", using: :btree
+  add_index "tickets", ["merchandise_id"], name: "index_tickets_on_merchandise_id", using: :btree
+
   create_table "twigs", force: true do |t|
     t.text     "name"
     t.integer  "nest_id"
@@ -482,5 +557,15 @@ ActiveRecord::Schema.define(version: 20160905105518) do
   add_index "widgets", ["invoice_id"], name: "index_widgets_on_invoice_id", using: :btree
   add_index "widgets", ["product_id"], name: "index_widgets_on_product_id", using: :btree
   add_index "widgets", ["tax_id"], name: "index_widgets_on_tax_id", using: :btree
+
+  create_table "wishes", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "merchandise_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "wishes", ["consumer_id"], name: "index_wishes_on_consumer_id", using: :btree
+  add_index "wishes", ["merchandise_id"], name: "index_wishes_on_merchandise_id", using: :btree
 
 end

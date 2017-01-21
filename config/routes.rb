@@ -1,4 +1,16 @@
 Optho::Application.routes.draw do
+  resources :wishes
+
+  resources :categories
+
+  resources :tickets
+
+  resources :bids
+
+  resources :merchandises
+
+  resources :consumers
+
   resources :recipients
 
   resources :letters
@@ -681,6 +693,321 @@ end
         get 'show'
       end
     end
+    resources :wishes do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      end
+    resources :consumers do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :merchandises do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :bids do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :tickets do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :wishes do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+    end
+    resources :categories do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :merchandises do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      end
+    resources :merchandises do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :bids do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :tickets do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :wishes do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+    end
+    resources :bids do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+      resources :tickets do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+    end
+    resources :tickets do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
     resources :sticks do
       collection do
         get 'find'
@@ -1325,6 +1652,27 @@ resources :doctors do
   resources :products, only:[:index, :create, :update, :destroy]
   resources :templates, only:[:index, :create, :update, :destroy]
   resources :taxes, only:[:index, :create, :update, :destroy]
+  resources :consumers, only:[:index, :create, :update, :destroy] do
+    resources :merchandises, only:[:index, :create, :update, :destroy]
+    resources :bids, only:[:index, :create, :update, :destroy]
+    resources :tickets, only:[:index, :create, :update, :destroy]
+    resources :wishes, only:[:index, :create, :update, :destroy]
+  end
+  resources :merchandises, only:[:index, :create, :update, :destroy] do
+    resources :bids, only:[:index, :create, :update, :destroy]
+    resources :tickets, only:[:index, :create, :update, :destroy]
+    resources :wishes, only:[:index, :create, :update, :destroy]
+
+  end
+  resources :categories, only:[:index, :create, :update, :destroy] do
+    resources :merchandises, only:[:index, :create, :update, :destroy]
+  end
+  resources :bids, only:[:index, :create, :update, :destroy] do
+    resources :tickets, only:[:index, :create, :update, :destroy]
+  end
+  resources :tickets, only:[:index, :create, :update, :destroy]
+  resources :wishes, only:[:index, :create, :update, :destroy]
+
   resources :sticks, only:[:index, :create, :update, :destroy]
   resources :doctors, only:[:index, :create, :update, :destroy] do
     resources :letters, only:[:index, :create, :update, :destroy]
@@ -1394,6 +1742,26 @@ resources :doctors do
     get "/templates/.id(.:format)" => "templates#index"
     get "/taxes(.:format)" => "taxes#index"
     get "/taxes/.id(.:format)" => "taxes#index"
+    get "/consumers(.:format)" => "consumers#index"
+    get "/consumers/.id(.:format)" => "consumers#index"
+    get "/consumers/.id(.:format)/merchandises" => "consumers#index"
+    get "/consumers/.id(.:format)/bids" => "consumers#index"
+    get "/consumers/.id(.:format)/wishes" => "consumers#index"
+
+  get "/merchandises(.:format)" => "merchandises#index"
+    get "/merchandises/.id(.:format)" => 'merchandises#index'
+
+  get "/categories(.:format)" => "categories#index"
+    get "/categories/.id(.:format)" => 'categories#index'
+    get "/categories/.id(.:format)/merchandises" => 'categories#index'
+    get "/wishes(.:format)" => "wishes#index"
+    get "/wishes/.id(.:format)" => 'wishes#index'
+    get "/bids(.:format)" => "bids#index"
+    get "/bids/.id(.:format)" => 'bids#index'
+    get "/merchandises(.:format)" => "merchandises#index"
+    get "/merchandises/.id(.:format)" => 'merchandises#index'
+    get "/merchandises/.id(.:format)/bids" => 'merchandises#index'
+    get "/merchandises/.id(.:format)/wishes" => 'merchandises#index'
     get "/sticks(.:format)" => "sticks#index"
     get "/sticks/.id(.:format)" => "sticks#index"
     get "/expenses(.:format)" => "expenses#index"

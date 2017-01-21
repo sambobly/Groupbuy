@@ -69,6 +69,7 @@ gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
 
+#gem "paperclip", "~> 5.0.0"
 # Use unicorn as the app server
 # gem 'unicorn'
 
