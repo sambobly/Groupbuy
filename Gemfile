@@ -64,6 +64,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'tzinfo-data'
 gem 'devise'
+gem 'angular_rails_csrf'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"

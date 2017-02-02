@@ -72,10 +72,13 @@ Optho::Application.routes.draw do
 
   resources :checkouts
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  devise_for :users
-  get "admin/index"
+  #devise_for :admin_users, ActiveAdmin::Devise.config
+  #ActiveAdmin.routes(self)
+
+  #devise_scope :user do  get "admin/index"
+
+  #end
+
   controller :sessions do
     get 'new'
     get 'create'
@@ -177,6 +180,29 @@ Optho::Application.routes.draw do
     end
   end
   resources :letters do
+    collection do
+      get 'find'
+      get 'index'
+      post 'create'
+      post 'destroy'
+      get 'edit'
+      post 'index'
+      post 'test'
+
+    end
+    member do
+      delete 'destroy'
+      post 'update'
+      post 'create'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'index'
+      post 'test'
+
+    end
+  end
+  resources :users do
     collection do
       get 'find'
       get 'index'
@@ -395,6 +421,50 @@ end
   scope '/api' do
     #get "/acute.select" => "#index"
 
+    devise_for :users, skip: [:sessions]
+    as :user do
+      get 'users/sign_in', to: 'users/sessions#new', as: :new_user_session
+      post 'users/sign_in', to: 'users/sessions#create', as: :user_session
+      #post 'users/sign_in', to: 'devise/sessions#create', as: :user_session
+      get  'users/test', to: 'users#test', as: :user_test
+      delete 'users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+
+    end
+    resources :users do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+          post 'test'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+          post 'test'
+        end
+    end
+    controller :sessions do
+      get 'new'
+      get 'create'
+      get 'destroy'
+      post 'new'
+
+    end
+    post 'users/sign_in'
+    post 'sessions/new'
+    get 'sessions/new'
+    get 'sessions/create'
+    get 'sessions/destroy'
     resources :products do
       collection do
         get 'find'
@@ -1664,6 +1734,7 @@ resources :doctors do
     resources :wishes, only:[:index, :create, :update, :destroy]
 
   end
+  resources :users, only:[:index, :create, :update, :destroy]
   resources :categories, only:[:index, :create, :update, :destroy] do
     resources :merchandises, only:[:index, :create, :update, :destroy]
   end
@@ -1747,7 +1818,7 @@ resources :doctors do
     get "/consumers/.id(.:format)/merchandises" => "consumers#index"
     get "/consumers/.id(.:format)/bids" => "consumers#index"
     get "/consumers/.id(.:format)/wishes" => "consumers#index"
-
+    get "/users/.id(.:format)" => "users#index"
   get "/merchandises(.:format)" => "merchandises#index"
     get "/merchandises/.id(.:format)" => 'merchandises#index'
 

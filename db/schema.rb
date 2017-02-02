@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105194522) do
+ActiveRecord::Schema.define(version: 20170121164825) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20170105194522) do
     t.boolean  "success"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "complete"
   end
 
   add_index "bids", ["consumer_id"], name: "index_bids_on_consumer_id", using: :btree
