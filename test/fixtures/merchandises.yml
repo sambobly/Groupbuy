@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 9.99
+  category_id: 
+  consumer_id: 
+  title: MyText
+  description: MyText
+  start: 2016-10-30 10:34:02
+  end: 2016-10-30 10:34:02
+
+two:
+  value: 9.99
+  category_id: 
+  consumer_id: 
+  title: MyText
+  description: MyText
+  start: 2016-10-30 10:34:02
+  end: 2016-10-30 10:34:02

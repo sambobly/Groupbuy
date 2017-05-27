@@ -1,0 +1,27 @@
+<h1>Listing sticks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sticks.each do |stick| %>
+      <tr>
+        <td><%= stick.name %></td>
+        <td><%= stick.nest %></td>
+        <td><%= link_to 'Show', stick %></td>
+        <td><%= link_to 'Edit', edit_stick_path(stick) %></td>
+        <td><%= link_to 'Destroy', stick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stick', new_stick_path %>

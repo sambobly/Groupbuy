@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumer_id: 
+  value: 9.99
+  comment: MyString
+  merchandise_id: 
+  success: false
+
+two:
+  consumer_id: 
+  value: 9.99
+  comment: MyString
+  merchandise_id: 
+  success: false

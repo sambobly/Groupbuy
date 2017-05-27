@@ -1,0 +1,27 @@
+<h1>Listing twigs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twigs.each do |twig| %>
+      <tr>
+        <td><%= twig.name %></td>
+        <td><%= twig.nest %></td>
+        <td><%= link_to 'Show', twig %></td>
+        <td><%= link_to 'Edit', edit_twig_path(twig) %></td>
+        <td><%= link_to 'Destroy', twig, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twig', new_twig_path %>

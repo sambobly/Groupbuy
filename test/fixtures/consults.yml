@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient: MyString
+  doctor: MyString
+  appointment: MyString
+  date: 2015-06-02
+  time: 2015-06-02 21:17:27
+  note: MyString
+
+two:
+  patient: MyString
+  doctor: MyString
+  appointment: MyString
+  date: 2015-06-02
+  time: 2015-06-02 21:17:27
+  note: MyString

@@ -7,6 +7,10 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+var nodemailer = require('nodemailer');
+
+var transport = nodemailer.createTransport('smtps://john.doe%40gmail.com:password@smtp.gmail.com');
+
 module.exports = function (grunt) {
 
 // Project configuration.
@@ -33,7 +37,14 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-
+    nodemailer: {
+          options: {
+              // Task-specific options go here.
+          },
+          your_target: {
+              // Target-specific file lists and/or options go here.
+          },
+      },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {

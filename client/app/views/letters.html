@@ -1,0 +1,767 @@
+
+<!--<div class="widget-content span6">-->
+    <!--<table class="table table-hover" st-table="shownCollection" st-safe-src="doctors">-->
+        <!--<thead>-->
+        <!--Patients-->
+        <!--<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>-->
+
+        <!--<tr>-->
+            <!--<th st-sort="firstName">First Name</th>-->
+            <!--<th st-sort="lastName">Last Name</th>-->
+            <!--<th st-sort="id">ID</th>-->
+
+
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody  data-ng-repeat="doctor in shownCollection" ng-click="new(patient)">-->
+        <!--<tr>-->
+            <!--<td>{{doctor.firstName}}</td>-->
+            <!--<td>{{doctor.lastName}}</td>-->
+
+            <!--<td>{{doctor.id}}</td>-->
+            <!--<td><input type="checkbox"></td>-->
+            <!--<td cs-select="doctor"></td>-->
+
+
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
+        <div class="widget border-green span3">
+        <div class="widget-header bg-green">
+            <!-- widget icon -->
+            <div class="widget-icon"><i class="aweso-table"></i></div>
+            <!-- widget title -->
+            <h4 class="widget-title">Doctors</h4>
+        </div>
+
+            <div class="filter">
+                Pant Size
+                <div>
+                    <div ng-repeat="doctorId in doctorIdsGroup">
+                        <b><input type="checkbox" ng-model="useDoctorIds[doctorId]"/>{{doctorId}}{{subject}}</b>
+                        <span>({{ (filteredLetters | filter:query | filter:count('doctorId', doctorId)).length }})</span>
+                    </div>
+                </div>
+            </div>
+            <table id="datatables1" class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>
+                            First Name
+                    </th>
+                    <th>Filter by doctor</th>
+                </tr>
+                </thead>
+                <tbody  data-ng-repeat="doctorId in doctorIdsGroup">
+                <tr>
+                    <td>{{doctorId}}{{subject}}</td>
+                    <td><input type="checkbox" ng-model="useDoctorIds[doctorId]"/></td>
+                    <!--<span>({{ (filteredLetters | filter:query | filter:count('doctorId', doctorId)).length }})</span>-->
+
+
+                </tr>
+                </tbody><!-- source with ajax -->
+            </table>
+        </div>
+<div class="widget border-cyan" id="widget-datatables2">
+    <!-- widget header -->
+    <div class="widget-header bg-cyan">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Letters</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
+    </div><!-- /widget header -->
+
+    <table st-table="filteredLetters" st-safe-src="letters" class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th st-sort="id">ID
+                <span ng-show="sortType1 == 'id' && !sortReverse1" class="fa fa-caret-down"></span>
+                <span ng-show="sortType1 == 'id' && sortReverse1" class="fa fa-caret-up"></span>
+            </th>
+            <th st-sort="date">Date</th>
+            <th st-sort="doctorId">Doctor</th>
+            <th st-sort="patientId">Patient</th>
+            <th st-sort="appointmentId">Appointment</th>
+            <th st-sort="subject">Subject</th>
+
+        </tr>
+        <tr>
+            <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+        </tr>
+        <button class="btn btn-primary" ng-click="new()">Create new letter</button>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="letter in filteredLetters" ng-click="showPopup(letter)">
+            <td>{{letter.id}}</td>
+            <td>{{letter.date}}</td>
+            <td>{{letter.doctorId}}</td>
+            <td>{{letter.patientId}}</td>
+            <td>{{letter.appointmentId}}</td>
+            <td>{{letter.subject}}</td>
+
+
+        </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</div>
+    <!--<div class="filter">-->
+        <!--Pant Size-->
+        <!--<div>-->
+            <!--<div ng-repeat="doctorId in doctorIdsGroup">-->
+                <!--<b><input type="checkbox" ng-model="useDoctorIds[doctorId]"/>{{doctorId}}{{subject}}</b>-->
+                <!--<span>({{ (filteredLetters | filter:query | filter:count('doctorId', doctorId)).length }})</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="widget-content span6">-->
+        <!--<table class="table table-hover" st-table="filteredLetters" st-safe-src="letters">-->
+            <!--<thead>-->
+            <!--Patients-->
+            <!--<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>-->
+
+            <!--<tr>-->
+                <!--<th st-sort="patientId">Patient ID</th>-->
+                <!--<th st-sort="doctorId">Doctor ID</th>-->
+                <!--<th st-sort="appointmentId">Appointment ID</th>-->
+                <!--<th st-sort="subject">Subject</th>-->
+
+                <!--<th st-sort="firstName">First Name</th>-->
+                <!--<th st-sort="lastName">Last Name</th>-->
+                <!--<th st-sort="id">ID</th>-->
+
+
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody  data-ng-repeat="letter in filteredLetters" ng-click="showPopup(letter)">-->
+            <!--<tr>-->
+                <!--<td>{{letter.patientId}}</td>-->
+
+
+                <!--<td>{{letter.doctorId}}</td>-->
+                <!--<td>{{letter.appointmentId}}</td>-->
+
+                <!--<td>{{letter.subject}}</td>-->
+
+
+
+                <!--&lt;!&ndash;<td><input type="checkbox"></td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td cs-select="doctor"></td>&ndash;&gt;-->
+
+
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
+
+<button ng-click="test()">
+    TEST
+</button>
+<!--<div class="widget border-cyan" id="widget-datatables1">-->
+    <!--&lt;!&ndash; widget header &ndash;&gt;-->
+    <!--<div class="widget-header bg-cyan">-->
+        <!--&lt;!&ndash; widget icon &ndash;&gt;-->
+        <!--<div class="widget-icon"><i class="aweso-table"></i></div>-->
+        <!--&lt;!&ndash; widget title &ndash;&gt;-->
+        <!--<h4 class="widget-title">Letter</h4>-->
+        <!--&lt;!&ndash; widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! &ndash;&gt;-->
+        <!--<div cl1ass="widget-action color-cyan">-->
+            <!--<button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">-->
+                <!--<i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+    <!--</div>&lt;!&ndash; /widget header &ndash;&gt;-->
+
+    <!--&lt;!&ndash; widget content &ndash;&gt;-->
+    <!--<div class="widget-content">-->
+        <!--<table id="datatables1" class="table table-striped table-hover">-->
+            <!--<thead>-->
+            <!--<input type="search" ng-model="search" placeholder="Search...">-->
+
+            <!--<tr>-->
+                <!--<th>Patient</th>-->
+                <!--<th>Doctor</th>-->
+                <!--<th>Appointment</th>-->
+
+                <!--<th>Subject</th>-->
+                <!--<th>Content</th>-->
+
+
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody  data-ng-repeat="letter in letters" ng-click="showPopup(letter)">-->
+            <!--<tr>-->
+
+                <!--<select ng-model="doctor.id" ng-options="doctor.firstName for doctor in doctors" placeholder="Product" type="search">-->
+                    <!--<option value="">Select Doctor</option>-->
+                <!--</select>-->
+                <!--<td>{{letter.patientId}}</td>-->
+
+
+                <!--<td>{{letter.doctorId}}</td>-->
+                <!--<td>{{letter.appointmentId}}</td>-->
+
+                <!--<td>{{letter.subject}}</td>-->
+                <!--<td>{{letter.content}}</td>-->
+
+
+            <!--</tr>-->
+            <!--</tbody>&lt;!&ndash; source with ajax &ndash;&gt;-->
+        <!--</table>-->
+    <!--</div>&lt;!&ndash; /widget content &ndash;&gt;-->
+<!--</div> &lt;!&ndash; /widget datatables #1 &ndash;&gt;-->
+<div ng-show="isPopupVisible2">
+<div class="widget border-cyan">
+
+<div class="header">
+    <h3 class="title">Create new letter</h3>
+    <button class="btn btn-default" ng-click="open('sm')">Saved consult templates</button>
+
+</div>
+<div class="body">
+    <form>
+        <fieldset>
+            <table>
+            <tr data-ng-repeat="recipient in recipients.test track by $index">
+                <td><a href ng-hide="printMode" ng-click="removePayment1(recipient)" class="btn btn-danger">[X]</a></td>
+
+
+                <td><input class="span3" ng-model="recipient.name" placeholder="Total" type="decimal" maxlength="40"></td>
+
+
+
+
+            </tr>
+            <tr ng-hide="printMode">
+                <td colspan="5"><a class="btn btn-primary" href ng-click="addPayment1()" >Add Item</a></td>
+            </tr>
+            </table>
+            <select ng-model="doctor" ng-options="doctor.firstName for doctor in doctors" placeholder="Product" type="search">
+                <option value="">Select Doctor</option>
+            </select>
+            <label><strong>Doctor</strong></label>
+            <ui-select ng-model="doctor.test" theme="select2" ng-disabled="ctrl.disabled" style="min-width: 300px;" title="Choose a doctor">
+                <ui-select-match placeholder="Choose a doctor">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="doctor in (doctors | filter:$select.search) track by $index">
+                    <div ng-bind-html="doctor.name | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+            <label><strong>Patient</strong></label>
+
+            <ui-select ng-model="patient.test" theme="select2" ng-disabled="ctrl.disabled" style="min-width: 300px;" title="Choose a person">
+                <ui-select-match placeholder="Choose a patient">{{$select.selected.firstName}}  {{$select.selected.lastName}}</ui-select-match>
+                <ui-select-choices repeat="patient in (patients | filter:$select.search) track by $index">
+                    <div ng-bind-html="patient.firstName +  + patient.lastName | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+            <label><strong>Appointment</strong></label>
+            <label><strong>Recipient</strong></label>
+            <input class="span3"  ng-model="email" placeholder="To:" type="text" maxlength="400" required>
+
+            <input class="span3" ng-model="appointment_id" placeholder="Appointment" type="integer" maxlength="40" required>
+            <label><strong>Subject</strong></label>
+
+            <input class="span3" ng-model="subject" placeholder="Subject" type="text" maxlength="40" required>
+            <label><strong>Content</strong></label>
+
+            <div class="control-group">
+                <div class="controls">
+                    <textarea rows="3" class="input-xxlarge" id="inputTextarea" ng-model="consult_template.content"></textarea>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" ng-click="createLetter()">Create</button>
+            <div class="alert alert-success" ng-show="isPopupVisible3">
+                <button class="close" data-dismiss="alert" type="button" ng-click="test2(letter1)">Send</button>
+                <strong>Letter saved. Confirm send?</strong>
+
+            </div>
+            <div class="alert" ng-show="isPopupVisible5">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Did not work!</strong>
+
+            </div>
+        </fieldset>
+    </form>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+</div>
+</div>
+
+<div ng-show="isPopupVisible" class="span-5">
+<div class="header">
+    <h3 class="title">Letter</h3>
+    {{patient.firstName}} {{patient.lastName}} {{letter.patientId}}
+</div>
+<div class="body">
+    <form>
+        <fieldset>
+            <label><strong>Doctor</strong></label>
+            <input class="span3"  ng-model="letter.doctorId" placeholder="Doctor" type="integer" maxlength="40" required>
+            {{doctor.firstName}}{{doctor.lastName}}
+            <label><strong>Patient</strong></label>
+            <input class="span3"  ng-model="letter.patientId" placeholder="Patient" type="integer" maxlength="40" required>
+            <label><strong>Email</strong></label>
+            <input class="span3"  ng-model="letter.email" placeholder="To:" type="text" maxlength="40" required>
+
+            <label><strong>Appointment</strong></label>
+
+            <div class="span3" ng-model="letter.appointmentId" placeholder="Appointment" type="integer" maxlength="40" required>
+                {{letter.appointmentId}}</div>
+            <label><strong>Subject</strong></label>
+
+            <input class="span3" ng-model="letter.subject" placeholder="Subject" type="text" maxlength="4000" required>
+            <label><strong>Content</strong></label>
+
+            <div class="control-group">
+                <div class="controls">
+                    <textarea rows="3" class="input-xxlarge" id="inputTextarea" ng-model="letter.content"></textarea>
+                </div>
+            </div>
+            <div class="alert" ng-show="isPopupVisible">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Warning!</strong>
+                This action is final. Do you want to continue?
+                <button class="btn btn-primary" ng-click="updateLetter()">Yes</button>
+
+            </div>
+            <div class="alert" ng-show="isPopupVisible2">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Warning!</strong>
+                This action is final. Do you want to continue?
+                <button class="btn btn-primary" ng-click="destroyLetter()">Yes</button>
+
+            </div>
+
+            <div class="alert alert-success" ng-show="isPopupVisible3">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Business created</strong>
+            </div>
+            <div class="alert alert-success" ng-show="isPopupVisible4">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Success!</strong>
+
+            </div>
+            <div class="alert" ng-show="isPopupVisible5">
+                <button class="close" data-dismiss="alert" type="button">×</button>
+                <strong>Did not work!</strong>
+
+            </div>
+            <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+            <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
+            <button class="btn btn-primary" ng-click="updateLetter()">Update</button>
+
+
+        </fieldset>        </form>
+    <div class="footer">
+        <button ng-click="test()">
+            TEST
+        </button>
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+    </div>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create new business contact!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <select ng-model="doctor" ng-options="doctor.firstName for doctor in doctors" placeholder="Product" type="search">
+                    <option value="">Select Doctor</option>
+                </select>
+                <label><strong>Doctor</strong></label>
+                <input class="span3"  ng-model="letter.doctor_id" placeholder="Doctor" type="integer" maxlength="40" required>
+                <label><strong>Patient</strong></label>
+                <input class="span3"  ng-model="letter.patient_id" placeholder="Patient" type="integer" maxlength="40" required>
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" ng-model="letter.appointment_id" placeholder="Appointment" type="integer" maxlength="40" required>
+                <label><strong>Subject</strong></label>
+
+                    <input class="span3" ng-model="letter.subject" placeholder="Subject" type="text" maxlength="40" required>
+                <label><strong>Content</strong></label>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <textarea rows="3" class="input-xxlarge" id="inputTextarea"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary" ng-click="createLetter()">Create</button>
+                <div class="alert alert-success" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Business created</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Update/delete contact</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Doctor</strong></label>
+                <input class="span3"  ng-model="letter.doctor_id" placeholder="Doctor" type="integer" maxlength="40" required>
+                <label><strong>Patient</strong></label>
+                <input class="span3"  ng-model="letter.patient_id" placeholder="Patient" type="integer" maxlength="40" required>
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" ng-model="letter.appointment_id" placeholder="Appointment" type="integer" maxlength="40" required>
+                <label><strong>Subject</strong></label>
+
+                <input class="span3" ng-model="letter.subject" placeholder="Subject" type="text" maxlength="40" required>
+                <label><strong>Content</strong></label>
+
+                <input class="span3" ng-model="letter.content" placeholder="Content" type="text" maxlength="40" required>
+
+                <div class="alert" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="updateLetter()">Yes</button>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible2">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="destroyLetter()">Yes</button>
+
+                </div>
+
+                <div class="alert alert-success" ng-show="isPopupVisible3">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Business created</strong>
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible4">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Success!</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
+                <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+                <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
+
+            </fieldset>        </form>
+        <div class="modal-footer">
+            <button ng-click="test()">
+                TEST
+            </button>
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+
+<!-- start content -->
+<div class="content">
+<!-- content header -->
+<header class="content-header">
+    <!-- content action (optional)-->
+    <ul class="content-action pull-right">
+        <li>
+            <div class="btn-group">
+                <a class="btn btn-link" href="#">New</a>
+                <a class="btn btn-link" href="#">Reply</a>
+                <a class="btn btn-link" href="#">Delete</a>
+            </div>
+        </li>
+        <li>
+            <div class="btn-group">
+                <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                    Move
+                </a>
+                <ul class="dropdown-menu pull-right black">
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">Send</a></li>
+                    <li><a href="#">Archive</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Something else</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="btn-group">
+                <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="aweso-ellipsis-horizontal"></i>
+                </a>
+                <ul class="dropdown-menu pull-right black">
+                    <li><a href="#">Mark read</a></li>
+                    <li><a href="#">Mark unread</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Something else</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul> <!-- /content action -->
+
+    <!-- content title-->
+    <div class="page-header"><h1>Inbox</h1></div>
+</header> <!--/ content header -->
+
+
+<!-- content page -->
+<article class="content-page clearfix">
+<!-- main page, you're application here -->
+<div class="main-page">
+<div class="content-inner ">
+<!-- inbox -->
+<div class="inbox full-content">
+<!-- messgaetab-pane -->
+<div class="messgaetab-pane" data-scrollbar="mscroll" data-theme="dark-thick" data-button="true" data-autohide="false">
+    <!-- tab content -->
+    <div class="tab-content">
+        <!-- message control -->
+        <div class="message-control clearfix">
+            <div class="pull-left">
+                <input class="message-toggle" type="checkbox" value="1" />
+                <div class="btn-group">
+                    <a class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Filter <i class="aweso-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu black">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Read</a></li>
+                        <li><a href="#">Unread</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Something Else</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pull-right">
+                <div class="btn-group">
+                    <a class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Sort by <i class="aweso-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu pull-right black">
+                        <li><a href="#">Date</a></li>
+                        <li><a href="#">Sender</a></li>
+                        <li><a href="#">Subject</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Something Else</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /message control -->
+
+        <!-- tab pane inbox -->
+        <div class="tab-pane active" id="inbox">
+            <!-- message pane -->
+            <ul class="message-pane" ng-click="showPopup(letter)">
+                <li class="message-item" data-ng-repeat="letter in letters" ng-click="showPopup(letter)">
+                    <input class="message-checked" type="checkbox" value="1" />
+                    <div class="message-date pull-right">{{letter.patientId}}</div>
+                    <div class="message-subject">{{letter.subject}}</div>
+                    <div class="message-snippet">
+                        <p>{{letter.doctorId}}</p>
+                    </div>
+
+                </li>
+                <!--<li data-ng-repeat="letter in letters" ng-click="showPopup(letter)">{{letter.patientId}}</li>-->
+
+                <li><button id="more-message" class="btn btn-block btn-small">Load more</button></li>
+            </ul><!-- /message pane -->
+        </div><!-- /tab pane inbox -->
+
+        <!-- tab pane draft -->
+        <div class="tab-pane" id="draft">
+            <!-- message pane -->
+            <ul class="message-pane">
+                <li class="message-item">
+                    <input class="message-checked" type="checkbox" value="7" />
+                    <a href="#reading-pane" data-toggle="tab">
+                        <div class="message-date pull-right">11/06/2013</div>
+                        <div class="message-subject">Latest project schedule</div>
+                        <div class="message-snippet">
+                            <p>Blandit vestibulum leo tellus purus voluptas.</p>
+                        </div>
+                    </a>
+                </li> <!-- /message item -->
+                <li class="message-item">
+                    <input class="message-checked" type="checkbox" value="8" />
+                    <a href="#reading-pane" data-toggle="tab">
+                        <div class="message-date pull-right">10/06/2013</div>
+                        <div class="message-subject">Birthday greeting</div>
+                        <div class="message-snippet">
+                            <p>Ligula donec malesuada vivamus.</p>
+                        </div>
+                    </a>
+                </li> <!-- /message item -->
+                <li class="message-item">
+                    <input class="message-checked" type="checkbox" value="9" />
+                    <a href="#reading-pane" data-toggle="tab">
+                        <div class="message-date pull-right">09/06/2013</div>
+                        <div class="message-subject">Request documentation</div>
+                        <div class="message-snippet">
+                            <p>Etiam in maecenas et interdum mauris.</p>
+                        </div>
+                    </a>
+                </li> <!-- /message item -->
+            </ul><!-- /message pane -->
+        </div><!-- tab pane draft -->
+
+        <!-- tab pane send -->
+        <div class="tab-pane" id="send">
+            <!-- message pane -->
+            <ul class="message-pane">
+                <li class="message-item">
+                    <input class="message-checked" type="checkbox" value="7" />
+                    <a href="#reading-pane" data-toggle="tab">
+                        <div class="message-date pull-right">11/06/2013</div>
+                        <div class="message-subject">Re : Latest project schedule</div>
+                        <div class="message-snippet">
+                            <p>Blandit vestibulum leo tellus purus voluptas.</p>
+                        </div>
+                    </a>
+                </li> <!-- /message item -->
+            </ul><!-- /message pane -->
+        </div><!-- tab pane send -->
+
+        <!-- tab pane archive -->
+        <div class="tab-pane" id="archive">
+            <p>Just alert to empty archive</p>
+        </div><!-- tab pane archive -->
+
+        <!-- tab pane trash -->
+        <div class="tab-pane" id="trash">
+            <p>Just alert to empty trash</p>
+        </div><!-- tab pane trash -->
+
+    </div> <!-- /tab content -->
+</div> <!-- /messgaetab-pane -->
+
+
+<!-- reading pane -->
+<div id="reading-pane" class="reading-pane">
+    <div class="message-template">
+        <div class="message-header clearfix">
+            <div class="pull-right">
+                <div class="btn-group">
+                    <a class="btn btn-link" href="#" title="Previous message"> <i class="icomo-arrow-left-2"></i></a>
+                    <a class="btn btn-link" href="#" title="Next message"> <i class="icomo-arrow-right-3"></i></a>
+                </div>
+            </div>
+            <h3 class="message-template-subject">{{letter.subject}}</h3>
+        </div>
+        <div class="message-content" data-scrollbar="mscroll" data-theme="dark-thick" data-button="true">
+            <div class="btn-group pull-right">
+                <a class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                    Actions <i class="aweso-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu pull-right black">
+                    <li><a href="#">Reply</a></li>
+                    <li><a href="#">Forward</a></li>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Trash</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Mark as read</a></li>
+                    <li><a href="#">Mark as unread</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Print</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Something Else</a></li>
+                </ul>
+            </div> <!-- /inline action for message-->
+            <div class="message-details">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" alt="64x64" style="width: 64px; height: 64px;" src="img/demo/2.jpg"/>
+                    </a>
+                    <div class="media-body">
+                        <p>Display name (john.doe@mail.co)</p>
+                        <p>to: admin@mail.com</p>
+                    </div>
+                </div>
+            </div> <!-- /details message -->
+            <p>{{letter.subject}}</p>
+
+        </div>
+    </div>
+</div><!-- reading pane -->
+</div> <!-- /inbox -->
+
+</div><!-- /content-inner-->
+</div><!-- /main-page-->
+
+
+</article> <!-- /content page -->
+
+<script type="text/ng-template" id="templatesModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="widget bg-steel" id="widget-thover">
+        <div class="widget-content">
+            <table class="table table-hover">
+                <thead>
+                <input type="search" ng-model="search" placeholder="Search...">
+
+                <tr>
+                    <th>Template Name</th>
+
+
+
+                </tr>
+                </thead>
+                <tbody  data-ng-repeat="consult_template in consult_templates | filter:search"  ng-click="selected.consult_template = consult_template">
+                <tr>
+                    <td>{{consult_template.name}}</td>
+
+
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- /widget content -->
+    </div> <!-- /widget thover -->
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+</script>
+
+</div> <!--/ end content -->
+</section> <!-- /end section content-->
+

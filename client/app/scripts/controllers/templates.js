@@ -2,7 +2,7 @@
 
 
 angular.module('clientApp')
-    .controller('TemplatesController', ['$scope', '$resource', '$location', '$routeParams', 'Template', '$modal', function ($scope, $resource, $location, $routeParams, Template, $modal    ) {
+    .controller('TemplatesController', ['$scope', '$resource', '$location', '$routeParams', 'Template', 'Consult', '$modal', function ($scope, $resource, $location, $routeParams, Template, Consult, $modal    ) {
 
         $scope.template = new Template();
 
@@ -10,10 +10,45 @@ angular.module('clientApp')
         Template.query().then(function(templates){
             $scope.templates = templates;
         });
+
+        $scope.consult = new Consult();
+
+        Consult.query().then(function(Consults) {
+            $scope.consults = Consults;
+        });
+
         $scope.formData = {
             templateName: '',
             templateContent: ''
         };
+
+        $scope.createConsult = function(template) {
+            console.log($scope.template, "HELP", $scope.consult, "ME", $scope.template_name, "IM", $scope.template.name);
+//            $scope.template = template;
+            $scope.consult.note = $scope.template.name;
+//            console.log($scope.template, "HELP", $scope.consult, "ME", $scope.template_name, "IM", $scope.template.name);
+//            $scope.consult.push($scope.template).create()
+//                .then(function(response) {
+//                    console.log("SUCCESS", response);
+//                })
+//                .catch(function(response) {
+//                    console.log("FAILURE!", response);
+//                });
+//            var consult = new Consult({patient_id: 23456, note:"HERE"});
+//            consult.create().then(function (result) {
+//                // creation was successful
+//            });
+            $scope.consult.create();
+//            $scope.template = template;
+////            $scope.consult = consult;
+////            $scope.template = new Template();
+//
+//            console.log(template, Template, consult);
+//            new Consult({patient_id: 23456, note:consult.name}).create();
+//            new Item({id: 1, storeId: 123}).update()
+        };
+
+
         $scope.createTemplate = function() {
             $scope.template.create()
                 .then(function(response) {
@@ -84,6 +119,7 @@ angular.module('clientApp')
             modalInstance.result.then(function (selectedTemplate) {
                 $scope.selected = selectedTemplate;
                 $scope.template = selectedTemplate;
+                console.log("AM I FIRING??")
             });
         };
 

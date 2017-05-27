@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170121164825) do
+ActiveRecord::Schema.define(version: 20170416003515) do
 
   create_table "accounts", force: true do |t|
     t.string   "companyname"
@@ -195,9 +195,11 @@ ActiveRecord::Schema.define(version: 20170121164825) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "consumers", ["payment_method_id"], name: "index_consumers_on_payment_method_id", using: :btree
+  add_index "consumers", ["user_id"], name: "index_consumers_on_user_id", using: :btree
 
   create_table "contacts", force: true do |t|
     t.string   "firstname"
@@ -263,6 +265,36 @@ ActiveRecord::Schema.define(version: 20170121164825) do
     t.string   "concession_type"
     t.string   "test"
   end
+
+  create_table "individuals", force: true do |t|
+    t.string   "provider",               default: "email", null: false
+    t.string   "uid",                    default: "",      null: false
+    t.string   "encrypted_password",     default: "",      null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,       null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "image"
+    t.string   "email"
+    t.text     "tokens"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "individuals", ["confirmation_token"], name: "index_individuals_on_confirmation_token", unique: true, using: :btree
+  add_index "individuals", ["email"], name: "index_individuals_on_email", unique: true, using: :btree
+  add_index "individuals", ["reset_password_token"], name: "index_individuals_on_reset_password_token", unique: true, using: :btree
+  add_index "individuals", ["uid", "provider"], name: "index_individuals_on_uid_and_provider", unique: true, using: :btree
 
   create_table "inovices", force: true do |t|
     t.date     "date"

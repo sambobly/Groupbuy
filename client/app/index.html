@@ -6,517 +6,867 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->         3
+    <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
     <link rel="stylesheet" href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
+    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.scss">
-    <link rel="stylesheet" href="styles/metro/animate-loader.css">
-    <link rel="stylesheet" href="styles/metro/icomoon.css">
-    <link rel="stylesheet" href="styles/metro/metro-icons.css">
-    <link rel="stylesheet" href="styles/metro/bootstrap.css">
-    <link rel="stylesheet" href="styles/metro/bootstrap-responsive.css">
-    <link rel="stylesheet" href="styles/metro/metro-bootstrap.css">
-    <link rel="stylesheet" href="styles/metro/metro.css">
-    <link rel="stylesheet" href="styles/metro/metro-responsive.css">
-    <link rel="stylesheet" href="styles/metro/metro-helper.css">
-    <link rel="stylesheet" href="styles/metro/font-awesome.css">
-      <link rel="stylesheet" href="styles/metro/datepicker/datepicker.css">
-    <link rel="stylesheet" href="styles/metro/fullcalendar/fullcalendar.css">
-    <link rel="stylesheet" href="styles/metro/metro-responsive.css">
-    <link rel="stylesheet" href="styles/example.css">
+      <link rel="stylesheet" href="styles/bootstrap/bootstrap.css">
+      <!--<link rel="stylesheet" href="styles/bootstrap/bootstrap-theme.css">-->
+      <!--<link rel="stylesheet" href="styles/main.scss">-->
+    <!--Metro-->
 
-      <link href="styles/metro/m-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
-    <link href="styles/metro/select2/select2-metro.css" rel="stylesheet">
-    <link href="styles/metro/wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet">
-    <link href="styles/metro/morrisjs/morris.css" rel="stylesheet">
+      <!--<link rel="stylesheet" href="styles/metro/animate-loader.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/icomoon.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/metro-icons.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/bootstrap-responsive.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/metro-bootstrap.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/metro.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/metro-responsive.css">-->
+    <!--<link rel="stylesheet" href="styles/metro/metro-helper.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/acute.select.css">-->
 
 
-    <!-- endbuild -->
+      <!--<link rel="stylesheet" href="styles/metro/font-awesome.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datetimepicker/datetimepicker.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/daterangepicker/daterangepicker.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/colorpicker/bootstrap-colorpicker.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/colreorder/ColReorder.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/colvis/ColVis.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/scroller/dataTables.scroller.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/DT_bootstrap.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/bootstrap-timepicker/timepicker.less">-->
+      <!--<link rel="stylesheet" href="styles/metro/datepicker/datepicker.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/fullcalendar/fullcalendar.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/looper/looper.css">-->
+      <!--<link href="styles/metro/m-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">-->
+      <!--<link href="styles/metro/select2/select2-metro.css" rel="stylesheet">-->
+      <!--<link href="styles/metro/wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet">-->
+      <!--<link href="styles/metro/morrisjs/morris.css" rel="stylesheet">-->
+      <!--<link href="styles/metro/google-code-prettify/prettify.css" rel="stylesheet">-->
+
+<!--End Metro-->
+      <!--<link rel="stylesheet" href="styles/metro/timepicker/bootstrap-timepicker.css">-->
+
+      <!--<link rel="stylesheet" href="styles/metro/datatables/DT_bootstrap.css">-->
+
+      <!--<link rel="stylesheet" href="styles/metro/datatables/colvis/ColVisAlt.css">-->
+
+      <!--<link rel="stylesheet" href="styles/metro/datatables/tabletools/TableTools.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/tabletools/TableTools_JUI.css">-->
+      <!--<link rel="stylesheet" href="styles/metro/datatables/scroller/dataTables.scroller.css">-->
+
+      <!--<link rel="stylesheet" href="styles/metro/datatables/autofill/AutoFill.css">-->
+
+
+
+
+      <!--<link rel="stylesheet" href="styles/example.css">-->
+<!--ecommerce style sheets-->
+      <link rel="stylesheet" href="styles/ecommerce/bootstrap.css">
+      <link rel="stylesheet" href="styles/ecommerce/font-awesome.css">
+      <link rel="stylesheet" href="styles/ecommerce/slick.css">
+      <link rel="stylesheet" href="styles/ecommerce/nouislider.css">
+      <link rel="stylesheet" href="styles/ecommerce/jquery.simpleLens.css">
+      <link rel="stylesheet" href="styles/ecommerce/jquery.smartmenus.bootstrap.css">
+      <link rel="stylesheet" href="styles/ecommerce/_base.scss">
+      <link rel="stylesheet" href="styles/ecommerce/_mixins.scss">
+      <link rel="stylesheet" href="styles/ecommerce/_variables.scss">
+      <link rel="stylesheet" href="styles/ecommerce/theme-color/default-theme.css">
+      <link rel="stylesheet" href="styles/ecommerce/style.css">
+
+
+
+
+
+
+
+      <!--end ecommerce style sheets-->
+
+      <!-- endbuild -->
   </head>
   <body ng-app="clientApp">
+  <!--Start eCommerce-->
+  <header id="aa-header">
+      <!-- start header top  -->
+      <div class="aa-header-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="aa-header-top-area">
+                          <!-- start header top left -->
+                          <div class="aa-header-top-left">
+                              <!-- start language -->
+                              <div class="aa-language">
+                                  <div class="dropdown">
+                                      <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                          <img src="img/flag/english.jpg" alt="english flag">ENGLISH
+                                          <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                          <li><a href="#"><img src="img/flag/french.jpg" alt="">FRENCH</a></li>
+                                          <li><a href="#"><img src="img/flag/english.jpg" alt="">ENGLISH</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!-- / language -->
+
+
+
+                              <!-- start currency -->
+                              <div class="aa-currency">
+                                  <div class="dropdown">
+                                      <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                          <i class="fa fa-usd"></i>USD
+                                          <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                          <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
+                                          <li><a href="#"><i class="fa fa-jpy"></i>YEN</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <!-- / currency -->
+                              <!-- start cellphone -->
+
+                              <!-- / cellphone -->
+                          </div>
+                          <!-- / header top left -->
+                          <div class="aa-header-top-right">
+                              <ul class="aa-head-top-nav-right">
+                                  <!--<li><a href="#/eggs">My Account</a></li>-->
+                                  <!--<li><a class="pointer" ng-click='openLogin()'>Login</a></li>-->
+                                  <li><my-login></my-login></li>
+
+                                  <!--<li><a class="pointer" ng-click='openLogin()' ng-controller="ConsumersController">Login</a></li>-->
+
+                                  <li><div class="aa-logo">
+                                      <!-- Text based logo -->
+                                      <a >
+                                          <p><strong>Group Buy</strong></p>
+                                      </a>
+                                      <!-- img based logo -->
+                                      <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+                                  </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- / header top  -->
+
+      <!-- start header bottom  -->
+      <div class="aa-header-bottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="aa-header-bottom-area">
+                          <!-- logo  -->
+                          <!--<div class="aa-logo">-->
+                              <!--&lt;!&ndash; Text based logo &ndash;&gt;-->
+                              <!--<a href="index.html">-->
+                                  <!--<span class="fa fa-shopping-cart"></span>-->
+                                  <!--<p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>-->
+                              <!--</a>-->
+                              <!--&lt;!&ndash; img based logo &ndash;&gt;-->
+                              <!--&lt;!&ndash; <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> &ndash;&gt;-->
+                          <!--</div>-->
+                          <!-- / logo  -->
+                          <!-- cart box -->
+                          <!--<div class="aa-cartbox">-->
+                              <!--<a class="aa-cart-link" href="#">-->
+                                  <!--<span class="fa fa-shopping-basket"></span>-->
+                                  <!--<span class="aa-cart-title">SHOPPING CART</span>-->
+                                  <!--<span class="aa-cart-notify">2</span>-->
+                              <!--</a>-->
+                              <!--<div class="aa-cartbox-summary">-->
+                                  <!--<ul>-->
+                                      <!--<li>-->
+                                          <!--<a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>-->
+                                          <!--<div class="aa-cartbox-info">-->
+                                              <!--<h4><a href="#">Product Name</a></h4>-->
+                                              <!--<p>1 x $250</p>-->
+                                          <!--</div>-->
+                                          <!--<a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>-->
+                                      <!--</li>-->
+                                      <!--<li>-->
+                                          <!--<a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>-->
+                                          <!--<div class="aa-cartbox-info">-->
+                                              <!--<h4><a href="#">Product Name</a></h4>-->
+                                              <!--<p>1 x $250</p>-->
+                                          <!--</div>-->
+                                          <!--<a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>-->
+                                      <!--</li>-->
+                                      <!--<li>-->
+                      <!--<span class="aa-cartbox-total-title">-->
+                        <!--Total-->
+                      <!--</span>-->
+                      <!--<span class="aa-cartbox-total-price">-->
+                        <!--$500-->
+                      <!--</span>-->
+                                      <!--</li>-->
+                                  <!--</ul>-->
+                                  <!--<a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>-->
+                              <!--</div>-->
+                          <!--</div>-->
+                          <!-- / cart box -->
+                          <!-- search box -->
+
+                          <!--<div ng-controller="NestsController as NestsController" layout="column" ng-cloak="" class="autocompletedemoBasicUsage" ng-app="MyApp">-->
+                              <!--<md-content class="md-padding">-->
+                                  <!--<p>When State is selected from autocomplete, expect this value to get updated and when this is updated, need selection of state updated</p>-->
+                                  <!--<label>state</label>-->
+                                  <!--<input ng-model="demoCtrl.selectedState">-->
+                                  <!--<p>DemoCtrl state: [{{demoCtrl.selectedState}}]</p>-->
+                              <!--</md-content>-->
+
+                              <!--<state-directive ng-model="demoCtrl.selectedState"></state-directive>-->
+
+                          <!--</div>-->
+                          <!--<div ng-controller="NestsController as NestsController">-->
+                          <!--<md-content class="md-padding">-->
+                              <!--<form ng-submit="$event.preventDefault()">-->
+                                  <!--<p>Use <code searchBar>md-autocomplete</code> to search for matches from local or remote data sources.</p>-->
+                                  <!--<md-autocomplete searchBar-->
+                                          <!--md-min-length="1"-->
+                                          <!--ng-enter="presEnter();"-->
+                                          <!--md-no-cache="true"-->
+                                          <!--md-selected-item="selectedItem"-->
+                                          <!--md-search-text="searchText"-->
+                                          <!--md-items="item in querySearch(searchText)"-->
+                                          <!--md-item-text="item.title"-->
+                                          <!--md-autofocus-->
+                                          <!--placeholder="Search for an egg">-->
+                                      <!--<md-item-template>-->
+                                          <!--<span md-highlight-text="searchText">{{item.title}} :: {{item.type}}</span>-->
+                                      <!--</md-item-template>-->
+                                      <!--<md-not-found>-->
+                                          <!--No states matching "{{searchText}}" were found.-->
+                                          <!--<a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>-->
+                                      <!--</md-not-found>-->
+                                  <!--</md-autocomplete>-->
+                                  <!--<br/>-->
+                                  <!--<md-checkbox ng-model="ctrl.simulateQuery">Simulate query for results?</md-checkbox>-->
+                                  <!--<md-checkbox ng-model="ctrl.noCache">Disable caching of queries?</md-checkbox>-->
+                                  <!--<md-checkbox ng-model="ctrl.isDisabled">Disable the input?</md-checkbox>-->
+
+                                  <!--<p>By default, <code>md-autocomplete</code> will cache results when performing a query.  After the initial call is performed, it will use the cached results to eliminate unnecessary server requests or lookup logic. This can be disabled above.</p>-->
+                              <!--</form>-->
+                          <!--</md-content>-->
+                          <!--</div>-->
+                          <div>
+                          <my-search-box></my-search-box>
+
+                          </div>
+
+                          <script type="text/ng-template" id="loginModal.html">
+                              <div class="modal-content"  ng-controller="ConsumersController">
+                                  <div class="modal-body">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">×</button>                                      <h4>Login or Register</h4>
+                                      <form class="aa-login-form" action="">
+                                          <!--<label for="">Name<span>*</span></label>-->
+                                          <!--<input type="text" placeholder="Username or email" ng-model="credentials.name">-->
+                                          <label for="">Email address<span>*</span></label>
+                                          <input type="text" placeholder="Username or email" ng-model="credentials.email">
+                                          <label for="">Password<span>*</span></label>
+                                          <input type="password" placeholder="Password" ng-model="credentials.password">
+                                          <button ng-click="signIn()">Login</button>
+                                          <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
+                                          <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                                          <div class="aa-register-now">
+                                              Don't have an account?
+                                              <a href="#/consumers">Register now!</a>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div><!-- /.modal-content -->
+
+
+                          </script>
+
+                          <!--<div class="controls">-->
+                              <!--<input type="email" class="input-medium" ng-model="keyword" placeholder="filter">-->
+                          <!--</div>-->
+                          <!-- / search box -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- / header bottom  -->
+  </header>
+  <section id="menu">
+      <div class="container" ng-controller="SticksController">
+          <div class="menu-area">
+              <!-- Navbar -->
+              <div class="navbar navbar-default" role="navigation">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                  </div>
+                  <div class="navbar-collapse collapse">
+                      <!-- Left nav -->
+                      <ul class="nav navbar-nav">
+                          <li><a href="#/sticks">Home</a></li>
+                          <li><a href="#">Men <span class="caret"></span></a>
+                              <ul class="dropdown-menu" >
+                                  <li><a>{{category.name}}</a></li>
+                                  <li><a href="#">Casual</a></li>
+                                  <li><a href="#">Sports</a></li>
+                                  <li><a href="#">Formal</a></li>
+                                  <li><a href="#">Standard</a></li>
+                                  <li><a href="#">T-Shirts</a></li>
+                                  <li><a href="#">Shirts</a></li>
+                                  <li><a href="#">Jeans</a></li>
+                                  <li><a href="#">Trousers</a></li>
+                                  <li><a href="#">And more.. <span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="#">Sleep Wear</a></li>
+                                          <li><a href="#">Sandals</a></li>
+                                          <li><a href="#">Loafers</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Women <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Kurta & Kurti</a></li>
+                                  <li><a href="#">Trousers</a></li>
+                                  <li><a href="#">Casual</a></li>
+                                  <li><a href="#">Sports</a></li>
+                                  <li><a href="#">Formal</a></li>
+                                  <li><a href="#">Sarees</a></li>
+                                  <li><a href="#">Shoes</a></li>
+                                  <li><a href="#">And more.. <span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="#">Sleep Wear</a></li>
+                                          <li><a href="#">Sandals</a></li>
+                                          <li><a href="#">Loafers</a></li>
+                                          <li><a href="#">And more.. <span class="caret"></span></a>
+                                              <ul class="dropdown-menu">
+                                                  <li><a href="#">Rings</a></li>
+                                                  <li><a href="#">Earrings</a></li>
+                                                  <li><a href="#">Jewellery Sets</a></li>
+                                                  <li><a href="#">Lockets</a></li>
+                                                  <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>
+                                                  <li><a href="#">Jeans</a></li>
+                                                  <li><a href="#">Polo T-Shirts</a></li>
+                                                  <li><a href="#">SKirts</a></li>
+                                                  <li><a href="#">Jackets</a></li>
+                                                  <li><a href="#">Tops</a></li>
+                                                  <li><a href="#">Make Up</a></li>
+                                                  <li><a href="#">Hair Care</a></li>
+                                                  <li><a href="#">Perfumes</a></li>
+                                                  <li><a href="#">Skin Care</a></li>
+                                                  <li><a href="#">Hand Bags</a></li>
+                                                  <li><a href="#">Single Bags</a></li>
+                                                  <li><a href="#">Travel Bags</a></li>
+                                                  <li><a href="#">Wallets & Belts</a></li>
+                                                  <li><a href="#">Sunglases</a></li>
+                                                  <li><a href="#">Nail</a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Kids <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Casual</a></li>
+                                  <li><a href="#">Sports</a></li>
+                                  <li><a href="#">Formal</a></li>
+                                  <li><a href="#">Standard</a></li>
+                                  <li><a href="#">T-Shirts</a></li>
+                                  <li><a href="#">Shirts</a></li>
+                                  <li><a href="#">Jeans</a></li>
+                                  <li><a href="#">Trousers</a></li>
+                                  <li><a href="#">And more.. <span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="#">Sleep Wear</a></li>
+                                          <li><a href="#">Sandals</a></li>
+                                          <li><a href="#">Loafers</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Sports</a></li>
+                          <li><a href="#">Digital <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Camera</a></li>
+                                  <li><a href="#">Mobile</a></li>
+                                  <li><a href="#">Tablet</a></li>
+                                  <li><a href="#">Laptop</a></li>
+                                  <li><a href="#">Accesories</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Furniture</a></li>
+                          <li><a href="blog-archive.html">Blog <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="blog-archive.html">Blog Style 1</a></li>
+                                  <li><a href="blog-archive-2.html">Blog Style 2</a></li>
+                                  <li><a href="blog-single.html">Blog Single</a></li>
+                              </ul>
+                          </li>
+                          <li ng-repeat="category in categories"><a class="pointer" ng-click="testfilter7(category)">{{category.name}}</a></li>
+                      </ul>
+                  </div><!--/.nav-collapse -->
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!--End eCommerce-->
+
+
   <!-- start header-->
-  <header class="header">
-  <!-- start navbar, this navbar on top -->
-  <div id="navbar-top" class="navbar navbar-cyan">
-  <!-- navbar inner-->
-  <div class="navbar-inner">
-  <!-- container-->
-  <div class="container">
+  <!--<header class="header">-->
+  <!--&lt;!&ndash; start navbar, this navbar on top &ndash;&gt;-->
+  <!--<div id="navbar-top" class="navbar navbar-cyan">-->
+  <!--&lt;!&ndash; navbar inner&ndash;&gt;-->
+  <!--<div class="navbar-inner">-->
+  <!--&lt;!&ndash; container&ndash;&gt;-->
+  <!--<div class="container">-->
 
-  <!--this btn-navbar contains the menu on the side-left, will be seen on portrait tablet and less. -->
-  <a class="btn btn-navbar help-inline" data-toggle="collapse" data-target="#navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-  </a>
+  <!--&lt;!&ndash;this btn-navbar contains the menu on the side-left, will be seen on portrait tablet and less. &ndash;&gt;-->
+  <!--<a class="btn btn-navbar help-inline" data-toggle="collapse" data-target="#navbar-collapse">-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+  <!--</a>-->
 
-  <!-- Your brand here, images or text -->
-  <a class="brand" href="index.html">
-      <!-- just a sample brand, replace with your own -->
-      <i class="aweso-th-large"></i> Optho App
-  </a>
+  <!--&lt;!&ndash; Your brand here, images or text &ndash;&gt;-->
+  <!--<a class="brand" href="index.html">-->
+      <!--&lt;!&ndash; just a sample brand, replace with your own &ndash;&gt;-->
+      <!--<i class="aweso-th-large"></i> Optho App-->
+  <!--</a>-->
 
-  <!-- Un-collapse nav -->
-  <div class="nav-uncollapse">
-  <!-- pull left menu-->
-  <!--/pull left menu-->
+  <!--&lt;!&ndash; Un-collapse nav &ndash;&gt;-->
+  <!--<div class="nav-uncollapse">-->
+  <!--&lt;!&ndash; pull left menu&ndash;&gt;-->
+  <!--&lt;!&ndash;/pull left menu&ndash;&gt;-->
 
-  <!-- pull right menu-->
-  <ul class="nav pull-right">
-  <!-- notification -->
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <div class="label">3</div>
-          <i class="aweso-bell-alt"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-extend" role="menu" aria-labelledby="dropdownMenu">
-          <li class="dropdown-header">You have 4 new notofications</li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="pull-left">
-                          <img class="media-object" data-src="holder.js/32x32">
-                      </div>
-                      <div class="media-body">
-                          <h4 class="media-heading"><small class="pull-right">Just Now</small> Update version</h4>
-                          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque...</p>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="pull-left">
-                          <img class="media-object" data-src="holder.js/32x32">
-                      </div>
-                      <div class="media-body">
-                          <h4 class="media-heading"><small class="pull-right">5 minutes</small> Jane Smith</h4>
-                          <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit...</p>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="pull-left">
-                          <img class="media-object" data-src="holder.js/32x32">
-                      </div>
-                      <div class="media-body">
-                          <h4 class="media-heading"><small class="pull-right">3 hours</small> New comment</h4>
-                          <p>Tellus ac cursus commodo, tortor mauris condimentum nibh...</p>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li class="dropdown-footer">
-              <a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> See all notifications</a>
-          </li>
-      </ul>
-  </li><!-- /notification -->
+  <!--&lt;!&ndash; pull right menu&ndash;&gt;-->
+  <!--<ul class="nav pull-right">-->
+  <!--&lt;!&ndash; notification &ndash;&gt;-->
+  <!--<li>-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--Buy-->
+      <!--</a>-->
 
-  <!-- task -->
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <div class="label">5</div>
-          <i class="aweso-tasks"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-extend" role="menu" aria-labelledby="dropdownMenu">
-          <li class="dropdown-header">You have 6 tasks</li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="media-body">
-                          <h4 class="task-label"><small class="pull-right task-status">20%</small> upload some file</h4>
-                          <div class="progress progress-info">
-                              <div class="bar" style="width: 20%"></div>
-                          </div>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="media-body">
-                          <h4 class="task-label"><small class="pull-right task-status">40%</small>  <span class="text-error">paused!</span> do something</h4>
-                          <div class="progress progress-warning">
-                              <div class="bar" style="width: 40%"></div>
-                          </div>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="media-body">
-                          <h4 class="task-label"><small class="pull-right task-status">60%</small> do another task</h4>
-                          <div class="progress progress-info">
-                              <div class="bar" style="width: 60%"></div>
-                          </div>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1">
-                  <div class="media">
-                      <div class="media-body">
-                          <h4 class="task-label"><small class="pull-right task-status">80%</small> <span class="text-error">failed!</span> upload some file</h4>
-                          <div class="progress progress-danger">
-                              <div class="bar" style="width: 80%"></div>
-                          </div>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li>
-              <a tabindex="-1" href="#">
-                  <div class="media">
-                      <div class="media-body">
-                          <h4 class="task-label"><small class="pull-right task-status">100%</small> <span class="text-success">done!</span> another task</h4>
-                          <div class="progress progress-success">
-                              <div class="bar" style="width: 100%"></div>
-                          </div>
-                      </div>
-                  </div>
-              </a>
-          </li>
-          <li class="dropdown-footer">
-              <a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> See all tasks</a>
-          </li>
-      </ul>
-  </li><!-- /task -->
+  <!--</li>-->
+  <!--<li>-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--Sell-->
+      <!--</a>-->
 
-  <!-- settings -->
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <i class="aweso-cog"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-extend" data-dropdown="no-propagation" role="menu" aria-labelledby="dropdownMenu">
-          <li class="dropdown-header">General settings</li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x aweso-columns"></i></div>
-                  <div class="content">Fluid Layout</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="checkbox" id="layout-mode" name="layout-mode" checked />
-                          <label for="layout-mode"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="backgrounds hide">
-              <div class="setting-list">
-                  <div class="background-label">Backgrounds</div>
-                  <div class="background-choice">
-                      <a href="#" class="bg-item bg-black" data-bg="noimage"></a>
-                      <a href="#" class="bg-item bg-1" data-bg="01.jpg"></a>
-                      <a href="#" class="bg-item bg-2" data-bg="02.jpg"></a>
-                      <a href="#" class="bg-item bg-3" data-bg="03.jpg"></a>
-                      <a href="#" class="bg-item bg-4" data-bg="04.jpg"></a>
-                      <a href="#" class="bg-item bg-5" data-bg="05.jpg"></a>
-                      <a href="#" class="bg-item bg-6" data-bg="06.jpg"></a>
-                      <a href="#" class="bg-item bg-7" data-bg="07.jpg"></a>
-                      <a href="#" class="bg-item bg-8" data-bg="08.jpg"></a>
-                      <a href="#" class="bg-item bg-9" data-bg="09.jpg"></a>
-                      <a href="#" class="bg-item bg-10" data-bg="10.jpg"></a>
-                      <a href="#" class="bg-item bg-11" data-bg="11.jpg"></a>
-                      <a href="#" class="bg-item bg-12" data-bg="12.jpg"></a>
-                      <a href="#" class="bg-item bg-13" data-bg="13.jpg"></a>
-                      <a href="#" class="bg-item bg-14" data-bg="14.jpg"></a>
-                      <a href="#" class="bg-item bg-15" data-bg="15.jpg"></a>
-                      <a href="#" class="bg-item bg-16" data-bg="16.jpg"></a>
-                      <a href="#" class="bg-item bg-17" data-bg="17.jpg"></a>
-                      <a href="#" class="bg-item bg-18" data-bg="18.jpg"></a>
-                      <a href="#" class="bg-item bg-19" data-bg="19.jpg"></a>
-                      <a href="#" class="bg-item bg-20" data-bg="20.jpg"></a>
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x aweso-pushpin"></i></div>
-                  <div class="content">Fixed Header</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="checkbox" id="header-mode" name="header-mode" />
-                          <label for="header-mode"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x aweso-pushpin"></i></div>
-                  <div class="content">Fixed Sidebar</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="checkbox" id="sidebar-mode" name="sidebar-mode" />
-                          <label for="sidebar-mode"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x color-silver aweso-sign-blank"></i></div>
-                  <div class="content">Light theme</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="radio" value="light" id="theme-light" name="theme-mode" checked />
-                          <label for="theme-light"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x aweso-sign-blank"></i></div>
-                  <div class="content">Dark theme</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="radio" value="dark" id="theme-dark" name="theme-mode" />
-                          <label for="theme-dark"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li>
-              <div class="setting-list">
-                  <div class="icon"><i class="aweso-2x aweso-tint"></i></div>
-                  <div class="content">Syncronize</div>
-                  <div class="checker">
-                      <div class="checkbox-slide bg-silver help-block">
-                          <input class="input-fx" type="checkbox" id="syncronize-theme" name="syncronize-theme" checked />
-                          <label for="syncronize-theme"></label>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="syncronize">
-              <div class="setting-list">
-                  <div class="themes-label">Theme colors</div>
-                  <div class="themes-choice">
-                      <a href="#cyan" data-theme="cyan" class="bg-cyan"></a>
-                      <a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>
-                      <a href="#indigo" data-theme="indigo" class="bg-indigo"></a>
-                      <a href="#violet" data-theme="violet" class="bg-violet"></a>
-                      <a href="#lime" data-theme="lime" class="bg-lime"></a>
-                      <a href="#green" data-theme="green" class="bg-green"></a>
-                      <a href="#emerald" data-theme="emerald" class="bg-emerald"></a>
-                      <a href="#teal" data-theme="teal" class="bg-teal"></a>
-                      <a href="#pink" data-theme="pink" class="bg-pink"></a>
-                      <a href="#magenta" data-theme="magenta" class="bg-magenta"></a>
-                      <a href="#crimson" data-theme="crimson" class="bg-crimson"></a>
-                      <a href="#red" data-theme="red" class="bg-red"></a>
-                      <a href="#orange" data-theme="orange" class="bg-orange"></a>
-                      <a href="#amber" data-theme="amber" class="bg-amber"></a>
-                      <a href="#yellow" data-theme="yellow" class="bg-yellow"></a>
-                      <a href="#brown" data-theme="brown" class="bg-brown"></a>
-                      <a href="#olive" data-theme="olive" class="bg-olive"></a>
-                      <a href="#steel" data-theme="steel" class="bg-steel"></a>
-                      <a href="#mauve" data-theme="mauve" class="bg-mauve"></a>
-                      <a href="#taupe" data-theme="taupe" class="bg-taupe"></a>
-                      <a href="#black" data-theme="inverse" class="bg-black"></a>
-                      <a href="#silver" data-theme="silver" class="bg-silver"></a>
-                  </div>
-              </div>
-          </li>
-          <li class="unsyncronize hide">
-              <div class="setting-list">
-                  <div class="themes-label">Navbar colors</div>
-                  <div class="themes-choice themes-navbar">
-                      <a href="#cyan" data-theme="cyan" class="bg-cyan"></a>
-                      <a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>
-                      <a href="#indigo" data-theme="indigo" class="bg-indigo"></a>
-                      <a href="#violet" data-theme="violet" class="bg-violet"></a>
-                      <a href="#lime" data-theme="lime" class="bg-lime"></a>
-                      <a href="#green" data-theme="green" class="bg-green"></a>
-                      <a href="#emerald" data-theme="emerald" class="bg-emerald"></a>
-                      <a href="#teal" data-theme="teal" class="bg-teal"></a>
-                      <a href="#pink" data-theme="pink" class="bg-pink"></a>
-                      <a href="#magenta" data-theme="magenta" class="bg-magenta"></a>
-                      <a href="#crimson" data-theme="crimson" class="bg-crimson"></a>
-                      <a href="#red" data-theme="red" class="bg-red"></a>
-                      <a href="#orange" data-theme="orange" class="bg-orange"></a>
-                      <a href="#amber" data-theme="amber" class="bg-amber"></a>
-                      <a href="#yellow" data-theme="yellow" class="bg-yellow"></a>
-                      <a href="#brown" data-theme="brown" class="bg-brown"></a>
-                      <a href="#olive" data-theme="olive" class="bg-olive"></a>
-                      <a href="#steel" data-theme="steel" class="bg-steel"></a>
-                      <a href="#mauve" data-theme="mauve" class="bg-mauve"></a>
-                      <a href="#taupe" data-theme="taupe" class="bg-taupe"></a>
-                      <a href="#black" data-theme="inverse" class="bg-black"></a>
-                      <a href="#silver" data-theme="silver" class="bg-silver"></a>
-                  </div>
-              </div>
-          </li>
-          <li class="unsyncronize hide">
-              <div class="setting-list">
-                  <div class="themes-label">Sidebar colors</div>
-                  <div class="themes-choice themes-sidebar">
-                      <a href="#cyan" data-theme="cyan" class="bg-cyan"></a>
-                      <a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>
-                      <a href="#indigo" data-theme="indigo" class="bg-indigo"></a>
-                      <a href="#violet" data-theme="violet" class="bg-violet"></a>
-                      <a href="#lime" data-theme="lime" class="bg-lime"></a>
-                      <a href="#green" data-theme="green" class="bg-green"></a>
-                      <a href="#emerald" data-theme="emerald" class="bg-emerald"></a>
-                      <a href="#teal" data-theme="teal" class="bg-teal"></a>
-                      <a href="#pink" data-theme="pink" class="bg-pink"></a>
-                      <a href="#magenta" data-theme="magenta" class="bg-magenta"></a>
-                      <a href="#crimson" data-theme="crimson" class="bg-crimson"></a>
-                      <a href="#red" data-theme="red" class="bg-red"></a>
-                      <a href="#orange" data-theme="orange" class="bg-orange"></a>
-                      <a href="#amber" data-theme="amber" class="bg-amber"></a>
-                      <a href="#yellow" data-theme="yellow" class="bg-yellow"></a>
-                      <a href="#brown" data-theme="brown" class="bg-brown"></a>
-                      <a href="#olive" data-theme="olive" class="bg-olive"></a>
-                      <a href="#steel" data-theme="steel" class="bg-steel"></a>
-                      <a href="#mauve" data-theme="mauve" class="bg-mauve"></a>
-                      <a href="#taupe" data-theme="taupe" class="bg-taupe"></a>
-                      <a href="#black" data-theme="inverse" class="bg-black"></a>
-                      <a href="#silver" data-theme="silver" class="bg-silver"></a>
-                  </div>
-              </div>
-          </li>
-          <li class="dropdown-footer">
-              <a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> Settings page</a>
-          </li>
-      </ul>
-  </li><!-- /settings -->
+  <!--</li>-->
+  <!--<li>-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--Create-->
+      <!--</a>-->
 
-  <!-- account -->
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Bent Doe <i class="aweso-angle-down"></i>
-      </a>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-          <li><a tabindex="-1" href="#">Profile</a></li>
-          <li><a tabindex="-1" href="#">Activity</a></li>
-          <li><a tabindex="-1" href="page-inbox.html">Inbox</a></li>
-          <li class="divider"></li>
-          <li><a tabindex="-1" href="page-login.html">Logout</a></li>
-      </ul>
-  </li><!-- /account -->
-  </ul><!--/pull right menu-->
-  </div><!-- /uncollapse nav -->
+  <!--</li>-->
+  <!--<li class="dropdown">-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--<div class="label">3</div>-->
+          <!--<i class="aweso-bell-alt"></i>-->
+      <!--</a>-->
+      <!--<ul class="dropdown-menu dropdown-extend" role="menu" aria-labelledby="dropdownMenu">-->
+          <!--<li class="dropdown-header">You have 4 new notofications</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="pull-left">-->
+                          <!--<img class="media-object" data-src="holder.js/32x32">-->
+                      <!--</div>-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="media-heading"><small class="pull-right">Just Now</small> Update version</h4>-->
+                          <!--<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque...</p>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="pull-left">-->
+                          <!--<img class="media-object" data-src="holder.js/32x32">-->
+                      <!--</div>-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="media-heading"><small class="pull-right">5 minutes</small> Jane Smith</h4>-->
+                          <!--<p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit...</p>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="pull-left">-->
+                          <!--<img class="media-object" data-src="holder.js/32x32">-->
+                      <!--</div>-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="media-heading"><small class="pull-right">3 hours</small> New comment</h4>-->
+                          <!--<p>Tellus ac cursus commodo, tortor mauris condimentum nibh...</p>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li class="dropdown-footer">-->
+              <!--<a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> See all notifications</a>-->
+          <!--</li>-->
+      <!--</ul>-->
+  <!--</li>&lt;!&ndash; /notification &ndash;&gt;-->
 
-  <!-- Everything you want hidden at 940px or less, leave it blank! (this use when side-left collapse) -->
-  <div id="navbar-collapse" class="nav-collapse collapse hidden-desktop"></div>
-  </div><!--/container-->
-  </div><!--/navbar-inner-->
+  <!--&lt;!&ndash; task &ndash;&gt;-->
+  <!--<li class="dropdown">-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--<div class="label">5</div>-->
+          <!--<i class="aweso-tasks"></i>-->
+      <!--</a>-->
+      <!--<ul class="dropdown-menu dropdown-extend" role="menu" aria-labelledby="dropdownMenu">-->
+          <!--<li class="dropdown-header">You have 6 tasks</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="task-label"><small class="pull-right task-status">20%</small> upload some file</h4>-->
+                          <!--<div class="progress progress-info">-->
+                              <!--<div class="bar" style="width: 20%"></div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="task-label"><small class="pull-right task-status">40%</small>  <span class="text-error">paused!</span> do something</h4>-->
+                          <!--<div class="progress progress-warning">-->
+                              <!--<div class="bar" style="width: 40%"></div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="task-label"><small class="pull-right task-status">60%</small> do another task</h4>-->
+                          <!--<div class="progress progress-info">-->
+                              <!--<div class="bar" style="width: 60%"></div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1">-->
+                  <!--<div class="media">-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="task-label"><small class="pull-right task-status">80%</small> <span class="text-error">failed!</span> upload some file</h4>-->
+                          <!--<div class="progress progress-danger">-->
+                              <!--<div class="bar" style="width: 80%"></div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<a tabindex="-1" href="#">-->
+                  <!--<div class="media">-->
+                      <!--<div class="media-body">-->
+                          <!--<h4 class="task-label"><small class="pull-right task-status">100%</small> <span class="text-success">done!</span> another task</h4>-->
+                          <!--<div class="progress progress-success">-->
+                              <!--<div class="bar" style="width: 100%"></div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</a>-->
+          <!--</li>-->
+          <!--<li class="dropdown-footer">-->
+              <!--<a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> See all tasks</a>-->
+          <!--</li>-->
+      <!--</ul>-->
+  <!--</li>&lt;!&ndash; /task &ndash;&gt;-->
 
-  </div> <!--/ navbar-->
-  </header> <!--/ end header-->
+  <!--&lt;!&ndash; settings &ndash;&gt;-->
+
+  <!--<li class="dropdown">-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--<i class="aweso-cog"></i>-->
+      <!--</a>-->
+      <!--<ul class="dropdown-menu dropdown-extend" data-dropdown="no-propagation" role="menu" aria-labelledby="dropdownMenu">-->
+          <!--<li class="dropdown-header">General settings</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x aweso-columns"></i></div>-->
+                  <!--<div class="content">Fluid Layout</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="checkbox" id="layout-mode" name="layout-mode" checked />-->
+                          <!--<label for="layout-mode"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li class="backgrounds hide">-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="background-label">Backgrounds</div>-->
+                  <!--<div class="background-choice">-->
+                      <!--<a href="#" class="bg-item bg-black" data-bg="noimage"></a>-->
+                      <!--<a href="#" class="bg-item bg-1" data-bg="01.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-2" data-bg="02.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-3" data-bg="03.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-4" data-bg="04.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-5" data-bg="05.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-6" data-bg="06.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-7" data-bg="07.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-8" data-bg="08.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-9" data-bg="09.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-10" data-bg="10.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-11" data-bg="11.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-12" data-bg="12.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-13" data-bg="13.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-14" data-bg="14.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-15" data-bg="15.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-16" data-bg="16.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-17" data-bg="17.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-18" data-bg="18.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-19" data-bg="19.jpg"></a>-->
+                      <!--<a href="#" class="bg-item bg-20" data-bg="20.jpg"></a>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x aweso-pushpin"></i></div>-->
+                  <!--<div class="content">Fixed Header</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="checkbox" id="header-mode" name="header-mode" />-->
+                          <!--<label for="header-mode"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x aweso-pushpin"></i></div>-->
+                  <!--<div class="content">Fixed Sidebar</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="checkbox" id="sidebar-mode" name="sidebar-mode" />-->
+                          <!--<label for="sidebar-mode"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x color-silver aweso-sign-blank"></i></div>-->
+                  <!--<div class="content">Light theme</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="radio" value="light" id="theme-light" name="theme-mode" checked />-->
+                          <!--<label for="theme-light"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x aweso-sign-blank"></i></div>-->
+                  <!--<div class="content">Dark theme</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="radio" value="dark" id="theme-dark" name="theme-mode" />-->
+                          <!--<label for="theme-dark"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="icon"><i class="aweso-2x aweso-tint"></i></div>-->
+                  <!--<div class="content">Syncronize</div>-->
+                  <!--<div class="checker">-->
+                      <!--<div class="checkbox-slide bg-silver help-block">-->
+                          <!--<input class="input-fx" type="checkbox" id="syncronize-theme" name="syncronize-theme" checked />-->
+                          <!--<label for="syncronize-theme"></label>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li class="syncronize">-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="themes-label">Theme colors</div>-->
+                  <!--<div class="themes-choice">-->
+                      <!--<a href="#cyan" data-theme="cyan" class="bg-cyan"></a>-->
+                      <!--<a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>-->
+                      <!--<a href="#indigo" data-theme="indigo" class="bg-indigo"></a>-->
+                      <!--<a href="#violet" data-theme="violet" class="bg-violet"></a>-->
+                      <!--<a href="#lime" data-theme="lime" class="bg-lime"></a>-->
+                      <!--<a href="#green" data-theme="green" class="bg-green"></a>-->
+                      <!--<a href="#emerald" data-theme="emerald" class="bg-emerald"></a>-->
+                      <!--<a href="#teal" data-theme="teal" class="bg-teal"></a>-->
+                      <!--<a href="#pink" data-theme="pink" class="bg-pink"></a>-->
+                      <!--<a href="#magenta" data-theme="magenta" class="bg-magenta"></a>-->
+                      <!--<a href="#crimson" data-theme="crimson" class="bg-crimson"></a>-->
+                      <!--<a href="#red" data-theme="red" class="bg-red"></a>-->
+                      <!--<a href="#orange" data-theme="orange" class="bg-orange"></a>-->
+                      <!--<a href="#amber" data-theme="amber" class="bg-amber"></a>-->
+                      <!--<a href="#yellow" data-theme="yellow" class="bg-yellow"></a>-->
+                      <!--<a href="#brown" data-theme="brown" class="bg-brown"></a>-->
+                      <!--<a href="#olive" data-theme="olive" class="bg-olive"></a>-->
+                      <!--<a href="#steel" data-theme="steel" class="bg-steel"></a>-->
+                      <!--<a href="#mauve" data-theme="mauve" class="bg-mauve"></a>-->
+                      <!--<a href="#taupe" data-theme="taupe" class="bg-taupe"></a>-->
+                      <!--<a href="#black" data-theme="inverse" class="bg-black"></a>-->
+                      <!--<a href="#silver" data-theme="silver" class="bg-silver"></a>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li class="unsyncronize hide">-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="themes-label">Navbar colors</div>-->
+                  <!--<div class="themes-choice themes-navbar">-->
+                      <!--<a href="#cyan" data-theme="cyan" class="bg-cyan"></a>-->
+                      <!--<a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>-->
+                      <!--<a href="#indigo" data-theme="indigo" class="bg-indigo"></a>-->
+                      <!--<a href="#violet" data-theme="violet" class="bg-violet"></a>-->
+                      <!--<a href="#lime" data-theme="lime" class="bg-lime"></a>-->
+                      <!--<a href="#green" data-theme="green" class="bg-green"></a>-->
+                      <!--<a href="#emerald" data-theme="emerald" class="bg-emerald"></a>-->
+                      <!--<a href="#teal" data-theme="teal" class="bg-teal"></a>-->
+                      <!--<a href="#pink" data-theme="pink" class="bg-pink"></a>-->
+                      <!--<a href="#magenta" data-theme="magenta" class="bg-magenta"></a>-->
+                      <!--<a href="#crimson" data-theme="crimson" class="bg-crimson"></a>-->
+                      <!--<a href="#red" data-theme="red" class="bg-red"></a>-->
+                      <!--<a href="#orange" data-theme="orange" class="bg-orange"></a>-->
+                      <!--<a href="#amber" data-theme="amber" class="bg-amber"></a>-->
+                      <!--<a href="#yellow" data-theme="yellow" class="bg-yellow"></a>-->
+                      <!--<a href="#brown" data-theme="brown" class="bg-brown"></a>-->
+                      <!--<a href="#olive" data-theme="olive" class="bg-olive"></a>-->
+                      <!--<a href="#steel" data-theme="steel" class="bg-steel"></a>-->
+                      <!--<a href="#mauve" data-theme="mauve" class="bg-mauve"></a>-->
+                      <!--<a href="#taupe" data-theme="taupe" class="bg-taupe"></a>-->
+                      <!--<a href="#black" data-theme="inverse" class="bg-black"></a>-->
+                      <!--<a href="#silver" data-theme="silver" class="bg-silver"></a>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li class="unsyncronize hide">-->
+              <!--<div class="setting-list">-->
+                  <!--<div class="themes-label">Sidebar colors</div>-->
+                  <!--<div class="themes-choice themes-sidebar">-->
+                      <!--<a href="#cyan" data-theme="cyan" class="bg-cyan"></a>-->
+                      <!--<a href="#cobalt" data-theme="cobalt" class="bg-cobalt"></a>-->
+                      <!--<a href="#indigo" data-theme="indigo" class="bg-indigo"></a>-->
+                      <!--<a href="#violet" data-theme="violet" class="bg-violet"></a>-->
+                      <!--<a href="#lime" data-theme="lime" class="bg-lime"></a>-->
+                      <!--<a href="#green" data-theme="green" class="bg-green"></a>-->
+                      <!--<a href="#emerald" data-theme="emerald" class="bg-emerald"></a>-->
+                      <!--<a href="#teal" data-theme="teal" class="bg-teal"></a>-->
+                      <!--<a href="#pink" data-theme="pink" class="bg-pink"></a>-->
+                      <!--<a href="#magenta" data-theme="magenta" class="bg-magenta"></a>-->
+                      <!--<a href="#crimson" data-theme="crimson" class="bg-crimson"></a>-->
+                      <!--<a href="#red" data-theme="red" class="bg-red"></a>-->
+                      <!--<a href="#orange" data-theme="orange" class="bg-orange"></a>-->
+                      <!--<a href="#amber" data-theme="amber" class="bg-amber"></a>-->
+                      <!--<a href="#yellow" data-theme="yellow" class="bg-yellow"></a>-->
+                      <!--<a href="#brown" data-theme="brown" class="bg-brown"></a>-->
+                      <!--<a href="#olive" data-theme="olive" class="bg-olive"></a>-->
+                      <!--<a href="#steel" data-theme="steel" class="bg-steel"></a>-->
+                      <!--<a href="#mauve" data-theme="mauve" class="bg-mauve"></a>-->
+                      <!--<a href="#taupe" data-theme="taupe" class="bg-taupe"></a>-->
+                      <!--<a href="#black" data-theme="inverse" class="bg-black"></a>-->
+                      <!--<a href="#silver" data-theme="silver" class="bg-silver"></a>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li class="dropdown-footer">-->
+              <!--<a tabindex="-1" href="#"><i class="aweso-angle-right pull-right"></i> Settings page</a>-->
+          <!--</li>-->
+      <!--</ul>-->
+  <!--</li>&lt;!&ndash; /settings &ndash;&gt;-->
+
+  <!--&lt;!&ndash; account &ndash;&gt;-->
+  <!--<li class="dropdown">-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+          <!--Bent Doe <i class="aweso-angle-down"></i>-->
+      <!--</a>-->
+      <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">-->
+          <!--<li><a tabindex="-1" href="#">Profile</a></li>-->
+          <!--<li><a tabindex="-1" href="#">Activity</a></li>-->
+          <!--<li><a tabindex="-1" href="page-inbox.html">Inbox</a></li>-->
+          <!--<li class="divider"></li>-->
+          <!--<li><a tabindex="-1" href="page-login.html">Logout</a></li>-->
+      <!--</ul>-->
+  <!--</li>&lt;!&ndash; /account &ndash;&gt;-->
+  <!--</ul>&lt;!&ndash;/pull right menu&ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /uncollapse nav &ndash;&gt;-->
+
+  <!--&lt;!&ndash; Everything you want hidden at 940px or less, leave it blank! (this use when side-left collapse) &ndash;&gt;-->
+  <!--<div id="navbar-collapse" class="nav-collapse collapse hidden-desktop"></div>-->
+  <!--</div>&lt;!&ndash;/container&ndash;&gt;-->
+  <!--</div>&lt;!&ndash;/navbar-inner&ndash;&gt;-->
+
+  <!--</div> &lt;!&ndash;/ navbar&ndash;&gt;-->
+  <!--</header> &lt;!&ndash;/ end header&ndash;&gt;-->
 
   <!-- start section content-->
   <section class="section-content">
+      <!--Sidebar-->
       <!-- side left, its part to menu on left-->
-      <div id="navside" class="side-left" data-collapse="navbar">
-          <form class="form-inline search-module" action="?" method="post">
-              <div class="input-append input-append-inline">
-                  <input name="search" class="input-block-level" type="text" placeholder="Type to search" />
-                  <button class="btn bg-cyan" type="button">
-                      <i class="aweso-search"></i>
-                  </button>
-              </div>
-          </form>
-          <!--nav, this structure create with nav (find the bootstrap doc about .nav list) -->
-          <ul class="nav nav-list">
-              <li class="dropdown-list active"> <!-- example use with dropdown list -->
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Dashboard</a>
-                  <ul class="dropdown-menu">
-                      <li class="active"><a href="index.html">Dashboard #1</a></li>
-                      <li><a href="index2.html">Dashboard #2</a></li>
-                      <li><a href="index3.html">Dashboard #3</a></li>
-                      <li><a href="index4.html">Dashboard #4</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown-list">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Layouts</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="layout-blank.html">Blank</a></li>
-                      <li><a href="layout-full-width.html">Full Width</a></li>
-                      <li><a href="layout-top-menus.html">Top Menus</a></li>
-                  </ul>
-              </li>
-              <li><a href="widgets.html">Widgets</a></li>
-              <li class="dropdown-list">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Components</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="ui-general.html">General</a></li>
-                      <li><a href="ui-typography.html">Typography</a></li>
-                      <li><a href="ui-buttons.html">Buttons</a></li>
-                      <li><a href="ui-alert-notify.html">Alert & Notify</a></li>
-                      <li><a href="ui-gauge.html">Gauge</a></li>
-                      <li><a href="ui-calendar.html">Calendar</a></li>
-                      <li><a href="ui-scrollbar.html">Scrollbar</a></li>
-                      <li><a href="ui-tabs-collapse.html">Tabs & Collapses</a></li>
-                      <li><a href="ui-sliders-bars.html">Sliders & Bars</a></li>
-                      <li><a href="ui-tiles.html">Tiles</a></li>
-                      <li><a href="ui-appbar.html">Appbar</a></li>
-                      <li><a href="ui-splash-page.html">Splash Page</a></li>
-                      <li><a href="ui-media-object.html">Media Object</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown-list">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Form</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="form-widget.html">Form Widget</a></li>
-                      <li><a href="form-elements.html">Elements</a></li>
-                      <li><a href="form-validation.html">Validation</a></li>
-                      <li><a href="form-wizard.html">Wizard</a></li>
-                      <li><a href="form-wysiwyg.html">Wysiwyg</a></li>
-                      <li><a href="form-code-editor.html">Code editor</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown-list">
-                  <a href="charts.html" class="dropdown-toggle" data-toggle="dropdown-list">Charts</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="chart-line.html">Lines Charts</a></li>
-                      <li><a href="chart-bar.html">Bar Charts</a></li>
-                      <li><a href="chart-pie.html">Pie Charts</a></li>
-                      <li><a href="chart-others.html">Other Charts</a></li>
-                  </ul>
-              </li>
-              <li><a href="grids.html">Grids</a></li>
-              <li class="dropdown-list">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Tables</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="table-basic.html">Basic</a></li>
-                      <li><a href="table-datatables.html">DataTables</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="icons.html"><span class="label">3</span> Icons</a>
-              </li>
-              <li class="dropdown-list">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Pages</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="page-login.html">Login</a></li>
-                      <li class="divider"></li>
-                      <li><a href="page-search.html">Search</a></li>
-                      <li><a href="page-invoices.html">Invoices</a></li>
-                      <li><a href="page-inbox.html">Inbox</a></li>
-                      <li><a href="page-gallery.html">Gallery</a></li>
-                      <li class="divider"></li>
-                      <li><a href="page-error-404.html">Error 404</a></li>
-                      <li><a href="page-error-500.html">Error 500</a></li>
-                      <li><a href="page-coming-soon.html">Coming Soon</a></li>
-                  </ul>
-              </li>
-          </ul><!-- /nav -->
-      </div><!-- /side left-->
+      <!--<div id="navside" class="side-left" data-collapse="navbar">-->
+          <!--<form class="form-inline search-module" action="?" method="post">-->
+              <!--<div class="input-append input-append-inline">-->
+                  <!--<input name="search" class="input-block-level" type="text" placeholder="Type to search" />-->
+                  <!--<button class="btn bg-cyan" type="button">-->
+                      <!--<i class="aweso-search"></i>-->
+                  <!--</button>-->
+              <!--</div>-->
+          <!--</form>-->
+          <!--&lt;!&ndash;nav, this structure create with nav (find the bootstrap doc about .nav list) &ndash;&gt;-->
+          <!--<ul class="nav nav-list">-->
+
+              <!--<li><a href="/#/index">Dashboard</a></li>-->
+
+              <!--<li><a href="/#/appointments">Appointments</a></li>-->
+              <!--<li><a href="/#/patients">Patients</a></li>-->
+              <!--<li><a href="/#/contacts">Contacts</a></li>-->
+              <!--<li class="dropdown-list">-->
+                  <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown-list">Templates</a>-->
+                  <!--<ul class="dropdown-menu">-->
+                      <!--<li><a href="/#/consulttemplates">Consult Templates</a></li>-->
+                      <!--<li><a href="/#/templates">Letter Templates</a></li>                  </ul>-->
+              <!--</li>-->
+              <!--<li><a href="/#/invoices">Invoices</a></li>-->
+              <!--<li><a href="/#/paymenttypes">Payments</a></li>-->
+              <!--<li><a href="/#/products">Products</a></li>-->
+              <!--<li><a href="/#/settings">Settings</a></li>-->
+
+
+          <!--</ul>&lt;!&ndash; /nav &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /side left&ndash;&gt;-->
 
 
 
@@ -526,37 +876,36 @@
           <header class="content-header">
               <!-- content action (optional)-->
               <ul class="content-action pull-right">
-                  <li>
-                      <div class="btn-group">
-                          <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
-                              Actions <i class="aweso-angle-down"></i>
-                          </a>
-                          <ul class="dropdown-menu black">
-                              <li><a href="#">Action</a></li>
-                              <li><a href="#">Some Action</a></li>
-                              <li><a href="#">Other Action</a></li>
-                              <li class="divider"></li>
-                              <li><a href="#">Something else</a></li>
-                          </ul>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="btn-group" data-toggle="buttons-radio">
-                          <button class="btn btn-link" data-content="widget"><i class="aweso-list-ul aweso-large" title="details view"></i></button>
-                          <button class="btn btn-link" data-content="tile"><i class="aweso-th aweso-large" title="tile view"></i></button>
-                      </div>
-                  </li>
-                  <li><button class="btn btn-link" data-toggle="button" data-content="toggle-pane"><i class="aweso-exchange aweso-large" title="toggle pane"></i></button></li>
+                  <!--<li>-->
+                      <!--<div class="btn-group">-->
+                          <!--<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">-->
+                              <!--Actions <i class="aweso-angle-down"></i>-->
+                          <!--</a>-->
+                          <!--<ul class="dropdown-menu black">-->
+                              <!--<li><a href="#">Action</a></li>-->
+                              <!--<li><a href="#">Some Action</a></li>-->
+                              <!--<li><a href="#">Other Action</a></li>-->
+                              <!--<li class="divider"></li>-->
+                              <!--<li><a href="#">Something else</a></li>-->
+                          <!--</ul>-->
+                      <!--</div>-->
+                  <!--</li>-->
+                  <!--<li>-->
+                      <!--<div class="btn-group" data-toggle="buttons-radio">-->
+                          <!--<button class="btn btn-link" data-content="widget"><i class="aweso-list-ul aweso-large" title="details view"></i></button>-->
+                          <!--<button class="btn btn-link" data-content="tile"><i class="aweso-th aweso-large" title="tile view"></i></button>-->
+                      <!--</div>-->
+                  <!--</li>-->
+                  <!--<li><button class="btn btn-link" data-toggle="button" data-content="toggle-pane"><i class="aweso-exchange aweso-large" title="toggle pane"></i></button></li>-->
               </ul> <!-- /content action -->
 
               <!-- content title-->
-              <div class="page-header"><h1>Dashboard</h1></div>
-
-              <!-- content breadcrumb -->
-              <ul class="breadcrumb breadcrumb-inline">
-                  <li><a href="#">Home</a> <span class="divider"><i class="aweso-angle-right"></i></span></li>
-                  <li class="active">Dashboard</li>
-              </ul>
+              <!--<div class="page-header"><h1>Dashboard</h1></div>-->
+              <!--&lt;!&ndash; content breadcrumb &ndash;&gt;-->
+              <!--<ul class="breadcrumb breadcrumb-inline">-->
+                  <!--<li><a href="#">Home</a> <span class="divider"><i class="aweso-angle-right"></i></span></li>-->
+                  <!--<li class="active">Dashboard</li>-->
+              <!--</ul>-->
           </header> <!--/ content header -->
 
           <div class="container">
@@ -579,7 +928,7 @@
 
   <!-- footer, I place the footer on here. -->
   <footer class="footer">
-      <p>Copyright &copy; 2013. All Right Reserved.</p>
+      <!--<p>Copyright &copy; 2013. All Right Reserved.</p>-->
   </footer><!--/ footer -->
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -603,12 +952,19 @@
     <![endif]-->
     <!-- endbuild -->
   <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+  <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/jquery.ui.touch-punch.min.js"></script>
+
+  <!--<script src="bower_components/jquery-ui/ui/jquery-ui.min.js"></script>-->
+
   <script src="bower_components/moment/moment.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/interact/interact.js"></script>
+  <script src="bower_components/angular-devise/lib/devise.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -621,6 +977,12 @@
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
   <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script src="bower_components/ng-table/dist/ng-table.js"></script>
+  <script src="bower_components/angular-cookie/angular-cookie.js"></script>
+  <script src="bower_components/ng-token-auth/dist/ng-token-auth.js"></script>
+  <!--<script src="bower_components/timepicker/jquery.timepicker.js"></script>-->
+
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.js"></script>
   <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -631,19 +993,38 @@
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angularjs-rails-resource/angularjs-rails-resource.js"></script>
-  <script src="bower_components/acute.select/acute.select.js"></script>
+  <script src="bower_components/AcuteTest/acute.select.js"></script>
   <script src="bower_components/angular-moment/angular-moment.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="bower_components/fullcalendar/fullcalendar.js"></script>
-  <script src="bower_components/fullcalendar/gcal.js"></script>
+  <script src="bower_components/angular-ui-select/dist/select.js"></script>
   <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+
+  <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+  <!--<script src="bower_components/fullcalendar/fullcalendar.doctors.js"></script>-->
+
+  <!--<script src="bower_components/fullcalendar/gcal.js"></script>-->
   <script src="bower_components/angular-easyfb/angular-easyfb.js"></script>
-  <script src="bower_components/daypilot/js/daypilot-all.min.js"></script>
+  <!--<script src="bower_components/daypilot/js/timepic-all.min.js"></script>-->
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+
   <script src="bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+  <!--<script src="bower_components/angular-advanced-searchbox/dist/angular-advanced-searchbox-tpls.js"></script>-->
+<!--Ecommerce requirements-->
+  <script src="bower_components/smartmenus/src/jquery.smartmenus.js"></script>
+  <script src="bower_components/smartmenus/src/addons/bootstrap/jquery.smartmenus.bootstrap.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+
+  <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
+
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <!--close ecommerce requirements-->
   <!-- endbower -->
   <!-- endbuild -->
-
-
 
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -656,12 +1037,18 @@
         <script src="scripts/controllers/controllers.js"></script>
         <script src="scripts/controllers/calendar.js"></script>
         <script src="scripts/controllers/demo.js"></script>
-        <script src="scripts/controllers/patients.js"></script>
+  <script src="scripts/controllers/recipients.js"></script>
+
+  <script src="scripts/controllers/patients.js"></script>
+  <script src="scripts/controllers/doctors.js"></script>
+
+  <script src="scripts/controllers/patientnotes.js"></script>
         <script src="scripts/controllers/consulttemplates.js"></script>
         <script src="scripts/controllers/appointments.js"></script>
         <script src="scripts/controllers/products.js"></script>
         <script src="scripts/controllers/templates.js"></script>
         <script src="scripts/controllers/expenses.js"></script>
+        <script src="scripts/controllers/tests.js"></script>
         <script src="scripts/controllers/payment_types.js"></script>
         <script src="scripts/controllers/billable_items.js"></script>
         <script src="scripts/controllers/concession_types.js"></script>
@@ -669,7 +1056,26 @@
         <script src="scripts/controllers/contacts.js"></script>
         <script src="scripts/controllers/consults.js"></script>
         <script src="scripts/controllers/business.js"></script>
+        <script src="scripts/controllers/consumers.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/wishes.js"></script>
+        <script src="scripts/controllers/merchandises.js"></script>
+        <script src="scripts/controllers/categories.js"></script>
+        <script src="scripts/controllers/tickets.js"></script>
+        <script src="scripts/controllers/bids.js"></script>
         <script src="scripts/controllers/taxes.js"></script>
+        <script src="scripts/controllers/lines.js"></script>
+        <script src="scripts/controllers/sticks.js"></script>
+        <script src="scripts/controllers/eggs.js"></script>
+        <script src="scripts/controllers/meetings.js"></script>
+        <script src="scripts/controllers/letters.js"></script>
+        <script src="scripts/controllers/payments.js"></script>
+        <script src="scripts/controllers/twigs.js"></script>
+        <script src="scripts/controllers/nests.js"></script>
+        <script src="scripts/controllers/birds.js"></script>
+        <script src="scripts/controllers/widgets.js"></script>
+        <script src="scripts/controllers/procurators.js"></script>
+
         <script src="scripts/metro/metro-base.js"></script>
         <script src="scripts/metro/demo/dashboard.js"></script>
         <script src="scripts/metro/ckeditor/ckeditor.js"></script>
@@ -679,11 +1085,54 @@
         <script src="scripts/metro/wysihtml5/wysihtml5-0.3.0.min.js"></script>
         <script src="scripts/metro/datepicker/bootstrap-datepicker.js"></script>
         <script src="scripts/metro/fullcalendar/fullcalendar.js"></script>
-        <script src="scripts/metro/fullcalendar/gcal.js"></script>
+
+  <script src="scripts/metro/m-scrollbar/jquery.mCustomScrollbar.min.js"></script>
+  <script src="scripts/metro/jquery.mousewheel.js"></script>
+  <script src="scripts/metro/morrisjs/morris.js"></script>
+  <script src="scripts/metro/morrisjs/raphael-min.js"></script>
+  <script src="scripts/metro/select2/select2.js"></script>
+  <script src="scripts/metro/jquery.mousewheel.js"></script>
+  <script src="scripts/metro/jquery.tablesorter.min.js"></script>
+  <script src="scripts/metro/jquery.equalHeight.js"></script>
+  <script src="scripts/metro/holder/holder.js"></script>
+  <script src="scripts/metro/demo/dashboard.js"></script>
+  <script src="scripts/metro/looper/looper.min.js"></script>
+
+
+
+  <!--<script src="scripts/metro/fullcalendar/fullcalendar.doctors.js"></script>-->
+
+  <script src="scripts/metro/timepicker/bootstrap-timepicker.js"></script>
+  <script src="scripts/metro/timepicker/bootstrap-timepicker.min.js"></script>
+  <script src="scripts/metro/datatables/jquery.datatables.js"></script>
+
+  <script src="scripts/metro/demo/form-elements.js"></script>
+  <script src="scripts/metro/demo/form-code-editor.js"></script>
+  <script src="scripts/metro/demo/form-validation.js"></script>
+  <script src="scripts/metro/demo/form-wizard.js"></script>
+  <script src="scripts/metro/demo/table-datatables.js"></script>
+  <script src="scripts/metro/demo/ui-calendar.js"></script>
+
+
+
+
+
+  <script src="scripts/metro/datepicker/bootstrap-datepicker.js"></script>
+
+  <!--<script src="scripts/metro/fullcalendar/gcal.js"></script>-->
         <script src="scripts/controllers/example.js"></script>
 
+<!--ecommerce script-->
+  <script src="scripts/ecommerce/custom.js"></script>
+  <script src="scripts/ecommerce/jquery.simpleGallery.js"></script>
+  <script src="scripts/ecommerce/jquery.simpleLens.js"></script>
+  <script src="scripts/ecommerce/jquery.smartmenus.bootstrap.js"></script>
+  <script src="scripts/ecommerce/jquery.smartmenus.js"></script>
+  <!--<script src="scripts/ecommerce/slick.js"></script>-->
 
 
+
+  <!--end ecommerce script-->
 
   <!-- endbuild -->
 </body>

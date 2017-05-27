@@ -1,0 +1,179 @@
+<div class="container" style="margin-top: 40px" id=patientNotesForm>
+    <td>{{patient.firstName}}</td>
+    <td>{{patient.appointment}}</td>
+    <td>Am i here?</td>
+
+
+    <!-- CONTENT MANAGER & CHAT
+                           ================================================== -->
+    <!-- row, content manager -->
+    <div class="row-fluid" id="row2">
+    <!-- content manager -->
+    <div class="span8" id="pastconsults">
+    <!-- widget, content manager -->
+    <div class="widget border-amber" id="widget-cm">
+    <div class="widget-header bg-amber">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-comments"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Consults</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+        <div class="widget-action color-amber">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#posts">Consults</a></li>
+            </ul>
+        </div>
+        <input type="search" ng-model="search" placeholder="">
+
+    </div>
+    <div class="widget-content">
+    <div class="tab-content">
+    <!-- posts -->
+    <div class="tab-pane fade in active" id="posts">
+        <table class="table" data-sorter="true">
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Consult date</th>
+                <th>Impression and plan</th>
+                <th>Created On</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <!--<tbody data-ng-repeat="patient.consult in patient.consults | filter:search" ng-if="$index < 3" ng-click="display('sm', consult)">-->
+            <tr ng-click="showPopup()   ">
+                <td>{{consult.date}}</td>
+                <td>{{consult.impressionPlan}}</td>
+                <td> dummy data </td>
+                <td>{{patient.id}}</td>
+                <td>{{patient.appointment.id}}</td>
+
+            </tbody>
+        </table>
+    </div><!-- /posts -->
+
+    <!-- comments -->
+    <div class="tab-pane fade" id="comments">
+        <table class="table" data-sorter="true">
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Letter date</th>
+                <th>Recipient</th>
+                <th>Subject</th>
+            </tr>
+            </thead>
+            <!--<tbody data-ng-repeat="patient.letter in patient.letters | filter:search" ng-if="$index < 3" ng-click="display('sm', consult)">-->
+            <tr>
+                <td>{{letter.date}}</td>
+                <td>{{letter.recipient}}</td>
+                <td>{{letter.subject}}</td>
+                <td> dummy data </td>
+
+
+
+
+            </tbody>
+        </table>
+    </div><!-- /comments -->
+
+    </div><!-- /tab content -->
+    </div><!-- /widget content -->
+    </div><!-- /widget, content manager -->
+    </div><!-- /content manager -->
+    </div>
+    <div>
+        <button class="btn btn-primary" ng-click="showPopup1()">Consult</button>
+    </div>
+    <div class="row-fluid" id="row2" ng-show="isPopupVisible">
+        <!-- content manager -->
+        <div class="container" style="margin-top: 40px">
+            <h1 class="text-center">Create New Consult</h1>
+            <form name="form" class="css-form" novalidate>
+
+                <fieldset>
+                    <input class="span12" id="formData.ConsultTemplateName" name=ConsultTemplateName ng-model="consult_template.name" placeholder="Appointment Date" type="date" maxlength="250" required ="">
+                    <small class="error" ng-show="form.consulttemplateName.$error.unique">That template name is taken, please try another</small>
+
+                    <div ng-show="form.$submitted || form.consulttemplateName.$touched">
+                        <div ng-show="form.consulttemplateName.$error.required">Tell us your name.</div>
+                    </div>
+                    <textarea ck-editor id="formData.consulttemplateContent" ng-model="consult_template.content" placeholder="Template Content" type="text"></textarea>
+                    <button class="btn btn-primary" ng-click="updateConsult()">Update</button>
+
+                    <button class="btn btn-danger" ng-click="destroyConsult()">Clear</button>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div>
+    <button class="btn btn-primary" ng-click="showPopup()">Create new consult</button>
+    </div>
+    <div class="row-fluid" id="row2" ng-show="isPopupVisible">
+        <!-- content manager -->
+        <div class="container" style="margin-top: 40px">
+            <h1 class="text-center">Create New Consult</h1>
+            <form name="form" class="css-form" novalidate>
+
+                <fieldset>
+                    <input class="span12" id="formData.ConsultTemplateName" name=ConsultTemplateName ng-model="consult_template.name" placeholder="Appointment Date" type="date" maxlength="250" required ="">
+                    <small class="error" ng-show="form.consulttemplateName.$error.unique">That template name is taken, please try another</small>
+
+                    <div ng-show="form.$submitted || form.consulttemplateName.$touched">
+                        <div ng-show="form.consulttemplateName.$error.required">Tell us your name.</div>
+                    </div>
+                    <textarea ck-editor id="formData.consulttemplateContent" ng-model="consult_template.content" placeholder="Template Content" type="text"></textarea>
+                    <button class="btn btn-primary" ng-click="createConsult()">Create</button>
+                    <button class="btn btn-primary" ng-click="updateConsult()">Update</button>
+
+                    <button class="btn btn-danger" ng-click="destroyConsult()">Clear</button>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+        <div class="span4">
+            <!-- widget chat -->
+            <div class="widget border-mauve" id="widget-chat">
+                <!-- widget header -->
+                <div class="widget-header bg-mauve">
+                    <!-- widget icon -->
+                    <div class="widget-icon"><i class="aweso-comment"></i></div>
+                    <!-- widget title -->
+                    <h4 class="widget-title">Chat</h4>
+                    <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+                    <div class="widget-action color-mauve">
+                        <button class="btn color-white" data-toggle="add-others">&plus;</button>
+                        <button data-toggle="collapse" data-collapse="#widget-chat" class="btn">
+                            <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+                        </button>
+                    </div>
+                </div><!-- /widget header -->
+
+                <!-- widget content -->
+                <div class="widget-content">
+                    <div class="container" style="margin-top: 40px">
+                        <h1 class="text-center">Create New Consult Template</h1>
+                        <form>
+
+                        </form>
+                    </div><!-- /widget content -->
+                </div> <!-- /widget ckeditor -->
+                <button class="btn btn-default" ng-click="open('sm')">Saved consult templates</button>
+                <div ng-show="selected">Selection from a modal: {{ selected.name }}
+                </div>
+                </div><!-- /widget content -->
+            </div><!-- /widget chat -->
+    </div><!-- /chat -->
+    </div><!-- /row content manager -->
+
+
+
+
+
+    <!-- widget content -->
+
+    <!-- widget content -->

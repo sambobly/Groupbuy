@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @procurator.name %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @procurator.invoice %>
+</p>
+
+<%= link_to 'Edit', edit_procurator_path(@procurator) %> |
+<%= link_to 'Back', procurators_path %>

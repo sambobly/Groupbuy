@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stick.name %>
+</p>
+
+<p>
+  <strong>Nest:</strong>
+  <%= @stick.nest %>
+</p>
+
+<%= link_to 'Edit', edit_stick_path(@stick) %> |
+<%= link_to 'Back', sticks_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  letter_id: 
+  email: MyText
+  name: MyText
+  firstName: MyText
+  lastName: MyText
+  type: MyText
+
+two:
+  letter_id: 
+  email: MyText
+  name: MyText
+  firstName: MyText
+  lastName: MyText
+  type: MyText

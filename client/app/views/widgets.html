@@ -1,0 +1,217 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="aa-myaccount-area">
+                <div class="row">
+                    <div class="col-md-6 centre">
+                        <div class="aa-myaccount-login">
+                            <h4>Login</h4>
+                            <form action="" class="aa-login-form">
+                                <label for="">Username or Email address<span>*</span></label>
+                                <input type="text" placeholder="Username or email">
+                                <label for="">Password<span>*</span></label>
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="aa-browse-btn">Login</button>
+                                <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
+                                <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--&lt;!&ndash;BELOW HERE IS THE OLD WIDGET&ndash;&gt;-->
+<!--TEST-->
+<!--<li ng-repeat="widget in widgets" ng-click="showPopup(widget)">-->
+    <!--<td>{{widget.id}}</td>-->
+    <!--<td>{{widget.invoice_id}}</td>-->
+    <!--<td>{{widget.invoiceId}}</td>-->
+
+
+<!--</li>-->
+<!--<div class="row-fluid" id="row2" ng-show="isPopupVisible">-->
+    <!--&lt;!&ndash; content manager &ndash;&gt;-->
+
+    <!--<div class="widget border-cyan" id="widget-datatables1">-->
+        <!--&lt;!&ndash; widget header &ndash;&gt;-->
+        <!--<div class="widget-header bg-cyan">-->
+            <!--&lt;!&ndash; widget icon &ndash;&gt;-->
+            <!--<div class="widget-icon"><i class="aweso-table"></i></div>-->
+            <!--&lt;!&ndash; widget title &ndash;&gt;-->
+            <!--<h4 class="widget-title">Billable Items</h4>-->
+            <!--&lt;!&ndash; widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! &ndash;&gt;-->
+            <!--<div class="widget-action color-cyan">-->
+                <!--<button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">-->
+                    <!--<i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>&lt;!&ndash; /widget header &ndash;&gt;-->
+
+        <!--&lt;!&ndash; widget content &ndash;&gt;-->
+        <!--<div class="widget-content">-->
+            <!--<table id="datatables1" class="table table-striped table-hover">-->
+                <!--<thead>-->
+                <!--<input type="search" ng-model="search" placeholder="Search...">-->
+
+                <!--<tr>-->
+                    <!--<th>Name</th>-->
+                    <!--<th>Doctor</th>-->
+
+
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody  data-ng-repeat="product in products | filter:search" ng-click="showPopup3(egg)">-->
+                <!--<tr>-->
+                    <!--<td>{{product.name}}</td>-->
+                    <!--<td>{{product.id}}</td>-->
+                    <!--<td>{{product.price}}</td>-->
+
+
+
+
+                <!--</tr>-->
+                <!--</tbody>&lt;!&ndash; source with ajax &ndash;&gt;-->
+            <!--</table>-->
+        <!--</div>&lt;!&ndash; /widget content &ndash;&gt;-->
+    <!--</div> &lt;!&ndash; /widget datatables #1 &ndash;&gt;-->
+
+<!--</div>-->
+<!--<div class="modal-header">-->
+    <!--<h3 class="modal-title">Create a Widget!</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+    <!--<form>-->
+        <!--<fieldset>-->
+            <!--<td><select ng-model="widget.product" id="formData.widget" ng-options="product.name for product in products" placeholder="Product">-->
+                <!--<option value="">Select product</option>-->
+            <!--</select></td>-->
+            <!--<td><select ng-model="widget.tax" id="formData.widget" ng-options="tax.name for tax in taxes" placeholder="Tax">-->
+                <!--<option value="">Select product</option>-->
+            <!--</select></td>-->
+            <!--<label><strong>Bird Name</strong></label>-->
+            <!--<input class="span3" id="formData.widgetProduct_Id" ng-model="widget.product_id" placeholder="Product Id" type="integer" maxlength="40">-->
+            <!--<label><strong>Price</strong></label>-->
+            <!--<input class="span3" id="formData.widgetItem" ng-model="widget.item" placeholder="Item" type="text" maxlength="40">-->
+            <!--<button class="btn btn-primary" ng-click="createWidget()">Create</button>-->
+        <!--</fieldset>-->
+    <!--</form>-->
+    <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<td><select ng-model="widget.product" id="formData.widget" ng-options="product.name for product in products" placeholder="Product">-->
+    <!--<option value="">Select product</option>-->
+<!--</select></td>-->
+
+<!--<div class="modal-header">-->
+    <!--<h3 class="modal-title">Create a Line!</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+    <!--<form>-->
+        <!--<fieldset>-->
+            <!--<pre>{{line}}</pre>-->
+
+            <!--<label><strong>Line Item</strong></label>-->
+            <!--<input class="span3" id="formData.widgetProduct" ng-model="widget.product.name" placeholder="Name" type="text" maxlength="40">-->
+            <!--<label><strong>Tax</strong></label>-->
+            <!--<input class="span3" id="formData.widgetTax" ng-model="widget.tax.name" placeholder="Tax" type="text" maxlength="40">-->
+            <!--<label><strong>Invoice ID</strong></label>-->
+
+            <!--<input class="span3" id="formData.widgetInvoiceID" ng-model="widget.invoice_id" placeholder="Invoice" type="integer" maxlength="40">-->
+            <!--<label><strong>Price</strong></label>-->
+            <!--<input class="span3" id="formData.widgetPrice" ng-model="widget.product.price" placeholder="Price" type="decimal" maxlength="40">-->
+
+            <!--<label><strong>Quantity</strong></label>-->
+            <!--<input class="span3" id="formData.widgetQuantity" ng-model="widget.quantity" placeholder="Quantity" type="integer" maxlength="40">-->
+            <!--<label><strong>Tax</strong></label>-->
+            <!--<input class="span3" id="formData.widgetTax" ng-model="widget.tax" placeholder="Tax" type="integer" maxlength="40">-->
+            <!--<label><strong>Discount</strong></label>-->
+            <!--<input class="span3" id="formData.widgetDiscount" ng-model="widget.discount" placeholder="Discount" type="decimal" maxlength="40">-->
+            <!--<label><strong>Total</strong></label>-->
+            <!--<input class="span3" id="formData.widgetTotal" ng-model="widget.total" placeholder="Total" type="decimal" maxlength="40">-->
+            <!--<label><strong><Product></Product></strong></label>-->
+            <!--<input class="span3" id="formData.widgetProduct" ng-model="widget.product" placeholder="product" type="text" maxlength="40">-->
+
+            <!--<button class="btn btn-primary" ng-click="createWidget()">Create</button>-->
+        <!--</fieldset>-->
+    <!--</form>-->
+    <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script type="text/ng-template" id="productsModal2.html">-->
+    <!--<div class="modal-header">-->
+        <!--<li ng-repeat="product in widget.products">-->
+            <!--<td>{{product.name}}</td>-->
+            <!--<td>{{product.id}}</td>-->
+
+        <!--</li>-->
+    <!--</div>-->
+
+    <!--<div class="modal-body">-->
+
+
+        <!--<form id="productForm">-->
+            <!--<fieldset>-->
+                <!--<li ng-repeat="product in widget.products">-->
+                    <!--<td>{{product.name}}</td>-->
+                    <!--<td>{{product.id}}</td>-->
+
+                <!--</li>-->
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label" for="formData.widgetProduct_Id">Nest Name</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.widgetProduct_Id" ng-model="widget.product_id" placeholder="Product Name" type="text" required >-->
+                    <!--</div>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.widgetProduct_Id" ng-model="widget.productId" placeholder="Product Name" type="text" required >-->
+                    <!--</div>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.widgetProduct_Name " ng-model="widget.product.name" placeholder="Product Name" type="text" required >-->
+                    <!--</div>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.widgetProduct_Name " ng-model="widget.product_name" placeholder="Product Name" type="text" required >-->
+                    <!--</div><div class="controls">-->
+                    <!--<input class="input-medium" id="formData.widgetProduct_Name " ng-model="widget.productName" placeholder="Product Name" type="text" required >-->
+
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--&lt;!&ndash;<div ng-show="form.$submitted || form.productForm.$touched">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div ng-show="form.productForm.$error.required">Please enter a product name.</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label" for="formData.widgetProduct">Product Name</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.widgetProduct" ng-model="widget.productName" placeholder="Product Name" type="text" required >-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<li ng-repeat="product in widget.products">-->
+                        <!--<td>{{widget.product.name}}</td>-->
+                        <!--<td>{{widget.product_id}}</td>-->
+                    <!--</li>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button class="btn btn-primary" ng-click="ok()">Cancel</button>-->
+
+                    <!--<button class="btn btn-primary" ng-click="updateProduct()">Update</button>-->
+                    <!--<button class="btn btn-warning" ng-click="destroyProduct()">Delete</button>-->
+                    <!--<button class="btn btn-warning" ng-click="ok()">Ok</button>-->
+
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<li ng-repeat="nest in nests">-->
+                        <!--<td>{{nest.name}}</td>-->
+                    <!--</li>-->
+                <!--</div>-->
+    <!--</div>-->
+<!--</script>-->

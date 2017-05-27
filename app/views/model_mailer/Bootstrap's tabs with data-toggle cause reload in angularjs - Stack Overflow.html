@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Bootstrap's tabs with data-toggle cause reload in angularjs - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Bootstrap&#39;s tabs with data-toggle cause reload in angularjs">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;ve just migrated to AngularJS 1.2. And I&#39;ve realized that all my menu/navigation elements that were configured with data-toggle, for instance:
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#additionalSelection&quot; data-to...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs">
+    <link rel="canonical" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs">
+
+    
+    
+    <script type="text/javascript" async="" src="http://engine.adzerk.net/ados?t=1479112003301&amp;request={%22Placements%22:[{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk346322650%22,%22AT%22:4,%22Z%22:[43]},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk371472264%22,%22AT%22:4,%22Z%22:[44]},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk2123724447%22,%22ATA%22:[5,17,2221],%22Z%22:[45]}],%22Keywords%22:%22angularjs%2Ctwitter-bootstrap%2Ctwitter-bootstrap-3%22,%22Referrer%22:%22https%3A%2F%2Fwww.google.com.au%2F%22,%22IsAsync%22:true}"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/quant.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/beacon.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/ados.js.download"></script><script src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/jquery.min.js.download"></script>
+    <script src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Bootstrap&#39;s tabs with data-toggle cause reload in angularjs&#39;" href="http://stackoverflow.com/feeds/question/19930383">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:19930383});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '19930383');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1479112001,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"ce9aa0d733e7b30ddf28a909d9078fcf","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"devstory_onboarding_exp":{"v":"b","g":2},"likelytoupmod":{"v":"DontShowNewsletterToAnonVoters:a","g":1},"be_nice_anons_edit":{"v":"a","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"a971c478d12f","js/moderator.en.js":"9a4d637eade8","js/full-anon.en.js":"50939fccdb58","js/full.en.js":"3dddd9d3a88b","js/wmd.en.js":"ad8b32434301","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c84249f40166","js/help.en.js":"a56fdf9b9ff2","js/tageditor.en.js":"da67ed238e28","js/tageditornew.en.js":"a224b66f8242","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"834877a0c912","js/review.en.js":"2f2ea7df79d3","js/tagsuggestions.en.js":"78eee7c19ab2","js/post-validation.en.js":"973dacc52cf0","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"07c5eef5ab25","js/keyboard-shortcuts.en.js":"af5542af7efd","js/external-editor.en.js":"2764325d9047","js/external-editor.en.js":"2764325d9047","js/snippet-javascript.en.js":"85dff8d84512","js/snippet-javascript-codemirror.en.js":"74c287ae0593"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/full-anon.en.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/snippet-javascript.en.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/post-validation.en.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/prettify-full.en.js.download"></script><script type="text/javascript" src="http://static.adzerk.net/Extensions/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"><link type="text/css" rel="stylesheet" href="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/jobs-multi.min.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f19930383%2fbootstraps-tabs-with-data-toggle-cause-reload-in-angularjs" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+        </div>
+
+        <div class="network-items">
+                <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 162 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" class="topbar-icon icon-achievements yes-hover js-achievements-button" data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f19930383%2fbootstraps-tabs-with-data-toggle-cause-reload-in-angularjs" class="login-link">log in</a>
+
+                            <a href="http://stackoverflow.com/tour">tour</a>
+        <a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                            <li class="youarehere">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="js-gps-track" data-gps-track="top_nav.click({is_current:true, location:3, destination:1})">
+        Questions
+        </a>
+    </li>
+
+    <li>
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:6})">
+        Jobs
+        </a>
+    </li>
+                            <li>
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:7})">
+        Documentation
+        </a>
+    </li>
+                            <li>
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:2})">
+        Tags
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-users" href="http://stackoverflow.com/users" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:3})">
+        Users
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-badges" href="http://stackoverflow.com/help/badges" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:4})">
+        Badges
+        </a>
+    </li>
+
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+    <div id="herobox" class="alternate">
+        <div class="test"></div>
+            <div id="close">
+                <a title="click to minimize"><span>x</span> Dismiss</a>
+            </div>
+        <div class="content">
+            <b>Join the Stack Overflow Community</b>
+            <div class="separator"></div>
+            <div class="blurb">
+                Stack Overflow is a community of 6.3 million programmers, just like you, helping each other.
+                    <br>
+Join them; it only takes a minute:                    <br>
+            </div>
+            <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f19930383%2fbootstraps-tabs-with-data-toggle-cause-reload-in-angularjs" id="tell-me-more" class="button">Sign up</a>
+        </div>
+    </div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs" class="question-hyperlink">Bootstrap's tabs with data-toggle cause reload in angularjs</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="19930383" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk346322650",4).setZone(43); });
+            </script>
+                <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="19930383">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">40</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#">favorite</a>
+        <div class="favoritecount"><b>9</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I've just migrated to AngularJS 1.2. And I've realized that all my menu/navigation elements that were configured with data-toggle, for instance:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#additionalSelection"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="tag">&gt;</span><span class="pln">Additional Selection</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></code></pre>
+
+<p>are not working any more. They should toggle element with id="additionalSelection" - and this is how Angular &amp; Bootstrap worked when I was using version 1.0.8 of Angular.</p>
+
+<p>But now, when I click anchor element, Angular intercepts this click and tries to go to route <strong>additionalSelection</strong> and it causes page refresh...</p>
+
+<p>Is there a way to fix it?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/angularjs" class="post-tag js-gps-track" title="show questions tagged &#39;angularjs&#39;" rel="tag">angularjs</a> <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap" class="post-tag js-gps-track" title="show questions tagged &#39;twitter-bootstrap&#39;" rel="tag">twitter-bootstrap</a> <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap-3" class="post-tag js-gps-track" title="show questions tagged &#39;twitter-bootstrap-3&#39;" rel="tag">twitter-bootstrap-3</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/19930383" title="short permalink to this question" class="short-link" id="link-post-19930383">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/19930383/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/19930383/revisions" title="show all edits to this post">edited <span title="2013-11-13 06:37:27Z" class="relativetime">Nov 13 '13 at 6:37</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1016716/mr-lister"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/1c83d772b1c065603c7f20975d8d3552" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1016716/mr-lister">Mr Lister</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 25,441" dir="ltr">25.4k</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="54 silver badges"><span class="badge2"></span><span class="badgecount">54</span></span><span title="82 bronze badges"><span class="badge3"></span><span class="badgecount">82</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-11-12 13:23:25Z" class="relativetime">Nov 12 '13 at 13:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/113571/dragonfly"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/6acb720977e38bcb85f595a0b8fc2249" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/113571/dragonfly">dragonfly</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,426</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="71 silver badges"><span class="badge2"></span><span class="badgecount">71</span></span><span title="137 bronze badges"><span class="badge3"></span><span class="badgecount">137</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-19930383" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-29678576" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Could you provide a plunker?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1574004/hugo-der-hungrige" title="4,639 reputation" class="comment-user">hugo der hungrige</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment29678576_19930383"><span title="2013-11-12 23:05:20Z" class="relativetime-clean">Nov 12 '13 at 23:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-19930383" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								5 Answers
+                                <span style="display:none;" itemprop="answerCount">5</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="19947501"></a>
+<div id="answer-19947501" class="answer accepted-answer" data-answerid="19947501" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="19947501">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">121</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="The question owner accepted this as the best answer Nov 15 &#39;13 at 21:12.">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The solution is as simple as replacing <strong>href</strong> attribute with <strong>data-target</strong>. That solves the issue:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#additionalSelection"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="tag">&gt;</span><span class="pln">Additional Selection</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/19947501" title="short permalink to this answer" class="short-link" id="link-post-19947501">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/19947501/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/19947501/revisions" title="show all edits to this post">edited <span title="2013-12-27 12:59:03Z" class="relativetime">Dec 27 '13 at 12:59</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/913707/joragupra"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/be22e9b3d169e03ab7cc6cb9d8f9db2b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/913707/joragupra">joragupra</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">839</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature owner">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-11-13 07:07:28Z" class="relativetime">Nov 13 '13 at 7:07</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/113571/dragonfly"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/6acb720977e38bcb85f595a0b8fc2249" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/113571/dragonfly">dragonfly</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,426</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="71 silver badges"><span class="badge2"></span><span class="badgecount">71</span></span><span title="137 bronze badges"><span class="badge3"></span><span class="badgecount">137</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-19947501" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-44069203" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">omg, so wonderful answer, thanks a lot.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1539655/levi" title="9,552 reputation" class="comment-user">levi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment44069203_19947501"><span title="2015-01-08 01:40:39Z" class="relativetime-clean">Jan 8 '15 at 1:40</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-49432944" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">literally was stuck on this for the afternoon ( well, it was basically because i confused scrolling to mean selecting a tab lol and was unfruitfully looking at solutions using $anchorScroll :P ). This is perfect for BS3, i didn't want to pull in the angular-bootstrap-ui module just for this! Thank you</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1248009/a7omiton" title="730 reputation" class="comment-user">a7omiton</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment49432944_19947501"><span title="2015-06-06 19:19:53Z" class="relativetime-clean">Jun 6 '15 at 19:19</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-50361819" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I had the same problem. The solution worked. It stopped redirecting. But the list now doesnot expand or collpase. Can anyone help?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2609932/prabu" title="93 reputation" class="comment-user">Prabu</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment50361819_19947501"><span title="2015-07-02 07:03:31Z" class="relativetime-clean">Jul 2 '15 at 7:03</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-57111441" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The above solution (also exactly the same in <a href="http://getbootstrap.com/javascript/#collapse" rel="nofollow noreferrer">Bootstrap documentation</a>) only works when <i>not</i> using Angular, at least for certain versions. I am assuming this is why the Angular folks created this library <a href="https://angular-ui.github.io/bootstrap/" rel="nofollow noreferrer">Angular UI Bootstrap</a> as a workaround to these sorts of conflicts. Haven't investigated it fully to understand exactly the conflict, but <a href="https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together" rel="nofollow noreferrer">this article</a> sheds some light on possibly related conflicts due to jQuery.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/443633/michaelok" title="804 reputation" class="comment-user">michaelok</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment57111441_19947501"><span title="2016-01-08 17:28:42Z" class="relativetime-clean">Jan 8 at 17:28</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-57111504" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">In a nutshell, since I ran out of space in the above comment, here is a snippet from the article: "This is why we can’t just use Bootstrap JavaScript. It relies on jQuery and we don’t want jQuery rummaging around our Angular projects. If we try to bind variables to the components, it won’t work."</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/443633/michaelok" title="804 reputation" class="comment-user">michaelok</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment57111504_19947501"><span title="2016-01-08 17:30:14Z" class="relativetime-clean">Jan 8 at 17:30</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-19947501" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk371472264",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk371472264"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjI3NzY0LCJkaSI6ImRhMWM3NTZjYzYxZTRkYTQ4OTQ1NzNkMGQxM2Q0ZDZlIiwiZG0iOjEsImZjIjoxOTI0NDQzLCJmbCI6MjE0MjMxMiwiaXAiOiIxMDMuMTUuMTUyLjE3NCIsImt3IjoiYW5ndWxhcmpzLHR3aXR0ZXItYm9vdHN0cmFwLHR3aXR0ZXItYm9vdHN0cmFwLTMiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYXUvIiwic3QiOjgyNzcsInVrIjoidWUxLTE2N2NmNzA2NzRhYzRhMmQ4YmEyOWJlMjI5ZTY5M2IxIiwiem4iOjQ0LCJ0cyI6MTQ3OTExMjAwMjgwMiwiYmYiOnRydWUsInBuIjoiYWR6ZXJrMzcxNDcyMjY0IiwidXIiOiJodHRwOi8vc3RhY2tvdmVyZmxvdy5jb20vam9icz91dG1fc291cmNlPXdlYnNpdGUmdXRtX21lZGl1bT1iYW5uZXImdXRtX2NvbnRlbnQ9bGVhZGVyYm9hcmRfMiZ1dG1fY2FtcGFpZ249aG91c2VfYWRzX2hvdXNlX2Fkc19ST1NfU08ifQ&amp;s=ucmOUhsaJNpmAo4nEQu6tU0RiC4" rel="nofollow" target="_blank" title=""><img src="http://static.adzerk.net/Advertisers/c6eb02709d7d40c48ae0ff1632e88956.png" title="" alt="" border="0" width="728" height="90" style="display: none !important;"></a><img height="0px" width="0px" border="0" style="position: absolute; display: none !important;" src="http://engine.adzerk.net/i.gif?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjI3NzY0LCJkaSI6ImRhMWM3NTZjYzYxZTRkYTQ4OTQ1NzNkMGQxM2Q0ZDZlIiwiZG0iOjEsImZjIjoxOTI0NDQzLCJmbCI6MjE0MjMxMiwiaXAiOiIxMDMuMTUuMTUyLjE3NCIsImt3IjoiYW5ndWxhcmpzLHR3aXR0ZXItYm9vdHN0cmFwLHR3aXR0ZXItYm9vdHN0cmFwLTMiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYXUvIiwic3QiOjgyNzcsInVrIjoidWUxLTE2N2NmNzA2NzRhYzRhMmQ4YmEyOWJlMjI5ZTY5M2IxIiwiem4iOjQ0LCJ0cyI6MTQ3OTExMjAwMjgwNCwiYmYiOnRydWUsInBuIjoiYWR6ZXJrMzcxNDcyMjY0IiwiZnEiOjB9&amp;s=y_nPfHGrINuaOflwqrFDLC7ybNc"></div>
+  
+<a name="29084873"></a>
+<div id="answer-29084873" class="answer" data-answerid="29084873" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="29084873">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>As <code>dragonfly</code> pointed out, <code>data-target</code> works fine instead of <code>href</code>.</p>
+
+<p>There is a small difference in CSS. When <strong>data-target</strong> is used vs <strong>href</strong>, the cursor is not a <strong>pointer</strong> anymore. If you don't want to add extra CSS, you can do the following:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#additionalSelection"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Selection</span><span class="tag">&lt;/a&gt;</span></code></pre>
+
+<blockquote>
+  <p>This is just a suggestion, not an elegant solution. But if you want to use href for some reason, add <code>onclick="return false;"</code> </p>
+</blockquote>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/29084873" title="short permalink to this answer" class="short-link" id="link-post-29084873">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/29084873/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/29084873/revisions" title="show all edits to this post">edited <span title="2016-05-09 22:39:23Z" class="relativetime">May 9 at 22:39</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-03-16 18:59:58Z" class="relativetime">Mar 16 '15 at 18:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1471089/brian"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/jUiX1.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1471089/brian">Brian</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,670</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-29084873" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-29084873" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="35688658"></a>
+<div id="answer-35688658" class="answer" data-answerid="35688658" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="35688658">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Simply replace <code>href</code> attribute from <code>data-target</code></p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#switchTabs"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="tag">&gt;</span><span class="pln">Tabs</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/35688658" title="short permalink to this answer" class="short-link" id="link-post-35688658">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/35688658/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/35688658/revisions" title="show all edits to this post">edited <span title="2016-02-28 21:46:36Z" class="relativetime">Feb 28 at 21:46</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1743880/tunaki"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/wcXBB.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1743880/tunaki">Tunaki</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 59,121" dir="ltr">59.1k</span><span title="18 gold badges"><span class="badge1"></span><span class="badgecount">18</span></span><span title="91 silver badges"><span class="badge2"></span><span class="badgecount">91</span></span><span title="125 bronze badges"><span class="badge3"></span><span class="badgecount">125</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-02-28 21:44:02Z" class="relativetime">Feb 28 at 21:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3987786/rana"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/FLV7Z.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3987786/rana">Rana</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">489</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-35688658" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-35688658" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="34670515"></a>
+<div id="answer-34670515" class="answer" data-answerid="34670515" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="34670515">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The solution preserving the cursor (while still relying on data-target instead of href to navigate) is: </p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#additionalSelection"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="tag">&gt;</span><span class="pln">Additional Selection</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></code></pre>
+
+<p>the addition of href causes the cursor to switch to the hand, but leaving it blank as "" doesn't cause any page reloads. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/34670515" title="short permalink to this answer" class="short-link" id="link-post-34670515">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/34670515/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-01-08 06:06:40Z" class="relativetime">Jan 8 at 6:06</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/5245453/rebecca"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/nNssM.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/5245453/rebecca">Rebecca</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">475</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-34670515" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-34670515" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="32233327"></a>
+<div id="answer-32233327" class="answer" data-answerid="32233327" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="32233327">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can preserve the cursor by leaving the href tag intact, like so:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#additionalSelection"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"tab"</span><span class="tag">&gt;</span><span class="pln">Additional Selection</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/32233327" title="short permalink to this answer" class="short-link" id="link-post-32233327">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/32233327/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-08-26 17:47:17Z" class="relativetime">Aug 26 '15 at 17:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2578739/mister-wonderful"><div class="gravatar-wrapper-32"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/03c812d2c3f8dd11b96334c4f3293e88" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2578739/mister-wonderful">Mister Wonderful</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-32233327" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-54791043" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Are you sure the href="#" will not still re-route the page in angular?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3700836/david-anderton" title="974 reputation" class="comment-user">David Anderton</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment54791043_32233327"><span title="2015-11-03 16:13:03Z" class="relativetime-clean">Nov 3 '15 at 16:13</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-55882696" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This does not work and causes a reload.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1793/martin-klinke" title="5,205 reputation" class="comment-user">Martin Klinke</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#comment55882696_32233327"><span title="2015-12-03 11:28:18Z" class="relativetime-clean">Dec 3 '15 at 11:28</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-32233327" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				    <div class="question-status">
+        <h2>                    <b>protected</b> by <a href="http://stackoverflow.com/users/2435473/pankaj-parkar">Pankaj Parkar</a> <span dir="ltr"><span title="2015-12-22 07:27:56Z" class="relativetime">Dec 22 '15 at 7:27</span></span>
+</h2>
+        <p>
+Thank you for your interest in this question. 
+Because it has attracted low-quality or spam answers that had to be removed, posting an answer now requires 10 <a href="http://stackoverflow.com/help/whats-reputation">reputation</a> on this site (the <a href="http://stackoverflow.com/help/privileges/new-user">association bonus does not count</a>).
+<br><br>
+Would you like to answer one of these <a href="http://stackoverflow.com/unanswered?fromProtectedNotice=true">unanswered questions</a> instead?
+</p>
+    </div>
+
+
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/angularjs" class="post-tag" title="show questions tagged &#39;angularjs&#39;" rel="tag">angularjs</a> <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap" class="post-tag" title="show questions tagged &#39;twitter-bootstrap&#39;" rel="tag">twitter-bootstrap</a> <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap-3" class="post-tag" title="show questions tagged &#39;twitter-bootstrap-3&#39;" rel="tag">twitter-bootstrap-3</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-11-12 13:23:25Z"><b>3 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>22759 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/19930383/bootstraps-tabs-with-data-toggle-cause-reload-in-angularjs?lastactivity" class="lastactivity-link" title="2016-05-09 22:39:23Z">6 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Upcoming Events
+                </div>
+                <hr>
+    <div class="spacer bulletin-item-important">
+        
+    <div class="bulletin-item-type"><a href="http://stackoverflow.com/election?cb=1" class="question-hyperlink"><div class="favicon favicon-stackoverflow" title="Stack Overflow"></div></a></div>
+    <div class="bulletin-item-content">
+        <a href="http://stackoverflow.com/election?cb=1" class="question-hyperlink">2016 Community Moderator Election</a>
+        <div>ends <span title="2016-11-22 20:00:00Z" class="relativetime">in 8 days</span></div>
+    </div>
+    <br class="cbt">
+</div>
+    </div>
+</div>			
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk2123724447",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk2123724447"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjM4OTk4LCJkaSI6ImM4MDJmN2IyNDE2NTRjMTM4ZWE3OTlmZTkwNzI0Zjg2IiwiZG0iOjEsImZjIjoxOTQzNDU1LCJmbCI6MjE0MjMxMiwiaXAiOiIxMDMuMTUuMTUyLjE3NCIsImt3IjoiYW5ndWxhcmpzLHR3aXR0ZXItYm9vdHN0cmFwLHR3aXR0ZXItYm9vdHN0cmFwLTMiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYXUvIiwic3QiOjgyNzcsInVrIjoidWUxLTE2N2NmNzA2NzRhYzRhMmQ4YmEyOWJlMjI5ZTY5M2IxIiwiem4iOjQ1LCJ0cyI6MTQ3OTExMjAwMjgwNCwiYmYiOnRydWUsInBuIjoiYWR6ZXJrMjEyMzcyNDQ0NyIsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2pvYnM_dXRtX3NvdXJjZT13ZWJzaXRlJnV0bV9tZWRpdW09YmFubmVyJnV0bV9jb250ZW50PW1wdV85JnV0bV9jYW1wYWlnbj1ob3VzZV9hZHNfaG91c2VfYWRzX1JPU19TTyJ9&amp;s=UIcWEcK2y7FgCvlIiZlt2dpg-Sk" rel="nofollow" target="_blank" title=""><img src="http://static.adzerk.net/Advertisers/13952578e80b4eb7b3c7c369b5818a74.png" title="" alt="" border="0" width="300" height="250" style="display: none !important;"></a><img height="0px" width="0px" border="0" style="position: absolute; display: none !important;" src="http://engine.adzerk.net/i.gif?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjo0NzE0OTMsImNoIjoxMTc4LCJjayI6e30sImNyIjoxNjM4OTk4LCJkaSI6ImM4MDJmN2IyNDE2NTRjMTM4ZWE3OTlmZTkwNzI0Zjg2IiwiZG0iOjEsImZjIjoxOTQzNDU1LCJmbCI6MjE0MjMxMiwiaXAiOiIxMDMuMTUuMTUyLjE3NCIsImt3IjoiYW5ndWxhcmpzLHR3aXR0ZXItYm9vdHN0cmFwLHR3aXR0ZXItYm9vdHN0cmFwLTMiLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjE2MDQsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYXUvIiwic3QiOjgyNzcsInVrIjoidWUxLTE2N2NmNzA2NzRhYzRhMmQ4YmEyOWJlMjI5ZTY5M2IxIiwiem4iOjQ1LCJ0cyI6MTQ3OTExMjAwMjgwNSwiYmYiOnRydWUsInBuIjoiYWR6ZXJrMjEyMzcyNDQ0NyIsImZxIjowfQ&amp;s=5QmjEEOh-UOubYDeo8q0Qz95NLI"></div>
+            <div id="hireme" class=" orange looking tagged clc-jobs-multi"><a href="http://stackoverflow.com/jobs" target="_blank" data-at="0" data-tz="1" data-ti="0" class="top "><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="225209" href="http://stackoverflow.com/jobs/125209/senior-front-end-developer-xero" target="_blank" title="Senior Front End Developer at Xero. Click to learn more."><div class="title">Senior Front End Developer</div><div><span class="company">Xero</span><span class="location">Wellington, New Zealand</span></div><span class="post-tag">angularjs</span><span class="post-tag">javascript</span></a></div><a class="clc-dismiss clc-non-ad" data-clc-url="//clc.stackoverflow.com/dismiss-job" data-clcparam-cid="225209" data-clc-tooltip="dismiss this job"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" data-at="0" data-tz="3" data-ti="228831" href="http://stackoverflow.com/jobs/128831/ruby-on-rails-developer-toptal" target="_blank" title="Ruby on Rails Developer at Toptal. Click to learn more."><div class="title">Ruby on Rails Developer</div><div><span class="company">Toptal</span><span class="location">No office location</span></div><div class="opts"><span class="salary">$48,000 - $96,000</span><span class="opt remote">Remote</span></div><span class="post-tag highlight">ruby-on-rails</span><span class="post-tag">postgresql</span></a></div><a class="clc-dismiss clc-non-ad" data-clc-url="//clc.stackoverflow.com/dismiss-job" data-clcparam-cid="228831" data-clc-tooltip="dismiss this job"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul><div style="clear:both"></div></div><img class="impression" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/soi.gif" style="display:none;"></div>
+        <script>
+;(function(n){var u=Object.assign||function(n){for(var i,r,u,f,e=[],t=1;t<arguments.length;t++)e[t-1]=arguments[t];for(i=0,r=e;i<r.length;i++){u=r[i];for(f in u)n[f]=u[f]}return n},r,t,f,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(r=["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com","talent.stackoverflow.com"],r[0]!=="*"&&r.indexOf(location.hostname)===-1)return;t=window;f=t.clc_opts?u({},window.clc_opts):{};t.clc_opts=u(n,f);void 0;t.clc_opts.autoload&&(t.clc_init=t.clc_init||[],t.clc_init.push(function(){return t.clc.load()}));i=document.createElement("script");i.async=!0;void 0;i.src=t.clc_opts.lib;document.body.appendChild(i)}catch(e){void 0}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/p.js","lib":"//cdn.sstatic.net/clc/clc.min.js?v=0b93ded9c111"});        </script>
+            <script>
+window.clcfl_request = 'AQAAAAAPHTABAgAAAAIAAAABMQAAAHxhbmd1bGFyanN8dHdpdHRlci1ib290c3RyYXB8dHdpdHRlci1ib290c3RyYXAtM3wAmnrz-PK9YMX5CQ';
+                ;(function(n){var t,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;t=window;t.clcfl=t.clcfl||{};t.clcfl_request||void 0;t.clcfl.init=t.clcfl.init||[];t.clcfl.init.push(function(n){return n.load()});t.clcfl.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(r){}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/fl/markup-bg.js","lib":"//cdn.sstatic.net/clc/fl/clc.min.js?v=896d1e931c04"});
+            </script>
+			<div class="module" id="chat-feature">
+
+    <h4><a href="http://chat.stackoverflow.com/" id="h-chat-link" title="75 users active in 37 rooms the last 60 minutes">75 People Chatting</a></h4>
+    <div class="related" id="ad502-rooms"><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="JavaScript"><a href="http://chat.stackoverflow.com/rooms/17">JavaScript</a></span></h3><span title="2016-11-14 05:59:23Z" class="ad502-last-message">2 hours ago - <a href="http://chat.stackoverflow.com/users/5936814">Flying Gambit</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/5936814"><img height="23" width="23" title="Flying Gambit: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/de7946dfe3e77db49bd206c6eaeb5fab"></a><a href="http://chat.stackoverflow.com/users/1257988"><img height="23" width="23" title="harry: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/730f0aea1071e678bb818392b1a971be"></a><a href="http://chat.stackoverflow.com/users/5361523"><img height="23" width="23" title="qaispak: 5 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/4feUb.jpg"></a><a href="http://chat.stackoverflow.com/users/2753231"><img height="23" width="23" title="Jesse: 5 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/uCN4j.jpg"></a><a href="http://chat.stackoverflow.com/users/1514572"><img height="23" width="23" title="monners: 6 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/8e44332313cc7335e98748739977ea5d"></a><a href="http://chat.stackoverflow.com/users/3161092"><img height="23" width="23" title="towc: 8 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/oVs5E.png"></a><a href="http://chat.stackoverflow.com/users/1585400"><img height="23" width="23" title="Shmiddty: 8 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/F0ILs.jpg"></a></div></div><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="PHP"><a href="http://chat.stackoverflow.com/rooms/11">PHP</a></span></h3><span title="2016-11-14 06:09:53Z" class="ad502-last-message">2 hours ago - <a href="http://chat.stackoverflow.com/users/1658631">Joe Watkins</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/3150281"><img height="23" width="23" title="Stricted: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/400c132c55744a6f0e9c543ca3de9efb"></a><a href="http://chat.stackoverflow.com/users/3605516"><img height="23" width="23" title="Linus: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/CTHNp.jpg"></a><a href="http://chat.stackoverflow.com/users/704302"><img height="23" width="23" title="Exception: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/lbEeP.jpg"></a><a href="http://chat.stackoverflow.com/users/1658631"><img height="23" width="23" title="Joe Watkins: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/T17OR.jpg"></a><a href="http://chat.stackoverflow.com/users/5701450"><img height="23" width="23" title="Barney Stinson: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/photo.jpg"></a><a href="http://chat.stackoverflow.com/users/4025891"><img height="23" width="23" title="Manh Nguyen: 2 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/O7i6G.jpg"></a><a href="http://chat.stackoverflow.com/users/3936743"><img height="23" width="23" title="Rocky Prajapati: 3 hours ago" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/wwcGF.jpg"></a></div></div></div>
+    <script>
+    // <!--
+        StackExchange.ready(
+        function () {
+            var options = {
+                chatUrl: 'http://chat.stackoverflow.com',
+                reloadUrl: '/api/recent-chat',
+                preloadData: {"activeUsers":75,"activeRooms":37,"rooms":[{"name":"JavaScript","id":17,"lastPost":1479103163,"posts":3682948,"users":[{"name":"Flying Gambit","id":5936814,"emailhash":"de7946dfe3e77db49bd206c6eaeb5fab","lastPost":1479103163},{"name":"harry","id":1257988,"emailhash":"730f0aea1071e678bb818392b1a971be","lastPost":1479101629},{"name":"qaispak","id":5361523,"emailhash":"!https://i.stack.imgur.com/4feUb.jpg?s=128\u0026g=1","lastPost":1479093665},{"name":"Jesse","id":2753231,"emailhash":"!https://i.stack.imgur.com/uCN4j.jpg?s=128\u0026g=1","lastPost":1479093022},{"name":"monners","id":1514572,"emailhash":"8e44332313cc7335e98748739977ea5d","lastPost":1479089858},{"name":"towc","id":3161092,"emailhash":"!https://i.stack.imgur.com/oVs5E.png?s=128\u0026g=1","lastPost":1479080430},{"name":"Shmiddty","id":1585400,"emailhash":"!https://i.stack.imgur.com/F0ILs.jpg?s=128\u0026g=1","lastPost":1479080404}],"messages":[{"date":1479103163,"user":"Flying Gambit","userid":5936814}],"singleImage":false,"tags":["ecmascript","ecmascript-6","javascript","nodejs"]},{"name":"PHP","id":11,"lastPost":1479103793,"posts":2548975,"users":[{"name":"Stricted","id":3150281,"emailhash":"400c132c55744a6f0e9c543ca3de9efb","lastPost":1479103639},{"name":"Linus","id":3605516,"emailhash":"!https://i.stack.imgur.com/CTHNp.jpg?s=128\u0026g=1","lastPost":1479103615},{"name":"Exception","id":704302,"emailhash":"!https://i.stack.imgur.com/lbEeP.jpg?s=128\u0026g=1","lastPost":1479103566},{"name":"Joe Watkins","id":1658631,"emailhash":"!https://i.stack.imgur.com/T17OR.jpg?s=128\u0026g=1","lastPost":1479103518},{"name":"Barney Stinson","id":5701450,"emailhash":"!https://lh5.googleusercontent.com/-jWYEADh5ZSw/AAAAAAAAAAI/AAAAAAAAAk8/qpDeJ5qwDaY/photo.jpg?sz=128","lastPost":1479103479},{"name":"Manh Nguyen","id":4025891,"emailhash":"!https://i.stack.imgur.com/O7i6G.jpg?s=128\u0026g=1","lastPost":1479103473},{"name":"Rocky Prajapati","id":3936743,"emailhash":"!https://i.stack.imgur.com/wwcGF.jpg?s=128\u0026g=1","lastPost":1479098463}],"messages":[{"date":1479103793,"user":"Joe Watkins","userid":1658631}],"singleImage":false,"tags":["php"]}]} 
+            };
+
+            StackExchange.chatAd.init(options);
+        });
+    // -->
+    </script>
+
+</div>
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/21436237?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">32</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/21436237/using-bootstrap-collapse-with-angularjs?noredirect=1&amp;lq=1" class="question-hyperlink">Using bootstrap collapse with angularjs</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/9682092?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1425</div></a><a href="http://stackoverflow.com/questions/9682092/how-does-data-binding-work-in-angularjs?rq=1" class="question-hyperlink">How does data binding work in AngularJS?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/12319758?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">155</div></a><a href="http://stackoverflow.com/questions/12319758/angularjs-clicking-a-button-within-a-form-causes-page-refresh?rq=1" class="question-hyperlink">AngularJS, clicking a button within a form causes page refresh</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/19586421?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">5</div></a><a href="http://stackoverflow.com/questions/19586421/angularjs-bootstrap-remember-active-tab?rq=1" class="question-hyperlink">AngularJS + Bootstrap remember active tab</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/28420332?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/28420332/toggling-a-twitter-bootstrap-3-x-modal-using-angularjs?rq=1" class="question-hyperlink">Toggling a Twitter Bootstrap (3.x) Modal using AngularJS</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/30386052?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/30386052/toggle-hide-bootstrap-navbar-collapse-on-view-change-with-angularjs?rq=1" class="question-hyperlink">Toggle/Hide Bootstrap Navbar Collapse on View Change with AngularJS</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/31150807?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/31150807/autocomplete-tab-complete-email-input-using-angularjs-and-bootstrap?rq=1" class="question-hyperlink">Autocomplete, tab-complete email input using AngularJS and Bootstrap</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/31402719?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/31402719/combining-data-toggle-tab-and-data-toggle-dropdown-in-bootstrap?rq=1" class="question-hyperlink">Combining data-toggle=“tab” and data-toggle=“dropdown” in bootstrap</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/35996128?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/35996128/angularjs-sidebar-link-to-stay-active-when-clicked?rq=1" class="question-hyperlink">AngularJS sidebar link to stay active when clicked</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/35999357?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/35999357/highlight-current-tab-on-sidebar-using-angularjs?rq=1" class="question-hyperlink">Highlight current tab on sidebar using AngularJS</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/39560223?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/39560223/save-list-condition-on-data-refresh-angularjs?rq=1" class="question-hyperlink">Save list condition on data refresh AngularJS</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/82553/what-proof-of-accommodation-is-suitable-for-a-uk-visa-application" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What proof of accommodation is suitable for a UK visa application?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/33172/why-would-this-a-10-thunderbolt-be-deployed-over-rural-new-hampshire" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why would this A-10 Thunderbolt be deployed over rural New Hampshire?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-cooking" title="Seasoned Advice"></div><a href="http://cooking.stackexchange.com/questions/75467/defrosting-individual-frozen-fish-fillets-in-their-plastic-packets-or-not" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:49 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Defrosting individual frozen fish fillets---- in their plastic packets, or not?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/357460/mimsy-were-the-borogoves-why-is-mimsy-an-adjective" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Mimsy were the Borogoves - why is "mimsy" an adjective?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/814715/is-there-a-standard-dns-record-to-indicate-the-imap-server-for-a-domain" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a standard DNS record to indicate the IMAP server for a domain?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/338961/arrows-for-morphisms-of-exact-sequences" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Arrows for morphisms of exact sequences
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2012630/an-infinite-chain-of-theories" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    An infinite chain of theories
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-networkengineering" title="Network Engineering Stack Exchange"></div><a href="http://networkengineering.stackexchange.com/questions/36517/isnt-5ghz-band-affected-with-channel-overlapping" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:496 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Isn't 5Ghz band affected with channel overlapping?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-esperanto" title="Esperanto Language Stack Exchange"></div><a href="http://esperanto.stackexchange.com/questions/2114/is-ni-povas-fari-%c4%9din-a-good-translation-of-we-can-do-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:662 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Ni povas fari ĝin! a good translation of "We can do it"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/40581507/why-is-this-an-invalid-assignment-left-hand-side" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is this an invalid assignment left hand side?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/60939/dealing-with-dragonslayers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Dealing With Dragonslayers
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/98968/go-out-and-vote" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    GO OUT AND VOTE
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/109247/i-want-to-know-the-what-part-of-speech-is-this-the-word-fit-in-this-sentence" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I want to know the what part of speech is this, the word 'fit' in this sentence
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/79458/how-do-i-deal-with-my-current-employer-not-respecting-my-decision-to-leave" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I deal with my current employer not respecting my decision to leave?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-arduino" title="Arduino Stack Exchange"></div><a href="http://arduino.stackexchange.com/questions/31191/is-there-a-non-float-alternative-to-pow" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:540 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a non-float alternative to pow()?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1145464/is-there-a-special-name-for-keyboards-that-only-have-a-few-keys" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a special name for keyboards that only have a few keys?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/82508/hotels-on-the-las-vegas-strip-is-there-a-commitment-to-gamble" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Hotels on the Las Vegas strip: is there a commitment to gamble?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/63109/has-a-movie-ever-referred-to-a-later-movie" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Has a movie ever referred to a later movie?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/79693/should-i-have-doubts-if-the-organizers-of-a-workshop-ask-me-to-sign-a-behavior-a" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I have doubts if the organizers of a workshop ask me to sign a behavior agreement upfront?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/99026/build-me-a-brick-wall" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Build me a brick wall!
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/142237/how-to-prove-that-authentication-system-works-and-that-the-customer-is-using-th" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to prove that authentication system works, and that the customer is using the wrong password?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-law" title="Law Stack Exchange"></div><a href="http://law.stackexchange.com/questions/15190/what-power-do-i-have-as-a-driver-if-my-interstate-route-is-blocked-by-a-protest" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:617 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What power do I have as a driver if my interstate route is blocked by a protest?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/358166/what-is-a-positive-descriptor-for-someone-that-doesnt-care-about-anything-is-al" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is a positive descriptor for someone that doesn't care about anything/is always neutral?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/79836/is-it-crazy-to-leave-a-tenured-position-for-a-non-tenured-but-tenure-tracked-job" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it crazy to leave a tenured position for a non-tenured but tenure-tracked job?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/19930383" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/19930383/ivc/4a1b');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/19930383/ivc/4a1b" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/clc.min.js.download"></script><script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/clc.min.js(1).download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="4">
+                Technology
+            </th>
+            <th colspan="2">
+                Life / Arts
+            </th>
+            <th colspan="2">
+                Culture / Recreation
+            </th>
+            <th colspan="2">
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://talent.stackoverflow.com/">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.11.11.4187
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('angularjs,twitter-bootstrap,twitter-bootstrap-3');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', 'UA-5620270-1');
+            ga('set', 'dimension2', '|angularjs|twitter-bootstrap|twitter-bootstrap-3|');             ga('send', 'pageview');
+        
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<script async="" src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/p.js.download"></script><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/impression.gif" class="impression" style="display: none;"><img src="./Bootstrap&#39;s tabs with data-toggle cause reload in angularjs - Stack Overflow_files/to.gif" style="display: none;"></body></html>

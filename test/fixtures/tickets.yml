@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumer_id: 
+  bid_id: 
+  merchandise_id: 
+  win: false
+  value: 1
+
+two:
+  consumer_id: 
+  bid_id: 
+  merchandise_id: 
+  win: false
+  value: 1

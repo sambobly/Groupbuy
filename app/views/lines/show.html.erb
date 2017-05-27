@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @line.invoice %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @line.item %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @line.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @line.quantity %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @line.tax %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @line.discount %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @line.total %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @line.product %>
+</p>
+
+<%= link_to 'Edit', edit_line_path(@line) %> |
+<%= link_to 'Back', lines_path %>

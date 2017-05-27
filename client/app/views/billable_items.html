@@ -1,100 +1,266 @@
+<!--<script type="text/ng-template" id="/views/acute.select.htm">-->
+    <!--Content of the template.-->
+<!--</script>-->
+<div><ac-select ac-model="data.selectedShape" ac-options="for shape in shapes"></ac-select>
+     </div>
+<!--<ac-select ac-model="data.selectedShape" ac-options="for shape in shapes"></ac-select>-->
 
+<div>
 
-<!-- widget thover -->
-<div class="widget bg-steel" id="widget-thover">
+    <input type="text" ng-model="search">
+    <select ng-model="selected_billableItem" ng-options="billable_item.name for billable_item in billable_items | filter:search">
+        <option value="">Choose an item</option>
+        <input type="text" ng-model="search">
+
+    </select>
+</div>
+    <div class="widget border-cyan" id="widget-datatables1">
     <!-- widget header -->
-    <div class="widget-header">
+    <div class="widget-header bg-cyan">
         <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
         <!-- widget title -->
-        <h4 class="widget-title">Concession List</h4>
+        <h4 class="widget-title">Billable Items</h4>
         <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
-
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
     </div><!-- /widget header -->
 
     <!-- widget content -->
     <div class="widget-content">
-        <table class="table table-hover">
+        <table id="datatables1" class="table table-striped table-hover">
             <thead>
+            <input type="search" ng-model="search" placeholder="Search...">
             <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Price</th>
-                <th>Tax</th>
-                <th>Total</th>
-
-
-
+                <td>
+                    <a href ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                            Name
+                        <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href ng-click="sortType = 'type'; sortReverse = !sortReverse">
+                        Type
+                        <span ng-show="sortType == 'type' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'type' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href ng-click="sortType = 'price'; sortReverse = !sortReverse">
+                        Price
+                        <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </td>
             </tr>
             </thead>
-            <tbody  data-ng-repeat="billable_item in billable_items" ng-click="update('sm', billable_item)">
+            <tbody  data-ng-repeat="billable_item in billable_items | orderBy:sortType:sortReverse | filter:search" ng-click="update('m', billable_item)">
             <tr>
                 <td>{{billable_item.name}}</td>
                 <td>{{billable_item.type}}</td>
                 <td>{{billable_item.price}}</td>
-                <td>{{billable_item.tax}}</td>
-                <td>{{billable_item.total}}</td>
 
 
             </tr>
-            </tbody>
+            </tbody><!-- source with ajax -->
         </table>
+
     </div><!-- /widget content -->
-</div> <!-- /widget thover -->
+</div> <!-- /widget datatables #1 -->
+<div class="alert alert-success" ng-show="isPopupVisible5">
+    <button class="close" data-dismiss="alert" type="button">×</button>
+    <strong>Billable item created</strong>
+
+</div>
+
+<table st-table="rowCollection" class="table table-striped">
+    <thead>
+    <tr>
+        <th st-sort="firstName">first name</th>
+        <th st-sort="lastName">last name</th>
+        <th st-sort="birthDate">birth date</th>
+        <th st-sort="balance" st-skip-natural="true" >balance</th>
+        <th>email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in rowCollection">
+        <td>{{row.firstName | uppercase}}</td>
+        <td>{{row.lastName}}</td>
+        <td>{{row.birthDate | date}}</td>
+        <td>{{row.balance | currency}}</td>
+        <td><a ng-href="mailto:{{row.email}}">email</a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="widget border-cyan" id="widget-datatables1">
+    <!-- widget header -->
+    <div class="widget-header bg-cyan">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Billable Items</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
+    </div><!-- /widget header -->
+
+<table st-table="displayedCollection" st-safe-src="billable_items" class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th st-sort="name">Name</th>
+        <th st-sort="type">Type</th>
+        <th st-sort="price">Price</th>
+    </tr>
+    <tr>
+        <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="billable_item in displayedCollection">
+        <td>{{billable_item.name}}</td>
+        <td>{{billable_item.type}}</td>
+        <td>{{billable_item.price}}</td>
+    </tr>
+    </tbody>
+</table>
+    </div>
+<!--&lt;!&ndash; widget thover &ndash;&gt;-->
+<!--<div class="widget bg-steel" id="widget-thover">-->
+    <!--&lt;!&ndash; widget header &ndash;&gt;-->
+    <!--<div class="widget-header">-->
+        <!--&lt;!&ndash; widget icon &ndash;&gt;-->
+        <!--&lt;!&ndash; widget title &ndash;&gt;-->
+        <!--<h4 class="widget-title">Concession List</h4>-->
+        <!--&lt;!&ndash; widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! &ndash;&gt;-->
+
+    <!--</div>&lt;!&ndash; /widget header &ndash;&gt;-->
+
+    <!--&lt;!&ndash; widget content &ndash;&gt;-->
+    <!--<div class="widget-content">-->
+        <!--<table class="table table-hover">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>Name</th>-->
+                <!--<th>Type</th>-->
+                <!--<th>Price</th>-->
+                <!--<th>Tax</th>-->
+                <!--<th>Total</th>-->
+
+
+
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody  data-ng-repeat="billable_item in billable_items" ng-click="update('sm', billable_item)">-->
+            <!--<tr>-->
+                <!--<td>{{billable_item.name}}</td>-->
+                <!--<td>{{billable_item.type}}</td>-->
+                <!--<td>{{billable_item.price}}</td>-->
+                <!--<td>{{billable_item.tax}}</td>-->
+                <!--<td>{{billable_item.total}}</td>-->
+
+
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>&lt;!&ndash; /widget content &ndash;&gt;-->
+<!--</div> &lt;!&ndash; /widget thover &ndash;&gt;-->
 <button class="btn btn-primary" ng-click="create('sm')">Create</button>
 
 
 <script type="text/ng-template" id="createModal.html">
     <div class="modal-header">
-        <h3 class="modal-title">Create a concession type!</h3>
+        <h3 class="modal-title">Create a Billable Item</h3>
     </div>
     <div class="modal-body">
         <form>
             <fieldset>
-                <label><strong>Create new concession type!</strong></label>
-                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40">
-                <label><strong>Concession name</strong></label>
-                <input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40">
-                <label><strong>Type</strong></label>
-                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40">
+                <label><strong>Item</strong></label>
+                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40" required>
+                <!--<label><strong>Type</strong></label>-->
+                <!--<input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40" required>-->
                 <label><strong>Price</strong></label>
-                <input class="span3" id="formData.billable_itemTax" ng-model="billable_item.tax" placeholder="Tax" type="integer" maxlength="40">
-                <label><strong>Tax</strong></label>
-                <input class="span3" id="formData.billable_itemTotal" ng-model="billable_item.total" placeholder="Total" type="decimal" maxlength="40">
-                <label><strong>Total</strong></label>
+                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40" required>
+                <div class="alert" ng-show="isPopupVisible6">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="createBillable_item()">Yes</button>
+                    <button class="btn btn-primary" ng-click="ok()">No</button>
+
+
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button" ng-click="close()">×</button>
+                    <strong>Billable item created</strong>
+
+                </div>
                 <button class="btn btn-primary" ng-click="createBillable_item()">Create</button>
             </fieldset>
         </form>
         <div class="modal-footer">
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-success" ng-click="ok()">Ok</button>
+
+            <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
         </div>
     </div>
 </script>
 <script type="text/ng-template" id="updateModal.html">
     <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
+        <h3 class="modal-title">Update/Delete selected billable item</h3>
     </div>
     <div class="modal-body">
         <form>
             <fieldset>
-                <label><strong>Create new concession type!</strong></label>
-                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40">
-                <label><strong>Concession name</strong></label>
-                <input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40">
-                <label><strong>Type</strong></label>
-                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40">
+                <label><strong>Item</strong></label>
+                <input class="span3" id="formData.billable_itemName" ng-model="billable_item.name" placeholder="Name" type="text" maxlength="40" required>
+                <!--<label><strong>Type</strong></label>-->
+                <!--<input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40" required>-->
                 <label><strong>Price</strong></label>
-                <input class="span3" id="formData.billable_itemTax" ng-model="billable_item.tax" placeholder="Tax" type="integer" maxlength="40">
-                <label><strong>Tax</strong></label>
-                <input class="span3" id="formData.billable_itemTotal" ng-model="billable_item.total" placeholder="Total" type="decimal" maxlength="40">
-                <label><strong>Total</strong></label>
-                <button class="btn btn-primary" ng-click="updateBillable_item()">Update</button>
-                <button class="btn btn-primary" ng-click="destroyBillable_item()">Delete</button>
+                <input class="span3" id="formData.billable_itemPrice" ng-model="billable_item.price" placeholder="Price" type="decimal" maxlength="40" required>
+
+
+                <div class="alert" ng-show="isPopupVisible">
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="updateBillable_item()">Yes</button>
+                    <button class="btn btn-primary" ng-click="ok()">No</button>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible2">
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="destroyBillable_item()">Yes</button>
+                    <button class="btn btn-primary" ng-click="ok()">No</button>
+
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible3">
+                    <button class="close" data-dismiss="alert" type="button" ng-click="reload() ">×</button>
+                    <strong>Billable item updated</strong>
+
+                </div>
+
+                <div class="alert alert-success" ng-show="isPopupVisible4">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Billable item deleted</strong>
+
+                </div>
+    </div>
+                <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+                <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
 
             </fieldset>
         </form>
         <div class="modal-footer">
             <button class="btn btn-primary" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
         </div>
     </div>
 </script>

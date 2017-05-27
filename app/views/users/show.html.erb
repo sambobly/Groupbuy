@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
-
+   Why isn't name displayed?
 <p>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <%= link_to "View your Profile", current_user %>
+
+      <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+
+      <% end %>
   <strong>Name:</strong>
-  <%= @user.name %>
+  <%= @users %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+

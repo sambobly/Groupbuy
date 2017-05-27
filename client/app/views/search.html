@@ -1,0 +1,48 @@
+
+<form class="form-inline well" ng-submit="$event.preventDefault()" layout="column" >
+    <div class="form-group">
+        <md-content searchBar layout-padding class="autocomplete" layout="column">
+            <!--<md-chips ng-model="selectedEggs" md-autocomplete-snap md-require-match>-->
+            <md-chips ng-model="selectedMerchandises">
+
+                <md-autocomplete searchBar
+                                 id='Auto'
+                                 md-min-length="3"
+                                 ng-enter="presEnter();"
+                                 md-selected-item="selectedItem"
+                                 md-search-text="searchText"
+                                 md-items="item in querySearch(searchText)"
+                                 md-item-text="item.title"
+                                 md-search-text-change="searchTextChange(searchText)"
+                                 md-selected-item-change="selectedItemChange(selectedItem)"
+                                 placeholder="Search for an egg"
+                        >
+                    <span md-highlight-text="searchText">{{item.title}}</span>
+                </md-autocomplete>
+                                    <span>
+                                    <strong>{{item.title}}</strong>
+                                        <!--<em>({{$chip.type}})</em>-->
+                                    </span>
+                </md-chip-template>
+            </md-chips>
+            <br/>
+            <select ng-model="selectedCategory" ng-options="category.name for category in categories">
+                <option value="">All categories</option>
+
+            </select>
+            <div class="aa-price-block">
+                <input type="text" min="0" ng-model="filter.minValue" placeholder="$" currency/>
+                <input type="text" min="0" ng-model="filter.maxValue" placeholder="$" currency/>
+                <button ng-click="testPriceFilter(filter)">Test price filter</button>
+            </div>
+        </md-content>
+
+    </div>
+
+
+    <div>
+        <!--<button type="submit" ng-click="searchFilter(testText, testSelect, selectedCategory)" class="btn bg-emerald submit">Filter</button>-->
+    </div>
+    <button  ng-click="searchFilter(testText, testSelect, selectedCategory, filter)">Filter</button>
+
+</form>

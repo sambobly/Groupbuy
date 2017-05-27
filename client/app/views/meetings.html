@@ -1,0 +1,166 @@
+
+<div class="widget border-cyan" id="widget-datatables1">
+    <!-- widget header -->
+    <div class="widget-header bg-cyan">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Meetings</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table id="datatables1" class="table table-striped table-hover">
+            <thead>
+            <input type="search" ng-model="search" placeholder="Search...">
+
+            <tr>
+                <th>Doctor</th>
+                <th>Patient</th>
+                <th>Appointment</th>
+                <th>Note</th>
+                <th>Date</th>
+                <th>Time</th>
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="meeting in meetings | filter:search" ng-click="update('sm', meeting)">
+            <tr>
+
+                <td>{{meeting.doctorId}}</td>
+
+
+                <td>{{meeting.patientId}}</td>
+                <td>{{meeting.appointmentId}}</td>
+                <td>{{meeting.content}}</td>
+                <td>{{meeting.date}}</td>
+                <td>{{meeting.time}}</td>
+
+
+            </tr>
+            </tbody><!-- source with ajax -->
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget datatables #1 -->
+
+
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+
+<script type="text/ng-template" id="createModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create new business contact!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Doctor</strong></label>
+                <input class="span3"  ng-model="meeting.doctor_id" placeholder="Doctor" type="integer" maxlength="40" required>
+                <label><strong>Patient</strong></label>
+                <input class="span3"  ng-model="meeting.patient_id" placeholder="Patient" type="integer" maxlength="40" required>
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" ng-model="meeting.appointment_id" placeholder="Appointment" type="integer" maxlength="40" required>
+                <label><strong>State</strong></label>
+
+                <input class="span3" ng-model="meeting.content" placeholder="Content" type="text" maxlength="40" required>
+                <label><strong>Post code</strong></label>
+
+                <input class="span3" ng-model="meeting.date" placeholder="Date" type="date" maxlength="40" required>
+                <label><strong>Country</strong></label>
+
+                <input class="span3" ng-model="meeting.time" placeholder="Time" type="time" maxlength="40" required>
+                <label><strong>Registration </strong></label>
+
+                <button class="btn btn-primary" ng-click="createMeeting()">Create</button>
+                <div class="alert alert-success" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Business created</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Update/delete contact</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Doctor</strong></label>
+                <input class="span3"  ng-model="meeting.doctorId" placeholder="Doctor" type="integer" maxlength="40" required>
+                <label><strong>Patient</strong></label>
+                <input class="span3"  ng-model="meeting.patientId" placeholder="Patient" type="integer" maxlength="40" required>
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" ng-model="meeting.appointmentId" placeholder="Appointment" type="integer" maxlength="40" required>
+                <label><strong>State</strong></label>
+
+                <input class="span3" ng-model="meeting.content" placeholder="Content" type="text" maxlength="40" required>
+                <label><strong>Post code</strong></label>
+
+                <input class="span3" ng-model="meeting.date" placeholder="Date" type="date" maxlength="40" required>
+                <label><strong>Country</strong></label>
+
+                <input class="span3" ng-model="meeting.time" placeholder="Time" type="time" maxlength="40" required>
+                <label><strong>Registration </strong></label>
+
+                <div class="alert" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="updateMeeting()">Yes</button>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible2">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="destroyMeeting1()">Yes</button>
+
+                </div>
+
+                <div class="alert alert-success" ng-show="isPopupVisible3">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Business created</strong>
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible4">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Success!</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
+                <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+                <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
+
+            </fieldset>        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+
+
+

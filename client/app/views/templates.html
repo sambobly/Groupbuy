@@ -2,11 +2,8 @@
             <!-- content title-->
 
             <!-- content breadcrumb -->
-            <ul class="breadcrumb breadcrumb-inline">
-                <li><a href="#">Home</a> <span class="divider"><i class="aweso-angle-right"></i></span></li>
-                <li class="active">Wysiwyg</li>
-            </ul>
-        </header> <!--/ content header -->
+
+        <!--/ content header -->
 
 
         <!-- content page -->
@@ -17,41 +14,42 @@
 
 
                 <div class="container" style="margin-top: 40px">
-                    <h1 class="text-center">Create new post</h1>
+                    <h1 class="text-center">Create New Letter Template</h1>
                     <form>
-                        <fieldset>
-                            <label><strong>Template Name</strong></label>
-                            <input class="span12" id="formData.templateName" ng-model="template.name" placeholder="Template Name" type="text" maxlength="250" ensure-unique="templateName">
-                            <label><strong>Last Name</strong></label>
-                            <input class="span12" id="formData.templateContent" ng-model="template.content" placeholder="Content" type="text" maxlength="250">
-                            <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
-                            <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear template</button>
-                            <button class="btn btn-danger pull-right" ng-click="destroyTemplate()">Delete template</button>
 
-                        </fieldset>
                     </form>
                 </div><!-- /widget content -->
             </div> <!-- /widget ckeditor -->
-            <button class="btn btn-default" ng-click="open()">Open me!</button>
-            <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
-            <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+            <button class="btn btn-default" ng-click="open('m')">Saved letter templates</button>
             <div ng-show="selected">Selection from a modal: {{ selected.name }}
                 </div>
             <script type="text/ng-template" id="templatesModal.html">
                 <div class="modal-header">
                     <h3 class="modal-title">I'm a modal!</h3>
                 </div>
-                <div class="modal-body">
+                <div class="widget bg-steel" id="widget-thover">
+                    <div class="widget-content">
+                        <table class="table table-hover">
+                            <thead>
+                            <input type="search" ng-model="search" placeholder="Search...">
 
-                        <ul ng-repeat="template in templates">
-                            <li>{{template.id}}</li>
-                            <li>{{template.name}}</li>
-                            <a ng-click="selected.template = template">{{ template }}</a>
+                            <tr>
+                                <th>Template Name</th>
 
-                        </ul>
-                        Selected: <b>{{ selected.template }}</b>
 
-                    </div>
+
+                            </tr>
+                            </thead>
+                            <tbody  data-ng-repeat="template in templates | filter:search"  ng-click="selected.template = template">
+                            <tr>
+                                <td>{{template.name}}</td>
+
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /widget content -->
+                </div> <!-- /widget thover -->
                 </div>
 
                 <div class="modal-footer">
@@ -72,52 +70,52 @@
             <button class="btn btn-primary" ng-click="createTemplate()">Compose</button>
                 <button class="btn btn-primary" ng-click="updateTemplate()">Update</button>
 
-                <button class="btn btn-danger pull-right" ng-click="clearTemplate()">Clear post</button>
-                <button class="btn btn-danger pull-right" ng-click="destroyTemplate()">Delete template</button>
+                <button class="btn btn-danger" ng-click="destroyTemplate()">Delete template</button>
 
+                <button class="btn btn-primary" ng-click="createConsult()">Create Consult</button>
             </fieldset>
-                Name:
-                <input type="text" ng-model="user.name" name="uName" required="" />
-                <br />
-                <div ng-show="form.$submitted || form.uName.$touched">
-                    <div ng-show="form.uName.$error.required">Tell us your name.</div>
-                </div>
+                <!--Name:-->
+                <!--<input type="text" ng-model="user.name" name="uName" required="" />-->
+                <!--<br />-->
+                <!--<div ng-show="form.$submitted || form.uName.$touched">-->
+                    <!--<div ng-show="form.uName.$error.required">Tell us your name.</div>-->
+                <!--</div>-->
 
-                E-mail:
-                <input type="email" ng-model="user.email" name="uEmail" required="" />
-                <br />
-                <div ng-show="form.$submitted || form.uEmail.$touched">
-                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
-                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
-                </div>
+                <!--E-mail:-->
+                <!--<input type="email" ng-model="user.email" name="uEmail" required="" />-->
+                <!--<br />-->
+                <!--<div ng-show="form.$submitted || form.uEmail.$touched">-->
+                    <!--<span ng-show="form.uEmail.$error.required">Tell us your email.</span>-->
+                    <!--<span ng-show="form.uEmail.$error.email">This is not a valid email.</span>-->
+                <!--</div>-->
 
-                Gender:
-                <input type="radio" ng-model="user.gender" value="male" />male
-                <input type="radio" ng-model="user.gender" value="female" />female
-                <br />
-                <input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
+                <!--Gender:-->
+                <!--<input type="radio" ng-model="user.gender" value="male" />male-->
+                <!--<input type="radio" ng-model="user.gender" value="female" />female-->
+                <!--<br />-->
+                <!--<input type="checkbox" ng-model="user.agree" name="userAgree" required="" />-->
 
-                I agree:
-                <input ng-show="user.agree" type="text" ng-model="user.agreeSign" required="" />
-                <br />
-                <div ng-show="form.$submitted || form.userAgree.$touched">
-                    <div ng-show="!user.agree || !user.agreeSign">Please agree and sign.</div>
-                </div>
+                <!--I agree:-->
+                <!--<input ng-show="user.agree" type="text" ng-model="user.agreeSign" required="" />-->
+                <!--<br />-->
+                <!--<div ng-show="form.$submitted || form.userAgree.$touched">-->
+                    <!--<div ng-show="!user.agree || !user.agreeSign">Please agree and sign.</div>-->
+                <!--</div>-->
 
-                <input type="button" ng-click="reset(form)" value="Reset" />
-                <input type="submit" ng-click="update(user)" value="Save" />
-            </form>
-            <form>
-                Username:
-                <input type="text" ng-model="form.templateName" name="templateName"
-                       required
-                       unique-templateName />
-            </form>
+                <!--<input type="button" ng-click="reset(form)" value="Reset" />-->
+                <!--<input type="submit" ng-click="update(user)" value="Save" />-->
+            <!--</form>-->
+            <!--<form>-->
+                <!--Username:-->
+                <!--<input type="text" ng-model="form.templateName" name="templateName"-->
+                       <!--required-->
+                       <!--unique-templateName />-->
+            <!--</form>-->
 
-            <ng-messages for="form.templateName.$error" ng-if="form.templateName.$dirty">
-                <ng-message when="unique" class="error">This is taken</ng-message>
-                <ng-message when="required" class="error">This is required</ng-message>
-            </ng-messages>
+            <!--<ng-messages for="form.templateName.$error" ng-if="form.templateName.$dirty">-->
+                <!--<ng-message when="unique" class="error">This is taken</ng-message>-->
+                <!--<ng-message when="required" class="error">This is required</ng-message>-->
+            <!--</ng-messages>-->
             </div><!-- /content-inner-->
     </div><!-- /main-page-->
 

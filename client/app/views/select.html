@@ -1,0 +1,450 @@
+<div id="isPopup3Visible">
+
+<button ng-click="assessRoute()">Get route params</button>
+
+<!-- wpf loader Two -->
+<!--<div id="wpf-loader-two">-->
+<!--<div class="wpf-loader-two-inner">-->
+<!--<span>Loading</span>-->
+<!--</div>-->
+<!--</div>-->
+<!-- / wpf loader Two -->
+<!-- SCROLL TOP BUTTON -->
+<a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+<!-- END SCROLL TOP BUTTON -->
+
+<!--<div ng-model="flavor">{{ flavor }}</div>-->
+<!--<div>-->
+    <!--<button class="btn btn-primary" ng-click="testGet(flavor)">Get merchandise</button>-->
+<!--</div>-->
+
+<!--<div>-->
+    <!--<button class="btn btn-primary" ng-click="setRun(flavor)">Set and run</button>-->
+<!--</div>-->
+<!-- / menu -->
+<!-- catg header banner section -->
+<div class="imageHeader">
+    <section id="aa-catg-head-banner">
+        <img src="images/fashion-header-bg-8.jpg" alt="fashion img">
+        <div class="aa-catg-head-banner-area">
+            <div class="container">
+                <div class="aa-catg-head-banner-content">
+                    <h2>{{merchandise.title}}</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--<div>{{ flavor }}</div>-->
+<!-- / catg header banner section -->
+
+<!-- product category -->
+<section id="aa-product-details">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="aa-product-details-area ">
+<div class="aa-product-details-content white">
+    <div class="row white">
+        <!-- Modal view slider -->
+        <div class="col-md-5 col-sm-5 col-xs-12 white">
+            <div class="aa-product-view-slider white">
+                <div id="demo-1" class="simpleLens-gallery-container white">
+                    <div class="simpleLens-container-sticks">
+                        <div class="simpleLens-big-image-container white"><a data-lens-image="images/polo-shirt-1.png" class="simpleLens-lens-image"><img src="images/polo-shirt-1.png" class="simpleLens-big-image"></a></div>
+                    </div>
+                    <div class="simpleLens-thumbnails-container white">
+                        <a data-big-image="img/view-slider/medium/polo-shirt-1.png" data-lens-image="img/view-slider/large/polo-shirt-1.png" class="simpleLens-thumbnail-wrapper" href="#">
+                            <img src="images/man-small-1.jpg">
+                        </a>
+                        <a data-big-image="img/view-slider/medium/polo-shirt-3.png" data-lens-image="img/view-slider/large/polo-shirt-3.png" class="simpleLens-thumbnail-wrapper" href="#">
+                            <img src="images/man-small-1.jpg">
+                        </a>
+                        <a data-big-image="img/view-slider/medium/polo-shirt-4.png" data-lens-image="img/view-slider/large/polo-shirt-4.png" class="simpleLens-thumbnail-wrapper" href="#">
+                            <img src="images/man-small-1.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal view content -->
+        <div class="col-md-7 col-sm-7 col-xs-12">
+            <div class="aa-product-view-content">
+                <h3>{{merchandise.title}}</h3>
+                <div class="aa-price-block">
+                    <span class="aa-product-view-price">Total required  {{merchandise.value | currency}}</span>
+                </div>
+                <div class="aa-price-block">
+                    <span class="aa-product-view-price">Total bid       {{payments_total() | currency}}</span>
+
+                </div>
+                <div class="aa-price-block">
+                    <span class="aa-product-view-price redstyle">Total remaining {{value_remaining() | currency}}</span>
+
+                </div>
+                <p>Description: {{merchandise.description}}</p>
+
+                <div class="aa-prod-quantity">
+
+                    <p class="aa-category">
+                        Category: <a href="#">{{merchandise.categoryId}}</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="aa-prod-view-bottom">
+    <a class="aa-add-to-cart-btn" ng-click="bidOpen()">Place a bid!</a>
+
+</div>
+<div class="aa-prod-view-bottom">
+    <a class="aa-add-to-cart-btn" ng-click="updateMerchandise()">Update Merchandise</a>
+
+</div>
+<div class="aa-prod-view-bottom">
+    <a class="aa-add-to-cart-btn" ng-click="addToWishlist()">Add To Wishlist</a>
+
+</div>
+
+<div>
+    <button class="btn btn-primary" ng-click="back()">Keep searching?</button>
+</div>
+<button class="btn btn-primary" ng-click="ticketCreate(merchandise)">Ticket 1</button>
+<button class="btn btn-primary" ng-click="ticketSimulate(merchandise)">Ticket 2</button>
+<button class="btn btn-primary" ng-click="ticketSimulate2(merchandise)">Ticket 3</button>
+<button class="btn btn-primary" ng-click="ticketSimulate1(merchandise)">Ticket 4</button>
+<button class="btn btn-primary" ng-click="ticketSimulate3(merchandise)">Ticket 5</button>
+
+<div class="col-md-4" ng-show="isPopUp4Visible">
+    <div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Place a bid!</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center col-md-offset-3">
+                <form class="form-horizontal" method="post" action="#">
+
+                    <div class="form-group">
+                        <label for="ID" class="cols-sm-2 control-label">Consumer Id (note will get rid of with login)</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="number" ng-model="new.bidConsumerId" placeholder="ID" required class="required input-xlarge" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="Value" class="cols-sm-2 control-label">Amount</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="decimal" ng-model="new.bidValue" placeholder="Amount to bid?" required class="required input-xlarge" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment" class="cols-sm-2 control-label">Submit a comment!</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="text" ng-model="new.bidComment" placeholder="Description required" class = "input-xlarge" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <button type="button" ng-click="createBid()" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <!--** OLD WIDGET FOR CREATING BID**-->
+    <!--<div class="widget border-cyan" id="widget-wizard1">-->
+    <!--&lt;!&ndash; widget header &ndash;&gt;-->
+    <!--<div class="widget-header bg-cyan">-->
+    <!--&lt;!&ndash; widget icon &ndash;&gt;-->
+    <!--<div class="widget-icon"><i class="aweso-edit"></i></div>-->
+    <!--&lt;!&ndash; widget title &ndash;&gt;-->
+    <!--<h4 class="widget-title">Make a bid!</h4>-->
+
+    <!--</div>&lt;!&ndash; /widget header &ndash;&gt;-->
+
+    <!--&lt;!&ndash; widget content &ndash;&gt;-->
+    <!--<div class="widget-content" id="wizard1">-->
+    <!--<form class="form-horizontal" name="wizard-1" id="wrapped1">-->
+    <!--<fieldset>-->
+    <!--<div class="progress hide" style="margin-bottom: 20px;">-->
+    <!--<div class="bar bg-mauve" style="width: 0%;"></div>-->
+    <!--</div>-->
+
+    <!--<div class="step">-->
+    <!--<div class="control-group">-->
+    <!--<label class="control-label">ID</label>-->
+    <!--<div class="controls">-->
+    <!--<input type="number" ng-model="new.bidConsumerId" placeholder="ID" required class="required input-xlarge" />-->
+    <!--</div>-->
+    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+    <!--<div class="control-group">-->
+    <!--<label class="control-label">Merchandise</label>-->
+    <!--<div class="controls">-->
+    <!--<input type="number" ng-model="bid.merchandiseId" placeholder="ID" required class="required input-xlarge" />-->
+    <!--</div>-->
+    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+    <!--<div class="control-group">-->
+    <!--<label class="control-label">Value</label>-->
+    <!--<div class="controls">-->
+    <!--<input type="decimal" ng-model="new.bidValue" placeholder="Title" required class="required input-xlarge" />-->
+    <!--</div>-->
+    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+    <!--<div class="control-group">-->
+    <!--<label class="control-label">Description</label>-->
+    <!--<div class="controls">-->
+    <!--<input type="text" ng-model="new.bidComment" placeholder="Description required class="required input-xlarge" />-->
+    <!--</div>-->
+    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div class="control-group">&ndash;&gt;-->
+    <!--&lt;!&ndash;<label class="control-label">Start</label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="controls">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div><input class="datepicker" data-ng-model="merchandise.start" >&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&lt;!&ndash; /control-group &ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="control-group">&ndash;&gt;-->
+    <!--&lt;!&ndash;<label class="control-label">End</label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="controls">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div><input class="datepicker" data-ng-model="merchandise.end" >&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&lt;!&ndash; /control-group &ndash;&gt;&ndash;&gt;-->
+
+
+    <!--</div>&lt;!&ndash; /step &ndash;&gt;-->
+
+
+
+
+
+    <!--<div class="navigation form-actions bg-silver">-->
+    <!--<button type="submit" ng-click="createBid()" class="btn bg-emerald submit">Submit</button>-->
+    <!--</div>&lt;!&ndash; /navigation &ndash;&gt;-->
+    <!--</fieldset>-->
+    <!--</form>-->
+    <!--</div>&lt;!&ndash; /widget content &ndash;&gt;-->
+
+    <!--</div> &lt;!&ndash; /widget basic wizard &ndash;&gt;-->
+
+</div>
+
+
+<div class="col-md-12 product-info">
+
+    <div id="myTabContent" class="tab-content">
+        <!--<div class="tab-pane fade in active" id="description">-->
+
+        <!--<section class="container product-info">-->
+        <!--{{merchandise.description}}-->
+        <!--</section>-->
+
+        <!--</div>-->
+        <h3 data-toggle="collapse" ng-click="isCollapsed = !isCollapsed" data-button class="pointer">Comments<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': !isCollapsed , 'glyphicon-chevron-right': isCollapsed }"></i></h3>
+
+        <div class="tab-pane fade in active comments" id="comments" ng-if="reset" collapse="isCollapsed">
+
+        <section class="container product-info comments">
+                <div ng-repeat="bid in merchandise.bids"> Bid Value {{bid.value | currency}} Bid Comment {{bid.comment}}
+                    <ul class="media-list">
+                        <li class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
+                            </a>
+                            <div class="media-body">
+                                <div class="well well-lg">
+                                    <h4 class="media-heading text-uppercase reviews">REPLACE WITH NAME {{bid.consumerId}} </h4>
+                                    <h4 class>Bid {{bid.value | currency}}</h4>
+
+                                    <p class="media-comment">
+                                        {{bid.comment}}.
+                                    </p>
+                                    <ul class="media-date text-uppercase reviews list-inline">
+
+                                        <li class="date">{{bid.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</li>
+
+                                    </ul>
+                                    <!--<a class="btn btn-info btn-circle text-uppercase" data-toggle="replyOne"><span class="glyphicon glyphicon-share-alt"></span> Reply</a>-->
+                                    <!--<a class="btn btn-warning btn-circle text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> 2 comments</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+        <!--<div class="tab-pane fade" id="service-three">-->
+
+        <!--</div>-->
+    </div>
+    <hr>
+</div>
+
+
+<!-- Related product -->
+<div class="aa-product-related-item">
+    <h3>Related Products</h3>
+    <ul class="aa-product-catg aa-related-item-slider">
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a ng-click="view(merchandise)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-sale" href="#">SALE!</span>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
+                    <span class="aa-product-price">$45.50</span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+            </figure>
+            <figcaption>
+                <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
+                <span class="aa-product-price">$45.50</span>
+            </figcaption>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-hot" href="#">HOT!</span>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-hot" href="#">HOT!</span>
+        </li>
+        <!-- start single product item -->
+        <li>
+            <figure>
+                <a class="aa-product-img" href="#"><img src="images/polo-shirt-1.png" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                <figcaption>
+                    <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
+                    <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                </figcaption>
+            </figure>
+            <div class="aa-product-hvr-content">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a>
+                <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+            </div>
+            <!-- product badge -->
+            <span class="aa-badge aa-sale" href="#">SALE!</span>
+        </li>
+    </ul>
+
+    <!-- quick view modal -->
+

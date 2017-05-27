@@ -1,0 +1,47 @@
+TEST
+<div class="widget border-cyan" id="widget-wizard1">
+    <!-- widget header -->
+    <div class="widget-header bg-cyan">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-edit"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Make a category</h4>
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content" id="wizard1">
+        <form class="form-horizontal" name="wizard-1" id="wrapped1">
+            <fieldset>
+                <div class="progress hide" style="margin-bottom: 20px;">
+                    <div class="bar bg-mauve" style="width: 0%;"></div>
+                </div>
+
+                <div class="step">
+                    <div class="control-group">
+                        <label class="control-label">ID</label>
+                        <div class="controls">
+                            <input type="text" ng-model="category.name" placeholder="Name" required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label">Merchandise</label>
+                        <div class="controls">
+                            <input type="text" ng-model="category.description" placeholder="Description" required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+
+                </div><!-- /step -->
+
+
+
+
+
+                <div class="navigation form-actions bg-silver">
+                    <button type="submit" ng-click="createCategory()" class="btn bg-emerald submit">Submit</button>
+                </div><!-- /navigation -->
+            </fieldset>
+        </form>
+    </div><!-- /widget content -->
+    <div ng-repeat="category in categories" ng-click="open(category)">CATEGORY {{category.id}}</div>
+</div> <!-- /widget basic wizard -->

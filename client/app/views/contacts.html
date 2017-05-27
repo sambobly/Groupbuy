@@ -1,20 +1,25 @@
-
-
-<!-- widget thover -->
-<div class="widget bg-steel" id="widget-thover">
+<div class="widget border-cyan" id="widget-datatables1">
     <!-- widget header -->
-    <div class="widget-header">
+    <div class="widget-header bg-cyan">
         <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
         <!-- widget title -->
-        <h4 class="widget-title">Products List</h4>
+        <h4 class="widget-title">Billable Items</h4>
         <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
-
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
     </div><!-- /widget header -->
 
     <!-- widget content -->
     <div class="widget-content">
-        <table class="table table-hover">
+        <table id="datatables1" class="table table-striped table-hover">
             <thead>
+
+            <input type="search" ng-model="search" placeholder="Search...">
+
             <tr>
                 <th>Firstname</th>
                 <th>Last Name</th>
@@ -22,16 +27,16 @@
                 <th>Occupation</th>
                 <th>Company</th>
                 <th>Email</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Post code</th>
+                <!--<th>Address</th>-->
+                <!--<th>City</th>-->
+                <!--<th>State</th>-->
+                <!--<th>Post code</th>-->
                 <th>Note</th>
 
 
             </tr>
             </thead>
-            <tbody  data-ng-repeat="contact in contacts" ng-click="update('sm', contact)">
+            <tbody  data-ng-repeat="contact in contacts | filter:search" ng-click="update('sm', contact)">
             <tr>
                 <td>{{contact.firstname}}</td>
                 <td>{{contact.lastname}}</td>
@@ -39,57 +44,140 @@
                 <td>{{contact.occupation}}</td>
                 <td>{{contact.company}}</td>
                 <td>{{contact.email}}</td>
-                <td>{{contact.address}}</td>
-                <td>{{contact.city}}</td>
-                <td>{{contact.state}}</td>
-                <td>{{contact.postcode}}</td>
+                <!--<td>{{contact.address}}</td>-->
+                <!--<td>{{contact.city}}</td>-->
+                <!--<td>{{contact.state}}</td>-->
+                <!--<td>{{contact.postcode}}</td>-->
                 <td>{{contact.note}}</td>
 
 
             </tr>
-            </tbody>
+            </tbody><!-- source with ajax -->
         </table>
     </div><!-- /widget content -->
-</div> <!-- /widget thover -->
+</div> <!-- /widget datatables #1 -->
+
+
 <button class="btn btn-primary" ng-click="create('sm')">Create</button>
 
 
 <script type="text/ng-template" id="createModal.html">
     <div class="modal-header">
-        <h3 class="modal-title">Create new Contact!</h3>
+        <h3 class="modal-title">Create Contact</h3>
     </div>
     <div class="modal-body">
         <form>
             <fieldset>
-                <label><strong>First Name</strong></label>
-                <input class="span3" id="formData.contactFirstName" ng-model="contact.firstname" placeholder="Vendor" type="text" maxlength="40">
-                <label><strong>Last Name</strong></label>
-                <input class="span3" id="formData.contactLastName" ng-model="contact.lastname" placeholder="category" type="text" maxlength="40">
-                <label><strong>Phone number</strong></label>
+                <label class="control-label" for="inputSelect">Title</label>
+                <div class="controls">
+                    <select id="inputSelect" ng-model="contact.title" required>
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                        <option>Ms</option>
+                        <option>Master</option>
+                        <option>Dr</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">First Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.firstname" placeholder="First Name" type="text" ng-required="true" required>
+                        <!--<div class="error-message" ng-show="formData.contactFirstName.$error.required">First Name is required.</div>-->
+                        <!--<div class="error-message" ng-show="formData.contactFirstName.$error.contactFirstName">First name must contain only letters and numbers.</div>-->
 
-                <input class="span3" id="formData.contactPhone" ng-model="contact.phone" placeholder="category" type="text" maxlength="40">
-                <label><strong>Occupation</strong></label>
+                    </div>
 
-                <input class="span3" id="formData.contactOccupation" ng-model="contact.occupation" placeholder="category" type="text" maxlength="40">
-                <label><strong>Company</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactCompany" ng-model="contact.company" placeholder="category" type="text" maxlength="40">
-                <label><strong>Email</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Last Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.lastname" placeholder="Last Name" type="text" required >
+                    </div>
 
-                <input class="span3" id="formData.contactEmail" ng-model="contact.email" placeholder="category" type="text" maxlength="40">
-                <label><strong>Address</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactAddress" ng-model="contact.address" placeholder="category" type="text" maxlength="40">
-                <label><strong>State</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Phone Number</label>
+                    <div class="controls">
+                        <input type="integer" class="input-medium"  ng-model="contact.phone" placeholder="Phone number" type="integer " required >
+                    </div>
 
-                <input class="span3" id="formData.contactState" ng-model="contact.state" placeholder="category" type="text" maxlength="40">
-                <label><strong>Post Code</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="category" type="text" maxlength="40">
-                <label><strong>Note</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Occupation</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.occupation" placeholder="Occupation" type="text"  >
+                    </div>
 
-                <input class="span3" id="formData.contactNote" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+                </div>
 
+                <div class="control-group">
+                    <label class="control-label">Company</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="formData.contactCompany" ng-model="contact.company" placeholder="Company" type="text"  >
+                    </div>
+
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="formData.contactEmail">Email</label>
+                    <div class="controls">
+                        <input type="email" class="input-medium" id="formData.contactEmail" ng-model="contact.email" placeholder="Email" type="email"  >
+                    </div>
+
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Address</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="formData.contactAddress" ng-model="contact.address" placeholder="Address" type="text"  >
+                    </div>
+
+                </div>
+
+
+
+
+                <label class="control-label" for="inputSelect">State</label>
+                <div class="controls">
+                    <select id="inputSelect" ng-model="contact.state">
+                        <option>NSW</option>
+                        <option>QLD</option>
+                        <option>VIC</option>
+                        <option>WA</option>
+                        <option>SA</option>
+                        <option>TAS</option>
+                        <option>ACT</option>
+                        <option>NT</option>
+
+
+
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Postcode</label>
+                    <div class="controls">
+                        <input type="integer" class="input-medium" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="Post code" type="integer "  >
+                    </div>
+
+                </div>
+
+
+                <input class="span3" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+
+                <div class="alert alert-success" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Business created</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
                 <button class="btn btn-primary" ng-click="createContact ()">Create</button>
             </fieldset>
         </form>
@@ -100,43 +188,142 @@
 </script>
 <script type="text/ng-template" id="updateModal.html">
     <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
+        <h3 class="modal-title">Update contact</h3>
     </div>
     <div class="modal-body">
         <form>
             <fieldset>
-                <label><strong>First Name</strong></label>
-                <input class="span3" id="formData.contactFirstName" ng-model="contact.firstname" placeholder="Vendor" type="text" maxlength="40">
-                <label><strong>Last Name</strong></label>
-                <input class="span3" id="formData.contactLastName" ng-model="contact.lastname" placeholder="category" type="text" maxlength="40">
-                <label><strong>Phone number</strong></label>
+                <label class="control-label" for="inputSelect">Title</label>
+                <div class="controls">
+                    <select id="inputSelect" ng-model="contact.title" required>
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                        <option>Ms</option>
+                        <option>Master</option>
+                        <option>Dr</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">First Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.firstname" placeholder="First Name" type="text" ng-required="true" required>
+                        <!--<div class="error-message" ng-show="formData.contactFirstName.$error.required">First Name is required.</div>-->
+                        <!--<div class="error-message" ng-show="formData.contactFirstName.$error.contactFirstName">First name must contain only letters and numbers.</div>-->
 
-                <input class="span3" id="formData.contactPhone" ng-model="contact.phone" placeholder="category" type="text" maxlength="40">
-                <label><strong>Occupation</strong></label>
+                    </div>
 
-                <input class="span3" id="formData.contactOccupation" ng-model="contact.occupation" placeholder="category" type="text" maxlength="40">
-                <label><strong>Company</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactCompany" ng-model="contact.company" placeholder="category" type="text" maxlength="40">
-                <label><strong>Email</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Last Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.lastname" placeholder="Last Name" type="text" required >
+                    </div>
 
-                <input class="span3" id="formData.contactEmail" ng-model="contact.email" placeholder="category" type="text" maxlength="40">
-                <label><strong>Address</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactAddress" ng-model="contact.address" placeholder="category" type="text" maxlength="40">
-                <label><strong>State</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Phone Number</label>
+                    <div class="controls">
+                        <input type="integer" class="input-medium"  ng-model="contact.phone" placeholder="Phone number" type="integer " required >
+                    </div>
 
-                <input class="span3" id="formData.contactState" ng-model="contact.state" placeholder="category" type="text" maxlength="40">
-                <label><strong>Post Code</strong></label>
+                </div>
 
-                <input class="span3" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="category" type="text" maxlength="40">
-                <label><strong>Note</strong></label>
+                <div class="control-group">
+                    <label class="control-label">Occupation</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" ng-model="contact.occupation" placeholder="Occupation" type="text"  >
+                    </div>
 
-                <input class="span3" id="formData.contactNote" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+                </div>
 
-                <button class="btn btn-primary" ng-click="updateContact()">Update</button>
-                <button class="btn btn-primary" ng-click="destroyContact()">Delete</button>
+                <div class="control-group">
+                    <label class="control-label">Company</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="formData.contactCompany" ng-model="contact.company" placeholder="Company" type="text"  >
+                    </div>
 
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="formData.contactEmail">Email</label>
+                    <div class="controls">
+                        <input type="email" class="input-medium" id="formData.contactEmail" ng-model="contact.email" placeholder="Email" type="email"  >
+                    </div>
+
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Address</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="formData.contactAddress" ng-model="contact.address" placeholder="Address" type="text"  >
+                    </div>
+
+                </div>
+
+
+
+
+                <label class="control-label" for="inputSelect">State</label>
+                <div class="controls">
+                    <select id="inputSelect" ng-model="contact.state">
+                        <option>NSW</option>
+                        <option>QLD</option>
+                        <option>VIC</option>
+                        <option>WA</option>
+                        <option>SA</option>
+                        <option>TAS</option>
+                        <option>ACT</option>
+                        <option>NT</option>
+
+
+
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Postcode</label>
+                    <div class="controls">
+                        <input type="integer" class="input-medium" id="formData.contactPostcode" ng-model="contact.postcode" placeholder="Post code" type="integer "  >
+                    </div>
+
+                </div>
+
+
+                <input class="span3" ng-model="contact.note" placeholder="category" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+                <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
+                <div class="alert" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="updateContact()">Yes</button>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible2">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="destroyContact()">Yes</button>
+
+                </div>
+
+                <div class="alert alert-success" ng-show="isPopupVisible3">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Contact created</strong>
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible4">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Success!</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
             </fieldset>
         </form>
         <div class="modal-footer">

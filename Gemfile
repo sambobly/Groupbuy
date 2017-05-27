@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '4.1.8'
 
 # Use mysql as the database for Active Record
 group :test, :production do
@@ -9,9 +9,13 @@ group :test, :production do
   gem 'rails_12factor'
 end
 group :development do
+  #gem 'mysql2'
+  #gem 'mysql2', '0.3.18'
   gem 'mysql2', '0.3.16'
+#  NOTE NEED TO CHANGE BACK TO '0.3.16' FOR 1.9.3 RUBY
 end
 # Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -37,7 +41,7 @@ gem 'ransack'
 #gem 'puma', '= 2.8.2'
 gem 'rack-cors', :require => 'rack/cors'
 gem "koala", '~> 2.0'
-
+gem "json"
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   # gem 'sdoc', require: false
@@ -45,14 +49,17 @@ group :doc do
 end
 
 group :development do
-  gem 'debugger'
 
+  gem 'debugger'
+  # USE gem 'debugger' for RUBY 1.9.3
   gem 'ffaker' # Gem for generating fake data, see lib/tasks/populate
   gem 'awesome_print'
 end
 
 group :test do
-  gem 'debugger'
+  #gem 'debugger'
+  # USE gem 'debugger' for RUBY 1.9.3
+
 end
 
 gem 'appointments', "~> 1.3.3" # THEO: Do we need this Gem?
@@ -63,13 +70,16 @@ gem 'protected_attributes'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'tzinfo-data'
-gem 'devise'
+gem 'devise', '~> 3.5.10'
 gem 'angular_rails_csrf'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem "bower-rails", "~> 0.9.1"
 gem 'rangy-rails'
-
+gem 'omniauth'
+gem  'unf_ext', '~> 0.0.7.2'
+gem 'rest-client', '~> 1.8.0'
+gem 'stripe', '~> 1.53.0'
 #gem "paperclip", "~> 5.0.0"
 # Use unicorn as the app server
 # gem 'unicorn'

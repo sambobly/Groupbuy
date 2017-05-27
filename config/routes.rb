@@ -1,4 +1,6 @@
 Optho::Application.routes.draw do
+  resources :charges
+
   resources :wishes
 
   resources :categories
@@ -7,7 +9,7 @@ Optho::Application.routes.draw do
 
   resources :bids
 
-  resources :merchandises
+  resources :merchandises, defaults: { format: 'json' }
 
   resources :consumers
 
@@ -418,17 +420,27 @@ end
   end
 
   
-  scope '/api' do
+  scope '/api'do
     #get "/acute.select" => "#index"
-
     devise_for :users, skip: [:sessions]
     as :user do
       get 'users/sign_in', to: 'users/sessions#new', as: :new_user_session
+      #post 'users/sign_in', to: 'users/sessions#create', as: :user_session
+      #post 'users/sign_in', to: 'users#show', as: :user_session
       post 'users/sign_in', to: 'users/sessions#create', as: :user_session
-      #post 'users/sign_in', to: 'devise/sessions#create', as: :user_session
-      get  'users/test', to: 'users#test', as: :user_test
-      delete 'users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+      #get  'users/test', to: 'users#index', as: :user_test
+      get  'sessions/test', to: 'devise/sessions#test', as: :user_test
+      get 'users/sessions/show_current_user', to: 'users/sessions#show_current_user', as: :user_get
+      delete 'users/sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
 
+    end
+    resources :charges do
+      collection do
+        post 'create'
+      end
+      member do
+        post 'create'
+      end
     end
     resources :users do
         collection do
@@ -452,6 +464,27 @@ end
           get 'show'
           post 'test'
         end
+        resources :consumers do
+          collection do
+            get 'find'
+            get 'index'
+            post 'index'
+            post 'create'
+            post 'destroy'
+            post 'edit'
+            get 'update'
+            get 'show'
+          end
+          member do
+            post 'destroy'
+            post 'update'
+            get 'edit'
+            patch 'edit'
+            patch 'update'
+            post 'edit'
+            get 'show'
+          end
+          end
     end
     controller :sessions do
       get 'new'
@@ -466,6 +499,27 @@ end
     get 'sessions/create'
     get 'sessions/destroy'
     resources :products do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+      end
+    end
+    resources :merchandises, defaults: { format: 'json' } do
       collection do
         get 'find'
         get 'index'
@@ -1403,6 +1457,29 @@ end
         post 'test'
       end
     end
+    resources :emails do
+      collection do
+        get 'find'
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'destroy'
+        post 'edit'
+        get 'update'
+        get 'show'
+        post 'test'
+      end
+      member do
+        post 'destroy'
+        post 'update'
+        get 'edit'
+        patch 'edit'
+        patch 'update'
+        post 'edit'
+        get 'show'
+        post 'test'
+      end
+    end
     resources :recipients do
       collection do
         get 'find'
@@ -1714,8 +1791,10 @@ resources :doctors do
   # = Routing for the API (used by Angular) =
   # =========================================
 
-  namespace :api, defaults: {format: :json} do
-  resources :consultations, only: [:index]
+  namespace :api, defaults: { format: 'json' } do
+    get "/merchandises/.id(.:format)" => 'merchandises#index'
+    get "/merchandises/.id" => 'merchandises#index'
+    resources :consultations, only: [:index]
   resources :consult_templates, only:[:index, :create, :update, :destroy]
   resources :consults, only:[:index, :create, :update, :destroy]
   resources :consulttemplates, only:[:index, :create, :update, :destroy]
@@ -1734,7 +1813,10 @@ resources :doctors do
     resources :wishes, only:[:index, :create, :update, :destroy]
 
   end
-  resources :users, only:[:index, :create, :update, :destroy]
+  resources :users, only:[:index, :create, :update, :destroy] do
+    resources :consumers, only:[:index, :create, :update, :destroy]
+
+  end
   resources :categories, only:[:index, :create, :update, :destroy] do
     resources :merchandises, only:[:index, :create, :update, :destroy]
   end
@@ -1794,7 +1876,10 @@ resources :doctors do
 
 
   end
-  scope :api do
+  scope :api, defaults: {format: :json} do
+    get "/merchandises(.:format)" => "merchandises#index"
+    get "/merchandises/.id(.:format)" => 'merchandises#index'
+    get "/merchandises/.id" => 'merchandises#index'
 
   end
     get "/appointments(.:format)" => "appointments#index"
@@ -1803,7 +1888,6 @@ resources :doctors do
     get "/doctors(.:format)" => "doctors#index"
     get "/doctors/.id(.:format)" => "doctors#index"
     get "/doctors/.id(.:format)/consults" => "doctors#index"
-
   #get '/nests/.id(.:format)/eggs(.:format)' => "nests#index"#get "/patients.detail(.:format)" => "patients#index"
     get "/consulttemplates(.:format)" => "consultemplates#index"
     get "/consulttemplates/.id(.:format)" => "consultemplates#index"
@@ -1819,6 +1903,8 @@ resources :doctors do
     get "/consumers/.id(.:format)/bids" => "consumers#index"
     get "/consumers/.id(.:format)/wishes" => "consumers#index"
     get "/users/.id(.:format)" => "users#index"
+    get "/users/.id(.:format)/consumers" => "users#index"
+
   get "/merchandises(.:format)" => "merchandises#index"
     get "/merchandises/.id(.:format)" => 'merchandises#index'
 
@@ -1881,6 +1967,9 @@ resources :doctors do
     get "/letters(.:format)" => "letters#index"
     get "/letters/test" => "letters#test"
     get "/letters/.id(.:format)" => "letters#index"
+    get "/emails(.:format)" => "letters#index"
+    get "/emails/test" => "letters#test"
+    get "/emails/.id(.:format)" => "letters#index"
     get "/birds(.:format)" => "birds#index"
     get "/birds/.id(.:format)" => "birds#index"
     get "/payments(.:format)" => "payments#index"
@@ -1891,7 +1980,7 @@ resources :doctors do
     get "/procurators/.id(.:format)" => "procurators#index"
     get "/twigs(.:format)" => "twigs#index"
     get "/twigs/test" => "twigs#index"
-    get "/twigs/.id(.:format)" => "twigs#index"
+    get "/twigs/merchandise.id(.:format)" => "twigs#index"
     get "/lines(.:format)" => "lines#index"
     get "/lines/.id(.:format)" => "lines#index"
 

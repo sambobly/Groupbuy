@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @twig.name %>
+</p>
+
+<p>
+  <strong>Nest:</strong>
+  <%= @twig.nest %>
+</p>
+
+<%= link_to 'Edit', edit_twig_path(@twig) %> |
+<%= link_to 'Back', twigs_path %>

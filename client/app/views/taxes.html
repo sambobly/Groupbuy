@@ -1,4 +1,86 @@
+<div class="input-group bootstrap-timepicker timepicker">
+    <input id="timepicker1" type="text" class="form-control input-small">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+</div>
 
+
+<style>
+    .full button span {
+        background-color: limegreen;
+        border-radius: 32px;
+        color: black;
+    }
+    .partially button span {
+        background-color: orange;
+        border-radius: 32px;
+        color: black;
+    }
+</style>
+<div>
+    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+    <h4>Inline</h4>
+    <div style="display:inline-block; min-height:290px;">
+        <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>
+    </div>
+
+    <h4>Popup</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+        </div>
+    </div>
+
+    <hr />
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+</div>
+
+<div>
+
+    <uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+
+    <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+    <div class="row">
+        <div class="col-xs-6">
+            Hours step is:
+            <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+        </div>
+        <div class="col-xs-6">
+            Minutes step is:
+            <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+        </div>
+    </div>
+
+    <hr>
+
+    <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+    <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+    <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
+
+</div>
 <!-- widget thover -->
 <div class="widget bg-steel" id="widget-thover">
     <!-- widget header -->
@@ -33,7 +115,57 @@
 </div> <!-- /widget thover -->
 <button class="btn btn-primary" ng-click="create('sm')">Create</button>
 
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Products List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
 
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Vendor</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Tax</th>
+                <th>Tax Amount</th>
+                <th>Note</th>
+                <th>Product</th>
+                <th>Date</th>
+
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="invoice in invoices track by $index" ng-click="update1('sm', invoice)">
+            <tr>
+                <td>{{invoice.date}}</td>
+                <td>{{invoice.patient}}</td>
+                <td>{{invoice.doctor}}</td>
+                <td>{{invoice.appointment}}</td>
+                <td>{{invoice.item}}</td>
+                <td>{{invoice.name}}</td>
+
+                <td>{{invoice.price}}</td>
+                <td>{{invoice.quantity}}</td>
+                <td>{{invoice.tax}}</td>
+                <td>{{invoice.discount}}</td>
+                <td>{{invoice.total}}</td>
+                <td>{{invoice.note}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="createInvoice">Create Invoice</button>
+</div>
 <script type="text/ng-template" id="createModal.html">
     <div class="modal-header">
         <h3 class="modal-title">Create a Tax!</h3>
@@ -66,6 +198,51 @@
                 <input class="span3" id="formData.taxAmount" ng-model="tax.amount" placeholder="$" type="text" maxlength="40">
                 <button class="btn btn-primary" ng-click="updateTax()">Update</button>
                 <button class="btn btn-danger pull-right" ng-click="destroyTax()">Delete tax</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="updateModal1.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Create new invoice!</strong></label>
+                <input class="span3" id="formData.invoiceDate" ng-model="invoice.date" placeholder="Date" type="date" maxlength="40">
+                <label><strong>Date</strong></label>
+                <input class="span3" id="formData.invoicePatient" ng-model="invoice.patient" placeholder="Patient" type="text" maxlength="40">
+                <label><strong>Doctor</strong></label>
+
+                <input class="span3" id="formData.invoiceDoctor" ng-model="invoice.doctor" placeholder="Doctor" type="text" maxlength="40">
+                <label><strong>Appointment</strong></label>
+
+                <input class="span3" id="formData.invoiceAppointment" ng-model="invoice.appointment" placeholder="Appointment" type="text" maxlength="40">
+                <label><strong>Time</strong></label>
+
+                <input class="span3" id="formData.invoiceItem" ng-model="invoice.item" placeholder="Item" type="text" maxlength="40">
+                <label><strong>Price</strong></label>
+
+                <input class="span3" id="formData.invoicePrice" ng-model="invoice.price" placeholder="price" type="integer" maxlength="40">
+                <label><strong>Quantity</strong></label>
+
+                <input class="span3" id="formData.invoiceQuantity" ng-model="invoice.quantity" placeholder="quantity" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+
+                <input class="span3" id="formData.invoiceTax" ng-model="invoice.tax" placeholder="tax" type="text" maxlength="40">
+                <input class="span3" id="formData.invoiceDiscount" ng-model="invoice.discount" placeholder="discount" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceTotal" ng-model="invoice.total" placeholder="total" type="integer" maxlength="40">
+                <input class="span3" id="formData.invoiceNote" ng-model="invoice.note" placeholder="note" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="updateInvoice()">Update</button>
+                <button class="btn btn-primary" ng-click="destroyInvoice()">Delete</button>
+
             </fieldset>
         </form>
         <div class="modal-footer">

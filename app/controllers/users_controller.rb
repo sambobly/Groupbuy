@@ -1,11 +1,12 @@
 class UsersController < InheritedResources::Base
   respond_to :json
   before_action :authenticate_user!
+  #before_action :configure_permitted_parameters!
   #before_action :set_user, only: [:show, :edit, :update, :destroy]
   private
 
   def user_params
-    params.require(:user).permit(:name, :password, :password_confirmation, :password_digest, :id)
+    params.require(:user).permit(:name, :password, :password_confirmation, :password_digest, :id, :current_password)
   end
 
 
@@ -19,10 +20,22 @@ def index
       format.json { render json: @users }
     end
 end
+
+  def show
+    p "User show"
+
+    #@users = User.find_by_name(params[:name])
+    @user = User.find(:id)
+    format.json { render json: @user }
+  end
+
+
+
 end
+
 #class UsersController < ApplicationController
-#  #before_action :set_user, only: [:show, :edit, :update, :destroy]
-#  #before_action :authenticate_user!
+#  before_action :set_user, only: [:show, :edit, :update, :destroy]
+#  before_action :authenticate_user!
 #  respond_to :json
 #
 #  # GET /users

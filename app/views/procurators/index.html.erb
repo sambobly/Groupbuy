@@ -1,0 +1,27 @@
+<h1>Listing procurators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Invoice</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @procurators.each do |procurator| %>
+      <tr>
+        <td><%= procurator.name %></td>
+        <td><%= procurator.invoice %></td>
+        <td><%= link_to 'Show', procurator %></td>
+        <td><%= link_to 'Edit', edit_procurator_path(procurator) %></td>
+        <td><%= link_to 'Destroy', procurator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Procurator', new_procurator_path %>

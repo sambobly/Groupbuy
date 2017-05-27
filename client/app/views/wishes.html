@@ -1,0 +1,53 @@
+<div class="col-md-4">
+    <div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Company Name</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center">
+                <form class="form-horizontal" method="post" action="#">
+
+                    <div class="form-group">
+                        <label for="Merchandise" class="cols-sm-2 control-label">Merchandise Id</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="number" ng-model="wish.merchandiseId" placeholder="ID" required class="required input-xlarge" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="Consumer" class="cols-sm-2 control-label">Consumer</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="decimal" ng-model="wish.consumerId" placeholder="Id" required class="required input-xlarge" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <button type="button" ng-click="createWish()" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+                    </div>
+
+                    <div ng-repeat= "wish in wishes" ng-click="select(wish)">
+                        {{wish.id}}
+                    </div>
+                    <div>{{consumer.id}}
+                            {{merchandise.title}}</div>
+                    <div class="form-group ">
+                        <button type="button" ng-click="destroyWish()" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

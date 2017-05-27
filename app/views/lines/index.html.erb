@@ -1,0 +1,39 @@
+<h1>Listing lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Invoice</th>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Tax</th>
+      <th>Discount</th>
+      <th>Total</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lines.each do |line| %>
+      <tr>
+        <td><%= line.invoice %></td>
+        <td><%= line.item %></td>
+        <td><%= line.price %></td>
+        <td><%= line.quantity %></td>
+        <td><%= line.tax %></td>
+        <td><%= line.discount %></td>
+        <td><%= line.total %></td>
+        <td><%= line.product %></td>
+        <td><%= link_to 'Show', line %></td>
+        <td><%= link_to 'Edit', edit_line_path(line) %></td>
+        <td><%= link_to 'Destroy', line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line', new_line_path %>

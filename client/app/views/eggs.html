@@ -1,0 +1,706 @@
+<!--<button class="btn btn-primary" ng-click="testUser()">User - Consumer</button>-->
+<!--<div ng-show="isPopup8Visible">-->
+    <!--<select-merchandise-box flavor="{{ ctrlFlavor }}"></select-merchandise-box>-->
+<!--</div>-->
+<div>
+<section id="aa-catg-head-banner">
+    <img src="images/fashion-header-bg-8.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+            <div class="aa-catg-head-banner-content">
+                <h2>Consumer.name {{consumer.firstName}} {{consumer.lastName}}</h2>
+                <ol class="breadcrumb">
+                    <li><a class="pointer" href="#/update">Details</a></li>
+                    <li class="active">Consumer.username</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / catg header banner section -->
+
+<!-- Blog Archive -->
+<!--<div select-merchandise-box ng-repeat="merchandise in merchandises" ng-click="open1(merchandise)">{{merchandise.id}} {{merchandise.title}}</div>-->
+
+<!--Consumer-->
+<!--<div ng-repeat="consumer in consumers" ng-click="select(consumer)">{{consumer.id}}</div>-->
+<!--&lt;!&ndash;Merchandise&ndash;&gt;-->
+<!--&lt;!&ndash;<div select-merchandise-box ng-repeat="merchandise in merchandises" ng-click="open(merchandise)">{{merchandise.id}}</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<div ng-repeat="consumer in consumers"a href="/#/appointments">{{consumer.id}}</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<li ng-repeat="consumer in consumers"><a href="/#/consumers/1">{{consumer.id}}</a></li>&ndash;&gt;-->
+<!--<button class="btn btn-primary" ng-click="test1()">Test</button>-->
+
+<!--<button class="btn btn-primary" ng-click="test2()">Test2</button>-->
+<!--<button class="btn btn=primary" ng-click="makeWins()">Pagiante</button>-->
+<!--<button class="btn btn=primary" ng-click="findMerchandise()">Find merchandise</button>-->
+
+
+<!--<li ng-repeat="bid in consumerBids" >-->
+    <!--{{bid.id}}-->
+    <!--{{bid.value}}-->
+    <!--{{bid.merchandiseName}}-->
+    <!--{{bid.merchandiseValue}}-->
+<!--</li>-->
+
+<section id="aa-blog-archive">
+
+
+            <h3 data-toggle="collapse" ng-click="isCollapsed = !isCollapsed" data-button class="pointer">Active Bids <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': !isCollapsed , 'glyphicon-chevron-right': isCollapsed }"></i></h3>
+            <div class="col-md-12" collapse="isCollapsed">
+                <div class="row" id="firstLink" class = "collapse" ng-if="{'true': collapsed}">
+                    <div class="aa-product-area" >
+                        <div class="aa-product-inner">
+
+                            <div class="tab-content">
+                                <!-- Start men product category -->
+                                <div class="tab-pane fade in active">
+                                    <ul class="aa-product-catg">
+                                        <!-- start single product item -->
+                                        <li ng-repeat="bid in filteredTodos" >
+                                            <figure>
+                                                <a class="aa-product-img" selectMerchandiseBox ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open(merchandise)"></a>
+                                                <a class="aa-add-card-btn" selectMerchandiseBox ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open(merchandise)"></span>Open</a>
+                                                <figcaption>
+                                                    <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
+                                                    <h5>Total: {{merchandise.value | currency}}</h5>
+                                                    <h5>Bid ${{bid.value}} Remaining:{{merchandise.difference | currency}}</h5>
+
+                                                    <h5>Bid: {{merchandise.bidValue}} </h5>
+                                                    <h5>{{bid.id}}</h5>
+                                                    <h5>{{bid.value}}</h5>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="aa-product-hvr-content">
+                                                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>-->
+                                                <a data-button class="pointer" ng-click="view(selectedMerchandise, merchandise, Merchandise, large)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+                                            </div>
+                                            <!-- product badge -->
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <pagination
+                        total-items="todos.length"
+                        items-per-page="numPerPage"
+                        ng-model="currentPage"
+                        max-size="maxSize"
+                        class="pagination-sm"
+                        boundary-links="true">
+                </pagination>
+            </div>
+<!--<div class="col-md-3">-->
+    <!--<aside class="aa-blog-sidebar recentBids">-->
+
+        <!--<div class="aa-sidebar-widget">-->
+            <!--<h3>Recent Bids</h3>-->
+            <!--<div class="aa-recently-views" ng-repeat="merchandise in consumerWishMerchandise">-->
+                <!--<ul>-->
+                    <!--<li ng-click="view(merchandise)">-->
+                        <!--<a class="aa-cartbox-img" href="#"><img src="images/man-small-1.jpg" alt="img"></a>-->
+                        <!--<div class="aa-cartbox-info">-->
+                            <!--<h4>{{merchandise.title}}</h4>-->
+                            <!--<p>{{merchandise.id}}</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</aside>-->
+<!--</div>-->
+    <h3 data-toggle="collapse" ng-click="isCollapsed1 = !isCollapsed1"  data-button class="pointer">
+        Wishlist <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': !isCollapsed1 , 'glyphicon-chevron-right': isCollapsed1 }"></i>
+    </h3>
+    <div class="col-md-12" collapse="isCollapsed1">
+        <div class="row">
+            <div class="aa-product-area">
+                <div class="aa-product-inner">
+
+                    <div class="tab-content">
+                        <!-- Start men product category -->
+                        <div class="tab-pane fade in active">
+                            <ul class="aa-product-catg">
+                                <!-- start single product item -->
+                                <li ng-repeat="merchandise in dreams">
+                                    <figure>
+                                        <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                        <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
+                                        <figcaption>
+                                            <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
+                                            <h5>Total: {{merchandise.value | currency}}</h5>
+                                            <h5>Remaining: {{merchandise.difference | currency}}</h5>
+
+                                        </figcaption>
+                                    </figure>
+                                    <div class="aa-product-hvr-content">
+                                        <!--<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>-->
+                                        <a data-button class="pointer" ng-click="view(selectedMerchandise, merchandise, Merchandise)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+                                    </div>
+                                    <!-- product badge -->
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <pagination
+                total-items="dreams.length"
+                items-per-page="numPerPage"
+                ng-model="currentPage"
+                max-size="maxSize"
+                class="pagination-sm"
+                boundary-links="true">
+        </pagination>
+    </div>
+        <h3 data-toggle="collapse" ng-click="isCollapsed2 = !isCollapsed2" data-button class="pointer">Created Merchandise <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': !isCollapsed2 , 'glyphicon-chevron-right': isCollapsed2 }"></i></h3>
+            <div class="col-md-12" collapse="isCollapsed2">
+                <div class="row">
+                    <div class="aa-product-area">
+                        <div class="aa-product-inner">
+
+                            <div class="tab-content">
+                                <!-- Start men product category -->
+                                <div class="tab-pane fade in active">
+                                    <ul class="aa-product-catg">
+                                        <!-- start single product item -->
+                                        <li ng-repeat="merchandise in creates">
+                                            <figure>
+                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                                <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
+                                                <figcaption>
+                                                    <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
+                                                    <h5>Total: {{merchandise.value | currency}}</h5>
+                                                    <h5>Remaining: {{merchandise.difference | currency}}</h5>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="aa-product-hvr-content">
+                                                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>-->
+                                                <a data-button class="pointer" ng-click="view(selectedMerchandise, merchandise, Merchandise)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+                                            </div>
+                                            <!-- product badge -->
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pagination
+                        total-items="wins.length"
+                        items-per-page="numPerPage"
+                        ng-model="currentPage"
+                        max-size="maxSize"
+                        class="pagination-sm"
+                        boundary-links="true">
+                </pagination>
+            </div>
+            <h3 data-toggle="collapse" ng-click="isCollapsed3 = !isCollapsed3" data-button class="pointer">Won Merchandise <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': !isCollapsed2 , 'glyphicon-chevron-right': isCollapsed2 }"></i></h3>
+            <div class="col-md-12" collapse="isCollapsed3">
+                <div class="row">
+                    <div class="aa-product-area">
+                        <div class="aa-product-inner">
+
+                            <div class="tab-content">
+                                <!-- Start men product category -->
+                                <div class="tab-pane fade in active">
+                                    <ul class="aa-product-catg">
+                                        <!-- start single product item -->
+                                        <li ng-repeat="merchandise in wins">
+                                            <figure>
+                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                                <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
+                                                <figcaption>
+                                                    <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
+                                                    <h5>Total: {{merchandise.value | currency}}</h5>
+                                                    <h5>Remaining: {{merchandise.difference | currency}}</h5>
+
+                                                </figcaption>
+                                            </figure>
+                                            <div class="aa-product-hvr-content">
+                                                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>-->
+                                                <a data-button class="pointer" ng-click="view(selectedMerchandise, merchandise, Merchandise)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
+                                            </div>
+                                            <!-- product badge -->
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pagination
+                        total-items="wins.length"
+                        items-per-page="numPerPage"
+                        ng-model="currentPage"
+                        max-size="maxSize"
+                        class="pagination-sm"
+                        boundary-links="true">
+                </pagination>
+            </div>
+        <!--<div class="col-md-9">-->
+            <!--<div class="aa-blog-content" >-->
+                <!--<div class="row" ng-repeat="merchandise in wins">-->
+                    <!--<div class="col-md-4 col-sm-4">-->
+                        <!--<article class="aa-blog-content-single">-->
+                            <!--<h4><a href="#">{{merchandise.title}}</a></h4>-->
+                            <!--<figure class="aa-blog-img" ng-click="open(merchandise)">-->
+                                <!--<a ng-click="open(merchandise)"><img src="images/polo-shirt-1.png" alt="fashion img"></a>-->
+                            <!--</figure>-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates voluptatum accusamus dolorum ipsam adipisci laudantium laborum ipsa excepturi soluta, dolore similique, velit id, rerum repudiandae enim modi! Quo, debitis, in.</p>-->
+                            <!--<div class="aa-article-bottom">-->
+                                <!--<div class="aa-post-author">-->
+                                    <!--Posted By <a href="#">Jackson</a>-->
+                                <!--</div>-->
+                                <!--<div class="aa-post-date">-->
+                                    <!--March 26th 2016-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</article>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <!--&lt;!&ndash; Blog Pagination &ndash;&gt;-->
+            <!--<h1>Todos</h1>-->
+            <!--<h4>{{todos.length}} total</h4>-->
+            <!--<ul>-->
+            <!--<li ng-repeat="todo in filteredTodos">{{todo.id}}</li>-->
+            <!--</ul>-->
+
+        </div>
+</section>
+
+</div>
+<!-- / Blog Archive -->
+
+<!--<button class="btn btn-primary" ng-click="test1()">Test</button>-->
+
+<!--<button class="btn btn-primary" ng-click="test2()">Test2</button>-->
+<!--<button class="btn btn=primary" ng-click="makeWins()">Pagiante</button>-->
+
+
+<!--<div class="container">-->
+
+    <!--&lt;!&ndash;<div class="alert alert-info">&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>Sort Type: {{ sortType }}</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>Sort Reverse: {{ sortReverse }}</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>Search Query: {{ searchFish }}</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<form>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="input-group-addon"><i class="fa fa-search"></i></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<input type="text" class="form-control" placeholder="Search da Fish" ng-model="searchFish">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+    <!--<table class="table table-bordered table-striped">-->
+
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">-->
+                    <!--Sushi Roll-->
+                    <!--<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<a href="#" ng-click="sortType = 'fish'; sortReverse = !sortReverse">-->
+                    <!--Fish Type-->
+                    <!--<span ng-show="sortType == 'fish' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'fish' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<a href="#" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">-->
+                    <!--Taste Level-->
+                    <!--<span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>-->
+                    <!--<span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>-->
+                <!--</a>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+
+        <!--<tbody>-->
+        <!--<tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish">-->
+            <!--<td>{{ roll.name }}</td>-->
+            <!--<td>{{ roll.fish }}</td>-->
+            <!--<td>{{ roll.tastiness }}</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+
+    <!--</table>-->
+
+
+<!--</div>-->
+<!--<table ng-table="vm.tableParams" class="table" show-filter="true">-->
+    <!--<tr ng-repeat="user in $data">-->
+        <!--<td title="'Name'" filter="{ name: 'text'}" sortable="'name'">-->
+            <!--{{user.name}}</td>-->
+        <!--<td title="'Age'" filter="{ age: 'number'}" sortable="'age'">-->
+            <!--{{user.age}}</td>-->
+    <!--</tr>-->
+<!--</table>-->
+
+<!--TEST-->
+<!--<li ng-repeat="egg in eggs" ng-click="getNestDetails(egg)">-->
+    <!--<td>{{egg.name}}</td>-->
+<!--</li>-->
+<!--<div class="row-fluid" id="row2" ng-show="isPopupVisible">-->
+    <!--&lt;!&ndash; content manager &ndash;&gt;-->
+
+    <!--<div class="widget border-cyan" id="widget-datatables1">-->
+        <!--&lt;!&ndash; widget header &ndash;&gt;-->
+        <!--<div class="widget-header bg-cyan">-->
+            <!--&lt;!&ndash; widget icon &ndash;&gt;-->
+            <!--<div class="widget-icon"><i class="aweso-table"></i></div>-->
+            <!--&lt;!&ndash; widget title &ndash;&gt;-->
+            <!--<h4 class="widget-title">Billable Items</h4>-->
+            <!--&lt;!&ndash; widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! &ndash;&gt;-->
+            <!--<div class="widget-action color-cyan">-->
+                <!--<button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">-->
+                    <!--<i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>&lt;!&ndash; /widget header &ndash;&gt;-->
+
+        <!--&lt;!&ndash; widget content &ndash;&gt;-->
+        <!--<div class="widget-content">-->
+            <!--<table id="datatables1" class="table table-striped table-hover">-->
+                <!--<thead>-->
+                <!--<input type="search" ng-model="search" placeholder="Search...">-->
+
+                <!--<tr>-->
+                    <!--<th>Name</th>-->
+                    <!--<th>Doctor</th>-->
+
+
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr>-->
+                    <!--<td>{{nest.name}}</td>-->
+                    <!--<td>{{nest.Id}}</td>-->
+
+
+
+                <!--</tr>-->
+                <!--</tbody>&lt;!&ndash; source with ajax &ndash;&gt;-->
+            <!--</table>-->
+        <!--</div>&lt;!&ndash; /widget content &ndash;&gt;-->
+    <!--</div> &lt;!&ndash; /widget datatables #1 &ndash;&gt;-->
+
+<!--</div>-->
+
+<!--&lt;!&ndash;<li ng-repeat="egg in eggs" ng-click="update('sm', egg)">&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>{{egg.name}}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--<div class="modal-header">-->
+    <!--<h3 class="modal-title">Create an Egg!</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+    <!--<form>-->
+        <!--<fieldset>-->
+            <!--<label><strong>Egg Name</strong></label>-->
+            <!--<input class="span3" id="formData.eggName" ng-model="egg.name" placeholder="Name" type="text" maxlength="40">-->
+            <!--<label><strong>Price</strong></label>-->
+            <!--<input class="span3" id="formData.eggNestId" ng-model="egg.nest_id" placeholder="Nest" type="integer" maxlength="40">-->
+            <!--<button class="btn btn-primary" ng-click="createEgg()">Create</button>-->
+        <!--</fieldset>-->
+    <!--</form>-->
+    <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<script type="text/ng-template" id="detailsModal.html">-->
+<!--<div class="container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-6">-->
+            <!--<section>-->
+                <!--<h1 class="entry-title"><span>Update your details?</span> </h1>-->
+                <!--<hr>-->
+                <!--<form class="form-horizontal" method="post" name="signup" id="signup" enctype="multipart/form-data" >-->
+
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">First Name <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-9">-->
+                            <!--<input type="text" ng-model="consumer.firstName" class="form-control" name="mem_name" id="mem_name" placeholder="Enter your Name here" value="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Last Name <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-9">-->
+                            <!--<input type="text" ng-model="consumer.lastName" class="form-control" name="mem_name" id="mem_name" placeholder="Enter your Name here" value="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Title <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<div class="form-inline">-->
+                                <!--<div class="form-group">-->
+                                    <!--<select name="dd" class="form-control" ng-model="consumer.pronoun">-->
+                                        <!--<option value="Mr">Mr</option>-->
+                                        <!--<option value="Mrs">Mrs</option>-->
+                                        <!--<option value="Ms">Ms</option>-->
+                                        <!--<option value="Master">Master</option>-->
+                                        <!--<option value="Dr">Dr</option>-->
+                                        <!--</select>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Date of Birth <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<div class="form-inline">-->
+                                <!--<div class="form-group">-->
+                                    <!--<select name="dd" class="form-control" ng-model="consumer.day">-->
+                                        <!--<option value="">Date</option>-->
+                                        <!--<option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option><option value="4" >4 </option><option value="5" >5 </option><option value="6" >6 </option><option value="7" >7 </option><option value="8" >8 </option><option value="9" >9 </option><option value="10" >10 </option><option value="11" >11 </option><option value="12" >12 </option><option value="13" >13 </option><option value="14" >14 </option><option value="15" >15 </option><option value="16" >16 </option><option value="17" >17 </option><option value="18" >18 </option><option value="19" >19 </option><option value="20" >20 </option><option value="21" >21 </option><option value="22" >22 </option><option value="23" >23 </option><option value="24" >24 </option><option value="25" >25 </option><option value="26" >26 </option><option value="27" >27 </option><option value="28" >28 </option><option value="29" >29 </option><option value="30" >30 </option><option value="31" >31 </option>                </select>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<select name="mm" class="form-control" ng-model="consumer.month">-->
+                                        <!--<option value="">Month</option>-->
+                                        <!--<option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>                </select>-->
+                                <!--</div>-->
+                                <!--<div class="form-group" >-->
+                                    <!--<select name="yyyy" class="form-control" ng-model="consumer.year">-->
+                                        <!--<option value="0">Year</option>-->
+                                        <!--<option value="1955" >1955 </option><option value="1956" >1956 </option><option value="1957" >1957 </option><option value="1958" >1958 </option><option value="1959" >1959 </option><option value="1960" >1960 </option><option value="1961" >1961 </option><option value="1962" >1962 </option><option value="1963" >1963 </option><option value="1964" >1964 </option><option value="1965" >1965 </option><option value="1966" >1966 </option><option value="1967" >1967 </option><option value="1968" >1968 </option><option value="1969" >1969 </option><option value="1970" >1970 </option><option value="1971" >1971 </option><option value="1972" >1972 </option><option value="1973" >1973 </option><option value="1974" >1974 </option><option value="1975" >1975 </option><option value="1976" >1976 </option><option value="1977" >1977 </option><option value="1978" >1978 </option><option value="1979" >1979 </option><option value="1980" >1980 </option><option value="1981" >1981 </option><option value="1982" >1982 </option><option value="1983" >1983 </option><option value="1984" >1984 </option><option value="1985" >1985 </option><option value="1986" >1986 </option><option value="1987" >1987 </option><option value="1988" >1988 </option><option value="1989" >1989 </option><option value="1990" >1990 </option><option value="1991" >1991 </option><option value="1992" >1992 </option><option value="1993" >1993 </option><option value="1994" >1994 </option><option value="1995" >1995 </option><option value="1996" >1996 </option><option value="1997" >1997 </option><option value="1998" >1998 </option><option value="1999" >1999 </option><option value="2000" >2000 </option><option value="2001" >2001 </option><option value="2002" >2002 </option><option value="2003" >2003 </option><option value="2004" >2004 </option><option value="2005" >2005 </option><option value="2006" >2006 </option>                </select>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">User name<span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-9">-->
+                            <!--<input type="text" ng-model="consumer.userName" class="form-control" name="mem_name" id="mem_name" placeholder="Enter your Name here" value="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Email ID <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-9">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>-->
+                                <!--<input type="email" ng-model="consumer.email" class="form-control" name="emailid" id="emailid" placeholder="Enter your Email ID" value="">-->
+                            <!--</div>-->
+                            <!--<small> Your Email Id is being used for ensuring the security of your account, authorization and access recovery. </small> </div>-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Set Password <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-8">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
+                                <!--<input type="password" ng-model="consumer.password" class="form-control" name="password" id="password" placeholder="Choose password (5-15 chars)" value="">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Confirm Password <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-8">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
+                                <!--<input type="password" class="form-control" ng-model="consumer.password1" name="cpassword" id="cpassword" placeholder="Confirm your password" value="">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Gender <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<div class="form-inline">-->
+                                <!--<div class="form-group">-->
+                                    <!--<select name="dd" class="form-control" ng-model="consumer.gender">-->
+                                        <!--<option value="">Gender</option>-->
+                                        <!--<option value="M" >M </option><option value="F" >F </option><option value="N/A" >N/A </option></select>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<label class="control-label col-sm-3">Gender <span class="text-danger">*</span></label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="col-xs-8">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<select class="form-control" ng-model="consumer.gender">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<option>Gender</option>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<option value="M">M</option><option value="F">F</option><option value="N/A">N/A</option>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Contact No. <span class="text-danger">*</span></label>-->
+                        <!--<div class="col-md-5 col-sm-8">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>-->
+                                <!--<input type="text" class="form-control" name="contactnum" id="contactnum" placeholder="Enter your Primary contact no." value="">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Alternate No. <br>-->
+                            <!--<small>(if any)</small></label>-->
+                        <!--<div class="col-md-5 col-sm-8">-->
+                            <!--<input type="text" class="form-control" name="contactnum2" id="contactnum2" placeholder="Any other or Landline no (if any)" value="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="control-label col-sm-3">Profile Photo <br>-->
+                            <!--<small>(optional)</small></label>-->
+                        <!--<div class="col-md-5 col-sm-8">-->
+                            <!--<div class="input-group"> <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>-->
+                                <!--<input type="file" name="file_nm" id="file_nm" class="form-control upload" placeholder="" aria-describedby="file_upload">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group">-->
+                        <!--<div class="col-xs-offset-3 col-xs-10">-->
+                            <!--<input name="Submit" type="submit" ng-click="updateConsumer()" value="Update profile?" class="btn btn-primary">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--</script>-->
+<!--<script type="text/ng-template" id="updateModal.html">-->
+    <!--&lt;!&ndash;<div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">&ndash;&gt;-->
+    <!--<div class="modal-content">-->
+        <!--<div class="modal-body">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>-->
+            <!--<div class="row">-->
+                <!--&lt;!&ndash; Modal view slider &ndash;&gt;-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">-->
+                    <!--<div class="aa-product-view-slider">-->
+                        <!--<div class="simpleLens-gallery-container" id="demo-1">-->
+                            <!--<div class="simpleLens-container">-->
+                                <!--<div class="simpleLens-big-image-container">-->
+                                    <!--<a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">-->
+                                        <!--<img src="images/polo-shirt-1.png" class="simpleLens-big-image">-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="simpleLens-thumbnails-container-width">-->
+                                <!--<a href="#" class="simpleLens-thumbnail-wrapper"-->
+                                   <!--data-lens-image="images/polo-shirt-1.png"-->
+                                   <!--data-big-image="images/polo-shirt-1.png">-->
+                                    <!--<img src="images/man-small-1.jpg">-->
+                                <!--</a>-->
+                                <!--<a href="#" class="simpleLens-thumbnail-wrapper"-->
+                                   <!--data-lens-image="images/polo-shirt-1.png"-->
+                                   <!--data-big-image="images/polo-shirt-1.png">-->
+                                    <!--<img src="images/man-small-1.jpg">-->
+                                <!--</a>-->
+
+                                <!--<a href="#" class="simpleLens-thumbnail-wrapper"-->
+                                   <!--data-lens-image="images/polo-shirt-1.png"-->
+                                   <!--data-big-image="images/polo-shirt-1.png">-->
+                                    <!--<img src="images/man-small-1.jpg">-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; Modal view content &ndash;&gt;-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">-->
+                    <!--<div class="aa-product-view-content">-->
+                        <!--<h3>{{merchandise.title}}</h3>-->
+                        <!--<div class="aa-price-block">-->
+                            <!--<span class="aa-product-view-price">Total required  {{merchandise.value | currency}}</span>-->
+                        <!--</div>-->
+                        <!--<div class="aa-price-block">-->
+                            <!--<span class="aa-product-view-price">Total bid       {{payments_total() | currency}}</span>-->
+
+                        <!--</div>-->
+                        <!--<div class="aa-price-block">-->
+                            <!--<span class="aa-product-view-price redstyle">Total remaining {{value_remaining() | currency}}</span>-->
+
+                        <!--</div>-->
+                        <!--<p>Description: {{merchandise.description}}</p>-->
+
+                        <!--<div class="aa-prod-quantity">-->
+
+                            <!--<p class="aa-category">-->
+                                <!--Category: <a href="#">{{merchandise.categoryId}}</a>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="aa-prod-view-bottom">-->
+                        <!--<a class="aa-add-to-cart-btn"  ng-click="addToWishlist()"><span class="fa fa-shopping-cart"></span>Add To Wishlist</a>-->
+                        <!--<a ng-click = "ok()" class="aa-add-to-cart-btn">View Details</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+   <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</script>-->
+
+<!--<script type="text/ng-template" id="productsModal2.html">-->
+
+    <!--<div class="modal-body">-->
+        <!--<form id="productForm">-->
+            <!--<fieldset>-->
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label" for="formData.eggName">Nest Name</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.eggName" ng-model="egg.name" placeholder="Product Name" type="text" required >-->
+                    <!--</div>                        re-->
+
+                <!--</div>-->
+                <!--&lt;!&ndash;<div ng-show="form.$submitted || form.productForm.$touched">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div ng-show="form.productForm.$error.required">Please enter a product name.</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label" for="formData.nestEgg">Nest Name</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="input-medium" id="formData.nestEgg" ng-model="egg.nestId" placeholder="Product Name" type="text" required >-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<li ng-repeat="nest in nests">-->
+                        <!--<td>{{nest.egg.name}}</td>-->
+                    <!--</li>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button class="btn btn-primary" ng-click="ok()">Cancel</button>-->
+
+                    <!--<button class="btn btn-primary" ng-click="updateProduct()">Update</button>-->
+                    <!--<button class="btn btn-warning" ng-click="destroyProduct()">Delete</button>-->
+                    <!--<button class="btn btn-warning" ng-click="ok()">Ok</button>-->
+
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<li ng-repeat="nest in nests">-->
+                        <!--<td>{{nest.name}}</td>-->
+                    <!--</li>-->
+                <!--</div>-->
+    <!--</div>-->
+<!--</script>-->

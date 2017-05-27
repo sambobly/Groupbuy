@@ -1,0 +1,45 @@
+<h1>Listing consumers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Date of birth</th>
+      <th>Payment method</th>
+      <th>Public</th>
+      <th>Gender</th>
+      <th>Pronoun</th>
+      <th>Email</th>
+      <th>Number</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consumers.each do |consumer| %>
+      <tr>
+        <td><%= consumer.name %></td>
+        <td><%= consumer.first_name %></td>
+        <td><%= consumer.last_name %></td>
+        <td><%= consumer.date_of_birth %></td>
+        <td><%= consumer.payment_method %></td>
+        <td><%= consumer.public %></td>
+        <td><%= consumer.gender %></td>
+        <td><%= consumer.pronoun %></td>
+        <td><%= consumer.email %></td>
+        <td><%= consumer.number %></td>
+        <td><%= consumer.password %></td>
+        <td><%= link_to 'Show', consumer %></td>
+        <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
+        <td><%= link_to 'Destroy', consumer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consumer', new_consumer_path %>

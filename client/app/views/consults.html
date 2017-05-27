@@ -1,3 +1,6 @@
+
+
+
 <select ng-model="consult.patient" id="formData.consultPatient" ng-options="patient.id as consult.patient for patient in patients" placeholder="Patient">
     <option value="">Select Patient</option>
 </select>
@@ -79,11 +82,14 @@
                             {{patient.id}}
                         </li>
                     </ul>
-                </div>
                 <label><strong>Appointment</strong></label>
-
                 <input class="span3" id="formData.consultAppointment" ng-model="consult.appointment" placeholder="Appointment" type="text" maxlength="40">
-                <label><strong>Date</strong></label>
+                <label><strong>Patient ID</strong></label>
+                <input class="span3" ng-model="consult.patient_id" placeholder="Patient ID" type="integer" maxlength="40">
+                <label><strong>Appointment ID</strong></label>
+                <input class="span3" ng-model="consult.appointment_id" placeholder="Appointment ID" type="integer" maxlength="40">
+
+                    <label><strong>Date</strong></label>
 
                 <input class="span3" id="formData.consultDate" ng-model="consult.date" placeholder="date" type="text" maxlength="40">
                 <label><strong>Time</strong></label>
@@ -95,6 +101,8 @@
                 <label><strong>Address</strong></label>
 
                 <button class="btn btn-primary" ng-click="createConsult()">Create</button>
+                <button class="btn btn-primary" ng-click="testCreate()">Test Create</button>
+
             </fieldset>
         </form>
         <div class="modal-footer">

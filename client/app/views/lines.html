@@ -1,0 +1,153 @@
+<table class="table table-striped" align="center" >
+    <tr>
+        <th></th>
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Cost</th>
+        <th style="text-align:right;">Total</th>
+
+    </tr>
+    <tr data-ng-repeat="line in lines track by $index">
+        <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a></td>
+        <!--<td><select ng-model="product" id="formData.invoiceItem" ng-options="product.name for product in products" placeholder="Product">-->
+        <!--<option value="">Select product</option>-->
+        <!--</select></td>-->
+        <!--<td><input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="qty"></td>-->
+        <!--<td><input class="span3" id="formData.invoicePrice" ng-model="product.price" placeholder="price" type="integer" maxlength="40">-->
+        <!--</td>-->
+        <td><input class="span3" id="formData.lineItem" ng-model="line.item" placeholder="Name" type="text" maxlength="40"></td>
+        <td><input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="qty"></td>
+        <td><input class="span3" id="formData.linePrice" ng-model="line.price" placeholder="price" type="integer" maxlength="40">
+        <td><input class="span3" id="formData.lineInvoiceID" ng-model="line.invoiceId" placeholder="Invoice" type="integer" maxlength="40"></td>
+        </td>
+
+        <td align="right">{{invoice.price * item.qty | currency}}</td>
+    <tr ng-hide="printMode">
+        <td colspan="5"><a class="btn btn-primary" href ng-click="updateAll()" >Update Lines</a></td>
+    </tr>
+    <tr ng-hide="printMode">
+        <td colspan="5"><a class="btn btn-primary" href ng-click="updateLine()" >Update Lines</a></td>
+    </tr>
+
+    </tr>
+
+<li ng-repeat="line in lines" ng-click="update('sm', line)">
+    <td>{{line.id}}</td>
+</li>
+<!-- widget thover -->
+<div class="widget bg-steel" id="widget-thover">
+    <!-- widget header -->
+    <div class="widget-header">
+        <!-- widget icon -->
+        <!-- widget title -->
+        <h4 class="widget-title">Taxes List</h4>
+        <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tax</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody  data-ng-repeat="tax in taxes" ng-click="update('sm', line)">
+            <tr>
+                <td>{{tax.id}}</td>
+                <td>{{tax.name}}</td>
+                <td>{{tax.amount}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- /widget content -->
+</div> <!-- /widget thover -->
+<button class="btn btn-primary" ng-click="create('sm')">Create</button>
+
+    <td><select ng-model="line.product" id="formData.line" ng-options="product.name for product in products" placeholder="Product">
+        <option value="">Select product</option>
+    </select></td>
+    <td><input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="qty"></td>
+    <td><input class="span3" id="formData.invoicePrice" ng-model="product.price" placeholder="price" type="integer" maxlength="40">
+    </td>
+    <td align="right">{{invoice.price * item.qty | currency}}</td>
+
+
+<div class="modal-header">
+    <h3 class="modal-title">Create a Line!</h3>
+</div>
+<div class="modal-body">
+    <form>
+        <fieldset>
+            <pre>{{line}}</pre>
+            <label><strong>Line Item</strong></label>
+            <input class="span3" id="formData.lineItem" ng-model="line.product.name" placeholder="Name" type="text" maxlength="40">
+            <label><strong>Invoice ID</strong></label>
+            <input class="span3" id="formData.lineInvoiceID" ng-model="line.invoice_id" placeholder="Invoice" type="integer" maxlength="40">
+            <label><strong>Price</strong></label>
+            <input class="span3" id="formData.linePrice" ng-model="line.product.price" placeholder="Price" type="decimal" maxlength="40">
+            <label><strong>Quantity</strong></label>
+            <input class="span3" id="formData.lineQuantity" ng-model="line.quantity" placeholder="Quantity" type="integer" maxlength="40">
+            <label><strong>Tax</strong></label>
+            <input class="span3" id="formData.lineTax" ng-model="line.tax" placeholder="Tax" type="integer" maxlength="40">
+            <label><strong>Discount</strong></label>
+            <input class="span3" id="formData.lineDiscount" ng-model="line.discount" placeholder="Discount" type="decimal" maxlength="40">
+            <label><strong>Total</strong></label>
+            <input class="span3" id="formData.lineTotal" ng-model="line.total" placeholder="Total" type="decimal" maxlength="40">
+            <label><strong><Product></Product></strong></label>
+            <input class="span3" id="formData.lineProduct" ng-model="line.product" placeholder="product" type="text" maxlength="40">
+
+            <button class="btn btn-primary" ng-click="createLine()">Create</button>
+        </fieldset>
+    </form>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+
+<script type="text/ng-template" id="updateModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <label><strong>Line ID</strong></label>
+                <!--<input class="span3" ng-model="line.product_id" placeholder="Name" type="text" maxlength="40">-->
+                <!--<input class="span3" ng-model="line.product.id" placeholder="Name" type="text" maxlength="40">-->
+                <!--<input class="span3" ng-model="line.productId" placeholder="Name" type="text" maxlength="40">-->
+                <!--<input class="span3" ng-model="product.id" placeholder="Name" type="text" maxlength="40">-->
+
+
+                <input class="span3" id="formData.lineItem" ng-model="line.product.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Invoice ID</strong></label>
+                <input class="span3" id="formData.lineItem" ng-model="line.item" placeholder="Name" type="text" maxlength="40">
+
+                <input class="span3" id="formData.lineInvoiceID" ng-model="line.invoiceId" placeholder="Invoice" type="integer" maxlength="40">
+                <label><strong>Price</strong></label>
+                <input class="span3" id="formData.linePrice" ng-model="line.product.price" placeholder="Price" type="decimal" maxlength="40">
+                <label><strong>Quantity</strong></label>
+                <input class="span3" id="formData.lineQuantity" ng-model="line.quantity" placeholder="Quantity" type="integer" maxlength="40">
+                <label><strong>Tax</strong></label>
+                <input class="span3" id="formData.lineTax" ng-model="line.tax" placeholder="Tax" type="integer" maxlength="40">
+                <label><strong>Discount</strong></label>
+                <input class="span3" id="formData.lineDiscount" ng-model="line.discount" placeholder="Discount" type="decimal" maxlength="40">
+                <label><strong>Total</strong></label>
+                <input class="span3" id="formData.lineTotal" ng-model="line.total" placeholder="Total" type="decimal" maxlength="40">
+                <label><strong><Product></Product></strong></label>
+                <input class="span3" id="formData.lineProduct" ng-model="line.product" placeholder="product" type="text" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="updateLine()">Update</button>
+                <button class="btn btn-danger pull-right" ng-click="destroyLine()">Delete tax</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</script>

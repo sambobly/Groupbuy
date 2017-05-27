@@ -10,10 +10,10 @@ angular.module('clientApp')
         Concession_type.query().then(function(concession_types){
             $scope.concession_types = concession_types;
         });
-        $scope.formData = {
-            concession_typeName: '',
-            concession_typePercentage: ''
-        };
+        angular.extend ($scope.concession_type, {
+            name: '',
+            percentage: Number(),
+        });
         $scope.createConcession_type = function() {
             $scope.concession_type.create()
                 .then(function(response) {
@@ -63,9 +63,13 @@ angular.module('clientApp')
                         $scope.concession_type.create()
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = true
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
 
@@ -98,13 +102,25 @@ angular.module('clientApp')
                         $modalInstance.dismiss('cancel');
                     };
 
+                    $scope.showPopup = function () {
+                        $scope.isPopupVisible = true;
+                    };
+
+                    $scope.showPopup2 = function () {
+                        $scope.isPopupVisible2 = true;
+                    };
+
                     $scope.updateConcession_type = function(concession_type) {
                         $scope.concession_type.update(concession_type)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
                             });
                     };
 
@@ -112,9 +128,14 @@ angular.module('clientApp')
                         $scope.concession_type.delete(concession_type)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible2 = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
                 },

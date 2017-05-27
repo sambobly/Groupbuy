@@ -25,6 +25,9 @@
                 <th>Note</th>
                 <th>Product</th>
                 <th>Date</th>
+                <th>Concession Type</th>
+
+
 
             </tr>
             </thead>
@@ -39,6 +42,8 @@
                 <td>{{expense.note}}</td>
                 <td>{{expense.product}}</td>
                 <td>{{expense.date}}</td>
+                <td>{{expense.concession_type}}</td>
+
 
             </tr>
             </tbody>
@@ -49,8 +54,9 @@
 
 
 <script type="text/ng-template" id="createModal.html">
+    <div class="container" style="margin-top: 40px">
     <div class="modal-header">
-        <h3 class="modal-title">Create a product!</h3>
+        <h3 class="modal-title">New Expense</h3>
     </div>
     <div class="modal-body">
         <form>
@@ -63,9 +69,27 @@
 
                 <input class="span3" id="formData.expenseAmount" ng-model="expense.amount" placeholder="category" type="text" maxlength="40">
                 <label><strong>Tax</strong></label>
+                <div class="controls">
+                    <select ng-model="expense.tax_thing" ng-options="tax.name group by expense for tax in taxes" placeholder="Tax ">
+                        <option value="">Select Tax</option>
+                    </select>
+                </div>
 
-                <input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="text" maxlength="40">
-                <label><strong>Taxamount</strong></label>
+                <label class="control-label" for="inputSelect">Concession type</label>
+
+                <div class="controls">
+                    <select ng-model="expense.concession_type" ng-options="concession_type.name group by expense for concession_type in concession_types" placeholder="concession type">
+                        <option value="">Select concession</option>
+                    </select>
+                    <!--<select id="inputSelect"  ng-model="expense.concessionType">-->
+                    <!--<option>None</option>-->
+                    <!--<option>Student</option>-->
+                    <!--<option>Seniors</option>-->
+                    <!--</select>-->
+                </div>
+
+                <!--<input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="string" maxlength="40">-->
+                <!--<label><strong>Taxamount</strong></label>-->
 
                 <input class="span3" id="formData.expenseTaxamount" ng-model="expense.taxamount" placeholder="category" type="text" maxlength="40">
                 <label><strong>note</strong></label>
@@ -93,7 +117,7 @@
     <div class="modal-body">
         <form>
             <fieldset>
-                <label><strong>Create new expense!</strong></label>
+                <label><strong>Update expense!</strong></label>
                 <input class="span3" id="formData.expenseVendor" ng-model="expense.vendor" placeholder="Vendor" type="text" maxlength="40">
                 <label><strong>Category</strong></label>
                 <input class="span3" id="formData.expenseCategory" ng-model="expense.category" placeholder="category" type="text" maxlength="40">
@@ -101,9 +125,30 @@
 
                 <input class="span3" id="formData.expenseAmount" ng-model="expense.amount" placeholder="category" type="text" maxlength="40">
                 <label><strong>Tax</strong></label>
+                <div class="controls">
+                    <select ng-model="expense.tax" ng-options="tax.name group by expense for tax in taxes" placeholder="Tax ">
+                        <option value="">Select Tax</option>
+                    </select>
+                </div>
 
-                <input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="text" maxlength="40">
-                <label><strong>Taxamount</strong></label>
+                <label class="control-label" for="inputSelect">Concession type</label>
+
+                <div class="controls">
+                    <select ng-model="expense.concession_type" ng-options="concession_type.name group by expense for concession_type in concession_types" placeholder="concession type">
+                        <option value="">Select concession</option>
+                    </select>
+                    <!--<select id="inputSelect"  ng-model="patient.concessionType">-->
+                    <!--<option>None</option>-->
+                    <!--<option>Student</option>-->
+                    <!--<option>Seniors</option>-->
+                    <!--</select>-->
+                </div>
+
+                <!--<input class="span3" id="formData.expenseTax" ng-model="expense.tax" placeholder="category" type="string" maxlength="40">-->
+                <!--<label><strong>Taxamount</strong></label>-->
+
+                <input class="span3" id="formData.expenseConcessionType" ng-model="expense.concession_type" placeholder="concession type" type="string" maxlength="4000">
+                <label><strong>note</strong></label>
 
                 <input class="span3" id="formData.expenseTaxamount" ng-model="expense.taxamount" placeholder="category" type="text" maxlength="40">
                 <label><strong>note</strong></label>

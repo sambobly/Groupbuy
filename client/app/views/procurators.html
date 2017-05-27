@@ -1,0 +1,47 @@
+<li ng-repeat="procurator in procurators" ng-click="update('sm', procurator)">
+    <td>{{procurator.id}}</td>
+</li>
+
+    <div class="modal-header">
+        <h3 class="modal-title">Create a Procurator!</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <fieldset>
+                <pre>{{line}}</pre>
+                <label><strong>Line Item</strong></label>
+                <input class="span3" ng-model="procurator.name" placeholder="Name" type="text" maxlength="40">
+                <label><strong>Invoice ID</strong></label>
+                <input class="span3" ng-model="procurator.invoice_id" placeholder="Invoice" type="integer" maxlength="40">
+
+                <button class="btn btn-primary" ng-click="createProcurator()">Create</button>
+            </fieldset>
+        </form>
+        <div class="modal-footer">
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="updateModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <form>
+                <fieldset>
+                    <pre>{{line}}</pre>
+                    <label><strong>Line Item</strong></label>
+                    <input class="span3" ng-model="procurator.name" placeholder="Name" type="text" maxlength="40">
+                    <label><strong>Invoice ID</strong></label>
+                    <input class="span3" ng-model="procurator.invoiceId" placeholder="Invoice" type="integer" maxlength="40">
+
+                    <button class="btn btn-primary" ng-click="updateProcurator()">Update</button>
+                    <button class="btn btn-danger pull-right" ng-click="destroyProcurator()">Delete tax</button>
+                </fieldset>
+            </form>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+    </script>

@@ -1,121 +1,16 @@
-<div class="container" width="800px" id="invoice" >
-    <a ng-hide="printMode" href="https://github.com/metaware/angular-invoicing"><img ng-hide="printMode" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
-    <table class="table">
-        <tr>
-            <td align="center" style="background-color:#357EBD;color:#FFF" colspan="2">
-                INVOICE
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h4>Invoice #<input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
-            </td>
-            <td align="right">
-                <input type='file' id="imgInp" />
-                <img ng-hide="logoRemoved" id="company_logo" src="images/metaware_logo.png" alt="your image" width="300" />
-                <br/>
-                <div class="noPrint" ng-hide="printMode">
-                    <a ng-click="editLogo()" href >Edit Logo</a>
-                    <a ng-click="removeLogo()" id="remove_logo" href >Remove logo</a>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table class="table">
-        <tr>
-            <td>
-                <div class="infos">
-                    <div><strong><input type="text" ng-model="invoice.customer_info.name"/></strong></div>
-                    <div><input type="text" ng-model="invoice.customer_info.web_link"/></div>
-                    <div><input type="text" ng-model="invoice.customer_info.address1"/></div>
-                    <div><input type="text" ng-model="invoice.customer_info.address2"/></div>
-                    <div><input type="text" ng-model="invoice.customer_info.postal"/></div>
-                </div>
-            </td>
-            <td align="right">
-                <div class="align-right">
-                    <div><strong><input type="text" ng-model="invoice.company_info.name"/></strong></div>
-                    <div><input type="text" ng-model="invoice.company_info.web_link"/></div>
-                    <div><input type="text" ng-model="invoice.company_info.address1"/></div>
-                    <div><input type="text" ng-model="invoice.company_info.address2"/></div>
-                    <div><input type="text" ng-model="invoice.company_info.postal"/></div>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table class="table table-striped" align="center" >
-        <tr>
-            <th></th>
-            <th>Description</th>
-            <th>Qty</th>
-            <th>Cost</th>
-            <th style="text-align:right;">Total</th>
-
-        </tr>
-        <tr data-ng-repeat="product in products track by $index">
-            <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a></td>
-            <td><select ng-model="product" id="formData.invoiceItem" ng-options="product.name for product in products" placeholder="Product">
-                <option value="">Select product</option>
-            </select></td>
-            <td><input ng-model="item.qty" value="1" size="4" ng-required ng-validate="integer" placeholder="qty"></td>
-            <td><input class="span3" id="formData.invoicePrice" ng-model="product.price" placeholder="price" type="integer" maxlength="40">
-            </td>
-            <td align="right">{{product.price * item.qty | currency}}</td>
-
-        </tr>
-        <tr ng-hide="printMode">
-            <td colspan="5"><a class="btn btn-primary" href ng-click="addItem()" >Add Item</a></td>
-        </tr>
-        <tr>
-            <td colspan="4" align="right">
-                Sub Total
-            </td>
-            <td align="right">
-                {{invoice_sub_total() | currency}}
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4" align="right">
-                Tax(%): <input ng-model="invoice.tax" ng-validate="number" style="width:43px">
-            </td>
-            <td align="right">
-                {{calculate_tax() | currency}}
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4" align="right">
-                Grand Total:
-            </td>
-            <td align="right">
-                {{calculate_grand_total() | currency}}
-            </td>
-        </tr>
-    </table>
-    <div class="noPrint">
-        <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printInfo()">Print</a>
-        <a href="#" class="btn btn-primary" ng-click="clearLocalStorage()">Reset</a>
-        <a href="#" class="btn btn-primary" ng-hide="printMode" ng-click="printMode = true;">Turn On Print Mode</a>
-        <a href="#" class="btn btn-primary" ng-show="printMode" ng-click="printMode = false;">Turn Off Print Mode</a>
-    </div>
-</div>
-
-<div ng-hide="printMode" class="copy noPrint">
-    <a href="http://jasdeep.ca/?utm_source=angular_invoicing">Jasdeep Singh</a> &
-    <a href="http://github.com/manpreetrules">Manpreet Singh</a>
-    Made with
-    <span class="love">&#9829;</span> in Toronto by
-    <a href="http://metawarelabs.com/?utm_source=angular_invoicing">Metaware Labs Inc.</a>
-</div>
-
-<!-- widget thover -->
-<div class="widget bg-steel" id="widget-thover">
+<div class="widget border-cyan" id="widget-datatables1">
     <!-- widget header -->
-    <div class="widget-header">
+    <div class="widget-header bg-cyan">
         <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-table"></i></div>
         <!-- widget title -->
-        <h4 class="widget-title">Products List</h4>
+        <h4 class="widget-title">Billable Items</h4>
         <!-- widget action, you can also use btn, btn-group, nav-tabs or nav-pills (also support dropdown). enjoy! -->
-
+        <div class="widget-action color-cyan">
+            <button data-toggle="collapse" data-collapse="widget-datatables1" class="btn">
+                <i class="aweso-minus" data-toggle-icon="aweso-minus aweso-plus"></i>
+            </button>
+        </div>
     </div><!-- /widget header -->
 
     <!-- widget content -->
@@ -138,7 +33,8 @@
             </tbody>
         </table>
     </div><!-- /widget content -->
-</div> <!-- /widget thover -->
+</div> <!-- /widget datatables #1 -->
+
 <button class="btn btn-primary" ng-click="create('sm')">Create</button>
 
 
@@ -147,13 +43,36 @@
         <h3 class="modal-title">Create a product!</h3>
     </div>
     <div class="modal-body">
-        <form>
+        <form id="productForm">
             <fieldset>
-                <label><strong>Product Name</strong></label>
-                <input class="span3" id="formData.productName" ng-model="product.name" placeholder="Name" type="text" maxlength="40">
-                <label><strong>Price</strong></label>
-                <input class="span3" id="formData.productPrice" ng-model="product.price" placeholder="$" type="text" maxlength="40">
-                <button class="btn btn-primary" ng-click="createProduct()">Create</button>
+                <div class="control-group">
+                    <label class="control-label">Product Name</label>
+                    <div class="controls">
+                        <input class="input-medium" ng-model="product.name" placeholder="Product Name" type="text" required >
+                    </div>
+
+                </div>
+                <!--<div ng-show="form.$submitted || form.productForm.$touched">-->
+                    <!--<div ng-show="form.productForm.$error.required">Please enter a product name.</div>-->
+                <!--</div>-->
+                <div class="control-group">
+                    <label class="control-label">Price</label>
+                    <div class="controls">
+                        <input class="input-medium" ng-model="product.price" placeholder="Product Price" type="number" required>
+                    </div>
+                    <div class="alert alert-success" ng-show="isPopupVisible">
+                        <button class="close" data-dismiss="alert" type="button">×</button>
+                        <strong>Product created</strong>
+
+                    </div>
+                    <div class="alert" ng-show="isPopupVisible5">
+                        <button class="close" data-dismiss="alert" type="button">×</button>
+                        <strong>Did not work!</strong>
+
+                    </div>
+                    <button class="btn btn-primary" ng-click="createProduct()">Create</button>
+                    <button class="btn btn-primary" ng-click="testCreate()">Test Create</button>
+
             </fieldset>
         </form>
         <div class="modal-footer">
@@ -163,22 +82,62 @@
 </script>
 <script type="text/ng-template" id="productsModal.html">
     <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
     </div>
     <div class="modal-body">
-    <form>
         <fieldset>
-            <label><strong>Product Name</strong></label>
-            <input class="span3" data-ng-model="product.name" placeholder="Name" type="text" maxlength="250">
-            <label><strong>Price</strong></label>
-            <input class="span3"  data-ng-model="product.price" placeholder="$" type="text" maxlength="250">
-            <button class="btn btn-primary" ng-click="updateProduct()">Update</button>
-            <button class="btn btn-danger pull-right" ng-click="destroyProduct()">Delete product</button>
+            <div class="control-group">
+                <label class="control-label">Product Name</label>
+                <div class="controls">
+                    <input class="input-medium" ng-model="product.name" placeholder="Product Name" type="text" required >
+                </div>
+
+            </div>
+            <!--<div ng-show="form.$submitted || form.productForm.$touched">-->
+            <!--<div ng-show="form.productForm.$error.required">Please enter a product name.</div>-->
+            <!--</div>-->
+            <div class="control-group">
+                <label class="control-label">Price</label>
+                <div class="controls">
+                    <input class="input-medium" ng-model="product.price" placeholder="Product Price" type="number" required>
+                </div>
+                <button class="btn btn-primary" ng-click="showPopup()">Update</button>
+                <button class="btn btn-primary" ng-click="showPopup2()">Delete</button>
+
+                <div class="alert" ng-show="isPopupVisible">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="updateProduct()">Yes</button>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible2">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Warning!</strong>
+                    This action is final. Do you want to continue?
+                    <button class="btn btn-primary" ng-click="destroyProduct()">Yes</button>
+
+                </div>
+
+                <div class="alert alert-success" ng-show="isPopupVisible3">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Product created</strong>
+                </div>
+                <div class="alert alert-success" ng-show="isPopupVisible4">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Success!</strong>
+
+                </div>
+                <div class="alert" ng-show="isPopupVisible5">
+                    <button class="close" data-dismiss="alert" type="button">×</button>
+                    <strong>Did not work!</strong>
+
+                </div>
         </fieldset>
-    </form>
     <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-primary" ng-click="ok()">Cancel</button>
+
+        <button class="btn btn-primary" ng-click="updateProduct()">Update</button>
+        <button class="btn btn-warning" ng-click="destroyProduct()">Delete</button>
     </div>
     </div>
 </script>

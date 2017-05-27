@@ -10,19 +10,20 @@ angular.module('clientApp')
         Business.query().then(function(businesses){
             $scope.businesses = businesses;
         });
-        $scope.formData = {
-            businessName: '',
-            businessAddress: '',
-            businessCity: '',
-            businessState: '',
-            businessPostcode: '',
-            businessCountry: '',
-            businessRegistrationname: '',
-            businessRegistrationnumber: '',
-            businessWebsite: '',
-            businessContact: '',
-            businessOnline: ''
-        };
+        angular.extend ($scope.business, {
+            name: '',
+            address: '',
+            city: '',
+            state: '',
+            postcode: Number(),
+            country: '',
+            registrationname: '',
+            registrationnumber: Number(),
+            website: '',
+            contact: '',
+            online: Number()
+        }),
+
         $scope.createBusiness = function() {
             $scope.business.create()
                 .then(function(response) {
@@ -72,9 +73,12 @@ angular.module('clientApp')
                         $scope.business.create()
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = true
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
 
@@ -107,13 +111,26 @@ angular.module('clientApp')
                         $modalInstance.dismiss('cancel');
                     };
 
+                    $scope.showPopup = function () {
+                        $scope.isPopupVisible = true;
+                    };
+
+                    $scope.showPopup2 = function () {
+                        $scope.isPopupVisible2 = true;
+                    };
+
                     $scope.updateBusiness = function(business) {
                         $scope.business.update(business)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
 
@@ -121,9 +138,14 @@ angular.module('clientApp')
                         $scope.business.delete(business)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible2 = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
                 },

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @egg.name %>
+</p>
+
+<p>
+  <strong>Nest:</strong>
+  <%= @egg.nest_id %>
+</p>
+
+<%= link_to 'Edit', edit_egg_path(@egg) %> |
+<%= link_to 'Back', eggs_path %>

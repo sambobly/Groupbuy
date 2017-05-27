@@ -36,7 +36,8 @@ module Optho
     config.to_prepare do
       DeviseController.respond_to :html, :json
     end
-
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
     #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
     #config.action_mailer.delivery_method = :smtp
     #config.action_mailer.perform_deliveries = true

@@ -2,16 +2,21 @@
 
 
 angular.module('clientApp')
-    .controller('ProductsController', ['$scope', '$resource', '$location', '$routeParams', 'Product', '$modal', '$log', function ($scope, $resource, $location, $routeParams, Product, $modal, $log) {
+    .controller('ProductsController', ['$scope', '$resource', '$location', '$routeParams', 'Product', '$modal', function ($scope, $resource, $location, $routeParams, Product, $modal) {
         $scope.product = new Product();
 
         Product.query().then(function(products){
             $scope.products = products;
         });
-        $scope.formData = {
-            productName: '',
-            productPrice: ''
-        };
+//        $scope.formData = {
+//            productName: '',
+//            productPrice: ''
+//        };
+
+        angular.extend ($scope.product, {
+            name: '',
+            price: ''
+        })
         $scope.createProduct = function() {
             $scope.product.create()
                 .then(function(response) {
@@ -59,26 +64,27 @@ angular.module('clientApp')
                         $scope.product.create()
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = true
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
                             });
                     };
-
                 },
-                size: size,
-                resolve: {
-                    product: function () {
-                        return;
+                    size: size,
+                    resolve: {
+                        product: function () {
+                            return;
+                        }
                     }
-                }
-            });
+                });
 
-            modalInstance.result.then(function () {
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
-        };
+                modalInstance.result.then(function () {
+                }, function () {
+                    $log.info('Modal dismissed at: ' + new Date());
+                });
+            };
        $scope.update = function (size, selectedProduct) {
 
             var modalInstance = $modal.open({
@@ -88,19 +94,34 @@ angular.module('clientApp')
 
                     $scope.ok = function () {
                         $modalInstance.close($scope.product);
+                        console.log("SUCCESS", $scope.product);
+
                     };
 
                     $scope.cancel = function () {
                         $modalInstance.dismiss('cancel');
                     };
 
+                    $scope.showPopup = function () {
+                        $scope.isPopupVisible = true;
+                    };
+
+                    $scope.showPopup2 = function () {
+                        $scope.isPopupVisible2 = true;
+                    };
+
                     $scope.updateProduct = function(product) {
                         $scope.product.update(product)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
 
@@ -108,9 +129,14 @@ angular.module('clientApp')
                         $scope.product.delete(product)
                             .then(function(response) {
                                 console.log("SUCCESS", response);
+                                $scope.isPopupVisible2 = false;
+                                $scope.isPopupVisible4 = true;
+
                             })
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
+                                $scope.isPopupVisible5 = true;
+
                             });
                     };
                 },

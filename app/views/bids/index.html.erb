@@ -1,0 +1,33 @@
+<h1>Listing bids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Consumer</th>
+      <th>Value</th>
+      <th>Comment</th>
+      <th>Merchandise</th>
+      <th>Success</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bids.each do |bid| %>
+      <tr>
+        <td><%= bid.consumer %></td>
+        <td><%= bid.value %></td>
+        <td><%= bid.comment %></td>
+        <td><%= bid.merchandise %></td>
+        <td><%= bid.success %></td>
+        <td><%= link_to 'Show', bid %></td>
+        <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
+        <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bid', new_bid_path %>

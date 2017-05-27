@@ -1,0 +1,99 @@
+<button class="btn btn-default btn-xs" ng-click="ctrl.enable()">Enable ui-select</button>
+<button class="btn btn-default btn-xs" ng-click="ctrl.disable()">Disable ui-select</button>
+<button class="btn btn-default btn-xs" ng-click="ctrl.clear()">Clear ng-model</button>
+
+<h3>Bootstrap theme <small>(remote data source)</small></h3>
+<p>Selected: {{ctrl.address.selected.formatted_address}}</p>
+<div>
+    City
+    <ui-select ng-model="selAddress">
+        <ui-select-match placeholder="Choose an address">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="address in addresses track by $index" refresh-delay="0">
+            <div ng-bind-html="address.a | highlight: $select.search"></div>
+        </ui-select-choices>
+    </ui-select>
+
+    Selected: <b>{{ selAddress }}</b>
+</div>
+<ui-select ng-model="patient"
+           theme="bootstrap"
+           ng-disabled="ctrl.disabled"
+           reset-search-input="false"
+           style="width: 300px;"
+           title="Choose an address">
+    <ui-select-match placeholder="Enter an address...">{{$select.selected.firstName}}</ui-select-match>
+    <ui-select-choices repeat="patient in patients | filter:$select.search"
+                       refresh="refreshPatients ($select.search)"
+                       refresh-delay="0">
+        <div ng-bind-html="patient.firstName | highlight: $select.search"></div>
+    </ui-select-choices>
+</ui-select>
+
+<h3>Select2 theme</h3>
+<p>Selected: {{ctrl.person.selected}}</p>
+<ui-select ng-model="doctorId" theme="select2" ng-disabled="ctrl.disabled" style="min-width: 300px;" title="Choose a person">
+    <ui-select-match placeholder="Choose a doctor">{{$select.selected.firstName}}  {{$select.selected.lastName}}</ui-select-match>
+    <ui-select-choices repeat="doctor in doctors | filter:$select.search">
+        <div ng-bind-html="doctor.firstName +  + doctor.lastName | highlight: $select.search"></div>
+    </ui-select-choices>
+</ui-select>
+
+<h3>Selectize theme</h3>
+<p>Selected: {{ctrl.country.selected}}</p>
+<ui-select ng-model="ctrl.country.selected" theme="selectize" ng-disabled="ctrl.disabled" style="width: 300px;" title="Choose a country">
+    <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="country in ctrl.countries | filter: $select.search">
+        <span ng-bind-html="country.name | highlight: $select.search"></span>
+        <small ng-bind-html="country.code | highlight: $select.search"></small>
+    </ui-select-choices>
+</ui-select>
+
+<table id="datatables1" class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        ID
+    </tr>
+    </thead>
+    <tbody  data-ng-repeat="doctor in doctors" ng-click="select(doctor)">
+    <tr>
+        <td>{{doctor.firstName}}</td>
+        <td>{{doctor.lastName}}</td>
+        <td>{{doctor.id}}</td>
+
+
+        <td><input type="checkbox" ng-model="useDoctorIds[doctorId]"/></td>
+        <!--<span>({{ (filteredLetters | filter:query | filter:count('doctorId', doctorId)).length }})</span>-->
+
+
+    </tr>
+    </tbody><!-- source with ajax -->
+</table>
+
+<div class="header">
+    <h3 class="modal-title">Update a Doctor</h3>
+</div>
+<div class="body">
+    <form>
+        <fieldset>
+            <label><strong>Item</strong></label>
+            <input class="span3" ng-model="doctor.firstName" placeholder="First name" type="text" maxlength="40" required>
+            <!--<label><strong>Type</strong></label>-->
+            <!--<input class="span3" id="formData.billable_itemType" ng-model="billable_item.type" placeholder="Type" type="string" maxlength="40" required>-->
+            <label><strong>Price</strong></label>
+            <input class="span3" ng-model="doctor.lastName" placeholder="Last Name" type="text" maxlength="40" required>
+
+            <button class="btn btn-primary" ng-click="updateDoctor(doctor)">Update</button>
+        </fieldset>
+    </form>
+    <div class="modal-footer">
+        <button class="btn btn-success" ng-click="ok()">Ok</button>
+
+        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+    </div>
+</div>

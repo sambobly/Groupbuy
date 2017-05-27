@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consumer.name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @consumer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @consumer.last_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @consumer.date_of_birth %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @consumer.payment_method %>
+</p>
+
+<p>
+  <strong>Public:</strong>
+  <%= @consumer.public %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @consumer.gender %>
+</p>
+
+<p>
+  <strong>Pronoun:</strong>
+  <%= @consumer.pronoun %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @consumer.email %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @consumer.number %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @consumer.password %>
+</p>
+
+<%= link_to 'Edit', edit_consumer_path(@consumer) %> |
+<%= link_to 'Back', consumers_path %>
