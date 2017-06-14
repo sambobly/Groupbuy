@@ -13,23 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20170416003515) do
 
-  create_table "accounts", force: true do |t|
-    t.string   "companyname"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "email"
-    t.string   "country"
+  create_table "accounts", force: :cascade do |t|
+    t.string   "companyname", limit: 255
+    t.string   "firstname",   limit: 255
+    t.string   "lastname",    limit: 255
+    t.string   "email",       limit: 255
+    t.string   "country",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "active_admin_comments", force: true do |t|
-    t.string   "namespace"
-    t.text     "body"
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
-    t.integer  "author_id"
-    t.string   "author_type"
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string   "namespace",     limit: 255
+    t.text     "body",          limit: 65535
+    t.string   "resource_id",   limit: 255,   null: false
+    t.string   "resource_type", limit: 255,   null: false
+    t.integer  "author_id",     limit: 4
+    t.string   "author_type",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,17 +38,17 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "admin_users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "admin_users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,32 +56,32 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "appointments", force: true do |t|
-    t.string   "name"
+  create_table "appointments", force: :cascade do |t|
+    t.string   "name",                 limit: 255
     t.date     "date"
-    t.string   "patient_name"
+    t.string   "patient_name",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "dr_comment"
-    t.text     "receptionist_comment"
-    t.integer  "doctor_id"
-    t.integer  "patient_id"
+    t.string   "dr_comment",           limit: 255
+    t.text     "receptionist_comment", limit: 65535
+    t.integer  "doctor_id",            limit: 4
+    t.integer  "patient_id",           limit: 4
     t.time     "start_time"
     t.time     "end_time"
     t.date     "start_date"
     t.date     "end_date"
-    t.string   "doctor_name"
-    t.string   "doctor_first"
-    t.string   "doctor_last"
+    t.string   "doctor_name",          limit: 255
+    t.string   "doctor_first",         limit: 255
+    t.string   "doctor_last",          limit: 255
     t.boolean  "attended"
     t.boolean  "fail"
   end
 
-  create_table "bids", force: true do |t|
-    t.integer  "consumer_id"
-    t.decimal  "value",          precision: 10, scale: 0
-    t.string   "comment"
-    t.integer  "merchandise_id"
+  create_table "bids", force: :cascade do |t|
+    t.integer  "consumer_id",    limit: 4
+    t.decimal  "value",                      precision: 10
+    t.string   "comment",        limit: 255
+    t.integer  "merchandise_id", limit: 4
     t.boolean  "success"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -91,159 +91,159 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "bids", ["consumer_id"], name: "index_bids_on_consumer_id", using: :btree
   add_index "bids", ["merchandise_id"], name: "index_bids_on_merchandise_id", using: :btree
 
-  create_table "billable_items", force: true do |t|
-    t.string   "name"
-    t.string   "type"
-    t.decimal  "price",      precision: 10, scale: 0
-    t.integer  "tax"
-    t.decimal  "total",      precision: 10, scale: 0
+  create_table "billable_items", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "type",       limit: 255
+    t.decimal  "price",                  precision: 10
+    t.integer  "tax",        limit: 4
+    t.decimal  "total",                  precision: 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "birds", force: true do |t|
-    t.string   "name"
-    t.integer  "nest_id"
+  create_table "birds", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "nest_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "businesses", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.integer  "postcode"
-    t.string   "country"
-    t.string   "registrationname"
-    t.integer  "registrationnumber"
-    t.string   "website"
-    t.string   "contact"
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name",               limit: 255
+    t.string   "address",            limit: 255
+    t.string   "city",               limit: 255
+    t.string   "state",              limit: 255
+    t.integer  "postcode",           limit: 4
+    t.string   "country",            limit: 255
+    t.string   "registrationname",   limit: 255
+    t.integer  "registrationnumber", limit: 4
+    t.string   "website",            limit: 255
+    t.string   "contact",            limit: 255
     t.boolean  "online"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.string   "description"
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "description", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "checkins", force: true do |t|
+  create_table "checkins", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "checkouts", force: true do |t|
+  create_table "checkouts", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "concession_types", force: true do |t|
-    t.string   "name"
-    t.integer  "percentage"
+  create_table "concession_types", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "percentage", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "consult_templates", force: true do |t|
-    t.text     "name"
-    t.text     "content"
+  create_table "consult_templates", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.text     "content",    limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "consultations", force: true do |t|
-    t.integer  "patient_id"
-    t.integer  "doctor_id"
+  create_table "consultations", force: :cascade do |t|
+    t.integer  "patient_id", limit: 4
+    t.integer  "doctor_id",  limit: 4
     t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "consults", force: true do |t|
-    t.string   "patient"
-    t.string   "doctor"
-    t.string   "appointment"
+  create_table "consults", force: :cascade do |t|
+    t.string   "patient",        limit: 255
+    t.string   "doctor",         limit: 255
+    t.string   "appointment",    limit: 255
     t.date     "date"
     t.time     "time"
-    t.string   "note"
+    t.string   "note",           limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "patient_id"
-    t.integer  "doctor_id"
-    t.integer  "appointment_id"
+    t.integer  "patient_id",     limit: 4
+    t.integer  "doctor_id",      limit: 4
+    t.integer  "appointment_id", limit: 4
   end
 
   add_index "consults", ["appointment_id"], name: "index_consults_on_appointment_id", using: :btree
   add_index "consults", ["doctor_id"], name: "index_consults_on_doctor_id", using: :btree
   add_index "consults", ["patient_id"], name: "index_consults_on_patient_id", using: :btree
 
-  create_table "consumers", force: true do |t|
-    t.string   "name"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "date_of_birth"
-    t.integer  "payment_method_id"
-    t.string   "public"
-    t.string   "gender"
-    t.string   "pronoun"
-    t.string   "email"
-    t.string   "number"
-    t.string   "password"
+  create_table "consumers", force: :cascade do |t|
+    t.string   "name",              limit: 255
+    t.string   "first_name",        limit: 255
+    t.string   "last_name",         limit: 255
+    t.string   "date_of_birth",     limit: 255
+    t.integer  "payment_method_id", limit: 4
+    t.string   "public",            limit: 255
+    t.string   "gender",            limit: 255
+    t.string   "pronoun",           limit: 255
+    t.string   "email",             limit: 255
+    t.string   "number",            limit: 255
+    t.string   "password",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "user_id",           limit: 4
   end
 
   add_index "consumers", ["payment_method_id"], name: "index_consumers_on_payment_method_id", using: :btree
   add_index "consumers", ["user_id"], name: "index_consumers_on_user_id", using: :btree
 
-  create_table "contacts", force: true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "phone"
-    t.string   "occupation"
-    t.string   "company"
-    t.string   "email"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.integer  "postcode"
-    t.string   "note"
+  create_table "contacts", force: :cascade do |t|
+    t.string   "firstname",  limit: 255
+    t.string   "lastname",   limit: 255
+    t.integer  "phone",      limit: 4
+    t.string   "occupation", limit: 255
+    t.string   "company",    limit: 255
+    t.string   "email",      limit: 255
+    t.string   "address",    limit: 255
+    t.string   "city",       limit: 255
+    t.string   "state",      limit: 255
+    t.integer  "postcode",   limit: 4
+    t.string   "note",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "doctors", force: true do |t|
-    t.string   "first_name"
-    t.string   "position"
+  create_table "doctors", force: :cascade do |t|
+    t.string   "first_name", limit: 255
+    t.string   "position",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "last_name"
-    t.string   "name"
+    t.string   "last_name",  limit: 255
+    t.string   "name",       limit: 255
   end
 
-  create_table "doctors_patients", force: true do |t|
-    t.integer "doctor_id"
-    t.integer "patient_id"
+  create_table "doctors_patients", force: :cascade do |t|
+    t.integer "doctor_id",  limit: 4
+    t.integer "patient_id", limit: 4
   end
 
-  create_table "eggs", force: true do |t|
-    t.string   "name"
-    t.integer  "nest_id"
+  create_table "eggs", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "nest_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "content"
+    t.text     "content",    limit: 65535
   end
 
-  create_table "emails", force: true do |t|
-    t.string   "subject"
-    t.string   "content"
-    t.integer  "patient_id"
-    t.integer  "doctor_id"
+  create_table "emails", force: :cascade do |t|
+    t.string   "subject",    limit: 255
+    t.string   "content",    limit: 255
+    t.integer  "patient_id", limit: 4
+    t.integer  "doctor_id",  limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -251,42 +251,42 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "emails", ["doctor_id"], name: "index_emails_on_doctor_id", using: :btree
   add_index "emails", ["patient_id"], name: "index_emails_on_patient_id", using: :btree
 
-  create_table "expenses", force: true do |t|
+  create_table "expenses", force: :cascade do |t|
     t.date     "date"
-    t.string   "vendor"
-    t.string   "category"
-    t.decimal  "amount",          precision: 10, scale: 0
-    t.decimal  "tax",             precision: 10, scale: 0
-    t.decimal  "taxamount",       precision: 10, scale: 0
-    t.string   "note"
+    t.string   "vendor",          limit: 255
+    t.string   "category",        limit: 255
+    t.decimal  "amount",                      precision: 10
+    t.decimal  "tax",                         precision: 10
+    t.decimal  "taxamount",                   precision: 10
+    t.string   "note",            limit: 255
     t.boolean  "product"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "concession_type"
-    t.string   "test"
+    t.string   "concession_type", limit: 255
+    t.string   "test",            limit: 255
   end
 
-  create_table "individuals", force: true do |t|
-    t.string   "provider",               default: "email", null: false
-    t.string   "uid",                    default: "",      null: false
-    t.string   "encrypted_password",     default: "",      null: false
-    t.string   "reset_password_token"
+  create_table "individuals", force: :cascade do |t|
+    t.string   "provider",               limit: 255,   default: "email", null: false
+    t.string   "uid",                    limit: 255,   default: "",      null: false
+    t.string   "encrypted_password",     limit: 255,   default: "",      null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,       null: false
+    t.integer  "sign_in_count",          limit: 4,     default: 0,       null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.string   "name"
-    t.string   "nickname"
-    t.string   "image"
-    t.string   "email"
-    t.text     "tokens"
+    t.string   "unconfirmed_email",      limit: 255
+    t.string   "name",                   limit: 255
+    t.string   "nickname",               limit: 255
+    t.string   "image",                  limit: 255
+    t.string   "email",                  limit: 255
+    t.text     "tokens",                 limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -296,93 +296,93 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "individuals", ["reset_password_token"], name: "index_individuals_on_reset_password_token", unique: true, using: :btree
   add_index "individuals", ["uid", "provider"], name: "index_individuals_on_uid_and_provider", unique: true, using: :btree
 
-  create_table "inovices", force: true do |t|
+  create_table "inovices", force: :cascade do |t|
     t.date     "date"
-    t.string   "patient"
-    t.string   "doctor"
-    t.string   "appointment"
-    t.string   "item"
-    t.decimal  "price",       precision: 10, scale: 0
-    t.integer  "quantity"
-    t.integer  "tax"
-    t.integer  "discount"
-    t.decimal  "total",       precision: 10, scale: 0
-    t.string   "note"
+    t.string   "patient",     limit: 255
+    t.string   "doctor",      limit: 255
+    t.string   "appointment", limit: 255
+    t.string   "item",        limit: 255
+    t.decimal  "price",                   precision: 10
+    t.integer  "quantity",    limit: 4
+    t.integer  "tax",         limit: 4
+    t.integer  "discount",    limit: 4
+    t.decimal  "total",                   precision: 10
+    t.string   "note",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "invoices", force: true do |t|
+  create_table "invoices", force: :cascade do |t|
     t.date     "date"
-    t.string   "patient"
-    t.string   "doctor"
-    t.string   "appointment"
-    t.string   "item"
-    t.decimal  "price",           precision: 10, scale: 0
-    t.integer  "quantity"
-    t.integer  "tax"
-    t.integer  "discount"
-    t.decimal  "total",           precision: 10, scale: 0
-    t.string   "note"
+    t.string   "patient",         limit: 255
+    t.string   "doctor",          limit: 255
+    t.string   "appointment",     limit: 255
+    t.string   "item",            limit: 255
+    t.decimal  "price",                       precision: 10
+    t.integer  "quantity",        limit: 4
+    t.integer  "tax",             limit: 4
+    t.integer  "discount",        limit: 4
+    t.decimal  "total",                       precision: 10
+    t.string   "note",            limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "item_name"
-    t.string   "product"
-    t.string   "concession_type"
-    t.integer  "patient_id"
-    t.string   "lines"
+    t.string   "name",            limit: 255
+    t.string   "item_name",       limit: 255
+    t.string   "product",         limit: 255
+    t.string   "concession_type", limit: 255
+    t.integer  "patient_id",      limit: 4
+    t.string   "lines",           limit: 255
   end
 
   add_index "invoices", ["patient_id"], name: "index_invoices_on_patient_id", using: :btree
 
-  create_table "letters", force: true do |t|
-    t.string   "subject"
-    t.string   "content"
-    t.integer  "patient_id"
-    t.integer  "doctor_id"
-    t.integer  "appointment_id"
+  create_table "letters", force: :cascade do |t|
+    t.string   "subject",        limit: 255
+    t.string   "content",        limit: 255
+    t.integer  "patient_id",     limit: 4
+    t.integer  "doctor_id",      limit: 4
+    t.integer  "appointment_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email"
+    t.string   "email",          limit: 255
   end
 
   add_index "letters", ["appointment_id"], name: "index_letters_on_appointment_id", using: :btree
   add_index "letters", ["doctor_id"], name: "index_letters_on_doctor_id", using: :btree
   add_index "letters", ["patient_id"], name: "index_letters_on_patient_id", using: :btree
 
-  create_table "line_items", force: true do |t|
-    t.integer  "appointment_id"
-    t.integer  "checkin_id"
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "appointment_id", limit: 4
+    t.integer  "checkin_id",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "check_in_time"
     t.datetime "check_out_time"
-    t.boolean  "checked_in",     default: true
+    t.boolean  "checked_in",               default: true
   end
 
-  create_table "lines", force: true do |t|
-    t.integer  "invoice_id"
-    t.text     "item"
-    t.decimal  "price",      precision: 10, scale: 0
-    t.integer  "quantity"
-    t.decimal  "tax",        precision: 10, scale: 0
-    t.decimal  "discount",   precision: 10, scale: 0
-    t.decimal  "total",      precision: 10, scale: 0
-    t.text     "product"
+  create_table "lines", force: :cascade do |t|
+    t.integer  "invoice_id", limit: 4
+    t.text     "item",       limit: 65535
+    t.decimal  "price",                    precision: 10
+    t.integer  "quantity",   limit: 4
+    t.decimal  "tax",                      precision: 10
+    t.decimal  "discount",                 precision: 10
+    t.decimal  "total",                    precision: 10
+    t.text     "product",    limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "product_id"
+    t.integer  "product_id", limit: 4
   end
 
   add_index "lines", ["invoice_id"], name: "index_lines_on_invoice_id", using: :btree
   add_index "lines", ["product_id"], name: "index_lines_on_product_id", using: :btree
 
-  create_table "meetings", force: true do |t|
-    t.integer  "doctor_id"
-    t.integer  "patient_id"
-    t.integer  "appointment_id"
-    t.text     "content"
+  create_table "meetings", force: :cascade do |t|
+    t.integer  "doctor_id",      limit: 4
+    t.integer  "patient_id",     limit: 4
+    t.integer  "appointment_id", limit: 4
+    t.text     "content",        limit: 65535
     t.date     "date"
     t.time     "time"
     t.datetime "created_at"
@@ -393,20 +393,20 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "meetings", ["doctor_id"], name: "index_meetings_on_doctor_id", using: :btree
   add_index "meetings", ["patient_id"], name: "index_meetings_on_patient_id", using: :btree
 
-  create_table "merchandises", force: true do |t|
-    t.decimal  "value",         precision: 10, scale: 0
-    t.integer  "category_id"
-    t.integer  "consumer_id"
-    t.text     "title"
-    t.text     "description"
+  create_table "merchandises", force: :cascade do |t|
+    t.decimal  "value",                       precision: 10
+    t.integer  "category_id",   limit: 4
+    t.integer  "consumer_id",   limit: 4
+    t.text     "title",         limit: 65535
+    t.text     "description",   limit: 65535
     t.datetime "start"
     t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "category_name"
-    t.decimal  "bid",           precision: 10, scale: 0
-    t.decimal  "difference",    precision: 10, scale: 0
-    t.string   "consumer_name"
+    t.string   "category_name", limit: 255
+    t.decimal  "bid",                         precision: 10
+    t.decimal  "difference",                  precision: 10
+    t.string   "consumer_name", limit: 255
     t.boolean  "complete"
     t.boolean  "email"
     t.boolean  "received"
@@ -416,46 +416,46 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "merchandises", ["category_id"], name: "index_merchandises_on_category_id", using: :btree
   add_index "merchandises", ["consumer_id"], name: "index_merchandises_on_consumer_id", using: :btree
 
-  create_table "nests", force: true do |t|
-    t.string   "name"
+  create_table "nests", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "patients", force: true do |t|
-    t.integer  "UR_number"
+  create_table "patients", force: :cascade do |t|
+    t.integer  "UR_number",         limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.text     "title"
+    t.string   "first_name",        limit: 255
+    t.string   "last_name",         limit: 255
+    t.string   "email",             limit: 255
+    t.text     "title",             limit: 65535
     t.date     "date_of_birth"
-    t.text     "gender"
-    t.text     "concession_type"
-    t.text     "address"
-    t.text     "emergency_contact"
-    t.decimal  "medicare_number",   precision: 10, scale: 0
-    t.text     "referral_type"
-    t.text     "referring_doctor"
-    t.integer  "phone_number"
+    t.text     "gender",            limit: 65535
+    t.text     "concession_type",   limit: 65535
+    t.text     "address",           limit: 65535
+    t.text     "emergency_contact", limit: 65535
+    t.decimal  "medicare_number",                 precision: 10
+    t.text     "referral_type",     limit: 65535
+    t.text     "referring_doctor",  limit: 65535
+    t.integer  "phone_number",      limit: 4
   end
 
-  create_table "payment_types", force: true do |t|
-    t.string   "name"
+  create_table "payment_types", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "payments", force: true do |t|
-    t.integer  "patient_id"
-    t.integer  "doctor_id"
-    t.integer  "invoice_id"
-    t.integer  "paymentType_id"
-    t.integer  "appointment_id"
+  create_table "payments", force: :cascade do |t|
+    t.integer  "patient_id",     limit: 4
+    t.integer  "doctor_id",      limit: 4
+    t.integer  "invoice_id",     limit: 4
+    t.integer  "paymentType_id", limit: 4
+    t.integer  "appointment_id", limit: 4
     t.date     "date"
-    t.text     "note"
-    t.decimal  "total",          precision: 10, scale: 0
+    t.text     "note",           limit: 65535
+    t.decimal  "total",                        precision: 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -466,71 +466,71 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "payments", ["patient_id"], name: "index_payments_on_patient_id", using: :btree
   add_index "payments", ["paymentType_id"], name: "index_payments_on_paymentType_id", using: :btree
 
-  create_table "procurators", force: true do |t|
-    t.text     "name"
-    t.integer  "invoice_id"
+  create_table "procurators", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "invoice_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "procurators", ["invoice_id"], name: "index_procurators_on_invoice_id", using: :btree
 
-  create_table "products", force: true do |t|
-    t.text     "name"
-    t.decimal  "price",      precision: 10, scale: 0
+  create_table "products", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.decimal  "price",                    precision: 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "recipients", force: true do |t|
-    t.integer  "letter_id"
-    t.text     "email"
-    t.text     "name"
-    t.text     "first_name"
-    t.text     "last_name"
-    t.text     "type"
+  create_table "recipients", force: :cascade do |t|
+    t.integer  "letter_id",  limit: 4
+    t.text     "email",      limit: 65535
+    t.text     "name",       limit: 65535
+    t.text     "first_name", limit: 65535
+    t.text     "last_name",  limit: 65535
+    t.text     "type",       limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "recipients", ["letter_id"], name: "index_recipients_on_letter_id", using: :btree
 
-  create_table "sticks", force: true do |t|
-    t.text     "name"
-    t.integer  "nest_id"
+  create_table "sticks", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "nest_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "sticks", ["nest_id"], name: "index_sticks_on_nest_id", using: :btree
 
-  create_table "taxes", force: true do |t|
-    t.text     "name"
-    t.integer  "amount"
+  create_table "taxes", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "amount",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "templates", force: true do |t|
-    t.text     "name"
-    t.text     "content"
+  create_table "templates", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.text     "content",    limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tests", force: true do |t|
-    t.string   "name"
-    t.string   "concession_type"
+  create_table "tests", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "concession_type", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tickets", force: true do |t|
-    t.integer  "consumer_id"
-    t.integer  "bid_id"
-    t.integer  "merchandise_id"
+  create_table "tickets", force: :cascade do |t|
+    t.integer  "consumer_id",    limit: 4
+    t.integer  "bid_id",         limit: 4
+    t.integer  "merchandise_id", limit: 4
     t.boolean  "win"
-    t.integer  "value"
+    t.integer  "value",          limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -539,61 +539,61 @@ ActiveRecord::Schema.define(version: 20170416003515) do
   add_index "tickets", ["consumer_id"], name: "index_tickets_on_consumer_id", using: :btree
   add_index "tickets", ["merchandise_id"], name: "index_tickets_on_merchandise_id", using: :btree
 
-  create_table "twigs", force: true do |t|
-    t.text     "name"
-    t.integer  "nest_id"
+  create_table "twigs", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "nest_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "twigs", ["nest_id"], name: "index_twigs_on_nest_id", using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "password_digest"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",                   limit: 255
+    t.string   "password_digest",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
+    t.string   "unconfirmed_email",      limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "widgets", force: true do |t|
-    t.integer  "product_id"
-    t.integer  "invoice_id"
-    t.string   "item"
-    t.decimal  "price",      precision: 10, scale: 0
-    t.integer  "quantity"
-    t.decimal  "tax",        precision: 10, scale: 0
-    t.decimal  "discount",   precision: 10, scale: 0
-    t.decimal  "total",      precision: 10, scale: 0
-    t.string   "product"
+  create_table "widgets", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "invoice_id", limit: 4
+    t.string   "item",       limit: 255
+    t.decimal  "price",                  precision: 10
+    t.integer  "quantity",   limit: 4
+    t.decimal  "tax",                    precision: 10
+    t.decimal  "discount",               precision: 10
+    t.decimal  "total",                  precision: 10
+    t.string   "product",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "tax_id"
+    t.integer  "tax_id",     limit: 4
   end
 
   add_index "widgets", ["invoice_id"], name: "index_widgets_on_invoice_id", using: :btree
   add_index "widgets", ["product_id"], name: "index_widgets_on_product_id", using: :btree
   add_index "widgets", ["tax_id"], name: "index_widgets_on_tax_id", using: :btree
 
-  create_table "wishes", force: true do |t|
-    t.integer  "consumer_id"
-    t.integer  "merchandise_id"
+  create_table "wishes", force: :cascade do |t|
+    t.integer  "consumer_id",    limit: 4
+    t.integer  "merchandise_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
