@@ -10,13 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
 //= require jquery-ui/datepicker
 //= require appointments/jquery.multiselect
 //= require jquery-ui/dialog
-//= require turbolinks
 //= require rails.validations.js
 //= require layout/jquery.dropotron
 //= require layout/skel.min

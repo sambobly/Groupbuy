@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170416003515) do
+ActiveRecord::Schema.define(version: 20170630093825) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "companyname", limit: 255
@@ -196,6 +196,7 @@ ActiveRecord::Schema.define(version: 20170416003515) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",           limit: 4
+    t.string   "avatar",            limit: 255
   end
 
   add_index "consumers", ["payment_method_id"], name: "index_consumers_on_payment_method_id", using: :btree
@@ -411,6 +412,7 @@ ActiveRecord::Schema.define(version: 20170416003515) do
     t.boolean  "email"
     t.boolean  "received"
     t.boolean  "paid"
+    t.string   "rescue",        limit: 255
   end
 
   add_index "merchandises", ["category_id"], name: "index_merchandises_on_category_id", using: :btree

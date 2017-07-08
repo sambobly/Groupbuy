@@ -11,7 +11,7 @@ Optho::Application.routes.draw do
 
   resources :merchandises, defaults: { format: 'json' }
 
-  resources :consumers
+  resources :consumers, defaults: { format: 'json' }
 
   resources :recipients
 
@@ -74,12 +74,12 @@ Optho::Application.routes.draw do
 
   resources :checkouts
 
-  #devise_for :admin_users, ActiveAdmin::Devise.config
-  #ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
-  #devise_scope :user do  get "admin/index"
+  devise_scope :user do  get "admin/index"
 
-  #end
+  end
 
   controller :sessions do
     get 'new'
@@ -442,6 +442,7 @@ end
         post 'create'
       end
     end
+
     resources :users do
         collection do
           get 'find'
@@ -539,7 +540,28 @@ end
         post 'edit'
         get 'show'
       end
-    end
+  end
+  resources :consumers, defaults: { format: 'json' } do
+  collection do
+    get 'find'
+    get 'index'
+    post 'index'
+    post 'create'
+    post 'destroy'
+    post 'edit'
+    get 'update'
+    get 'show'
+  end
+  member do
+    post 'destroy'
+    post 'update'
+    get 'edit'
+    patch 'edit'
+    patch 'update'
+    post 'edit'
+    get 'show'
+  end
+end
     resources :lines do
       collection do
         get 'find'

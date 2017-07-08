@@ -1,5 +1,5 @@
 class Consumer < ActiveRecord::Base
-  attr_accessible :name, :first_name, :last_name, :date_of_birth, :payment_method_id, :public, :gender, :pronoun, :email, :number, :password, :user_id
+  attr_accessible :name, :first_name, :last_name, :date_of_birth, :payment_method_id, :public, :gender, :pronoun, :email, :number, :password, :user_id, :avatar
 
   belongs_to :payment_method
   belongs_to :user
@@ -12,6 +12,6 @@ class Consumer < ActiveRecord::Base
   accepts_nested_attributes_for :merchandises
   accepts_nested_attributes_for :tickets
   accepts_nested_attributes_for :wishes
-
+  mount_uploader :avatar, AvatarUploader
 
 end

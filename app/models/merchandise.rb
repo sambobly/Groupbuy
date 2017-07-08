@@ -1,6 +1,6 @@
 class Merchandise < ActiveRecord::Base
 
-  attr_accessible  :value, :category_id, :consumer_id, :title, :description, :start, :end, :bid, :category_name, :difference, :consumer_name, :complete, :email, :received, :paid
+  attr_accessible  :value, :category_id, :consumer_id, :title, :description, :start, :end, :bid, :category_name, :difference, :consumer_name, :complete, :email, :received, :paid, :rescue
   belongs_to :category
   belongs_to :consumer
   has_many :bids

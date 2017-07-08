@@ -12,7 +12,8 @@ class ConsumersController < InheritedResources::Base
   private
 
     def consumer_params
-      params.require(:consumer).permit(:name, :first_name, :last_name, :date_of_birth, :payment_method_id, :public, :gender, :pronoun, :email, :number, :password, :user_id)
+      params.require(:consumer).permit(:name, :first_name, :last_name, :date_of_birth, :payment_method_id, :public, :gender, :pronoun, :email, :number, :password, :user_id, :avatar)
     end
+
 end
 

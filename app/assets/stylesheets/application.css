@@ -13,6 +13,8 @@
  *= require appointments/fullcalendar
  *= require jquery.timepicker
  *= require jquery.multiselect
+ *= require jquery-ui
+ *= require jquery-ui/datepicker
  *= require jquery-theme/jquery-ui-1.10.3.custom
  *= require forms
  *= require consultations/consultations
