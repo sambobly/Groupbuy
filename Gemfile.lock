@@ -297,7 +297,7 @@ DEPENDENCIES
   multi_json (= 1.7.8)
   mysql2
   omniauth
-  pg
+  pg (~> 0.18)
   protected_attributes
   pry
   rack-cors
@@ -315,7 +315,7 @@ DEPENDENCIES
   yard
 
 RUBY VERSION
-   ruby 2.6.2
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.15.1
