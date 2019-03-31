@@ -16,7 +16,6 @@
     <list id="35217664-370d-4cae-9ec5-9d3d800e7112" name="Failed commit: Default (4)" comment="Fixing git" />
     <list default="true" id="381b509f-7ae1-4626-9291-06a431daeb0f" name="Failed commit: Default (5)" comment="Fixed views">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/tabletools/as3/lib/AlivePDF.swc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/FileAPI.flash.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/fonts/FontAwesome.otf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/ajaxloader.gif" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/link/images/anchor.png" />
@@ -87,19 +86,15 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/sort_desc.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/sort_desc_disabled.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/fakeobjects/images/spacer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/uploads/consumer/avatar/14/test image.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/uploads/consumer/avatar/9/test_image.jpeg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/today.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/users.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/dist/images/yeoman.a6b33b1c.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/images/yeoman.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/.bower.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.bowerrc" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/.buildignore" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.editorconfig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/.htaccess" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/dist/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/.versions" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/404.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/dist/404.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/metro/datatables/autofill/AutoFill.css" />
@@ -113,8 +108,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/colvis/ColVis.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/metro/datatables/colvis/ColVisAlt.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/DT_bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/FileAPI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/FileAPI.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/fixedcolumns/FixedColumns.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/fixedcolumns/FixedColumns.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/fixedheader/FixedHeader.js" />
@@ -124,11 +117,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/keytable/KeyTable.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/scayt/LICENSE.md" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/wsc/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/LICENSE" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Procfile" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/scayt/README.md" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/wsc/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/README.md" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/metro/datatables/tabletools/TableTools.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/tabletools/TableTools.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/datatables/tabletools/TableTools.min.js" />
@@ -296,7 +287,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/bootstrap/bootstrap.min.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/bootstrap/bootstrap.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/bower.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/styles/ecommerce/theme-color/bridge-theme.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/bs.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/build-config.js" />
@@ -306,26 +296,19 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/calendar.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/categories.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/categories.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/charges.html.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/demo/chart-bar.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/demo/chart-line.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/demo/chart-others.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/demo/chart-pie.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/wsc/dialogs/ciframe.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/ckeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/claim_email.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/claim_email.text.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/claims.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/claims.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/complete_email.text.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/config.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/consultations.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/consumercreate.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/contents.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/controllers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/charges/create.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/registrations/create.html.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/cs.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/cs.js" />
@@ -398,8 +381,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/fa.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/fail_email.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/fail_email.text.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/fi.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/fi.js" />
@@ -560,13 +541,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/nb.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/views/nests.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/nests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/charges/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload-all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload-all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload-shim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload-shim.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/ng-file-upload.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/nl.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/nl.js" />
@@ -581,7 +555,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/samples/samples/plugins/htmlwriter/outputforflash.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/samples/samples/plugins/htmlwriter/outputhtml.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/samples/samples/assets/outputxhtml/outputxhtml.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/bower_components/ng-file-upload/package.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/dist/package.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/grunt-build-control/package.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/clipboard/dialogs/paste.js" />
@@ -713,75 +686,20 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/zh.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/.bowerrc" afterPath="$PROJECT_DIR$/client/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Gruntfile.js" afterPath="$PROJECT_DIR$/client/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/avatar_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/avatar_uploader.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/bid.rb" afterPath="$PROJECT_DIR$/app/models/bid.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/bids.html" afterPath="$PROJECT_DIR$/client/app/views/bids.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/bids.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/bids.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bids_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bids_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/client/app/styles/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/ecommerce/bootstrap.css" afterPath="$PROJECT_DIR$/client/app/styles/ecommerce/bootstrap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" afterPath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower.json" afterPath="$PROJECT_DIR$/client/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/bundle" afterPath="$PROJECT_DIR$/bin/bundle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/charges_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/charges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/consumer.rb" afterPath="$PROJECT_DIR$/app/models/consumer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/consumers.html" afterPath="$PROJECT_DIR$/client/app/views/consumers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/consumers.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/consumers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/consumers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/consumers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/directives.js" afterPath="$PROJECT_DIR$/client/app/scripts/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/passwords/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/eggs.html" afterPath="$PROJECT_DIR$/client/app/views/eggs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/eggs.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/eggs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/emails_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/emails_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/taxes/index.html" afterPath="$PROJECT_DIR$/app/views/taxes/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bids/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/bids/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchandises/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchandises/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/letters_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/letters_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/merchandise.rb" afterPath="$PROJECT_DIR$/app/models/merchandise.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/merchandises.html" afterPath="$PROJECT_DIR$/client/app/views/merchandises.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchandises_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchandises_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/model_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/model_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/confirmations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/confirmations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/passwords/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rails" afterPath="$PROJECT_DIR$/bin/rails" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rake" afterPath="$PROJECT_DIR$/bin/rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/select.html" afterPath="$PROJECT_DIR$/client/app/views/select.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/services.js" afterPath="$PROJECT_DIR$/client/app/scripts/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bids/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/bids/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/merchandises/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/merchandises/show.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/sticks.html" afterPath="$PROJECT_DIR$/client/app/views/sticks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/sticks.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/sticks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/stripe.rb" afterPath="$PROJECT_DIR$/config/initializers/stripe.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/ecommerce/style.css" afterPath="$PROJECT_DIR$/client/app/styles/ecommerce/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/taxes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/taxes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emails/test.html.erb" afterPath="$PROJECT_DIR$/app/views/emails/test.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/model_mailer/test_email.html.erb" afterPath="$PROJECT_DIR$/app/views/model_mailer/test_email.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/twigs.html" afterPath="$PROJECT_DIR$/client/app/views/twigs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/twigs.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/twigs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/update.html" afterPath="$PROJECT_DIR$/client/app/views/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/users.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1383,7 +1301,7 @@
                       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/Gemfile">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="8" column="2" selection-start="247" selection-end="247" vertical-scroll-proportion="0.1588785">
+                            <state line="8" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.1588785">
                               <folding />
                             </state>
                           </provider>
@@ -3211,7 +3129,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31823084" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
@@ -3545,7 +3463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="247" selection-end="247" vertical-scroll-proportion="0.1588785">
+        <state line="8" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.1588785">
           <folding />
         </state>
       </provider>
