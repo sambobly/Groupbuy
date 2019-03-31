@@ -18,6 +18,7 @@ angular
   "ngRoute"
   "ngResource"
   "ngSanitize"
+  "ngPassword"
   "ngTouch"
   "ngTable"
   "ui.router"
@@ -38,8 +39,10 @@ angular
   "slickCarousel"
   "ngMaterial"
   "ngAnimate"
+  "ngMessages"
   "ng-token-auth"
   "angularPayments"
+  "ngFileUpload"
 #  "angular-advanced-searchbox"
 ]).config([
   '$stateProvider'
@@ -56,6 +59,10 @@ angular
     AuthProvider.registerMethod('GET');
     AuthProvider.logoutMethod 'DELETE'
     AuthProvider.logoutPath '/api/users/sign_out.json',
+    AuthProvider.sendResetPasswordInstructionsPath 'api/users/confirmation.json',
+    AuthProvider.sendResetPasswordInstructionsMethod 'POST',
+    AuthProvider.resetPasswordPath('api/users/password.json'),
+    AuthProvider.resetPasswordMethod('POST'),
     $httpProvider.defaults.withCredentials = true,
 
     $urlRouterProvider.otherwise "index",
@@ -114,6 +121,14 @@ angular
       url: "/merchandises/:merchandiseId",
       templateUrl: "views/select.html",
       controller: "TwigsController"
+    ).state("claims",
+      url: "/claims",
+      templateUrl: "views/claims.html"
+      controller: "ClaimsController"
+    ).state("claims-detail",
+      url: "/claims/:merchandiseId",
+      templateUrl: "views/claims.html"
+      controller: "ClaimsController"
     ).state("categories",
       url: "/categories",
       templateUrl: "views/categories.html"
@@ -121,6 +136,10 @@ angular
     ).state("bids",
       url: "/bids",
       templateUrl: "views/bids.html"
+      controller: "BidsController"
+    ).state("bids-detail",
+      url: "/bids/:merchandiseId",
+      templateUrl: "views/biddetail.html"
       controller: "BidsController"
     ).state("tickets",
       url: "/tickets",
@@ -221,9 +240,16 @@ angular
 #      onEnter: (Auth, $state) ->
 #      Auth.currentUser().then ->
 #        $state.go 'home'
-    ).state('register',
-      url: '/register',
-      templateUrl: 'views/register.html',
+    ).state('recover',
+      url: '/recover',
+      templateUrl: 'views/recover.html',
+      controller: 'RecoversController',
+#      onEnter: (Auth, $state) ->
+#        Auth.currentUser().then ->
+#          $state.go 'home'
+    ).state('consumercreate',
+      url: '/consumercreate',
+      templateUrl: 'views/consumercreate.html',
       controller: 'ConsumersController',
 #      onEnter: (Auth, $state) ->
 #        Auth.currentUser().then ->
@@ -470,6 +496,7 @@ Client.config(['$routeProvider', ($routeProvider) ->
 
   .when('/merchandise/:merchandiseId/bids', { templateUrl: '../api/merchandises.html', controller: 'MerchandisesController'} )
   .when('/merchandise/:merchandiseId/wishes', { templateUrl: '../api/merchandises.html', controller: 'MerchandisesController'} )
+  .when('/merchandise/:merchandiseId/claims', { templateUrl: '../api/merchandises.html', controller: 'MerchandisesController'} )
 
   ])
 Client.config(['$routeProvider', ($routeProvider) ->
@@ -484,6 +511,15 @@ Client.config(['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when('/bid/new', { templateUrl: '../api/bids.html', controller: 'BidsController' } )
   .when('/bid/:bidId', { templateUrl: '../api/bids.html', controller: 'BidsController'} )
+  ])
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/claim/new', { templateUrl: '../api/claims.html', controller: 'ClaimsController' } )
+  .when('/claim/:claimId', { templateUrl: '../api/claims.html', controller: 'ClaimsController'} )
+  .when('/claim/:merchandiseId', { templateUrl: '../api/claims.html', controller: 'ClaimsController'} )
+  .when('/claim/.merchandiseId', { templateUrl: '../api/claims.html', controller: 'ClaimsController'} )
+
   ])
 Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'

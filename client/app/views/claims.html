@@ -1,0 +1,96 @@
+<button ng-click="assessRoute()">Get route params</button>
+
+
+<div class="widget border-cyan" id="widget-wizard1">
+    <!-- widget header -->
+    <div class="widget-header bg-cyan">
+        <!-- widget icon -->
+        <div class="widget-icon"><i class="aweso-edit"></i></div>
+        <!-- widget title -->
+        <h4 class="widget-title">Make a claim!</h4>
+
+    </div><!-- /widget header -->
+
+    <!-- widget content -->
+    <div class="widget-content" id="wizard1">
+        <form class="form-horizontal" name="wizard-1" id="wrapped1">
+            <fieldset>
+                <div class="progress hide" style="margin-bottom: 20px;">
+                    <div class="bar bg-mauve" style="width: 0%;"></div>
+                </div>
+
+                <div class="step">
+                    <div class="control-group">
+                        <label class="control-label">Consumer ID</label>
+                        <div class="controls">
+                            <input type="number" ng-model="claim.consumerId" placeholder="ID" required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label">Merchandise ID</label>
+                        <div class="controls">
+                            <input type="number" ng-model="claim.merchandiseId" placeholder="ID" required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label">Email</label>
+                        <div class="controls">
+                            <input type="decimal" ng-model="claim.email" placeholder="Title" required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label">Mobile</label>
+                        <div class="controls">
+                            <input type="text" ng-model="claim.mobile" placeholder="Description required class="required input-xlarge" />
+                        </div>
+                    </div><!-- /control-group -->
+                    <div class="control-group">
+                        <label class="control-label">Account</label>
+                        <div class="controls">
+                            <input type="text" ng-model="claim.account" placeholder="Description required class="required input-xlarge" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">BSB</label>
+                        <div class="controls">
+                            <input type="text" ng-model="claim.bsb" placeholder="Description required class="required input-xlarge" />
+                        </div>
+                    </div>
+                    <!--<div class="control-group">-->
+                    <!--<label class="control-label">Start</label>-->
+                    <!--<div class="controls">-->
+                    <!--<div><input class="datepicker" data-ng-model="merchandise.start" >-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+                    <!--<div class="control-group">-->
+                    <!--<label class="control-label">End</label>-->
+                    <!--<div class="controls">-->
+                    <!--<div><input class="datepicker" data-ng-model="merchandise.end" >-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>&lt;!&ndash; /control-group &ndash;&gt;-->
+
+
+                </div><!-- /step -->
+
+
+
+
+
+                <div class="navigation form-actions bg-silver">
+                    <button type="submit" ng-click="createClaim()" class="btn bg-emerald submit">Submit</button>
+                </div>
+                <div class="navigation form-actions bg-silver">
+                    <button type="submit" ng-click="updateClaim(claim)" class="btn bg-emerald submit">Update</button>
+                </div><!-- /navigation -->
+            </fieldset>
+        </form>
+    </div><!-- /widget content -->
+</div> <!-- /widget basic wizard -->
+
+<div ng-repeat="claim in claims" ng-click="getRelatives(claim)">{{claim.id}}</div>
+<div ng-repeat="merchandise in merchandises" ng-click="getRelatives2(merchandise)">{{merchandise.title}}</div>
+
+{{consumer.name}}
+{{merchandise.title}}

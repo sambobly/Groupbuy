@@ -2,9 +2,11 @@
 
 
 angular.module('clientApp')
-    .controller('MerchandisesController', ['$scope', '$timeout', '$http', '$resource', '$location', '$state', '$routeParams', 'User', 'userService', 'Merchandise', 'Consumer', 'Bid', 'Wish', '$modal', function ($scope, $timeout, $http, $resource, $location, $state, $routeParams, User, userService, Merchandise, Consumer, Bid, Wish, $modal) {
+    .controller('MerchandisesController', ['$scope', '$timeout', '$http', '$resource', '$location', '$state', '$routeParams', 'User', 'userService', 'Merchandise', 'Consumer', 'Bid', 'Wish', '$modal', 'Upload', 'Category', function ($scope, $timeout, $http, $resource, $location, $state, $routeParams, User, userService, Merchandise, Consumer, Bid, Wish, $modal, Upload, Category) {
         $scope.userService = userService;
         $scope.user = userService.user;
+        $scope.isPopupvisiblesubmit = false;
+        $scope.isPopupvisibleloggedout = false;
 
         $scope.loadUsers = function() {
 
@@ -25,7 +27,9 @@ angular.module('clientApp')
         $scope.consumer = new Consumer();
 
         Consumer.query().then(function(consumers){
+
             $scope.consumers = consumers;
+
         });
 
         $scope.bid = new Bid();
@@ -39,8 +43,24 @@ angular.module('clientApp')
         Wish.query().then(function(wishes){
             $scope.wishes = wishes;
         });
+        $scope.category = new Category();
 
+        Category.query().then(function(categories){
+            $scope.categories = categories;
+        });
 
+        $scope.$watch('user', function (user) {
+                console.log($scope.user, "watch fired with user");
+            if ($scope.user.email != "") {
+                console.log("can create merch")
+                $scope.isPopupvisiblesubmit = true;
+            } else {
+                console.log("cannot create merch")
+                $scope.isPopupvisibleloggedout = true;
+
+            }
+
+        });
         angular.extend ($scope.merchandise, {
             value: Number(),
             category: '',
@@ -50,9 +70,11 @@ angular.module('clientApp')
             end: ''
         });
 
-        $scope.createMerchandise = function(user) {
+        $scope.createMerchandise = function(user, category) {
+
             $scope.user = userService.user;
             user = $scope.user;
+
             debugger;
             angular.forEach($scope.consumers, function(consumer) {
                 console.log("consumer", consumer)
@@ -63,10 +85,34 @@ angular.module('clientApp')
                 };
             });
             $scope.merchandise.consumerId = $scope.consumer.id;
+            $scope.merchandise.categoryId = $scope.merchandise.category.id;
+            $scope.merchandise.difference = $scope.merchandise.value;
+            $scope.merchandise.complete = 'false';
             debugger;
             $scope.merchandise.create()
                 .then(function(response) {
                     console.log("SUCCESS", response);
+                    $scope.merchandise = response;
+                    var images = $scope.selected.images;
+                    console.log(images);
+                    var merchandise = $scope.merchandise;
+                    $scope.upload = Upload.upload({
+                        url: '/api/merchandises/' + response.id,
+                        method: 'PATCH',
+                        data: {images: $scope.selected.images},
+                        images: images,
+                        fileFormDataName: 'merchandise[images]',
+                        formDataAppender: function(fd, key, val) {
+                            if (angular.isArray(val)) {
+                                angular.forEach(val, function(v) {
+                                    fd.append('merchandise['+key+']', v);
+                                });
+                            } else {
+                                fd.append('merchandise['+key+']', val);
+                            }
+                        }
+                    });
+                    debugger;
                 })
                 .catch(function(response) {
                     console.log("FAILURE!", response);
@@ -262,6 +308,28 @@ angular.module('clientApp')
             });
         };
 
+        $scope.images = function() {
+            var images = $scope.merchandise.images;
+            console.log(images);
+            var merchandise = $scope.merchandise;
+            $scope.upload = Upload.upload({
+                url: '/api/merchandises/' + merchandise.id,
+                method: 'PATCH',
+                data: {images: $scope.merchandise.images},
+                images: images,
+                fileFormDataName: 'merchandise[images]',
+                formDataAppender: function(fd, key, val) {
+                    if (angular.isArray(val)) {
+                        angular.forEach(val, function(v) {
+                            fd.append('merchandise['+key+']', v);
+                        });
+                    } else {
+                        fd.append('merchandise['+key+']', val);
+                    }
+                }
+            });
+            debugger;
+        }
 
 
     }])

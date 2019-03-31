@@ -1,5 +1,5 @@
 angular.module('clientApp')
-    .controller('UsersController', ['$scope', 'userService', 'Auth', '$http', '$window', '$resource', '$location', '$routeParams', '$state', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', function ($scope, userService, Auth, $window, $http, $resource, $location, $routeParams, $state, Consumer, Merchandise, Bid, Wish, User, $modal) {
+    .controller('UsersController', ['$scope', 'userService', 'Auth', '$http', '$window', '$resource', '$location', '$routeParams', '$state', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', function ($scope, userService, Auth, $http, $window, $resource, $location, $routeParams, $state, Consumer, Merchandise, Bid, Wish, User, $modal) {
         $scope.userService = userService;
         $scope.user = userService.user
         $scope.isPopup1Visible = false;
@@ -24,6 +24,7 @@ angular.module('clientApp')
                 $scope.isPopup2Visible = false;
             } else {
                 console.log("No user logged in")
+
             };
             debugger;
             // You can get data of current user (getting user's name and etc.)
@@ -39,6 +40,8 @@ angular.module('clientApp')
 //            debugger;
             Auth.logout().then(function(oldUser) {
                 console.log(oldUser); // => {id: 1, ect: '...'}
+                $window.location.reload();
+
                 debugger;
             }, function(error) {
                 // Authentication failed...

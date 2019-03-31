@@ -440,7 +440,7 @@ clientDirectives.directive('mySearchBox', function() {
         replace: true,
         scope: true,
         templateUrl: 'views/search.html',
-        controller: 'SticksController'
+        controller: 'SearchMerchController'
 //
 
     };
@@ -711,5 +711,88 @@ clientDirectives.directive('searchBar', function() {
         }
     }
 
+});
+
+clientDirectives.directive('formAutofillFix', function() {
+    return function(scope, elem, attrs) {
+        // Fixes Chrome bug: https://groups.google.com/forum/#!topic/angular/6NlucSskQjY
+        elem.prop('method', 'POST');
+
+        // Fix autofill issues where Angular doesn't know about autofilled inputs
+        if(attrs.ngClick) {
+            setTimeout(function() {
+                elem.unbind('submit').submit(function(e) {
+                    e.preventDefault();
+                    elem.find('input, textarea, select').trigger('input').trigger('change').trigger('keydown');
+                    scope.$apply(attrs.ngClick);
+                });
+            }, 0);
+        }
+    };
+});
+
+clientDirectives.directive('errSrc', function() {
+    return {
+        link: function(scope, element, attrs) {
+            element.bind('error', function() {
+                if (attrs.src != attrs.errSrc) {
+                    attrs.$set('src', attrs.errSrc);
+                }
+            });
+
+            attrs.$observe('ngSrc', function(value) {
+                if (!value && attrs.errSrc) {
+                    attrs.$set('src', attrs.errSrc);
+                }
+            });
+        }
+    }
+});
+clientDirectives.directive('format', ['$filter', function ($filter) {
+    return {
+        require: '?ngModel',
+        link: function (scope, elem, attrs, ctrl) {
+            if (!ctrl) return;
+
+            ctrl.$formatters.unshift(function (a) {
+                return $filter(attrs.format)(ctrl.$modelValue)
+            });
+
+            elem.bind('blur', function(event) {
+                var plainNumber = elem.val().replace(/[^\d|\-+|\.+]/g, '');
+                elem.val($filter(attrs.format)(plainNumber));
+            });
+        }
+    };
+}]);
+clientDirectives.directive('restrictInput', function() {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, element, attr, ctrl) {
+            ctrl.$parsers.unshift(function(viewValue) {
+                var options = scope.$eval(attr.restrictInput);
+                if (!options.regex && options.type) {
+                    switch (options.type) {
+                        case 'digitsOnly': options.regex = '^[0-9]*$'; break;
+                        case 'lettersOnly': options.regex = '^[a-zA-Z]*$'; break;
+                        case 'lowercaseLettersOnly': options.regex = '^[a-z]*$'; break;
+                        case 'uppercaseLettersOnly': options.regex = '^[A-Z]*$'; break;
+                        case 'lettersAndDigitsOnly': options.regex = '^[a-zA-Z0-9]*$'; break;
+                        case 'validPhoneCharsOnly': options.regex = '^[0-9 ()/-]*$'; break;
+                        default: options.regex = '';
+                    }
+                }
+                var reg = new RegExp(options.regex);
+                if (reg.test(viewValue)) { //if valid view value, return it
+                    return viewValue;
+                } else { //if not valid view value, use the model value (or empty string if that's also invalid)
+                    var overrideValue = (reg.test(ctrl.$modelValue) ? ctrl.$modelValue : '');
+                    element.val(overrideValue);
+                    return overrideValue;
+                }
+            });
+        }
+    };
 });
 

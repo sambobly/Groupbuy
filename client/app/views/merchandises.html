@@ -11,7 +11,7 @@
         <div class="container">
             <div class="aa-catg-head-banner-content">
                 <h2>{{merchandise.title}}</h2>
-
+                <h2 ng-show = "isPopupvisibleloggedout">Not logged in. Please login to create merchandise</h2>
                 <ol class="breadcrumb">
                     <!--<li><a href="index.html">Home</a></li>-->
                     <!--<li><a href="#">Product</a></li>-->
@@ -21,6 +21,7 @@
         </div>
     </div>
 </section>
+
 <!-- / catg header banner section -->
 
 <!-- product category -->
@@ -52,38 +53,90 @@
         <!-- Modal view content -->
         <div class="col-md-7 col-sm-7 col-xs-12">
             <div class="aa-product-view-content">
-                <h3>Merchandise Name</h3>
-                <div class="aa-price-block">
-                    <input type="text" ng-model="merchandise.title" placeholder="Title" required class="required input-xlarge" />
-                </div>
-
+                <form class="pure-form pure-form-aligned" name="frm"
+                      novalidate autocomplete="off">
+                    <h3>Merchandise Name</h3>
+                    <div class="aa-price-block">
+                        <input type="text"
+                               name="title"
+                               ng-model="merchandise.title"
+                               placeholder="Title"
+                               class="required input-xlarge"
+                               required class="required input-xlarge"/>
+                    </div>
+                    <div class="field-message" ng-messages="frm.title.$error" ng-if='frm.title.$dirty' ng-cloak>
+                        <div ng-message="required">Title is required</div>
+                    </div>
                 <h3>Merchandise Value</h3>
                 <div class="aa-price-block-1">
 
-                    <input type="text" min="0" ng-model="merchandise.value" placeholder="$" required class="required" currency/>
+                    <input name = "value"
+                           type="text"
+                           ng-model="merchandise.value"
+                           min= "1"
+                           placeholder="$"
+                           restrict-input="{type: 'digitsOnly'}"
+                           format = "currency"
+                           required
+                            />
+                           <!--required-->
+                           <!--class="required"-->
+                           <!--currency-->
+
+                </div>
+
+                <div class="field-message" ng-messages="frm.value.$error" ng-if='frm.value.$dirty' ng-cloak>
+                    <div ng-message="required">Required field, must be greater than $1</div>
+                    <div ng-message="min">Your field value is lesser minimum value</div>
                 </div>
 
                 <h3>Merchandise Category</h3>
                 <div class="dropdown-large">
                     <div class="dropdown-large">
-                        <select class="input-medium" id="dropdown-large" ng-model=merchandise.categoryId>
+                        <select ng-model="merchandise.category"
+                                name="category"
+                                ng-options = "category.name for category in categories"
+                                class="input-medium"
+                                id="dropdown-large"
+                                ng-model=category
+                                required>
                             <!--<option ng-repeat="merchandise in merchandises">{{merchandise.title}}</option>-->
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+
+                            <option value = "">Category</option>
+
 
                         </select>
                     </div>
                 </div>
+                    <div class="field-message" ng-messages="frm.category.$error" ng-if='frm.category.$dirty' ng-cloak>
+                        <div ng-message="required">Category is required</div>
+                    </div>
                 <h3>Merchandise Description</h3>
 
                 <p>{{merchandise.description}}</p>
 
 
-                <div class="aa-prod-view-bottom">
-                    <a class="aa-add-to-cart-btn">Upload images</a>
-
+                <!--<div class="aa-prod-view-bottom">-->
+                    <!--<a class="aa-add-to-cart-btn" input type="file" ngf-select ng-model="selected.images" required">Upload images</a>-->
+                    <!--<img ng-model="merchandise.images" />{{merchandise.images}}-->
+                <!--</div>-->
+                <div class="control-group">
+                    <label class="control-label" >Image</label>
+                    <div class="controls">
+                        <input type="file"
+                               name="image"
+                               ngf-select
+                               ng-model="selected.images"
+                               required>
+                    </div>
                 </div>
+                    <div class="field-message" ng-messages="frm.image.$error" ng-if='frm.image.$dirty' ng-cloak>
+                        <div ng-message="required">Images are required</div>
+                    </div>
+                    <input type="submit" value="Submit"/>
+                    <button type="submit" ng-click="createMerchandise(); frm.image.$setDirty(); frm.title.$setDirty(); frm.category.$setDirty(); frm.value.$setDirty()" class="btn bg-emerald submit" ng-show = "isPopupvisiblesubmit">Submit</button>
+
+                </form>
             </div>
         </div>
     </div>
@@ -99,9 +152,17 @@
         <textarea class="description" placeholder="Write a description of your groupbuy!"  ng-model="merchandise.description"></textarea>
         </div>
     </div>
-    <button type="submit" ng-click="createMerchandise()" class="btn bg-emerald submit">Submit</button>
+    <button type="submit" ng-click="createMerchandise(); frm.image.$setDirty(); frm.title.$setDirty(); frm.category.$setDirty(); frm.value.$setDirty()" class="btn bg-emerald submit" ng-show = "isPopupvisiblesubmit">Submit</button>
+    </div>
+    <div>
 
-</div>
+    </div>
+
+
+    <div>
+        <textarea class="rescue" placeholder="Rescue"  ng-model="merchandise.rescue"></textarea>
+
+    </div>
 </section>
 
 

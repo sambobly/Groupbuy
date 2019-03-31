@@ -2,12 +2,16 @@
 
 
 angular.module('clientApp')
-    .controller('SticksController', ['$scope', '$rootScope', '$resource', '$route', '$state', '$location', '$anchorScroll', '$window', '$routeParams', '$timeout', 'Stick', 'Doctor', 'Consumer', 'Merchandise', 'Bid', 'Ticket', 'Category' , 'Wish', '$modal', '$q', '$log', 'userService', 'Auth', function ($scope, $rootScope, $resource, $route, $state, $location, $anchorScroll, $window, $routeParams, $timeout, Stick, Doctor, Consumer, Merchandise, Bid, Ticket, Category, Wish, $modal, $q, $log, userService, Auth) {
+    .controller('SticksController', ['$scope', '$rootScope', '$resource', '$route', '$state', '$location', '$anchorScroll', '$window', '$routeParams', '$timeout', 'Stick', 'Doctor', 'Consumer', 'Merchandise', 'Bid', 'Ticket', 'Category' , 'Wish', '$modal', '$q', '$log', 'userService', 'Auth', 'ServiceMerchandises', function ($scope, $rootScope, $resource, $route, $state, $location, $anchorScroll, $window, $routeParams, $timeout, Stick, Doctor, Consumer, Merchandise, Bid, Ticket, Category, Wish, $modal, $q, $log, userService, Auth, ServiceMerchandises) {
+        $scope.myDefaultImage = 'images/polo-shirt-1.png';
+        $scope.realImage = 'http://itsolutionstuff.com/upload/Laravel-mailchimp.png';
+        $scope.noImage = 'http://itsolutionstuff.com/upload/no-image-available.png';
 
         $scope.isPopUpVisible1 = true;
 
         $scope.stick = new Stick();
 
+        $scope.isPopupvisible70 = false;
 
         Stick.query().then(function(sticks){
             $scope.sticks = sticks;
@@ -27,9 +31,25 @@ angular.module('clientApp')
 
         $scope.merchandise = new Merchandise();
 
+        $scope.wonMerchandise = [];
+
         Merchandise.query().then(function(merchandises){
+            $scope.pendingMerchandises = [];
+
+            angular.forEach(merchandises, function() {
+            });
             $scope.merchandises = merchandises;
-            $scope.filteredSearchMerchandises = merchandises;
+            angular.forEach(merchandises, function(merchandise) {
+                if (merchandise.complete != true) {
+                    $scope.pendingMerchandises.push(merchandise);
+                    debugger;
+                } else {
+                   $scope.wonMerchandise.push(merchandise);
+                }
+                console.log("Call from merchandise.query", merchandise, $scope.pendingMerchandises);
+            });
+            $scope.filteredSearchMerchandises = $scope.pendingMerchandises;
+            $scope.merchandises = $scope.pendingMerchandises;
         });
         $scope.bid = new Bid();
 
@@ -177,6 +197,7 @@ angular.module('clientApp')
 
         function loadMerchandises(merchandise) {
             Merchandise.query().then(function(merchandises){
+
                 $scope.merchandises = merchandises;
             });
             console.log($scope.merchandises);
@@ -248,8 +269,9 @@ angular.module('clientApp')
 //        };
 
 //        *NOTE NEED TO FIX THIS ON PAGE LOAD NOT RESET $rootScope.categoryFilter*
-        $scope.searchFilter = function (testText, testSelect, callback, filter, selectedItem, searchText, name, text) {
+        $scope.searchFilter = function (testText, testSelect, callback, filter, selectedItem, searchText, name, text, input) {
             debugger;
+            $scope.isPopupvisible70 = false;
             $window.location.href = "/#/sticks";
             $state.reload();
             $rootScope.filter = filter;
@@ -273,6 +295,24 @@ angular.module('clientApp')
             $scope.selectedItem = testSelect;
             $scope.searchText = testText;
             $scope.name = $scope.searchTextChange;
+            $scope.returnArray = [];
+            $scope.searchTextSplit = testText.toLowerCase().split(' ');
+            debugger;
+            for(var x = 0; x < $scope.searchText.length; x++){
+                var count = 0;
+                for(var y = 0; y < $scope.searchTextSplit.length; y++){
+                    if(testText[x].toLowerCase().indexOf($scope.searchTextSplit[y]) !== -1){
+                        count++;
+                        debugger;
+                    }
+                }
+                if(count == $scope.searchTextSplit.length){
+                    $scope.returnArray.push(testText[x]);
+                    debugger;
+                }
+            }
+            console.log($scope.returnArray, "returnArray");
+            debugger;
             $scope.isPopup3Visible = false;
             $scope.isPopUpVisible1 = true;
             $rootScope.filteredSearchMerchandises1 = [];
@@ -286,34 +326,40 @@ angular.module('clientApp')
                     $scope.searchText = $scope.selectedItem.title;
                     debugger;
                 }
-                if (nameStringify.indexOf($scope.searchText) !== -1) {
-                    debugger;
-                    return $rootScope.filteredSearchMerchandises1.push(merchandise);
+                angular.forEach($scope.searchTextSplit, function (value, key) {
+                    if (nameStringify.indexOf(value) !== -1 && $rootScope.filteredSearchMerchandises1.indexOf(merchandise) == -1) {
+//                    (nameStringify.indexOf($scope.searchText) !== -1)
+                        debugger;
 
-                }
+                        return $rootScope.filteredSearchMerchandises1.push(merchandise);
+
+                    }
 //                if (nameStringify.search($scope.selectedItem.title) == 1) {
 //                    debugger;
 //                    return $rootScope.filteredSearchMerchandises1.push(merchandise);
 //
 //                }
-                $rootScope.filteredSearchMerchandises = $rootScope.filteredSearchMerchandises1;
+                    $rootScope.filteredSearchMerchandises = $rootScope.filteredSearchMerchandises1;
+                })
+
 
             });
             console.log($rootScope.filteredSearchMerchandises1);
             $rootScope.filteredSearchMerchandises = $rootScope.filteredSearchmerchandises1;
-            console.log("search merchandise from call", $rootScope.filteredSearchMerchandises);
+            console.log("search merchandise from call", $rootScope.filteredSearchMerchandises, $scope.searchText);
             debugger;
 
         };
 //        *THIS ONE DOES ROOTSCOPE*
-        $scope.$watch('filteredSearchMerchandises1', function (newVal, testSearch) {
+        $scope.$watch('filteredSearchMerchandises1', function (newVal, testSearch, size) {
             console.log($rootScope.filteredSearchMerchandises1, "filtered list watch");
 //            $scope.filteredSearchMerchandises = $scope.filteredSearchMerchandises1;
+
             $scope.filteredSearchMerchandisesTest = Merchandise.query().then(function(merchandises, merchandise) {
                 if ($rootScope.filteredSearchMerchandises1.length == 0) {
-                    $rootScope.filteredSearchMerchandises = merchandises;
+                    $rootScope.filteredSearchMerchandises = $scope.pendingMerchandises;
                     debugger;
-                    console.log("All merchandise", $rootScope.filteredSearchMerchandises);
+                    console.log("All merchandise", $scope.noResults, $rootScope.filteredSearchMerchandises);
                     debugger;
 
                 }
@@ -327,12 +373,15 @@ angular.module('clientApp')
         }, true);
 
 //        *THIS ONE DOES NORMAL SCOPE*
-        $scope.$watch('filteredSearchMerchandises1', function (newVal, testSearch) {
+        $scope.$watch('filteredSearchMerchandises1', function (newVal, testSearch, size) {
             console.log($scope.filteredSearchMerchandises1, "filtered list watch");
 //            $scope.filteredSearchMerchandises = $scope.filteredSearchMerchandises1;
+            $scope.noResults = [];
             $scope.filteredSearchMerchandisesTest = Merchandise.query().then(function(merchandises, merchandise) {
                 if ($scope.filteredSearchMerchandises1.length == 0) {
-                    $scope.filteredSearchMerchandises = merchandises;
+                    $scope.isPopupvisible70 = true;
+
+                    $scope.filteredSearchMerchandises = $scope.pendingMerchandises;
                     debugger;
                     console.log("All merchandise", $scope.filteredSearchMerchandises);
                     debugger;
@@ -345,6 +394,28 @@ angular.module('clientApp')
 
                 }
             })
+//                .then(function() {
+//                    if($scope.noResults == 1) {
+//                        debugger;
+//                        var modalInstance = $modal.open({
+//                            templateUrl: 'noResultsModal.html',
+//                            controller: function ($scope, $modalInstance) {
+//                                $scope.test = function() {
+//                                    console.log("logged in")
+//                                }
+//
+//                            },
+//                            size: size,
+//                            resolve: {
+//                                widget: function () {
+//                                    return ;
+//                                }
+//                            }
+//                        })} else {
+//                        console.log("have results in filter")
+//
+//                    }
+//                });
         }, true);
 
         $scope.categoryId = null;
@@ -591,6 +662,19 @@ angular.module('clientApp')
             $scope.todos = $rootScope.filteredValueMerchandises;
             $scope.testFollow = [];
             console.log("makeTodos")
+//            ServiceMerchandises = [];
+//            $scope.ServiceMerchandises = ServiceMerchandises;
+//
+//            console.log("test: ", ServiceMerchandises, $scope.ServiceMerchandises.array);
+//            debugger;
+//            angular.forEach($scope.todos, function(value, key) {
+//                $scope.ServiceMerchandises.push(value);
+//                console.log("Added", ServiceMerchandises)
+//            })
+//            $scope.ServiceTests.push($scope.todos);
+//            console.log("Added", ServiceTests)
+//            debugger;
+
         };
         $scope.$watch('currentPage + numPerPage + testFollow', function() {
             var begin = (($scope.currentPage - 1) * $scope.numPerPage)
@@ -893,6 +977,7 @@ angular.module('clientApp')
             var modalInstance = $modal.open({
                 templateUrl: 'updateModal.html',
                 controller: function ($scope, $modalInstance, merchandise, Wish) {
+
                     $scope.merchandise = merchandise;
                     $scope.ctrlFlavor = merchandise.id;
 
@@ -926,9 +1011,13 @@ angular.module('clientApp')
                     };
                     $scope.addToWishlist = function() {
                         $scope.wish = new Wish;
+                        Auth.currentUser().then(function(user) {
+                            console.log(user);
+                        });
                         debugger;
                         $scope.wish.merchandiseId = merchandise.id;
                         $scope.wish.merchandiseId = user.id;
+
                         debugger;
                         console.log("wish create fired");
                         $scope.wish.create()
@@ -1120,14 +1209,17 @@ angular.module('clientApp')
 //                $log.info('Modal dismissed at: ' + new Date());
 //            });
 //        };
-        $scope.addToWishlist = function(selectedMerchandise, merchandise, user) {
+        $scope.addToWishlist = function(selectedMerchandise, merchandise, user, size) {
             $scope.merchandise = selectedMerchandise;
             merchandise = $scope.merchandise;
+
             Auth.currentUser().then(function(user) {
                 console.log(user);
+                $scope.loggedIn = []
                 angular.forEach($scope.consumers, function(consumer) {
                     console.log("consumer", consumer)
                     if(consumer.userId == user.id){
+                        $scope.loggedIn = 1;
                         console.log("SUCCESS", consumer)
                         $scope.consumer = consumer;
                         $scope.consumer2 = consumer;
@@ -1144,11 +1236,50 @@ angular.module('clientApp')
                             .catch(function(response) {
                                 console.log("FAILURE!", response);
                             });
+                    } else{
+                        console.log("no one is logged in!")
+
+
+
                     }
 
-                });
+                })
 
-            })};
+
+            }).then(function(response) {
+                    if($scope.loggedIn == 1) {
+                    var modalInstance = $modal.open({
+                        templateUrl: 'successModal.html',
+                        controller: function ($scope, $modalInstance) {
+                            $scope.test = function() {
+                                console.log("logged in")
+                            }
+
+                        },
+                        size: size,
+                        resolve: {
+                            widget: function () {
+                                return ;
+                            }
+                        }
+                    })} else {
+                        var modalInstance = $modal.open({
+                            templateUrl: 'failModal.html',
+                            controller: function ($scope, $modalInstance) {
+                                $scope.test = function() {
+                                    console.log("logged in")
+                                }
+
+                            },
+                            size: size,
+                            resolve: {
+                                widget: function () {
+                                    return ;
+                                }
+                            }
+                        })};
+                });
+        };
 
 }])
 

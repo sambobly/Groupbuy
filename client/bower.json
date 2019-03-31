@@ -33,7 +33,15 @@
     "angular-material": "~1.1.1",
     "angular-devise": "~1.2.2",
     "ng-token-auth": "~0.0.29",
-    "angular-payments": "2472bc9befa25678"
+    "angular-payments": "2472bc9befa25678",
+    "ng-file-upload": "^12.2.13",
+    "angular-password": "~1.0.3",
+    "angular-smart-table": "~2.1.8",
+    "interact": "~1.2.6",
+    "jquery-ui": "~1.11.4",
+    "jquery-timepicker-jt": "~1.11.1"
+
+
   },
   "devDependencies": {
     "angular-mocks": "~1.3.0",

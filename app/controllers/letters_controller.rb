@@ -10,6 +10,13 @@ class LettersController < InheritedResources::Base
     #debugger
     puts "Rails"
   end
+
+  def claim
+    p "Claim"
+    ModelMailer.test_email(@consumer).deliver
+
+    puts "claim"
+  end
   protected
   def begin_of_association_chain
     if params[:patient_id]
@@ -31,7 +38,7 @@ class LettersController < InheritedResources::Base
   private
 
     def letter_params
-      params.require(:letter).permit(:subject, :content, :patient_id, :doctor_id, :appointment_id, :email)
+      params.require(:letter).permit(:subject, :content, :patient_id, :doctor_id, :appointment_id, :consumer_id, :email)
     end
 end
 

@@ -1161,6 +1161,16 @@ img {
     position: relative;
     overflow: hidden;
 }
+.aa-product-catg2 {
+       display: block;
+       float: left;
+       height: 10px;
+       text-align: center;
+       margin: 0 0 20px 55px;
+       width: 20.5%;
+       position: relative;
+       overflow: hidden;
+}
 .aa-product-catg li:hover figure .aa-product-img {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -2668,8 +2678,17 @@ img {
 }
 #aa-myaccount .aa-myaccount-area .aa-myaccount-register {
     display: inline;
+    float: right;
+    width: 100%;
+}
+#aa-myaccount .aa-myaccount-area .aa-myaccount-register {
+    display: inline;
     float: left;
     width: 100%;
+}
+
+##aa-login-form {
+    font-size: 100px;
 }
 
 /*---- Login form ----*/
@@ -6990,7 +7009,10 @@ img {
     float: left;
     width: 100%;
 }
+#aa-myaccount-recover h4{
+    margin-left: 1000px
 
+}
 /*---- Login form ----*/
 
 .aa-login-form input[type="text"],
@@ -7029,9 +7051,14 @@ img {
     width: 100%;
 }
 .aa-login-form .aa-lost-password a {
-    color: #555;
+    color: rgb(221,44,0);
 }
-
+.aa-login-form .aa-register-now a {
+    color: rgb(0, 76, 221);
+}
+.aa-recover-form {
+font-size: 100px;
+}
 /*---- LOGIN MODAL ----*/
 
 #login-modal .modal-content {
@@ -8808,4 +8835,13 @@ input.upload {
     display: inline-block;
     font-weight: bold;
     font-family: 'arial', 'sans-serif';
+}
+.aa-myaccount-recover {
+    margin-left: auto;
+    margin-right: auto;
+}
+.aa-myaccount-recover h4 {
+    margin-left: 500px;
+    font-size: 20px;
+
 }

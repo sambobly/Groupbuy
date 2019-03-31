@@ -72,7 +72,7 @@
     </div><!-- /widget content -->
 </div> <!-- /widget basic wizard -->
 
-<div ng-repeat="bid in bids" ng-click="getRelatives(bid)">{{bid.id}}</div>
+<div ng-repeat="bid in bids" ng-click="getAll(bid)"><a href="#/bids/{{bid.id}}">{{bid.id}}</a></div>
 <div ng-repeat="merchandise in merchandises" ng-click="getRelatives2(merchandise)">{{merchandise.title}}</div>
 
 {{consumer.name}}

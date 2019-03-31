@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630093825) do
+ActiveRecord::Schema.define(version: 20190317103044) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "companyname", limit: 255
@@ -78,14 +78,17 @@ ActiveRecord::Schema.define(version: 20170630093825) do
   end
 
   create_table "bids", force: :cascade do |t|
-    t.integer  "consumer_id",    limit: 4
-    t.decimal  "value",                      precision: 10
-    t.string   "comment",        limit: 255
-    t.integer  "merchandise_id", limit: 4
+    t.integer  "consumer_id",       limit: 4
+    t.decimal  "value",                         precision: 10
+    t.string   "comment",           limit: 255
+    t.integer  "merchandise_id",    limit: 4
     t.boolean  "success"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "complete"
+    t.string   "merchandise_image", limit: 255
+    t.decimal  "merchandise_value",             precision: 10
+    t.string   "merchandise_title", limit: 255
   end
 
   add_index "bids", ["consumer_id"], name: "index_bids_on_consumer_id", using: :btree
@@ -140,6 +143,21 @@ ActiveRecord::Schema.define(version: 20170630093825) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "claims", force: :cascade do |t|
+    t.integer  "consumer_id",    limit: 4
+    t.integer  "merchandise_id", limit: 4
+    t.string   "email",          limit: 255
+    t.string   "mobile",         limit: 255
+    t.string   "account",        limit: 255
+    t.string   "bsb",            limit: 255
+    t.boolean  "complete"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "claims", ["consumer_id"], name: "index_claims_on_consumer_id", using: :btree
+  add_index "claims", ["merchandise_id"], name: "index_claims_on_merchandise_id", using: :btree
 
   create_table "concession_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -413,6 +431,8 @@ ActiveRecord::Schema.define(version: 20170630093825) do
     t.boolean  "received"
     t.boolean  "paid"
     t.string   "rescue",        limit: 255
+    t.string   "images",        limit: 255
+    t.string   "winner",        limit: 255
   end
 
   add_index "merchandises", ["category_id"], name: "index_merchandises_on_category_id", using: :btree
@@ -552,7 +572,6 @@ ActiveRecord::Schema.define(version: 20170630093825) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   limit: 255
-    t.string   "password_digest",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  limit: 255, default: "", null: false
@@ -603,4 +622,6 @@ ActiveRecord::Schema.define(version: 20170630093825) do
   add_index "wishes", ["consumer_id"], name: "index_wishes_on_consumer_id", using: :btree
   add_index "wishes", ["merchandise_id"], name: "index_wishes_on_merchandise_id", using: :btree
 
+  add_foreign_key "claims", "consumers"
+  add_foreign_key "claims", "merchandises"
 end

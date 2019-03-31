@@ -56,27 +56,39 @@
                                 <div class="tab-pane fade in active">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                        <li ng-repeat="bid in filteredTodos" >
-                                            <figure>
-                                                <a class="aa-product-img" selectMerchandiseBox ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open(merchandise)"></a>
-                                                <a class="aa-add-card-btn" selectMerchandiseBox ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open(merchandise)"></span>Open</a>
-                                                <figcaption>
-                                                    <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
-                                                    <h5>Total: {{merchandise.value | currency}}</h5>
-                                                    <h5>Bid ${{bid.value}} Remaining:{{merchandise.difference | currency}}</h5>
+                                        <li ng-repeat = "bid in filteredConsumerBidTodos">
+                                         <figure>
+                                            <a class="aa-product-img" selectMerchandiseBox ng-click="open1(merchandise)"><img src="http://localhost:3000{{bid.merchandiseImage}}" err-src="{{ myDefaultImage }}" ng-click="open(merchandise)"alt="polo shirt img"></a>
+                                            <a class="aa-add-card-btn pointer"  href="#/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#/merchandises/{{merchandise.id}}"></span>Open</a>
+                                             <figcaption>
+                                                 <h4 class="aa-product-title"><a href="#">{{bid.merchandiseTitle}}</a></h4>
 
-                                                    <h5>Bid: {{merchandise.bidValue}} </h5>
-                                                    <h5>{{bid.id}}</h5>
-                                                    <h5>{{bid.value}}</h5>
-
-                                                </figcaption>
-                                            </figure>
-                                            <div class="aa-product-hvr-content">
-                                                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>-->
-                                                <a data-button class="pointer" ng-click="view(selectedMerchandise, merchandise, Merchandise, large)" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>
-                                            </div>
-                                            <!-- product badge -->
+                                                 <h5>Total: {{bid.merchandiseValue | currency}}</h5>
+                                                 <h5> Bid Value ${{bid.value}} </h5>
+                                             </figcaption>
+                                         </figure>
                                         </li>
+                                        <!--<li ng-repeat="merchandise in filteredTodos" >-->
+                                            <!--<figure>-->
+                                                <!--<a class="aa-product-img" selectMerchandiseBox ng-click="open1(merchandise)"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" ng-click="open(merchandise)"alt="polo shirt img"></a>-->
+                                                <!--<a class="aa-add-card-btn pointer"  href="#/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#/merchandises/{{merchandise.id}}"></span>Open</a>-->
+                                                <!--<figcaption>-->
+                                                    <!--<h4 class="aa-product-title"><a href="#/merchandises/{{merchandise.id}}">{{merchandise.title}}</a></h4>-->
+                                                    <!--<h5>Total: {{merchandise.value | currency}}</h5>-->
+                                                    <!--<h5>Bid ${{bid.value}} Remaining:{{merchandise.difference | currency}}</h5>-->
+
+                                                    <!--&lt;!&ndash;<h5>{{bid.id}}</h5>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<h5>{{bid.value}}</h5>&ndash;&gt;-->
+
+                                                <!--</figcaption>-->
+                                            <!--</figure>-->
+                                            <!--<div class="aa-product-hvr-content">-->
+                                                <!--&lt;!&ndash;<a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>&ndash;&gt;-->
+                                                <!--<a data-button class="pointer" href="#/merchandises/{{merchandise.id}}" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>-->
+                                            <!--</div>-->
+                                            <!--&lt;!&ndash; product badge &ndash;&gt;-->
+                                        <!--</li>-->
+
 
                                     </ul>
                                 </div>
@@ -130,9 +142,9 @@
                         <div class="tab-pane fade in active">
                             <ul class="aa-product-catg">
                                 <!-- start single product item -->
-                                <li ng-repeat="merchandise in dreams">
+                                <li ng-repeat="merchandise in filteredDreams">
                                     <figure>
-                                        <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                        <a class="aa-product-img" ng-click="open1(merchandise)"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" ng-click="open1(merchandise)" alt="polo shirt img"></a>
                                         <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
                                         <figcaption>
                                             <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
@@ -157,8 +169,8 @@
         </div>
         <pagination
                 total-items="dreams.length"
-                items-per-page="numPerPage"
-                ng-model="currentPage"
+                items-per-page="numPerPage1"
+                ng-model="currentPage1"
                 max-size="maxSize"
                 class="pagination-sm"
                 boundary-links="true">
@@ -175,9 +187,9 @@
                                 <div class="tab-pane fade in active">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                        <li ng-repeat="merchandise in creates">
+                                        <li ng-repeat="merchandise in filteredCreates">
                                             <figure>
-                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img" ng-click="open1(merchandise)"></a>
                                                 <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
                                                 <figcaption>
                                                     <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
@@ -200,9 +212,9 @@
                     </div>
                 </div>
                 <pagination
-                        total-items="wins.length"
-                        items-per-page="numPerPage"
-                        ng-model="currentPage"
+                        total-items="creates.length"
+                        items-per-page="numPerPage2"
+                        ng-model="currentPage2"
                         max-size="maxSize"
                         class="pagination-sm"
                         boundary-links="true">
@@ -219,9 +231,9 @@
                                 <div class="tab-pane fade in active">
                                     <ul class="aa-product-catg">
                                         <!-- start single product item -->
-                                        <li ng-repeat="merchandise in wins">
+                                        <li ng-repeat="merchandise in filteredWins">
                                             <figure>
-                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="images/polo-shirt-1.png" alt="polo shirt img" ng-click="open1(merchandise)"></a>
+                                                <a class="aa-product-img" ng-click="open1(merchandise)"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" ng-click="open1(merchandise)"></a>
                                                 <a class="aa-add-card-btn" ng-click="open1(merchandise)"><span class="fa fa-shopping-cart" ng-click="open1(merchandise)"></span>Open</a>
                                                 <figcaption>
                                                     <h4 class="aa-product-title"><a href="#">{{merchandise.title}}</a></h4>
@@ -245,8 +257,8 @@
                 </div>
                 <pagination
                         total-items="wins.length"
-                        items-per-page="numPerPage"
-                        ng-model="currentPage"
+                        items-per-page="numPerPage3"
+                        ng-model="currentPage3"
                         max-size="maxSize"
                         class="pagination-sm"
                         boundary-links="true">

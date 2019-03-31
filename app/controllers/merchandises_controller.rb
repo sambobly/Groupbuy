@@ -1,5 +1,9 @@
 class MerchandisesController < InheritedResources::Base
+
+
   respond_to :json
+
+
   protected
   def begin_of_association_chain
     if params[:category_id]
@@ -13,7 +17,7 @@ class MerchandisesController < InheritedResources::Base
   private
 
     def merchandise_params
-      params.require(:merchandise).permit(:value, :category_id, :consumer_id, :title, :description, :start, :end, :category_name, :bid, :difference, :consumer_name, :complete, :email, :received, :paid, :rescue)
+      params.require(:merchandise).permit(:value, :category_id, :consumer_id, :title, :description, :start, :end, :category_name, :bid, :difference, :consumer_name, :complete, :email, :received, :paid, :rescue, :images, :winner)
     end
 end
 

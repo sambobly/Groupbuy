@@ -32,7 +32,8 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
     grunt.loadNpmTasks('grunt-connect-proxy');
     grunt.loadNpmTasks('grunt-shell-spawn');
-  
+    grunt.loadNpmTasks('grunt-contrib-compass');
+
   grunt.initConfig({
 
     // Project settings
@@ -137,7 +138,7 @@ module.exports = function (grunt) {
     // Start the rails server
     shell: {
       startRailsServer: {
-        command: 'rails server',
+        command: 'bundle exec rails server',
         options: {
           // If async: true were omitted, the rails server
           // command would prevent subsequent commands

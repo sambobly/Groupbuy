@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Consumer:</strong>
+  <%= @claim.consumer %>
+</p>
+
+<p>
+  <strong>Merchandise:</strong>
+  <%= @claim.merchandise %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @claim.email %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @claim.mobile %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @claim.account %>
+</p>
+
+<p>
+  <strong>Bsb:</strong>
+  <%= @claim.bsb %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @claim.complete %>
+</p>
+
+<%= link_to 'Edit', edit_claim_path(@claim) %> |
+<%= link_to 'Back', claims_path %>

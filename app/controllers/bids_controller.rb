@@ -20,7 +20,7 @@ class BidsController < InheritedResources::Base
   private
 
     def bid_params
-      params.require(:bid).permit(:consumer_id, :value, :comment, :merchandise_id, :success, :created_at, :updated_at, :complete)
+      params.require(:bid).permit(:consumer_id, :value, :comment, :merchandise_id, :success, :created_at, :updated_at, :complete, :merchandise_image, :merchandise_value, :merchandise_title)
     end
 end
 

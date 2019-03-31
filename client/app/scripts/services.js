@@ -1,6 +1,17 @@
 var clientServices = angular.module('clientServices', ['ngResource']);
 
+angular.module('clientApp').factory('filteredTests', function(){
+    return function filteredTests(){
+        var values = [];
+        this.add = function(c){ values.push(c);};
+        this.isfilteredTest = function(c){ return values.indexOf(c) >= 0;};
+    };
+});
+angular.module('clientApp').service('ServiceMerchandises',function(){
+    var array = ["1"]
 
+    return array;
+});
 //opthoServices.factory('AppointmentService', function($http, $q) {
   //  var service = {
     //    getAppointments: function() {
@@ -52,6 +63,8 @@ clientServices.factory('userService', ['Auth', function (Auth) {
     });
     return userService;
 }]);
+
+
 
 clientServices.factory('Patient', ['railsResourceFactory', 'railsSerializer', '$http', 'Invoice', 'Meeting', 'Appointment', 'Letter', function (railsResourceFactory, railsSerializer, $http, Invoice, Meeting, Appointment, Letter, Consult) {
     var resource = railsResourceFactory({
@@ -617,7 +630,7 @@ clientServices.factory('Recipient', ['railsResourceFactory', function (railsReso
         name: 'recipient'
     });
 }]);
-clientServices.factory('Consumer', ['railsResourceFactory', 'railsSerializer', '$http', 'Merchandise', 'Bid', 'Ticket', 'Wish',function (railsResourceFactory, railsSerializer, $http, Merchandise, Bid, Ticket, Wish) {
+clientServices.factory('Consumer', ['railsResourceFactory', 'railsSerializer', '$http', 'Merchandise', 'Bid', 'Ticket', 'Wish', 'Claim', function (railsResourceFactory, railsSerializer, $http, Merchandise, Bid, Ticket, Wish, Claim) {
 //    return railsResourceFactory({
 //        url: '/api/consumers',
 //        name: 'consumer'
@@ -634,6 +647,8 @@ clientServices.factory('Consumer', ['railsResourceFactory', 'railsSerializer', '
             this.nestedAttribute('tickets');
             this.resource('wishes', 'Wish');
             this.nestedAttribute('wishes');
+            this.resource('claims', 'Claim');
+            this.nestedAttribute('claims');
 
         })
     });
@@ -666,6 +681,14 @@ clientServices.factory('Consumer', ['railsResourceFactory', 'railsSerializer', '
         return resource.$get(self.$url('wishes')).then(function (wishes) {
             self.wishes = wishes;
             return self.wishes;
+
+        });
+    };
+    resource.prototype.getClaims = function () {
+        var self = this;
+        return resource.$get(self.$url('claims')).then(function (claims) {
+            self.claims = claims;
+            return self.claims;
 
         });
     };
@@ -706,7 +729,7 @@ clientServices.factory('Category', ['railsResourceFactory', 'railsSerializer', '
     return resource;
 
 }]);
-clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer', '$http', 'Bid', 'Ticket', 'Wish',function (railsResourceFactory, railsSerializer, $http, Bid, Ticket, Wish) {
+clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer', '$http', 'Bid', 'Ticket', 'Wish', 'Claim', function (railsResourceFactory, railsSerializer, $http, Bid, Ticket, Wish, Claim) {
     var resource = railsResourceFactory({
         url: '/api/merchandises',
         name: 'merchandise',
@@ -717,6 +740,8 @@ clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer'
             this.nestedAttribute('tickets');
             this.resource('wishes', 'Wish');
             this.nestedAttribute('wishes');
+            this.resource('claims', 'Claim');
+            this.nestedAttribute('claims');
         })
     });
     resource.prototype.getConsumerId = function () {
@@ -759,15 +784,48 @@ clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer'
 
         });
     };
+    resource.prototype.getClaims = function () {
+        var self = this;
+        return resource.$get(self.$url('claims')).then(function (claims) {
+            self.claims = claims;
+            return self.claims;
+
+        });
+    };
     return resource;
 }]);
-clientServices.factory('User', ['railsResourceFactory', 'railsSerializer', 'Consumer', function (railsResourceFactory, railsSerializer, Consumer) {
+//clientServices.factory('User', ['railsResourceFactory', 'railsSerializer', 'Consumer', '$http', function (railsResourceFactory, railsSerializer, Consumer, $http) {
+//    var resource = railsResourceFactory({
+//        url: '/api/users',
+//        name: 'user',
+//        serializer: railsSerializer(function () {
+//            this.resource('consumers', 'Consumer');
+//            this.nestedAttribute('consumers');
+//        })
+//    });
+//    resource.prototype.getConsumers = function () {
+//        var self = this;
+//        return resource.$get(self.$url('consumers')).then(function (consumers) {
+//            self.consumers = consumers;
+//            return self.consumers;
+//
+//        });
+//    };
+//    return resource;
+//}]);
+
+clientServices.factory('User', ['railsResourceFactory', 'railsSerializer', '$http', 'Consumer', function (railsResourceFactory, railsSerializer, $http, Consumer) {
+//    return railsResourceFactory({
+//        url: '/api/consumers',
+//        name: 'consumer'
+//    });
     var resource = railsResourceFactory({
         url: '/api/users',
         name: 'user',
         serializer: railsSerializer(function () {
             this.resource('consumers', 'Consumer');
             this.nestedAttribute('consumers');
+
         })
     });
     resource.prototype.getConsumers = function () {
@@ -778,10 +836,10 @@ clientServices.factory('User', ['railsResourceFactory', 'railsSerializer', 'Cons
 
         });
     };
+
     return resource;
+
 }]);
-
-
 clientServices.factory('Bid', ['railsResourceFactory', 'railsSerializer', '$http', 'Ticket', function (railsResourceFactory, railsSerializer, $http, Ticket) {
     var resource = railsResourceFactory({
         url: '/api/bids',
@@ -816,6 +874,31 @@ clientServices.factory('Bid', ['railsResourceFactory', 'railsSerializer', '$http
 
         });
     };
+    return resource;
+}]);
+clientServices.factory('Claim', ['railsResourceFactory', 'railsSerializer', '$http', function (railsResourceFactory, railsSerializer, $http) {
+    var resource = railsResourceFactory({
+        url: '/api/claims',
+        name: 'claim',
+
+    });
+    resource.prototype.getConsumerId = function () {
+
+        console.log("consumer object =");
+        console.log(this);
+        console.log(this.consumerId);
+        //  return  Nest.get(this.nestId)
+        return this.consumerId;
+    };
+    resource.prototype.getMerchandiseId = function () {
+
+        console.log("merchandise object =");
+        console.log(this);
+        console.log(this.merchandiseId);
+        //  return  Nest.get(this.nestId)
+        return this.merchandiseId;
+    };
+
     return resource;
 }]);
 clientServices.factory('Ticket', ['railsResourceFactory', function (railsResourceFactory) {

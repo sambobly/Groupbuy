@@ -1,10 +1,186 @@
-<form stripe-form="stripeCallback">
+<!--<script src="https://js.stripe.com/v3/"></script>-->
+
+
+
+
+<p>Username:<br>
+    <input type="test" name="test" ng-model="test" required>
+<span style="color:red" ng-show="myForm.test.$dirty && myForm.test.$invalid">
+<span ng-show="myForm.text.$error.required">Username is required.</span>
+</span>
+</p>
+<form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+        <label for="card-element">
+            Credit or debit card
+        </label>
+        <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+    </div>
+
+    <button>Submit Payment</button>
+</form>
+
+<div ng-repeate="item in items">
+    <input type="text"  ng-model="item.cost" format="currency" />
+</div>
+<form ng-submit="submitLoginForm()" form-autofill-fix>
+    <div>
+        <input type="email" ng-model="text.email" ng-required />
+        <input type="password" ng-model="text.password" ng-required />
+        <button ng-click="setCookie(text)">Log In</button>
+        <button ng-click="emailConfirm(text)">Resend email confirm</button>
+        <button ng-click="emailReset(text)">Resend email confirm</button>
+
+    </div>
+</form>
+<form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+        <label for="card-element">
+            Credit or debit card
+        </label>
+        <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+    </div>
+
+    <button>Submit Payment</button>
+</form>
+
+<form action="api/charges" method="POST" id="payment-form">
     <input ng-model="number" placeholder="Card Number" payments-format="card"
            payments-validate="card" />
     <input ng-model="expiry" placeholder="Expiration" payments-format="expiry"
            payments-validate="expiry" />
     <input ng-model="cvc" placeholder="CVC" payments-format="cvc"
            payments-validate="cvc" />
+    <input ng-model="bid.amount" placeholder="Bid">
+
+    <button>Submit Payment</button>
+</form>
+<script src="https://js.stripe.com/v3/"></script>
+
+<form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+        <label for="card-element">
+            Credit or debit card
+        </label>
+        <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+    </div>
+
+    <button>Submit Payment</button>
+</form>
+<!--<form action="api/charges" method="POST">-->
+    <!--<script-->
+            <!--src="https://checkout.stripe.com/checkout.js" class="stripe-button"-->
+            <!--data-key="pk_test_nTvr3OV0TnAiWUdi8Mxcf3dM"-->
+            <!--data-amount="999"-->
+            <!--data-name="Demo Site"-->
+            <!--data-description="Widget"-->
+            <!--data-image="https://stripe.com/img/documentation/checkout/marketplace.png"-->
+            <!--data-locale="auto"-->
+            <!--data-currency="aud">-->
+
+    <!--</script>-->
+<!--</form>-->
+      <div>
+          <input type="number" ng-model = "bid.value"/>
+      </div>
+digitsOnly<br/><input ng-model="val1" restrict-input="{type: 'digitsOnly'}" format = "currency"/> {{val1}}<br/>
+<form name="myForm">
+    <label>Enter your number:</label>
+    <input type="number" name="myNumber" ng-model="name" min="100" max="200"/>
+    <pre>myForm.myNumber.$error = {{ myForm.myNumber.$error | json }}</pre>
+    <pre>myForm.$valid = {{ myForm.$valid | json }}</pre>
+
+    <div ng-messages="myForm.myNumber.$error" style="color:red">
+        <div ng-message="number">You did not enter a valid number</div>
+        <div ng-message="min">Your field value is lesser minimum value</div>
+        <div ng-message="max" translate="FORM.MAXVALUE"></div>
+    </div>
+
+</form>
+<form class="pure-form pure-form-aligned" name="frm" method="post"
+      novalidate autocomplete="off">
+    <fieldset>
+
+        <div class="pure-control-group">
+            <label>Username</label>
+            <input name="username"
+                   ng-model="user.username"
+                   type="text"
+                   placeholder="Username"
+                   required>
+            <div class="field-message" ng-messages="frm.username.$error" ng-if='frm.username.$dirty' ng-cloak>
+                <div ng-message="required">Username is required</div>
+            </div>
+        </div>
+
+        <div class="pure-control-group">
+            <label>Password</label>
+            <input name="password"
+                   ng-model="user.password"
+                   type="password"
+                   placeholder="Password"
+
+                   ng-minlength="6"
+                   ng-maxlength="10">
+            <div class="field-message" ng-messages="frm.password.$error" ng-if='frm.password.$dirty' ng-cloak>
+                <div ng-message="required">Password is required</div>
+                <div ng-message="minlength">Password must have minimum 6 characters</div>
+                <div ng-message="maxlength">Password must have maximum 10 characters</div>
+            </div>
+        </div>
+
+        <div class="pure-control-group">
+            <label>Email Address</label>
+            <input name="email"
+                   ng-model="user.email"
+                   type="email"
+                   placeholder="Email Address"
+                   >
+            <div class="field-message" ng-messages="frm.email.$error" ng-if='frm.email.$dirty' ng-cloak>
+                <div ng-message="required">Email is required</div>
+                <div ng-message="email">Must be a valid email</div>
+            </div>
+        </div>
+
+        <div class="pure-controls">
+            <label class="pure-checkbox">
+                <input name="conditions" ng-model="conditions" type="checkbox">
+                I've read the terms and conditions
+            </label>
+            <button type="submit" class="pure-button pure-button-primary"
+                    ng-disabled="frm.$invalid || !conditions">Submit</button>
+        </div>
+    </fieldset>
+</form>
+
+<label for="rememberme" class="rememberme" ng-model="remember"><input type="checkbox" id="rememberme" ng-model="remember" ng-click="testCheck(remember)"> Remember me </label>
+<button ng-click="getCookie()">Get cookie</button>
+
+<form stripe-form="stripeCallback">
+    <input ng-model="consumer.email" placeholder="Email" payments-format="email"
+           payments-validate="email;" />
+    <input ng-model="number" placeholder="Card Number" payments-format="card"
+           payments-validate="card" />
+    <input ng-model="expiry" placeholder="Expiration" payments-format="expiry"
+           payments-validate="expiry" />
+    <input ng-model="cvc" placeholder="CVC" payments-format="cvc"
+           payments-validate="cvc" />
+    <input ng-model="bid.amount" placeholder="Bid">
     <button type="submit" ng-click="stripeCallback()">Submit</button>
 </form>
 
@@ -20,6 +196,9 @@
 </div>
 <button ng-click="assessRoute()">Get route params</button>
 <button ng-click="testLetter()">Test Letter</button>
+<button ng-click="testEmail()">Test Email</button>
+<button ng-click="claimEmail()">Test Claim Email</button>
+<button ng-click="failEmail()">Test Fail Email</button>
 
 <accordion id='cntLeftMenu' close-others='false'>
 <accordion-group is-open='menuStatus[0].isOpen'>
@@ -57,6 +236,8 @@
     </ul>
 
 </accordion-group>
+
+<button type="submit" ng-click="add()">Add to group</button>
 
 
 <accordion>

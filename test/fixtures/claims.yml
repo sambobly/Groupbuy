@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumer_id: 
+  merchandise_id: 
+  email: MyString
+  mobile: MyString
+  account: MyString
+  bsb: MyString
+  complete: false
+
+two:
+  consumer_id: 
+  merchandise_id: 
+  email: MyString
+  mobile: MyString
+  account: MyString
+  bsb: MyString
+  complete: false

@@ -1,0 +1,11 @@
+<h1>Welcome to example.com, <%= @consumer.name %></h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: <%= @consumer.email %>.<br>
+  Your merchandise is: localhost:9000/#/merchandises/<%= @merchandise.id %>.<br>
+
+</p>
+
+<%= link_to 'Merchandise', url_for(@merchandise) %>
+<a href="http://localhost:9000/#/merchandises/<%= @merchandise.id %>">Merchandise link!</a>
+<p>Thanks for joining and have a great day!</p>

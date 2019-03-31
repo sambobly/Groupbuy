@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  resources :claims
   resources :charges
 
   resources :wishes
@@ -8,6 +9,8 @@ Optho::Application.routes.draw do
   resources :tickets
 
   resources :bids
+
+  resources :claims
 
   resources :merchandises, defaults: { format: 'json' }
 
@@ -78,7 +81,12 @@ Optho::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_scope :user do  get "admin/index"
+  controller :confirmable do
+    get "confirmations/new"
+    post "confirmations/create"
+    get "confirmations/resend"
 
+  end
   end
 
   controller :sessions do
@@ -94,6 +102,12 @@ Optho::Application.routes.draw do
   get "sessions/destroy"
   resources :users
 
+  controller :confirmable do
+    get "confirmations/new"
+    post "confirmations/create"
+    get "confirmations/resend"
+
+  end
 
   resources :nests do
     collection do
@@ -421,8 +435,9 @@ end
 
   
   scope '/api'do
+
     #get "/acute.select" => "#index"
-    devise_for :users, skip: [:sessions]
+    devise_for :users, skip: [:sessions], :controllers => { confirmations: 'users/confirmations'}
     as :user do
       get 'users/sign_in', to: 'users/sessions#new', as: :new_user_session
       #post 'users/sign_in', to: 'users/sessions#create', as: :user_session
@@ -432,6 +447,13 @@ end
       get  'sessions/test', to: 'devise/sessions#test', as: :user_test
       get 'users/sessions/show_current_user', to: 'users/sessions#show_current_user', as: :user_get
       delete 'users/sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
+      get 'users/confirmation/resend', to: 'users/confirmations/resend#get', as: :resend
+      #post 'confirmations/resend', to: 'devise/confirmations#resend', as: : post_user_confirmation
+    end
+    controller :confirmable do
+      get "confirmation/new"
+      post "confirmation/create"
+      get "confirmation/resend"
 
     end
     resources :charges do
@@ -485,7 +507,9 @@ end
             post 'edit'
             get 'show'
           end
-          end
+        end
+
+
     end
     controller :sessions do
       get 'new'
@@ -551,6 +575,8 @@ end
     post 'edit'
     get 'update'
     get 'show'
+    post 'test'
+    post 'fail'
   end
   member do
     post 'destroy'
@@ -560,6 +586,10 @@ end
     patch 'update'
     post 'edit'
     get 'show'
+    post 'test'
+    post 'fail'
+
+
   end
 end
     resources :lines do
@@ -870,6 +900,10 @@ end
         post 'edit'
         get 'update'
         get 'show'
+        post 'test'
+        post 'fail'
+
+
       end
       member do
         post 'destroy'
@@ -879,6 +913,10 @@ end
         patch 'update'
         post 'edit'
         get 'show'
+        post 'test'
+        post 'fail'
+
+
       end
       resources :merchandises do
         collection do
@@ -902,6 +940,27 @@ end
         end
       end
       resources :bids do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
+      resources :claims do
         collection do
           get 'find'
           get 'index'
@@ -1048,6 +1107,27 @@ end
           get 'show'
         end
       end
+      resources :claims do
+        collection do
+          get 'find'
+          get 'index'
+          post 'index'
+          post 'create'
+          post 'destroy'
+          post 'edit'
+          get 'update'
+          get 'show'
+        end
+        member do
+          post 'destroy'
+          post 'update'
+          get 'edit'
+          patch 'edit'
+          patch 'update'
+          post 'edit'
+          get 'show'
+        end
+      end
       resources :tickets do
         collection do
           get 'find'
@@ -1154,6 +1234,27 @@ end
         get 'show'
       end
     end
+resources :claims do
+  collection do
+    get 'find'
+    get 'index'
+    post 'index'
+    post 'create'
+    post 'destroy'
+    post 'edit'
+    get 'update'
+    get 'show'
+  end
+  member do
+    post 'destroy'
+    post 'update'
+    get 'edit'
+    patch 'edit'
+    patch 'update'
+    post 'edit'
+    get 'show'
+  end
+  end
     resources :sticks do
       collection do
         get 'find'
@@ -1802,8 +1903,8 @@ resources :doctors do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'taxes#index'
-  match '/', to: 'taxes#index', via: [:get, :post]
+  #root 'taxes#index'
+  #match '/', to: 'taxes#index', via: [:get, :post]
 
 
 
@@ -1816,6 +1917,8 @@ resources :doctors do
   namespace :api, defaults: { format: 'json' } do
     get "/merchandises/.id(.:format)" => 'merchandises#index'
     get "/merchandises/.id" => 'merchandises#index'
+    get "/claims/.merchandiseId(.:format)" => 'claims#index'
+    get "/claims/.merchandiseId" => 'claims#index'
     resources :consultations, only: [:index]
   resources :consult_templates, only:[:index, :create, :update, :destroy]
   resources :consults, only:[:index, :create, :update, :destroy]
@@ -1826,11 +1929,15 @@ resources :doctors do
   resources :consumers, only:[:index, :create, :update, :destroy] do
     resources :merchandises, only:[:index, :create, :update, :destroy]
     resources :bids, only:[:index, :create, :update, :destroy]
+resources :claims, only:[:index, :create, :update, :destroy]
+
     resources :tickets, only:[:index, :create, :update, :destroy]
     resources :wishes, only:[:index, :create, :update, :destroy]
   end
   resources :merchandises, only:[:index, :create, :update, :destroy] do
     resources :bids, only:[:index, :create, :update, :destroy]
+resources :claims, only:[:index, :create, :update, :destroy]
+
     resources :tickets, only:[:index, :create, :update, :destroy]
     resources :wishes, only:[:index, :create, :update, :destroy]
 
@@ -1844,8 +1951,10 @@ resources :doctors do
   end
   resources :bids, only:[:index, :create, :update, :destroy] do
     resources :tickets, only:[:index, :create, :update, :destroy]
-  end
-  resources :tickets, only:[:index, :create, :update, :destroy]
+end
+resources :claims, only:[:index, :create, :update, :destroy]
+
+resources :tickets, only:[:index, :create, :update, :destroy]
   resources :wishes, only:[:index, :create, :update, :destroy]
 
   resources :sticks, only:[:index, :create, :update, :destroy]
@@ -1923,7 +2032,9 @@ resources :doctors do
     get "/consumers/.id(.:format)" => "consumers#index"
     get "/consumers/.id(.:format)/merchandises" => "consumers#index"
     get "/consumers/.id(.:format)/bids" => "consumers#index"
-    get "/consumers/.id(.:format)/wishes" => "consumers#index"
+get "/consumers/.id(.:format)/claims" => "consumers#index"
+
+get "/consumers/.id(.:format)/wishes" => "consumers#index"
     get "/users/.id(.:format)" => "users#index"
     get "/users/.id(.:format)/consumers" => "users#index"
 
@@ -1937,9 +2048,12 @@ resources :doctors do
     get "/wishes/.id(.:format)" => 'wishes#index'
     get "/bids(.:format)" => "bids#index"
     get "/bids/.id(.:format)" => 'bids#index'
+    get "/claims(.:format)" => "claims#index"
+    get "/claims/.id(.:format)" => 'claims#index'
     get "/merchandises(.:format)" => "merchandises#index"
     get "/merchandises/.id(.:format)" => 'merchandises#index'
     get "/merchandises/.id(.:format)/bids" => 'merchandises#index'
+    get "/merchandises/.id(.:format)/claims" => 'merchandises#index'
     get "/merchandises/.id(.:format)/wishes" => 'merchandises#index'
     get "/sticks(.:format)" => "sticks#index"
     get "/sticks/.id(.:format)" => "sticks#index"

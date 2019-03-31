@@ -2,12 +2,16 @@
 
 
 angular.module('clientApp')
-    .controller('ConsumersController', ['$scope', 'userService', 'Auth', '$http', '$resource', '$location', '$routeParams', '$state', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', function ($scope, userService, Auth, $http, $resource, $location, $routeParams, $state, Consumer, Merchandise, Bid, Wish, User, $modal) {
+    .controller('ConsumersController', ['$scope', '$route', '$window', '$rootScope','userService', 'Auth', '$http', '$resource', '$location', '$routeParams', '$state', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', 'Upload', '$cookies',  function ($scope, $route, $window, $rootScope, userService, Auth, $http, $resource, $location, $routeParams, $state, Consumer, Merchandise, Bid, Wish, User, $modal, Upload, $cookies) {
         $scope.userService = userService;
         $scope.user = userService.user;
          debugger;
         $scope.isPopupVisible8 = false;
-        $scope.isPopupVisible9 = true
+        $scope.isPopupVisible9 = true;
+        $scope.isPopupvisible15 = false;
+        $scope.isPopupvisible16 = false;
+        $scope.isPopupVisibleDuplicateEmail = false;
+
         $scope.consumerFind = [];
 
         $scope.testUserService = function() {
@@ -61,6 +65,36 @@ angular.module('clientApp')
         Wish.query().then(function(wishes){
             $scope.wishes = wishes;
         });
+
+        var numberOfYears = (new Date()).getYear() - 10;
+        var years = $.map($(Array(numberOfYears)), function (val, i) { return i + 1900; });
+        var months = $.map($(Array(12)), function (val, i) { return i + 1; });
+        var days = $.map($(Array(31)), function (val, i) { return i + 1; });
+
+        var isLeapYear = function () {
+            $scope.SelectedYear = $scope.consumer.year;
+            var year = $scope.SelectedYear || 0;
+            console.log($scope.SelectedYear, $scope.consumer.year);
+            debugger;
+            return ((year % 400 === 0 || year % 100 !== 0) && (year % 4 === 0)) ? 1 : 0;
+
+        }
+
+        var getNumberOfDaysInMonth = function () {
+            $scope.SelectedMonth = $scope.consumer.month;
+            var selectedMonth = $scope.SelectedMonth || 0;
+            return 31 - ((selectedMonth === 2) ? (3 - isLeapYear()) : ((selectedMonth - 1) % 7 % 2));
+        }
+
+        $scope.UpdateNumberOfDays = function () {
+            $scope.NumberOfDays = getNumberOfDaysInMonth();
+        }
+
+        $scope.NumberOfDays = 31;
+        $scope.Years = years;
+        $scope.Days = days;
+        $scope.Months = months;
+
         $scope.openLogin = function (size) {
             var modalInstance = $modal.open({
                 templateUrl: 'loginModal.html',
@@ -80,6 +114,14 @@ angular.module('clientApp')
                             console.log(user, currentUser, user.name);
                             console.log(Auth._currentUser);// => {id: 1, ect: '...'}
                             debugger;
+                            $scope.setCookie = function(){
+                                $cookies.put('someToken', $scope.credentials.name);
+                                $cookies.put('password', $scope.credentials.password)
+                                var cookie3 = $cookies.get('someToken');
+                                var cookie4 = $cookies.get('password');
+                                console.log(cookie3, cookie4);
+                            };
+
                         }, function(error) {
                             // Authentication failed...
                         });
@@ -198,18 +240,31 @@ angular.module('clientApp')
         };
         $scope.getConsumer = function (consumer, user) {
             debugger;
+
             debugger;
-            $scope.user = user;
-            user = Auth._currentUser;
+
+            $scope.user = userService.user;
+            user = $scope.user;
+            User.get({id: 19}).then(function(user){
+                $scope.user  = user;
+            });
+
             debugger;
-//            $scope.consumerId = 2;
-            Consumer.get({id:user.id}).then(function(consumer) {
-                $scope.consumer=consumer;
+            $scope.user.consumers = user.getConsumers();
+//            Consumer.get({id:user.id}).then(function(consumer) {
+//                $scope.consumer = consumer;
+//                console.log(consumer);
+//                debugger;
+//            });
+
+        };
+        $scope.getConsumerTrial = function (consumer) {
+            Consumer.get({user:19}).then(function(consumer) {
+                $scope.consumer = consumer;
                 console.log(consumer);
                 debugger;
             });
-
-        };
+        }
         $scope.currentUser = function() {
 //            var id = 1
 //
@@ -273,23 +328,47 @@ angular.module('clientApp')
 //            });
 //        };
 
-        $scope.signIn = function () {
+        $scope.signIn = function (remember) {
             var credentials = {
 //                name: $scope.credentials.name,
                 email: $scope.credentials.email,
                 password: $scope.credentials.password
             };
+            $scope.remember = true;
             console.log("fired", credentials);
             var user = {};
             var currentUser = {};
-            Auth.login(credentials).then(function(user) {
+            Auth.login(credentials).then(function(user, remember) {
                 $scope.user = user;
                 $scope.ctrlUser = user;
+
                 console.log(user, currentUser, user.name);
                 console.log(Auth._currentUser);// => {id: 1, ect: '...'}
                 debugger;
-            }, function(error) {
-                // Authentication failed...
+                if ($scope.remember == true) {
+                    $cookies.put('someToken', $scope.credentials.email);
+                    $cookies.put('password', $scope.credentials.password)
+                    var cookie3 = $cookies.get('someToken');
+                    var cookie4 = $cookies.get('password');
+                    console.log(cookie3, cookie4);
+                    debugger;
+                } else {
+                    console.log('Dont remember')
+                };
+                if (user.name !== undefined) {
+                     console.log("have a user");
+                    $rootScope.isPopupvisible66 = false;
+                    $scope.isPopupvisible66 = $rootScope.isPopupvisible66;
+                    $window.location.reload();
+                    //                    $window.location.href = '/#/sticks';
+                } else {
+                    console.log("currentUser undefined")
+                    $rootScope.isPopupvisible66 = true;
+                    $scope.isPopupvisible66 = $rootScope.isPopupvisible66;
+                }
+            }).catch(function(error) {
+                    console.log("FAILURE!", error);
+                    debugger;
             });
         };
         $scope.makeTodos();
@@ -306,9 +385,11 @@ angular.module('clientApp')
         }
         $scope.select = function (consumer, merchandise, bid, wish) {
             $scope.consumer = consumer;
+            debugger;
             $scope.consumer.merchandises = consumer.getMerchandises();
+            debugger;
             $scope.consumer.bids = consumer.getBids();
-            $scope.consumer.wishes = consumer.getWishes()
+            $scope.consumer.wishes = consumer.getWishes();
             console.log($scope.consumer.merchandises, $scope.consumer.bids);
             debugger;
         };
@@ -391,6 +472,7 @@ angular.module('clientApp')
             $state.go('merchandises/.merchandiseId');
         };
         $scope.createConsumer = function() {
+            $scope.consumer = new Consumer;
             $scope.consumer.name = ($scope.consumer.firstName + " " + $scope.consumer.lastName);
             $scope.consumer.dateOfBirth = ($scope.consumer.year + "-" + $scope.consumer.month + '-' + $scope.consumer.day)
             debugger;
@@ -404,15 +486,60 @@ angular.module('clientApp')
         };
         $scope.updateConsumer = function() {
             $scope.consumer.dateOfBirth = ($scope.consumer.year + "-" + $scope.consumer.month + '-' + $scope.consumer.day)
+            console.log($scope.consumer.avatar, $scope.consumer.avatar.name);
+            var avatar = $scope.consumer.avatar;
+            console.log(avatar);
+            var consumer = $scope.consumer;
+            $scope.upload = Upload.upload({
+                url: '/api/consumers/' + consumer.id,
+                method: 'PATCH',
+                data: {name : $scope.consumer.name, avatar: $scope.consumer.avatar},
+                avatar: avatar,
+                fileFormDataName: 'consumer[avatar]',
+                formDataAppender: function(fd, key, val) {
+                    if (angular.isArray(val)) {
+                        angular.forEach(val, function(v) {
+                            fd.append('consumer['+key+']', v);
+                        });
+                    } else {
+                        fd.append('consumer['+key+']', val);
+                    }
+                }
+            });
+            debugger;
             $scope.consumer.update()
                 .then(function(response) {
                     console.log("SUCCESS", response);
+                    $scope.isPopupvisible15 = true;
+                    $scope.isPopupvisible16 = false;
                 })
                 .catch(function(response) {
                     console.log("FAILURE!", response);
+                    $scope.isPopupvisible16 = true;
                 });
         };
-
+        $scope.avatar = function() {
+            var avatar = $scope.consumer.avatar;
+            console.log(avatar);
+            var consumer = $scope.consumer;
+            $scope.upload = Upload.upload({
+                url: '/api/consumers/' + consumer.id,
+                method: 'PATCH',
+                data: {name : $scope.consumer.name, avatar: $scope.consumer.avatar},
+                avatar: avatar,
+                fileFormDataName: 'consumer[avatar]',
+                formDataAppender: function(fd, key, val) {
+                    if (angular.isArray(val)) {
+                        angular.forEach(val, function(v) {
+                            fd.append('consumer['+key+']', v);
+                        });
+                    } else {
+                        fd.append('consumer['+key+']', val);
+                    }
+                }
+            });
+            debugger;
+        }
         $scope.destroyConsumer = function() {
             $scope.consumer.delete()
                 .then(function(response) {
@@ -421,6 +548,45 @@ angular.module('clientApp')
                 .catch(function(response) {
                     console.log("FAILURE!", response);
                 });
+        };
+
+        $scope.createUser2 = function () {
+            $scope.user = new User;
+//            $scope.user.name = $scope.consumer.firstName;
+            $scope.user.password = $scope.consumer.password;
+            $scope.user.email = $scope.consumer.email;
+            $scope.user.name = ($scope.consumer.firstName + " " + $scope.consumer.lastName);
+            $scope.user.dateOfBirth = ($scope.consumer.year + "-" + $scope.consumer.month + '-' + $scope.consumer.day);
+            $scope.user.gender = $scope.consumer.gender;
+            $scope.user.pronoun = $scope.consumer.pronoun;
+            $scope.user.number = $scope.consumer.number;
+            $scope.user.avatar = $scope.consumer.avatar;
+            $scope.user.create().then(
+                function(response) {
+                console.log("SUCCESS", response);
+                debugger;
+                $scope.consumer = new Consumer;
+                $scope.consumer.userId = $scope.user.id;
+                $scope.consumer.user_id = $scope.user.id;
+                $scope.consumer.name = $scope.user.name;
+                $scope.consumer.firstName = $scope.user.name.split(' ').slice(0, -1).join(' ');
+                $scope.consumer.lastName = $scope.user.name.split(' ').slice(-1).join(' ');
+                $scope.consumer.email = $scope.user.email;
+                $scope.consumer.dateOfBirth = $scope.user.dateOfBirth;
+                $scope.consumer.gender = $scope.user.gender;
+                $scope.consumer.pronoun = $scope.user.pronoun;
+                $scope.consumer.number = $scope.user.number;
+                $scope.consumer.avatar = $scope.user.avatar;
+                    debugger;
+                $scope.consumer.create();
+                debugger;
+            })
+                .catch(function(error) {
+                    console.log("FAILURE!", error);
+                    $scope.isPopupVisibleDuplicateEmail = true;
+                    debugger;
+                });
+            debugger;
         };
         $scope.createUser = function() {
 
@@ -437,6 +603,7 @@ angular.module('clientApp')
                 .then(function(response) {
                     console.log("SUCCESS", response);
                     debugger;
+                    $scope.consumer = new Consumer;
                     $scope.consumer.id = $scope.user.id;
                     $scope.consumer.name = $scope.user.name;
                     $scope.consumer.email = $scope.user.email;
@@ -446,9 +613,15 @@ angular.module('clientApp')
                 })
                 .catch(function(response) {
                     console.log("FAILURE!", response);
-
                     debugger;
-
+//                    $scope.consumer = new Consumer;
+//                            $scope.consumer.userId = $scope.user.id;
+//                            $scope.consumer.name = $scope.user.name;
+//                            $scope.consumer.firstName = $scope.user.name.split(' ').slice(0, -1).join(' ');
+//                            $scope.consumer.lastName = $scope.user.name.split(' ').slice(-1).join(' ');
+//                            $scope.consumer.email = $scope.user.email;
+//                            $scope.consumer.create();
+//                    debugger;
                         var credentials = {
 //                name: $scope.credentials.name,
                             email: $scope.consumer.email,
@@ -463,8 +636,11 @@ angular.module('clientApp')
                             $scope.ctrlUser = user;
                             console.log(user, currentUser, user.name);
                             console.log(Auth._currentUser);// => {id: 1, ect: '...'}
+                            $scope.consumer = new Consumer;
                             $scope.consumer.userId = $scope.user.id;
                             $scope.consumer.name = $scope.user.name;
+                            $scope.consumer.firstName = $scope.user.name.split(' ').slice(0, -1).join(' ');
+                            $scope.consumer.lastName = $scope.user.name.split(' ').slice(-1).join(' ');
                             $scope.consumer.email = $scope.user.email;
                             $scope.consumer.create();
 
@@ -480,7 +656,14 @@ angular.module('clientApp')
                 $scope.user.name = $scope.consumer.firstName;
 
                 debugger;
-                new User({id: user.id, name: $scope.consumer.firstName, password: $scope.user.password, current_password: $scope.consumer.oldword}).update();
+                new User({id: user.id, name: $scope.consumer.firstName, password: $scope.user.password, current_password: $scope.consumer.oldword}).update()
+                    .then(function(response) {
+                        console.log("SUCCESS", response);
+                        $scope.isPopupvisible15 = true;
+                    })
+                    .catch(function(response) {
+                        console.log("FAILURE!", response);
+                    });
                 debugger;
 //                $scope.user.update()
 //                .then(function(response) {
@@ -632,14 +815,19 @@ angular.module('clientApp')
                 $scope.$apply(function(user, consumer) {
                     $scope.user = userService.user;
                     user = $scope.user;
+                    console.log("user", user);
                     if ($scope.consumerFind == 0) {
                         angular.forEach($scope.consumers, function(consumer) {
                             console.log("consumer", consumer)
                             if(consumer.userId == user.id){
                                 console.log("SUCCESS", consumer)
                                 $scope.consumer = consumer;
+                                debugger;
                                 $scope.consumer2 = consumer;
                             }
+                            else {
+                                console.log("no one is logged in")
+                            };
                         });
                     } else {
                         console.log("no one is logged in")
@@ -665,6 +853,13 @@ angular.module('clientApp')
 
 
         })
+       $scope.emailConfirm = function (consumer) {
+           $scope.consumer = consumer;
+           debugger;
+           console.log("resend confirmation email", $scope.consumer.email)
+       };
+
+
 
     }])
 

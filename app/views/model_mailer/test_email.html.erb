@@ -5,6 +5,9 @@ ModelMailer#test_email
 <img src="images/polo-shirt-1.png" alt="polo shirt img">
 <div class="image">
   <%= image_tag('images/polo-shirt-1.png') %>
+  <%= image_tag('uploads/consumer/avatar/9/vaccum2.jpg') %>
+  <%= email_image_tag('public/uploads/consumer/avatar/9/vaccum2.jpg') %>
+
 </div>
 
-Thank you for using FOM!
+Thank you for using FOM! <%= @consumer.name %>

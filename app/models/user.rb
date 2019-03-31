@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   #include Rails.application.routes.url_helpers
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable,
+         :recoverable, :rememberable, :trackable, :confirmable,
          :authentication_keys => [:email]
-
+  validates :name, :email, :password, presence: true
   #NOTE CAN ADD :validatable, TO DEVISE HELPERS
   #attr_accessor :name, :password_digest, :email, :password, :id, :current_password, :password_confirmation
   attr_accessible :name, :password_digest, :email, :password, :id, :current_password

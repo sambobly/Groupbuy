@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/jquery-timepicker-jt/jquery.timepicker.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -282,11 +283,14 @@
                                           <label for="">Password<span>*</span></label>
                                           <input type="password" placeholder="Password" ng-model="credentials.password">
                                           <button ng-click="signIn()">Login</button>
-                                          <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                                          <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                                          <!--<label for="rememberme" class="rememberme" ng-model="remember.me"><input type="checkbox" id="rememberme"> Remember me </label>-->
+                                          <div class="aa-lost-password"><a href="#/recover">Lost your password? Click here to reset</a></div>
                                           <div class="aa-register-now">
-                                              Don't have an account?
-                                              <a href="#/consumers">Register now!</a>
+
+                                              <a href="#/consumercreate">Don't have an account? Register now!</a>
+                                          </div>
+                                          <div class="alert alert-warning alert-dismissible fade in" ng-show="isPopupvisible66">
+                                              <strong>Warning!</strong> Either incorrect password or email
                                           </div>
                                       </form>
                                   </div>
@@ -428,6 +432,7 @@
               </div>
           </div>
       </div>
+
   </section>
 
   <!--End eCommerce-->
@@ -959,6 +964,7 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/jquery.ui.touch-punch.min.js"></script>
 
+
   <!--<script src="bower_components/jquery-ui/ui/jquery-ui.min.js"></script>-->
 
   <script src="bower_components/moment/moment.js"></script>
@@ -989,6 +995,7 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-password/angular-password.js"></script>
 
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -1020,6 +1027,8 @@
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-material/angular-material.js"></script>
   <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
 
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <!--close ecommerce requirements-->
@@ -1063,9 +1072,12 @@
         <script src="scripts/controllers/categories.js"></script>
         <script src="scripts/controllers/tickets.js"></script>
         <script src="scripts/controllers/bids.js"></script>
-        <script src="scripts/controllers/taxes.js"></script>
+  <script src="scripts/controllers/claims.js"></script>
+
+  <script src="scripts/controllers/taxes.js"></script>
         <script src="scripts/controllers/lines.js"></script>
         <script src="scripts/controllers/sticks.js"></script>
+        <script src="scripts/controllers/searchmerch.js"></script>
         <script src="scripts/controllers/eggs.js"></script>
         <script src="scripts/controllers/meetings.js"></script>
         <script src="scripts/controllers/letters.js"></script>
@@ -1075,8 +1087,9 @@
         <script src="scripts/controllers/birds.js"></script>
         <script src="scripts/controllers/widgets.js"></script>
         <script src="scripts/controllers/procurators.js"></script>
+  <script src="scripts/controllers/recover.js"></script>
 
-        <script src="scripts/metro/metro-base.js"></script>
+  <script src="scripts/metro/metro-base.js"></script>
         <script src="scripts/metro/demo/dashboard.js"></script>
         <script src="scripts/metro/ckeditor/ckeditor.js"></script>
         <script src="scripts/metro/ckeditor/styles.js"></script>
@@ -1128,6 +1141,8 @@
   <script src="scripts/ecommerce/jquery.simpleLens.js"></script>
   <script src="scripts/ecommerce/jquery.smartmenus.bootstrap.js"></script>
   <script src="scripts/ecommerce/jquery.smartmenus.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
   <!--<script src="scripts/ecommerce/slick.js"></script>-->
 
 

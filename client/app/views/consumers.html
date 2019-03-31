@@ -17,7 +17,10 @@
         <button ng-click ="currentUser()">Current user</button>
         <button ng-click ="getUser()">Test get</button>
 <button ng-click ="getConsumer()">Consumer get</button>
+<button ng-click ="getConsumerTrial()">Consumer from scratch</button>
+
 <button ng-click ="testUserService()">Test user service</button>
+<button ng-click ="emailConfirm()">Resend confirm emaile</button>
 
 
 
@@ -270,7 +273,7 @@
                                     <label for="">Confirm Password<span>*</span></label>
                                     <input type="password" ng-model="consumer.confirmPassword" placeholder="Old Password" required class="required input-xlarge" />
 
-                                    <button type="submit" ng-click="createUser()" class="aa-browse-btn">Register</button>
+                                    <button type="submit" ng-click="createUser2()" class="aa-browse-btn">Register</button>
                                 </form>
                             </div>
                         </div>
@@ -567,7 +570,7 @@
                     <button type="submit" ng-click="createConsumer()" class="btn bg-emerald submit">Submit</button>
                 </div><!-- /navigation -->
                 <div class="navigation form-actions bg-silver">
-                    <button type="submit" ng-click="createUser()" class="btn bg-emerald submit">Create User</button>
+                    <button type="submit" ng-click="createUser2()" class="btn bg-emerald submit">Create User</button>
                 </div><!-- /navigation -->
 
             </fieldset>
@@ -649,8 +652,35 @@
                 <input type="text" class="input-medium" ng-model="consumer.userId" required>
             </div>
         </div>
+        <div class="control-group">
+            <label class="control-label" >Avatar</label>
+            <div class="controls">
+                <input type="file" ngf-select ng-model="consumer.avatar">
+            </div>
+        </div>
         <label class="control-label" for="inputSelect">Concession type</label>
-        <button class="btn btn-primary" ng-click="updateConsumer()">Update</button>
+        <button class="btn btn-primary" ng-click="updateConsumer()">Update Consumer</button>
+
+
+</div>
+<div class="control-group">
+    <label class="control-label" >Avatar</label>
+    <div class="controls">
+        <input type="file" ngf-select ng-model="consumer.avatar">
+    </div>
+</div>
+
+<button class="btn btn-primary" ng-click="avatar()">Avatar</button>
+<div>
+    <img ng-model="consumer.avatar" />{{consumer.avatar}}
+    <img data-seq ng-src="http://localhost:3000{{consumer.avatar.url}}">
+    <!--<img data-seq ng-src="http://localhost:3000/uploads/consumer/avatar/9/another_test.jpg">-->
+
+    <!--<img data-seq ng-src="uploads/consumer/avatar/9/test image.jpeg">-->
+    <!--<img data-seq ng-src="uploads/consumer/avatar/9/another_test.jpg">-->
+    <!--<img data-seq ng-src="assets/images/demo/1-9e68963a2047c00a8f1b6410fe8e6410.png">-->
+    <!--<img src="api/public/uploads/consumer/avatar/9/test_image.jpeg">-->
+    <!--<img data-seq src="api/uploads/consumer/avatar/14/test image.jpeg">-->
 
 
 </div>

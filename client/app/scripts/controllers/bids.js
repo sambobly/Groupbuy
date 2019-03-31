@@ -2,7 +2,12 @@
 
 
 angular.module('clientApp')
-    .controller('BidsController', ['$scope', '$http', '$resource', '$location', '$state', '$routeParams', 'Merchandise', 'Consumer', 'Bid', '$modal', function ($scope, $http, $resource, $location, $state, $routeParams, Merchandise, Consumer, Bid, $modal) {
+    .controller('BidsController', ['$scope', '$http', '$resource', '$location', '$state', '$routeParams', '$stateParams', 'Merchandise', 'Consumer', 'Bid', '$modal', function ($scope, $http, $resource, $location, $state, $routeParams, $stateParams, Merchandise, Consumer, Bid, $modal) {
+
+        $scope.assessRoute = function() {
+            console.log("claim", $stateParams, $stateParams.bidId)
+
+        };
 
         $scope.merchandise = new Merchandise();
 
@@ -73,9 +78,32 @@ angular.module('clientApp')
             Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise){
                 $scope.merchandise  = merchandise;
             });
-            console.log(merchandise);
+            console.log(consumer.avatar, consumer.firstName, consumer.lastName);
             debugger;
         };
+
+        $scope.testRelatives = function(bid, merchandise, consumer) {
+            $scope.bid.id = $stateParams.bidId;
+            console.log($scope.bid.id, $stateParams.bidId)
+            Bid.get({id:$stateParams.bidId}).then(function(bid){
+                $scope.bid = bid;
+                (console.log("bid", $scope.bid, bid))
+            });
+
+//            $scope.merchandiseId = bid.getMerchandiseId();
+//            $scope.consumerId = bid.getConsumerId();
+//
+//            debugger;
+//            Consumer.get({id:$scope.consumerId}).then(function(consumer){
+//                $scope.consumer  = consumer;
+//            });
+//            Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise){
+//                $scope.merchandise  = merchandise;
+//            });
+//            console.log(consumer.avatar, consumer.firstName, consumer.lastName);
+//            debugger;
+        };
+
         $scope.goTo = function(merchandise) {
             $scope.merchandise = merchandise;
             var Id = $scope.merchandise.id;
@@ -84,7 +112,20 @@ angular.module('clientApp')
             $state.go('merchandises/.merchandiseId');
         };
 
-
+        $scope.getAll = function(bid) {
+            $scope.bid = bid;
+            $scope.merchandiseId = bid.merchandiseId;
+            $scope.consumerId = bid.consumerId;
+            Consumer.get({id:$scope.consumerId}).then(function(consumer){
+                $scope.consumer  = consumer;
+                console.log(consumer);
+            });
+            Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise){
+                $scope.merchandise  = merchandise;
+                console.log("merchandise", merchandise);
+            });
+            debugger;
+        };
 
 
     }])

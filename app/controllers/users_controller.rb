@@ -24,11 +24,18 @@ end
   def show
     p "User show"
 
-    #@users = User.find_by_name(params[:name])
-    @user = User.find(:id)
+    @user = User.find(params[:id])
+        #@user = User.find(params[:id])
     format.json { render json: @user }
   end
 
+ #def test
+ #  p "RAILS TEST"
+ #
+ #  @user = User.find_by_id(params[:user])
+ #  ModelMailer.claim_email(@user).deliver_now
+ #
+ #end
 
 
 end

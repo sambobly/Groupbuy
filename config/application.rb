@@ -32,6 +32,8 @@ module Optho
     end
     config.action_dispatch.default_headers = {
         'X-Frame-Options' => 'ALLOWALL'
+        #'Access-Control-Allow-Origin' => 'http://localhost:3000',
+        #'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
     }
     config.to_prepare do
       DeviseController.respond_to :html, :json

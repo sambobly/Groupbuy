@@ -1,6 +1,6 @@
 class ModelMailer < ActionMailer::Base
+  add_template_helper(EmailsHelper)
   default from: "from@sambobly1@gmail.com"
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -24,8 +24,22 @@ class ModelMailer < ActionMailer::Base
     @patient = patient
     mail(to: @letter.email, subject: @letter.subject)
   end
-  def test_email(consumer)
+  #def claim_email(consumer)
+  #  @consumer = consumer
+  #  mail(to: @consumer.email, subject: 'Sample Email')
+  #end
+  def claim_email(consumer, merchandise)
     @consumer = consumer
-    mail(to: @consumer.email)
+    @merchandise = merchandise
+    mail(to: @consumer.email, subject: 'Did you win??')
+  end
+  def fail_email(consumer, merchandise)
+    @consumer = consumer
+    @merchandise = merchandise
+    mail(to: @consumer.email, subject: 'Did you win?')
+  end
+  def complete_email(claim)
+    @claim = claim
+    mail(to: @claim.email, subject: 'Confirmation1')
   end
 end

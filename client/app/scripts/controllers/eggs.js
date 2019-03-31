@@ -3,6 +3,8 @@
 
 angular.module('clientApp')
     .controller('EggsController', ['$scope', '$q', '$rootScope', 'Auth', 'User', 'userService', '$resource', '$location', '$routeParams', '$anchorScroll', '$timeout', 'NgTableParams', 'Egg', 'Nest', '$modal', 'Merchandise', 'Consumer', 'Bid', 'Wish', function ($scope, $q, $rootScope, Auth, User, userService, $resource, $location, $routeParams, $anchorScroll, $timeout, NgTableParams, Egg, Nest, $modal, Merchandise, Consumer, Bid, Wish) {
+        $scope.myDefaultImage = 'images/polo-shirt-1.png';
+
         $scope.userService = userService;
         $scope.user = userService.user;
         $scope.consumerFind = [];
@@ -68,6 +70,7 @@ angular.module('clientApp')
                                 console.log("SUCCESS", consumer)
                                 $scope.consumer = consumer;
                                 $scope.consumer2 = consumer;
+                                $scope.creates = $scope.consumer.merchandises;
                                 consumer.getMerchandises().then(function(response){
                                     console.log(response);
                                     $scope.consumer.merchandises = response;
@@ -89,11 +92,12 @@ angular.module('clientApp')
                                                         })}else {
                                                         console.log("failed", merchandise)}
                                                 } else {
-                                                    $scope.consumerBids.push($scope.bid);
+                                                        $scope.consumerBids.push($scope.bid);
+//                                                    PROBLEM IS HERE. AM SETTING SCOPE.BID PRIOR TO THE THEN -> ALL MERCHANDISE $scope.bid being the same
                                                     debugger;
                                                     Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
-                                                        $scope.merchandise = merchandise
-                                                        $scope.merchandise.bidValue = $scope.bid.value;
+                                                        $scope.merchandise = merchandise;
+//                                                        $scope.merchandise.bidValue = $scope.bid.value;
                                                         $scope.consumerBidMerchandise.push($scope.merchandise);
                                                         debugger;
                                                         console.log($scope.merchandise, $scope.merchandise.bidValue, $scope.bid, "bid merchandise");
@@ -105,8 +109,8 @@ angular.module('clientApp')
 
                                                                 Merchandise.get({id:value.merchandiseId})
                                                                 debugger;
-                                                                $scope.bid1.merchandiseName = $scope.merchandise.title;
-                                                                $scope.bid1.merchandiseValue = $scope.merchandise.value;
+//                                                                $scope.bid1.merchandiseName = $scope.merchandise.title;
+//                                                                $scope.bid1.merchandiseValue = $scope.merchandise.value;
                                                                 debugger;
                                                         })
                                                         })
@@ -126,6 +130,7 @@ angular.module('clientApp')
 
                                             });
                                             $scope.makeTodos();
+                                            $scope.makeConsumerBidTodos();
                                             $scope.makeCreates();
                                             $scope.makeDreams();
                                             $scope.makeWins();
@@ -139,6 +144,7 @@ angular.module('clientApp')
                         });
                         $scope.consumer1 = $scope.consumer;
                         consumer = $scope.consumer;
+                        $scope.creates = $scope.consumer.merchandises;
                         debugger;
                         $scope.consumer2 = consumer;
 
@@ -476,14 +482,25 @@ angular.module('clientApp')
             ,$scope.maxSize = 5;
 
         $scope.makeTodos = function() {
-            $scope.todos = $scope.consumerBids;
+            $scope.todos = $scope.consumerBidMerchandise;
             console.log("$scope.todos", $scope.todos)
         };
         $scope.makeTodos();
 
-        $scope.filteredCreates = []
+        $scope.filteredConsumerBidTodos = []
             ,$scope.currentPage = 1
             ,$scope.numPerPage = 3
+            ,$scope.maxSize = 5;
+
+        $scope.makeConsumerBidTodos = function() {
+            $scope.consumerBidTodos = $scope.consumerBids;
+            console.log("$scope.consumerBidTodos", $scope.consumerBidTodos)
+        };
+        $scope.makeConsumerBidTodos();
+
+        $scope.filteredCreates = []
+            ,$scope.currentPage2 = 1
+            ,$scope.numPerPage2 = 3
             ,$scope.maxSize = 5;
 
         $scope.makeCreates = function() {
@@ -493,8 +510,8 @@ angular.module('clientApp')
         $scope.makeCreates();
 
         $scope.filteredDreams = []
-            ,$scope.currentPage = 1
-            ,$scope.numPerPage = 3
+            ,$scope.currentPage1 = 1
+            ,$scope.numPerPage1 = 3
             ,$scope.maxSize = 5;
 
         $scope.makeDreams = function() {
@@ -504,8 +521,8 @@ angular.module('clientApp')
         };
         $scope.makeDreams();
         $scope.filteredWins = []
-            ,$scope.currentPage = 1
-            ,$scope.numPerPage = 3
+            ,$scope.currentPage3 = 1
+            ,$scope.numPerPage3 = 3
             ,$scope.maxSize = 5;
 
         $scope.makeWins = function() {
@@ -519,27 +536,29 @@ angular.module('clientApp')
                 , end = begin + $scope.numPerPage;
 
             $scope.filteredTodos = $scope.todos.slice(begin, end);
+            $scope.filteredConsumerBidTodos = $scope.consumerBidTodos.slice(begin, end);
             console.log("Filtered Todos", $scope.filteredTodos)
             debugger;
         });
 
-        $scope.$watch('currentPage + numPerPage + consumer.merchandises', function() {
-            var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-                , end = begin + $scope.numPerPage;
+        $scope.$watch('currentPage2 + numPerPage2 + consumer.merchandises', function() {
+            var begin = (($scope.currentPage2 - 1) * $scope.numPerPage2)
+                , end = begin + $scope.numPerPage2;
+            $scope.creates = $scope.consumer.merchandises;
 
             $scope.filteredCreates = $scope.creates.slice(begin, end);
             debugger;
         });
-        $scope.$watch('currentPage + numPerPage + consumerWishMerchandise', function() {
-            var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-                , end = begin + $scope.numPerPage;
+        $scope.$watch('currentPage1 + numPerPage1 + consumerWishMerchandise', function() {
+            var begin = (($scope.currentPage1 - 1) * $scope.numPerPage1)
+                , end = begin + $scope.numPerPage1;
 
             $scope.filteredDreams = $scope.dreams.slice(begin, end);
             debugger;
         });
-        $scope.$watch('currentPage + numPerPage + consumerWishMerchandise', function() {
-            var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-                , end = begin + $scope.numPerPage;
+        $scope.$watch('currentPage3 + numPerPage3 + consumerWonMerchandise', function() {
+            var begin = (($scope.currentPage3 - 1) * $scope.numPerPage3)
+                , end = begin + $scope.numPerPage3;
 
             $scope.filteredWins = $scope.wins.slice(begin, end);
             debugger;
@@ -608,6 +627,7 @@ angular.module('clientApp')
 
         $scope.$watch('testWatch', function(consumer,  merchandise, bid) {
             $scope.makeTodos();
+            $scope.makeConsumerBidTodos();
             console.log("fired testWatch")
                 debugger;
             $scope.makeCreates();
@@ -642,9 +662,10 @@ angular.module('clientApp')
                         console.log("failed", merchandise)}
                   } else {
                         Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+                        $scope.merchandise.bidValue = $scope.bid.value;
                         $scope.consumerBidMerchandise.push(merchandise);
                         debugger;
-                        console.log(merchandise, "bid merchandise");
+                        console.log(merchandise, $scope.merchandise.bidValue, "bid merchandise");
                 })}
 
             });
@@ -661,6 +682,7 @@ angular.module('clientApp')
 
         });
             $scope.makeTodos();
+            $scope.makeConsumerBidTodos();
             $scope.makeCreates();
             $scope.makeDreams();
             $scope.makeWins();

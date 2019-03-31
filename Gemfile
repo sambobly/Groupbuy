@@ -5,7 +5,7 @@ gem 'rails', '4.2.7'
 #gem 'rails', '4.1.8'
 # Use mysql as the database for Active Record
 group :test, :production do
-  gem 'pg'
+  gem 'pg', '~> 0.18'
   gem 'rails_12factor'
 end
 group :development do
@@ -110,6 +110,8 @@ gem  'unf_ext'
 
 gem 'rest-client'
 gem 'stripe'
+gem "mini_magick"
+
 #gem 'stripe', '~> 1.53.0'
 
 #gem "paperclip", "~> 5.0.0"
