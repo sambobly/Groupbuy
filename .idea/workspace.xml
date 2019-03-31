@@ -686,7 +686,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/scripts/metro/ckeditor/lang/zh.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" afterPath="$PROJECT_DIR$/client/app/styles/metro/bootstrap.css" />
@@ -1300,19 +1299,19 @@
                           </provider>
                         </entry>
                       </file>
-                      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+                      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/Gemfile">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="2" column="14" selection-start="55" selection-end="55" vertical-scroll-proportion="-1.36">
+                            <state line="2" column="11" selection-start="54" selection-end="54" vertical-scroll-proportion="0.039719626">
                               <folding />
                             </state>
                           </provider>
                         </entry>
                       </file>
-                      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+                      <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state line="317" column="13" selection-start="7717" selection-end="7717" vertical-scroll-proportion="0.80437285">
+                            <state line="317" column="13" selection-start="7717" selection-end="7717" vertical-scroll-proportion="-27.96">
                               <folding />
                             </state>
                           </provider>
@@ -1425,8 +1424,8 @@
         <option value="$PROJECT_DIR$/client/bower.json" />
         <option value="$PROJECT_DIR$/client/app/views/consumercreate.html" />
         <option value="$PROJECT_DIR$/client/app/views/update.html" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -3465,16 +3464,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="55" selection-end="55" vertical-scroll-proportion="-1.36">
+        <state line="317" column="13" selection-start="7717" selection-end="7717" vertical-scroll-proportion="-27.96">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="317" column="13" selection-start="7717" selection-end="7717" vertical-scroll-proportion="0.80437285">
+        <state line="2" column="11" selection-start="54" selection-end="54" vertical-scroll-proportion="0.039719626">
           <folding />
         </state>
       </provider>
