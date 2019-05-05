@@ -7,9 +7,9 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-var nodemailer = require('nodemailer');
-
-var transport = nodemailer.createTransport('smtps://john.doe%40gmail.com:password@smtp.gmail.com');
+//var nodemailer = require('nodemailer');
+//
+//var transport = nodemailer.createTransport('smtps://john.doe%40gmail.com:password@smtp.gmail.com');
 
 module.exports = function (grunt) {
 
@@ -38,14 +38,14 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-    nodemailer: {
-          options: {
-              // Task-specific options go here.
-          },
-          your_target: {
-              // Target-specific file lists and/or options go here.
-          },
-      },
+//    nodemailer: {
+//          options: {
+//              // Task-specific options go here.
+//          },
+//          your_target: {
+//              // Target-specific file lists and/or options go here.
+//          },
+//      },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -85,7 +85,8 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+//        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       proxies: [
@@ -138,7 +139,9 @@ module.exports = function (grunt) {
     // Start the rails server
     shell: {
       startRailsServer: {
-        command: 'bundle exec rails server',
+          command: 'bundle exec rails server',
+
+//          command: 'bundle exec rails server –p 0.0.0.0',
         options: {
           // If async: true were omitted, the rails server
           // command would prevent subsequent commands
@@ -436,7 +439,10 @@ module.exports = function (grunt) {
         'compass:dist',
         'imagemin',
         'svgmin'
-      ]
+      ],
+      options:  {
+          limit:5
+      }
     },
 
     // Test settings
