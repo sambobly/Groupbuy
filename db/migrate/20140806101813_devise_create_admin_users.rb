@@ -1,9 +1,28 @@
 class DeviseCreateAdminUsers < ActiveRecord::Migration
   #def migrate(direction)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   #  drop_table :admin_users
   #  super
   #  # Create a default user
   #  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if direction == :up
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+   # drop_table :admin_users
+   # super
+    # Create a default user
+    #AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if direction == :up
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   #end
 
   def change
