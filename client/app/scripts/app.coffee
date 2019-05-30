@@ -503,7 +503,14 @@ Client.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post/'
   $routeProvider
   .when('/category/new', { templateUrl: '../api/categories.html', controller: 'CategoriesController' } )
-  .when('/category/:categoyId', { templateUrl: '../api/categories.html', controller: 'CategoriesController'} )
+  .when('/category/:categoryId', { templateUrl: '../api/categories.html', controller: 'CategoriesController'} )
+
+  ])
+Client.config(['$routeProvider', ($routeProvider) ->
+  # Route for '/post/'
+  $routeProvider
+  .when('/combination/new', { templateUrl: '../api/combinations.html', controller: 'CombinationsController' } )
+  .when('/combination/:combinationId', { templateUrl: '../api/combinations.html', controller: 'CombinationsController'} )
 
   ])
 Client.config(['$routeProvider', ($routeProvider) ->

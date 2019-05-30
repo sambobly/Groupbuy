@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Combinations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Onea</th>
+      <th>Oneb</th>
+      <th>Twoa</th>
+      <th>Twob</th>
+      <th>Threea</th>
+      <th>Threeb</th>
+      <th>Foura</th>
+      <th>Fourb</th>
+      <th>Fivea</th>
+      <th>Fiveb</th>
+      <th>Sixa</th>
+      <th>Sixb</th>
+      <th>Sevena</th>
+      <th>Sevenb</th>
+      <th>Eighta</th>
+      <th>Eightb</th>
+      <th>Ninea</th>
+      <th>Nineb</th>
+      <th>Tena</th>
+      <th>Tenb</th>
+      <th>Result</th>
+      <th>Complete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @combinations.each do |combination| %>
+      <tr>
+        <td><%= combination.onea %></td>
+        <td><%= combination.oneb %></td>
+        <td><%= combination.twoa %></td>
+        <td><%= combination.twob %></td>
+        <td><%= combination.threea %></td>
+        <td><%= combination.threeb %></td>
+        <td><%= combination.foura %></td>
+        <td><%= combination.fourb %></td>
+        <td><%= combination.fivea %></td>
+        <td><%= combination.fiveb %></td>
+        <td><%= combination.sixa %></td>
+        <td><%= combination.sixb %></td>
+        <td><%= combination.sevena %></td>
+        <td><%= combination.sevenb %></td>
+        <td><%= combination.eighta %></td>
+        <td><%= combination.eightb %></td>
+        <td><%= combination.ninea %></td>
+        <td><%= combination.nineb %></td>
+        <td><%= combination.tena %></td>
+        <td><%= combination.tenb %></td>
+        <td><%= combination.result %></td>
+        <td><%= combination.complete %></td>
+        <td><%= link_to 'Show', combination %></td>
+        <td><%= link_to 'Edit', edit_combination_path(combination) %></td>
+        <td><%= link_to 'Destroy', combination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Combination', new_combination_path %>

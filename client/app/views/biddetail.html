@@ -2,4 +2,41 @@ BID DETAIL
 
 <button ng-click="assessRoute()">Get route params</button>
 <button ng-click="testRelatives()">Relatives</button>
-<button ng-click="testRelatives()">Relatives</button>
+
+<button ng-click="countWinsTest()">Count wins</button>
+<button ng-click="findWinner()">Find winner</button>
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        <th scope="col">{{combination.id}}</th>
+
+        <th scope="col">{{combination.onea}}</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat = "bid in selectedBids">
+        <th scope="row">1</th>
+        <td>{{bid.id}}</td>
+        <td>{{bid.value}}</td>
+
+        <td>@mdo</td>
+        <td>
+            <input type="text" name="answer" ng-model="bid.answer" placeholder="answer" />
+        </td>
+        <td>
+            <button ng-click="updateBidTest(bid)">Update Ansewr</button>
+        </td>
+    </tr>
+
+    </tbody>
+
+    <button ng-click="updateAllBidsTest(bid)">Update Answers</button>
+</table>
+

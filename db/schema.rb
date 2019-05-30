@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190317103044) do
+ActiveRecord::Schema.define(version: 20190530085101) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "companyname", limit: 255
@@ -89,8 +89,12 @@ ActiveRecord::Schema.define(version: 20190317103044) do
     t.string   "merchandise_image", limit: 255
     t.decimal  "merchandise_value",             precision: 10
     t.string   "merchandise_title", limit: 255
+    t.integer  "combination_id",    limit: 4
+    t.string   "answer",            limit: 255
+    t.string   "score",             limit: 255
   end
 
+  add_index "bids", ["combination_id"], name: "index_bids_on_combination_id", using: :btree
   add_index "bids", ["consumer_id"], name: "index_bids_on_consumer_id", using: :btree
   add_index "bids", ["merchandise_id"], name: "index_bids_on_merchandise_id", using: :btree
 
@@ -158,6 +162,33 @@ ActiveRecord::Schema.define(version: 20190317103044) do
 
   add_index "claims", ["consumer_id"], name: "index_claims_on_consumer_id", using: :btree
   add_index "claims", ["merchandise_id"], name: "index_claims_on_merchandise_id", using: :btree
+
+  create_table "combinations", force: :cascade do |t|
+    t.string   "onea",       limit: 255
+    t.string   "oneb",       limit: 255
+    t.string   "twoa",       limit: 255
+    t.string   "twob",       limit: 255
+    t.string   "threea",     limit: 255
+    t.string   "threeb",     limit: 255
+    t.string   "foura",      limit: 255
+    t.string   "fourb",      limit: 255
+    t.string   "fivea",      limit: 255
+    t.string   "fiveb",      limit: 255
+    t.string   "sixa",       limit: 255
+    t.string   "sixb",       limit: 255
+    t.string   "sevena",     limit: 255
+    t.string   "sevenb",     limit: 255
+    t.string   "eighta",     limit: 255
+    t.string   "eightb",     limit: 255
+    t.string   "ninea",      limit: 255
+    t.string   "nineb",      limit: 255
+    t.string   "tena",       limit: 255
+    t.string   "tenb",       limit: 255
+    t.string   "result",     limit: 255
+    t.boolean  "complete"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "concession_types", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -413,29 +444,31 @@ ActiveRecord::Schema.define(version: 20190317103044) do
   add_index "meetings", ["patient_id"], name: "index_meetings_on_patient_id", using: :btree
 
   create_table "merchandises", force: :cascade do |t|
-    t.decimal  "value",                       precision: 10
-    t.integer  "category_id",   limit: 4
-    t.integer  "consumer_id",   limit: 4
-    t.text     "title",         limit: 65535
-    t.text     "description",   limit: 65535
+    t.decimal  "value",                        precision: 10
+    t.integer  "category_id",    limit: 4
+    t.integer  "consumer_id",    limit: 4
+    t.text     "title",          limit: 65535
+    t.text     "description",    limit: 65535
     t.datetime "start"
     t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "category_name", limit: 255
-    t.decimal  "bid",                         precision: 10
-    t.decimal  "difference",                  precision: 10
-    t.string   "consumer_name", limit: 255
+    t.string   "category_name",  limit: 255
+    t.decimal  "bid",                          precision: 10
+    t.decimal  "difference",                   precision: 10
+    t.string   "consumer_name",  limit: 255
     t.boolean  "complete"
     t.boolean  "email"
     t.boolean  "received"
     t.boolean  "paid"
-    t.string   "rescue",        limit: 255
-    t.string   "images",        limit: 255
-    t.string   "winner",        limit: 255
+    t.string   "rescue",         limit: 255
+    t.string   "images",         limit: 255
+    t.string   "winner",         limit: 255
+    t.integer  "combination_id", limit: 4
   end
 
   add_index "merchandises", ["category_id"], name: "index_merchandises_on_category_id", using: :btree
+  add_index "merchandises", ["combination_id"], name: "index_merchandises_on_combination_id", using: :btree
   add_index "merchandises", ["consumer_id"], name: "index_merchandises_on_consumer_id", using: :btree
 
   create_table "nests", force: :cascade do |t|
@@ -622,6 +655,8 @@ ActiveRecord::Schema.define(version: 20190317103044) do
   add_index "wishes", ["consumer_id"], name: "index_wishes_on_consumer_id", using: :btree
   add_index "wishes", ["merchandise_id"], name: "index_wishes_on_merchandise_id", using: :btree
 
+  add_foreign_key "bids", "combinations"
   add_foreign_key "claims", "consumers"
   add_foreign_key "claims", "merchandises"
+  add_foreign_key "merchandises", "combinations"
 end

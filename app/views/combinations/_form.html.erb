@@ -1,0 +1,105 @@
+<%= form_for(@combination) do |f| %>
+  <% if @combination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@combination.errors.count, "error") %> prohibited this combination from being saved:</h2>
+
+      <ul>
+      <% @combination.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :onea %><br>
+    <%= f.text_field :onea %>
+  </div>
+  <div class="field">
+    <%= f.label :oneb %><br>
+    <%= f.text_field :oneb %>
+  </div>
+  <div class="field">
+    <%= f.label :twoa %><br>
+    <%= f.text_field :twoa %>
+  </div>
+  <div class="field">
+    <%= f.label :twob %><br>
+    <%= f.text_field :twob %>
+  </div>
+  <div class="field">
+    <%= f.label :threea %><br>
+    <%= f.text_field :threea %>
+  </div>
+  <div class="field">
+    <%= f.label :threeb %><br>
+    <%= f.text_field :threeb %>
+  </div>
+  <div class="field">
+    <%= f.label :foura %><br>
+    <%= f.text_field :foura %>
+  </div>
+  <div class="field">
+    <%= f.label :fourb %><br>
+    <%= f.text_field :fourb %>
+  </div>
+  <div class="field">
+    <%= f.label :fivea %><br>
+    <%= f.text_field :fivea %>
+  </div>
+  <div class="field">
+    <%= f.label :fiveb %><br>
+    <%= f.text_field :fiveb %>
+  </div>
+  <div class="field">
+    <%= f.label :sixa %><br>
+    <%= f.text_field :sixa %>
+  </div>
+  <div class="field">
+    <%= f.label :sixb %><br>
+    <%= f.text_field :sixb %>
+  </div>
+  <div class="field">
+    <%= f.label :sevena %><br>
+    <%= f.text_field :sevena %>
+  </div>
+  <div class="field">
+    <%= f.label :sevenb %><br>
+    <%= f.text_field :sevenb %>
+  </div>
+  <div class="field">
+    <%= f.label :eighta %><br>
+    <%= f.text_field :eighta %>
+  </div>
+  <div class="field">
+    <%= f.label :eightb %><br>
+    <%= f.text_field :eightb %>
+  </div>
+  <div class="field">
+    <%= f.label :ninea %><br>
+    <%= f.text_field :ninea %>
+  </div>
+  <div class="field">
+    <%= f.label :nineb %><br>
+    <%= f.text_field :nineb %>
+  </div>
+  <div class="field">
+    <%= f.label :tena %><br>
+    <%= f.text_field :tena %>
+  </div>
+  <div class="field">
+    <%= f.label :tenb %><br>
+    <%= f.text_field :tenb %>
+  </div>
+  <div class="field">
+    <%= f.label :result %><br>
+    <%= f.text_field :result %>
+  </div>
+  <div class="field">
+    <%= f.label :complete %><br>
+    <%= f.check_box :complete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

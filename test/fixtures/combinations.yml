@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  onea: MyString
+  oneb: MyString
+  twoa: MyString
+  twob: MyString
+  threea: MyString
+  threeb: MyString
+  foura: MyString
+  fourb: MyString
+  fivea: MyString
+  fiveb: MyString
+  sixa: MyString
+  sixb: MyString
+  sevena: MyString
+  sevenb: MyString
+  eighta: MyString
+  eightb: MyString
+  ninea: MyString
+  nineb: MyString
+  tena: MyString
+  tenb: MyString
+  result: MyString
+  complete: false
+
+two:
+  onea: MyString
+  oneb: MyString
+  twoa: MyString
+  twob: MyString
+  threea: MyString
+  threeb: MyString
+  foura: MyString
+  fourb: MyString
+  fivea: MyString
+  fiveb: MyString
+  sixa: MyString
+  sixb: MyString
+  sevena: MyString
+  sevenb: MyString
+  eighta: MyString
+  eightb: MyString
+  ninea: MyString
+  nineb: MyString
+  tena: MyString
+  tenb: MyString
+  result: MyString
+  complete: false

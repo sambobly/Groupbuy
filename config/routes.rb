@@ -1,4 +1,5 @@
 Optho::Application.routes.draw do
+  resources :combinations
   resources :claims
   resources :charges
 
@@ -511,6 +512,7 @@ end
 
 
     end
+
     controller :sessions do
       get 'new'
       get 'create'
@@ -1065,7 +1067,70 @@ end
           get 'show'
         end
       end
-      end
+    end
+resources :combinations do
+  collection do
+    get 'find'
+    get 'index'
+    post 'index'
+    post 'create'
+    post 'destroy'
+    post 'edit'
+    get 'update'
+    get 'show'
+  end
+  member do
+    post 'destroy'
+    post 'update'
+    get 'edit'
+    patch 'edit'
+    patch 'update'
+    post 'edit'
+    get 'show'
+  end
+  resources :merchandises do
+    collection do
+      get 'find'
+      get 'index'
+      post 'index'
+      post 'create'
+      post 'destroy'
+      post 'edit'
+      get 'update'
+      get 'show'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'edit'
+      get 'show'
+    end
+  end
+  resources :bids do
+    collection do
+      get 'find'
+      get 'index'
+      post 'index'
+      post 'create'
+      post 'destroy'
+      post 'edit'
+      get 'update'
+      get 'show'
+    end
+    member do
+      post 'destroy'
+      post 'update'
+      get 'edit'
+      patch 'edit'
+      patch 'update'
+      post 'edit'
+      get 'show'
+    end
+  end
+end
     resources :merchandises do
       collection do
         get 'find'
@@ -1933,7 +1998,12 @@ resources :claims, only:[:index, :create, :update, :destroy]
 
     resources :tickets, only:[:index, :create, :update, :destroy]
     resources :wishes, only:[:index, :create, :update, :destroy]
-  end
+end
+resources :combination, only:[:index, :create, :update, :destroy] do
+resources :merchandise, only:[:index, :create, :update, :destroy]
+resources :bid, only:[:index, :create, :update, :destroy]
+
+end
   resources :merchandises, only:[:index, :create, :update, :destroy] do
     resources :bids, only:[:index, :create, :update, :destroy]
 resources :claims, only:[:index, :create, :update, :destroy]
@@ -2040,7 +2110,8 @@ get "/consumers/.id(.:format)/wishes" => "consumers#index"
 
   get "/merchandises(.:format)" => "merchandises#index"
     get "/merchandises/.id(.:format)" => 'merchandises#index'
-
+get "/combinations(.:format)" => "combinations#index"
+get "/combinations/.id(.:format)" => 'combinations#index'
   get "/categories(.:format)" => "categories#index"
     get "/categories/.id(.:format)" => 'categories#index'
     get "/categories/.id(.:format)/merchandises" => 'categories#index'

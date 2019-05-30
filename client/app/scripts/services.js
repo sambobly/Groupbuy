@@ -729,6 +729,39 @@ clientServices.factory('Category', ['railsResourceFactory', 'railsSerializer', '
     return resource;
 
 }]);
+clientServices.factory('Combination', ['railsResourceFactory', 'railsSerializer', '$http', 'Merchandise', 'Bid', function (railsResourceFactory, railsSerializer, $http, Merchandise, Bid) {
+//    return railsResourceFactory({
+//        url: '/api/consumers',
+//        name: 'consumer'
+//    });
+    var resource = railsResourceFactory({
+        url: '/api/combinations',
+        name: 'combination',
+        serializer: railsSerializer(function () {
+            this.resource('combinations', 'Combinations');
+            this.nestedAttribute('combinations');
+
+        })
+    });
+    resource.prototype.getMerchandises = function () {
+        var self = this;
+        return resource.$get(self.$url('merchandises')).then(function (merchandises) {
+            self.merchandises = merchandises;
+            return self.merchandises;
+
+        });
+    };
+    resource.prototype.getBids = function () {
+        var self = this;
+        return resource.$get(self.$url('bids')).then(function (bids) {
+            self.bids = bids;
+            return self.bids;
+
+        });
+    };
+    return resource;
+
+}]);
 clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer', '$http', 'Bid', 'Ticket', 'Wish', 'Claim', function (railsResourceFactory, railsSerializer, $http, Bid, Ticket, Wish, Claim) {
     var resource = railsResourceFactory({
         url: '/api/merchandises',
@@ -751,6 +784,14 @@ clientServices.factory('Merchandise', ['railsResourceFactory', 'railsSerializer'
         console.log(this.consumerId);
         //  return  Nest.get(this.nestId)
         return this.consumerId;
+    };
+    resource.prototype.getCombinationId = function () {
+
+        console.log("patient object =");
+        console.log(this);
+        console.log(this.combinationId);
+        //  return  Nest.get(this.nestId)
+        return this.combinationId;
     };
     resource.prototype.getCategoryId = function () {
 
@@ -850,6 +891,14 @@ clientServices.factory('Bid', ['railsResourceFactory', 'railsSerializer', '$http
 
         })
     });
+    resource.prototype.getCombinationId = function () {
+
+        console.log("patient object =");
+        console.log(this);
+        console.log(this.combinationId);
+        //  return  Nest.get(this.nestId)
+        return this.combinationId;
+    };
     resource.prototype.getConsumerId = function () {
 
         console.log("patient object =");

@@ -10,6 +10,8 @@ class MerchandisesController < InheritedResources::Base
       category = Category.find(params[:category_id])
     elsif params[:consumer_id]
       consumer = Consumer.find(params[:consumer_id])
+    elsif params[:combination_id]
+      combination = Combination.find(params[:combination_id])
     else
       nil
     end

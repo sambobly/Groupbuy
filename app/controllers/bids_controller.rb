@@ -7,6 +7,8 @@ class BidsController < InheritedResources::Base
 
     elsif params[:consumer_id]
       consumer = Consumer.find(params[:consumer_id])
+    elsif params[:combination_id]
+      combination = Combination.find(params[:combination_id])
     else
       nil
     end
@@ -20,7 +22,7 @@ class BidsController < InheritedResources::Base
   private
 
     def bid_params
-      params.require(:bid).permit(:consumer_id, :value, :comment, :merchandise_id, :success, :created_at, :updated_at, :complete, :merchandise_image, :merchandise_value, :merchandise_title)
+      params.require(:bid).permit(:consumer_id, :value, :comment, :merchandise_id, :success, :created_at, :updated_at, :complete, :merchandise_image, :merchandise_value, :merchandise_title, :answer, :score)
     end
 end
 
