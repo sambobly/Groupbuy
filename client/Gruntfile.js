@@ -7,9 +7,21 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //var nodemailer = require('nodemailer');
 //
 //var transport = nodemailer.createTransport('smtps://john.doe%40gmail.com:password@smtp.gmail.com');
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
 
 module.exports = function (grunt) {
 
@@ -38,6 +50,9 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //    nodemailer: {
 //          options: {
 //              // Task-specific options go here.
@@ -46,6 +61,15 @@ module.exports = function (grunt) {
 //              // Target-specific file lists and/or options go here.
 //          },
 //      },
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> Stashed changes
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -85,14 +109,28 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
+<<<<<<< HEAD
         hostname: 'localhost',
 //        hostname: '0.0.0.0',
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+//        hostname: 'localhost',
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+        hostname: '0.0.0.0',
+>>>>>>> 00c6249e91156fb26ac1c59aa8cd0e4e789fc978
         livereload: 35729
       },
       proxies: [
           {
               context: '/api',
-              host: 'localhost',
+              host:'0.0.0.0',
               port: 3000
           }
       ],
@@ -139,9 +177,21 @@ module.exports = function (grunt) {
     // Start the rails server
     shell: {
       startRailsServer: {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
           command: 'bundle exec rails server',
 
 //          command: 'bundle exec rails server –p 0.0.0.0',
+=======
+        command: 'bundle exec rails server -p 3000 -b 0.0.0.0',
+>>>>>>> Stashed changes
+=======
+        command: 'bundle exec rails server -p 3000 -b 0.0.0.0',
+>>>>>>> Stashed changes
+=======
+        command: 'bundle exec rails server -p 3000 -b 0.0.0.0',
+>>>>>>> Stashed changes
         options: {
           // If async: true were omitted, the rails server
           // command would prevent subsequent commands
@@ -157,7 +207,7 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
-      },
+     },
       all: {
         src: [
           'Gruntfile.js'
@@ -382,11 +432,11 @@ module.exports = function (grunt) {
     },
 
     // Replace Google CDN references
-    cdnify: {
+  cdnify: {
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
       }
-    },
+    }, 
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -437,12 +487,30 @@ module.exports = function (grunt) {
       dist: [
         'coffee',
         'compass:dist',
-        'imagemin',
+	'imagemin',
         'svgmin'
       ],
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
       options:  {
           limit:5
       }
+=======
+	options: {
+            limit: 8,
+        }
+>>>>>>> Stashed changes
+=======
+	options: {
+            limit: 8,
+        }
+>>>>>>> Stashed changes
+=======
+	options: {
+            limit: 8,
+        }
+>>>>>>> Stashed changes
     },
 
     // Test settings

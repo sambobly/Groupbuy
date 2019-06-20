@@ -13,7 +13,7 @@ group :development do
   #gem 'mysql2', '0.4.6'
   #gem 'mysql2', '0.3.16'
   #gem 'mysql2', '0.3.19'
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.4.0'
 
 #  NOTE NEED TO CHANGE BACK TO '0.3.16' FOR 1.9.3 RUBY
 end
