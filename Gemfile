@@ -97,6 +97,8 @@ gem 'devise'
 gem 'angular_rails_csrf'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 gem "bower-rails"
 gem 'carrierwave'
 

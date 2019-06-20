@@ -262,6 +262,7 @@ angular.module('clientApp')
 
 //        *NOTE NEED TO FIX THIS ON PAGE LOAD NOT RESET $rootScope.categoryFilter*
         $scope.searchFilter = function (testText, testSelect, callback, filter, selectedItem, searchText, name, text, input) {
+            $scope.isPopupvisible70 = false;
             debugger;
             $window.location.href = "/#/sticks";
             $state.reload();

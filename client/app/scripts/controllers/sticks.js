@@ -388,6 +388,7 @@ angular.module('clientApp')
 
                 }
                 else {
+                    $scope.isPopupvisible70 = false;
                     $scope.filteredSearchMerchandises = [];
                     $scope.filteredSearchMerchandises = $scope.filteredSearchMerchandises1;
                     console.log("filtered search merchandises", $scope.filteredSearchMerchandises)
@@ -592,6 +593,7 @@ angular.module('clientApp')
 
             $scope.minMaxFilter = Merchandise.query().then(function(){
                 if(filterValue.maxValue > 0) {
+                    $scope.isPopupvisible70 = false;
                     debugger;
                     $rootScope.filteredValueMerchandises = [];
                     angular.forEach($rootScope.filteredMerchandises, function(merchandise){
