@@ -25,6 +25,7 @@ angular.module('clientApp')
 
         Consumer.query().then(function(consumers){
             $scope.consumers = consumers;
+            $scope.testRelatives();
         });
 
         $scope.bid = new Bid();
@@ -42,6 +43,10 @@ angular.module('clientApp')
             start: '',
             end: ''
         });
+
+        $scope.isPopupVisibleSubmitNo = false;
+        $scope.isPopupVisibleSubmitYes = false;
+
 
         $scope.createBid = function() {
 
@@ -89,6 +94,7 @@ angular.module('clientApp')
         };
 
         $scope.testRelatives = function(bid, merchandise, consumer, user, combination) {
+            $scope.isPopupVisibleSubmitYes = true;
             $scope.user = userService.user;
             user = $scope.user;
 
@@ -114,8 +120,52 @@ angular.module('clientApp')
                     debugger;
                     console.log(combination);
                     $scope.combination = combination
+
+                    $scope.listComboOne ={
+                        "1a": combination.onea,
+                        "1b": combination.oneb
+                    };
+                    $scope.listComboTwo = {
+                        "2a": combination.twoa,
+                        "2b": combination.twob
+                    };
+                    $scope.listComboThree = {
+                        "3a": combination.threea,
+                        "3b": combination.threeb
+                    };
+                    $scope.listComboFour = {
+                        "4a": combination.foura,
+                        "4b": combination.fourb
+                    };
+                    $scope.listComboFive = {
+                        "5a": combination.fivea,
+                        "5b": combination.fiveb
+                    };
+                    $scope.listComboSix = {
+                        "6a": combination.sixa,
+                        "6b": combination.sixb
+                    };
+                    $scope.listComboSeven = {
+                        "7a": combination.sevena,
+                        "7b": combination.sevenb
+                    };
+                    $scope.listComboEight = {
+                        "8a": combination.eighta,
+                        "8b": combination.eightb
+                    };
+                    $scope.listComboNine = {
+                        "9a": combination.ninea,
+                        "9b": combination.nineb
+                    };
+                    $scope.listComboTen = {
+                        "10a": combination.tena,
+                        "10b": combination.tenb
+                    };
                 });
                 $scope.merchandise.bids = merchandise.getBids().then(function(merchandise){
+                    debugger;
+
+                    if ($scope.merchandise.complete == 1 && $scope.merchandise.winner < 1) {
                     console.log($scope.merchandise.bids)
                     $scope.selectedBids = []
                     angular.forEach($scope.merchandise.bids, function(bid) {
@@ -141,15 +191,68 @@ angular.module('clientApp')
 //                                console.log("FAILURE!", response);
 //                            });
                     };
+                    $scope.updateBidTest2 = function(bid) {
+                        $scope.bid = bid;
+                        console.log(bid.answerOne, bid.answerTwo, bid.answerOneID, "find answer ID")
+                        bid.answerTest = bid.answerOne + "," + bid.answerTwo + "," + bid.answerThree + "," + bid.answerFour + "," + bid.answerFive + "," + bid.answerSix + "," + bid.answerSeven + "," + bid.answerEight + "," + bid.answerNine + "," + bid.answerTen;
+                        console.log(bid.answerTest, "bid.answerTest")
+                        debugger;
+                        new Bid({id:bid.id, answer:bid.answerTest, answerOne:bid.answerOne, answerTwo:bid.answerTwo, answerThree:bid.answerThree, answerFour:bid.answerFour, answerFive:bid.answerFive, answerSix:bid.answerSix, answerSeven:bid.answerSeven, answerEight:bid.answerEight, answerNine:bid.answerNine, answerTen:bid.answerTen}).update();
+                        console.log("bid", bid);
+                        debugger;
 
+//                        $scope.bid.update()
+//                            .then(function(response) {
+//                                console.log("SUCCESS", response);
+//                            })
+//                            .catch(function(response) {
+//                                console.log("FAILURE!", response);
+//                            });
+                    };
                     $scope.updateAllBidsTest = function(bid) {
                         angular.forEach($scope.selectedBids, function(bid) {
                             $scope.bid = bid;
+                            console.log(bid.answerOne, bid.answerTwo, bid.answerOneID, "find answer ID")
+                            bid.answerTest = bid.answerOne + "," + bid.answerTwo + "," + bid.answerThree + "," + bid.answerFour + "," + bid.answerFive + "," + bid.answerSix + "," + bid.answerSeven + "," + bid.answerEight + "," + bid.answerNine + "," + bid.answerTen;
+                            console.log(bid.answerTest, "bid.answerTest")
                             debugger;
-                            new Bid({id:bid.id, answer:bid.answer}).update();
+                            new Bid({id:bid.id, answer:bid.answerTest, answerOne:bid.answerOne, answerTwo:bid.answerTwo, answerThree:bid.answerThree, answerFour:bid.answerFour, answerFive:bid.answerFive, answerSix:bid.answerSix, answerSeven:bid.answerSeven, answerEight:bid.answerEight, answerNine:bid.answerNine, answerTen:bid.answerTen}).update();
                             console.log("bid", bid);
                             debugger;
                         })
+
+
+                    };
+
+                    $scope.updateAllBidsSame = function(bid, bidAll) {
+                        $scope.bidAll = bid;
+                        debugger;
+                        angular.forEach($scope.selectedBids, function(bid) {
+                            bid.answerOne = $scope.bidAll.answerOne;
+                            bid.answerTwo = $scope.bidAll.answerTwo;
+                            bid.answerThree = $scope.bidAll.answerThree;
+                            bid.answerFour = $scope.bidAll.answerFour;
+                            bid.answerFive = $scope.bidAll.answerFive;
+                            bid.answerSix = $scope.bidAll.answerSix;
+                            bid.answerSeven = $scope.bidAll.answerSeven;
+                            bid.answerEight = $scope.bidAll.answerEight;
+                            bid.answerNine = $scope.bidAll.answerNine;
+                            bid.answerTen = $scope.bidAll.answerTen;
+                            debugger;
+                            $scope.bid = bid;
+                            console.log(bid.answerOne, bid.answerTwo, bid.answerOneID, "find answer ID")
+                            bid.answerTest = bid.answerOne + "," + bid.answerTwo + "," + bid.answerThree + "," + bid.answerFour + "," + bid.answerFive + "," + bid.answerSix + "," + bid.answerSeven + "," + bid.answerEight + "," + bid.answerNine + "," + bid.answerTen;
+                            console.log(bid.answerTest, "bid.answerTest")
+                            debugger;
+                            new Bid({id:bid.id, answer:bid.answerTest, answerOne:bid.answerOne, answerTwo:bid.answerTwo, answerThree:bid.answerThree, answerFour:bid.answerFour, answerFive:bid.answerFive, answerSix:bid.answerSix, answerSeven:bid.answerSeven, answerEight:bid.answerEight, answerNine:bid.answerNine, answerTen:bid.answerTen}).update();
+                            console.log("bid", bid);
+                            debugger;
+                        })
+
+
+//                        $scope.bid = bid;
+//                        $scope.bid.answerOne = bid.answerOne;
+//                        debugger;
 
 
                     };
@@ -227,7 +330,11 @@ angular.module('clientApp')
                         });
                         });
                     }
+                    } else {
+                        $scope.isPopupVisibleSubmitNo = true;
 
+                        console.log ("No longer accepting winners!")
+                    }
                 });
 
             });
@@ -269,6 +376,41 @@ angular.module('clientApp')
             });
             debugger;
         };
+        $scope.entities = [{
+            name: 'one',
+            checked: false
+        }, {
+            name: 'two',
+            checked: false
+        }, {
+            name: 'three',
+            checked: true
+        }, {
+            name: 'four',
+            checked: false
+        }
+        ]
+
+        $scope.updateSelection = function(position, entities) {
+            angular.forEach(entities, function(subscription, index) {
+                if (position != index)
+                    subscription.checked = false;
+            });
+        }
+
+        $scope.updateAnswer = function() {
+            $scope.bid.answer1 = bid.answer1;
+            console.log("value", $scope.bid.answer1)
+        }
+
+        $scope.list = {
+            City: [{name: "cityA"}, {name: "cityB"}],
+            County: [{ name: "countyA"}, {name: "countyB"}],
+            Town: [{ name: "townA"}, {name: "townB"}]
+        };
+
+        $scope.localityTypeRadio = 'City';
+        $scope.localityTypeRadio1 = 'Stuff';
 
 
     }])

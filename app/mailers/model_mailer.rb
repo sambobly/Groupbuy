@@ -42,4 +42,10 @@ class ModelMailer < ActionMailer::Base
     @claim = claim
     mail(to: @claim.email, subject: 'Confirmation1')
   end
-end
+
+  def answer_email(consumer, merchandise)
+    @consumer = consumer
+    @merchandise = merchandise
+    mail(to: @consumer.email, subject: 'Submit your answers!')
+  end
+  end

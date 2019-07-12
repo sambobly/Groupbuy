@@ -71,23 +71,24 @@
                 <div class="aa-price-block-1">
 
                     <input name = "value"
-                           type="text"
+                           type="number"
                            ng-model="merchandise.value"
-                           min= "1"
+                           min= "10"
                            placeholder="$"
-                           restrict-input="{type: 'digitsOnly'}"
                            format = "currency"
+                           ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                           step="0.01"
                            required
                             />
-                           <!--required-->
-                           <!--class="required"-->
-                           <!--currency-->
+                    <!--required-->
+                    <!--class="required"-->
+                    <!--currency-->
 
                 </div>
 
                 <div class="field-message" ng-messages="frm.value.$error" ng-if='frm.value.$dirty' ng-cloak>
-                    <div ng-message="required">Required field, must be greater than $1</div>
-                    <div ng-message="min">Your field value is lesser minimum value</div>
+                    <div ng-message="required">Required field, must be greater than $10</div>
+                    <div ng-message="min">Value must be greater than $10</div>
                 </div>
 
                 <h3>Merchandise Category</h3>
@@ -133,7 +134,6 @@
                     <div class="field-message" ng-messages="frm.image.$error" ng-if='frm.image.$dirty' ng-cloak>
                         <div ng-message="required">Images are required</div>
                     </div>
-                    <input type="submit" value="Submit"/>
                     <button type="submit" ng-click="createMerchandise(); frm.image.$setDirty(); frm.title.$setDirty(); frm.category.$setDirty(); frm.value.$setDirty()" class="btn bg-emerald submit" ng-show = "isPopupvisiblesubmit">Submit</button>
 
                 </form>
@@ -157,12 +157,5 @@
     <div>
 
     </div>
-
-
-    <div>
-        <textarea class="rescue" placeholder="Rescue"  ng-model="merchandise.rescue"></textarea>
-
-    </div>
-</section>
 
 

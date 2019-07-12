@@ -101,19 +101,7 @@ angular.module('clientApp')
                                                         $scope.consumerBidMerchandise.push($scope.merchandise);
                                                         debugger;
                                                         console.log($scope.merchandise, $scope.merchandise.bidValue, $scope.bid, "bid merchandise");
-                                                    }).then(function() {
-                                                            angular.forEach($scope.consumerBids, function(value, key) {
-                                                                console.log(value, key);
-                                                                $scope.bid1 = value;
-                                                                debugger;
-
-                                                                Merchandise.get({id:value.merchandiseId})
-                                                                debugger;
-//                                                                $scope.bid1.merchandiseName = $scope.merchandise.title;
-//                                                                $scope.bid1.merchandiseValue = $scope.merchandise.value;
-                                                                debugger;
-                                                        })
-                                                        })
+                                                    })
                                                 }
 
                                             });

@@ -87,6 +87,7 @@ angular.module('clientApp')
             $scope.merchandise.consumerId = $scope.consumer.id;
             $scope.merchandise.categoryId = $scope.merchandise.category.id;
             $scope.merchandise.difference = $scope.merchandise.value;
+            $scope.merchandise.bid = "0";
             $scope.merchandise.complete = 'false';
             debugger;
             $scope.merchandise.create()

@@ -24,6 +24,13 @@ class ConsumersController < InheritedResources::Base
 
   end
 
+  def answer
+    p "RAILS TEST"
+    @merchandise = Merchandise.find_by_id(params[:merchandise])
+    @consumer = Consumer.find_by_id(params[:consumer])
+    ModelMailer.answer_email(@consumer, @merchandise).deliver_now
+
+  end
   protected
   def begin_of_association_chain
     if params[:user_id]

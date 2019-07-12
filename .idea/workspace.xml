@@ -6,6 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/client/app/views/consultations.html" />
     <bookmark url="file://$PROJECT_DIR$/app/views/model_mailer/test_email.html.erb" line="7" />
     <bookmark url="file://$PROJECT_DIR$/config/routes.rb" />
+    <bookmark url="file://$PROJECT_DIR$" />
   </component>
   <component name="ChangeListManager">
     <list id="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" name="Default" comment="" />
@@ -15,6 +16,8 @@
     <list id="f7cb44c2-835c-4b80-98d4-cb6584269874" name="Failed commit: Default (3)" comment="Trying ye old facebook api to get user data" />
     <list id="35217664-370d-4cae-9ec5-9d3d800e7112" name="Failed commit: Default (4)" comment="Fixing git" />
     <list default="true" id="381b509f-7ae1-4626-9291-06a431daeb0f" name="Failed commit: Default (5)" comment="Fixed views">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/answer_email.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/model_mailer/answer_email.text.erb" />
       <change type="DELETED" beforePath="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\bower_components\angular-smart-table\.gitignore" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\bower_components\angular-smart-table\.travis.yml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\bower_components\jquery\src\.eslintrc" afterPath="" />
@@ -40,6 +43,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-sanitize/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-sanitize/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-touch/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-touch/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-select/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/.bower.json" />
@@ -53,21 +57,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery-timepicker-jt/.gitignore" afterPath="$PROJECT_DIR$/client/bower_components/jquery-timepicker-jt/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/client/bower_components/jquery/AUTHORS.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-select/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/interact/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/interact/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/ng-token-auth/CHANGELOG.md" afterPath="$PROJECT_DIR$/client/bower_components/ng-token-auth/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/es5-shim/CHANGES" afterPath="$PROJECT_DIR$/client/bower_components/es5-shim/CHANGES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/CONTRIBUTING.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-select/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/CONTRIBUTING.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Gruntfile.js" afterPath="$PROJECT_DIR$/client/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/ISSUE_TEMPLATE.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/LICENSE" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/LICENSE" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/LICENSE" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/nuget/MyGet.ps1" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/nuget/MyGet.ps1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/README.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/README.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-select/README.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/README.md" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/README.md" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/README.md" />
@@ -190,11 +200,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.min.js.map" afterPath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-touch/angular-touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/release/angular-ui-router.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/release/angular-ui-router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/release/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/release/angular-ui-router.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/effects/animatedSelector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/app.coffee" afterPath="$PROJECT_DIR$/client/app/scripts/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/arr.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/attr.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes.js" />
@@ -222,8 +235,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/backdrop/backdrop.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/backdrop/backdrop.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/backdrop/backdrop.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/backdrop/backdrop.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/backdrop/backdrop.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/backdrop/backdrop.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/bid.rb" afterPath="$PROJECT_DIR$/app/models/bid.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/biddetail.html" afterPath="$PROJECT_DIR$/client/app/views/biddetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/bids.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/bids.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bids_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bids_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/nuget/bootstrap.less.nuspec" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/nuget/bootstrap.less.nuspec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/less/bootstrap.less" />
@@ -241,6 +256,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/bottomSheet/bottomSheet.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/bottomSheet/bottomSheet.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/bottomSheet/bottomSheet.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/bottomSheet/bottomSheet.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/bottomSheet/bottomSheet.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/bottomSheet/bottomSheet.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower.json" afterPath="$PROJECT_DIR$/client/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-animate/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-animate/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-aria/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-aria/bower.json" />
@@ -293,6 +309,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-sanitize/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-sanitize/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-touch/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-touch/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/interact/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/interact/bower.json" />
@@ -354,6 +371,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/chips/chips.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/chips/chips.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/chips/chips.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/chips/chips.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/chips/chips.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/chips/chips.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/model_mailer/claim_email.html.erb" afterPath="$PROJECT_DIR$/app/views/model_mailer/claim_email.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/class2type.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/classes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js" />
@@ -362,9 +380,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/colors/colors.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/colors/colors.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/colors/colors.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/colors/colors.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/colors/colors.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/colors/colors.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/combination.rb" afterPath="$PROJECT_DIR$/app/admin/combination.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/combination.rb" afterPath="$PROJECT_DIR$/app/models/combination.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/common.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb" afterPath="$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/composer.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/concat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/grunt/configBridge.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/consumers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/consumers_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/content/content-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/content/content-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/content/content-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/content/content-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/content/content-default-theme.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/content/content-default-theme.min.css" />
@@ -396,6 +419,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/data.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/data/var/dataPriv.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/data/var/dataUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/datepicker/datepicker-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/datepicker/datepicker-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/datepicker/datepicker-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/datepicker/datepicker-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/datepicker/datepicker-default-theme.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/datepicker/datepicker-default-theme.min.css" />
@@ -443,7 +467,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/documentElement.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/effects.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/eggs.html" afterPath="$PROJECT_DIR$/client/app/views/eggs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/eggs.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/eggs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.js" afterPath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.map" afterPath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.min.js" afterPath="$PROJECT_DIR$/client/bower_components/es5-shim/es5-sham.min.js" />
@@ -500,8 +528,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/icon/icon.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/icon/icon.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/icon/icon.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/icon/icon.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/icon/icon.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/icon/icon.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/index.html" afterPath="$PROJECT_DIR$/client/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-select/docs/index.html" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-select/docs/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery-timepicker-jt/index.html" afterPath="$PROJECT_DIR$/client/bower_components/jquery-timepicker-jt/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bids/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/bids/index.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/indexOf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/core/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/input/input-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/input/input-default-theme.css" />
@@ -540,6 +570,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/list/list.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/list/list.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/load.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/login.html" afterPath="$PROJECT_DIR$/client/app/views/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/menu/menu-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/menu/menu-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menu/menu-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menu/menu-default-theme.css" />
@@ -565,8 +596,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menuBar/menuBar.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menuBar/menuBar.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/menuBar/menuBar.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/menuBar/menuBar.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menuBar/menuBar.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/menuBar/menuBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/merchandises.html" afterPath="$PROJECT_DIR$/client/app/views/merchandises.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/merchandises_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/merchandises_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/js/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/model_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/model_mailer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar-default-theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar-default-theme.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar-default-theme.min.css" />
@@ -579,6 +614,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/navBar/navBar.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/navBar/navBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/ng-token-auth/src/ng-token-auth.coffee" afterPath="$PROJECT_DIR$/client/bower_components/ng-token-auth/src/ng-token-auth.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/nonce.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/offset.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/offset.js" />
@@ -662,16 +702,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/rcssNum.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/readme.md" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/resolve.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/resolve.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/css/var/rmargin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/traversing/var/rneedsContext.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/rnotwhite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/var/rquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/var/rscriptType.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/core/var/rsingleTag.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/var/rtagName.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/grunt/sauce_browsers.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/less/scaffolding.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/ajax/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/js/scrollspy.js" />
@@ -682,6 +725,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select-default-theme.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select-default-theme.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/select.html" afterPath="$PROJECT_DIR$/client/app/views/select.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/select/select.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/select/select.min.css" />
@@ -694,6 +738,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/serialize.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/services.js" afterPath="$PROJECT_DIR$/client/app/scripts/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/manipulation/setGlobalEval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bids/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/bids/show.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/showHide/showHide.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/showHide/showHide.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/showHide/showHide.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/showHide/showHide.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/css/showHide.js" />
@@ -730,6 +775,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stSearch.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stSearch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stSort.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stSort.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stTable.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-smart-table/src/stTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/state.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/stateDirectives.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/stateDirectives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/stateFilters.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/stateFilters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/sticks.html" afterPath="$PROJECT_DIR$/client/app/views/sticks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/sticks.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/sticks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/sticky/sticky.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/sticky/sticky.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/sticky/sticky.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/sticky/sticky.css" />
@@ -788,6 +837,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/tabs/tabs.min.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/tabs/tabs.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/tabs/tabs.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/tabs/tabs.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/tabs/tabs.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/tabs/tabs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/templateFactory.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/templateFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/less/theme.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/var/toString.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/toast/toast-default-theme.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/toast/toast-default-theme.css" />
@@ -832,8 +882,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/js/transition.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/traversing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/event/trigger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/scripts/controllers/twigs.js" afterPath="$PROJECT_DIR$/client/app/scripts/controllers/twigs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/update.html" afterPath="$PROJECT_DIR$/client/app/views/update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/urlMatcherFactory.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/urlMatcherFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/urlRouter.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/urlRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/client/bower_components/jquery/src/attributes/val.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/client/bower_components/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/view.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/viewDirective.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/viewDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/viewScroll.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-ui-router/src/viewScroll.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/virtualRepeat/virtualRepeat.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/virtualRepeat/virtualRepeat.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/virtualRepeat/virtualRepeat.css" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/js/virtualRepeat/virtualRepeat.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/virtualRepeat/virtualRepeat.js" afterPath="$PROJECT_DIR$/client/bower_components/angular-material/modules/closure/virtualRepeat/virtualRepeat.js" />
@@ -857,7 +914,7 @@
     </list>
     <ignored path="optho.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561000403137" ignored="false" />
+    <file path="/Dummy.txt" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562900064657" ignored="false" />
     <file path="/note" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386386176068" ignored="false" />
     <file path="/appointments.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1397004794179" ignored="false" />
     <file path="/new.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559606334719" ignored="false" />
@@ -874,7 +931,7 @@
     <file path="/application.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386585358807" ignored="false" />
     <file path="/Gemfile" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559778823644" ignored="false" />
     <file path="/appointments.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1474791455736" ignored="false" />
-    <file path="/routes.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1558863615092" ignored="false" />
+    <file path="/routes.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562713892404" ignored="false" />
     <file path="/search.json.jbuilder" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386587767504" ignored="false" />
     <file path="/search.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1389147921800" ignored="false" />
     <file path="/date.json.erb" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1386634823147" ignored="false" />
@@ -927,17 +984,17 @@
     <file path="/consultations.css.scss" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1416828230471" ignored="false" />
     <file path="/samplemedications.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1413902604632" ignored="false" />
     <file path="/bower.json" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552987531426" ignored="false" />
-    <file path="/a.dummy" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1548582470686" ignored="false" />
+    <file path="/a.dummy" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562652536401" ignored="false" />
     <file path="/sampleletters.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414706372911" ignored="false" />
     <file path="/sampleprevs.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414707379533" ignored="false" />
     <file path="/dummy.xml" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1497849719704" ignored="false" />
     <file path="/sampleemails.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414809267521" ignored="false" />
     <file path="/samplesentemails.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1414811228516" ignored="false" />
     <file path="/samplepastappointments.json" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1415032109487" ignored="false" />
-    <file path="/Gruntfile.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1557053673627" ignored="false" />
-    <file path="/app.coffee" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1495743533105" ignored="false" />
+    <file path="/Gruntfile.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561017037068" ignored="false" />
+    <file path="/app.coffee" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561162490940" ignored="false" />
     <file path="/consultations.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1418950944484" ignored="false" />
-    <file path="/index.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552699662236" ignored="false" />
+    <file path="/index.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561163885740" ignored="false" />
     <file path="/home.html" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1424062883076" ignored="false" />
     <file path="/main.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1417768685920" ignored="false" />
     <file path="/patients.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1457265394884" ignored="false" />
@@ -961,7 +1018,7 @@
     <file path="/tax.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1449296999239" ignored="false" />
     <file path="/taxes.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1460874044991" ignored="false" />
     <file path="/taxes.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1455533177637" ignored="false" />
-    <file path="/database.yml" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1496186300719" ignored="false" />
+    <file path="/database.yml" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561620931734" ignored="false" />
     <file path="/package.json" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1555729812749" ignored="false" />
     <file path="/server.js" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427929912216" ignored="false" />
     <file path="/Procfile" changelist="c3336286-0c7b-4ddd-87f0-e91e810c9c0c" time="1427931414954" ignored="false" />
@@ -1035,19 +1092,19 @@
     <file path="/nest.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1448674428405" ignored="false" />
     <file path="/eggs.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1546077752858" ignored="false" />
     <file path="/nests.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1481934255125" ignored="false" />
-    <file path="/eggs.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1546325253467" ignored="false" />
+    <file path="/eggs.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561710806541" ignored="false" />
     <file path="/nests.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1481971086966" ignored="false" />
     <file path="/birds_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1467709455550" ignored="false" />
     <file path="/bird.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1445064330159" ignored="false" />
     <file path="/birds.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1482058750987" ignored="false" />
     <file path="/birds.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1480330686265" ignored="false" />
-    <file path="/twigs.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552879312872" ignored="false" />
+    <file path="/twigs.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562715886631" ignored="false" />
     <file path="/twigs.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1548068001391" ignored="false" />
     <file path="/twigs_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1465812839820" ignored="false" />
     <file path="/twig.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1447161028873" ignored="false" />
     <file path="/sticks_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1447243502055" ignored="false" />
     <file path="/stick.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1447243558467" ignored="false" />
-    <file path="/sticks.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552779612509" ignored="false" />
+    <file path="/sticks.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562810371288" ignored="false" />
     <file path="/line.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1448686247055" ignored="false" />
     <file path="/lines.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1449375963746" ignored="false" />
     <file path="/lines_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1448687748461" ignored="false" />
@@ -1076,7 +1133,7 @@
     <file path="/bootstrap-responsive.css" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1458438083634" ignored="false" />
     <file path="/route.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1465723025027" ignored="false" />
     <file path="/route-provider.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1465723240651" ignored="false" />
-    <file path="/model_mailer.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1541184930793" ignored="false" />
+    <file path="/model_mailer.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562713997825" ignored="false" />
     <file path="/new_record_notification.text.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1466118697163" ignored="false" />
     <file path="/acute.select.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1466736970298" ignored="false" />
     <file path="/letter.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1472455757910" ignored="false" />
@@ -1092,19 +1149,19 @@
     <file path="/recipients.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1472451572099" ignored="false" />
     <file path="/doctors.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1473073331734" ignored="false" />
     <file path="/doctors.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1473073297868" ignored="false" />
-    <file path="/sticks.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552779772323" ignored="false" />
+    <file path="/sticks.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562634468693" ignored="false" />
     <file path="/consumers.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1550814191534" ignored="false" />
     <file path="/consumers.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1537036652647" ignored="false" />
-    <file path="/merchandises_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1558829852595" ignored="false" />
-    <file path="/merchandises.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1541008711731" ignored="false" />
-    <file path="/merchandises.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1545283803096" ignored="false" />
+    <file path="/merchandises_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562716036997" ignored="false" />
+    <file path="/merchandises.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562637110038" ignored="false" />
+    <file path="/merchandises.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562634155410" ignored="false" />
     <file path="/merchandise.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1558829805512" ignored="false" />
     <file path="/consumer.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1541001932815" ignored="false" />
-    <file path="/bids.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559208396567" ignored="false" />
+    <file path="/bids.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562810820668" ignored="false" />
     <file path="/bids.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1551091488318" ignored="false" />
     <file path="/bids_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559206315143" ignored="false" />
     <file path="/tickets_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1478167652503" ignored="false" />
-    <file path="/bid.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559206306683" ignored="false" />
+    <file path="/bid.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562577778586" ignored="false" />
     <file path="/tickets.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1478600507916" ignored="false" />
     <file path="/tickets.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1478600557068" ignored="false" />
     <file path="/ticket.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1478169299744" ignored="false" />
@@ -1120,7 +1177,7 @@
     <file path="/wishes_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1483646473642" ignored="false" />
     <file path="/wishes.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1484073186739" ignored="false" />
     <file path="/wishes.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1484074172923" ignored="false" />
-    <file path="/select.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552879298121" ignored="false" />
+    <file path="/select.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562715016012" ignored="false" />
     <file path="/flavordirective.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1484429201901" ignored="false" />
     <file path="/jquery.simpleLens.css" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1484770522697" ignored="false" />
     <file path="/user.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1541001921932" ignored="false" />
@@ -1135,8 +1192,8 @@
     <file path="/user.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1488688972256" ignored="false" />
     <file path="/login.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1491821468353" ignored="false" />
     <file path="/users.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1492328392688" ignored="false" />
-    <file path="/consumers_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1538071826324" ignored="false" />
-    <file path="/update.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1550814277847" ignored="false" />
+    <file path="/consumers_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562713485860" ignored="false" />
+    <file path="/update.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562656964998" ignored="false" />
     <file path="/emails_controller.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1536519484918" ignored="false" />
     <file path="/test_email.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1495398440675" ignored="false" />
     <file path="/config.yml" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1496097893108" ignored="false" />
@@ -1163,18 +1220,20 @@
     <file path="/claim_email.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1537818478369" ignored="false" />
     <file path="/claim_email.text.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1537815896558" ignored="false" />
     <file path="/complete_email.text.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1538160436201" ignored="false" />
-    <file path="/complete_email.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1538161012715" ignored="false" />
+    <file path="/complete_email.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562722089869" ignored="false" />
     <file path="/fail_email.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1541185361526" ignored="false" />
     <file path="/edit.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1542422314677" ignored="false" />
     <file path="/20181229101933_add_details_to_bids.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1546080717302" ignored="false" />
     <file path="/consumercreate.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1552987799306" ignored="false" />
     <file path="/recover.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1550375661537" ignored="false" />
-    <file path="/biddetail.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559207261762" ignored="false" />
-    <file path="/Gemfile.lock" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1554000344055" ignored="false" />
+    <file path="/biddetail.html" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562810585724" ignored="false" />
+    <file path="/Gemfile.lock" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1561011228048" ignored="false" />
     <file path="/jshint.js" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1555929119640" ignored="false" />
     <file path="/20190525092330_create_combinations.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1558776466373" ignored="false" />
-    <file path="/combination.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1558777256548" ignored="false" />
+    <file path="/combination.rb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562716762836" ignored="false" />
     <file path="/devise.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1559610436774" ignored="false" />
+    <file path="/answer_email.text.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562713413798" ignored="false" />
+    <file path="/answer_email.html.erb" changelist="381b509f-7ae1-4626-9291-06a431daeb0f" time="1562714382812" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1202,7 +1261,7 @@
     <favorites_list name="optho" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.1">
+    <splitter split-orientation="horizontal" split-proportion="0.178762">
       <split-first>
         <leaf>
           <file leaf-file-name="20181229101933_add_details_to_bids.rb" pinned="false" current="false" current-in-tab="false">
@@ -1223,28 +1282,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="merchandises_controller.rb" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/merchandises_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="8" selection-start="293" selection-end="393" vertical-scroll-proportion="0.30670103">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="consumer.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/consumer.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="168" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fail_email.html.erb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="fail_email.html.erb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/model_mailer/fail_email.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="79" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
+                <state line="3" column="79" selection-start="200" selection-end="200" vertical-scroll-proportion="0.06864065">
                   <folding />
                 </state>
               </provider>
@@ -1253,16 +1294,7 @@
           <file leaf-file-name="consumers_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/consumers_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="eggs.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/eggs.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+                <state line="30" column="22" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -1280,31 +1312,137 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.8316109">
+        <splitter split-orientation="horizontal" split-proportion="0.36553526">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.14975846">
+            <leaf>
+              <file leaf-file-name="biddetail.html" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/app/views/biddetail.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="10" column="94" selection-start="504" selection-end="504" vertical-scroll-proportion="0.021656051">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="3" column="15" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="_sidebar_links.html.erb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/views/admin/_sidebar_links.html.erb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/admin/category.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/admin/user.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="patient.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/admin/patient.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="merchandise.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/admin/merchandise.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="7" column="44" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="combination.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/admin/combination.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="10" column="26" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
+                      <folding>
+                        <marker date="1562718093667" expanded="true" signature="33:477" placeholder="do ... end" />
+                        <marker date="1562718093667" expanded="true" signature="89:472" placeholder="#..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="merchandises_controller.rb" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/controllers/merchandises_controller.rb">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="25" column="229" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <splitter split-orientation="horizontal" split-proportion="0.47701582">
               <split-first>
                 <leaf>
-                  <file leaf-file-name="bids_controller.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/controllers/bids_controller.rb">
+                  <file leaf-file-name="bids.js" pinned="false" current="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/bids.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="24" column="205" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
+                        <state line="333" column="60" selection-start="16208" selection-end="16208" vertical-scroll-proportion="0.021518987">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="biddetail.html" pinned="false" current="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/client/app/views/biddetail.html">
+                  <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/config/routes.rb">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="6" column="28" selection-start="209" selection-end="209" vertical-scroll-proportion="0.10933334">
+                        <state line="1972" column="54" selection-start="37505" selection-end="37505" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="combinations_helper.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/helpers/combinations_helper.rb">
+                  <file leaf-file-name="select.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/select.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="409" column="65" selection-start="19160" selection-end="19167" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="twigs.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/twigs.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="348" column="112" selection-start="19199" selection-end="19206" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/login.html">
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding />
@@ -1312,26 +1450,35 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/client/app/scripts/services.js">
+                  <file leaf-file-name="update.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/update.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="731" column="41" selection-start="23806" selection-end="23806" vertical-scroll-proportion="0.0">
+                        <state line="742" column="0" selection-start="32325" selection-end="32552" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="bid.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/models/bid.rb">
+                  <file leaf-file-name="claims.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/claims.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="1" column="206" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+                        <state line="15" column="28" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="20190317103044_add_winner_to_merchandises.rb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/db/migrate/20190317103044_add_winner_to_merchandises.rb">
+                  <file leaf-file-name="complete_email.html.erb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="letter_email.html.erb" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/views/model_mailer/letter_email.html.erb">
                       <provider selected="true" editor-type-id="text-editor">
                         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding />
@@ -1339,10 +1486,10 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+                  <file leaf-file-name="eggs.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/views/eggs.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="3" column="15" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+                        <state line="234" column="47" selection-start="14863" selection-end="14864" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -1351,313 +1498,64 @@
                 </leaf>
               </split-first>
               <split-second>
-                <splitter split-orientation="horizontal" split-proportion="0.4065744">
-                  <split-first>
-                    <leaf>
-                      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="1991" column="52" selection-start="38355" selection-end="38355" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="consumers.html" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/views/consumers.html">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="291" column="52" selection-start="19929" selection-end="19948" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="consumercreate.html" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/views/consumercreate.html">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="1090" column="26" selection-start="52239" selection-end="52239" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="blog-archive.html" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$USER_HOME$/Desktop/ECommerce/MarkUps-dailyShop-v1.1/dailyShop/blog-archive.html">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="bids.js" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/bids.js">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="156" column="57" selection-start="5967" selection-end="5967" vertical-scroll-proportion="0.0">
-                              <folding>
-                                <marker date="1559208391368" expanded="true" signature="7574:9914" placeholder="{...}" />
-                              </folding>
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="sticks.html" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/views/sticks.html">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="123" column="26" selection-start="5975" selection-end="5985" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="bids.html" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/views/bids.html">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="74" column="94" selection-start="3509" selection-end="3509" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="searchmerch.js" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/searchmerch.js">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="274" column="4" selection-start="9346" selection-end="9346" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="true">
-                        <entry file="file://$PROJECT_DIR$/Gemfile">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="63" column="20" selection-start="1640" selection-end="1644" vertical-scroll-proportion="0.33292383">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                    </leaf>
-                  </split-first>
-                  <split-second>
-                    <leaf>
-                      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap/bootstrap.css">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="application_bootstrap.scss" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application_bootstrap.scss">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="bootstrap_and_overrides.css" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="ecommercebootstrap.css" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ecommercebootstrap.css">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="14" column="20" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="sticks.js" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="79" column="79" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
-                        <entry file="file://$PROJECT_DIR$/client/Gruntfile.js">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="26" column="38" selection-start="618" selection-end="618" vertical-scroll-proportion="0.52934134">
-                              <folding>
-                                <marker date="1561003358995" expanded="true" signature="616:14645" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="926:999" placeholder="{&quot;dist&quot;: 'dist'...}" />
-                                <marker date="1561003358995" expanded="true" signature="1211:4427" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="1752:2656" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="1767:1834" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="1850:1978" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="1998:2119" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="2136:2259" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="2278:2319" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="2339:2650" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="2358:2427" placeholder="{&quot;livereload&quot;: '&lt;%= connect.options.livereload %&gt;'...}" />
-                                <marker date="1561003358995" expanded="true" signature="2444:2642" placeholder="[...]" />
-                                <marker date="1561003358995" expanded="true" signature="2712:4352" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="2729:3220" placeholder="{&quot;port&quot;: 9000...}" />
-                                <marker date="1561003358995" expanded="true" signature="3237:3356" placeholder="[...]" />
-                                <marker date="1561003358995" expanded="true" signature="3249:3348" placeholder="{&quot;context&quot;: '/api'...}" />
-                                <marker date="1561003358995" expanded="true" signature="3376:3814" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="3395:3806" placeholder="{&quot;open&quot;: true...}" />
-                                <marker date="1561003358995" expanded="true" signature="3460:3796" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="3481:3783" placeholder="[...]" />
-                                <marker date="1561003358995" expanded="true" signature="3828:4235" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="3847:4227" placeholder="{&quot;port&quot;: 9001...}" />
-                                <marker date="1561003358995" expanded="true" signature="3912:4217" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="3933:4204" placeholder="[...]" />
-                                <marker date="1561003358995" expanded="true" signature="4249:4346" placeholder="{...}" />
-                                <marker date="1561003358995" expanded="true" signature="4268:4338" placeholder="{&quot;open&quot;: true...}" />
-                                <marker date="1561003358995" expanded="true" signature="4400:4427" placeholder="{...}" />
-                              </folding>
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/config/database.yml">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="14" column="9" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                      <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
-                        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-                          <provider selected="true" editor-type-id="text-editor">
-                            <state line="266" column="10" selection-start="6930" selection-end="6934" vertical-scroll-proportion="-30.32">
-                              <folding />
-                            </state>
-                          </provider>
-                        </entry>
-                      </file>
-                    </leaf>
-                  </split-second>
-                </splitter>
+                <leaf>
+                  <file leaf-file-name="merchandises.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="90" column="32" selection-start="3031" selection-end="3032" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="twigs.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/twigs.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="330" column="18" selection-start="11504" selection-end="11511" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="claims.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/claims.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="searchmerch.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/searchmerch.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="640" column="30" selection-start="25096" selection-end="25096" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/client/app/index.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="273" column="26" selection-start="16398" selection-end="18645" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="sticks.js" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="6" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.020432692">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
               </split-second>
             </splitter>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="40" column="0" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="_links.html.erb" pinned="false" current="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/views/users/shared/_links.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="25" column="10" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.6381381">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="reset_password_instructions.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/mailer/reset_password_instructions.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="9" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="unlock_instructions.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/mailer/unlock_instructions.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="8" column="0" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/passwords/edit.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="24" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/passwords/new.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="32" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="create.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/registrations/create.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="30" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/registrations/edit.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="40" column="0" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/registrations/new.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="create.html.erb" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/views/users/sessions/create.html.erb">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="27" column="0" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
           </split-second>
         </splitter>
       </split-second>
@@ -1679,22 +1577,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/confirmations/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/mailer/confirmation_instructions.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/mailer/reset_password_instructions.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/mailer/unlock_instructions.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/passwords/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/passwords/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/registrations/create.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/sessions/create.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/shared/_links.html.erb" />
-        <option value="$PROJECT_DIR$/client/app/scripts/controllers/searchmerch.js" />
+        <option value="$PROJECT_DIR$/client/app/views/update.html" />
+        <option value="$PROJECT_DIR$/app/controllers/consumers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/model_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/views/model_mailer/answer_email.text.erb" />
+        <option value="$PROJECT_DIR$/app/views/model_mailer/answer_email.html.erb" />
+        <option value="$PROJECT_DIR$/client/app/views/select.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/twigs.js" />
+        <option value="$PROJECT_DIR$/app/controllers/merchandises_controller.rb" />
+        <option value="$PROJECT_DIR$/app/admin/claim.rb" />
+        <option value="$PROJECT_DIR$/app/admin/combination.rb" />
+        <option value="$PROJECT_DIR$/app/views/model_mailer/claim_email.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/client/app/scripts/controllers/sticks.js" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/Gemfile.lock" />
-        <option value="$PROJECT_DIR$/client/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/client/app/views/biddetail.html" />
+        <option value="$PROJECT_DIR$/client/app/scripts/controllers/bids.js" />
       </list>
     </option>
   </component>
@@ -1747,6 +1645,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1775,13 +1674,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optho" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1814,11 +1752,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\views" />
+      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\views\devise" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\styles" />
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app\uploads\avatar\9" />
-      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\client\app" />
-      <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\uploads\avatar\14" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\P151\Dropbox\Theo and Tom Folder\optho\app\assets\stylesheets" />
@@ -3369,16 +3307,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31823084" sideWeight="0.49840596" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32592592" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.6814815" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20864461" sideWeight="0.9815217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19850586" sideWeight="0.9695652" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20213903" sideWeight="0.2826087" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.018478261" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.030434782" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3552,17 +3490,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js</url>
-          <line>707</line>
+          <line>709</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js</url>
-          <line>222</line>
+          <line>223</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js</url>
-          <line>193</line>
+          <line>195</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -3577,7 +3515,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/config/routes.rb</url>
-          <line>2186</line>
+          <line>2191</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
@@ -3585,152 +3523,120 @@
           <line>473</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb</url>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="81" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/passwords/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/bids.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+        <state line="333" column="60" selection-start="16208" selection-end="16208" vertical-scroll-proportion="0.021518987">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/passwords/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/select.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
+        <state line="409" column="65" selection-start="19160" selection-end="19167" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/registrations/create.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/twigs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+        <state line="348" column="112" selection-start="19199" selection-end="19206" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/registrations/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/registrations/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
+        <state line="1972" column="54" selection-start="37505" selection-end="37505" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/sessions/create.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+        <state line="742" column="0" selection-start="32325" selection-end="32552" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/shared/_links.html.erb">
+    <entry file="file://$PROJECT_DIR$/client/app/views/claims.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="10" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.6381381">
+        <state line="15" column="28" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js">
+    <entry file="file://$PROJECT_DIR$/app/views/model_mailer/complete_email.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="79" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+    <entry file="file://$PROJECT_DIR$/app/views/model_mailer/letter_email.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/eggs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="47" selection-start="14863" selection-end="14864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/merchandises.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="32" selection-start="3031" selection-end="3032" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/claims.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/searchmerch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="4" selection-start="9346" selection-end="9346" vertical-scroll-proportion="0.0">
+        <state line="640" column="30" selection-start="25096" selection-end="25096" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merchandise.rb">
+    <entry file="file://$PROJECT_DIR$/client/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+        <state line="273" column="26" selection-start="16398" selection-end="18645" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/node_modules/grunt-connect-proxy/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/twigs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="29" selection-start="835" selection-end="867" vertical-scroll-proportion="0.77816904">
+        <state line="330" column="18" selection-start="11504" selection-end="11511" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/client/app/scripts/controllers/sticks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.020432692">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="10" selection-start="6930" selection-end="6934" vertical-scroll-proportion="-30.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="20" selection-start="1640" selection-end="1644" vertical-scroll-proportion="0.33292383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="38" selection-start="618" selection-end="618" vertical-scroll-proportion="0.52934134">
-          <folding>
-            <marker date="1561003358995" expanded="true" signature="616:14645" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="926:999" placeholder="{&quot;dist&quot;: 'dist'...}" />
-            <marker date="1561003358995" expanded="true" signature="1211:4427" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="1752:2656" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="1767:1834" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="1850:1978" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="1998:2119" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="2136:2259" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="2278:2319" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="2339:2650" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="2358:2427" placeholder="{&quot;livereload&quot;: '&lt;%= connect.options.livereload %&gt;'...}" />
-            <marker date="1561003358995" expanded="true" signature="2444:2642" placeholder="[...]" />
-            <marker date="1561003358995" expanded="true" signature="2712:4352" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="2729:3220" placeholder="{&quot;port&quot;: 9000...}" />
-            <marker date="1561003358995" expanded="true" signature="3237:3356" placeholder="[...]" />
-            <marker date="1561003358995" expanded="true" signature="3249:3348" placeholder="{&quot;context&quot;: '/api'...}" />
-            <marker date="1561003358995" expanded="true" signature="3376:3814" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="3395:3806" placeholder="{&quot;open&quot;: true...}" />
-            <marker date="1561003358995" expanded="true" signature="3460:3796" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="3481:3783" placeholder="[...]" />
-            <marker date="1561003358995" expanded="true" signature="3828:4235" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="3847:4227" placeholder="{&quot;port&quot;: 9001...}" />
-            <marker date="1561003358995" expanded="true" signature="3912:4217" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="3933:4204" placeholder="[...]" />
-            <marker date="1561003358995" expanded="true" signature="4249:4346" placeholder="{...}" />
-            <marker date="1561003358995" expanded="true" signature="4268:4338" placeholder="{&quot;open&quot;: true...}" />
-            <marker date="1561003358995" expanded="true" signature="4400:4427" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>

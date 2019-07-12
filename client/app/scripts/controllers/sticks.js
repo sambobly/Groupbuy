@@ -3,6 +3,8 @@
 
 angular.module('clientApp')
     .controller('SticksController', ['$scope', '$rootScope', '$resource', '$route', '$state', '$location', '$anchorScroll', '$window', '$routeParams', '$timeout', 'Stick', 'Doctor', 'Consumer', 'Merchandise', 'Bid', 'Ticket', 'Category' , 'Wish', '$modal', '$q', '$log', 'userService', 'Auth', 'ServiceMerchandises', function ($scope, $rootScope, $resource, $route, $state, $location, $anchorScroll, $window, $routeParams, $timeout, Stick, Doctor, Consumer, Merchandise, Bid, Ticket, Category, Wish, $modal, $q, $log, userService, Auth, ServiceMerchandises) {
+
+
         $scope.myDefaultImage = 'images/polo-shirt-1.png';
         $scope.realImage = 'http://itsolutionstuff.com/upload/Laravel-mailchimp.png';
         $scope.noImage = 'http://itsolutionstuff.com/upload/no-image-available.png';

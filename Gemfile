@@ -13,7 +13,7 @@ group :development do
   #gem 'mysql2', '0.4.6'
   #gem 'mysql2', '0.3.16'
   #gem 'mysql2', '0.3.19'
-  gem 'mysql2', '~> 0.4.0'
+  gem 'mysql2', '~> 0.4.10'
 
 #  NOTE NEED TO CHANGE BACK TO '0.3.16' FOR 1.9.3 RUBY
 end
@@ -98,7 +98,6 @@ gem 'angular_rails_csrf'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
-gem 'devise-bootstrap-views'
 gem "bower-rails"
 gem 'carrierwave'
 

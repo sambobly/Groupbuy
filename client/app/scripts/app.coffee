@@ -20,6 +20,7 @@ angular
   "ngSanitize"
   "ngPassword"
   "ngTouch"
+  "ngTable"
   "ui.router"
   "ui.bootstrap"
   "ui.calendar"
@@ -183,7 +184,7 @@ angular
       url: "/tests",
       templateUrl: "views/test.html"
       controller: "TestsController"
-    ).state("eggs",
+      ).state("eggs",
       url: "/eggs",
       templateUrl: "views/eggs.html"
       controller: "EggsController"
@@ -257,6 +258,7 @@ angular
       templateUrl: "views/calendar.html"
       controller: "CalendarController"
 )])
+
 Client.config(["$httpProvider", (provider) ->
     provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
   ])
@@ -267,6 +269,7 @@ Client.config(["AuthProvider", (AuthProvider) ->
   AuthProvider.loginMethod 'GET'
   AuthProvider.loginRedirect = '/profile'
   ])
+
 Client.config(['$routeProvider',  ($routeProvider) ->
   # Route for '/post/'
   $routeProvider

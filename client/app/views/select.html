@@ -1,8 +1,8 @@
 <div id="isPopup3Visible">
 
 <!--<button ng-click="assessRoute()">Get route params</button>-->
-<a ng-show="isPopup11Visible" href="#/claims/{{merchandise.id}}">Claim</a>
-<a ng-show="isPopup9Visible" href="#/bids/{{merchandise.id}}">Submit your answers!</a>
+<a ng-show="isPopup11Visible" href="#!/claims/{{merchandise.id}}">Claim</a>
+<a ng-show="isPopup9Visible" href="#!/bids/{{merchandise.id}}">Submit your answers!</a>
 
 <!-- wpf loader Two -->
 <!--<div id="wpf-loader-two">-->
@@ -39,7 +39,9 @@
     </section>
 </div>
 
-<a ng-show="isPopup11Visible" href="#/claims/{{merchandise.id}}">Congratulations! Click here to submit your claim!</a>
+<a ng-show="isPopup11Visible" href="#!/claims/{{merchandise.id}}">Congratulations! Click here to submit your claim!</a>
+<button ng-click="testAnswerEmail(merchandise)">Test answer email</button>
+<button ng-click="testSetCombination(merchandise)">Test combination</button>
 
 
 <!--<div>{{ flavor }}</div>-->
@@ -132,9 +134,9 @@
 <div ng-show="isPopupvisibleloggedout">
     <h2>You need to login to bid </h2>
 </div>
+
 <form class="pure-form pure-form-aligned" name="frm"
       novalidate autocomplete="off">
-    <h3>Merchandise Name</h3>
     <div class="aa-price-block">
         <input type="decimal"
                name="bid"
@@ -217,6 +219,7 @@
     <!--<a class="aa-add-to-cart-btn" ng-click="updateMerchandise()">Update Merchandise</a>-->
 
 <!--</div>-->
+
 <div class="aa-prod-view-bottom">
     <a class="aa-add-to-cart-btn" ng-click="addToWishlist()">Add To Wishlist</a>
 
@@ -422,6 +425,32 @@
     <hr>
 </div>
 
+<script type="text/ng-template" id="confirmModal.html">
+    <div class="modal-content"  ng-controller="sticksController">
+        <div class="modal-body">
+                <div class="alert alert-success alert-dismissible fade in" >
+                    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Successful bid!
+                </div>
+
+        </div>
+    </div><!-- /.modal-content -->
+
+
+</script>
+<script type="text/ng-template" id="failModal.html">
+    <div class="modal-content"  ng-controller="sticksController">
+        <div class="modal-body">
+            <div class="alert alert-warning alert-dismissible fade in">
+                <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Warning!</strong> Bid unsuccessful!
+            </div>
+
+        </div>
+    </div><!-- /.modal-content -->
+
+
+</script>
 
 <!-- Related product -->
 <!--<div class="aa-product-related-item">-->

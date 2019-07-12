@@ -579,6 +579,8 @@ end
     get 'show'
     post 'test'
     post 'fail'
+    post 'answer'
+
   end
   member do
     post 'destroy'
@@ -590,6 +592,7 @@ end
     get 'show'
     post 'test'
     post 'fail'
+    post 'answer'
 
 
   end
@@ -904,6 +907,7 @@ end
         get 'show'
         post 'test'
         post 'fail'
+        post 'answer'
 
 
       end
@@ -917,6 +921,7 @@ end
         get 'show'
         post 'test'
         post 'fail'
+        post 'answer'
 
 
       end

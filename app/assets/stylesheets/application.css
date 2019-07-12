@@ -8,7 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require devise_bootstrap_views
+
  *= require_self
  *= require appointments
  *= require appointments/fullcalendar
@@ -25,8 +25,7 @@
  *= require consultations/metro-responsive
  *= require consultations/metro-helper
  *= require consultations/font-awesome
- *= require styles
- *= require ecommercebootstrap
+
 
  */
 

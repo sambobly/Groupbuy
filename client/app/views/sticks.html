@@ -102,7 +102,9 @@
     </div>
 <!-- / Promo section -->
 <!-- Products section -->
-<section id="aa-product">
+    <a href="#!/merchandises/">Create merch!</a>
+
+    <section id="aa-product">
 <div class="container">
 <div class="row">
 <div class="col-md-12">
@@ -130,10 +132,10 @@
         <!--<li ng-repeat="merchandise in filteredMerchandises">-->
 
         <figure>
-                <a href="#/merchandises/{{merchandise.id}}"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
-                <a class="aa-add-card-btn pointer"  href="#/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#/merchandises/{{merchandise.id}}"></span>Open</a>
+                <a href="#!/merchandises/{{merchandise.id}}"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
+                <a class="aa-add-card-btn pointer"  href="#!/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
                 <figcaption>
-                    <h4 class="aa-product-title"><a href="#/merchandises/{{merchandise.id}}">{{merchandise.title}}</a></h4>
+                    <h4 class="aa-product-title"><a href="#!/merchandises/{{merchandise.id}}">{{merchandise.title}}</a></h4>
                     <h5>Total: {{::merchandise.value | currency}} Bid: {{::merchandise.bid | currency}}</h5>
                     <h5>Remaining: {{::merchandise.difference | currency}}</h5>
 
@@ -152,7 +154,7 @@
 </div>
     <div>
         <li ng-repeat="ServiceMerchandise in ServiceMerchandises">
-            <h4 class="aa-product-title"><a href="#/merchandises/{{ServiceMerchandise.id}}">{{ServiceMerchandise.title}}</a></h4>
+            <h4 class="aa-product-title"><a href="#!/merchandises/{{ServiceMerchandise.id}}">{{ServiceMerchandise.title}}</a></h4>
 
         </li>
     </div>
@@ -310,7 +312,7 @@
                     </div>
                     <div class="aa-prod-view-bottom">
                         <a class="aa-add-to-cart-btn"  ng-click="addToWishlist()"><span class="fa fa-shopping-cart"></span>Add To Wishlist</a>
-                        <a ng-click = "ok()" class="aa-add-to-cart-btn" a href="#/merchandises/{{merchandise.id}}">View Details </a>
+                        <a ng-click = "ok()" class="aa-add-to-cart-btn" a href="#!/merchandises/{{merchandise.id}}">View Details </a>
                     </div>
                 </div>
             </div>

@@ -2,11 +2,12 @@
 
 
 angular.module('clientApp')
-    .controller('TwigsController', ['$scope', '$window', '$route', '$http', '$q', '$timeout', '$resource', '$location', '$routeParams', '$stateParams', 'Twig', 'Doctor', 'Letter', 'Merchandise', 'Ticket', 'Bid', 'Consumer', 'Wish', '$modal', '$anchorScroll', 'User', 'userService', 'Auth', '$cookies', 'Upload', function ($scope, $window, $route, $http, $q, $timeout, $resource, $location, $routeParams, $stateParams, Twig, Doctor, Letter, Merchandise, Ticket, Bid, Consumer, Wish, $modal, $anchorScroll, User, userService, Auth, $cookies, Upload) {
+    .controller('TwigsController', ['$scope', '$window', '$route', '$http', '$q', '$timeout', '$resource', '$location', '$routeParams', '$stateParams', 'Twig', 'Doctor', 'Letter', 'Merchandise', 'Ticket', 'Bid', 'Consumer', 'Wish', 'Combination', '$modal', '$anchorScroll', 'User', 'userService', 'Auth', '$cookies', 'Upload', function ($scope, $window, $route, $http, $q, $timeout, $resource, $location, $routeParams, $stateParams, Twig, Doctor, Letter, Merchandise, Ticket, Bid, Consumer, Wish, Combination, $modal, $anchorScroll, User, userService, Auth, $cookies, Upload) {
 
         $scope.isPopUpVisibleBid = false;
         $scope.isPopup9Visible = false;
         $scope.isPopupVisibleSubmit = true;
+
 
 
 
@@ -119,15 +120,18 @@ angular.module('clientApp')
                 .then(function(response) {
                     console.log("SUCCESS", response);
                     $scope.createBid();
+                    $scope.confirm();
                     window.alert('Success! Bid created!');
                     $scope.isPopupVisibleSubmit = true;
-
+                    $scope.isPopupVisibleSuccessBid = true;
+                    $scope.isPopupVisibleFailBid = false;
                 })
                 .catch(function(response) {
                     console.log("FAILURE!", response);
                     window.alert('invalid card number or ccv');
                     $scope.isPopupVisibleSubmit = true;
-
+                    $scope.isPopupVisibleSuccessBid = false;
+                    $scope.isPopupVisibleFailBid = true;
                 });            debugger;
         }
 
@@ -192,6 +196,9 @@ angular.module('clientApp')
 //                });
                 console.log("splice success", result.id)
                 window.alert('success! token: ' + result.id);
+                $scope.isPopupVisibleSuccessBid = true;
+                $scope.isPopupVisibleFailBid = false;
+
                 debugger;
                 bid.total = bid.amount*100;
                 $scope.bidValue = bid.total;
@@ -305,6 +312,12 @@ angular.module('clientApp')
 
     Bid.query().then(function(bids){
         $scope.bids = bids;
+    });
+
+    $scope.Combination = new Combination();
+
+    Combination.query().then(function(combinations){
+        $scope.combinations = combinations;
     });
 
     $scope.consumer = new Consumer();
@@ -1091,7 +1104,68 @@ angular.module('clientApp')
                     console.log("FAILURE!", response);
                 });
         };
+        $scope.confirm = function (size) {
 
+            var modalInstance = $modal.open({
+                templateUrl: 'confirmModal.html',
+                controller: function ($scope, $modalInstance) {
+
+
+                    $scope.ok = function () {
+                        $modalInstance.close();
+                    };
+
+                    $scope.cancel = function () {
+                        $modalInstance.dismiss('cancel');
+                    };
+
+
+
+                },
+                size: size,
+                resolve: {
+                    tax: function () {
+                        return;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function () {
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+        $scope.fail = function (size) {
+
+            var modalInstance = $modal.open({
+                templateUrl: 'failModal.html',
+                controller: function ($scope, $modalInstance) {
+
+
+                    $scope.ok = function () {
+                        $modalInstance.close();
+                    };
+
+                    $scope.cancel = function () {
+                        $modalInstance.dismiss('cancel');
+                    };
+
+
+
+                },
+                size: size,
+                resolve: {
+                    tax: function () {
+                        return;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function () {
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
         $scope.create = function (size) {
 
             var modalInstance = $modal.open({
@@ -1318,6 +1392,37 @@ angular.module('clientApp')
             console.log(merchandise, $scope.merchandise.bids);
             debugger;
 
+        };
+        $scope.testAnswerEmail = function (merchandise, consumer) {
+            $scope.merchandise = merchandise;
+            $scope.merchandise.bids = merchandise.getBids()
+                .then(function(response) {
+                    debugger;
+
+                    console.log("SUCCESS", response, $scope.merchandise.bids);
+                    angular.forEach(response, function(response) {
+                            debugger;
+                            Consumer.get({id:response.consumerId}).then(function(consumer){
+                                var data = ({
+                                    contactName : "CONTACT NAME",
+                                    consumer : consumer.id,
+                                    merchandise : merchandise.id
+
+                                });
+                                console.log("TEST 212121", data);
+                                $http.post('/api/consumers/answer', data);
+                                console.log(consumer, "successful email")
+
+                    });
+                    debugger;
+                })
+                .catch(function(response) {
+                    console.log("FAILURE!", response);
+                });
+            console.log(merchandise, $scope.merchandise.bids);
+            debugger;
+
+        });
         };
         $scope.designWatch = function() {
             if ($scope.merchandise.rescue == 91234) {
@@ -1743,6 +1848,24 @@ angular.module('clientApp')
                 console.log("no bid")
             }
         };
+        $scope.testSetCombination = function(merchandise, combination){
+            $scope.merchandise = merchandise;
+            $scope.combination = combination;
+            Combination.query().then(function(combinations) {
+                $scope.combinations = combinations
+                console.log(merchandise, combination, combinations);
+                angular.forEach(combinations, function(combination) {
+                    if (combination.complete != true) {
+                        $scope.merchandise.combinationId = combination.id;
+                        $scope.merchandise.update();
+                        debugger;
+                    } else {
+                        console.log("no combination added to merch")
+                    }
+                    console.log("? firing");
+                });
+            });
+        }
     }])
 
 

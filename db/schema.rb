@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190530085101) do
+ActiveRecord::Schema.define(version: 20190708092147) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "companyname", limit: 255
@@ -92,6 +92,16 @@ ActiveRecord::Schema.define(version: 20190530085101) do
     t.integer  "combination_id",    limit: 4
     t.string   "answer",            limit: 255
     t.string   "score",             limit: 255
+    t.string   "answer_one",        limit: 255
+    t.string   "answer_two",        limit: 255
+    t.string   "answer_three",      limit: 255
+    t.string   "answer_four",       limit: 255
+    t.string   "answer_five",       limit: 255
+    t.string   "answer_six",        limit: 255
+    t.string   "answer_seven",      limit: 255
+    t.string   "answer_eight",      limit: 255
+    t.string   "answer_nine",       limit: 255
+    t.string   "answer_ten",        limit: 255
   end
 
   add_index "bids", ["combination_id"], name: "index_bids_on_combination_id", using: :btree
@@ -315,6 +325,36 @@ ActiveRecord::Schema.define(version: 20190530085101) do
     t.string   "concession_type", limit: 255
     t.string   "test",            limit: 255
   end
+
+  create_table "individuals", force: :cascade do |t|
+    t.string   "provider",               limit: 255,   default: "email", null: false
+    t.string   "uid",                    limit: 255,   default: "",      null: false
+    t.string   "encrypted_password",     limit: 255,   default: "",      null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,     default: 0,       null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email",      limit: 255
+    t.string   "name",                   limit: 255
+    t.string   "nickname",               limit: 255
+    t.string   "image",                  limit: 255
+    t.string   "email",                  limit: 255
+    t.text     "tokens",                 limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "individuals", ["confirmation_token"], name: "index_individuals_on_confirmation_token", unique: true, using: :btree
+  add_index "individuals", ["email"], name: "index_individuals_on_email", unique: true, using: :btree
+  add_index "individuals", ["reset_password_token"], name: "index_individuals_on_reset_password_token", unique: true, using: :btree
+  add_index "individuals", ["uid", "provider"], name: "index_individuals_on_uid_and_provider", unique: true, using: :btree
 
   create_table "inovices", force: :cascade do |t|
     t.date     "date"

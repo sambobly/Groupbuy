@@ -6,37 +6,204 @@ BID DETAIL
 <button ng-click="countWinsTest()">Count wins</button>
 <button ng-click="findWinner()">Find winner</button>
 
-<table class="table">
+<div class="alert alert-warning alert-dismissible fade in" ng-show="isPopupVisibleSubmitNo">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Warning!</strong> Unable to submit answers at this time. Either not open or closed
+</div>
+
+<table class="table" ng-show="isPopupVisibleSubmitYes">
     <thead class="thead-dark">
     <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-        <th scope="col">{{combination.id}}</th>
+        <th scope="col">Bid ID</th>
+        <th scope="col">Bid Value</th>
 
-        <th scope="col">{{combination.onea}}</th>
+        <th scope="col">{{combination.onea}} vs {{combination.oneb}}</th>
+        <th scope="col">{{combination.twoa}} vs {{combination.twob}}</th>
+        <th scope="col">{{combination.threea}} vs {{combination.threeb}}</th>
+        <th scope="col">{{combination.foura}} vs {{combination.fourb}}</th>
+        <th scope="col">{{combination.fivea}} vs {{combination.fiveb}}</th>
+        <th scope="col">{{combination.sixa}} vs {{combination.sixb}}</th>
+        <th scope="col">{{combination.sevena}} vs {{combination.sevenb}}</th>
+        <th scope="col">{{combination.eighta}} vs {{combination.eightb}}</th>
+        <th scope="col">{{combination.ninea}} vs {{combination.nineb}}</th>
+        <th scope="col">{{combination.tena}} vs {{combination.tenb}}</th>
+
 
     </tr>
     </thead>
     <tbody>
 
-    <tr ng-repeat = "bid in selectedBids">
-        <th scope="row">1</th>
+    <tr ng-repeat = "bid in selectedBids | orderBy:'-id'">
+        <!--<th scope="row">1</th>-->
         <td>{{bid.id}}</td>
         <td>{{bid.value}}</td>
 
-        <td>@mdo</td>
-        <td>
-            <input type="text" name="answer" ng-model="bid.answer" placeholder="answer" />
+        <!--<td>{{bid.value}}</td>-->
+
+        <!--<td>@mdo</td>-->
+        <!--<td>-->
+            <!--<input type="text" name="answer" ng-model="bid.answer" placeholder="answer" />-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<button ng-click="updateBidTest(bid)">Update Ansewr</button>-->
+        <!--</td>-->
+           <td>
+            <div>
+                <select
+                        name="answerOne"
+                        ng-model="bid.answerOne"
+                        placeholder="answerOne"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboOne" ng-value="key">{{val}}</option>
+
+                </select>
+            </div>
+
         </td>
         <td>
-            <button ng-click="updateBidTest(bid)">Update Ansewr</button>
+            <div>
+                <select
+                        name="answerTwo"
+                        ng-model="bid.answerTwo"
+                        placeholder="answerTwo"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboTwo" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+        </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerThree"
+                        ng-model="bid.answerThree"
+                        placeholder="Answer"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboThree" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerFour"
+                        ng-model="bid.answerFour"
+                        placeholder="answerFour"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboFour" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+        <div>
+            <select
+                    name="answerFive"
+                    ng-model="bid.answerFive"
+                    placeholder="answerFive"
+                    class="required input-xlarge"
+                    required class="required input-xlarge">
+                <option ng-repeat="(key,val) in listComboFive" ng-value="key">{{val}}</option>
+
+            </select>
+
+
+        </div>
+    </td>
+        <td>
+            <div>
+                <select
+                        name="answerSix"
+                        ng-model="bid.answerSix"
+                        placeholder="answerSix"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboSix" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerSeven"
+                        ng-model="bid.answerSeven"
+                        placeholder="answerSeven"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboSeven" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerEight"
+                        ng-model="bid.answerEight"
+                        placeholder="answerEight"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboEight" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerNine"
+                        ng-model="bid.answerNine"
+                        placeholder="answerNine"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboNine" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <div>
+                <select
+                        name="answerTen"
+                        ng-model="bid.answerTen"
+                        placeholder="answerTen"
+                        class="required input-xlarge"
+                        required class="required input-xlarge">
+                    <option ng-repeat="(key,val) in listComboTen" ng-value="key">{{val}}</option>
+
+                </select>
+
+
+            </div>
+        </td>
+        <td>
+            <button ng-click="updateBidTest2(bid)">Update Ansewr</button>
         </td>
     </tr>
 
     </tbody>
 
-    <button ng-click="updateAllBidsTest(bid)">Update Answers</button>
-</table>
+    <button ng-click="updateAllBidsTest(bid)">Save all individual answers</button>
+    <button ng-click="updateAllBidsSame(bid)">Make all bids the same</button>
 
+</table>
