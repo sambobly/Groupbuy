@@ -86,13 +86,13 @@ module.exports = function (grunt) {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
 //        hostname: 'localhost',
-                hostname: 'localhost',
+                hostname: '0.0.0.0',
                 livereload: 35729
             },
             proxies: [
                 {
                     context: '/api',
-                    host: 'localhost',
+                    host: '0.0.0.0',
                     port: 3000
                 }
             ],
@@ -139,9 +139,9 @@ module.exports = function (grunt) {
         // Start the rails server
         shell: {
             startRailsServer: {
-                command: 'bundle exec rails server',
+//                command: 'bundle exec rails server',
 
-//          command: 'bundle exec rails server –p 0.0.0.0',
+          command: 'bundle exec rails server –p 0.0.0.0',
                 options: {
                     // If async: true were omitted, the rails server
                     // command would prevent subsequent commands
