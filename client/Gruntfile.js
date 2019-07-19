@@ -141,7 +141,7 @@ module.exports = function (grunt) {
             startRailsServer: {
 //                command: 'bundle exec rails server',
 
-          command: 'bundle exec rails server -p 3000 -b 0.0.0.0',
+                command: 'bundle exec rails server -p 3000 -b 0.0.0.0',
                 options: {
                     // If async: true were omitted, the rails server
                     // command would prevent subsequent commands

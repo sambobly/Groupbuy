@@ -274,7 +274,7 @@ angular.module('clientApp')
         $scope.searchFilter = function (testText, testSelect, callback, filter, selectedItem, searchText, name, text, input) {
             debugger;
             $scope.isPopupvisible70 = false;
-            $window.location.href = "/#/sticks";
+            $window.location.href = "/#!/sticks";
             $state.reload();
             $rootScope.filter = filter;
             $scope.filter = $rootScope.filter;

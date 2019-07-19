@@ -113,7 +113,7 @@ angular
       templateUrl: "views/update.html"
       controller: "ConsumersController"
     ).state("merchandises",
-      url: "/merchandises",
+      url: "/merchandise",
       templateUrl: "views/merchandises.html"
       controller: "MerchandisesController"
     ).state("merchandises-detail",

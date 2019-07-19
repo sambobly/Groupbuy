@@ -2,7 +2,7 @@
 
 
 angular.module('clientApp')
-    .controller('ClaimsController', ['$scope', '$http', '$resource', '$location', '$state','$stateParams', '$routeParams', 'Merchandise', 'Consumer', 'Claim', '$modal', function ($scope, $http, $resource, $location, $state, $stateParams, $routeParams, Merchandise, Consumer, Claim, $modal) {
+    .controller('ClaimsController', ['$scope', '$http', '$resource', '$window', '$location', '$state','$stateParams', '$routeParams', 'Merchandise', 'Consumer', 'Claim', '$modal', function ($scope, $http, $resource, $window, $location, $state, $stateParams, $routeParams, Merchandise, Consumer, Claim, $modal) {
 
         $scope.merchandise = new Merchandise();
 
@@ -99,7 +99,10 @@ angular.module('clientApp')
 //        };
 
 
-
+          $scope.testChange = function() {
+              $window.location.href = "/#!/sticks";
+              $state.reload();
+          }
 
     }])
 

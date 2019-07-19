@@ -164,6 +164,7 @@ angular.module('clientApp')
                 // simulate async request
                 return fetchMerchandises(query).then(function(suggests) {
                     return suggests.filter(createFilterFor(query));
+
                 });
             }
         }
@@ -172,6 +173,7 @@ angular.module('clientApp')
          * Create filter function for a query string
          */
         function createFilterFor(query) {
+            angular.lowercase = angular.$$lowercase;
             var lowercaseQuery = angular.lowercase(query);
             $scope.lowercaseQuery = lowercaseQuery;
             return function filterFn(merchandise) {
@@ -264,8 +266,9 @@ angular.module('clientApp')
         $scope.searchFilter = function (testText, testSelect, callback, filter, selectedItem, searchText, name, text, input) {
             $scope.isPopupvisible70 = false;
             debugger;
-            $window.location.href = "/#/sticks";
+            $window.location.href = "/#!/sticks";
             $state.reload();
+            debugger;
             $rootScope.filter = filter;
             $scope.filter = $rootScope.filter;
             console.log($rootScope.filter, "filter");
