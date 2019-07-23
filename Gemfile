@@ -114,6 +114,7 @@ gem  'unf_ext'
 gem 'rest-client'
 gem 'stripe'
 gem "mini_magick"
+gem "figaro"
 
 #gem 'stripe', '~> 1.53.0'
 

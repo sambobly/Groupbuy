@@ -110,13 +110,14 @@ GEM
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
+    excon (0.65.0)
     execjs (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffaker (2.10.0)
     ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
-    excon (0.65.0)
+    figaro (1.1.1)
     fog-aws (3.5.2)
       fog-core (~> 2.1.2)
       fog-json (~> 1.2.0)
@@ -338,6 +339,7 @@ DEPENDENCIES
   devise
   excon
   ffaker
+  figaro
   fog-aws
   jbuilder
   jquery-ui-rails (= 5.0.5)
