@@ -100,7 +100,8 @@ gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
 gem "bower-rails"
 gem 'carrierwave'
-
+gem 'fog-aws'
+gem 'excon'
 #gem "bower-rails", "~> 0.9.1"
 
 gem 'rangy-rails'
