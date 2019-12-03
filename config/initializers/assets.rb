@@ -1,0 +1,8 @@
+Rails.application.config.assets.precompile += %w( bootstrap/bootstrap.css )
+Rails.application.config.assets.precompile += %w( ecommerce/bootstrap.css )
+Rails.application.config.assets.precompile += %w( ecommerce/slick.css )
+Rails.application.config.assets.precompile += %w( ecommerce/font-awesome.css )
+Rails.application.config.assets.precompile += %w( ecommerce/style.css )
+Rails.application.config.assets.precompile += %w( ecommerce/_mixins.css )
+Rails.application.config.assets.precompile += %w( ecommerce/_variables.css )
+Rails.application.config.assets.precompile += %w( ecommerce/theme-color/default-theme.css )

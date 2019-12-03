@@ -2,12 +2,12 @@
 
 
 angular.module('clientApp')
-    .controller('BidsController', ['$scope', '$http', '$resource', '$location', '$state', '$routeParams', '$stateParams', 'Merchandise', 'Consumer', 'Bid', '$modal', 'User', 'userService', 'Combination',  function ($scope, $http, $resource, $location, $state, $routeParams, $stateParams, Merchandise, Consumer, Bid, $modal, User, userService, Combination) {
+    .controller('BidsController', ['$scope', '$http', '$resource', '$location', '$state', '$routeParams', '$stateParams', '$timeout', 'Merchandise', 'Consumer', 'Bid', '$modal', 'User', 'userService', 'Combination',  function ($scope, $http, $resource, $location, $state, $routeParams, $stateParams, $timeout, Merchandise, Consumer, Bid, $modal, User, userService, Combination) {
         $scope.userService = userService;
         $scope.user = userService.user;
 
         $scope.assessRoute = function() {
-            console.log("claim", $stateParams, $stateParams.bidId)
+            console.log("claim", $stateParams, $stateParams.bidId, ENV['AWS_ACCESS_KEY_ID'])
 
         };
         $scope.combination = new Combination();
@@ -47,6 +47,17 @@ angular.module('clientApp')
         $scope.isPopupVisibleSubmitNo = false;
         $scope.isPopupVisibleSubmitYes = false;
 
+        $scope.findCombination = function () {
+          debugger;
+          angular.forEach($scope.combinations, function(combination) {
+            if (combination.complete == 0) {
+              debugger;
+              $scope.combination = combination
+            } else {
+              console.log("already complete")
+            }
+          });
+        }
 
         $scope.createBid = function() {
 
@@ -165,7 +176,7 @@ angular.module('clientApp')
                 $scope.merchandise.bids = merchandise.getBids().then(function(merchandise){
                     debugger;
 
-                    if ($scope.merchandise.complete == 1 && $scope.merchandise.winner < 1) {
+                    if ($scope.merchandise.start != null && $scope.merchandise.winner < 1) {
                     console.log($scope.merchandise.bids)
                     $scope.selectedBids = []
                     angular.forEach($scope.merchandise.bids, function(bid) {
@@ -258,10 +269,17 @@ angular.module('clientApp')
                     };
 
                     $scope.countWinsTest = function(bid) {
-                        angular.forEach($scope.selectedBids, function(bid) {
+                        console.log("why not firing?");
+                        return $timeout(function() {
+                        angular.forEach($scope.merchandise.bids, function(bid) {
                             $scope.bid = bid;
                             var str = $scope.combination.result;
-                            var answer = $scope.bid.answer;
+                            if ($scope.bid.answer != null) {
+                                var answer = $scope.bid.answer;
+                            } else {
+                                var answer = "n"
+                            };
+
                             var result = answer.split(",")
                             console.log($scope.merchandise, merchandise, $scope.combination, $scope.combination.result);
                             console.log("result", result)
@@ -282,21 +300,33 @@ angular.module('clientApp')
                                 here.length;
                                 console.log("here.length", here.length)
                                 debugger;
-                            })
+                            });
                             new Bid({id:bid.id, score:here.length}).update();
+                            console.log("update scores", bid)
                             debugger;
 
                         })
-                    }
+                        }, 1);
+                    };
 
                     $scope.findWinner = function(merchandise, bid) {
                         Merchandise.get({id:$stateParams.merchandiseId}).then(function(merchandise){
-                        $scope.merchandise = merchandise;
-                        debugger;
+                          var currentTime = new Date();
+
+                          $scope.merchandise = merchandise;
+                          new Merchandise({id:merchandise.id, complete:"1", end:currentTime}).update()
+                            .then(function(response) {
+                              console.log("SUCCESS", response);
+                            })
+                            .catch(function(response) {
+                              console.log("FAILURE!", response);
+                            });
+                         debugger;
                         var pushList = [];
                         var topScorers = [];
                         var topBid = [];
                         var winner = [];
+                        var tieBreakWinner = [];
                         $scope.merchandise.bids = merchandise.getBids().then(function(merchandise){
                             angular.forEach($scope.merchandise.bids, function(value, key) {
                                 console.log("testPush", value, key);
@@ -310,7 +340,17 @@ angular.module('clientApp')
                                     topScorers.push(value)
                                     console.log(topScorers, "topScorers");
                                 } else {
-                                    console.log(value, "not Top")
+                                    console.log(value, "not Top");
+                                    new Bid({id:value.id, success:"0", complete:"1"}).update()
+                                        .then(function(response) {
+                                            console.log("SUCCESS", response);
+                                        })
+                                        .catch(function(response) {
+                                            console.log("FAILURE!", response);
+                                        });
+
+                                    console.log("Did not win", value);
+                                    debugger;
                                 };
                             });
                             angular.forEach(topScorers, function(value, key) {
@@ -322,24 +362,86 @@ angular.module('clientApp')
                             angular.forEach(topScorers, function(value, key) {
                                 if (value.value == maxTopBid) {
                                     winner.push(value)
-                                    console.log(winner, "winner");
+                                    console.log(winner, winner.length, "winner");
                                 } else {
-                                    console.log(value, "close but no cigar")
+                                    console.log(value, "close but no cigar");
+                                    new Bid({id:value.id, success:"0", complete:"1"}).update()
+                                        .then(function(response) {
+                                            console.log("SUCCESS", response);
+                                        })
+                                        .catch(function(response) {
+                                            console.log("FAILURE!", response);
+                                        });
+
+                                    console.log("Did not win", value);
+                                    debugger;
                                 };
-                            })
+                            });
+                            var x = Math.floor(Math.random() * (winner.length));
+                            console.log(x);
+                            angular.forEach(winner, function(value,key) {
+                                if (key == x) {
+                                    tieBreakWinner.push(value)
+                                    console.log(tieBreakWinner, "tieBreakWinner")
+                                    new Bid({id:value.id, success:"1", complete:"1"}).update()
+                                        .then(function(response) {
+                                          debugger;
+                                          console.log("SUCCESS", response);
+                                          Bid.get({id:value.id}).then(function(bid){
+                                          console.log("bid", bid);
+                                          $scope.bid = bid;
+                                          debugger;
+                                          merchandise = $scope.merchandise;
+                                          new Merchandise({id:merchandise.id, winner:bid.consumerId}).update().then(function(response){
+                                            console.log(response, merchandise, "? updated merchandise with winner")
+                                          });
+                                            debugger;
+                                          });
+                                        })
+                                        .catch(function(response) {
+                                            console.log("FAILURE!", response);
+                                        });
+
+                                    console.log("win", value);
+                                    debugger;
+                                } else {
+                                    console.log(value, "close but no cigar");
+                                    new Bid({id:value.id, success:"0", complete:"1"}).update()
+                                        .then(function(response) {
+                                            console.log("SUCCESS", response);
+                                        })
+                                        .catch(function(response) {
+                                            console.log("FAILURE!", response);
+                                        });
+
+                                    console.log("Did not win", value);
+                                    debugger;
+                                };
+                            });
                         });
                         });
                     }
                     } else {
                         $scope.isPopupVisibleSubmitNo = true;
 
-                        console.log ("No longer accepting winners!")
+                        console.log ("No longer accepting winners!", $scope.merchandise)
                     }
                 });
 
             });
 
+              $scope.fireAll = function () {
+                $scope.countWinsTest().then(function(result){
+                    debugger;
+                      $scope.findWinner();
 
+                    })
+              };
+
+            $scope.mathsTest = function() {
+                var x = Math.floor(Math.random() * 1);
+                console.log(x);
+            }
 //            $scope.merchandiseId = bid.getMerchandiseId();
 //            $scope.consumerId = bid.getConsumerId();
 //
@@ -411,7 +513,152 @@ angular.module('clientApp')
 
         $scope.localityTypeRadio = 'City';
         $scope.localityTypeRadio1 = 'Stuff';
+        $scope.removeDuplicates = function (merchandise, consumer) {
+          Merchandise.get({id:$stateParams.merchandiseId}).then(function(merchandise){
+            $scope.allBids = []
+            $scope.loserRemoveDuplicates = []
+            $scope.merchandise = merchandise;
+            debugger;
+            $scope.merchandise.bids = merchandise.getBids().then(function(response) {
+              return $timeout(function() {
+                angular.forEach(response, function(response) {
+                $scope.allBids.push(response);
+                console.log($scope.allBids, "allBids");
+              });
+              }, 1).then(function(response) {
+                $scope.allBidsConsumerIds = [];
 
+                console.log($scope.allBids, "allBids2");
+                angular.forEach($scope.allBids, function(response) {
+                $scope.allBidsConsumerIds.push(response.consumerId);
+                console.log($scope.allBidsConsumerIds, "consumer Ids array")
+
+                  if (response.success == true) {
+
+                  debugger;
+                  Consumer.get({id:response.consumerId}).then(function(consumer){
+                    var data = ({
+                      contactName : "CONTACT NAME",
+                      consumer : consumer.id,
+                      merchandise : merchandise.id
+
+                    });
+                    console.log("winner", data);
+//                                $http.post('/api/consumers/test', data);
+//                                console.log(consumer, "successful email")
+//                     var index = $scope.allBids.indexOf(response);
+//                     if (index > -1) { //if found
+//                       $scope.allBids.splice(index, 1);
+//                       console.log($scope.allBids, "all bids post removal")
+//                     }
+
+                    for( var i = 0; i < $scope.allBidsConsumerIds.length; i++){
+                      if ( $scope.allBidsConsumerIds[i] === response.consumerId) {
+                        $scope.allBidsConsumerIds.splice(i, 1);
+                        i--;
+                      }
+                    };
+                      console.log($scope.allBidsConsumerIds, "all bids post removal")
+                  }).then(function(response){
+                    console.log($scope.allBidsConsumerIds, "loser bids")
+                    $scope.losersNoDup = [];
+                    $scope.losersNoDup = $scope.allBidsConsumerIds.filter(function(elem, pos) {
+                      return $scope.allBidsConsumerIds.indexOf(elem) == pos;
+                    });
+                    console.log($scope.losersNoDup, "no duplicates loser IDs");
+                    angular.forEach($scope.losersNoDup, function(response) {
+                    Consumer.get({id:response}).then(function(consumer){
+                      var data = ({
+                        contactName : consumer.firstName,
+                        consumer : consumer.id,
+                        merchandise : merchandise.id
+
+                      });
+                      console.log("losers", data);
+                               $http.post('/api/consumers/fail', data);
+                               console.log(consumer, "failed email")
+                    });
+                    });
+                  });
+                } else {
+                  console.log("no winner found, no emails sent")
+
+                  };
+                });
+
+              })
+
+            })
+          })
+        }
+        $scope.emailWinners = function (merchandise, consumer) {
+            Merchandise.get({id:$stateParams.merchandiseId}).then(function(merchandise){
+                $scope.allBids = []
+                $scope.loserRemoveDuplicates = []
+                $scope.merchandise = merchandise;
+            debugger;
+            $scope.merchandise.bids = merchandise.getBids()
+                .then(function(response) {
+                    debugger;
+
+                    console.log("SUCCESS", response, $scope.merchandise.bids);
+                    angular.forEach(response, function(response) {
+                        $scope.allBids.push(response);
+
+                        if (response.success == true) {
+                            debugger;
+                            Consumer.get({id:response.consumerId}).then(function(consumer){
+                                var data = ({
+                                    contactName : "CONTACT NAME",
+                                    consumer : consumer.id,
+                                    merchandise : merchandise.id
+
+                                });
+                                console.log("winner", data);
+                               $http.post('/api/consumers/test', data);
+                               console.log(consumer, "successful email")
+                            })
+                        } else {
+//                            if($scope.loserRemoveDuplicates.indexOf(response.consumerId) === -1) {
+//                                $scope.loserRemoveDuplicates.push(response);
+//                                debugger;
+//                                console.log($scope.loserRemoveDuplicates);
+//                                debugger;
+//                            }
+                            const index = $scope.loserRemoveDuplicates.findIndex((e) => e.id === response.consumerId);
+                                debugger;
+                            if (index === -1) {
+                                $scope.loserRemoveDuplicates.push(response);
+                                debugger;
+                            } else {
+                                $scope.loserRemoveDuplicates[index] = response;
+                                debugger;
+                            }
+                            debugger;
+                            console.log($scope.loserRemoveDuplicates, "$scope.loserRemoveDuplicates")
+                            Consumer.get({id:response.consumerId}).then(function(consumer){
+                                var data = ({
+                                    contactName : "CONTACT NAME",
+                                    consumer : consumer.id,
+                                    merchandise : merchandise.id
+
+                                });
+                                console.log("losers", data);
+                               $http.post('/api/consumers/fail', data);
+                               console.log(consumer, "failed email")
+                            })
+                        }
+                    });
+                    debugger;
+                })
+                .catch(function(response) {
+                    console.log("FAILURE!", response);
+                });
+            console.log(merchandise, $scope.merchandise.bids);
+            debugger;
+            });
+
+        };
 
     }])
 

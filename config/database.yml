@@ -35,9 +35,9 @@ production:
   encoding: utf8
   database: optho_production
   pool: 5
-  username: Tom
+  username: root
   password: omnipass
-  host: 18.218.29.95
+  host: localhost
  # socket: /tmp/mysql.sock
 
 

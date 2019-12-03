@@ -1,3 +1,19 @@
+<div style="height:351.2px">
+  <div style="padding-top:26vh; padding-bottom:26vh; padding-left:70vh; padding-right:90vh; position:fixed">
+    <h3 style="font-size:60px; text-align:center; position:fixed"> GROUP BUY</h3>
+  </div>
+</div>
+<div style="height:51px; width:2100px; background-color: #ff6666; line-height: 35px">
+  <a href="http://localhost:9000/#!/sticks"
+     style="color: #fff;
+         font-size: 16px;
+         padding: 10px 15px;
+         padding-left: 40vh;
+         position: fixed
+     ">Home</a>
+</div>
+<div style="margin-left:30vw; margin-right:25vw; position:absolute">
+
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -8,6 +24,13 @@
 
   <div><%= f.submit "Send me reset password instructions" %></div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
-
+<%= stylesheet_link_tag "bootstrap/bootstrap.css" %>
+<%= stylesheet_link_tag "ecommerce/bootstrap.css" %>
+<%= stylesheet_link_tag "ecommerce/slick.css" %>
+<%= stylesheet_link_tag "ecommerce/font-awesome.css" %>
+<%= stylesheet_link_tag "ecommerce/style.css" %>
+<%= stylesheet_link_tag "ecommerce/_mixins.css" %>
+<%= stylesheet_link_tag "ecommerce/_variables.css" %>
+<%= stylesheet_link_tag "ecommerce/theme-color/default-theme.css" %>

@@ -152,8 +152,31 @@
     </div>
     <button type="submit" ng-click="createMerchandise(); frm.image.$setDirty(); frm.title.$setDirty(); frm.category.$setDirty(); frm.value.$setDirty()" class="btn bg-emerald submit" ng-show = "isPopupvisiblesubmit">Submit</button>
     </div>
-    <div>
+  <script type="text/ng-template" id="successModal.html">
+    <div class="modal-content"  ng-controller="sticksController">
+      <div class="modal-body">
+        <div class="alert alert-success alert-dismissible fade in" >
+          <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> Merchandise Created!
+        </div>
 
-    </div>
+      </div>
+    </div><!-- /.modal-content -->
+
+
+  </script>
+  <script type="text/ng-template" id="failModal.html">
+    <div class="modal-content"  ng-controller="sticksController">
+      <div class="modal-body">
+        <div class="alert alert-warning alert-dismissible fade in">
+          <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Warning!</strong> Bid unsuccessful!
+        </div>
+
+      </div>
+    </div><!-- /.modal-content -->
+
+
+  </script>
 
 

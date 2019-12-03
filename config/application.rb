@@ -30,6 +30,7 @@ module Optho
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
     config.action_dispatch.default_headers = {
         'X-Frame-Options' => 'ALLOWALL'
         #'Access-Control-Allow-Origin' => 'http://localhost:3000',

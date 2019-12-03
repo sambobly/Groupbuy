@@ -64,13 +64,13 @@ angular
     AuthProvider.resetPasswordMethod('POST'),
     $httpProvider.defaults.withCredentials = true,
 
-    $urlRouterProvider.otherwise "index",
+    $urlRouterProvider.otherwise "sticks",
 #    $window = $windowProvider.$get();
 #    $window.Stripe.setPublishableKey 'pk_test_nTvr3OV0TnAiWUdi8Mxcf3dM',
 
     $stateProvider.state("index",
       url: "/index"
-      templateUrl: "views/home.html"
+      templateUrl: "views/index.html"
       controller: "MainCtrl"
     ).state("consultations",
       url: "/consultations"

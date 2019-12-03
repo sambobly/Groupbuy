@@ -1164,4 +1164,19 @@
 <div class="alert alert-danger" role="alert" ng-show="isPopupVisibleDuplicateEmail">
 An account already exists for this email! If you have forgotten your password click here
 </div>
+<div>
+  <button type="submit" ng-click="successModal();" class="btn bg-emerald submit">Success modal</button>
+</div>
+  <script type="text/ng-template" id="successModal.html">
+    <div class="modal-content"  ng-controller="consumersController">
+      <div class="modal-body">
+        <div class="alert alert-success alert-dismissible fade in" >
+          <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> User Created!
+        </div>
 
+      </div>
+    </div><!-- /.modal-content -->
+
+
+  </script>

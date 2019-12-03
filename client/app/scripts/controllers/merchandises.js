@@ -7,6 +7,8 @@ angular.module('clientApp')
         $scope.user = userService.user;
         $scope.isPopupvisiblesubmit = false;
         $scope.isPopupvisibleloggedout = false;
+        $scope.isPopupVisibleSuccessCreate = false;
+        $scope.isPopupVisibleFailCreate = false;
 
         $scope.loadUsers = function() {
 
@@ -114,9 +116,11 @@ angular.module('clientApp')
                         }
                     });
                     debugger;
+                  $scope.successModal();
                 })
                 .catch(function(response) {
                     console.log("FAILURE!", response);
+
                 });
         };
         $scope.updateMerchandise = function() {
@@ -331,6 +335,37 @@ angular.module('clientApp')
             });
             debugger;
         }
+      $scope.successModal = function (size) {
+
+        var modalInstance = $modal.open({
+          templateUrl: 'successModal.html',
+          controller: function ($scope, $modalInstance) {
+
+
+            $scope.ok = function () {
+              $modalInstance.close();
+            };
+
+            $scope.cancel = function () {
+              $modalInstance.dismiss('cancel');
+            };
+
+
+
+          },
+          size: size,
+          resolve: {
+            tax: function () {
+              return;
+            }
+          }
+        });
+
+        modalInstance.result.then(function () {
+        }, function () {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
+      };
 
 
     }])

@@ -2,7 +2,7 @@
 
 
 angular.module('clientApp')
-    .controller('ConsumersController', ['$scope', '$route', '$window', '$rootScope','userService', 'Auth', '$http', '$resource', '$location', '$routeParams', '$state', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', 'Upload', '$cookies',  function ($scope, $route, $window, $rootScope, userService, Auth, $http, $resource, $location, $routeParams, $state, Consumer, Merchandise, Bid, Wish, User, $modal, Upload, $cookies) {
+    .controller('ConsumersController', ['$scope', '$route', '$window', '$rootScope','userService', 'Auth', '$http', '$resource', '$location', '$routeParams', '$state', '$timeout', 'Consumer', 'Merchandise', 'Bid', 'Wish', 'User', '$modal', 'Upload', '$cookies',  function ($scope, $route, $window, $rootScope, userService, Auth, $http, $resource, $location, $routeParams, $state, $timeout, Consumer, Merchandise, Bid, Wish, User, $modal, Upload, $cookies) {
         $scope.userService = userService;
         $scope.user = userService.user;
          debugger;
@@ -18,6 +18,60 @@ angular.module('clientApp')
             $scope.userService = userService;
             debugger;
         }
+
+      $scope.testUser = function(user) {
+        return $timeout(function() {
+
+          $scope.user = userService.user;
+          user = $scope.user;
+          debugger;
+          console.log(user, "user");
+        }, 1);
+      };
+
+        $scope.testUser2 = function(user) {
+          debugger;
+          $scope.testUser().then(function () {
+            debugger;
+            console.log("user from testUser");
+            $scope.$watch('consumerFind', function (consumer) {
+
+              debugger;
+              setTimeout(function () {
+                $scope.$apply(function(user, consumer) {
+                  $scope.user = userService.user;
+                  user = $scope.user;
+                  console.log("user", user);
+                  if ($scope.consumerFind == 0) {
+                    angular.forEach($scope.consumers, function(consumer) {
+                      console.log("consumer", consumer)
+                      if(consumer.userId == user.id){
+                        console.log("SUCCESS", consumer)
+                        $scope.consumer = consumer;
+                        debugger;
+                        $scope.consumer2 = consumer;
+                      }
+                      else {
+                        console.log("no one is logged in")
+                      };
+                    });
+                  } else {
+                    console.log("no one is logged in")
+                  };
+                  $scope.consumer1 = $scope.consumer;
+                  consumer = $scope.consumer;
+                  debugger;
+                  $scope.consumer2 = consumer;
+
+
+                });
+              }, 100);
+            });
+
+            debugger;
+          });
+        };
+
         $scope.openPassword = function() {
             $scope.isPopupVisible8 = true;
             $scope.isPopupVisible9 = false
@@ -47,6 +101,8 @@ angular.module('clientApp')
 
         User.query().then(function(users){
             $scope.users = users;
+          $scope.testUser2();
+
         });
         $scope.merchandise = new Merchandise();
 
@@ -385,7 +441,9 @@ angular.module('clientApp')
         }
         $scope.select = function (consumer, merchandise, bid, wish) {
             $scope.consumer = consumer;
-            debugger;
+          console.log(consumer, "consumer")
+
+          debugger;
             $scope.consumer.merchandises = consumer.getMerchandises();
             debugger;
             $scope.consumer.bids = consumer.getBids();
@@ -579,7 +637,9 @@ angular.module('clientApp')
                 $scope.consumer.avatar = $scope.user.avatar;
                     debugger;
                 $scope.consumer.create();
-                debugger;
+                  $scope.successModal();
+
+                  debugger;
             })
                 .catch(function(error) {
                     console.log("FAILURE!", error);
@@ -809,37 +869,38 @@ angular.module('clientApp')
             });
         };
 
-        $scope.$watch('consumerFind', function (consumer) {
+        $scope.$watch('consumerFind', function () {
+                $scope.testUser2();
             debugger;
-            setTimeout(function () {
-                $scope.$apply(function(user, consumer) {
-                    $scope.user = userService.user;
-                    user = $scope.user;
-                    console.log("user", user);
-                    if ($scope.consumerFind == 0) {
-                        angular.forEach($scope.consumers, function(consumer) {
-                            console.log("consumer", consumer)
-                            if(consumer.userId == user.id){
-                                console.log("SUCCESS", consumer)
-                                $scope.consumer = consumer;
-                                debugger;
-                                $scope.consumer2 = consumer;
-                            }
-                            else {
-                                console.log("no one is logged in")
-                            };
-                        });
-                    } else {
-                        console.log("no one is logged in")
-                    };
-                        $scope.consumer1 = $scope.consumer;
-                        consumer = $scope.consumer;
-                        debugger;
-                        $scope.consumer2 = consumer;
-
-
-                });
-            }, 10000);
+            // setTimeout(function () {
+            //     $scope.$apply(function(user, consumer) {
+            //         $scope.user = userService.user;
+            //         user = $scope.user;
+            //         console.log("user", user);
+            //         if ($scope.consumerFind == 0) {
+            //             angular.forEach($scope.consumers, function(consumer) {
+            //                 console.log("consumer", consumer)
+            //                 if(consumer.userId == user.id){
+            //                     console.log("SUCCESS", consumer)
+            //                     $scope.consumer = consumer;
+            //                     debugger;
+            //                     $scope.consumer2 = consumer;
+            //                 }
+            //                 else {
+            //                     console.log("no one is logged in")
+            //                 };
+            //             });
+            //         } else {
+            //             console.log("no one is logged in")
+            //         };
+            //             $scope.consumer1 = $scope.consumer;
+            //             consumer = $scope.consumer;
+            //             debugger;
+            //             $scope.consumer2 = consumer;
+            //
+            //
+            //     });
+            // }, 100);
         });
         $scope.$watch('consumer2', function(consumer, bid) {
             $scope.consumer = $scope.consumer2;
@@ -859,6 +920,38 @@ angular.module('clientApp')
            console.log("resend confirmation email", $scope.consumer.email)
        };
 
+      $scope.successModal = function (size) {
+
+        var modalInstance = $modal.open({
+          templateUrl: 'successModal.html',
+          controller: function ($scope, $modalInstance) {
+
+
+            $scope.ok = function () {
+              $modalInstance.close();
+            };
+
+            $scope.cancel = function () {
+              $modalInstance.dismiss('cancel');
+            };
+
+
+
+          },
+          size: size,
+          resolve: {
+            tax: function () {
+              return;
+            }
+          }
+        });
+
+        modalInstance.result.then(function () {
+        }, function () {
+          $window.location.href = "#!/sticks";
+
+        });
+      };
 
 
     }])

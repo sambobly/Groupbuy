@@ -60,7 +60,7 @@
             <div class="aa-product-view-slider white">
                 <div id="demo-1" class="simpleLens-gallery-container white">
                     <div class="simpleLens-container-sticks">
-                        <div class="simpleLens-big-image-container white"><a data-lens-image="images/polo-shirt-1.png" class="simpleLens-lens-image"><img ng-src="http://localhost:3000{{merchandise.images.url}}" style="width:200px" err-src="{{ myDefaultImage }}" class="simpleLens-big-image"></a></div>
+                        <div class="simpleLens-big-image-container white"><a data-lens-image="images/polo-shirt-1.png" class="simpleLens-lens-image"><img ng-src="http://localhost:3000{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'"></a></div>
                     </div>
                     <!--<div class="simpleLens-thumbnails-container white">-->
                         <!--<a data-big-image="img/view-slider/medium/polo-shirt-1.png" data-lens-image="img/view-slider/large/polo-shirt-1.png" class="simpleLens-thumbnail-wrapper" href="#">-->
@@ -101,7 +101,7 @@
                     <span class="aa-product-view-price">Total required  {{merchandise.value | currency}}</span>
                 </div>
                 <div class="aa-price-block">
-                    <span class="aa-product-view-price">Total bid       {{payments_total() | currency}}</span>
+                    <span class="aa-product-view-price">Total bid       {{merchandise.bid | currency}}</span>
 
                 </div>
                 <div class="aa-price-block">
@@ -389,9 +389,8 @@
                     <ul class="media-list">
                         <li class="media">
                             <a class="pull-left" href="#">
-                                <img ng-src="http://localhost:3000{{bid.consumerAvatar.url}}" style="width:200px" class="media-object img-circle" err-src="{{ myDeaultPicture }}" alt="profile">
+                                <img ng-src="http://localhost:3000{{bid.consumerAvatar.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'" style="width:200px" class="media-object img-circle" alt="profile">
 
-                                Avatar {{bid.consumerAvatar}}
                             </a>
                             <div class="media-body">
                                 <div class="well well-lg">

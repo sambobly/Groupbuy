@@ -21,7 +21,6 @@ class ConsumersController < InheritedResources::Base
     @merchandise = Merchandise.find_by_id(params[:merchandise])
     @consumer = Consumer.find_by_id(params[:consumer])
     ModelMailer.claim_email(@consumer, @merchandise).deliver_now
-
   end
 
   def answer

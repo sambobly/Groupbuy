@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('BirdsController', ['$scope', '$resource', '$location', '$routeParams', '$timeout', 'Bird', 'Nest', 'Invoice', 'Doctor', 'Appointment', '$modal', function ($scope, $resource, $location, $routeParams, $timeout, Bird, Nest, Invoice, Doctor, Appointment, $modal) {
+    .controller('BirdsController', ['$scope', '$resource', '$location', '$routeParams', '$timeout', 'Bird', 'Nest', 'Invoice', 'Doctor', 'Appointment', '$modal', 'Upload', function ($scope, $resource, $location, $routeParams, $timeout, Bird, Nest, Invoice, Doctor, Appointment, $modal, Upload) {
         $scope.number1 = [1, 2, 3, 4, 5, 6, 7, 8];
         $scope.slickConfig1Loaded = true;
         $scope.updateNumber1 = function () {
@@ -230,7 +230,10 @@ angular.module('clientApp')
                     console.log("FAILURE!", response);
                 });
         };
-
+        $scope.selectBird = function(bird) {
+          $scope.bird = bird;
+          console.log("bird", bird)
+        }
         $scope.updateBird = function() {
             $scope.bird.update()
                 .then(function(response) {
@@ -250,6 +253,29 @@ angular.module('clientApp')
                     console.log("FAILURE!", response);
                 });
         };
+      $scope.birdPhoto = function() {
+        var photo = $scope.bird.photo;
+        console.log(photo);
+        var bird = $scope.bird;
+        console.log($scope.bird.photo);
+        $scope.upload = Upload.upload({
+          url: '/api/birds/' + bird.id,
+          method: 'PATCH',
+          data: {name : $scope.bird.name, photo: $scope.bird.photo},
+          photo: photo,
+          fileFormDataName: 'bird[photo]',
+          formDataAppender: function(fd, key, val) {
+            if (angular.isArray(val)) {
+              angular.forEach(val, function(v) {
+                fd.append('bird['+key+']', v);
+              });
+            } else {
+              fd.append('bird['+key+']', val);
+            }
+          }
+        });
+        debugger;
+      }
         $scope.update = function (size, selectedBird) {
 
             var modalInstance = $modal.open({

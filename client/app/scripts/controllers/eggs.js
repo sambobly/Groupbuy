@@ -22,7 +22,114 @@ angular.module('clientApp')
 
         });
 //
+      $scope.testUser1 = function(user) {
+        return $timeout(function() {
 
+          $scope.user = userService.user;
+          user = $scope.user;
+          debugger;
+          console.log(user, "user");
+        }, 1);
+      };
+      $scope.testUser2 = function(user) {
+        debugger;
+        $scope.testUser1().then(function () {
+          debugger;
+          console.log("user from testUser");
+          $scope.$watch('consumerFind', function (consumer) {
+            debugger;
+            setTimeout(function () {
+              $scope.$apply(function(user, consumer) {
+                $scope.user = userService.user;
+                user = $scope.user;
+                if ($scope.consumerFind == 0) {
+                  angular.forEach($scope.consumers, function(consumer) {
+                    console.log("consumer", consumer)
+                    if(consumer.userId == user.id){
+                      console.log("SUCCESS", consumer)
+                      $scope.consumer = consumer;
+                      $scope.consumer2 = consumer;
+                      $scope.creates = $scope.consumer.merchandises;
+                      consumer.getMerchandises().then(function(response){
+                        console.log(response);
+                        $scope.consumer.merchandises = response;
+                        consumer.getBids().then(function(response){
+                          console.log(response);
+                          $scope.consumer.bids = response;
+                          consumer.getWishes().then(function(response){
+                            console.log(response);
+                            $scope.consumer.wishes = response;
+                            angular.forEach($scope.consumer.bids, function(bid, merchandise) {
+                              $scope.bid = bid;
+                              $scope.merchandiseId = bid.merchandiseId;
+                              if (bid.complete == 1) {
+                                if (bid.success == 1) {
+                                  Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+                                    $scope.consumerWonMerchandise.push(merchandise);
+                                    debugger;
+                                    console.log(merchandise, "won merchandise");
+                                  })}else {
+                                  console.log("failed", merchandise)}
+                              } else {
+                                $scope.consumerBids.push($scope.bid);
+//                                                    PROBLEM IS HERE. AM SETTING SCOPE.BID PRIOR TO THE THEN -> ALL MERCHANDISE $scope.bid being the same
+                                debugger;
+                                Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+                                  $scope.merchandise = merchandise;
+//                                                        $scope.merchandise.bidValue = $scope.bid.value;
+                                  $scope.consumerBidMerchandise.push($scope.merchandise);
+                                  debugger;
+                                  console.log($scope.merchandise, $scope.merchandise.bidValue, $scope.bid, "bid merchandise");
+                                })
+                              }
+
+                            });
+
+                            angular.forEach($scope.consumer.wishes, function(wish, merchandise) {
+                              $scope.wish = wish;
+                              $scope.merchandiseId = wish.merchandiseId;
+                              Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+                                $scope.consumerWishMerchandise.push(merchandise);
+                                debugger;
+                                console.log(merchandise);
+                              });
+                              console.log($scope.consumerBidMerchandise)
+
+                            });
+                            $scope.makeTodos();
+                            $scope.makeConsumerBidTodos();
+                            $scope.makeCreates();
+                            $scope.makeDreams();
+                            $scope.makeWins();
+
+                          })
+                        })
+                      });
+//
+//                                debugger;
+                    };
+                  });
+                  $scope.consumer1 = $scope.consumer;
+                  consumer = $scope.consumer;
+                  $scope.creates = $scope.consumer.merchandises;
+                  debugger;
+                  $scope.consumer2 = consumer;
+
+                }
+              });
+            }, 1);
+          });
+          $scope.$watch('consumer2', function(consumer, bid) {
+            $scope.consumer = $scope.consumer2;
+            consumer = $scope.consumer;
+            $scope.consumer = consumer;
+
+
+          })
+
+          debugger;
+        });
+      };
         $scope.$on('devise:login', function(e, user) {
             $scope.isAuthenticated = true;
             $scope.user = user;
@@ -37,6 +144,10 @@ angular.module('clientApp')
             // You can get data of current user (getting user's name and etc.)
             console.log(user);
         });
+
+        // ** START OF IMPORTANT STUFF FOR CONSUMER HOME PAGE **
+
+
 //        $scope.$apply((function(user, consumer) {
 //                    $scope.user = userService.user;
 //                    user = $scope.user;
@@ -57,89 +168,99 @@ angular.module('clientApp')
 //
 //                    }
 //        })())
-        $scope.$watch('consumerFind', function (consumer) {
-            debugger;
-            setTimeout(function () {
-                $scope.$apply(function(user, consumer) {
-                    $scope.user = userService.user;
-                    user = $scope.user;
-                    if ($scope.consumerFind == 0) {
-                        angular.forEach($scope.consumers, function(consumer) {
-                            console.log("consumer", consumer)
-                            if(consumer.userId == user.id){
-                                console.log("SUCCESS", consumer)
-                                $scope.consumer = consumer;
-                                $scope.consumer2 = consumer;
-                                $scope.creates = $scope.consumer.merchandises;
-                                consumer.getMerchandises().then(function(response){
-                                    console.log(response);
-                                    $scope.consumer.merchandises = response;
-                                    consumer.getBids().then(function(response){
-                                        console.log(response);
-                                        $scope.consumer.bids = response;
-                                        consumer.getWishes().then(function(response){
-                                            console.log(response);
-                                            $scope.consumer.wishes = response;
-                                            angular.forEach($scope.consumer.bids, function(bid, merchandise) {
-                                                $scope.bid = bid;
-                                                $scope.merchandiseId = bid.merchandiseId;
-                                                if (bid.complete == 1) {
-                                                    if (bid.success == 1) {
-                                                        Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
-                                                            $scope.consumerWonMerchandise.push(merchandise);
-                                                            debugger;
-                                                            console.log(merchandise, "won merchandise");
-                                                        })}else {
-                                                        console.log("failed", merchandise)}
-                                                } else {
-                                                        $scope.consumerBids.push($scope.bid);
-//                                                    PROBLEM IS HERE. AM SETTING SCOPE.BID PRIOR TO THE THEN -> ALL MERCHANDISE $scope.bid being the same
-                                                    debugger;
-                                                    Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
-                                                        $scope.merchandise = merchandise;
-//                                                        $scope.merchandise.bidValue = $scope.bid.value;
-                                                        $scope.consumerBidMerchandise.push($scope.merchandise);
-                                                        debugger;
-                                                        console.log($scope.merchandise, $scope.merchandise.bidValue, $scope.bid, "bid merchandise");
-                                                    })
-                                                }
-
-                                            });
-
-                                            angular.forEach($scope.consumer.wishes, function(wish, merchandise) {
-                                                $scope.wish = wish;
-                                                $scope.merchandiseId = wish.merchandiseId;
-                                                Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
-                                                    $scope.consumerWishMerchandise.push(merchandise);
-                                                    debugger;
-                                                    console.log(merchandise);
-                                                });
-                                                console.log($scope.consumerBidMerchandise)
-
-                                            });
-                                            $scope.makeTodos();
-                                            $scope.makeConsumerBidTodos();
-                                            $scope.makeCreates();
-                                            $scope.makeDreams();
-                                            $scope.makeWins();
-
-                                        })
-                                    })
-                                });
+//         $scope.$watch('consumerFind', function (consumer) {
+//             debugger;
+//             setTimeout(function () {
+//                 $scope.$apply(function(user, consumer) {
+//                     $scope.user = userService.user;
+//                     user = $scope.user;
+//                     if ($scope.consumerFind == 0) {
+//                         angular.forEach($scope.consumers, function(consumer) {
+//                             console.log("consumer", consumer)
+//                             if(consumer.userId == user.id){
+//                                 console.log("SUCCESS", consumer)
+//                                 $scope.consumer = consumer;
+//                                 $scope.consumer2 = consumer;
+//                                 $scope.creates = $scope.consumer.merchandises;
+//                                 consumer.getMerchandises().then(function(response){
+//                                     console.log(response);
+//                                     $scope.consumer.merchandises = response;
+//                                     consumer.getBids().then(function(response){
+//                                         console.log(response);
+//                                         $scope.consumer.bids = response;
+//                                         consumer.getWishes().then(function(response){
+//                                             console.log(response);
+//                                             $scope.consumer.wishes = response;
+//                                             angular.forEach($scope.consumer.bids, function(bid, merchandise) {
+//                                                 $scope.bid = bid;
+//                                                 $scope.merchandiseId = bid.merchandiseId;
+//                                                 if (bid.complete == 1) {
+//                                                     if (bid.success == 1) {
+//                                                         Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+//                                                             $scope.consumerWonMerchandise.push(merchandise);
+//                                                             debugger;
+//                                                             console.log(merchandise, "won merchandise");
+//                                                         })}else {
+//                                                         console.log("failed", merchandise)}
+//                                                 } else {
+//                                                         $scope.consumerBids.push($scope.bid);
+// //                                                    PROBLEM IS HERE. AM SETTING SCOPE.BID PRIOR TO THE THEN -> ALL MERCHANDISE $scope.bid being the same
+//                                                     debugger;
+//                                                     Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+//                                                         $scope.merchandise = merchandise;
+// //                                                        $scope.merchandise.bidValue = $scope.bid.value;
+//                                                         $scope.consumerBidMerchandise.push($scope.merchandise);
+//                                                         debugger;
+//                                                         console.log($scope.merchandise, $scope.merchandise.bidValue, $scope.bid, "bid merchandise");
+//                                                     })
+//                                                 }
 //
-//                                debugger;
-                            };
-                        });
-                        $scope.consumer1 = $scope.consumer;
-                        consumer = $scope.consumer;
-                        $scope.creates = $scope.consumer.merchandises;
-                        debugger;
-                        $scope.consumer2 = consumer;
+//                                             });
+//
+//                                             angular.forEach($scope.consumer.wishes, function(wish, merchandise) {
+//                                                 $scope.wish = wish;
+//                                                 $scope.merchandiseId = wish.merchandiseId;
+//                                                 Merchandise.get({id:$scope.merchandiseId}).then(function(merchandise) {
+//                                                     $scope.consumerWishMerchandise.push(merchandise);
+//                                                     debugger;
+//                                                     console.log(merchandise);
+//                                                 });
+//                                                 console.log($scope.consumerBidMerchandise)
+//
+//                                             });
+//                                             $scope.makeTodos();
+//                                             $scope.makeConsumerBidTodos();
+//                                             $scope.makeCreates();
+//                                             $scope.makeDreams();
+//                                             $scope.makeWins();
+//
+//                                         })
+//                                     })
+//                                 });
+// //
+// //                                debugger;
+//                             };
+//                         });
+//                         $scope.consumer1 = $scope.consumer;
+//                         consumer = $scope.consumer;
+//                         $scope.creates = $scope.consumer.merchandises;
+//                         debugger;
+//                         $scope.consumer2 = consumer;
+//
+//                     }
+//                 });
+//             }, 1000);
+//         });
 
-                    }
-                });
-            }, 10000);
-        });
+      // $scope.$watch('consumer2', function(consumer, bid) {
+      //   $scope.consumer = $scope.consumer2;
+      //   consumer = $scope.consumer;
+      //   $scope.consumer = consumer;
+      //
+      //
+      // })
+
+//      ** END OF IMPORTANT WATCH FOR CONSUMER HOME
 //        $scope.$watch('consumerFind', function (consumer) {
 //            debugger;
 //            setTimeout(function () {
@@ -269,13 +390,7 @@ angular.module('clientApp')
 //////            $scope.consumer2 = $scope.consumer;
 //        });
 
-        $scope.$watch('consumer2', function(consumer, bid) {
-            $scope.consumer = $scope.consumer2;
-            consumer = $scope.consumer;
-            $scope.consumer = consumer;
 
-
-        })
         $scope.testUser = function (user, consumer) {
             $scope.user = userService.user;
             user = $scope.user;
@@ -331,6 +446,7 @@ angular.module('clientApp')
 
         Consumer.query().then(function(consumers){
             $scope.consumers = consumers;
+            $scope.testUser2();
         });
         $scope.bid = new Bid();
 

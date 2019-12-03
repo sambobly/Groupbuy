@@ -6,7 +6,7 @@ class BirdsController < InheritedResources::Base
   private
 
   def bird_params
-    params.require(:bird).permit(:name, :nest_id)
+    params.require(:bird).permit(:name, :nest_id, :photo, :latitude, :longitude)
   end
 end
 

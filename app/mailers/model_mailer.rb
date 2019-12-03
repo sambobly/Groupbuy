@@ -7,6 +7,7 @@ class ModelMailer < ActionMailer::Base
   #   en.model_mailer.new_record_notification.subject
   #
 
+
   def model_email(patient)
     @patient = patient
     mail(to: @patient.email, subject: 'Sample Email')
@@ -31,12 +32,14 @@ class ModelMailer < ActionMailer::Base
   def claim_email(consumer, merchandise)
     @consumer = consumer
     @merchandise = merchandise
-    mail(to: @consumer.email, subject: 'Did you win??')
+    mail(to: @consumer.email, subject: 'Did you win??', template_path: 'model_mailer',
+         template_name: 'claim_email')
   end
   def fail_email(consumer, merchandise)
     @consumer = consumer
     @merchandise = merchandise
-    mail(to: @consumer.email, subject: 'Did you win?')
+    mail(to: @consumer.email, subject: 'Did you win?', template_path: 'model_mailer',
+         template_name: 'fail_email')
   end
   def complete_email(claim)
     @claim = claim

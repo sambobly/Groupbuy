@@ -2,6 +2,7 @@
 
 
 <h4>Update your Account!</h4>
+
 <form action="" class="aa-login-form" name="frm" novalidate autocomplete="off">
 <div>
     <label for="">First Name<span>*</span></label>
@@ -86,7 +87,7 @@
 </div>
 <label for="">DOB<span>*</span></label>
 <div class="controls">
-    <select name="dobDay" ng-model="consumer.day" ng-options="label for label in Days | limitTo:NumberOfDays" class="required input-xlarge" required class = "required input-xlarge">
+    <select name="dobDay" ng-model="consumer.day" class="required input-xlarge" required class = "required input-xlarge">
         <option value="">{{consumer.day}}</option>
         <option value="01">01</option>
         <option value="02">02</option>
@@ -120,7 +121,7 @@
         <option value="30">30</option>
         <option value="31">31</option>
     </select>
-    <select name="dobMonth" ng-model="consumer.month" ng-options="label for label in Months"  ng-change="UpdateNumberOfDays()" class="required input-xlarge" required class = "required input-xlarge">
+    <select name="dobMonth" ng-model="consumer.month" ng-change="UpdateNumberOfDays()" class="required input-xlarge" required class = "required input-xlarge">
         <option value="">{{consumer.month}}</option>
         <option value="01">January</option>
         <option value="02">February</option>

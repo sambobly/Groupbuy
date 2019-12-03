@@ -115,7 +115,8 @@ gem 'rest-client'
 gem 'stripe'
 gem "mini_magick"
 gem "figaro"
-
+gem "exifr"
+gem "byebug"
 #gem 'stripe', '~> 1.53.0'
 
 #gem "paperclip", "~> 5.0.0"

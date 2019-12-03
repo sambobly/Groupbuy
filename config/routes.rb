@@ -35,7 +35,7 @@ Optho::Application.routes.draw do
 
   resources :twigs
 
-  resources :birds
+  resources :birds, defaults: { format: 'json' }
 
   resources :eggs
 
@@ -308,23 +308,25 @@ Optho::Application.routes.draw do
     end
   end
 
-  resources :birds do
+  resources :birds, defaults: { format: 'json' } do
     collection do
       get 'find'
       get 'index'
+      post 'index'
       post 'create'
       post 'destroy'
-      get 'edit'
-      post 'index'
+      post 'edit'
+      get 'update'
+      get 'show'
     end
     member do
-      delete 'destroy'
+      post 'destroy'
       post 'update'
-      post 'create'
       get 'edit'
       patch 'edit'
       patch 'update'
-      post 'index'
+      post 'edit'
+      get 'show'
     end
   end
 
@@ -435,7 +437,7 @@ end
   end
 
   
-  scope '/api'do
+  scope '/api' do
 
     #get "/acute.select" => "#index"
     devise_for :users, skip: [:sessions], :controllers => { confirmations: 'users/confirmations'}
@@ -1696,7 +1698,7 @@ resources :claims do
         post 'test'
       end
     end
-    resources :birds do
+    resources :birds, defaults: { format: 'json' } do
       collection do
         get 'find'
         get 'index'

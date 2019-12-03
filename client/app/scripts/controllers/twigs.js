@@ -121,7 +121,6 @@ angular.module('clientApp')
                     console.log("SUCCESS", response);
                     $scope.createBid();
                     $scope.confirm();
-                    window.alert('Success! Bid created!');
                     $scope.isPopupVisibleSubmit = true;
                     $scope.isPopupVisibleSuccessBid = true;
                     $scope.isPopupVisibleFailBid = false;
@@ -417,7 +416,54 @@ angular.module('clientApp')
                         console.log("did not fire bidConsumerId set")
                     };
                     $scope.merchandise = merchandise;
-            $scope.merchandise = merchandise;
+                    $scope.combinationId = merchandise.getCombinationId();
+                    Combination.get({id:$scope.combinationId}).then(function(combination){
+                        debugger;
+                        console.log(combination);
+                        $scope.combination = combination
+
+                        $scope.listComboOne ={
+                            "1a": combination.onea,
+                            "1b": combination.oneb
+                        };
+                        $scope.listComboTwo = {
+                            "2a": combination.twoa,
+                            "2b": combination.twob
+                        };
+                        $scope.listComboThree = {
+                            "3a": combination.threea,
+                            "3b": combination.threeb
+                        };
+                        $scope.listComboFour = {
+                            "4a": combination.foura,
+                            "4b": combination.fourb
+                        };
+                        $scope.listComboFive = {
+                            "5a": combination.fivea,
+                            "5b": combination.fiveb
+                        };
+                        $scope.listComboSix = {
+                            "6a": combination.sixa,
+                            "6b": combination.sixb
+                        };
+                        $scope.listComboSeven = {
+                            "7a": combination.sevena,
+                            "7b": combination.sevenb
+                        };
+                        $scope.listComboEight = {
+                            "8a": combination.eighta,
+                            "8b": combination.eightb
+                        };
+                        $scope.listComboNine = {
+                            "9a": combination.ninea,
+                            "9b": combination.nineb
+                        };
+                        $scope.listComboTen = {
+                            "10a": combination.tena,
+                            "10b": combination.tenb
+                        };
+                    });
+                    $scope.merchandise = merchandise;
             debugger;
             $scope.reset = true;
             $scope.merchandise.bids = merchandise.getBids().then(function(bids, bid){
@@ -425,7 +471,7 @@ angular.module('clientApp')
                   angular.forEach(bids, function(bid, key) {
                       $scope.consumerId = bid.consumerId;
                       Consumer.get({id:$scope.consumerId}).then(function(consumer){
-                          $scope.consumer  = consumer;
+                          $scope.consumer1  = consumer;
                           $scope.bid = bid;
                           $scope.bid.consumerName = consumer.name;
                           $scope.bid.consumerAvatar = consumer.avatar;
@@ -524,49 +570,73 @@ angular.module('clientApp')
 //                    }
 //                    };
                 $scope.createBid = function() {
-                $scope.bid = new Bid;
-                console.log($scope.bid)
-                $scope.bid.merchandiseId = merchandise.id;
-                    console.log(merchandise, "merchandise")
-                    debugger;
-                $scope.bid.merchandiseValue = merchandise.value;
-                $scope.bid.merchandiseImage = merchandise.images.url;
-                $scope.bid.merchandiseTitle = merchandise.title;
-                $scope.bid.consumerId = $scope.consumer.id;
-//                $scope.bid.value = $scope.new.bidValue;
-                $scope.bid.value = $scope.bidValue/100;
-                if (typeof $scope.new != "undefined") {
-                    debugger;
-                    $scope.bid.comment = $scope.new.bidComment;
-                } else {
-                    $scope.bid.comment = "No comment!"
-                };
-                debugger;
+                    Auth.currentUser().then(function(user) {
+                        angular.forEach($scope.consumers, function(consumer) {
+                            console.log("consumer", consumer)
+                            if(consumer.userId == user.id){
+                                $scope.consumer = consumer;
+                                $scope.bidConsumerId = $scope.consumer.id;
 
-                $scope.bid.complete = "0";
-                debugger;
-                $scope.bid.create()
-                    .then(function(response) {
-                        console.log("SUCCESS", response);
-                        $scope.merchandise.bid = $scope.payments_total();
-                        $scope.merchandise.difference = $scope.value_remaining();
-                        $scope.merchandise.update()
-                            .then(function(response) {
-                                console.log("SUCCESS", response);
-                            })
-                            .catch(function(response) {
-                                console.log("FAILURE!", response);
-                            });
-                        debugger;
-                    })
-                    .catch(function(response) {
-                        console.log("FAILURE!", response);
-                    });
-                $scope.merchandise.bids.push($scope.bid);
-                debugger;
+                                console.log("Set bid consumerId", consumer, $scope.consumer.id)
+//                        console.log ("display claim", user)
+                                $scope.bid = new Bid;
+                                console.log($scope.bid)
+                                $scope.bid.merchandiseId = merchandise.id;
+                                console.log(merchandise, "merchandise")
+                                debugger;
+                                $scope.bid.merchandiseValue = merchandise.value;
+                                $scope.bid.merchandiseImage = merchandise.images.url;
+                                $scope.bid.merchandiseTitle = merchandise.title;
+                                $scope.bid.consumerId = $scope.consumer.id;
+                                debugger;
+//                $scope.bid.value = $scope.new.bidValue;
+                                $scope.bid.value = $scope.bidValue/100;
+                                if (typeof $scope.new != "undefined") {
+                                    debugger;
+                                    $scope.bid.comment = $scope.new.bidComment;
+                                } else {
+                                    $scope.bid.comment = "No comment!"
+                                };
+                                debugger;
+
+                                $scope.bid.complete = "0";
+                                debugger;
+                                $scope.bid.create()
+                                    .then(function(response) {
+                                        console.log("SUCCESS", response);
+                                        $scope.merchandise.bid = $scope.payments_total();
+                                        $scope.merchandise.difference = $scope.value_remaining();
+                                        $scope.merchandise.update()
+                                            .then(function(response) {
+                                                console.log("SUCCESS", response);
+                                            })
+                                            .catch(function(response) {
+                                                console.log("FAILURE!", response);
+                                            });
+                                        debugger;
+                                    })
+                                    .catch(function(response) {
+                                        console.log("FAILURE!", response);
+                                    });
+                                $scope.merchandise.bids.push($scope.bid);
+                                debugger;
 
 //                $scope.reset = false;
 //                $timeout(function(){$scope.reset=true;},500);
+                            }
+                            else {
+                                console.log("Not set")
+                            };
+                        });
+//                    if (user.id == $scope.merchandise.consumerId) {
+//                        $scope.isPopup11Visible = true;
+//                        console.log ("display claim", user)
+//                    }else {
+//                        console.log ("not the correct user")
+//                    }
+
+                    });
+
             };
             $scope.addToWishlist = function(user, userService) {
                 Auth.currentUser().then(function(user) {
@@ -647,6 +717,39 @@ angular.module('clientApp')
                 return ($scope.merchandise.value - $scope.payments_total());
                 $scope.valueRemaining = value;
             };
+            $scope.countWins = function(merchandise) {
+                merchandise = $scope.merchandise;
+                angular.forEach(merchandise.bids, function(bid) {
+                    $scope.bid = bid;
+                    var str = $scope.combination.result;
+                    var answer = $scope.bid.answer;
+                    var result = answer.split(",")
+                    console.log($scope.merchandise, merchandise, $scope.combination, $scope.combination.result);
+                    console.log("result", result)
+                    debugger;
+                    var here = []
+
+                    angular.forEach(result, function(value, key) {
+                        console.log(result, $scope.answer, value, key);
+                        str.search(value);
+                        debugger;
+                        console.log(str.search(value))
+                        if (str.search(value) >=0) {
+                            here.push("W")
+                            console.log(here)
+                        } else {
+                            console.log("incorrect!")
+                        }
+                        here.length;
+                        console.log("here.length", here.length)
+                        debugger;
+                    })
+                    new Bid({id:bid.id, score:here.length}).update();
+                    console.log("update scores", bid)
+                    debugger;
+
+                })
+            }
             $scope.ticketCreate = function (merchandise, ticket) {
                 merchandise = $scope.merchandise;
                 debugger;
@@ -1431,17 +1534,38 @@ angular.module('clientApp')
             } else (console.log ("Has not reached target"));
             debugger;
         };
-        $scope.$watch('flavor', function (flavor, merchandise, bid) {
+        $scope.$watch('flavor', function (flavor, merchandise, bid, combination) {
             $timeout(function () {
 
                 console.log($scope.merchandise, "watch fired looking at ?? bids >= value");
             if ($scope.merchandise.bid >= $scope.merchandise.value && $scope.merchandise.complete == false) {
                 console.log($scope.merchandise, "watch fired to start tickets");
-                $scope.ticketCreate(merchandise, bid);
+                var currentTime = new Date();
+                merchandise = $scope.merchandise;
+                debugger
+              // FINDING COMBINATION. IN FUTURE REFACTOR TO IF COMBINATION.COMPLETE == 0 && COMBINATION.TYPE == merchandise.combinationType
+              angular.forEach($scope.combinations, function(combination) {
+                if (combination.complete == 0) {
+                  debugger;
+                  $scope.combination = combination;
+                  console.log("found a combination", combination, $scope.combination)
+                } else {
+                  console.log("already complete")
+                }
+              });
+                debugger;
+                console.log("combination here?", combination, $scope.combination)
+                combination = $scope.combination;
+                new Merchandise({id:merchandise.id, start:currentTime, combinationId: combination.id, complete:"1"}).update()
+                console.log("fired complete merchandise", merchandise)
+
+                // $scope.countWins(merchandise, bid);
+//                $scope.ticketCreate(merchandise, bid);
+
                 debugger;
             } else (console.log ("Has not reached target"));
             debugger;
-            },20000)
+            }, 1000)
         });
         $scope.$watch('merchandise', function(merchandise) {
             if ($scope.merchandise.rescue == 91234) {

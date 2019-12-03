@@ -10,6 +10,7 @@
  *
 
  *= require_self
+
  *= require appointments
  *= require appointments/fullcalendar
  *= require jquery.timepicker
@@ -27,5 +28,12 @@
  *= require consultations/font-awesome
 
 
- */
 
+
+
+
+
+
+
+
+ */

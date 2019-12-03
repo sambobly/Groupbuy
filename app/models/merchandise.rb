@@ -1,6 +1,6 @@
 class Merchandise < ActiveRecord::Base
 
-  attr_accessible  :value, :category_id, :consumer_id, :title, :description, :start, :end, :bid, :category_name, :difference, :consumer_name, :complete, :email, :received, :paid, :rescue, :images, :combination_id
+  attr_accessible  :value, :category_id, :consumer_id, :title, :description, :start, :end, :bid, :category_name, :difference, :consumer_name, :complete, :email, :received, :paid, :rescue, :images, :winner, :combination_id;
   validates :value, :category_id, :title, presence: true
 
   belongs_to :category
