@@ -3,7 +3,7 @@
     <div>RECENTLY WON!</div>
     <slick ng-if="wonMerchandise.length" autoplay="true" infinite="true" slides-to-show="3" slides-to-scroll="3" arrows="false" centerMode="true" pauseOnHover="true" draggable="true">
         <div ng-repeat="merchandise in wonMerchandise">
-            <img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img" style="width:90px" />
+            <img src="{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'" alt="polo shirt img" style="width:90px" />
             <figcaption class="caption">{{merchandise.title}}</figcaption>
 
         </div>
@@ -135,7 +135,7 @@
         <!--<li ng-repeat="merchandise in filteredMerchandises">-->
 
         <figure>
-                    <a href="#!/merchandises/{{merchandise.id}}"><img ng-src="http://localhost:3000{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'"></a>
+                    <a href="#!/merchandises/{{merchandise.id}}"><img ng-src="{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'"></a>
                 <a class="aa-add-card-btn pointer"  href="#!/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
                 <figcaption>
                     <h4 class="aa-product-title"><a href="#!/merchandises/{{merchandise.id}}">{{merchandise.title}}</a></h4>
@@ -265,7 +265,7 @@
                             <div class="simpleLens-container">
                                 <div class="simpleLens-big-image-container">
                                     <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
-                                        <img ng-src="http://localhost:3000{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'"></a>                                    </a>
+                                        <img ng-src="{{merchandise.images.url || 'images/polo-shirt-1.png'}}" onerror="this.src='images/polo-shirt-1.png'"></a>                                    </a>
                                 </div>
                             </div>
                             <!--<div class="simpleLens-thumbnails-container-width">-->

@@ -60,7 +60,7 @@
                                         <!-- start single product item -->
                                         <li ng-repeat = "bid in filteredConsumerBidTodos">
                                          <figure>
-                                             <a ng-href="#!/merchandises/{{merchandise.id}}#top"><img src="http://localhost:3000{{bid.merchandiseImage}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
+                                             <a ng-href="#!/merchandises/{{merchandise.id}}#top"><img src="{{bid.merchandiseImage}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
                                              <a class="aa-add-card-btn pointer"  ng-href="#!/merchandises/{{merchandise.id}}#top"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
 
                                              <!--<a class="aa-product-img" selectMerchandiseBox ng-click="open1(merchandise)"><img src="http://localhost:3000{{bid.merchandiseImage}}" err-src="{{ myDefaultImage }}" ng-click="open(merchandise)"alt="polo shirt img"></a>-->
@@ -150,7 +150,7 @@
                                 <!-- start single product item -->
                                 <li ng-repeat="merchandise in filteredDreams">
                                     <figure>
-                                        <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
+                                        <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
                                         <a class="aa-add-card-btn pointer"  ng-href="#!/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
                                         <figcaption>
                                             <h4 class="aa-product-title"><a href="#!">{{merchandise.title}}</a></h4>
@@ -195,7 +195,7 @@
                                         <!-- start single product item -->
                                         <li ng-repeat="merchandise in filteredCreates">
                                             <figure>
-                                                <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
+                                                <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
                                                 <a class="aa-add-card-btn pointer"  ng-href="#!/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
                                                 <figcaption>
                                                     <h4 class="aa-product-title"><a href="#!">{{merchandise.title}}</a></h4>
@@ -239,7 +239,7 @@
                                         <!-- start single product item -->
                                         <li ng-repeat="merchandise in filteredWins">
                                             <figure>
-                                                <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="http://localhost:3000{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
+                                                <a ng-href="#!/merchandises/{{merchandise.id}}"><img src="{{merchandise.images.url}}" err-src="{{ myDefaultImage }}" alt="polo shirt img"></a>
                                                 <a class="aa-add-card-btn pointer"  ng-href="#!/merchandises/{{merchandise.id}}"><span class="fa fa-shopping-cart" href="#!/merchandises/{{merchandise.id}}"></span>Open</a>
                                                 <figcaption>
                                                     <h4 class="aa-product-title"><a href="#!">{{merchandise.title}}</a></h4>

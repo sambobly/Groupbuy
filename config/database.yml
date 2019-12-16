@@ -49,4 +49,3 @@ production:
   #username: root
   #password: omnipass
   #socket: /tmp/mysql.sock
-
